@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://snrdigitalmarketingindia-web.github.io/motherhospitals/sitemap.xml
+Sitemap: https://www.motherhospitals.co.in/sitemap.xml
 
 # Disallow admin/junk
 Disallow: /cdn-cgi/
