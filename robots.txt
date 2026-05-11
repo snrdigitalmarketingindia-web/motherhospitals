@@ -1,9 +1,22 @@
 User-agent: *
 Allow: /
 
+# AI/LLM crawlers - allow full access
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Googlebot
+Allow: /
+
 # Sitemap
 Sitemap: https://motherhospitals.co.in/sitemap.xml
 
 # Disallow admin/junk
 Disallow: /cdn-cgi/
 Disallow: /*.json$
+
+# LLMs.txt
+LLMs: https://motherhospitals.co.in/llms.txt
