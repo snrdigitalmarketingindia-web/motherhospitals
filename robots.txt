@@ -17,6 +17,8 @@ Sitemap: https://motherhospitals.co.in/sitemap.xml
 # Disallow admin/junk
 Disallow: /cdn-cgi/
 Disallow: /*.json$
+Disallow: /.claude/
+Disallow: /SEO-STRATEGY-2026.md
 
 # LLMs.txt
 LLMs: https://motherhospitals.co.in/llms.txt
