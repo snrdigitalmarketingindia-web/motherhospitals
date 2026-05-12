@@ -1088,8 +1088,9 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
     <a href="#mother9" onclick="this.closest('.mob-menu').classList.remove('open')">Mother 9 Card</a>
     <a href="#doctor" onclick="this.closest('.mob-menu').classList.remove('open')">Our Team</a>
     <a href="#videos" onclick="this.closest('.mob-menu').classList.remove('open')">Videos</a>
-    <a href="#testimonials" onclick="this.closest('.mob-menu').classList.remove('open')">Stories</a>
+    <a href="/testimonials.html" onclick="this.closest('.mob-menu').classList.remove('open')">💕 Success Stories</a>
     <a href="#contact" onclick="this.closest('.mob-menu').classList.remove('open')">Contact Us</a>
+    <a href="/blog/" style="color:var(--magenta);font-weight:600">📝 Blog</a>
   </div>
 </nav>
 
@@ -1736,8 +1737,8 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#mother9">Mother 9 Card</a></li>
-        <li><a href="#doctor">Our Doctor</a></li>
-        <li><a href="#testimonials">Success Stories</a></li>
+        <li><a href="/dr-prashanthi-reddy.html">Dr. Prashanthi Reddy</a></li>
+        <li><a href="/testimonials.html">Patient Success Stories</a></li>
         <li><a href="/blog/">IVF Blog</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul></div>
@@ -1797,6 +1798,28 @@ function submitForm() {
     document.getElementById('submitBtn').style.display = 'none';
   });
 }
+</script>
+
+<!-- GA4 Conversion Tracking: WhatsApp & Phone clicks -->
+<script>
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href]');
+  if (!link) return;
+  var href = link.getAttribute('href') || '';
+  if (href.includes('wa.me')) {
+    gtag('event', 'whatsapp_click', {
+      event_category: 'CTA',
+      event_label: link.textContent.trim().substring(0, 60) || 'WhatsApp',
+      page_location: window.location.href
+    });
+  } else if (href.startsWith('tel:')) {
+    gtag('event', 'phone_call_click', {
+      event_category: 'CTA',
+      event_label: href.replace('tel:', ''),
+      page_location: window.location.href
+    });
+  }
+});
 </script>
 </body>
 </html>
