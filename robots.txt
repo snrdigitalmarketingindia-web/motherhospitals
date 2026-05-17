@@ -8,6 +8,10 @@ User-agent: Claude-Web
 Allow: /
 User-agent: PerplexityBot
 Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Bard
+Allow: /
 User-agent: Googlebot
 Allow: /
 
@@ -16,9 +20,11 @@ Sitemap: https://motherhospitals.co.in/sitemap.xml
 
 # Disallow admin/junk
 Disallow: /cdn-cgi/
-Disallow: /*.json$
 Disallow: /.claude/
 Disallow: /SEO-STRATEGY-2026.md
+Disallow: /content-output/
+Disallow: /content-topics/
+Disallow: /scripts/
 
 # LLMs.txt
 LLMs: https://motherhospitals.co.in/llms.txt
