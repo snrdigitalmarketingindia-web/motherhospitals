@@ -305,3 +305,67 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
   .hosp-vids-grid{grid-template-columns:1fr 1fr}
   .awards-grid{grid-template-columns:1fr}
 }
+
+/* ── MOBILE STICKY 3-BUTTON CTA BAR ── */
+.mob-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:500;background:var(--white);border-top:2px solid var(--purple-light);box-shadow:0 -4px 20px rgba(90,31,122,0.15)}
+.mob-cta-bar-inner{display:flex;height:62px}
+.mob-cta-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;font-size:0.68rem;font-weight:700;letter-spacing:0.03em;transition:opacity 0.2s;border-right:1px solid var(--purple-light)}
+.mob-cta-btn:last-child{border-right:none}
+.mob-cta-btn .mob-icon{font-size:1.25rem;line-height:1}
+.mob-cta-call{background:var(--purple);color:#fff}
+.mob-cta-wa{background:#25D366;color:#fff}
+.mob-cta-book{background:var(--magenta);color:#fff}
+@media(max-width:960px){
+  .mob-cta-bar{display:block}
+  .wa-float{display:none}
+  body{padding-bottom:62px}
+}
+
+/* ── E-E-A-T CREDENTIALS SECTION ── */
+.eeat-section{background:var(--white);padding:80px 5%}
+.cred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-bottom:2.8rem}
+.cred-card{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:18px;padding:1.5rem;text-align:center}
+.cred-icon{font-size:2rem;margin-bottom:0.6rem}
+.cred-title{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--purple);margin-bottom:0.3rem}
+.cred-body{font-size:0.78rem;color:var(--text-mid);line-height:1.6}
+.mem-row{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-top:1.5rem}
+.mem-pill{background:var(--white);border:1.5px solid var(--purple-light);border-radius:50px;padding:0.32rem 0.9rem;font-size:0.74rem;font-weight:600;color:var(--purple)}
+
+/* ── DEPARTMENT AUTHORITY CARDS ── */
+.dept-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem}
+.dept-card{background:var(--white);border-radius:20px;padding:1.8rem;border:1px solid var(--purple-light);border-top:4px solid var(--magenta);transition:transform 0.25s,box-shadow 0.25s}
+.dept-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(90,31,122,0.1)}
+.dept-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--magenta-light),var(--purple-light));display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.1rem}
+.dept-name{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.4rem}
+.dept-desc{font-size:0.82rem;color:var(--text-soft);line-height:1.7;margin-bottom:0.9rem}
+.dept-list{list-style:none;display:flex;flex-direction:column;gap:0.25rem}
+.dept-list li{font-size:0.78rem;color:var(--text-mid);padding-left:1.1rem;position:relative}
+.dept-list li::before{content:'✓';position:absolute;left:0;color:var(--magenta);font-weight:700}
+
+/* ── PATIENT JOURNEY / PROCESS STEPS ── */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:2rem}
+.step-card{background:var(--purple-pale);border-radius:16px;padding:1.4rem;position:relative}
+.step-num{font-family:var(--font-d);font-size:3rem;font-weight:700;color:var(--purple-light);position:absolute;top:0.5rem;right:1rem;line-height:1}
+.step-title{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem;position:relative;z-index:1}
+.step-body{font-size:0.8rem;color:var(--text-mid);line-height:1.65;position:relative;z-index:1}
+
+/* ── TRUST BADGE STRIP ── */
+.trust-strip{display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin-top:1.8rem}
+.tbadge{display:flex;align-items:center;gap:0.4rem;background:var(--white);border:1.5px solid var(--purple-light);border-radius:50px;padding:0.38rem 0.95rem;font-size:0.75rem;color:var(--text-mid);font-weight:500}
+.tbadge strong{color:var(--purple)}
+
+/* ── HERO CTA UPDATE ── */
+.hero-cta-row{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.btn-call{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;padding:0.82rem 1.9rem;border-radius:50px;text-decoration:none;font-size:0.88rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 4px 18px rgba(90,31,122,0.3);transition:all 0.2s}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(90,31,122,0.4)}
+
+@media(max-width:960px){
+  .cred-grid{grid-template-columns:1fr 1fr}
+  .dept-grid{grid-template-columns:1fr 1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .cred-grid{grid-template-columns:1fr}
+  .dept-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+}
