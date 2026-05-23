@@ -1,48 +1,66 @@
-# Cache static assets aggressively (1 year)
+# ============================================================
+# Mother Hospitals — Netlify Performance + Security Headers
+# Week 1 Day 3 Speed Optimization
+# ============================================================
+
+# Static assets — 1 year immutable cache (hashed filenames)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
 
-# Cache CSS/JS with versioning in filenames
+# WebP images — max cache
+/assets/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/webp
+
+# JPEG/PNG originals — max cache (fallback for no-WebP browsers)
+/assets/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS & JS — max cache
 /*.css
   Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
 
 /*.js
   Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
 
-# Images — long cache
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
+# MP4 videos — enable range requests for video seeking
+/assets/videos/*
+  Cache-Control: public, max-age=604800
+  Accept-Ranges: bytes
 
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.ico
-  Cache-Control: public, max-age=31536000, immutable
-
-# HTML pages — short cache so updates propagate quickly
+# HTML pages — 1 hour cache (fast propagation for SEO updates)
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
+  Vary: Accept-Encoding
 
 # Blog HTML
 /blog/*.html
   Cache-Control: public, max-age=3600, must-revalidate
+  Vary: Accept-Encoding
 
-# Root (homepage)
+# Root homepage
 /
   Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: SAMEORIGIN
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Accept-Encoding
+  Link: </assets/inline/img_01_1d3a3fff.webp>; rel=preload; as=image; type="image/webp"
 
-# Security headers on all pages
+# Sitemap — 24h cache
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+# Security + performance headers on ALL pages
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-XSS-Protection: 1; mode=block

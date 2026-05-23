@@ -1,0 +1,11 @@
+# Mother Hospitals — Netlify Redirects
+# Week 1 Day 3 Technical SEO
+
+# Fix: /blog without trailing slash → /blog/ (301 permanent)
+/blog  /blog/  301
+
+# Fix: old dev version — redirect to homepage if anyone typed it directly
+/mother_hospitals_v10.html  /  301
+
+# Custom 404 page
+/*  /404.html  404
