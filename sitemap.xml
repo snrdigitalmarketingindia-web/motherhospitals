@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url><loc>https://motherhospitals.co.in/</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <!-- Utility Pages -->
-  <url><loc>https://motherhospitals.co.in/contact-us.html</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/contact-us.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://motherhospitals.co.in/privacy-policy.html</loc><lastmod>2026-05-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <!-- E-E-A-T Pages -->
   <url><loc>https://motherhospitals.co.in/dr-prashanthi-reddy.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -90,4 +90,20 @@
   <url><loc>https://motherhospitals.co.in/blog/endometriosis-symptoms-diagnosis.html</loc><lastmod>2026-07-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://motherhospitals.co.in/blog/implantation-failure-after-good-embryo.html</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://motherhospitals.co.in/blog/ivf-with-endometriosis-success-rates.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Week 2 — IVF Cost & Conversion Cluster -->
+  <url><loc>https://motherhospitals.co.in/ivf-success-rate-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://motherhospitals.co.in/affordable-ivf-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://motherhospitals.co.in/ivf-emi-payment-options-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://motherhospitals.co.in/best-ivf-center-boduppal-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://motherhospitals.co.in/low-cost-ivf-packages-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <!-- Week 3 — AMH, PCOS & Ovulation Cluster -->
+  <url><loc>https://motherhospitals.co.in/amh-levels-explained.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://motherhospitals.co.in/ivf-for-low-amh-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://motherhospitals.co.in/pcos-ivf-success-rate-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://motherhospitals.co.in/ovulation-problems-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <!-- Week 3 — Fertility Blog Posts -->
+  <url><loc>https://motherhospitals.co.in/blog/can-low-amh-patients-get-pregnant-naturally.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://motherhospitals.co.in/blog/can-pcos-patients-get-pregnant.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://motherhospitals.co.in/blog/irregular-periods-fertility-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://motherhospitals.co.in/blog/improve-egg-quality-for-fertility.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>
