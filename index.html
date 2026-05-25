@@ -1343,7 +1343,7 @@ postnatal care Boduppal, women wellness clinic Hyderabad, fertility nutrition Hy
           </div>
         </div>
         <div style="text-align:center;margin-top:1rem">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSddZZyUKzkZd_HQdrZlojgrYVBdEMX4xk46nkn4XC0B4NgeDA/viewform" target="_blank" rel="noopener noreferrer" style="font-size:0.78rem;color:var(--magenta);text-decoration:none">📋 Or fill our Google Form directly →</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/viewform" target="_blank" rel="noopener noreferrer" style="font-size:0.78rem;color:var(--magenta);text-decoration:none">📋 Or fill our Google Form directly →</a>
         </div>
       </div>
     </div>
@@ -1444,13 +1444,12 @@ function submitForm() {
   if (!phone) { alert('Please enter your phone number.'); return; }
   if (!service) { alert('Please select a service.'); return; }
   var formData = new FormData();
-  formData.append('entry.1486846108', name);
-  formData.append('entry.394704786', phone);
-  formData.append('entry.1313627733', phone);
-  formData.append('entry.241464952', email);
-  formData.append('entry.1228251423', service);
-  formData.append('entry.1242929721', msg);
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSddZZyUKzkZd_HQdrZlojgrYVBdEMX4xk46nkn4XC0B4NgeDA/formResponse', {
+  formData.append('entry.1033771490', name);
+  formData.append('entry.826156409', phone);
+  formData.append('entry.852921816', email);
+  formData.append('entry.1895050244', service);
+  formData.append('entry.957846797', msg);
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse', {
     method: 'POST', mode: 'no-cors', body: formData
   }).then(function() {
     document.getElementById('successBox').style.display = 'block';
