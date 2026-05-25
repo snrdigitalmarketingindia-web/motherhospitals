@@ -1443,12 +1443,14 @@ function submitForm() {
   if (!name) { alert('Please enter your full name.'); return; }
   if (!phone) { alert('Please enter your phone number.'); return; }
   if (!service) { alert('Please select a service.'); return; }
-  var formData = new FormData();
+  var formData = new URLSearchParams();
   formData.append('entry.1033771490', name);
   formData.append('entry.826156409', phone);
   formData.append('entry.852921816', email);
   formData.append('entry.1895050244', service);
   formData.append('entry.957846797', msg);
+  formData.append('fvv', '1');
+  formData.append('fbzx', Math.floor(Math.random() * 9e15).toString());
   fetch('https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse', {
     method: 'POST', mode: 'no-cors', body: formData
   }).then(function() {
