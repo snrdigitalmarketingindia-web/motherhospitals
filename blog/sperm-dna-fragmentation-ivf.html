@@ -15,7 +15,7 @@
   <meta property="og:description" content="Normal count, normal motility — yet IVF keeps failing. Sperm DNA fragmentation index (DFI) above 25% is a hidden cause. Learn how DFI testing and PICSI can change outcomes.">
   <meta property="og:url" content="https://motherhospitals.co.in/blog/sperm-dna-fragmentation-ivf.html">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/style.css">
 
   <script type="application/ld+json">
   {
@@ -153,6 +153,30 @@
   </script>
 
   <style>
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid #e8d5f5}
+.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
+.logo-img{height:50px;width:50px;object-fit:contain}
+.logo-name{font-family:Georgia,serif;font-size:1.25rem;font-weight:700;color:#5a1f7a;line-height:1.15}
+.logo-sub{font-size:0.67rem;color:#8a6a9a;letter-spacing:0.1em;text-transform:uppercase}
+.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.82rem;color:#4a2d5e;text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:#b5206e}
+.btn-nav{background:linear-gradient(135deg,#b5206e,#5a1f7a)!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:#1e0a2e;border-radius:2px;display:block}
+.mob-menu{display:none;flex-direction:column;background:#fdf8ff;border-top:1px solid #e8d5f5;padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}
+.mob-menu.open{display:flex}
+.mob-menu a{padding:0.6rem 0;color:#4a2d5e;text-decoration:none;font-size:0.93rem;border-bottom:1px solid #e8d5f5}
+.top-bar{background:#5a1f7a;color:#fff;font-size:0.76rem;padding:0.4rem 5%;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.top-bar a{color:rgba(255,255,255,0.9);text-decoration:none}.top-bar a:hover{color:#fff}
+.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
+.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
+.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
+.trust-item:last-child{border-right:none}
+.trust-item span{font-size:0.85rem}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}}
     body{font-family:'Segoe UI',sans-serif;color:#1a1a2e;margin:0;padding:0;background:#fff}
     header{background:#fff;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #f0f0f0;position:sticky;top:0;z-index:100}
     .logo{font-size:1.4rem;font-weight:800;color:#c2185b;text-decoration:none}
@@ -235,10 +259,40 @@
 </head>
 <body>
 
-<header>
-  <a href="/" class="logo">Mother Hospitals</a>
-  <a href="tel:+919705993366" class="nav-cta">📞 Call Us</a>
-</header>
+<div class="top-bar">
+  <span>📍 Unit Nos. 201–204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092</span>
+  <span><a href="tel:+919705993366">📞 97059 93366</a> &nbsp;|&nbsp; <a href="mailto:motherhospitals.ivfcenter@gmail.com">✉️ motherhospitals.ivfcenter@gmail.com</a></span>
+</div>
+<nav>
+  <div class="nav-wrap">
+    <a class="logo-wrap" href="https://motherhospitals.co.in" style="text-decoration:none">
+      <img class="logo-img" src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo"/>
+      <div><div class="logo-name">Mother Hospitals</div><div class="logo-sub">&amp; IVF Centre · Boduppal</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://motherhospitals.co.in">Home</a></li>
+      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+      <li><a href="/mother9-programme.html">Mother 9</a></li>
+      <li><a href="https://motherhospitals.co.in/#doctor">Our Team</a></li>
+      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu">
+    <a href="https://motherhospitals.co.in">Home</a>
+    <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a>
+    <a href="/maternity-care-hyderabad.html">Maternity</a>
+    <a href="/gynaecology-hyderabad.html">Gynaecology</a>
+    <a href="/mother9-programme.html">Mother 9</a>
+    <a href="/fertility-faq-hyderabad.html">FAQs</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://wa.me/919052074999" target="_blank">💬 WhatsApp</a>
+  </div>
+</nav>
 <div class="trust-bar">
   <div class="trust-inner">
     <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
