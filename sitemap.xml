@@ -14,11 +14,8 @@
   <url><loc>https://motherhospitals.co.in/ivf-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://motherhospitals.co.in/iui-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://motherhospitals.co.in/needleless-ivf-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://motherhospitals.co.in/pcos-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://motherhospitals.co.in/low-amh-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://motherhospitals.co.in/egg-freezing-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://motherhospitals.co.in/icsi-treatment-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://motherhospitals.co.in/ivf-cost-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <!-- Department Pages -->
   <url><loc>https://motherhospitals.co.in/maternity-care-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://motherhospitals.co.in/gynaecology-hyderabad.html</loc><lastmod>2026-05-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -230,4 +227,33 @@
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
+
+  <!-- Free Fertility Tools Hub -->
+  <url><loc>https://motherhospitals.co.in/fertility-tools.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Free Fertility Calculators — Cycle & Periods -->
+  <url><loc>https://motherhospitals.co.in/period-tracker.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/ovulation-calculator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/fertility-window-planner.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motherhospitals.co.in/best-days-to-conceive.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Free Fertility Calculators — IVF Planning -->
+  <url><loc>https://motherhospitals.co.in/ivf-success-estimator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/ivf-timeline-planner.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/endometrial-thickness-calculator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Free Fertility Calculators — Pregnancy -->
+  <url><loc>https://motherhospitals.co.in/due-date-calculator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/conception-calculator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motherhospitals.co.in/pregnancy-week-tracker.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Free Fertility Calculators — Male Fertility -->
+  <url><loc>https://motherhospitals.co.in/semen-analysis-interpreter.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Free Fertility Calculators — Health & Hormones -->
+  <url><loc>https://motherhospitals.co.in/amh-interpreter.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/pcos-assessment.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://motherhospitals.co.in/fertility-assessment.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motherhospitals.co.in/bmi-fertility-calculator.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
