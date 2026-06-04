@@ -181,18 +181,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Semen Analysis Interpreter —<br><em>WHO 2021 Reference Values</em></h1>
-    <p class="hero-sub">Enter your semen analysis results to instantly compare against WHO 2021 reference values. Get a clear interpretation of each parameter plus diagnosis label and treatment guidance. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Semen Analysis Interpreter —<br><em>WHO 2021 Reference Values</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your semen analysis results to instantly compare against WHO 2021 reference values. Get a clear interpretation of each parameter plus diagnosis label and treatment guidance. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">📊 WHO 2021 Standards</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">📊 WHO 2021 Standards</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -202,41 +202,41 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>🔭 Semen Analysis Interpreter</h2>
-          <p class="calc-intro">Enter the values from your semen analysis report below. Leave DNA Fragmentation Index (DFI) blank if not tested.</p>
+          <h2 data-i18n="calc_title">🔭 Semen Analysis Interpreter</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter the values from your semen analysis report below. Leave DNA Fragmentation Index (DFI) blank if not tested.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="vol">Volume (mL)</label>
+              <label for="vol" data-i18n="label_vol">Volume (mL)</label>
               <input type="number" id="vol" placeholder="e.g. 2.5" step="0.1" min="0">
               <div class="hint">WHO 2021 lower limit: ≥1.4 mL</div>
             </div>
             <div class="form-group">
-              <label for="conc">Concentration (million/mL)</label>
+              <label for="conc" data-i18n="label_conc">Concentration (million/mL)</label>
               <input type="number" id="conc" placeholder="e.g. 20" step="0.1" min="0">
               <div class="hint">WHO 2021 lower limit: ≥16 M/mL</div>
             </div>
             <div class="form-group">
-              <label for="totMot">Total Motility (%)</label>
+              <label for="totMot" data-i18n="label_totMot">Total Motility (%)</label>
               <input type="number" id="totMot" placeholder="e.g. 50" step="1" min="0" max="100">
               <div class="hint">WHO 2021 lower limit: ≥42%</div>
             </div>
             <div class="form-group">
-              <label for="progMot">Progressive Motility (%)</label>
+              <label for="progMot" data-i18n="label_progMot">Progressive Motility (%)</label>
               <input type="number" id="progMot" placeholder="e.g. 35" step="1" min="0" max="100">
               <div class="hint">WHO 2021 lower limit: ≥30%</div>
             </div>
             <div class="form-group">
-              <label for="morph">Normal Morphology (%)</label>
+              <label for="morph" data-i18n="label_morph">Normal Morphology (%)</label>
               <input type="number" id="morph" placeholder="e.g. 5" step="0.1" min="0" max="100">
               <div class="hint">WHO 2021 lower limit: ≥4%</div>
             </div>
             <div class="form-group">
-              <label for="dfi">DNA Fragmentation Index (%) <em style="font-weight:400">optional</em></label>
+              <label for="dfi" data-i18n="label_dfi">DNA Fragmentation Index (%) (optional)</label>
               <input type="number" id="dfi" placeholder="e.g. 15" step="0.1" min="0" max="100">
               <div class="hint">Normal: &lt;15%, Borderline: 15–25%, High: &gt;25%</div>
             </div>
           </div>
-          <button class="btn-calc" onclick="interpretSemen()">Interpret My Results →</button>
+          <button class="btn-calc" onclick="interpretSemen()" data-i18n="btn_calc">Interpret My Results →</button>
 
           <div class="result-box" id="result">
             <div class="overall-banner" id="overallBanner">
@@ -244,18 +244,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               <div class="dx-desc" id="dxDesc">—</div>
             </div>
 
-            <h3>📊 Parameter-by-Parameter Results</h3>
+            <h3 data-i18n="h3_params">📊 Parameter-by-Parameter Results</h3>
             <table class="param-table">
-              <thead><tr><th>Parameter</th><th>Your Value</th><th>WHO 2021 Limit</th><th>Status</th></tr></thead>
+              <thead><tr><th data-i18n="th_param">Parameter</th><th data-i18n="th_val">Your Value</th><th data-i18n="th_limit">WHO 2021 Limit</th><th data-i18n="th_status">Status</th></tr></thead>
               <tbody id="paramBody"></tbody>
             </table>
 
             <div class="treatment-box">
-              <h3>🏥 Treatment Options</h3>
+              <h3 data-i18n="h3_treatment">🏥 Treatment Options</h3>
               <ul id="treatmentList"></ul>
             </div>
 
-            <h3>📋 WHO 2021 Reference Table</h3>
+            <h3 data-i18n="h3_who">📋 WHO 2021 Reference Table</h3>
             <table class="who-table">
               <thead><tr><th>Parameter</th><th>WHO 2021 Lower Reference Limit</th></tr></thead>
               <tbody>
@@ -270,30 +270,57 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </tbody>
             </table>
 
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Understanding Your Semen Analysis</h2>
-        <p class="section-sub">What each parameter means and how it affects fertility</p>
-        <p>A semen analysis is the most important initial test for male fertility. It measures multiple parameters that together reflect the ability of sperm to fertilise an egg. The WHO periodically updates its reference values based on fertility studies of men who conceived naturally — the 2021 edition is the most current.</p>
-        <h3>Why Morphology Matters</h3>
-        <p>Sperm morphology (shape) is assessed using Kruger strict criteria. Only sperm with a perfectly normal oval head, intact midpiece, and straight tail are counted as normal. Even in fertile men, typically only 4–14% of sperm have completely normal morphology. Low morphology (teratozoospermia) is associated with reduced natural conception but is rarely an absolute barrier — ICSI can overcome most morphology problems.</p>
-        <h3>What to Do If Results Are Abnormal</h3>
-        <p>Abnormal semen analysis should be repeated after 3 months of lifestyle modifications. A second abnormal result warrants specialist referral to a male fertility (andrologist) specialist. Treatable causes include varicocele (surgery), hormonal imbalances (medication), and lifestyle factors. ICSI achieves high fertilisation rates even with severe oligospermia.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>Understanding Your Semen Analysis</h2>
+          <p class="section-sub">What each parameter means and how it affects fertility</p>
+          <p>A semen analysis is the most important initial test for male fertility. It measures multiple parameters that together reflect the ability of sperm to fertilise an egg. The WHO 2021 reference values are the most current standards.</p>
+          <h3>Why Morphology Matters</h3>
+          <p>Sperm morphology (shape) is assessed using Kruger strict criteria. Even in fertile men, only 4–14% of sperm have completely normal morphology. Low morphology (teratozoospermia) is associated with reduced natural conception but ICSI can overcome most morphology problems.</p>
+          <h3>What to Do If Results Are Abnormal</h3>
+          <p>Repeat after 3 months of lifestyle changes. A second abnormal result warrants specialist referral. Treatable causes include varicocele, hormonal imbalances, and lifestyle factors. ICSI achieves high fertilisation rates even with severe oligospermia.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>మీ Semen Analysis అర్థం ఏమిటి?</h2>
+          <p class="section-sub">ప్రతి parameter అర్థం మరియు అది fertility ని ఎలా affect చేస్తుంది</p>
+          <p>Semen analysis అనేది male fertility కి అత్యంత important initial test. ఇది sperm egg ని fertilise చేయగలిగే ability reflect చేసే multiple parameters measure చేస్తుంది. WHO 2021 reference values most current standards.</p>
+          <h3>Morphology ఎందుకు Important?</h3>
+          <p>Sperm morphology (shape) Kruger strict criteria ఉపయోగించి assess చేస్తారు. Fertile men లో కూడా 4–14% sperm మాత్రమే completely normal morphology కలిగి ఉంటాయి. Low morphology ICSI ద్వారా overcome అవుతుంది.</p>
+          <h3>Results Abnormal అయితే ఏమి చేయాలి?</h3>
+          <p>3 నెలల lifestyle changes తర్వాత repeat చేయించుకోండి. రెండవ abnormal result కి specialist referral అవసరం. Treatable causes: varicocele, hormonal imbalances, lifestyle. Severe oligospermia తో కూడా ICSI high fertilisation rates achieve చేస్తుంది.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>What are the WHO 2021 normal semen analysis values?</summary><p>WHO 2021 lower reference limits: Volume ≥1.4 mL, Sperm concentration ≥16 million/mL, Total motility ≥42%, Progressive motility ≥30%, Morphology ≥4%, Total sperm count ≥39 million per ejaculate. These updated 2021 values differ slightly from the 2010 WHO criteria.</p></details>
-          <details><summary>What is oligozoospermia?</summary><p>Oligozoospermia is low sperm concentration — below 16 million/mL (WHO 2021). Mild: 10–15 million/mL. Moderate: 5–10 million/mL. Severe: &lt;5 million/mL. Causes include varicocele, hormonal imbalances, testicular infections, genetic factors, and lifestyle factors. Treatment depends on severity and cause.</p></details>
-          <details><summary>When is ICSI recommended?</summary><p>ICSI is recommended when: sperm concentration is below 5 million/mL, progressive motility is below 20%, morphology is below 1–2%, there is a previous low fertilisation rate with conventional IVF, sperm antibodies are present, or surgical sperm retrieval (PESA/TESA) is needed. ICSI injects a single sperm directly into each egg.</p></details>
-          <details><summary>What does DNA fragmentation index (DFI) mean?</summary><p>DFI measures the percentage of sperm with damaged DNA. Normal: DFI &lt;15%. Borderline: 15–25%. Elevated: &gt;25%. High DFI is associated with recurrent miscarriage, failed IUI/IVF, and poor embryo development. Antioxidants, lifestyle changes, and varicocele repair can reduce DFI.</p></details>
-          <details><summary>How long should I abstain before semen analysis?</summary><p>WHO recommends 2–7 days of sexual abstinence before semen analysis. Less than 2 days reduces sperm count. More than 7 days increases count but reduces motility. For a reliable result, abstain for exactly 3–4 days. The sample should be produced on-site or delivered within 30–60 minutes at body temperature.</p></details>
-          <details><summary>Can a poor semen analysis be improved?</summary><p>Yes, in many cases. Quit smoking, reduce alcohol, maintain healthy BMI, avoid tight underwear/hot baths, manage stress, take antioxidant supplements (CoQ10, Vitamin C/E, selenium, zinc, folic acid), treat varicocele if present, and treat underlying hormonal issues. A repeat semen analysis after 3 months often shows significant improvement. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>What are the WHO 2021 normal semen analysis values?</summary><p>WHO 2021 lower reference limits: Volume ≥1.4 mL, Sperm concentration ≥16 million/mL, Total motility ≥42%, Progressive motility ≥30%, Morphology ≥4%, Total sperm count ≥39 million per ejaculate.</p></details>
+            <details><summary>What is oligozoospermia?</summary><p>Oligozoospermia is low sperm concentration — below 16 million/mL. Mild: 10–15 M/mL. Moderate: 5–10 M/mL. Severe: &lt;5 M/mL. Causes include varicocele, hormonal imbalances, testicular infections, and genetic factors.</p></details>
+            <details><summary>When is ICSI recommended?</summary><p>ICSI is recommended when: sperm concentration is below 5 million/mL, progressive motility is below 20%, morphology is below 1–2%, or surgical sperm retrieval (PESA/TESA) is needed. ICSI injects a single sperm directly into each egg.</p></details>
+            <details><summary>What does DNA fragmentation index (DFI) mean?</summary><p>DFI measures the percentage of sperm with damaged DNA. Normal: &lt;15%. Borderline: 15–25%. High: &gt;25%. High DFI is associated with recurrent miscarriage and failed IVF. Antioxidants and varicocele repair can reduce DFI.</p></details>
+            <details><summary>How long should I abstain before semen analysis?</summary><p>WHO recommends 2–7 days of abstinence. For a reliable result, abstain for 3–4 days exactly. The sample should be delivered within 30–60 minutes at body temperature.</p></details>
+            <details><summary>Can a poor semen analysis be improved?</summary><p>Yes. Quit smoking, reduce alcohol, maintain healthy BMI, avoid hot baths, take antioxidant supplements (CoQ10, Vitamin C/E, selenium, zinc, folic acid), treat varicocele. A repeat after 3 months often shows improvement. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>WHO 2021 normal semen analysis values ఏమిటి?</summary><p>WHO 2021 lower reference limits: Volume ≥1.4 mL, Sperm concentration ≥16 million/mL, Total motility ≥42%, Progressive motility ≥30%, Morphology ≥4%, Total sperm count ≥39 million per ejaculate.</p></details>
+            <details><summary>Oligozoospermia అంటే ఏమిటి?</summary><p>Oligozoospermia అంటే తక్కువ sperm concentration — 16 million/mL కంటే తక్కువ. Mild: 10–15 M/mL. Moderate: 5–10 M/mL. Severe: &lt;5 M/mL. Causes: varicocele, hormonal imbalances, testicular infections, genetic factors.</p></details>
+            <details><summary>ICSI ఎప్పుడు recommend చేస్తారు?</summary><p>Sperm concentration 5 million/mL కంటే తక్కువ, progressive motility 20% కంటే తక్కువ, morphology 1–2% కంటే తక్కువ, లేదా surgical sperm retrieval (PESA/TESA) అవసరమైనప్పుడు ICSI recommend చేస్తారు. ICSI ప్రతి egg లోకి ఒక single sperm inject చేస్తుంది.</p></details>
+            <details><summary>DNA fragmentation index (DFI) అంటే ఏమిటి?</summary><p>DFI అనేది damaged DNA ఉన్న sperm percentage measure చేస్తుంది. Normal: &lt;15%. Borderline: 15–25%. High: &gt;25%. High DFI recurrent miscarriage మరియు failed IVF తో associated గా ఉంటుంది. Antioxidants మరియు varicocele repair DFI తగ్గించవచ్చు.</p></details>
+            <details><summary>Semen analysis ముందు ఎంత రోజులు abstain చేయాలి?</summary><p>WHO 2–7 రోజులు abstinence recommend చేస్తుంది. Reliable result కోసం exactly 3–4 రోజులు. Sample body temperature లో 30–60 నిమిషాల్లో deliver చేయాలి.</p></details>
+            <details><summary>Poor semen analysis improve అవుతుందా?</summary><p>అవుతుంది. Smoking quit చేయండి, alcohol తగ్గించుకోండి, healthy BMI maintain చేయండి, hot baths avoid చేయండి, antioxidant supplements తీసుకోండి (CoQ10, Vitamin C/E, selenium, zinc, folic acid), varicocele treat చేయించుకోండి. 3 నెలల తర్వాత repeat లో improvement కనిపిస్తుంది. Call: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
     </div>
 
     <aside>
@@ -333,13 +360,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Concerned About Semen Analysis Results?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF/ICSI cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Concerned About Semen Analysis Results?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF/ICSI cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -366,75 +393,149 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
-const WHO = {vol:{limit:1.4,label:'Volume (mL)',unit:'mL'},conc:{limit:16,label:'Concentration (M/mL)',unit:'M/mL'},totMot:{limit:42,label:'Total Motility (%)',unit:'%'},progMot:{limit:30,label:'Progressive Motility (%)',unit:'%'},morph:{limit:4,label:'Morphology (%)',unit:'%'}};
+window.pageT={
+  en:{
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Semen Analysis Interpreter —<br><em>WHO 2021 Reference Values</em>',
+    hero_sub:'Enter your semen analysis results to instantly compare against WHO 2021 reference values. Get a clear interpretation of each parameter plus diagnosis label and treatment guidance. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'📊 WHO 2021 Standards',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🔭 Semen Analysis Interpreter',
+    calc_intro:'Enter the values from your semen analysis report below. Leave DNA Fragmentation Index (DFI) blank if not tested.',
+    label_vol:'Volume (mL)', label_conc:'Concentration (million/mL)',
+    label_totMot:'Total Motility (%)', label_progMot:'Progressive Motility (%)',
+    label_morph:'Normal Morphology (%)', label_dfi:'DNA Fragmentation Index (%) (optional)',
+    btn_calc:'Interpret My Results →', btn_reset:'↩ Reset',
+    h3_params:'📊 Parameter-by-Parameter Results',
+    h3_treatment:'🏥 Treatment Options',
+    h3_who:'📋 WHO 2021 Reference Table',
+    th_param:'Parameter', th_val:'Your Value', th_limit:'WHO 2021 Limit', th_status:'Status',
+    status_normal:'✅ Normal', status_borderline:'⚠️ Borderline',
+    status_low:'🔴 Below reference', status_dfi_high:'🔴 High',
+    dfi_label:'DNA Fragmentation (DFI)',
+    alert_params:'Please enter all 5 semen parameters.',
+    dx_normal_label:'Normozoospermia',
+    dx_normal_desc:'All parameters are within normal WHO 2021 reference ranges. Semen quality is normal.',
+    dx_mild_label:'Mild Abnormality',
+    dx_mild_desc:'One or two parameters are slightly below reference. Natural conception may be possible. Lifestyle optimisation is recommended.',
+    dx_mod_label:'Moderate Male Factor',
+    dx_mod_desc:'One or more parameters are significantly below reference. IUI success rates are reduced. IVF with ICSI is recommended.',
+    dx_severe_label:'Severe Male Factor',
+    dx_severe_desc:'Multiple parameters are significantly below reference. IVF with ICSI is strongly recommended. Further evaluation for underlying cause is essential.',
+    tx_normal:['✅ Normal semen analysis — no treatment required','✅ Standard IVF or IUI can be considered if indicated by female factors','💡 Maintain healthy lifestyle, antioxidant-rich diet'],
+    tx_mild:['💡 Repeat semen analysis after 3 months of lifestyle changes','💡 Antioxidant supplements: CoQ10, Vitamin C/E, zinc, selenium, folic acid','💡 IUI is a suitable first-line assisted conception option','💊 Consult for hormonal evaluation if needed'],
+    tx_mod:['⚠️ Repeat semen analysis after 3 months of lifestyle changes','⚠️ IVF with ICSI is recommended over IUI','⚕️ Male fertility specialist (andrologist) consultation for treatable causes','🔬 Varicocele evaluation by ultrasound','💊 Antioxidant supplements and hormonal evaluation'],
+    tx_severe:['🔴 IVF with ICSI is strongly recommended','🔴 Andrologist consultation urgently — check for azoospermia, varicocele, genetic causes','🔬 Hormonal panel: FSH, LH, testosterone, prolactin, karyotype, Y-chromosome microdeletion','🔬 Surgical sperm retrieval (PESA/TESA) may be required if azoospermia is confirmed','💊 Antioxidant therapy while awaiting investigation results'],
+    tx_dfi_high:'⚠️ High DFI: antioxidants, lifestyle changes, varicocele repair may reduce DNA damage — repeat DFI in 3 months',
+    cta_h2:'Concerned About Semen Analysis Results?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF/ICSI cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+  },
+  te:{
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'Semen Analysis Interpreter —<br><em>WHO 2021 Reference Values</em>',
+    hero_sub:'మీ semen analysis results enter చేయండి — WHO 2021 reference values తో compare చేసి ప్రతి parameter interpretation మరియు treatment guidance చూపిస్తాం. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'📊 WHO 2021 Standards',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🔭 Semen Analysis Interpreter',
+    calc_intro:'మీ semen analysis report నుండి values enter చేయండి. DNA Fragmentation Index (DFI) test చేయించుకోకపోతే blank గా వదలండి.',
+    label_vol:'Volume (mL)', label_conc:'Concentration (million/mL)',
+    label_totMot:'Total Motility (%)', label_progMot:'Progressive Motility (%)',
+    label_morph:'Normal Morphology (%)', label_dfi:'DNA Fragmentation Index (%) (optional)',
+    btn_calc:'నా Results Interpret చేయండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    h3_params:'📊 Parameter వారీగా Results',
+    h3_treatment:'🏥 Treatment Options',
+    h3_who:'📋 WHO 2021 Reference Table',
+    th_param:'Parameter', th_val:'మీ Value', th_limit:'WHO 2021 Limit', th_status:'Status',
+    status_normal:'✅ Normal', status_borderline:'⚠️ Borderline',
+    status_low:'🔴 Reference కంటే తక్కువ', status_dfi_high:'🔴 High',
+    dfi_label:'DNA Fragmentation (DFI)',
+    alert_params:'5 semen parameters అన్నీ enter చేయండి.',
+    dx_normal_label:'Normozoospermia',
+    dx_normal_desc:'అన్ని parameters WHO 2021 normal ranges లో ఉన్నాయి. Semen quality normal గా ఉంది.',
+    dx_mild_label:'Mild Abnormality',
+    dx_mild_desc:'ఒకటి లేదా రెండు parameters కొంచెం తక్కువగా ఉన్నాయి. Natural conception possible. Lifestyle optimisation recommend చేస్తున్నాం.',
+    dx_mod_label:'Moderate Male Factor',
+    dx_mod_desc:'ఒకటి లేదా అంతకంటే ఎక్కువ parameters significantly తక్కువగా ఉన్నాయి. IUI success rates తగ్గాయి. IVF with ICSI recommend.',
+    dx_severe_label:'Severe Male Factor',
+    dx_severe_desc:'Multiple parameters significantly తక్కువగా ఉన్నాయి. IVF with ICSI strongly recommend చేస్తున్నాం. Underlying cause evaluation చాలా important.',
+    tx_normal:['✅ Normal semen analysis — treatment అవసరం లేదు','✅ Female factor ఉంటే standard IVF లేదా IUI consider చేయవచ్చు','💡 Healthy lifestyle మరియు antioxidant-rich diet maintain చేయండి'],
+    tx_mild:['💡 3 నెలల lifestyle changes తర్వాత semen analysis repeat చేయించుకోండి','💡 Antioxidant supplements తీసుకోండి: CoQ10, Vitamin C/E, zinc, selenium, folic acid','💡 IUI first-line assisted conception option గా suitable','💊 అవసరమైతే hormonal evaluation కోసం consult చేయండి'],
+    tx_mod:['⚠️ 3 నెలల lifestyle changes తర్వాత semen analysis repeat చేయించుకోండి','⚠️ IUI కంటే IVF with ICSI recommend చేస్తున్నాం','⚕️ Treatable causes కోసం male fertility specialist (andrologist) ని కలవండి','🔬 Varicocele evaluation కోసం ultrasound చేయించుకోండి','💊 Antioxidant supplements మరియు hormonal evaluation'],
+    tx_severe:['🔴 IVF with ICSI strongly recommend చేస్తున్నాం','🔴 Urgently andrologist ని కలవండి — azoospermia, varicocele, genetic causes check చేయండి','🔬 Hormonal panel: FSH, LH, testosterone, prolactin, karyotype, Y-chromosome microdeletion','🔬 Azoospermia confirm అయితే surgical sperm retrieval (PESA/TESA) అవసరం కావచ్చు','💊 Investigation results వచ్చే వరకు antioxidant therapy'],
+    tx_dfi_high:'⚠️ High DFI: antioxidants, lifestyle changes, varicocele repair DNA damage తగ్గించవచ్చు — 3 నెలల తర్వాత DFI repeat చేయించుకోండి',
+    cta_h2:'Semen Analysis Results గురించి Concern గా ఉందా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF/ICSI సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
+const WHO={vol:{limit:1.4,unit:'mL'},conc:{limit:16,unit:'M/mL'},totMot:{limit:42,unit:'%'},progMot:{limit:30,unit:'%'},morph:{limit:4,unit:'%'}};
+const WHO_LABEL_KEYS={vol:'label_vol',conc:'label_conc',totMot:'label_totMot',progMot:'label_progMot',morph:'label_morph'};
 
-function getStatus(val,limit){
+var _lastSemenArgs=null;
+
+function _getStatus(val,limit){
   const ratio=val/limit;
-  if(ratio>=1) return {label:'✅ Normal',cls:'status-normal',code:'normal'};
-  if(ratio>=0.8) return {label:'⚠️ Borderline',cls:'status-borderline',code:'borderline'};
-  return {label:'🔴 Below reference',cls:'status-low',code:'low'};
+  if(ratio>=1) return {key:'status_normal',cls:'status-normal',code:'normal'};
+  if(ratio>=0.8) return {key:'status_borderline',cls:'status-borderline',code:'borderline'};
+  return {key:'status_low',cls:'status-low',code:'low'};
+}
+
+function _renderSemen(vals,dfiVal){
+  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
+  const T=window.pageT[lang]||window.pageT.en;
+  const rows=[];
+  let normalCount=0,borderlineCount=0,lowCount=0;
+  for(const k in WHO){
+    const s=_getStatus(vals[k],WHO[k].limit);
+    rows.push(`<tr><td>${t(WHO_LABEL_KEYS[k])}</td><td><strong>${vals[k]} ${WHO[k].unit}</strong></td><td>≥${WHO[k].limit} ${WHO[k].unit}</td><td class="${s.cls}">${t(s.key)}</td></tr>`);
+    if(s.code==='normal') normalCount++;
+    else if(s.code==='borderline') borderlineCount++;
+    else lowCount++;
+  }
+  if(!isNaN(dfiVal)&&dfiVal>=0){
+    const dfiKey=dfiVal<15?'status_normal':dfiVal<=25?'status_borderline':'status_dfi_high';
+    const dfiCls=dfiVal<15?'status-normal':dfiVal<=25?'status-borderline':'status-low';
+    rows.push(`<tr><td>${t('dfi_label')}</td><td><strong>${dfiVal}%</strong></td><td>&lt;15%</td><td class="${dfiCls}">${t(dfiKey)}</td></tr>`);
+  }
+  document.getElementById('paramBody').innerHTML=rows.join('');
+
+  let dxKey,dxCls,txKey;
+  if(lowCount===0&&borderlineCount===0){dxKey='dx_normal';dxCls='dx-normal';txKey='tx_normal';}
+  else if(lowCount===0&&borderlineCount<=2){dxKey='dx_mild';dxCls='dx-mild';txKey='tx_mild';}
+  else if(lowCount<=2){dxKey='dx_mod';dxCls='dx-moderate';txKey='tx_mod';}
+  else{dxKey='dx_severe';dxCls='dx-severe';txKey='tx_severe';}
+
+  document.getElementById('overallBanner').className='overall-banner '+dxCls;
+  document.getElementById('dxLabel').textContent=t(dxKey+'_label');
+  document.getElementById('dxDesc').textContent=t(dxKey+'_desc');
+  let treatments=[...(T[txKey]||[])];
+  if(!isNaN(dfiVal)&&dfiVal>25) treatments.push(t('tx_dfi_high'));
+  document.getElementById('treatmentList').innerHTML=treatments.map(x=>`<li>${x}</li>`).join('');
 }
 
 function interpretSemen(){
   const vals={vol:parseFloat(document.getElementById('vol').value),conc:parseFloat(document.getElementById('conc').value),totMot:parseFloat(document.getElementById('totMot').value),progMot:parseFloat(document.getElementById('progMot').value),morph:parseFloat(document.getElementById('morph').value)};
   const dfiVal=parseFloat(document.getElementById('dfi').value);
-
-  for(const k in vals){if(isNaN(vals[k])||vals[k]<0){alert('Please enter all 5 semen parameters.');return;}}
-
-  const statuses={};
-  const rows=[];
-  let normalCount=0,borderlineCount=0,lowCount=0;
-
-  for(const k in WHO){
-    const s=getStatus(vals[k],WHO[k].limit);
-    statuses[k]=s;
-    rows.push(`<tr><td>${WHO[k].label}</td><td><strong>${vals[k]} ${WHO[k].unit}</strong></td><td>≥${WHO[k].limit} ${WHO[k].unit}</td><td class="${s.cls}">${s.label}</td></tr>`);
-    if(s.code==='normal') normalCount++;
-    else if(s.code==='borderline') borderlineCount++;
-    else lowCount++;
-  }
-
-  // DFI row if provided
-  if(!isNaN(dfiVal)&&dfiVal>=0){
-    const dfiStatus=dfiVal<15?{label:'✅ Normal',cls:'status-normal'}:dfiVal<=25?{label:'⚠️ Borderline',cls:'status-borderline'}:{label:'🔴 High',cls:'status-low'};
-    rows.push(`<tr><td>DNA Fragmentation (DFI)</td><td><strong>${dfiVal}%</strong></td><td>&lt;15%</td><td class="${dfiStatus.cls}">${dfiStatus.label}</td></tr>`);
-  }
-
-  document.getElementById('paramBody').innerHTML=rows.join('');
-
-  // Overall diagnosis
-  let dxLabel,dxDesc,dxCls,treatments=[];
-  if(lowCount===0&&borderlineCount===0){
-    dxLabel='Normozoospermia';dxCls='dx-normal';
-    dxDesc='All parameters are within normal WHO 2021 reference ranges. Semen quality is normal.';
-    treatments=['✅ Normal semen analysis — no treatment required','✅ Standard IVF or IUI can be considered if indicated by female factors','💡 Maintain healthy lifestyle, antioxidant-rich diet'];
-  } else if(lowCount===0&&borderlineCount<=2){
-    dxLabel='Mild Abnormality';dxCls='dx-mild';
-    dxDesc='One or two parameters are slightly below reference. Natural conception may be possible. Lifestyle optimisation is recommended.';
-    treatments=['💡 Repeat semen analysis after 3 months of lifestyle changes','💡 Antioxidant supplements: CoQ10, Vitamin C/E, zinc, selenium, folic acid','💡 IUI is a suitable first-line assisted conception option','💊 Consult for hormonal evaluation if needed'];
-  } else if(lowCount<=2){
-    dxLabel='Moderate Male Factor';dxCls='dx-moderate';
-    dxDesc='One or more parameters are significantly below reference. IUI success rates are reduced. IVF with ICSI is recommended.';
-    treatments=['⚠️ Repeat semen analysis after 3 months of lifestyle changes','⚠️ IVF with ICSI is recommended over IUI','⚕️ Male fertility specialist (andrologist) consultation for treatable causes','🔬 Varicocele evaluation by ultrasound','💊 Antioxidant supplements and hormonal evaluation'];
-  } else {
-    dxLabel='Severe Male Factor';dxCls='dx-severe';
-    dxDesc='Multiple parameters are significantly below reference. IVF with ICSI is strongly recommended. Further evaluation for underlying cause is essential.';
-    treatments=['🔴 IVF with ICSI is strongly recommended','🔴 Andrologist consultation urgently — check for azoospermia, varicocele, genetic causes','🔬 Hormonal panel: FSH, LH, testosterone, prolactin, karyotype, Y-chromosome microdeletion','🔬 Surgical sperm retrieval (PESA/TESA) may be required if azoospermia is confirmed','💊 Antioxidant therapy while awaiting investigation results'];
-  }
-
-  if(!isNaN(dfiVal)&&dfiVal>25) treatments.push('⚠️ High DFI: antioxidants, lifestyle changes, varicocele repair may reduce DNA damage — repeat DFI in 3 months');
-
-  document.getElementById('overallBanner').className='overall-banner '+dxCls;
-  document.getElementById('dxLabel').textContent=dxLabel;
-  document.getElementById('dxDesc').textContent=dxDesc;
-  document.getElementById('treatmentList').innerHTML=treatments.map(t=>`<li>${t}</li>`).join('');
-
+  for(const k in vals){if(isNaN(vals[k])||vals[k]<0){alert(t('alert_params'));return;}}
+  _lastSemenArgs={vals,dfiVal};
+  _renderSemen(vals,dfiVal);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  if(_lastSemenArgs) _renderSemen(_lastSemenArgs.vals,_lastSemenArgs.dfiVal);
+};
+
 function resetCalc(){
   ['vol','conc','totMot','progMot','morph','dfi'].forEach(id=>document.getElementById(id).value='');
+  _lastSemenArgs=null;
   document.getElementById('result').style.display='none';
 }
 </script>

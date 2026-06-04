@@ -177,18 +177,18 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Best Days To Conceive —<br><em>Day-by-Day Probability</em></h1>
-    <p class="hero-sub">Based on the landmark Wilcox et al. study, this calculator shows your exact conception probability for each day of your fertile window, with a 3-month best-day summary. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Best Days To Conceive —<br><em>Day-by-Day Probability</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Based on the landmark Wilcox et al. study, this calculator shows your exact conception probability for each day of your fertile window, with a 3-month best-day summary. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">📊 Science-Backed</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">📊 Science-Backed</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -198,15 +198,15 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>💚 Best Days to Conceive Calculator</h2>
-          <p class="calc-intro">Enter your last period date and cycle length to see the day-by-day conception probability for your fertile window, based on the Wilcox (2000) NEJM study.</p>
+          <h2 data-i18n="calc_title">💚 Best Days to Conceive Calculator</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter your last period date and cycle length to see the day-by-day conception probability for your fertile window, based on the Wilcox (2000) NEJM study.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="lmp">First day of last period</label>
+              <label for="lmp" data-i18n="label_lmp">First day of last period</label>
               <input type="date" id="lmp" max="">
             </div>
             <div class="form-group">
-              <label for="cycle">Average cycle length</label>
+              <label for="cycle" data-i18n="label_cycle">Average cycle length</label>
               <select id="cycle">
                 <option value="21">21 days</option><option value="22">22 days</option><option value="23">23 days</option>
                 <option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option>
@@ -217,53 +217,80 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="calcBestDays()">Show My Best Days →</button>
+          <button class="btn-calc" onclick="calcBestDays()" data-i18n="btn_calc">Show My Best Days →</button>
 
           <div class="result-box" id="result">
-            <div class="today-alert" id="todayAlert">🌟 You are currently in your fertile window!</div>
+            <div class="today-alert" id="todayAlert" data-i18n="today_alert">🌟 You are currently in your fertile window!</div>
 
             <div class="summary-grid">
-              <div class="sum-card"><div class="sc-val" id="ovDateDisplay">—</div><div class="sc-label">Ovulation Day (Day 0)</div></div>
-              <div class="sum-card"><div class="sc-val" id="peakStart">—</div><div class="sc-label">Peak Fertility Start (Day -1)</div></div>
-              <div class="sum-card"><div class="sc-val" id="fertileStart">—</div><div class="sc-label">Fertile Window Start (Day -5)</div></div>
+              <div class="sum-card"><div class="sc-val" id="ovDateDisplay">—</div><div class="sc-label" data-i18n="sc_ov">Ovulation Day (Day 0)</div></div>
+              <div class="sum-card"><div class="sc-val" id="peakStart">—</div><div class="sc-label" data-i18n="sc_peak">Peak Fertility Start (Day -1)</div></div>
+              <div class="sum-card"><div class="sc-val" id="fertileStart">—</div><div class="sc-label" data-i18n="sc_fertile">Fertile Window Start (Day -5)</div></div>
             </div>
 
-            <h3>📊 Day-by-Day Conception Probability (Wilcox et al.)</h3>
+            <h3 data-i18n="h3_prob">📊 Day-by-Day Conception Probability (Wilcox et al.)</h3>
             <table class="prob-table">
-              <thead><tr><th>Day</th><th>Date</th><th>Label</th><th>Probability</th><th>Chart</th></tr></thead>
+              <thead><tr><th data-i18n="th_day">Day</th><th data-i18n="th_date">Date</th><th data-i18n="th_label">Label</th><th data-i18n="th_prob">Probability</th><th data-i18n="th_chart">Chart</th></tr></thead>
               <tbody id="probBody"></tbody>
             </table>
 
-            <h3>📆 3-Month Best Days Summary</h3>
+            <h3 data-i18n="h3_summary">📆 3-Month Best Days Summary</h3>
             <table class="ms-table">
-              <thead><tr><th>Cycle</th><th>Ovulation Date</th><th>Peak Days (33% each)</th></tr></thead>
+              <thead><tr><th data-i18n="th_cycle">Cycle</th><th data-i18n="th_ov_date">Ovulation Date</th><th data-i18n="th_peak_days">Peak Days (33% each)</th></tr></thead>
               <tbody id="summaryBody"></tbody>
             </table>
 
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>The Science of Conception Timing</h2>
-        <p class="section-sub">What the Wilcox study tells us about the best days to get pregnant</p>
-        <p>The landmark Wilcox et al. study (2000, New England Journal of Medicine) followed 221 healthy women trying to conceive and mapped day-specific conception probabilities relative to ovulation day (Day 0). This is the most widely cited evidence base for conception timing advice worldwide.</p>
-        <h3>Key Findings of the Wilcox Study</h3>
-        <p>The study confirmed that the fertile window is exactly 6 days. The peak probability days are Day -1 (day before ovulation) and Day 0 (ovulation day) — both approximately 33% per cycle. Conception is impossible from Day +2 onwards in most cycles. Day -5 (5 days before ovulation) has only a 4% probability — but it is not zero, which is why some women conceive from what they thought was "safe" sex.</p>
-        <h3>Important Caveats</h3>
-        <p>These probabilities are per cycle for a healthy couple with normal fertility. Actual conception chances also depend on: sperm quality, egg quality (age), uterine receptivity, and timing accuracy. If cycles are irregular, pinpointing ovulation may require OPKs or follicular tracking ultrasound.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>The Science of Conception Timing</h2>
+          <p class="section-sub">What the Wilcox study tells us about the best days to get pregnant</p>
+          <p>The landmark Wilcox et al. study (2000, New England Journal of Medicine) followed 221 healthy women trying to conceive and mapped day-specific conception probabilities relative to ovulation day (Day 0). This is the most widely cited evidence base for conception timing advice worldwide.</p>
+          <h3>Key Findings of the Wilcox Study</h3>
+          <p>The fertile window is exactly 6 days. Peak probability days are Day -1 and Day 0 (both ~33% per cycle). Conception is impossible from Day +2 onwards in most cycles. Day -5 has only 4% probability — but not zero, which is why some women conceive from what they thought was "safe" sex.</p>
+          <h3>Important Caveats</h3>
+          <p>These probabilities are per cycle for a healthy couple with normal fertility. Actual chances also depend on sperm quality, egg quality (age), uterine receptivity, and timing accuracy. If cycles are irregular, OPKs or follicular tracking ultrasound may be needed.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>Conception Timing వెనుక Science</h2>
+          <p class="section-sub">Wilcox study మనకు ఏమి చెప్తుంది</p>
+          <p>Wilcox et al. landmark study (2000, NEJM) 221 healthy women ని follow చేసి ovulation day (Day 0) కి relative గా day-specific conception probabilities map చేసింది. ఇది worldwide conception timing advice కి most widely cited evidence base.</p>
+          <h3>Wilcox Study Key Findings</h3>
+          <p>Fertile window exactly 6 days. Peak probability days: Day -1 మరియు Day 0 (రెండూ ~33% per cycle). Day +2 నుండి చాలా cycles లో conception impossible. Day -5 కి 4% probability మాత్రమే — కానీ zero కాదు.</p>
+          <h3>Important Caveats</h3>
+          <p>ఈ probabilities normal fertility ఉన్న healthy couple కి per cycle గా. Actual chances sperm quality, egg quality (వయస్సు), uterine receptivity, timing accuracy మీద depend అవుతాయి. Irregular cycles ఉంటే OPKs లేదా follicular tracking ultrasound అవసరం.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>What does the Wilcox study show about conception probability?</summary><p>The Wilcox et al. (2000) NEJM study mapped day-specific conception probabilities: Day -5: 4%, Day -4: 6%, Day -3: 10%, Day -2: 28%, Day -1: 33%, Day 0 (ovulation): 33%, Day +1: 2%. The study confirms that the highest probability is on the day before ovulation and ovulation day itself.</p></details>
-          <details><summary>Does having intercourse on ovulation day guarantee pregnancy?</summary><p>No. Even on the best days (Day -1 and Day 0), the probability of conception per cycle is approximately 33% for a healthy couple. Many embryos don't implant due to chromosomal abnormalities. Cumulative probability over 6 months of trying is approximately 80–85% for normal couples. If not pregnant after 12 months (or 6 months over age 35), seek fertility evaluation.</p></details>
-          <details><summary>How does sperm survival affect conception timing?</summary><p>Sperm can survive in the female reproductive tract for up to 5 days under ideal conditions (healthy cervical mucus near ovulation). This is why intercourse 5 days before ovulation can still result in conception — sperm wait in the fallopian tubes for the egg. The egg itself survives only 12–24 hours after ovulation.</p></details>
-          <details><summary>Should I track basal body temperature (BBT)?</summary><p>BBT tracking confirms ovulation has occurred (temperature rises 0.2–0.5°C after ovulation), but this information comes AFTER the fertile window has passed. BBT is useful for identifying your cycle pattern over several months. For real-time fertile window detection, OPKs are more useful as they detect the LH surge 12–36 hours BEFORE ovulation.</p></details>
-          <details><summary>Does male abstinence before sex improve conception chances?</summary><p>Optimal abstinence period is 2–4 days. Less than 2 days may result in lower total sperm count. More than 5 days can reduce motility as older sperm accumulate. For couples in the fertile window, intercourse every 1–2 days is optimal and ensures fresh, motile sperm are always available.</p></details>
-          <details><summary>What if I'm not pregnant after 6 months of timed intercourse?</summary><p>If you are under 35 and have been trying with well-timed intercourse for 12 months without success (or 6 months if over 35), a fertility evaluation is recommended. This includes a hormonal panel, pelvic ultrasound, and semen analysis for the partner. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>What does the Wilcox study show about conception probability?</summary><p>Day -5: 4%, Day -4: 6%, Day -3: 10%, Day -2: 28%, Day -1: 33%, Day 0 (ovulation): 33%, Day +1: 2%. Highest probability is on the day before ovulation and ovulation day itself.</p></details>
+            <details><summary>Does having intercourse on ovulation day guarantee pregnancy?</summary><p>No. Even on the best days, probability is ~33% per cycle. Cumulative probability over 6 months is ~80–85% for normal couples. If not pregnant after 12 months (or 6 months over 35), seek fertility evaluation.</p></details>
+            <details><summary>How does sperm survival affect conception timing?</summary><p>Sperm can survive up to 5 days in the reproductive tract. This is why intercourse 5 days before ovulation can still result in conception. The egg survives only 12–24 hours after ovulation.</p></details>
+            <details><summary>Should I track basal body temperature (BBT)?</summary><p>BBT confirms ovulation has occurred (temperature rises after ovulation), but this comes AFTER the fertile window. For real-time detection, OPKs detect the LH surge 12–36 hours BEFORE ovulation.</p></details>
+            <details><summary>Does male abstinence before sex improve chances?</summary><p>Optimal abstinence is 2–4 days. Less than 2 days may lower total sperm count; more than 5 days can reduce motility. Every 1–2 days during fertile window is optimal.</p></details>
+            <details><summary>What if I'm not pregnant after 6 months of timed intercourse?</summary><p>Under 35: seek evaluation after 12 months. Over 35: after 6 months. Includes hormonal panel, pelvic ultrasound, and semen analysis. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>Wilcox study conception probability గురించి ఏమి చెప్తుంది?</summary><p>Day -5: 4%, Day -4: 6%, Day -3: 10%, Day -2: 28%, Day -1: 33%, Day 0 (ovulation): 33%, Day +1: 2%. అత్యధిక probability ovulation కి ఒక రోజు ముందు మరియు ovulation రోజే.</p></details>
+            <details><summary>Ovulation రోజే intercourse చేస్తే pregnancy guarantee అవుతుందా?</summary><p>కాదు. Best days లో కూడా per cycle probability ~33%. Normal couples కి 6 నెలల్లో cumulative probability ~80–85%. 12 నెలలు (35 కంటే ఎక్కువ వయస్సు ఉంటే 6 నెలలు) try చేసినా pregnant కాకపోతే fertility evaluation చేయించుకోండి.</p></details>
+            <details><summary>Sperm survival conception timing ని ఎలా affect చేస్తుంది?</summary><p>Sperm reproductive tract లో 5 రోజుల వరకు survive చేయగలదు. అందుకే ovulation కి 5 రోజుల ముందు intercourse చేసినా conception possible. Egg ovulation తర్వాత 12–24 గంటలు మాత్రమే survive చేస్తుంది.</p></details>
+            <details><summary>BBT (basal body temperature) track చేయాలా?</summary><p>BBT ovulation జరిగాక confirm చేస్తుంది (temperature పెరుగుతుంది) — కానీ fertile window అయిపోయిన తర్వాత. Real-time detection కోసం OPKs better — LH surge ని ovulation కి 12–36 గంటల ముందు detect చేస్తాయి.</p></details>
+            <details><summary>Sex ముందు abstinence chances improve చేస్తుందా?</summary><p>Optimal abstinence 2–4 రోజులు. 2 రోజుల కంటే తక్కువ — total sperm count తగ్గవచ్చు; 5 రోజుల కంటే ఎక్కువ — motility తగ్గవచ్చు. Fertile window లో every 1–2 days optimal.</p></details>
+            <details><summary>6 నెలలు try చేసినా pregnant కాలేదా?</summary><p>35 కంటే తక్కువ వయస్సు: 12 నెలల తర్వాత evaluation. 35 కంటే ఎక్కువ: 6 నెలల తర్వాత. Hormonal panel, pelvic ultrasound, semen analysis చేయించుకోండి. Call: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
     </div>
 
     <aside>
@@ -304,13 +331,13 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Fertility Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Fertility Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -337,9 +364,65 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT={
+  en:{
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Best Days To Conceive —<br><em>Day-by-Day Probability</em>',
+    hero_sub:'Based on the landmark Wilcox et al. study, this calculator shows your exact conception probability for each day of your fertile window, with a 3-month best-day summary. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'📊 Science-Backed',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'💚 Best Days to Conceive Calculator',
+    calc_intro:'Enter your last period date and cycle length to see the day-by-day conception probability for your fertile window, based on the Wilcox (2000) NEJM study.',
+    label_lmp:'First day of last period', label_cycle:'Average cycle length',
+    btn_calc:'Show My Best Days →', btn_reset:'↩ Reset',
+    today_alert:'🌟 You are currently in your fertile window!',
+    sc_ov:'Ovulation Day (Day 0)', sc_peak:'Peak Fertility Start (Day -1)', sc_fertile:'Fertile Window Start (Day -5)',
+    h3_prob:'📊 Day-by-Day Conception Probability (Wilcox et al.)',
+    h3_summary:'📆 3-Month Best Days Summary',
+    th_day:'Day', th_date:'Date', th_label:'Label', th_prob:'Probability', th_chart:'Chart',
+    th_cycle:'Cycle', th_ov_date:'Ovulation Date', th_peak_days:'Peak Days (33% each)',
+    prob_low:'Low', prob_moderate:'Moderate', prob_good:'Good', prob_peak:'Peak', prob_very_low:'Very Low',
+    today_prefix:'📍 Today — ',
+    cycle_label:'Cycle {n}',
+    alert_lmp:'Please enter the first day of your last period.',
+    alert_future:'Last period date cannot be in the future.',
+    cta_h2:'Need Personalised Fertility Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+  },
+  te:{
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'Conceive కావడానికి Best Days —<br><em>రోజువారీ Probability</em>',
+    hero_sub:'Wilcox et al. landmark study ఆధారంగా, మీ fertile window లో ప్రతి రోజు conception probability చూపిస్తాం — 3-నెలల best days summary తో. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'📊 Science-Backed',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'💚 Best Days to Conceive Calculator',
+    calc_intro:'మీ చివరి పీరియడ్ తేదీ మరియు cycle length enter చేయండి — Wilcox (2000) NEJM study ఆధారంగా రోజువారీ conception probability చూపిస్తాం.',
+    label_lmp:'చివరి పీరియడ్ మొదటి రోజు', label_cycle:'సగటు cycle length',
+    btn_calc:'నా Best Days చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    today_alert:'🌟 మీరు ఇప్పుడు fertile window లో ఉన్నారు!',
+    sc_ov:'Ovulation Day (Day 0)', sc_peak:'Peak Fertility Start (Day -1)', sc_fertile:'Fertile Window Start (Day -5)',
+    h3_prob:'📊 రోజువారీ Conception Probability (Wilcox et al.)',
+    h3_summary:'📆 3-నెలల Best Days Summary',
+    th_day:'రోజు', th_date:'తేదీ', th_label:'Label', th_prob:'Probability', th_chart:'Chart',
+    th_cycle:'Cycle', th_ov_date:'Ovulation తేదీ', th_peak_days:'Peak Days (33% each)',
+    prob_low:'తక్కువ', prob_moderate:'Moderate', prob_good:'మంచిది', prob_peak:'Peak', prob_very_low:'చాలా తక్కువ',
+    today_prefix:'📍 ఈరోజు — ',
+    cycle_label:'Cycle {n}',
+    alert_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు enter చేయండి.',
+    alert_future:'పీరియడ్ తేదీ future లో ఉండకూడదు.',
+    cta_h2:'ఫెర్టిలిటీ గురించి మాట్లాడాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
-// Wilcox day-specific probabilities relative to ovulation (Day 0)
 const WILCOX = {'-5':4,'-4':6,'-3':10,'-2':28,'-1':33,'0':33,'1':2};
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
@@ -347,69 +430,69 @@ function fmtShort(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'s
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function sameDay(a,b){return a.toDateString()===b.toDateString();}
 
-function calcBestDays(){
-  const lmpVal=document.getElementById('lmp').value;
-  if(!lmpVal){alert('Please enter the first day of your last period.');return;}
-  const lmp=new Date(lmpVal);
+var _lastBestDays=null;
+
+const PROB_KEY_MAP={'-5':'prob_low','-4':'prob_low','-3':'prob_moderate','-2':'prob_good','-1':'prob_peak','0':'prob_peak','1':'prob_very_low'};
+const COLORS={'-5':'#ff8c8c','-4':'#ffa07a','-3':'#ffd700','-2':'#90ee90','-1':'#00c851','0':'#00c851','1':'#f4c6df'};
+
+function _renderBestDays(nextOv,cycleLen){
   const today=new Date();today.setHours(0,0,0,0);
-  if(lmp>today){alert('Last period date cannot be in the future.');return;}
-  const cycleLen=parseInt(document.getElementById('cycle').value);
-
-  // Find next ovulation
-  const daysSinceLmp=Math.round((today-lmp)/86400000);
-  let cyclesElapsed=Math.floor(daysSinceLmp/cycleLen);
-  let nextOv=addDays(lmp,(cycleLen-14)+cyclesElapsed*cycleLen);
-  if(nextOv<today) nextOv=addDays(lmp,(cycleLen-14)+(cyclesElapsed+1)*cycleLen);
-
   document.getElementById('ovDateDisplay').textContent=fmtShort(nextOv);
   document.getElementById('peakStart').textContent=fmtShort(addDays(nextOv,-1));
   document.getElementById('fertileStart').textContent=fmtShort(addDays(nextOv,-5));
+  const fertStart=addDays(nextOv,-5),fertEnd=addDays(nextOv,1);
+  document.getElementById('todayAlert').style.display=(today>=fertStart&&today<=fertEnd)?'block':'none';
 
-  // Check if today is in fertile window
-  const fertStart=addDays(nextOv,-5);
-  const fertEnd=addDays(nextOv,1);
-  const todayInWindow=today>=fertStart&&today<=fertEnd;
-  document.getElementById('todayAlert').style.display=todayInWindow?'block':'none';
-
-  // Build probability table
   const tbody=document.getElementById('probBody');
   tbody.innerHTML='';
-  const dayOffsets=[-5,-4,-3,-2,-1,0,1];
-  const labels={'-5':'Low','−4':'Low','-4':'Low','-3':'Moderate','-2':'Good','-1':'Peak','0':'Peak','1':'Very Low'};
-  const colors={'-5':'#ff8c8c','-4':'#ffa07a','-3':'#ffd700','-2':'#90ee90','-1':'#00c851','0':'#00c851','1':'#f4c6df'};
-
-  dayOffsets.forEach(offset=>{
+  [-5,-4,-3,-2,-1,0,1].forEach(offset=>{
     const dt=addDays(nextOv,offset);
     const prob=WILCOX[String(offset)];
     const isPeak=offset===-1||offset===0;
     const isToday=sameDay(dt,today);
     const tr=document.createElement('tr');
     tr.className=isPeak?'peak-row':(isToday?'today-row':'');
-    const barWidth=prob;
-    const barColor=colors[String(offset)];
-    const label=isToday?'📍 Today — '+labels[String(offset)]:labels[String(offset)];
-    tr.innerHTML=`<td>Day ${offset>=0?'+'+offset:offset}</td><td>${fmt(dt)}</td><td><strong>${label}</strong></td><td><strong>${prob}%</strong></td><td><div class="prob-bar-wrap"><div class="prob-bar" style="width:${barWidth}%;background:${barColor}"></div></div></td>`;
+    const labelStr=t(PROB_KEY_MAP[String(offset)]);
+    const displayLabel=isToday?t('today_prefix')+labelStr:labelStr;
+    tr.innerHTML=`<td>Day ${offset>=0?'+'+offset:offset}</td><td>${fmt(dt)}</td><td><strong>${displayLabel}</strong></td><td><strong>${prob}%</strong></td><td><div class="prob-bar-wrap"><div class="prob-bar" style="width:${prob}%;background:${COLORS[String(offset)]}"></div></div></td>`;
     tbody.appendChild(tr);
   });
 
-  // 3-month summary
   const sumBody=document.getElementById('summaryBody');
   sumBody.innerHTML='';
   for(let i=0;i<3;i++){
     const cOv=addDays(nextOv,cycleLen*i);
-    const peak1=addDays(cOv,-1);
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td>Cycle ${i+1}</td><td><strong>${fmt(cOv)}</strong></td><td>${fmtShort(peak1)} & ${fmtShort(cOv)}</td>`;
+    tr.innerHTML=`<td>${t('cycle_label').replace('{n}',i+1)}</td><td><strong>${fmt(cOv)}</strong></td><td>${fmtShort(addDays(cOv,-1))} & ${fmtShort(cOv)}</td>`;
     sumBody.appendChild(tr);
   }
+}
 
+function calcBestDays(){
+  const lmpVal=document.getElementById('lmp').value;
+  if(!lmpVal){alert(t('alert_lmp'));return;}
+  const lmp=new Date(lmpVal);
+  const today=new Date();today.setHours(0,0,0,0);
+  if(lmp>today){alert(t('alert_future'));return;}
+  const cycleLen=parseInt(document.getElementById('cycle').value);
+  const daysSinceLmp=Math.round((today-lmp)/86400000);
+  let cyclesElapsed=Math.floor(daysSinceLmp/cycleLen);
+  let nextOv=addDays(lmp,(cycleLen-14)+cyclesElapsed*cycleLen);
+  if(nextOv<today) nextOv=addDays(lmp,(cycleLen-14)+(cyclesElapsed+1)*cycleLen);
+  _lastBestDays={nextOv,cycleLen};
+  _renderBestDays(nextOv,cycleLen);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  if(_lastBestDays) _renderBestDays(_lastBestDays.nextOv,_lastBestDays.cycleLen);
+};
+
 function resetCalc(){
   document.getElementById('lmp').value='';
   document.getElementById('cycle').value='28';
+  _lastBestDays=null;
   document.getElementById('result').style.display='none';
 }
 </script>

@@ -170,18 +170,18 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>When Did I Conceive? —<br><em>Conception Date Calculator</em></h1>
-    <p class="hero-sub">Enter your due date, LMP, or IVF transfer date to find your estimated conception date with a ±3 day window, your LMP, EDD, gestational age today, and current trimester. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">When Did I Conceive? —<br><em>Conception Date Calculator</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your due date, LMP, or IVF transfer date to find your estimated conception date with a ±3 day window, your LMP, EDD, gestational age today, and current trimester. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">🏥 IVF Dating Included</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">🏥 IVF Dating Included</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -191,30 +191,30 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>💡 Conception Date Calculator</h2>
-          <p class="calc-intro">Select your dating method and enter the relevant date to find your estimated conception date.</p>
+          <h2 data-i18n="calc_title">💡 Conception Date Calculator</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Select your dating method and enter the relevant date to find your estimated conception date.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="mode">I know my...</label>
+              <label for="mode" data-i18n="label_mode">I know my...</label>
               <select id="mode" onchange="updateMode()">
-                <option value="edd">Due Date (EDD)</option>
-                <option value="lmp">Last Menstrual Period (LMP)</option>
-                <option value="ivf5">IVF Day 5 Transfer Date</option>
-                <option value="ivf3">IVF Day 3 Transfer Date</option>
+                <option value="edd" data-i18n="mode_edd">Due Date (EDD)</option>
+                <option value="lmp" data-i18n="mode_lmp">Last Menstrual Period (LMP)</option>
+                <option value="ivf5" data-i18n="mode_ivf5">IVF Day 5 Transfer Date</option>
+                <option value="ivf3" data-i18n="mode_ivf3">IVF Day 3 Transfer Date</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="inputDate" id="dateLabel">Enter your due date</label>
+              <label for="inputDate" id="dateLabel" data-i18n="label_edd">Enter your due date</label>
               <input type="date" id="inputDate">
             </div>
           </div>
-          <button class="btn-calc" onclick="calcConception()">Find My Conception Date →</button>
+          <button class="btn-calc" onclick="calcConception()" data-i18n="btn_calc">Find My Conception Date →</button>
 
           <div class="result-box" id="result">
             <div class="conception-banner">
-              <div style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.3rem">Estimated Conception Date</div>
+              <div style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.3rem" data-i18n="banner_label">Estimated Conception Date</div>
               <div class="conception-date" id="concDateDisplay">—</div>
-              <div class="conception-window" id="concWindow">Conception window: — to —</div>
+              <div class="conception-window" id="concWindow"></div>
               <div id="trimBadge" class="trimester-badge trim-1" style="display:none">—</div>
             </div>
 
@@ -223,36 +223,63 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
             </div>
 
             <div class="dates-grid">
-              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label">Equivalent LMP</div><div class="dc-val" id="lmpDisplay">—</div><div class="dc-sub">First day of last period</div></div>
-              <div class="date-card"><div class="dc-icon">🏁</div><div class="dc-label">Estimated Due Date</div><div class="dc-val" id="eddDisplay">—</div><div class="dc-sub">EDD (40 weeks from LMP)</div></div>
-              <div class="date-card"><div class="dc-icon">📊</div><div class="dc-label">Gestational Age Today</div><div class="dc-val" id="gestDisplay">—</div><div class="dc-sub" id="gestDaysSub">—</div></div>
-              <div class="date-card"><div class="dc-icon">🔢</div><div class="dc-label">Embryonic Age Today</div><div class="dc-val" id="embryoDisplay">—</div><div class="dc-sub">From fertilisation</div></div>
+              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label" data-i18n="dc_lmp">Equivalent LMP</div><div class="dc-val" id="lmpDisplay">—</div><div class="dc-sub" data-i18n="dc_lmp_sub">First day of last period</div></div>
+              <div class="date-card"><div class="dc-icon">🏁</div><div class="dc-label" data-i18n="dc_edd">Estimated Due Date</div><div class="dc-val" id="eddDisplay">—</div><div class="dc-sub" data-i18n="dc_edd_sub">EDD (40 weeks from LMP)</div></div>
+              <div class="date-card"><div class="dc-icon">📊</div><div class="dc-label" data-i18n="dc_gest">Gestational Age Today</div><div class="dc-val" id="gestDisplay">—</div><div class="dc-sub" id="gestDaysSub"></div></div>
+              <div class="date-card"><div class="dc-icon">🔢</div><div class="dc-label" data-i18n="dc_embryo">Embryonic Age Today</div><div class="dc-val" id="embryoDisplay">—</div><div class="dc-sub" data-i18n="dc_embryo_sub">From fertilisation</div></div>
             </div>
 
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>How Conception Date Is Calculated</h2>
-        <p class="section-sub">The difference between gestational and embryonic dating</p>
-        <p>In natural conception, the conception date is estimated by working backwards from the last menstrual period (LMP). Ovulation typically occurs 14 days after LMP in a 28-day cycle, and fertilisation happens within 24 hours of ovulation. Therefore, conception date ≈ LMP + 14 days.</p>
-        <h3>IVF Dating — The Most Precise Method</h3>
-        <p>In IVF, the exact fertilisation date is known from laboratory records. For a Day 5 blastocyst transfer, fertilisation was exactly 5 days before transfer. For a Day 3 transfer, fertilisation was 3 days before transfer. This makes IVF conception dating more precise than natural cycle dating.</p>
-        <h3>Why Gestational and Embryonic Age Differ</h3>
-        <p>Gestational age (from LMP) is always 2 weeks greater than embryonic age (from fertilisation). At a "6-week scan," the embryo is actually only 4 weeks old from conception. This sometimes causes confusion. Both are valid dating systems — doctors use gestational age; embryologists use embryonic age in IVF.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>How Conception Date Is Calculated</h2>
+          <p class="section-sub">The difference between gestational and embryonic dating</p>
+          <p>In natural conception, the conception date is estimated by working backwards from the last menstrual period (LMP). Ovulation typically occurs 14 days after LMP in a 28-day cycle, and fertilisation happens within 24 hours of ovulation. Therefore, conception date ≈ LMP + 14 days.</p>
+          <h3>IVF Dating — The Most Precise Method</h3>
+          <p>In IVF, the exact fertilisation date is known from laboratory records. For a Day 5 blastocyst transfer, fertilisation was exactly 5 days before transfer. For a Day 3 transfer, fertilisation was 3 days before transfer. This makes IVF conception dating more precise than natural cycle dating.</p>
+          <h3>Why Gestational and Embryonic Age Differ</h3>
+          <p>Gestational age (from LMP) is always 2 weeks greater than embryonic age (from fertilisation). At a "6-week scan," the embryo is actually only 4 weeks old from conception. Both are valid dating systems — doctors use gestational age; embryologists use embryonic age in IVF.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>Conception Date ఎలా Calculate అవుతుంది?</h2>
+          <p class="section-sub">Gestational మరియు embryonic dating తేడా</p>
+          <p>Natural conception లో, LMP నుండి backwards calculate చేసి conception date అంచనా వేస్తారు. 28-day cycle లో ovulation సాధారణంగా LMP తర్వాత 14 రోజులకు జరుగుతుంది, fertilisation ovulation తర్వాత 24 గంటల్లో జరుగుతుంది. కాబట్టి conception date ≈ LMP + 14 రోజులు.</p>
+          <h3>IVF Dating — అత్యంత Accurate పద్ధతి</h3>
+          <p>IVF లో lab records నుండి exact fertilisation date తెలుసు. Day 5 blastocyst transfer కి, fertilisation transfer కంటే 5 రోజుల ముందు జరిగింది. Day 3 transfer కి, 3 రోజుల ముందు. అందుకే IVF conception dating natural cycle కంటే more precise గా ఉంటుంది.</p>
+          <h3>Gestational మరియు Embryonic Age ఎందుకు వేరుగా ఉంటాయి?</h3>
+          <p>Gestational age (LMP నుండి) ఎప్పుడూ embryonic age (fertilisation నుండి) కంటే 2 వారాలు ఎక్కువగా ఉంటుంది. "6-week scan" లో embryo actually conception నుండి 4 వారాల వయస్సు మాత్రమే ఉంటుంది.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How is the conception date calculated from a due date?</summary><p>The EDD is calculated as LMP + 280 days. Working backwards, the conception date is approximately EDD minus 266 days (since fertilisation occurs approximately 14 days after LMP, and 280-14=266). Because ovulation can vary by several days, a ±3 day window is given for the conception date estimate.</p></details>
-          <details><summary>How is conception date calculated for IVF?</summary><p>In IVF, the exact fertilisation date is known. For a Day 5 blastocyst transfer, fertilisation occurred 5 days before transfer. For a Day 3 transfer, fertilisation occurred 3 days before transfer. The conception date is therefore precisely known in IVF, unlike natural conception.</p></details>
-          <details><summary>What is the difference between gestational age and embryonic age?</summary><p>Gestational age is measured from the first day of the last menstrual period (LMP). Embryonic age is measured from the day of fertilisation (conception). Gestational age is always approximately 2 weeks greater than embryonic age. In IVF, both dates are precisely known.</p></details>
-          <details><summary>Can I know exactly when I conceived?</summary><p>In natural conception, the exact date is rarely known — this calculator provides an estimate based on cycle length and LMP. The conception window is typically ±3 days around the calculated date. In IVF, the exact fertilisation date is known from laboratory records. First-trimester ultrasound (crown-rump length at 7–12 weeks) gives the most accurate pregnancy dating.</p></details>
-          <details><summary>Does conception happen on the day of intercourse?</summary><p>Not necessarily. Sperm can survive in the fallopian tubes for up to 5 days. The egg survives only 12–24 hours after ovulation. Fertilisation occurs when sperm meets the egg — typically within 12–24 hours of ovulation, but sperm from intercourse 2–3 days earlier may be responsible. This is why the exact conception date is an estimate in natural conception.</p></details>
-          <details><summary>How accurate is this conception calculator?</summary><p>Most accurate for IVF transfer dates (exact fertilisation known) or first-trimester ultrasound dating. When based on LMP alone, estimates are within ±3–5 days for regular cycles. For irregular cycles, ultrasound dating should be used. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How is the conception date calculated from a due date?</summary><p>The EDD is calculated as LMP + 280 days. Working backwards, the conception date is approximately EDD minus 266 days. Because ovulation can vary by several days, a ±3 day window is given for the conception date estimate.</p></details>
+            <details><summary>How is conception date calculated for IVF?</summary><p>In IVF, the exact fertilisation date is known. For a Day 5 blastocyst transfer, fertilisation occurred 5 days before transfer. For a Day 3 transfer, fertilisation occurred 3 days before transfer. The conception date is therefore precisely known in IVF.</p></details>
+            <details><summary>What is the difference between gestational age and embryonic age?</summary><p>Gestational age is measured from the first day of LMP. Embryonic age is measured from the day of fertilisation. Gestational age is always approximately 2 weeks greater than embryonic age. In IVF, both dates are precisely known.</p></details>
+            <details><summary>Can I know exactly when I conceived?</summary><p>In natural conception, the exact date is rarely known — this calculator provides an estimate. The conception window is typically ±3 days. In IVF, the exact fertilisation date is known from laboratory records. First-trimester ultrasound gives the most accurate pregnancy dating.</p></details>
+            <details><summary>Does conception happen on the day of intercourse?</summary><p>Not necessarily. Sperm can survive for up to 5 days. The egg survives only 12–24 hours after ovulation. This is why the exact conception date is an estimate in natural conception.</p></details>
+            <details><summary>How accurate is this conception calculator?</summary><p>Most accurate for IVF transfer dates or first-trimester ultrasound dating. When based on LMP alone, estimates are within ±3–5 days for regular cycles. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>Due date నుండి conception date ఎలా calculate అవుతుంది?</summary><p>EDD = LMP + 280 రోజులు. Backwards calculate చేస్తే conception date ≈ EDD minus 266 రోజులు. Ovulation vary అవుతుంది కాబట్టి ±3 రోజుల window ఇస్తాం.</p></details>
+            <details><summary>IVF కోసం conception date ఎలా calculate అవుతుంది?</summary><p>IVF లో exact fertilisation date తెలుసు. Day 5 blastocyst transfer కి, fertilisation transfer కంటే 5 రోజుల ముందు. Day 3 transfer కి, 3 రోజుల ముందు.</p></details>
+            <details><summary>Gestational age మరియు embryonic age తేడా ఏమిటి?</summary><p>Gestational age LMP నుండి, embryonic age fertilisation నుండి. Gestational age ఎప్పుడూ embryonic age కంటే 2 వారాలు ఎక్కువ. IVF లో రెండూ precisely తెలుసు.</p></details>
+            <details><summary>Exactly ఎప్పుడు conceive అయ్యానో తెలుసుకోవచ్చా?</summary><p>Natural conception లో exact date సాధారణంగా తెలియదు — ఈ calculator estimate ఇస్తుంది (±3 రోజుల window). IVF లో lab records నుండి exact date తెలుసు. First-trimester ultrasound most accurate dating ఇస్తుంది.</p></details>
+            <details><summary>Intercourse రోజే conception జరుగుతుందా?</summary><p>కాదు — sperm 5 రోజుల వరకు survive చేయగలదు. Egg ovulation తర్వాత 12–24 గంటలు మాత్రమే survive చేస్తుంది. అందుకే exact conception date natural conception లో estimate మాత్రమే.</p></details>
+            <details><summary>ఈ calculator ఎంత accurate గా ఉంటుంది?</summary><p>IVF transfer dates కి అత్యంత accurate. LMP మాత్రమే use చేస్తే regular cycles కి ±3–5 రోజులు accurate. Irregular cycles కి ultrasound dating use చేయండి. Call: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
     </div>
 
     <aside>
@@ -291,13 +318,13 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Pregnancy Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Pregnancy Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -324,78 +351,127 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT={
+  en:{
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'When Did I Conceive? —<br><em>Conception Date Calculator</em>',
+    hero_sub:'Enter your due date, LMP, or IVF transfer date to find your estimated conception date with a ±3 day window, your LMP, EDD, gestational age today, and current trimester. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'🏥 IVF Dating Included',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'💡 Conception Date Calculator',
+    calc_intro:'Select your dating method and enter the relevant date to find your estimated conception date.',
+    label_mode:'I know my...', mode_edd:'Due Date (EDD)', mode_lmp:'Last Menstrual Period (LMP)',
+    mode_ivf5:'IVF Day 5 Transfer Date', mode_ivf3:'IVF Day 3 Transfer Date',
+    label_edd:'Enter your due date (EDD)', label_lmp:'First day of last period (LMP)',
+    label_ivf5:'IVF Day 5 Transfer Date', label_ivf3:'IVF Day 3 Transfer Date',
+    btn_calc:'Find My Conception Date →', btn_reset:'↩ Reset',
+    banner_label:'Estimated Conception Date',
+    conc_window:'Conception window: {from} to {to}',
+    dc_lmp:'Equivalent LMP', dc_lmp_sub:'First day of last period',
+    dc_edd:'Estimated Due Date', dc_edd_sub:'EDD (40 weeks from LMP)',
+    dc_gest:'Gestational Age Today', dc_embryo:'Embryonic Age Today', dc_embryo_sub:'From fertilisation',
+    not_yet_lmp:'Not yet reached LMP', not_yet_conceived:'Not yet conceived',
+    days_from_lmp:'{n} days from LMP',
+    trim1:'1st Trimester', trim2:'2nd Trimester', trim3:'3rd Trimester',
+    alert_date:'Please enter a date.',
+    cta_h2:'Need Personalised Pregnancy Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+  },
+  te:{
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'నేను ఎప్పుడు Conceive అయ్యాను? —<br><em>Conception Date Calculator</em>',
+    hero_sub:'మీ due date, LMP, లేదా IVF transfer date enter చేయండి — estimated conception date, ±3 రోజుల window, LMP, EDD, ప్రస్తుత gestational age అన్నీ చూపిస్తాం. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'🏥 IVF Dating కూడా',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'💡 Conception Date Calculator',
+    calc_intro:'మీ dating method select చేసి date enter చేయండి — conception date చూపిస్తాం.',
+    label_mode:'నాకు తెలిసింది...', mode_edd:'Due Date (EDD)', mode_lmp:'చివరి పీరియడ్ (LMP)',
+    mode_ivf5:'IVF Day 5 Transfer Date', mode_ivf3:'IVF Day 3 Transfer Date',
+    label_edd:'మీ due date enter చేయండి (EDD)', label_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు (LMP)',
+    label_ivf5:'IVF Day 5 Transfer Date', label_ivf3:'IVF Day 3 Transfer Date',
+    btn_calc:'నా Conception Date చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    banner_label:'అంచనా Conception తేదీ',
+    conc_window:'Conception window: {from} నుండి {to} వరకు',
+    dc_lmp:'Equivalent LMP', dc_lmp_sub:'మొదటి పీరియడ్ రోజు',
+    dc_edd:'అంచనా Due Date', dc_edd_sub:'EDD (LMP నుండి 40 వారాలు)',
+    dc_gest:'ఇప్పుడు Gestational Age', dc_embryo:'ఇప్పుడు Embryonic Age', dc_embryo_sub:'Fertilisation నుండి',
+    not_yet_lmp:'LMP ఇంకా రాలేదు', not_yet_conceived:'ఇంకా conceive కాలేదు',
+    days_from_lmp:'{n} రోజులు LMP నుండి',
+    trim1:'1వ Trimester', trim2:'2వ Trimester', trim3:'3వ Trimester',
+    alert_date:'Valid date enter చేయండి.',
+    cta_h2:'ప్రెగ్నెన్సీ గురించి మాట్లాడాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
 
+var _lastConcResult=null;
+
 function updateMode(){
   const mode=document.getElementById('mode').value;
-  const lbl={edd:'Enter your due date (EDD)',lmp:'First day of last period (LMP)',ivf5:'IVF Day 5 Transfer Date',ivf3:'IVF Day 3 Transfer Date'};
-  document.getElementById('dateLabel').textContent=lbl[mode];
+  const keyMap={edd:'label_edd',lmp:'label_lmp',ivf5:'label_ivf5',ivf3:'label_ivf3'};
+  const lbl=document.getElementById('dateLabel');
+  lbl.setAttribute('data-i18n',keyMap[mode]);
+  I18n.apply();
+}
+
+function _renderConception(r){
+  document.getElementById('concDateDisplay').textContent=fmt(r.conceptionDate);
+  document.getElementById('concWindow').textContent=t('conc_window').replace('{from}',fmt(addDays(r.conceptionDate,-3))).replace('{to}',fmt(addDays(r.conceptionDate,3)));
+  const tb=document.getElementById('trimBadge');
+  if(r.gestDays>0){tb.textContent=t(r.trimKey);tb.className='trimester-badge '+r.trimCls;tb.style.display='inline-block';}
+  else tb.style.display='none';
+  document.getElementById('ivfNote').style.display=r.isIVF?'block':'none';
+  document.getElementById('lmpDisplay').textContent=fmt(r.lmp);
+  document.getElementById('eddDisplay').textContent=fmt(r.edd);
+  document.getElementById('gestDisplay').textContent=r.gestDays>0?`${r.gestWeeks}w ${r.gestDaysR}d`:t('not_yet_lmp');
+  document.getElementById('gestDaysSub').textContent=r.gestDays>0?t('days_from_lmp').replace('{n}',r.gestDays):'';
+  document.getElementById('embryoDisplay').textContent=r.embryoDays>0?`${r.embryoWeeks}w ${r.embryoDaysR}d`:t('not_yet_conceived');
 }
 
 function calcConception(){
   const mode=document.getElementById('mode').value;
   const dateVal=document.getElementById('inputDate').value;
-  if(!dateVal){alert('Please enter a date.');return;}
+  if(!dateVal){alert(t('alert_date'));return;}
   const inputDate=new Date(dateVal);
   const today=new Date();today.setHours(0,0,0,0);
 
   let lmp,conceptionDate,edd,isIVF=false;
-
-  if(mode==='edd'){
-    edd=inputDate;
-    lmp=addDays(edd,-280);
-    conceptionDate=addDays(lmp,14);
-  } else if(mode==='lmp'){
-    lmp=inputDate;
-    conceptionDate=addDays(lmp,14);
-    edd=addDays(lmp,280);
-  } else if(mode==='ivf5'){
-    conceptionDate=addDays(inputDate,-5);
-    lmp=addDays(inputDate,-19);
-    edd=addDays(lmp,280);
-    isIVF=true;
-  } else if(mode==='ivf3'){
-    conceptionDate=addDays(inputDate,-3);
-    lmp=addDays(inputDate,-17);
-    edd=addDays(lmp,280);
-    isIVF=true;
-  }
+  if(mode==='edd'){edd=inputDate;lmp=addDays(edd,-280);conceptionDate=addDays(lmp,14);}
+  else if(mode==='lmp'){lmp=inputDate;conceptionDate=addDays(lmp,14);edd=addDays(lmp,280);}
+  else if(mode==='ivf5'){conceptionDate=addDays(inputDate,-5);lmp=addDays(inputDate,-19);edd=addDays(lmp,280);isIVF=true;}
+  else if(mode==='ivf3'){conceptionDate=addDays(inputDate,-3);lmp=addDays(inputDate,-17);edd=addDays(lmp,280);isIVF=true;}
 
   const gestDays=Math.max(0,daysBetween(lmp,today));
-  const gestWeeks=Math.floor(gestDays/7);
-  const gestDaysR=gestDays%7;
+  const gestWeeks=Math.floor(gestDays/7),gestDaysR=gestDays%7;
   const embryoDays=Math.max(0,daysBetween(conceptionDate,today));
-  const embryoWeeks=Math.floor(embryoDays/7);
-  const embryoDaysR=embryoDays%7;
+  const embryoWeeks=Math.floor(embryoDays/7),embryoDaysR=embryoDays%7;
+  let trimKey,trimCls;
+  if(gestWeeks<14){trimKey='trim1';trimCls='trim-1';}
+  else if(gestWeeks<28){trimKey='trim2';trimCls='trim-2';}
+  else{trimKey='trim3';trimCls='trim-3';}
 
-  let trimLabel,trimCls;
-  if(gestWeeks<14){trimLabel='1st Trimester';trimCls='trim-1';}
-  else if(gestWeeks<28){trimLabel='2nd Trimester';trimCls='trim-2';}
-  else{trimLabel='3rd Trimester';trimCls='trim-3';}
-
-  document.getElementById('concDateDisplay').textContent=fmt(conceptionDate);
-  document.getElementById('concWindow').textContent=`Conception window: ${fmt(addDays(conceptionDate,-3))} to ${fmt(addDays(conceptionDate,3))}`;
-
-  const tb=document.getElementById('trimBadge');
-  if(gestDays>0){tb.textContent=trimLabel;tb.className='trimester-badge '+trimCls;tb.style.display='inline-block';}
-  else tb.style.display='none';
-
-  document.getElementById('ivfNote').style.display=isIVF?'block':'none';
-  document.getElementById('lmpDisplay').textContent=fmt(lmp);
-  document.getElementById('eddDisplay').textContent=fmt(edd);
-  document.getElementById('gestDisplay').textContent=gestDays>0?`${gestWeeks}w ${gestDaysR}d`:'Not yet reached LMP';
-  document.getElementById('gestDaysSub').textContent=gestDays>0?`${gestDays} days from LMP`:'';
-  document.getElementById('embryoDisplay').textContent=embryoDays>0?`${embryoWeeks}w ${embryoDaysR}d`:'Not yet conceived';
-
+  _lastConcResult={conceptionDate,lmp,edd,isIVF,gestDays,gestWeeks,gestDaysR,embryoDays,embryoWeeks,embryoDaysR,trimKey,trimCls};
+  _renderConception(_lastConcResult);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){if(_lastConcResult) _renderConception(_lastConcResult);};
+
 function resetCalc(){
   document.getElementById('inputDate').value='';
   document.getElementById('mode').value='edd';
+  _lastConcResult=null;
   updateMode();
   document.getElementById('result').style.display='none';
 }

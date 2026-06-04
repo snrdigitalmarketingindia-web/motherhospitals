@@ -176,18 +176,18 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>3-Month Fertility Window Planner —<br><em>Visual Conception Calendar</em></h1>
-    <p class="hero-sub">Get a 3-month color-coded calendar showing your fertile days (green), ovulation day (dark green), and period days (pink) — plus an intercourse schedule for each cycle. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">3-Month Fertility Window Planner —<br><em>Visual Conception Calendar</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Get a 3-month color-coded calendar showing your fertile days (green), ovulation day (dark green), and period days (pink) — plus an intercourse schedule for each cycle. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Calendar</span>
-      <span class="hero-chip">🗓 3 Months</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Calendar</span>
+      <span class="hero-chip" data-i18n="chip3">🗓 3 Months</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -197,15 +197,15 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>🌿 3-Month Fertility Planner</h2>
-          <p class="calc-intro">Enter the first day of your last period and your cycle length to generate your personalised 3-month conception calendar.</p>
+          <h2 data-i18n="calc_title">🌿 3-Month Fertility Planner</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter the first day of your last period and your cycle length to generate your personalised 3-month conception calendar.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="lmp">First day of last period</label>
+              <label for="lmp" data-i18n="label_lmp">First day of last period</label>
               <input type="date" id="lmp" max="">
             </div>
             <div class="form-group">
-              <label for="cycle">Cycle length</label>
+              <label for="cycle" data-i18n="label_cycle">Cycle length</label>
               <select id="cycle">
                 <option value="21">21 days</option><option value="22">22 days</option><option value="23">23 days</option>
                 <option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option>
@@ -216,47 +216,74 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
               </select>
             </div>
             <div class="form-group">
-              <label for="periodLen">Period length</label>
+              <label for="periodLen" data-i18n="label_period">Period length</label>
               <select id="periodLen">
                 <option value="3">3 days</option><option value="4">4 days</option><option value="5" selected>5 days</option>
                 <option value="6">6 days</option><option value="7">7 days</option>
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="buildPlanner()">Generate My 3-Month Planner →</button>
+          <button class="btn-calc" onclick="buildPlanner()" data-i18n="btn_calc">Generate My 3-Month Planner →</button>
 
           <div class="result-box" id="result">
             <div class="legend">
-              <div class="leg-item"><div class="leg-dot" style="background:var(--accent);border-radius:50%"></div> Ovulation Day</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#a8d5be"></div> Fertile Window</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div> Period Days</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#fff;border:2px solid #f39c12"></div> Today</div>
+              <div class="leg-item"><div class="leg-dot" style="background:var(--accent);border-radius:50%"></div> <span data-i18n="leg_ov">Ovulation Day</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#a8d5be"></div> <span data-i18n="leg_fertile">Fertile Window</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div> <span data-i18n="leg_period">Period Days</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#fff;border:2px solid #f39c12"></div> <span data-i18n="leg_today">Today</span></div>
             </div>
             <div class="cal-grid" id="calGrid"></div>
-            <button class="btn-reset" onclick="resetPlanner()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>How to Use Your Fertility Planner</h2>
-        <p class="section-sub">Making the most of your fertile window</p>
-        <p>Your fertility window is the 6 days when pregnancy is possible. Having intercourse every 1–2 days throughout the green and dark green days gives you the best chance of conception. You do not need to have intercourse on one specific "perfect day" — sperm wait in the fallopian tubes for the egg to arrive.</p>
-        <h3>Intercourse Timing Tips</h3>
-        <p>Peak fertility days are the day before and day of ovulation (dark green). Having intercourse on these days is strongly recommended. Including the 3–4 days before ovulation is also important as sperm can survive 5 days. Twice per day is not necessary and does not improve outcomes — once every 1–2 days is optimal.</p>
-        <h3>When to Use OPKs (Ovulation Predictor Kits)</h3>
-        <p>If you have irregular cycles or want to confirm ovulation, start OPK testing from Day 10 of your cycle. A positive OPK means ovulation will occur within 12–36 hours — this is your signal to prioritise intercourse. OPKs are available at any pharmacy for approximately ₹100–₹200 per test.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>How to Use Your Fertility Planner</h2>
+          <p class="section-sub">Making the most of your fertile window</p>
+          <p>Your fertility window is the 6 days when pregnancy is possible. Having intercourse every 1–2 days throughout the green and dark green days gives you the best chance of conception. You do not need to have intercourse on one specific "perfect day" — sperm wait in the fallopian tubes for the egg to arrive.</p>
+          <h3>Intercourse Timing Tips</h3>
+          <p>Peak fertility days are the day before and day of ovulation (dark green). Having intercourse on these days is strongly recommended. Including the 3–4 days before ovulation is also important as sperm can survive 5 days. Once every 1–2 days is optimal.</p>
+          <h3>When to Use OPKs (Ovulation Predictor Kits)</h3>
+          <p>If you have irregular cycles or want to confirm ovulation, start OPK testing from Day 10 of your cycle. A positive OPK means ovulation will occur within 12–36 hours. OPKs are available at any pharmacy for approximately ₹100–₹200 per test.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>మీ Fertility Planner ఎలా వాడాలి?</h2>
+          <p class="section-sub">మీ fertile window ని maximum గా use చేయండి</p>
+          <p>Fertility window అంటే pregnancy possible అయ్యే 6 రోజులు. Green మరియు dark green రోజుల్లో every 1–2 days intercourse చేయడం best chance ఇస్తుంది. ఒక specific "perfect day" అవసరం లేదు — sperm fallopian tubes లో egg కోసం wait చేస్తాయి.</p>
+          <h3>Intercourse Timing Tips</h3>
+          <p>Peak fertility days: ovulation కి ఒక రోజు ముందు మరియు ovulation రోజే (dark green). ఈ రోజులలో intercourse strongly recommended. Ovulation కి 3–4 రోజుల ముందు కూడా important — sperm 5 రోజులు survive చేయగలదు. Every 1–2 days optimal.</p>
+          <h3>OPKs (Ovulation Predictor Kits) ఎప్పుడు వాడాలి?</h3>
+          <p>Irregular cycles ఉంటే లేదా ovulation confirm చేయాలంటే, cycle Day 10 నుండి OPK testing start చేయండి. Positive OPK అంటే 12–36 గంటల్లో ovulation. OPKs ఏ pharmacy లో అయినా ₹100–₹200 కి దొరుకుతాయి.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>What is the fertility window?</summary><p>The fertility window is the 6-day period during which conception is possible: the 5 days before ovulation and ovulation day itself. Sperm can survive in the female reproductive tract for up to 5 days, but the egg survives only 12–24 hours after ovulation. Intercourse in the 2–3 days before ovulation gives the highest pregnancy chances.</p></details>
-          <details><summary>What days are best for conception?</summary><p>Research (Wilcox et al.) shows the highest conception probability on Days -1 and 0 (day before and day of ovulation) — approximately 33% each. Day -2 is about 28%, Day -3 is 10%. Day +1 after ovulation has only about 2% chance. The 2 days before ovulation plus ovulation day are therefore the best days.</p></details>
-          <details><summary>How often should I have intercourse during the fertile window?</summary><p>Having intercourse every 1–2 days throughout the fertile window optimises conception chances. Daily intercourse is equally effective and not harmful. Avoid long periods of abstinence (more than 5 days) as it reduces sperm motility. There is no benefit to timing intercourse to specific times of day.</p></details>
-          <details><summary>Can the fertile window shift?</summary><p>Yes — ovulation timing can shift due to stress, illness, travel, significant weight change, intense exercise, and hormonal fluctuations. Even in women with regular cycles, ovulation can vary by 2–4 days from cycle to cycle. For irregular cycles, tracking BBT or using OPKs is recommended in addition to this calendar.</p></details>
-          <details><summary>Does lubricant affect sperm?</summary><p>Most commercial lubricants (including saliva) can reduce sperm motility and should be avoided during the fertile window. If lubrication is needed, use sperm-friendly lubricants such as Pre-Seed or Conceive Plus. These have a pH and osmolality compatible with sperm survival.</p></details>
-          <details><summary>What if I have irregular cycles?</summary><p>If your cycles vary by more than 7 days, this planner gives approximate dates only. Use OPKs starting from Day 10 of your cycle. If you have PCOS or have been trying for more than 6 months without success, consult Dr. Prashanthi Reddy at Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>What is the fertility window?</summary><p>The fertility window is the 6-day period when conception is possible: the 5 days before ovulation and ovulation day itself. Sperm can survive up to 5 days, but the egg survives only 12–24 hours. Intercourse 2–3 days before ovulation gives the highest pregnancy chances.</p></details>
+            <details><summary>What days are best for conception?</summary><p>The Wilcox study shows highest probability on Days -1 and 0 (~33% each), Day -2 (~28%), Day -3 (~10%). Day +1 is only ~2%. The 2 days before ovulation plus ovulation day are the best days.</p></details>
+            <details><summary>How often should I have intercourse during the fertile window?</summary><p>Every 1–2 days throughout the fertile window is optimal. Daily is equally effective. Avoid abstinence longer than 5 days as it reduces sperm motility.</p></details>
+            <details><summary>Can the fertile window shift?</summary><p>Yes — stress, illness, travel, weight change, intense exercise, and hormonal fluctuations can shift ovulation timing. Even regular cycles can vary by 2–4 days. For irregular cycles, use BBT or OPKs alongside this calendar.</p></details>
+            <details><summary>Does lubricant affect sperm?</summary><p>Most commercial lubricants (including saliva) can reduce sperm motility. Use sperm-friendly lubricants such as Pre-Seed or Conceive Plus if needed.</p></details>
+            <details><summary>What if I have irregular cycles?</summary><p>If cycles vary by more than 7 days, dates here are approximate only. Use OPKs from Day 10. If you have PCOS or have been trying 6+ months without success, consult Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>Fertility window అంటే ఏమిటి?</summary><p>Fertility window అంటే conception possible అయ్యే 6 రోజులు: ovulation కి 5 రోజుల ముందు మరియు ovulation రోజే. Sperm 5 రోజులు survive చేయగలదు, egg 12–24 గంటలు మాత్రమే. Ovulation కి 2–3 రోజుల ముందు intercourse highest pregnancy chances ఇస్తుంది.</p></details>
+            <details><summary>Conception కి best days ఏమిటి?</summary><p>Wilcox study ప్రకారం highest probability: Day -1 మరియు Day 0 (~33% each), Day -2 (~28%), Day -3 (~10%). Day +1 కేవలం ~2% మాత్రమే. Ovulation కి 2 రోజుల ముందు మరియు ovulation రోజే best days.</p></details>
+            <details><summary>Fertile window లో ఎంత frequently intercourse చేయాలి?</summary><p>Every 1–2 days optimal. Daily కూడా equally effective. 5 రోజుల కంటే ఎక్కువ abstinence avoid చేయండి — sperm motility తగ్గుతుంది.</p></details>
+            <details><summary>Fertile window shift అవుతుందా?</summary><p>అవును — stress, illness, travel, weight change, exercise, hormonal changes వల్ల ovulation timing shift అవుతుంది. Regular cycles లో కూడా 2–4 రోజుల తేడా రావచ్చు. Irregular cycles కి BBT లేదా OPKs use చేయండి.</p></details>
+            <details><summary>Lubricant sperm ని affect చేస్తుందా?</summary><p>చాలా commercial lubricants (saliva తో సహా) sperm motility తగ్గించవచ్చు. అవసరమైతే Pre-Seed లేదా Conceive Plus వంటి sperm-friendly lubricants వాడండి.</p></details>
+            <details><summary>Irregular cycles ఉంటే ఏమి చేయాలి?</summary><p>Cycles 7 రోజుల కంటే ఎక్కువ vary అయితే ఇక్కడ dates approximate మాత్రమే. Day 10 నుండి OPKs use చేయండి. PCOS ఉంటే లేదా 6+ నెలలు try చేసినా result రాకపోతే: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
     </div>
 
     <aside>
@@ -296,13 +323,13 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Fertility Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Fertility Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -329,7 +356,50 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT={
+  en:{
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'3-Month Fertility Window Planner —<br><em>Visual Conception Calendar</em>',
+    hero_sub:'Get a 3-month color-coded calendar showing your fertile days (green), ovulation day (dark green), and period days (pink) — plus an intercourse schedule for each cycle. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Calendar', chip3:'🗓 3 Months',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🌿 3-Month Fertility Planner',
+    calc_intro:'Enter the first day of your last period and your cycle length to generate your personalised 3-month conception calendar.',
+    label_lmp:'First day of last period', label_cycle:'Cycle length', label_period:'Period length',
+    btn_calc:'Generate My 3-Month Planner →', btn_reset:'↩ Reset',
+    leg_ov:'Ovulation Day', leg_fertile:'Fertile Window', leg_period:'Period Days', leg_today:'Today',
+    alert_lmp:'Please enter the first day of your last period.',
+    alert_future:'Last period date cannot be in the future.',
+    cta_h2:'Need Personalised Fertility Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+  },
+  te:{
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'3-నెలల Fertility Window Planner —<br><em>Visual Conception Calendar</em>',
+    hero_sub:'మీ fertile days (green), ovulation day (dark green), మరియు period days (pink) color-coded calendar లో చూడండి — ప్రతి cycle కి intercourse schedule తో. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే Calendar', chip3:'🗓 3 నెలలు',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🌿 3-నెలల Fertility Planner',
+    calc_intro:'మీ చివరి పీరియడ్ మొదటి రోజు మరియు cycle length enter చేయండి — personalized 3-నెలల conception calendar generate చేస్తాం.',
+    label_lmp:'చివరి పీరియడ్ మొదటి రోజు', label_cycle:'Cycle length', label_period:'పీరియడ్ length',
+    btn_calc:'నా 3-నెలల Planner Generate చేయండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    leg_ov:'Ovulation Day', leg_fertile:'Fertile Window', leg_period:'పీరియడ్ రోజులు', leg_today:'ఈరోజు',
+    alert_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు enter చేయండి.',
+    alert_future:'పీరియడ్ తేదీ future లో ఉండకూడదు.',
+    cta_h2:'ఫెర్టిలిటీ గురించి మాట్లాడాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
+
+window._reapplyResults=function(){};
 
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});}
@@ -380,10 +450,10 @@ function buildCalendar(year,month,cycles,periodLen){
 
 function buildPlanner(){
   const lmpVal=document.getElementById('lmp').value;
-  if(!lmpVal){alert('Please enter the first day of your last period.');return;}
+  if(!lmpVal){alert(t('alert_lmp'));return;}
   const lmp=new Date(lmpVal);
   const today=new Date();today.setHours(0,0,0,0);
-  if(lmp>today){alert('Last period date cannot be in the future.');return;}
+  if(lmp>today){alert(t('alert_future'));return;}
   const cycleLen=parseInt(document.getElementById('cycle').value);
   const periodLen=parseInt(document.getElementById('periodLen').value);
 
