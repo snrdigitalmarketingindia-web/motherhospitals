@@ -181,18 +181,18 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Pregnancy Week Tracker —<br><em>Baby Development Week by Week</em></h1>
-    <p class="hero-sub">Enter your LMP, due date, or current weeks to see your baby's development, size, weight, key milestones, and your symptoms for every week of pregnancy. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Pregnancy Week Tracker —<br><em>Baby Development Week by Week</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your LMP, due date, or current weeks to see your baby's development, size, weight, key milestones, and your symptoms for every week of pregnancy. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">👶 Week-by-Week Guide</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">👶 Week-by-Week Guide</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -202,36 +202,36 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>🤱 Pregnancy Week Tracker</h2>
-          <p class="calc-intro">Select your dating method and enter the relevant information to see your current pregnancy week and baby development details.</p>
+          <h2 data-i18n="calc_title">🤱 Pregnancy Week Tracker</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Select your dating method and enter the relevant information to see your current pregnancy week and baby development details.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="trackMode">Dating Method</label>
+              <label for="trackMode" data-i18n="label_method">Dating Method</label>
               <select id="trackMode" onchange="updateTrackMode()">
-                <option value="lmp">Last Menstrual Period (LMP)</option>
-                <option value="edd">Due Date (EDD)</option>
-                <option value="manual">Enter weeks manually</option>
+                <option value="lmp" data-i18n="mode_lmp">Last Menstrual Period (LMP)</option>
+                <option value="edd" data-i18n="mode_edd">Due Date (EDD)</option>
+                <option value="manual" data-i18n="mode_manual">Enter weeks manually</option>
               </select>
             </div>
             <div class="form-group" id="dateGroup">
-              <label for="trackDate" id="trackDateLabel">First day of last period (LMP)</label>
+              <label for="trackDate" id="trackDateLabel" data-i18n="label_lmp">First day of last period (LMP)</label>
               <input type="date" id="trackDate">
             </div>
           </div>
           <div class="manual-inputs" id="manualInputs">
             <div class="form-group">
-              <label for="manualWeeks">Current weeks pregnant</label>
+              <label for="manualWeeks" data-i18n="label_manual_weeks">Current weeks pregnant</label>
               <input type="number" id="manualWeeks" min="4" max="42" placeholder="e.g. 12">
             </div>
             <div class="form-group">
-              <label for="manualDays">Additional days</label>
+              <label for="manualDays" data-i18n="label_manual_days">Additional days</label>
               <select id="manualDays">
                 <option value="0">0 days</option><option value="1">1 day</option><option value="2">2 days</option>
                 <option value="3">3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="6">6 days</option>
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="trackWeek()">Track My Pregnancy →</button>
+          <button class="btn-calc" onclick="trackWeek()" data-i18n="btn_calc">Track My Pregnancy →</button>
 
           <div class="result-box" id="result">
             <div class="week-header">
@@ -245,55 +245,80 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
             </div>
 
             <div class="stats-grid">
-              <div class="stat-card"><div class="sc-icon">📅</div><div class="sc-label">Due Date (EDD)</div><div class="sc-val" id="eddStat">—</div></div>
-              <div class="stat-card"><div class="sc-icon">⏳</div><div class="sc-label">Days Remaining</div><div class="sc-val" id="daysRemain">—</div></div>
-              <div class="stat-card"><div class="sc-icon">📆</div><div class="sc-label">Conception (approx)</div><div class="sc-val" id="concStat">—</div></div>
-              <div class="stat-card"><div class="sc-icon">🔢</div><div class="sc-label">Gestational Days</div><div class="sc-val" id="gestDays">—</div></div>
+              <div class="stat-card"><div class="sc-icon">📅</div><div class="sc-label" data-i18n="sc_edd">Due Date (EDD)</div><div class="sc-val" id="eddStat">—</div></div>
+              <div class="stat-card"><div class="sc-icon">⏳</div><div class="sc-label" data-i18n="sc_days">Days Remaining</div><div class="sc-val" id="daysRemain">—</div></div>
+              <div class="stat-card"><div class="sc-icon">📆</div><div class="sc-label" data-i18n="sc_conc">Conception (approx)</div><div class="sc-val" id="concStat">—</div></div>
+              <div class="stat-card"><div class="sc-icon">🔢</div><div class="sc-label" data-i18n="sc_gest">Gestational Days</div><div class="sc-val" id="gestDays">—</div></div>
             </div>
 
             <div id="scanAlert" class="scan-alert" style="display:none"></div>
 
             <div class="nav-btns">
-              <button class="nav-btn" onclick="navWeek(-1)">◀ Previous Week</button>
-              <button class="nav-btn" onclick="navWeek(1)">Next Week ▶</button>
+              <button class="nav-btn" onclick="navWeek(-1)" data-i18n="nav_prev">◀ Previous Week</button>
+              <button class="nav-btn" onclick="navWeek(1)" data-i18n="nav_next">Next Week ▶</button>
             </div>
 
             <div class="baby-card" id="babyCard">
               <span class="baby-emoji" id="babyEmoji">👶</span>
               <h3>Week <span id="babyWeekTitle">—</span> — Baby Development</h3>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:1rem;text-align:center">
-                <div style="background:var(--accent-light);border-radius:var(--radius);padding:0.7rem"><div style="font-size:0.72rem;color:var(--text-mid);font-weight:700">SIZE</div><div style="font-weight:800;color:var(--navy)" id="babySize">—</div></div>
-                <div style="background:var(--accent-light);border-radius:var(--radius);padding:0.7rem"><div style="font-size:0.72rem;color:var(--text-mid);font-weight:700">WEIGHT</div><div style="font-weight:800;color:var(--navy)" id="babyWeight">—</div></div>
+                <div style="background:var(--accent-light);border-radius:var(--radius);padding:0.7rem"><div style="font-size:0.72rem;color:var(--text-mid);font-weight:700" data-i18n="baby_size_label">SIZE</div><div style="font-weight:800;color:var(--navy)" id="babySize">—</div></div>
+                <div style="background:var(--accent-light);border-radius:var(--radius);padding:0.7rem"><div style="font-size:0.72rem;color:var(--text-mid);font-weight:700" data-i18n="baby_weight_label">WEIGHT</div><div style="font-weight:800;color:var(--navy)" id="babyWeight">—</div></div>
               </div>
-              <h3>👶 Baby This Week</h3>
+              <h3 data-i18n="baby_dev_h3">👶 Baby This Week</h3>
               <ul class="dev-list" id="devList"></ul>
-              <h3>🤱 What You May Feel</h3>
+              <h3 data-i18n="baby_sym_h3">🤱 What You May Feel</h3>
               <ul class="dev-list" id="symList"></ul>
               <div id="weekTip" style="background:#fff8e1;border-left:3px solid #f39c12;padding:0.8rem;border-radius:0 8px 8px 0;margin-top:0.8rem;font-size:0.88rem;color:#7a6000"></div>
             </div>
 
-            <button class="btn-reset" onclick="resetTracker()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetTracker()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Pregnancy Week by Week</h2>
-        <p class="section-sub">What happens inside your body during each stage of pregnancy</p>
-        <p>Pregnancy is divided into three trimesters, each with distinct developmental milestones. The first trimester (Weeks 1-13) is when all major organs form. The second trimester (Weeks 14-27) is often the most comfortable — nausea fades and the baby grows rapidly. The third trimester (Weeks 28-40) focuses on growth, lung maturation, and delivery preparation.</p>
-        <h3>Why Regular Scans Matter</h3>
-        <p>Antenatal scans track baby's growth, check amniotic fluid, assess placental position, and screen for potential problems early when they are most treatable. Mother Hospitals provides comprehensive antenatal monitoring with experienced sonographers and Dr. Prashanthi Reddy's obstetric expertise.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>Pregnancy Week by Week</h2>
+          <p class="section-sub">What happens inside your body during each stage of pregnancy</p>
+          <p>Pregnancy is divided into three trimesters, each with distinct developmental milestones. The first trimester (Weeks 1-13) is when all major organs form. The second trimester (Weeks 14-27) is often the most comfortable — nausea fades and the baby grows rapidly. The third trimester (Weeks 28-40) focuses on growth, lung maturation, and delivery preparation.</p>
+          <h3>Why Regular Scans Matter</h3>
+          <p>Antenatal scans track baby's growth, check amniotic fluid, assess placental position, and screen for potential problems early when they are most treatable. Mother Hospitals provides comprehensive antenatal monitoring with experienced sonographers and Dr. Prashanthi Reddy's obstetric expertise.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>వారం వారం ప్రెగ్నెన్సీ</h2>
+          <p class="section-sub">ప్రెగ్నెన్సీ ప్రతి stage లో మీ శరీరంలో ఏమి జరుగుతుందో తెలుసుకోండి</p>
+          <p>ప్రెగ్నెన్సీని మూడు trimesters గా విభజిస్తారు. 1వ trimester (వారాలు 1–13): అన్ని major organs form అవుతాయి — miscarriage risk అధికంగా ఉంటుంది. 2వ trimester (వారాలు 14–27): nausea తగ్గుతుంది, baby వేగంగా పెరుగుతుంది. 3వ trimester (వారాలు 28–40): baby బరువు పెరుగుతుంది, delivery preparation మొదలవుతుంది.</p>
+          <h3>Regular Scans ఎందుకు ముఖ్యం?</h3>
+          <p>Antenatal scans baby growth track చేస్తాయి, amniotic fluid, placenta అన్నీ check చేస్తాయి. Mother Hospitals లో Dr. ప్రశాంతి రెడ్డి నేతృత్వంలో comprehensive antenatal monitoring అందుబాటులో ఉంది.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How is gestational age calculated in pregnancy?</summary><p>Gestational age is counted from the first day of the last menstrual period (LMP), even though conception occurs approximately 14 days later. A full-term pregnancy is 40 weeks (280 days) from LMP. Week 1-2 technically precede conception. This convention is used because the LMP date is more reliably known than the exact conception date.</p></details>
-          <details><summary>When will I feel my baby move?</summary><p>First-time mothers typically feel baby movements (quickening) between 18-22 weeks. Women who have been pregnant before may notice movements as early as 16 weeks. Movements feel like flutters, bubbles, or gentle taps initially. By 28 weeks, movements should be regular — at least 10 movements within 2 hours (kick counting).</p></details>
-          <details><summary>When should I have my first scan?</summary><p>The first scan (dating/viability scan) should ideally be done between 7-9 weeks to confirm heartbeat, dating, and rule out ectopic pregnancy. The nuchal translucency scan is at 11-14 weeks. The anomaly (anatomy) scan is at 18-22 weeks. Growth scans are typically at 28, 32, and 36 weeks.</p></details>
-          <details><summary>What is the difference between trimesters?</summary><p>First trimester (Weeks 1-13): All organs form; highest miscarriage risk; extreme fatigue and nausea common. Second trimester (Weeks 14-27): Nausea improves, energy returns, baby grows rapidly; anatomy scan at Week 20. Third trimester (Weeks 28-40): Baby gains weight, lung maturation; delivery preparation begins; term from Week 37.</p></details>
-          <details><summary>Is it safe to exercise during pregnancy?</summary><p>Yes — moderate exercise is safe and beneficial during a normal pregnancy. Walking, swimming, prenatal yoga, and stationary cycling are excellent choices. Exercise improves mood, reduces gestational diabetes risk, eases back pain, and prepares the body for labour. Avoid contact sports and high-impact activities after 16 weeks.</p></details>
-          <details><summary>What foods should I avoid during pregnancy?</summary><p>Avoid: raw or undercooked meat and eggs, unpasteurised dairy products, high-mercury fish (shark, swordfish), liver products (excess Vitamin A), raw sprouts, and excess caffeine (limit to 200mg/day). Avoid alcohol entirely. Focus on folate-rich, iron-rich, and calcium-rich foods. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How is gestational age calculated in pregnancy?</summary><p>Gestational age is counted from the first day of the last menstrual period (LMP), even though conception occurs approximately 14 days later. A full-term pregnancy is 40 weeks (280 days) from LMP. Week 1-2 technically precede conception. This convention is used because the LMP date is more reliably known than the exact conception date.</p></details>
+            <details><summary>When will I feel my baby move?</summary><p>First-time mothers typically feel baby movements (quickening) between 18-22 weeks. Women who have been pregnant before may notice movements as early as 16 weeks. Movements feel like flutters, bubbles, or gentle taps initially. By 28 weeks, movements should be regular — at least 10 movements within 2 hours (kick counting).</p></details>
+            <details><summary>When should I have my first scan?</summary><p>The first scan (dating/viability scan) should ideally be done between 7-9 weeks to confirm heartbeat, dating, and rule out ectopic pregnancy. The nuchal translucency scan is at 11-14 weeks. The anomaly (anatomy) scan is at 18-22 weeks. Growth scans are typically at 28, 32, and 36 weeks.</p></details>
+            <details><summary>What is the difference between trimesters?</summary><p>First trimester (Weeks 1-13): All organs form; highest miscarriage risk; extreme fatigue and nausea common. Second trimester (Weeks 14-27): Nausea improves, energy returns, baby grows rapidly; anatomy scan at Week 20. Third trimester (Weeks 28-40): Baby gains weight, lung maturation; delivery preparation begins; term from Week 37.</p></details>
+            <details><summary>Is it safe to exercise during pregnancy?</summary><p>Yes — moderate exercise is safe and beneficial during a normal pregnancy. Walking, swimming, prenatal yoga, and stationary cycling are excellent choices. Exercise improves mood, reduces gestational diabetes risk, eases back pain, and prepares the body for labour. Avoid contact sports and high-impact activities after 16 weeks.</p></details>
+            <details><summary>What foods should I avoid during pregnancy?</summary><p>Avoid: raw or undercooked meat and eggs, unpasteurised dairy products, high-mercury fish (shark, swordfish), liver products (excess Vitamin A), raw sprouts, and excess caffeine (limit to 200mg/day). Avoid alcohol entirely. Focus on folate-rich, iron-rich, and calcium-rich foods. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>Gestational age ఎలా calculate అవుతుంది?</summary><p>Gestational age అనేది మీ చివరి పీరియడ్ మొదటి రోజు నుండి లెక్కిస్తారు. Conception సుమారు 14 రోజుల తర్వాత జరుగుతుంది అయినా LMP నుండే count చేస్తారు. Full-term pregnancy అంటే LMP నుండి 40 వారాలు (280 రోజులు).</p></details>
+            <details><summary>Baby movement ఎప్పుడు feel అవుతుంది?</summary><p>మొదటిసారి pregnant అయిన mothers కి 18–22 వారాలలో baby movements (quickening) feel అవుతాయి. ముందు ప్రెగ్నెంట్ అయిన వారికి 16 వారాల నుండే feel అవుతుంది. 28 వారాల తర్వాత 2 గంటలలో కనీసం 10 movements feel అవ్వాలి.</p></details>
+            <details><summary>మొదటి scan ఎప్పుడు చేయించుకోవాలి?</summary><p>7–9 వారాలలో viability scan చేయించుకోండి — heartbeat confirm చేయడానికి, ectopic pregnancy rule out చేయడానికి. 11–14 వారాలలో nuchal translucency scan. 18–22 వారాలలో anatomy scan. 28, 32, 36 వారాలలో growth scans.</p></details>
+            <details><summary>Trimesters తేడా ఏమిటి?</summary><p>1వ trimester (వారాలు 1–13): Organs form అవుతాయి; miscarriage risk అధికంగా ఉంటుంది; nausea, fatigue common. 2వ trimester (వారాలు 14–27): Nausea తగ్గుతుంది, energy return అవుతుంది; week 20 anatomy scan. 3వ trimester (వారాలు 28–40): Baby బరువు పెరుగుతుంది; 37 వారాలకు term.</p></details>
+            <details><summary>ప్రెగ్నెన్సీలో exercise safe గా ఉంటుందా?</summary><p>అవును — normal pregnancy లో moderate exercise safe గా ఉంటుంది. Walking, swimming, prenatal yoga, stationary cycling మంచివి. Exercise mood improve చేస్తుంది, gestational diabetes risk తగ్గిస్తుంది. 16 వారాల తర్వాత contact sports, high-impact activities avoid చేయండి.</p></details>
+            <details><summary>ప్రెగ్నెన్సీలో ఏమి తినకూడదు?</summary><p>Avoid చేయాల్సినవి: raw లేదా undercooked meat/eggs, unpasteurised dairy, high-mercury fish, liver products, raw sprouts, excess caffeine (రోజుకు 200mg మించకుండా). Alcohol పూర్తిగా avoid చేయండి. Folate, iron, calcium అధికంగా ఉన్న foods తినండి. Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
     </div>
 
     <aside>
@@ -333,13 +358,13 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
   </div>
 
   <div class="cta-section">
-    <h2>Need Pregnancy or Fertility Support?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Pregnancy or Fertility Support?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -366,6 +391,73 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT = {
+  en: {
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Pregnancy Week Tracker —<br><em>Baby Development Week by Week</em>',
+    hero_sub:'Enter your LMP, due date, or current weeks to see your baby\'s development, size, weight, key milestones, and your symptoms for every week of pregnancy. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'👶 Week-by-Week Guide',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🤱 Pregnancy Week Tracker',
+    calc_intro:'Select your dating method and enter the relevant information to see your current pregnancy week and baby development details.',
+    label_method:'Dating Method',
+    mode_lmp:'Last Menstrual Period (LMP)', mode_edd:'Due Date (EDD)', mode_manual:'Enter weeks manually',
+    label_lmp:'First day of last period (LMP)', label_edd:'Your due date (EDD)',
+    label_manual_weeks:'Current weeks pregnant', label_manual_days:'Additional days',
+    btn_calc:'Track My Pregnancy →', btn_reset:'↩ Reset',
+    sc_edd:'Due Date (EDD)', sc_days:'Days Remaining', sc_conc:'Conception (approx)', sc_gest:'Gestational Days',
+    nav_prev:'◀ Previous Week', nav_next:'Next Week ▶',
+    baby_size_label:'SIZE', baby_weight_label:'WEIGHT',
+    baby_dev_h3:'👶 Baby This Week', baby_sym_h3:'🤱 What You May Feel',
+    tip_label:'💡 Tip:',
+    cta_h2:'Need Pregnancy or Fertility Support?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+    alert_weeks:'Please enter the number of weeks.',
+    alert_date:'Please enter a date.',
+    trim1:'1st Trimester', trim2:'2nd Trimester', trim3:'3rd Trimester',
+    pct_complete:'% complete',
+    days_remaining:'{n} days', due_today:'Due today!',
+    gest_days_label:'{n} days',
+    week_day_sub:'Week {w}, Day {d} · {t} days from LMP',
+    week_title:'Week {w} — Baby Development',
+  },
+  te: {
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'ప్రెగ్నెన్సీ వీక్ ట్రాకర్ —<br><em>Baby Development వారం వారం</em>',
+    hero_sub:'మీ LMP, due date, లేదా ప్రస్తుత వారాల సంఖ్య enter చేయండి — baby development, size, weight, milestones అన్నీ చూపిస్తాం. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'👶 వారం వారం గైడ్',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🤱 ప్రెగ్నెన్సీ వీక్ ట్రాకర్',
+    calc_intro:'మీ dating method select చేసి date enter చేయండి — ప్రస్తుత వారం, baby development అన్నీ చూపిస్తాం.',
+    label_method:'Dating Method ఎంచుకోండి',
+    mode_lmp:'చివరి పీరియడ్ (LMP)', mode_edd:'Due Date (EDD)', mode_manual:'వారాలు manually enter చేయండి',
+    label_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు (LMP)', label_edd:'మీ due date (EDD)',
+    label_manual_weeks:'ప్రస్తుతం ఎన్ని వారాలు ప్రెగ్నెంట్?', label_manual_days:'అదనపు రోజులు',
+    btn_calc:'నా ప్రెగ్నెన్సీ చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    sc_edd:'Due Date (EDD)', sc_days:'మిగిలిన రోజులు', sc_conc:'Conception తేదీ (అంచనా)', sc_gest:'Gestational రోజులు',
+    nav_prev:'◀ మునుపటి వారం', nav_next:'తదుపరి వారం ▶',
+    baby_size_label:'పరిమాణం', baby_weight_label:'బరువు',
+    baby_dev_h3:'👶 ఈ వారం Baby', baby_sym_h3:'🤱 మీకు ఏమి అనిపించవచ్చు',
+    tip_label:'💡 సలహా:',
+    cta_h2:'ప్రెగ్నెన్సీ లేదా ఫెర్టిలిటీ సపోర్ట్ కావాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+    alert_weeks:'వారాల సంఖ్య enter చేయండి.',
+    alert_date:'Valid date enter చేయండి.',
+    trim1:'1వ Trimester', trim2:'2వ Trimester', trim3:'3వ Trimester',
+    pct_complete:'% పూర్తి',
+    days_remaining:'{n} రోజులు', due_today:'ఈరోజే డెలివరీ!',
+    gest_days_label:'{n} రోజులు',
+    week_day_sub:'వారం {w}, రోజు {d} · {t} రోజులు LMP నుండి',
+    week_title:'వారం {w} — Baby Development',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 const BABY_DATA = {
   4:{emoji:'🫘',size:'Poppy seed',weight:'<1g',dev:['Neural tube forming — brain and spinal cord developing','Heart starts beating (may not be detectable yet)','Embryo about 1mm long'],sym:['Missed period — pregnancy test positive','Possible mild cramping or spotting','Fatigue may begin'],tip:'Start folic acid 400–800mcg if not already taking it.',scan:''},
   5:{emoji:'🌱',size:'Apple seed (3mm)',weight:'<1g',dev:['Heart now beating at ~100 bpm','Brain divides into five sections','Arm and leg buds begin to form'],sym:['Nausea may begin — peaks at 6–10 weeks','Breast tenderness','Frequent urination'],tip:'Eat small, frequent meals to manage nausea. Avoid spicy and fatty foods.',scan:''},
@@ -384,6 +476,25 @@ const BABY_DATA = {
   40:{emoji:'🍉',size:'Watermelon (50cm)',weight:'3.4kg',dev:['Full term — ready for birth!','Skull bones not yet fused (allows birth canal passage)','Lungs fully mature'],sym:['Nesting instinct may peak','Intense pelvic pressure','Possible loss of mucus plug'],tip:'Your due date has arrived — relax, baby will come when ready. Contact your hospital if no labour by 41 weeks.',scan:'⚠️ If no labour by 41 weeks, contact your doctor for a post-dates assessment.'},
 };
 
+const BABY_DATA_TE = {
+  4:{size:'Poppy seed',dev:['Neural tube form అవుతోంది — brain, spinal cord develop అవుతున్నాయి','Heart beat మొదలవుతోంది (ఇంకా scan లో కనిపించదు)','Embryo సుమారు 1mm పొడవు'],sym:['పీరియడ్ miss అయింది — pregnancy test positive','Mild cramping లేదా spotting కావచ్చు','Tiredness మొదలవుతుంది'],tip:'ఇంకా start చేయకపోతే ఇప్పుడే folic acid 400–800mcg start చేయండి.',scan:''},
+  5:{size:'Apple seed (3mm)',dev:['Heart ఇప్పుడు ~100 bpm తో beat అవుతోంది','Brain 5 sections గా divide అవుతోంది','Arm, leg buds form అవుతున్నాయి'],sym:['Nausea మొదలవుతుంది — 6–10 వారాలలో peak అవుతుంది','Breast tenderness','Frequent urination'],tip:'Nausea manage చేయడానికి చిన్న చిన్న meals తినండి. Spicy, fatty foods avoid చేయండి.',scan:''},
+  6:{size:'Blueberry (6mm)',dev:['Transvaginal scan లో heartbeat కనిపిస్తుంది (~120 bpm)','Eyes, nose, ears form అవుతున్నాయి','Intestines develop అవుతున్నాయి'],sym:['Morning sickness (రోజంతా కావచ్చు)','Food aversions మరియు cravings','Bloating'],tip:'7-week viability scan book చేసుకోండి — ఇంకా చేయకపోతే ఇప్పుడే.',scan:'⚠️ ఇంకా viability scan చేయకపోతే ఇప్పుడే book చేయండి — 6–7 వారాలలో heartbeat కనిపించాలి.'},
+  7:{size:'Raspberry (10mm)',dev:['Brain వేగంగా grow అవుతోంది — నిమిషానికి 100 new brain cells','Elbows, knees form అవుతున్నాయి','Digestive system develop అవుతోంది'],sym:['చాలా మంది mothers కి peak nausea week ఇది','Excessive saliva (ptyalism)','Mood swings మరియు fatigue'],tip:'వీలైనప్పుడు rest తీసుకోండి — first trimester లో extreme tiredness normal.',scan:''},
+  8:{size:'Kidney bean (16mm)',dev:['అన్ని major organs present అయ్యాయి (ఇంకా mature కాలేదు)','Fingers, toes form అవుతున్నాయి — ఇంకా webbed గా ఉన్నాయి','Tail పోయింది'],sym:['చాలా మంది mothers కి peak nausea week','వాసనల పట్ల sensitivity పెరుగుతుంది','Possible dizziness'],tip:'ప్రెగ్నెన్సీ అంతటా alcohol, smoking, unpasteurised dairy avoid చేయండి.',scan:''},
+  9:{size:'Grape (23mm)',dev:['10 వారాల తర్వాత fetus అని పిలుస్తారు (embryo కాదు)','Eyelids form అయి fuse అవుతున్నాయి','Teeth buds form అవుతున్నాయి'],sym:['కొందరికి nausea తగ్గడం మొదలవుతుంది','Uterus grow అవుతుండటంతో round ligament pain','Frequent urination'],tip:'రోజూ 8–10 glasses నీళ్లు తాగండి.',scan:''},
+  10:{size:'Strawberry (31mm)',dev:['అన్ని vital organs formed — ఇప్పుడు grow మరియు mature అవుతున్నాయి','Fingers, toes separate అయ్యాయి','Baby tiny movements చేయగలదు'],sym:['Energy కొంచెం return కావచ్చు','Breasts మీద veins కనిపిస్తాయి','Mild headaches'],tip:'First trimester blood tests (NIPT, NT scan booking) arrange చేసుకోండి.',scan:'⚠️ Nuchal translucency (NT) scan book చేసుకోండి — 11–14 వారాలలో చేయించుకోవాలి.'},
+  12:{size:'Lime (5.4cm)',dev:['Embryonic period ముగింపు — అన్ని systems formed','Reflexes develop అవుతున్నాయి — fingers open/close చేయగలవు','Vocal cords form అవుతున్నాయి'],sym:['Nausea తగ్గడం మొదలవుతుంది','Energy levels improve అవుతున్నాయి','Uterus pubic bone పై feel అవుతోంది'],tip:'ఈ వారం NT scan మరియు first trimester screening — results doctor తో discuss చేయండి.',scan:'⚠️ Nuchal translucency scan వీలైతే వారం 13+6 లోపు చేయించుకోండి.'},
+  16:{size:'Avocado (11.6cm)',dev:['Baby బయటి sounds వినగలదు','Eyes move అవుతున్నాయి (ఇంకా fused గా ఉన్నాయి)','Sucking reflex develop అవుతోంది'],sym:['2nd trimester glow మొదలవుతుంది','Appetite return అవుతోంది','Uterus grow అవుతుండటంతో back pain'],tip:'18–22 వారాలలో anatomy scan — ఇంకా book చేయకపోతే ఇప్పుడే చేయండి.',scan:''},
+  20:{size:'Banana (16.5cm)',dev:['ప్రెగ్నెన్సీ half way అయింది!','Vernix (protective coating) skin పై form అవుతోంది','Baby amniotic fluid swallow చేయగలదు'],sym:['Baby movements (quickening) clearly feel అవుతున్నాయి','Heartburn మొదలవుతుంది','Stretch marks కనిపించవచ్చు'],tip:'ఈ వారం anatomy scan — ప్రెగ్నెన్సీలో అత్యంత ముఖ్యమైన scan ఇది.',scan:'⚠️ ఈ వారం anatomy scan (anomaly scan) చేయించుకోండి — అన్ని organs మరియు structure check అవుతాయి.'},
+  24:{size:'Corn (30cm)',dev:['Viability threshold — intensive support తో baby survive చేయగలదు','Lungs develop అవుతున్నాయి (breathing movements practice చేస్తోంది)','Brain rapidly develop అవుతోంది'],sym:['Braxton Hicks contractions మొదలవుతాయి','Back ache','Ankles, feet వాయవుతాయి'],tip:'Braxton Hicks contractions గురించి తెలుసుకోండి — ఇవి normal, labour కాదు.',scan:''},
+  28:{size:'Head of lettuce (37cm)',dev:['3rd trimester మొదలైంది — baby fat rapidly gain చేస్తోంది','Eyes ఇప్పుడు open/close చేయగలవు','Hearing బాగా develop అయింది'],sym:['Uterus push అవుతుండటంతో breathlessness','Frequent urination మళ్ళీ మొదలవుతుంది','Possible insomnia'],tip:'Kick counting: రోజూ 2 గంటలలో కనీసం 10 movements feel అవ్వాలి.',scan:'⚠️ ఈ వారం growth scan చేయించుకోండి — fetal growth మరియు placental function check అవుతుంది.'},
+  32:{size:'Coconut (42cm)',dev:['Baby గంటకు 30–40 సార్లు breathing movements practice చేస్తోంది','Nails, hair grow అవుతున్నాయి','Head-down position లోకి move అవుతోంది'],sym:['Heartburn, indigestion common','Backache','Pelvis shift అవుతుండటంతో walking style మారుతుంది'],tip:'Childbirth classes attend చేయండి — ఇది ideal time.',scan:'⚠️ 32 వారాలలో growth scan మరియు umbilical artery Doppler చేయించుకోండి.'},
+  36:{size:'Honeydew melon (47cm)',dev:['దాదాపు full term — చాలా organs mature అయ్యాయి','Fat deposits పెరుగుతున్నాయి','Lanugo (body hair) mostly shed అయింది'],sym:['"Lightning" — baby కిందకు దిగుతుంది — breathing easy అవుతుంది','Pelvic pressure పెరుగుతుంది','Braxton Hicks contractions పెరుగుతున్నాయి'],tip:'Hospital bag pack చేసుకోండి. Antenatal classes ఇంకా attend చేయకపోతే చేయండి.',scan:'⚠️ Head-down position confirm చేయడానికి presentation scan — delivery planning కి ముఖ్యమైనది.'},
+  40:{size:'Watermelon (50cm)',dev:['Full term — పుట్టడానికి ready!','Skull bones ఇంకా fuse కాలేదు (birth canal passage కోసం)','Lungs పూర్తిగా mature అయ్యాయి'],sym:['Nesting instinct peak అవుతుంది','Intense pelvic pressure','Mucus plug రావచ్చు'],tip:'Due date వచ్చింది — relax గా ఉండండి. 41 వారాలకు labour రాకపోతే hospital contact చేయండి.',scan:'⚠️ 41 వారాలకు labour రాకపోతే post-dates assessment కోసం doctor ని contact చేయండి.'},
+};
+
+let _lastLmpTrack=null,_lastGestDaysTrack=null;
 let currentWeekDisplay=4;
 let lmpForNav=null;
 
@@ -397,34 +508,35 @@ function updateTrackMode(){
   const dateGrp=document.getElementById('dateGroup');
   manual.style.display=mode==='manual'?'grid':'none';
   dateGrp.style.display=mode==='manual'?'none':'block';
-  const lbls={lmp:'First day of last period (LMP)',edd:'Your due date (EDD)'};
-  if(mode!=='manual') document.getElementById('trackDateLabel').textContent=lbls[mode];
+  if(mode!=='manual'){
+    const lbl=document.getElementById('trackDateLabel');
+    lbl.setAttribute('data-i18n',mode==='lmp'?'label_lmp':'label_edd');
+    I18n.apply();
+  }
 }
 
 function trackWeek(){
   const mode=document.getElementById('trackMode').value;
   const today=new Date();today.setHours(0,0,0,0);
-  let gestDaysTotal;
-  let lmp;
+  let gestDaysTotal,lmp;
 
   if(mode==='manual'){
     const w=parseInt(document.getElementById('manualWeeks').value)||0;
     const d=parseInt(document.getElementById('manualDays').value)||0;
-    if(!w){alert('Please enter the number of weeks.');return;}
+    if(!w){alert(t('alert_weeks'));return;}
     gestDaysTotal=w*7+d;
     lmp=addDays(today,-gestDaysTotal);
   } else {
     const dateVal=document.getElementById('trackDate').value;
-    if(!dateVal){alert('Please enter a date.');return;}
+    if(!dateVal){alert(t('alert_date'));return;}
     const inputDate=new Date(dateVal);
-    if(mode==='lmp') lmp=inputDate;
-    else lmp=addDays(inputDate,-280);
+    lmp=mode==='lmp'?inputDate:addDays(inputDate,-280);
     gestDaysTotal=daysBetween(lmp,today);
   }
 
   lmpForNav=lmp;
-  const gestWeeks=Math.max(4,Math.min(42,Math.floor(gestDaysTotal/7)));
-  currentWeekDisplay=gestWeeks;
+  currentWeekDisplay=Math.max(4,Math.min(42,Math.floor(gestDaysTotal/7)));
+  _lastLmpTrack=lmp;_lastGestDaysTrack=gestDaysTotal;
   showWeek(lmp,gestDaysTotal);
 }
 
@@ -436,57 +548,61 @@ function showWeek(lmp,gestDaysTotal){
   const daysLeft=Math.max(0,daysBetween(today,edd));
   const pct=Math.min(100,Math.round((gestDaysTotal/280)*100));
 
-  let trimLabel,trimCls;
-  if(gestWeeks<14){trimLabel='1st Trimester';trimCls='t1';}
-  else if(gestWeeks<28){trimLabel='2nd Trimester';trimCls='t2';}
-  else{trimLabel='3rd Trimester';trimCls='t3';}
+  let trimKey,trimCls;
+  if(gestWeeks<14){trimKey='trim1';trimCls='t1';}
+  else if(gestWeeks<28){trimKey='trim2';trimCls='t2';}
+  else{trimKey='trim3';trimCls='t3';}
 
   document.getElementById('weekNum').textContent=currentWeekDisplay;
-  document.getElementById('weekDaysSub').textContent=`Week ${currentWeekDisplay}, Day ${gestDaysR} · ${gestDaysTotal} days from LMP`;
-  const tb=document.getElementById('trimBadge');tb.textContent=trimLabel;tb.className='trim-badge '+trimCls;
+  document.getElementById('weekDaysSub').textContent=t('week_day_sub').replace('{w}',currentWeekDisplay).replace('{d}',gestDaysR).replace('{t}',gestDaysTotal);
+  const tb=document.getElementById('trimBadge');tb.textContent=t(trimKey);tb.className='trim-badge '+trimCls;
   document.getElementById('progressFill').style.width=pct+'%';
-  document.getElementById('progressLabel').textContent=`${pct}% complete`;
+  document.getElementById('progressLabel').textContent=`${pct}${t('pct_complete')}`;
   document.getElementById('eddStat').textContent=fmt(edd);
-  document.getElementById('daysRemain').textContent=daysLeft>0?daysLeft+' days':'Due today!';
+  document.getElementById('daysRemain').textContent=daysLeft>0?t('days_remaining').replace('{n}',daysLeft):t('due_today');
   document.getElementById('concStat').textContent=fmt(addDays(lmp,14));
-  document.getElementById('gestDays').textContent=gestDaysTotal+' days';
+  document.getElementById('gestDays').textContent=t('gest_days_label').replace('{n}',gestDaysTotal);
 
-  // Find closest week data
   const wks=Object.keys(BABY_DATA).map(Number).sort((a,b)=>a-b);
   let dataWeek=wks[0];
   for(const w of wks){if(currentWeekDisplay>=w) dataWeek=w;}
   const data=BABY_DATA[dataWeek];
+  const d=I18n.lang==='te'?(BABY_DATA_TE[dataWeek]||data):data;
 
   document.getElementById('babyEmoji').textContent=data.emoji;
   document.getElementById('babyWeekTitle').textContent=currentWeekDisplay;
-  document.getElementById('babySize').textContent=data.size;
+  document.getElementById('babySize').textContent=d.size;
   document.getElementById('babyWeight').textContent=data.weight;
-  document.getElementById('devList').innerHTML=data.dev.map(d=>`<li>👶 ${d}</li>`).join('');
-  document.getElementById('symList').innerHTML=data.sym.map(s=>`<li>🤱 ${s}</li>`).join('');
-  document.getElementById('weekTip').innerHTML=`<strong>💡 Tip:</strong> ${data.tip}`;
+  document.getElementById('devList').innerHTML=d.dev.map(x=>`<li>👶 ${x}</li>`).join('');
+  document.getElementById('symList').innerHTML=d.sym.map(x=>`<li>🤱 ${x}</li>`).join('');
+  document.getElementById('weekTip').innerHTML=`<strong>${t('tip_label')}</strong> ${d.tip}`;
 
   const scanAlert=document.getElementById('scanAlert');
-  if(data.scan){scanAlert.textContent=data.scan;scanAlert.style.display='block';}
+  if(d.scan){scanAlert.textContent=d.scan;scanAlert.style.display='block';}
   else scanAlert.style.display='none';
 
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  if(_lastLmpTrack&&_lastGestDaysTrack) showWeek(_lastLmpTrack,_lastGestDaysTrack);
+};
+
 function navWeek(dir){
   if(!lmpForNav) return;
   currentWeekDisplay=Math.max(4,Math.min(42,currentWeekDisplay+dir));
-  const today=new Date();today.setHours(0,0,0,0);
   const gestDaysTotal=currentWeekDisplay*7;
+  _lastGestDaysTrack=gestDaysTotal;
   showWeek(lmpForNav,gestDaysTotal);
 }
 
 function resetTracker(){
   document.getElementById('trackDate').value='';
   document.getElementById('trackMode').value='lmp';
+  _lastLmpTrack=null;_lastGestDaysTrack=null;lmpForNav=null;
   updateTrackMode();
   document.getElementById('result').style.display='none';
-  lmpForNav=null;
 }
 </script>
 </body>

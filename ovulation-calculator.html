@@ -187,18 +187,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Find Your <em>Ovulation Date & Fertile Window</em></h1>
-    <p class="hero-sub">Enter your last period date and cycle length to instantly find your ovulation date, 6-day fertile window, and a 3-month conception calendar. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Find Your <em>Ovulation Date & Fertile Window</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your last period date and cycle length to instantly find your ovulation date, 6-day fertile window, and a 3-month conception calendar. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">🗓 3-Month Calendar</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">🗓 3-Month Calendar</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -209,15 +209,15 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
       <section>
         <div class="calc-box">
-          <h2>🥚 Ovulation Calculator</h2>
-          <p class="calc-intro">Enter your last period date and average cycle length to find your ovulation date, fertile window, and 3-month calendar.</p>
+          <h2 data-i18n="calc_title">🥚 Ovulation Calculator</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter your last period date and average cycle length to find your ovulation date, fertile window, and 3-month calendar.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="lmp">First day of last period</label>
+              <label for="lmp" data-i18n="label_lmp">First day of last period</label>
               <input type="date" id="lmp" max="">
             </div>
             <div class="form-group">
-              <label for="cycle">Average cycle length</label>
+              <label for="cycle" data-i18n="label_cycle">Average cycle length</label>
               <select id="cycle">
                 <option value="21">21 days</option><option value="22">22 days</option><option value="23">23 days</option>
                 <option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option>
@@ -228,58 +228,86 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="calcOvulation()">Find My Fertile Window →</button>
+          <button class="btn-calc" onclick="calcOvulation()" data-i18n="btn_calc">Find My Fertile Window →</button>
 
           <div class="result-box" id="result">
             <div class="ov-banner">
-              <div class="ov-label">Your Next Ovulation Date</div>
+              <div class="ov-label" data-i18n="ov_banner_label">Your Next Ovulation Date</div>
               <div class="ov-date" id="ovDateMain">—</div>
               <div id="ovDaysAway" style="font-size:0.85rem;color:var(--text-mid);margin-top:0.3rem"></div>
             </div>
-            <div id="fertileAlertBox" class="fertile-alert" style="display:none">🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!</div>
+            <div id="fertileAlertBox" class="fertile-alert" style="display:none" data-i18n="fertile_alert">🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!</div>
             <div class="dates-grid">
-              <div class="date-card"><div class="dc-icon">🌸</div><div class="dc-label">Fertile Window Start</div><div class="dc-val" id="fertStart">—</div><div class="dc-sub">5 days before ovulation</div></div>
-              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label">Ovulation Day</div><div class="dc-val" id="ovDate">—</div><div class="dc-sub" id="ovSub">Peak fertility</div></div>
-              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label">Fertile Window End</div><div class="dc-val" id="fertEnd">—</div><div class="dc-sub">1 day after ovulation</div></div>
-              <div class="date-card"><div class="dc-icon">🩸</div><div class="dc-label">Next Period</div><div class="dc-val" id="nextPeriod">—</div><div class="dc-sub" id="nextPeriodSub">Estimated</div></div>
+              <div class="date-card"><div class="dc-icon">🌸</div><div class="dc-label" data-i18n="dc_fert_start">Fertile Window Start</div><div class="dc-val" id="fertStart">—</div><div class="dc-sub" data-i18n="dc_fert_start_sub">5 days before ovulation</div></div>
+              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label" data-i18n="dc_ov_day">Ovulation Day</div><div class="dc-val" id="ovDate">—</div><div class="dc-sub" id="ovSub" data-i18n="dc_ov_sub">Peak fertility</div></div>
+              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label" data-i18n="dc_fert_end">Fertile Window End</div><div class="dc-val" id="fertEnd">—</div><div class="dc-sub" data-i18n="dc_fert_end_sub">1 day after ovulation</div></div>
+              <div class="date-card"><div class="dc-icon">🩸</div><div class="dc-label" data-i18n="dc_nextperiod">Next Period</div><div class="dc-val" id="nextPeriod">—</div><div class="dc-sub" id="nextPeriodSub" data-i18n="dc_nextperiod_sub">Estimated</div></div>
             </div>
 
-            <h3>📆 3-Month Fertile Window Calendar</h3>
+            <h3 data-i18n="cal_h3">📆 3-Month Fertile Window Calendar</h3>
             <div class="legend">
-              <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div> Ovulation Day</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#a8e6df"></div> Fertile Window</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div> Period Days</div>
-              <div class="leg-item"><div class="leg-dot" style="background:#fff3cd;border:1px solid #f39c12"></div> Today</div>
+              <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div><span data-i18n="leg_ov"> Ovulation Day</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#a8e6df"></div><span data-i18n="leg_fert"> Fertile Window</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div><span data-i18n="leg_period"> Period Days</span></div>
+              <div class="leg-item"><div class="leg-dot" style="background:#fff3cd;border:1px solid #f39c12"></div><span data-i18n="leg_today"> Today</span></div>
             </div>
             <div id="calContainer" class="cal-wrap"></div>
 
-            <h3>📊 3-Month Ovulation Summary</h3>
+            <h3 data-i18n="summary_h3">📊 3-Month Ovulation Summary</h3>
             <table class="upcoming-table">
-              <thead><tr><th>Month</th><th>Ovulation Date</th><th>Fertile Window</th></tr></thead>
+              <thead><tr><th data-i18n="th_month">Month</th><th data-i18n="th_ovdate">Ovulation Date</th><th data-i18n="th_fertwin">Fertile Window</th></tr></thead>
               <tbody id="summaryBody"></tbody>
             </table>
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Understanding Ovulation</h2>
-        <p class="section-sub">What happens during ovulation and why it matters for conception</p>
-        <p>Ovulation is the release of a mature egg from one of the ovaries. It occurs approximately 14 days before the next expected period, triggered by a surge in luteinising hormone (LH). The egg survives only 12–24 hours after release, making the fertile window — the 5 days before ovulation and ovulation day itself — critical for conception.</p>
-        <h3>Signs You Are Ovulating</h3>
-        <p>Common signs include clear, stretchy "egg-white" cervical mucus, mild one-sided pelvic pain (mittelschmerz), a slight rise in basal body temperature after ovulation, breast tenderness, and increased libido. Using OPKs (ovulation predictor kits) from Day 10 can detect the LH surge 24–36 hours before ovulation.</p>
-        <h3>When Ovulation Doesn't Happen (Anovulation)</h3>
-        <p>Anovulation (no ovulation) is the most common cause of irregular or absent periods and is strongly associated with PCOS, thyroid disorders, hyperprolactinaemia, low BMI, and excessive exercise. If you suspect you are not ovulating, consult Dr. Prashanthi Reddy for a hormonal panel and follicular monitoring scan.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>Understanding Ovulation</h2>
+          <p class="section-sub">What happens during ovulation and why it matters for conception</p>
+          <p>Ovulation is the release of a mature egg from one of the ovaries, triggered by a surge in LH hormone. The egg survives only 12–24 hours after release, making the fertile window — the 5 days before ovulation and ovulation day itself — critical for conception.</p>
+          <h3>Signs You Are Ovulating</h3>
+          <p>Clear, stretchy "egg-white" cervical mucus, mild one-sided pelvic pain (mittelschmerz), a rise in basal body temperature, and a positive OPK result. Using OPKs from Day 10 can detect the LH surge 24–36 hours before ovulation.</p>
+          <h3>When Ovulation Doesn't Happen (Anovulation)</h3>
+          <p>Anovulation is the most common cause of irregular or absent periods — associated with PCOS, thyroid disorders, low BMI, and excessive exercise. Consult Dr. Prashanthi Reddy for a hormonal panel and follicular monitoring scan.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>ఓవ్యులేషన్ అంటే ఏమిటి?</h2>
+          <p class="section-sub">ఓవ్యులేషన్ ఎలా జరుగుతుందో, ప్రెగ్నెన్సీకి ఎందుకు ముఖ్యమో తెలుసుకోండి</p>
+          <p>ఓవ్యులేషన్ అంటే ovary నుండి ఒక మెచ్యూర్ ఎగ్ రిలీజ్ అవడం. ఇది LH హార్మోన్ surge వల్ల జరుగుతుంది. ఎగ్ రిలీజ్ అయిన తర్వాత కేవలం 12–24 గంటలే survive చేయగలదు. అందుకే ఓవ్యులేషన్‌కు ముందు 5 రోజులు చాలా ముఖ్యం.</p>
+          <h3>ఓవ్యులేషన్ జరుగుతుందని ఎలా తెలుసుకోవాలి?</h3>
+          <p>egg-white లాగా ఉన్న cervical mucus, ఒక వైపు తేలికపాటి నొప్పి, basal body temperature కొంచెం పెరగడం, OPK test positive రావడం — ఇవన్నీ ఓవ్యులేషన్ signs. Day 10 నుండి OPK test చేయడం మంచిది.</p>
+          <h3>ఓవ్యులేషన్ జరగకపోతే?</h3>
+          <p>Anovulation అంటే ఓవ్యులేషన్ జరగకపోవడం — ఇది PCOS, థైరాయిడ్ ప్రాబ్లమ్, low BMI వల్ల కావచ్చు. Dr. ప్రశాంతి రెడ్డి గారిని కలిసి హార్మోన్ టెస్ట్ చేయించుకోండి.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How do I calculate my ovulation date?</summary><p>Ovulation occurs approximately 14 days before your next expected period. For a 28-day cycle, ovulation is around Day 14. For a 30-day cycle, it is around Day 16. This calculator uses your last period date and cycle length to predict your ovulation date automatically.</p></details>
-          <details><summary>What is the fertile window?</summary><p>The fertile window spans 6 days — the 5 days before ovulation and the day of ovulation itself. This is because sperm can survive in the reproductive tract for up to 5 days, while the egg survives only 12–24 hours after ovulation. The highest pregnancy chances are on the 2 days before ovulation and on ovulation day itself.</p></details>
-          <details><summary>Can I use OPKs to confirm ovulation?</summary><p>Yes. OPKs detect the LH surge that triggers ovulation 24–36 hours later. Start testing 2–3 days before your predicted ovulation date. A positive OPK (test line as dark or darker than control) means ovulation will occur within 12–36 hours. OPKs are especially useful for women with irregular cycles.</p></details>
-          <details><summary>Do I always ovulate on Day 14?</summary><p>No. Day 14 is average for a 28-day cycle only. Ovulation always occurs approximately 14 days BEFORE your next period, regardless of cycle length. A 35-day cycle would have ovulation around Day 21. Stress, illness, travel, and PCOS can all shift ovulation timing.</p></details>
-          <details><summary>What are signs of ovulation?</summary><p>Signs of ovulation include: clear, stretchy egg-white cervical mucus (most reliable physical sign), a slight rise in basal body temperature (BBT) of 0.2–0.5°C after ovulation, mild one-sided pelvic pain (mittelschmerz), breast tenderness, and a positive OPK result. Tracking multiple signs together (symptothermal method) is most accurate.</p></details>
-          <details><summary>What if I have irregular cycles?</summary><p>Irregular cycles make ovulation prediction harder. Options include tracking BBT daily, using OPKs for a longer window (starting earlier in the cycle), or monitoring follicle growth with transvaginal ultrasound at a fertility clinic. If cycles vary by more than 7 days, consult Dr. Prashanthi Reddy at Mother Hospitals: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How do I calculate my ovulation date?</summary><p>Ovulation occurs approximately 14 days before your next expected period. For a 28-day cycle, ovulation is around Day 14. This calculator uses your last period date and cycle length to predict it automatically.</p></details>
+            <details><summary>What is the fertile window?</summary><p>The fertile window spans 6 days — the 5 days before ovulation and the day of ovulation. Sperm survive up to 5 days; the egg survives only 12–24 hours. The highest chances are on the 2 days before ovulation and on ovulation day itself.</p></details>
+            <details><summary>Can I use OPKs to confirm ovulation?</summary><p>Yes. OPKs detect the LH surge 24–36 hours before ovulation. A positive OPK (dark test line) means ovulation is imminent. Start testing 2–3 days before your predicted ovulation date.</p></details>
+            <details><summary>Do I always ovulate on Day 14?</summary><p>No. Ovulation always occurs ~14 days BEFORE your next period, regardless of cycle length. A 35-day cycle has ovulation around Day 21. Stress, illness, and PCOS can shift ovulation timing.</p></details>
+            <details><summary>What are signs of ovulation?</summary><p>Egg-white cervical mucus, slight rise in BBT, mild one-sided pelvic pain (mittelschmerz), breast tenderness, and positive OPK. Tracking multiple signs together is most accurate.</p></details>
+            <details><summary>What if I have irregular cycles?</summary><p>Track BBT daily, use OPKs for a longer window, or get follicular monitoring scan at Mother Hospitals. If cycles vary by more than 7 days, call: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>ఓవ్యులేషన్ డేట్ ఎలా calculate చేయాలి?</summary><p>నెక్స్ట్ పీరియడ్‌కు 14 రోజుల ముందు ఓవ్యులేషన్ జరుగుతుంది. 28-రోజుల సైకిల్‌కు Day 14 అవుతుంది. ఈ కాల్క్యులేటర్ మీ last period date మరియు cycle length బట్టి automatically calculate చేస్తుంది.</p></details>
+            <details><summary>ఫెర్టైల్ విండో అంటే ఏమిటి?</summary><p>ఓవ్యులేషన్‌కు 5 రోజుల ముందు నుండి ఓవ్యులేషన్ రోజు వరకు — ఇవే 6 fertile days. Sperm 5 రోజులు survive చేయగలదు. ఓవ్యులేషన్‌కు 1–2 రోజుల ముందే try చేయడం best.</p></details>
+            <details><summary>OPK test ఉపయోగపడుతుందా?</summary><p>అవును. OPK test LH surge detect చేస్తుంది — ఓవ్యులేషన్‌కు 24–36 గంటల ముందు. Test line dark గా వస్తే ఓవ్యులేషన్ close లో ఉంది. మీ predict అయిన ఓవ్యులేషన్ డేటుకు 2–3 రోజుల ముందు నుండి test చేయండి.</p></details>
+            <details><summary>ఎప్పుడూ Day 14 లోనే ఓవ్యులేషన్ అవుతుందా?</summary><p>లేదు. Day 14 అనేది 28-రోజుల సైకిల్‌కు మాత్రమే average. ఓవ్యులేషన్ ఎప్పుడూ నెక్స్ట్ పీరియడ్‌కు ~14 రోజుల ముందు జరుగుతుంది. Stress, illness, PCOS వల్ల timing మారవచ్చు.</p></details>
+            <details><summary>ఓవ్యులేషన్ జరుగుతుందని తెలిపే signs ఏమిటి?</summary><p>egg-white లాంటి cervical mucus, BBT కొంచెం rise, ఒక వైపు mild నొప్పి, positive OPK. ఒకటికంటే ఎక్కువ signs track చేస్తే accurate అవుతుంది.</p></details>
+            <details><summary>నా సైకిల్ irregular అయితే?</summary><p>Daily BBT track చేయండి, OPKs ఎక్కువ రోజులు వాడండి, లేదా Mother Hospitals‌లో follicular monitoring scan చేయించుకోండి. సైకిల్ 7 రోజులకంటే ఎక్కువ తేడా అవుతుంటే call చేయండి: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
       </section>
 
@@ -321,13 +349,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Fertility Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Fertility Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -354,6 +382,68 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
+window.pageT = {
+  en: {
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Find Your <em>Ovulation Date & Fertile Window</em>',
+    hero_sub:'Enter your last period date and cycle length to instantly find your ovulation date, 6-day fertile window, and a 3-month conception calendar. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'🗓 3-Month Calendar',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🥚 Ovulation Calculator',
+    calc_intro:'Enter your last period date and average cycle length to find your ovulation date, fertile window, and 3-month calendar.',
+    label_lmp:'First day of last period', label_cycle:'Average cycle length',
+    btn_calc:'Find My Fertile Window →', btn_reset:'↩ Reset',
+    ov_banner_label:'Your Next Ovulation Date',
+    fertile_alert:'🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!',
+    dc_fert_start:'Fertile Window Start', dc_fert_start_sub:'5 days before ovulation',
+    dc_ov_day:'Ovulation Day', dc_ov_sub:'Peak fertility',
+    dc_fert_end:'Fertile Window End', dc_fert_end_sub:'1 day after ovulation',
+    dc_nextperiod:'Next Period', dc_nextperiod_sub:'Estimated',
+    cal_h3:'📆 3-Month Fertile Window Calendar',
+    leg_ov:' Ovulation Day', leg_fert:' Fertile Window', leg_period:' Period Days', leg_today:' Today',
+    summary_h3:'📊 3-Month Ovulation Summary',
+    th_month:'Month', th_ovdate:'Ovulation Date', th_fertwin:'Fertile Window',
+    cta_h2:'Need Personalised Fertility Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+    alert_lmp:'Please enter the first day of your last period.',
+    alert_future:'Last period date cannot be in the future.',
+    today:'ఈ రోజే!', in_days:'{n} రోజుల్లో', this_cycle:'This cycle'
+  },
+  te: {
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'మీ <em>ఓవ్యులేషన్ డేట్ & ఫెర్టైల్ డేస్</em> తెలుసుకోండి',
+    hero_sub:'మీ చివరి పీరియడ్ డేట్ మరియు సైకిల్ length ఇవ్వండి — ఓవ్యులేషన్ డేట్, ఫెర్టైల్ విండో, 3 నెలల కాలెండర్ వెంటనే చూపిస్తాం. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'🗓 3 నెలల కాలెండర్',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🥚 ఓవ్యులేషన్ కాల్క్యులేటర్',
+    calc_intro:'మీ చివరి పీరియడ్ డేట్ మరియు సైకిల్ length ఇవ్వండి — ఓవ్యులేషన్ డేట్, ఫెర్టైల్ విండో తెలుస్తాయి.',
+    label_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు', label_cycle:'సైకిల్ ఎన్ని రోజులు?',
+    btn_calc:'నా ఫెర్టైల్ డేస్ చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    ov_banner_label:'మీ నెక్స్ట్ ఓవ్యులేషన్ డేట్',
+    fertile_alert:'🌟 మీరు ఇప్పుడు <strong>ఫెర్టైల్ టైమ్</strong>లో ఉన్నారు — ప్రెగ్నెన్సీకి try చేయడానికి best time!',
+    dc_fert_start:'ఫెర్టైల్ విండో మొదలు', dc_fert_start_sub:'ఓవ్యులేషన్‌కు 5 రోజుల ముందు',
+    dc_ov_day:'ఓవ్యులేషన్ రోజు', dc_ov_sub:'Peak fertility',
+    dc_fert_end:'ఫెర్టైల్ విండో చివర', dc_fert_end_sub:'ఓవ్యులేషన్ తర్వాత 1 రోజు',
+    dc_nextperiod:'నెక్స్ట్ పీరియడ్', dc_nextperiod_sub:'అంచనా',
+    cal_h3:'📆 3-నెలల ఫెర్టైల్ కాలెండర్',
+    leg_ov:' ఓవ్యులేషన్ రోజు', leg_fert:' ఫెర్టైల్ డేస్', leg_period:' పీరియడ్ డేస్', leg_today:' ఈ రోజు',
+    summary_h3:'📊 3 నెలల ఓవ్యులేషన్ సారాంశం',
+    th_month:'నెల', th_ovdate:'ఓవ్యులేషన్ డేట్', th_fertwin:'ఫెర్టైల్ విండో',
+    cta_h2:'మీకు పర్సనలైజ్డ్ ఫెర్టిలిటీ గైడెన్స్ కావాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+    alert_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు enter చేయండి.',
+    alert_future:'పీరియడ్ డేట్ ఫ్యూచర్‌లో ఉండకూడదు.',
+    today:'ఈ రోజే!', in_days:'{n} రోజుల్లో', this_cycle:'ఈ సైకిల్‌లో గడిచింది'
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
+var _lastOvParams = null;
 document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
@@ -402,14 +492,17 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
 
 function calcOvulation(){
   const lmpVal=document.getElementById('lmp').value;
-  if(!lmpVal){alert('Please enter the first day of your last period.');return;}
+  if(!lmpVal){alert(t('alert_lmp'));return;}
   const lmp=new Date(lmpVal);
   const today=new Date();today.setHours(0,0,0,0);
-  if(lmp>today){alert('Last period date cannot be in the future.');return;}
+  if(lmp>today){alert(t('alert_future'));return;}
   const cycleLen=parseInt(document.getElementById('cycle').value);
   const periodLen=5;
+  _lastOvParams={lmpVal,cycleLen,periodLen};
+  _renderOv(lmp,today,cycleLen,periodLen);
+}
 
-  // Calculate next upcoming ovulation
+function _renderOv(lmp,today,cycleLen,periodLen){
   const daysSinceLmp=daysBetween(lmp,today);
   let cyclesElapsed=Math.floor(daysSinceLmp/cycleLen);
   let nextOv=addDays(lmp,(cycleLen-14)+cyclesElapsed*cycleLen);
@@ -422,14 +515,15 @@ function calcOvulation(){
   const isFertile=today>=fertStart&&today<=fertEnd;
 
   document.getElementById('ovDateMain').textContent=fmt(nextOv);
-  document.getElementById('ovDaysAway').textContent=daysToOv===0?'Today!':`in ${daysToOv} day${daysToOv!==1?'s':''}`;
+  document.getElementById('ovDaysAway').textContent=daysToOv===0?t('today'):t('in_days').replace('{n}',daysToOv);
   document.getElementById('fertileAlertBox').style.display=isFertile?'block':'none';
+  if(isFertile) document.getElementById('fertileAlertBox').innerHTML=t('fertile_alert');
   document.getElementById('fertStart').textContent=fmt(fertStart);
   document.getElementById('ovDate').textContent=fmt(nextOv);
-  document.getElementById('ovSub').textContent=daysToOv===0?'Today!':daysToOv>0?`in ${daysToOv} days`:'This cycle';
+  document.getElementById('ovSub').textContent=daysToOv===0?t('today'):daysToOv>0?t('in_days').replace('{n}',daysToOv):t('this_cycle');
   document.getElementById('fertEnd').textContent=fmt(fertEnd);
   document.getElementById('nextPeriod').textContent=fmt(nextPeriod);
-  document.getElementById('nextPeriodSub').textContent=`in ${daysBetween(today,nextPeriod)} days`;
+  document.getElementById('nextPeriodSub').textContent=t('in_days').replace('{n}',daysBetween(today,nextPeriod));
 
   // Build 3-month calendars from LMP perspective
   const calContainer=document.getElementById('calContainer');
@@ -462,10 +556,20 @@ function calcOvulation(){
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  if(_lastOvParams&&document.getElementById('result').style.display==='block'){
+    const lmp=new Date(_lastOvParams.lmpVal);
+    const today=new Date();today.setHours(0,0,0,0);
+    _renderOv(lmp,today,_lastOvParams.cycleLen,_lastOvParams.periodLen);
+    I18n.apply();
+  }
+};
+
 function resetCalc(){
   document.getElementById('lmp').value='';
   document.getElementById('cycle').value='28';
   document.getElementById('result').style.display='none';
+  _lastOvParams=null;
 }
 </script>
 </body>

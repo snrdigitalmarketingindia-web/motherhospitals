@@ -182,18 +182,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Pregnancy Due Date Calculator —<br><em>LMP, IVF & Ultrasound</em></h1>
-    <p class="hero-sub">Calculate your exact due date using last menstrual period, IVF Day 5 or Day 3 transfer date, or ultrasound dating. Shows trimester, gestational age, milestones, and progress bar. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Pregnancy Due Date Calculator —<br><em>LMP, IVF & Ultrasound</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Calculate your exact due date using last menstrual period, IVF Day 5 or Day 3 transfer date, or ultrasound dating. Shows trimester, gestational age, milestones, and progress bar. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">🏥 IVF Dating Included</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">🏥 IVF Dating Included</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -204,44 +204,44 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
       <section>
         <div class="calc-box">
-          <h2>🤰 Pregnancy Due Date Calculator</h2>
-          <p class="calc-intro">Select your dating method and enter the relevant date to calculate your estimated due date (EDD), current gestational age, and trimester milestones.</p>
+          <h2 data-i18n="calc_title">🤰 Pregnancy Due Date Calculator</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Select your dating method and enter the relevant date to calculate your estimated due date (EDD), current gestational age, and trimester milestones.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="dateMode">Dating Method</label>
+              <label for="dateMode" data-i18n="label_method">Dating Method</label>
               <select id="dateMode" onchange="updateMode()">
-                <option value="lmp">Last Menstrual Period (LMP)</option>
-                <option value="ivf5">IVF Day 5 Transfer (Blastocyst)</option>
-                <option value="ivf3">IVF Day 3 Transfer</option>
-                <option value="us">Ultrasound Dating</option>
+                <option value="lmp" data-i18n="mode_lmp">Last Menstrual Period (LMP)</option>
+                <option value="ivf5" data-i18n="mode_ivf5">IVF Day 5 Transfer (Blastocyst)</option>
+                <option value="ivf3" data-i18n="mode_ivf3">IVF Day 3 Transfer</option>
+                <option value="us" data-i18n="mode_us">Ultrasound Dating</option>
               </select>
             </div>
             <div class="form-group" id="mainDateGroup">
-              <label for="mainDate" id="mainDateLabel">First day of last period (LMP)</label>
+              <label for="mainDate" id="mainDateLabel" data-i18n="label_lmp">First day of last period (LMP)</label>
               <input type="date" id="mainDate">
             </div>
           </div>
           <div class="us-inputs" id="usInputs">
             <div class="form-group">
-              <label for="usWeeks">Weeks at scan</label>
+              <label for="usWeeks" data-i18n="label_us_weeks">Weeks at scan</label>
               <input type="number" id="usWeeks" min="4" max="40" placeholder="e.g. 8">
             </div>
             <div class="form-group">
-              <label for="usDays">Days at scan</label>
+              <label for="usDays" data-i18n="label_us_days">Days at scan</label>
               <select id="usDays">
                 <option value="0">0 days</option><option value="1">1 day</option><option value="2">2 days</option>
                 <option value="3">3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="6">6 days</option>
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="calcEDD()">Calculate My Due Date →</button>
+          <button class="btn-calc" onclick="calcEDD()" data-i18n="btn_calc">Calculate My Due Date →</button>
 
           <div class="result-box" id="result">
             <div class="edd-banner">
-              <div class="edd-label">Your Estimated Due Date</div>
+              <div class="edd-label" data-i18n="edd_label">Your Estimated Due Date</div>
               <div class="edd-date" id="eddDisplay">—</div>
               <div id="eddDaysLeft" style="font-size:0.9rem;color:var(--text-mid);margin-top:0.3rem"></div>
-              <div id="trimesterBadge" class="trimester-badge trim-1">1st Trimester</div>
+              <div id="trimesterBadge" class="trimester-badge trim-1" data-i18n="trim1_badge">1st Trimester</div>
               <div class="progress-bar-wrap" style="margin-top:1rem;max-width:400px;margin-left:auto;margin-right:auto">
                 <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
               </div>
@@ -249,40 +249,68 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
             </div>
 
             <div class="dates-grid">
-              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label">Equivalent LMP</div><div class="dc-val" id="lmpDisplay">—</div><div class="dc-sub">Used for dating</div></div>
-              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label">Conception Date</div><div class="dc-val" id="concDisplay">—</div><div class="dc-sub">Approximate</div></div>
-              <div class="date-card"><div class="dc-icon">📊</div><div class="dc-label">Gestational Age Today</div><div class="dc-val" id="gestAge">—</div><div class="dc-sub" id="gestAgeWeeks">weeks + days</div></div>
-              <div class="date-card"><div class="dc-icon">🏁</div><div class="dc-label">Days Remaining</div><div class="dc-val" id="daysLeft">—</div><div class="dc-sub">to estimated due date</div></div>
+              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label" data-i18n="dc_lmp">Equivalent LMP</div><div class="dc-val" id="lmpDisplay">—</div><div class="dc-sub" data-i18n="dc_lmp_sub">Used for dating</div></div>
+              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label" data-i18n="dc_conc">Conception Date</div><div class="dc-val" id="concDisplay">—</div><div class="dc-sub" data-i18n="dc_conc_sub">Approximate</div></div>
+              <div class="date-card"><div class="dc-icon">📊</div><div class="dc-label" data-i18n="dc_gest">Gestational Age Today</div><div class="dc-val" id="gestAge">—</div><div class="dc-sub" id="gestAgeWeeks" data-i18n="dc_gest_sub">weeks + days</div></div>
+              <div class="date-card"><div class="dc-icon">🏁</div><div class="dc-label" data-i18n="dc_days">Days Remaining</div><div class="dc-val" id="daysLeft">—</div><div class="dc-sub" data-i18n="dc_days_sub">to estimated due date</div></div>
             </div>
 
-            <h3>📆 Pregnancy Milestones</h3>
+            <h3 data-i18n="milestones_h3">📆 Pregnancy Milestones</h3>
             <table class="milestone-table" id="milestoneTable">
-              <thead><tr><th>Week</th><th>Date</th><th>Milestone</th></tr></thead>
+              <thead><tr><th data-i18n="th_week">Week</th><th data-i18n="th_date">Date</th><th data-i18n="th_milestone">Milestone</th></tr></thead>
               <tbody id="milestoneBody"></tbody>
             </table>
 
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>How Pregnancy Dating Works</h2>
-        <p class="section-sub">LMP, IVF dating, and ultrasound — which method is most accurate?</p>
-        <p>Gestational age is conventionally counted from the first day of the last menstrual period (LMP), even though conception occurs 2 weeks later. This is because LMP is a reliable known date, while the exact day of ovulation and fertilisation is usually unknown in natural conception.</p>
-        <h3>IVF Dating — Why It's More Precise</h3>
-        <p>In IVF, the exact date of fertilisation (Day 0) is known. For a Day 5 blastocyst transfer, the equivalent LMP is 19 days before transfer (since fertilisation was on Day 0 of a cycle, and LMP is typically Day 1 minus 14 days of ovulation time, but in IVF, EDD = transfer + 261 days). For a Day 3 transfer, EDD = transfer + 263 days.</p>
-        <h3>When to Confirm Your Due Date</h3>
-        <p>Your due date should be confirmed with a dating ultrasound (crown-rump length measurement) at 7–12 weeks. If the ultrasound EDD differs from LMP by more than 7 days, the ultrasound date takes precedence. At Mother Hospitals, we provide detailed early pregnancy scans as part of our IVF and obstetric care.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>How Pregnancy Dating Works</h2>
+          <p class="section-sub">LMP, IVF dating, and ultrasound — which method is most accurate?</p>
+          <p>Gestational age is counted from the first day of the last menstrual period (LMP), even though conception occurs 2 weeks later. This is because LMP is a reliable known date, while the exact day of fertilisation is usually unknown in natural conception.</p>
+          <h3>IVF Dating — Why It's More Precise</h3>
+          <p>In IVF, the exact fertilisation date is known. For a Day 5 blastocyst transfer: EDD = transfer + 261 days. For Day 3 transfer: EDD = transfer + 263 days.</p>
+          <h3>When to Confirm Your Due Date</h3>
+          <p>Confirm your due date with a dating ultrasound (crown-rump length) at 7–12 weeks. If ultrasound differs from LMP by more than 7 days, the ultrasound date takes precedence. Mother Hospitals provides detailed early pregnancy scans.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>ప్రెగ్నెన్సీ డేటింగ్ ఎలా జరుగుతుంది?</h2>
+          <p class="section-sub">LMP, IVF dating, ultrasound — ఏది more accurate?</p>
+          <p>Gestational age అనేది మీ చివరి పీరియడ్ మొదటి రోజు నుండి లెక్కిస్తారు. Conception అయిన తర్వాత 2 వారాలకు జరుగుతుంది అయినా LMP నుండే count చేస్తారు.</p>
+          <h3>IVF Dating ఎందుకు More Accurate?</h3>
+          <p>IVF లో fertilisation exact date తెలుసు. Day 5 blastocyst transfer అయితే: EDD = transfer date + 261 రోజులు. Day 3 transfer అయితే: EDD = transfer + 263 రోజులు.</p>
+          <h3>Due Date Confirm ఎలా చేయాలి?</h3>
+          <p>7–12 వారాలలో dating ultrasound scan చేయించుకోండి. Ultrasound రిజల్ట్ LMP కంటే 7 రోజులు తేడా అయితే ultrasound date నే consider చేస్తారు. Mother Hospitals లో early pregnancy scans అందుబాటులో ఉన్నాయి.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How is the due date calculated from LMP?</summary><p>Using Naegele's rule: add 280 days (40 weeks) to the first day of your last menstrual period (LMP). This assumes a 28-day cycle with ovulation on Day 14. The due date is an estimate — only about 5% of babies are born on their exact due date. A ±2 week window is normal.</p></details>
-          <details><summary>How is the due date calculated for IVF?</summary><p>For IVF Day 5 (blastocyst) transfer: subtract 19 days from transfer date to find equivalent LMP, then add 280 days. This gives EDD = transfer + 261 days. For IVF Day 3 transfer: EDD = transfer + 263 days. These calculations are precise because fertilisation date is known exactly.</p></details>
-          <details><summary>When do the trimesters start and end?</summary><p>First trimester: Week 1 to Week 13+6. Second trimester: Week 14 to Week 27+6. Third trimester: Week 28 to Week 40+. The first trimester has the highest miscarriage risk. The 20-week anatomy scan is the key second-trimester scan. After 37 weeks, the baby is considered term.</p></details>
-          <details><summary>How accurate is ultrasound dating?</summary><p>A first-trimester ultrasound (before 14 weeks) is the most accurate method — accurate to within ±5–7 days using crown-rump length (CRL). After 14 weeks, accuracy decreases. If ultrasound dating differs from LMP by more than 7 days in the first trimester, the due date is usually adjusted to match the ultrasound.</p></details>
-          <details><summary>What is gestational age vs embryonic age?</summary><p>Gestational age (measured from LMP) is always 2 weeks more than embryonic age (measured from conception). At your 8-week scan, the embryo is actually 6 weeks old from fertilisation. In IVF, exact fertilisation date is known, but gestational age is still calculated from the equivalent LMP.</p></details>
-          <details><summary>What are the key pregnancy milestones?</summary><p>Week 6–7: first heartbeat. Week 12: nuchal translucency scan. Week 20: anatomy scan. Week 24: viability threshold. Week 28: third trimester. Week 37: full term. Week 40: estimated due date. Mother Hospitals provides all antenatal scans and pregnancy monitoring.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How is the due date calculated from LMP?</summary><p>Add 280 days (40 weeks) to your LMP (Naegele's rule). The due date is an estimate — only 5% of babies are born on the exact date. A ±2 week window is normal.</p></details>
+            <details><summary>How is the due date calculated for IVF?</summary><p>Day 5 blastocyst transfer: EDD = transfer + 261 days. Day 3 transfer: EDD = transfer + 263 days. These are precise because fertilisation date is known exactly.</p></details>
+            <details><summary>When do the trimesters start and end?</summary><p>1st trimester: Weeks 1–13. 2nd trimester: Weeks 14–27. 3rd trimester: Weeks 28–40. After 37 weeks, baby is term.</p></details>
+            <details><summary>How accurate is ultrasound dating?</summary><p>First-trimester ultrasound (before 14 weeks) is accurate to ±5–7 days using crown-rump length (CRL). If it differs from LMP by more than 7 days, the due date is adjusted to match.</p></details>
+            <details><summary>What is gestational age vs embryonic age?</summary><p>Gestational age (from LMP) is always 2 weeks more than embryonic age (from conception). At your 8-week scan, the embryo is 6 weeks from fertilisation.</p></details>
+            <details><summary>What are the key pregnancy milestones?</summary><p>Week 6–7: heartbeat. Week 12: nuchal scan. Week 20: anatomy scan. Week 24: viability. Week 37: full term. Week 40: EDD. Mother Hospitals provides all antenatal scans.</p></details>
+          </div>
+        </div>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>LMP నుండి due date ఎలా calculate అవుతుంది?</summary><p>LMP కి 280 రోజులు (40 వారాలు) add చేస్తారు — ఇది Naegele's rule. Due date అనేది అంచనా మాత్రమే — కేవలం 5% పిల్లలు exact date లో పుడతారు. ±2 వారాల తేడా నార్మల్.</p></details>
+            <details><summary>IVF కి due date ఎలా calculate అవుతుంది?</summary><p>Day 5 blastocyst transfer కి: EDD = transfer date + 261 రోజులు. Day 3 transfer కి: EDD = transfer + 263 రోజులు. IVF లో fertilisation date exact గా తెలుసు కాబట్టి calculation accurate గా ఉంటుంది.</p></details>
+            <details><summary>Trimesters ఎప్పుడు start మరియు end అవుతాయి?</summary><p>1వ trimester: వారాలు 1–13. 2వ trimester: వారాలు 14–27. 3వ trimester: వారాలు 28–40. 37 వారాలు అయిన తర్వాత baby term అయినట్లు consider చేస్తారు.</p></details>
+            <details><summary>Ultrasound dating ఎంత accurate గా ఉంటుంది?</summary><p>14 వారాల లోపు చేసే ultrasound scan ±5–7 రోజులు accurate గా ఉంటుంది. LMP కంటే 7 రోజులు తేడా అయితే ultrasound date నే due date గా use చేస్తారు.</p></details>
+            <details><summary>Gestational age vs embryonic age తేడా ఏమిటి?</summary><p>Gestational age (LMP నుండి) ఎప్పుడూ embryonic age (conception నుండి) కంటే 2 వారాలు ఎక్కువగా ఉంటుంది. 8-వారాల scan లో baby actually 6 వారాల వయస్సు ఉంటుంది.</p></details>
+            <details><summary>ప్రెగ్నెన్సీ milestones ముఖ్యమైనవి ఏమిటి?</summary><p>వారం 6–7: హృదయ స్పందన. వారం 12: nuchal scan. వారం 20: anatomy scan. వారం 24: viability. వారం 37: full term. వారం 40: EDD. Mother Hospitals లో అన్ని antenatal scans అందుబాటులో ఉన్నాయి.</p></details>
+          </div>
         </div>
       </section>
 
@@ -324,13 +352,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Pregnancy Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Pregnancy Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -357,6 +385,111 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
+window.pageT = {
+  en: {
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Pregnancy Due Date Calculator —<br><em>LMP, IVF & Ultrasound</em>',
+    hero_sub:'Calculate your exact due date using LMP, IVF transfer date, or ultrasound dating. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'🏥 IVF Dating Included',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🤰 Pregnancy Due Date Calculator',
+    calc_intro:'Select your dating method and enter the relevant date to calculate your EDD, gestational age, and trimester milestones.',
+    label_method:'Dating Method',
+    mode_lmp:'Last Menstrual Period (LMP)', mode_ivf5:'IVF Day 5 Transfer (Blastocyst)',
+    mode_ivf3:'IVF Day 3 Transfer', mode_us:'Ultrasound Dating',
+    label_lmp:'First day of last period (LMP)', label_ivf5:'IVF Day 5 Transfer Date',
+    label_ivf3:'IVF Day 3 Transfer Date', label_us:'Date of Ultrasound Scan',
+    label_us_weeks:'Weeks at scan', label_us_days:'Days at scan',
+    btn_calc:'Calculate My Due Date →', btn_reset:'↩ Reset',
+    edd_label:'Your Estimated Due Date',
+    trim1_badge:'1st Trimester', trim2_badge:'2nd Trimester', trim3_badge:'3rd Trimester',
+    dc_lmp:'Equivalent LMP', dc_lmp_sub:'Used for dating',
+    dc_conc:'Conception Date', dc_conc_sub:'Approximate',
+    dc_gest:'Gestational Age Today', dc_gest_sub:'weeks + days',
+    dc_days:'Days Remaining', dc_days_sub:'to estimated due date',
+    milestones_h3:'📆 Pregnancy Milestones',
+    th_week:'Week', th_date:'Date', th_milestone:'Milestone',
+    cta_h2:'Need Personalised Pregnancy Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+    alert_date:'Please enter a valid date.',
+    alert_future:'Date cannot be in the future.',
+    alert_us_weeks:'Please enter weeks at scan.',
+    days_left:'{n} days to go', days_past:'{n} days past due',
+    due_today:'Due today!', past_due:'Past due date',
+    week_label:'Week', weeks_days:'{w} weeks + {d} days',
+    trim1:'1st Trimester', trim2:'2nd Trimester', trim3:'3rd Trimester',
+    pct_complete:'% of pregnancy complete',
+    days_from_lmp:'days from LMP',
+    today_label:'Today!', born_label:'Born!',
+    m_4:'Missed period — pregnancy test positive',
+    m_6:'Heartbeat detectable on transvaginal scan',
+    m_8:'Embryo visible, limb buds forming',
+    m_12:'End of 1st trimester · Nuchal translucency scan',
+    m_16:'Gender may be visible on scan',
+    m_20:'Anatomy scan (anomaly scan) — key milestone',
+    m_24:'Viability threshold — baby can survive with support',
+    m_28:'3rd trimester begins · Growth scan recommended',
+    m_32:'Baby gains weight rapidly',
+    m_36:'Weekly monitoring begins',
+    m_37:'Full term — baby ready for birth',
+    m_40:'Estimated due date (EDD)'
+  },
+  te: {
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'ప్రెగ్నెన్సీ డ్యూ డేట్ కాల్క్యులేటర్ —<br><em>LMP, IVF & Ultrasound</em>',
+    hero_sub:'మీ LMP, IVF transfer date, లేదా ultrasound scan బట్టి due date తెలుసుకోండి. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'🏥 IVF Dating కూడా',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🤰 ప్రెగ్నెన్సీ డ్యూ డేట్ కాల్క్యులేటర్',
+    calc_intro:'మీ dating method select చేసి date enter చేయండి — due date, gestational age, milestones అన్నీ చూపిస్తాం.',
+    label_method:'Dating Method ఎంచుకోండి',
+    mode_lmp:'చివరి పీరియడ్ (LMP)', mode_ivf5:'IVF Day 5 Transfer (Blastocyst)',
+    mode_ivf3:'IVF Day 3 Transfer', mode_us:'Ultrasound Dating',
+    label_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు (LMP)', label_ivf5:'IVF Day 5 Transfer తేదీ',
+    label_ivf3:'IVF Day 3 Transfer తేదీ', label_us:'Ultrasound Scan తేదీ',
+    label_us_weeks:'Scan సమయంలో ఎన్ని వారాలు?', label_us_days:'అదనపు రోజులు',
+    btn_calc:'నా Due Date చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    edd_label:'మీ అంచనా డెలివరీ తేదీ (EDD)',
+    trim1_badge:'1వ Trimester', trim2_badge:'2వ Trimester', trim3_badge:'3వ Trimester',
+    dc_lmp:'Equivalent LMP', dc_lmp_sub:'Dating కోసం',
+    dc_conc:'Conception తేదీ', dc_conc_sub:'అంచనా',
+    dc_gest:'ఇప్పుడు Gestational Age', dc_gest_sub:'వారాలు + రోజులు',
+    dc_days:'మిగిలిన రోజులు', dc_days_sub:'due date కి',
+    milestones_h3:'📆 ప్రెగ్నెన్సీ Milestones',
+    th_week:'వారం', th_date:'తేదీ', th_milestone:'Milestone',
+    cta_h2:'ప్రెగ్నెన్సీ గురించి మాట్లాడాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+    alert_date:'Valid date enter చేయండి.',
+    alert_future:'Date ఫ్యూచర్‌లో ఉండకూడదు.',
+    alert_us_weeks:'Scan లో ఎన్ని వారాలో enter చేయండి.',
+    days_left:'మరో {n} రోజులు', days_past:'{n} రోజులు గడిచాయి',
+    due_today:'ఈరోజే డెలివరీ!', past_due:'Due date దాటిపోయింది',
+    week_label:'వారం', weeks_days:'{w} వారాలు + {d} రోజులు',
+    trim1:'1వ Trimester', trim2:'2వ Trimester', trim3:'3వ Trimester',
+    pct_complete:'% ప్రెగ్నెన్సీ పూర్తి',
+    days_from_lmp:'LMP నుండి రోజులు',
+    today_label:'ఈరోజే!', born_label:'పుట్టారు!',
+    m_4:'పీరియడ్ మిస్ అయింది — ప్రెగ్నెన్సీ టెస్ట్ పాజిటివ్',
+    m_6:'Scan లో హార్ట్‌బీట్ వినిపిస్తుంది',
+    m_8:'Embryo కనిపిస్తుంది, limb buds form అవుతున్నాయి',
+    m_12:'1వ Trimester ముగింపు · Nuchal scan',
+    m_16:'Scan లో gender తెలిసే అవకాశం',
+    m_20:'Anatomy scan (anomaly scan) — ముఖ్యమైన scan',
+    m_24:'Viability threshold — support తో baby survive చేయగలదు',
+    m_28:'3వ Trimester మొదలు · Growth scan చేయించుకోండి',
+    m_32:'Baby బరువు వేగంగా పెరుగుతుంది',
+    m_36:'Weekly monitoring మొదలు',
+    m_37:'Full term — baby పుట్టడానికి రెడీ',
+    m_40:'అంచనా డెలివరీ తేదీ (EDD)'
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
@@ -366,75 +499,50 @@ function updateMode(){
   const lbl=document.getElementById('mainDateLabel');
   const usInputs=document.getElementById('usInputs');
   usInputs.style.display='none';
-  if(mode==='lmp') lbl.textContent='First day of last period (LMP)';
-  else if(mode==='ivf5') lbl.textContent='IVF Day 5 Transfer Date';
-  else if(mode==='ivf3') lbl.textContent='IVF Day 3 Transfer Date';
-  else if(mode==='us'){lbl.textContent='Date of Ultrasound Scan';usInputs.style.display='grid';}
+  if(mode==='lmp') lbl.setAttribute('data-i18n','label_lmp');
+  else if(mode==='ivf5') lbl.setAttribute('data-i18n','label_ivf5');
+  else if(mode==='ivf3') lbl.setAttribute('data-i18n','label_ivf3');
+  else if(mode==='us'){lbl.setAttribute('data-i18n','label_us');usInputs.style.display='grid';}
+  I18n.apply();
 }
 
 const MILESTONES=[
-  {w:4,label:'Missed period — pregnancy test positive'},
-  {w:6,label:'Heartbeat detectable on transvaginal scan'},
-  {w:8,label:'Embryo visible, limb buds forming'},
-  {w:12,label:'End of 1st trimester · Nuchal translucency scan'},
-  {w:16,label:'Gender may be visible on scan'},
-  {w:20,label:'Anatomy scan (anomaly scan) — key milestone'},
-  {w:24,label:'Viability threshold — baby can survive with support'},
-  {w:28,label:'3rd trimester begins · Growth scan recommended'},
-  {w:32,label:'Baby gains weight rapidly'},
-  {w:36,label:'Weekly monitoring begins'},
-  {w:37,label:'Full term — baby ready for birth'},
-  {w:40,label:'Estimated due date (EDD)'},
+  {w:4,key:'m_4'},{w:6,key:'m_6'},{w:8,key:'m_8'},
+  {w:12,key:'m_12'},{w:16,key:'m_16'},{w:20,key:'m_20'},
+  {w:24,key:'m_24'},{w:28,key:'m_28'},{w:32,key:'m_32'},
+  {w:36,key:'m_36'},{w:37,key:'m_37'},{w:40,key:'m_40'},
 ];
 
-function calcEDD(){
-  const mode=document.getElementById('dateMode').value;
-  const dateVal=document.getElementById('mainDate').value;
-  if(!dateVal){alert('Please enter a date.');return;}
-  const inputDate=new Date(dateVal);
+var _lastLmp=null,_lastEdd=null;
+
+function _renderResults(lmp,edd){
   const today=new Date();today.setHours(0,0,0,0);
-  let lmp;
-
-  if(mode==='lmp'){lmp=inputDate;}
-  else if(mode==='ivf5'){lmp=addDays(inputDate,-19);}
-  else if(mode==='ivf3'){lmp=addDays(inputDate,-17);}
-  else if(mode==='us'){
-    const weeks=parseInt(document.getElementById('usWeeks').value)||0;
-    const days=parseInt(document.getElementById('usDays').value)||0;
-    const totalDays=weeks*7+days;
-    if(!weeks){alert('Please enter the number of weeks at scan.');return;}
-    lmp=addDays(inputDate,-totalDays);
-  }
-
-  const edd=addDays(lmp,280);
   const conception=addDays(lmp,14);
-  const totalPregnDays=daysBetween(lmp,today);
-  const totalDays=280;
-  const gestDays=Math.max(0,totalPregnDays);
+  const gestDays=Math.max(0,daysBetween(lmp,today));
   const gestWeeks=Math.floor(gestDays/7);
   const gestDaysRem=gestDays%7;
-  const daysLeft=Math.max(0,daysBetween(today,edd));
-  const pct=Math.min(100,Math.round((gestDays/totalDays)*100));
+  const daysLeft=daysBetween(today,edd);
+  const pct=Math.min(100,Math.round((gestDays/280)*100));
 
-  // Trimester
-  let trimCls,trimLabel;
-  if(gestWeeks<14){trimCls='trim-1';trimLabel='1st Trimester';}
-  else if(gestWeeks<28){trimCls='trim-2';trimLabel='2nd Trimester';}
-  else{trimCls='trim-3';trimLabel='3rd Trimester';}
+  let trimCls,trimKey;
+  if(gestWeeks<14){trimCls='trim-1';trimKey='trim1';}
+  else if(gestWeeks<28){trimCls='trim-2';trimKey='trim2';}
+  else{trimCls='trim-3';trimKey='trim3';}
 
   document.getElementById('eddDisplay').textContent=fmt(edd);
-  document.getElementById('eddDaysLeft').textContent=daysLeft===0?'Due today!':daysLeft>0?`${daysLeft} days to go`:'Past due date';
+  document.getElementById('eddDaysLeft').textContent=
+    daysLeft===0?t('due_today'):daysLeft>0?t('days_left').replace('{n}',daysLeft):t('past_due');
   const tb=document.getElementById('trimesterBadge');
-  tb.textContent=trimLabel;tb.className='trimester-badge '+trimCls;
+  tb.textContent=t(trimKey);tb.className='trimester-badge '+trimCls;
   document.getElementById('progressBar').style.width=pct+'%';
-  document.getElementById('progressLabel').textContent=`${pct}% of pregnancy complete · Week ${gestWeeks}+${gestDaysRem}`;
+  document.getElementById('progressLabel').textContent=`${pct}${t('pct_complete')} · ${t('week_label')} ${gestWeeks}+${gestDaysRem}`;
   document.getElementById('lmpDisplay').textContent=fmt(lmp);
   document.getElementById('concDisplay').textContent=fmt(conception);
   document.getElementById('gestAge').textContent=`${gestWeeks}w ${gestDaysRem}d`;
-  document.getElementById('gestAgeWeeks').textContent=gestDays>0?`${gestDays} days from LMP`:'';
-  document.getElementById('daysLeft').textContent=daysLeft===0?'Today!':(daysLeft>0?daysLeft:'Born!');
+  document.getElementById('gestAgeWeeks').textContent=gestDays>0?`${gestDays} ${t('days_from_lmp')}`:'';
+  document.getElementById('daysLeft').textContent=
+    daysLeft===0?t('today_label'):(daysLeft>0?daysLeft:t('born_label'));
 
-  // Milestones
   const tbody=document.getElementById('milestoneBody');
   tbody.innerHTML='';
   MILESTONES.forEach(m=>{
@@ -443,17 +551,42 @@ function calcEDD(){
     const isCurrent=gestWeeks===m.w;
     const tr=document.createElement('tr');
     tr.className=isPast?'past':(isCurrent?'current':'');
-    tr.innerHTML=`<td>Week ${m.w}${isPast?' ✅':''}</td><td>${fmt(mDate)}</td><td>${m.label}</td>`;
+    tr.innerHTML=`<td>${t('week_label')} ${m.w}${isPast?' ✅':''}</td><td>${fmt(mDate)}</td><td>${t(m.key)}</td>`;
     tbody.appendChild(tr);
   });
+}
 
+function calcEDD(){
+  const mode=document.getElementById('dateMode').value;
+  const dateVal=document.getElementById('mainDate').value;
+  if(!dateVal){alert(t('alert_date'));return;}
+  const inputDate=new Date(dateVal);
+  let lmp;
+
+  if(mode==='lmp'){lmp=inputDate;}
+  else if(mode==='ivf5'){lmp=addDays(inputDate,-19);}
+  else if(mode==='ivf3'){lmp=addDays(inputDate,-17);}
+  else if(mode==='us'){
+    const weeks=parseInt(document.getElementById('usWeeks').value)||0;
+    const days=parseInt(document.getElementById('usDays').value)||0;
+    if(!weeks){alert(t('alert_us_weeks'));return;}
+    lmp=addDays(inputDate,-(weeks*7+days));
+  }
+
+  _lastLmp=lmp;_lastEdd=addDays(lmp,280);
+  _renderResults(_lastLmp,_lastEdd);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  if(_lastLmp&&_lastEdd) _renderResults(_lastLmp,_lastEdd);
+};
+
 function resetCalc(){
   document.getElementById('mainDate').value='';
   document.getElementById('dateMode').value='lmp';
+  _lastLmp=null;_lastEdd=null;
   updateMode();
   document.getElementById('result').style.display='none';
 }

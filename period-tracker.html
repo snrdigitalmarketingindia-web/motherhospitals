@@ -206,18 +206,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Period Tracker —<br><em>Predict Your Next Period & Fertile Window</em></h1>
-    <p class="hero-sub">Enter your last period date and cycle length to instantly predict your next period, ovulation date, fertile window, and current cycle phase. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Period Tracker —<br><em>Predict Your Next Period & Fertile Window</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your last period date and cycle length to instantly predict your next period, ovulation date, fertile window, and current cycle phase. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">🗓 3-Month Forecast</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">🗓 3-Month Forecast</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -229,15 +229,15 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
       <!-- CALCULATOR -->
       <section>
         <div class="calc-box">
-          <h2>🩸 Period Tracker</h2>
-          <p class="calc-intro">Enter your details below to get your next period date, ovulation window, and current cycle phase.</p>
+          <h2 data-i18n="calc_title">🩸 Period Tracker</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter your details below to get your next period date, ovulation window, and current cycle phase.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="lmp">First day of last period</label>
+              <label for="lmp" data-i18n="label_lmp">First day of last period</label>
               <input type="date" id="lmp" max="">
             </div>
             <div class="form-group">
-              <label for="cycle">Average cycle length</label>
+              <label for="cycle" data-i18n="label_cycle">Average cycle length</label>
               <select id="cycle">
                 <option value="21">21 days</option><option value="22">22 days</option><option value="23">23 days</option>
                 <option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option>
@@ -248,7 +248,7 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </select>
             </div>
             <div class="form-group">
-              <label for="period">Period length</label>
+              <label for="period" data-i18n="label_period">Period length</label>
               <select id="period">
                 <option value="2">2 days</option><option value="3">3 days</option><option value="4">4 days</option>
                 <option value="5" selected>5 days (typical)</option><option value="6">6 days</option>
@@ -256,7 +256,7 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="trackPeriod()">Track My Cycle →</button>
+          <button class="btn-calc" onclick="trackPeriod()" data-i18n="btn_track">Track My Cycle →</button>
 
           <div class="result-box" id="result">
             <div id="phaseBanner" class="phase-banner phase-follicular">
@@ -267,49 +267,72 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </div>
               <div style="margin-left:auto;font-weight:800;font-size:0.9rem" id="cycleDay">Day —</div>
             </div>
-            <div class="fertile-alert" id="fertileAlert" style="display:none">🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!</div>
+            <div class="fertile-alert" id="fertileAlert" style="display:none" data-i18n="fertile_alert">🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!</div>
             <div class="dates-grid">
-              <div class="date-card"><div class="dc-icon">🩸</div><div class="dc-label">Next Period</div><div class="dc-val" id="nextPeriod">—</div><div class="dc-sub" id="nextPeriodSub">—</div></div>
-              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label">Ovulation Date</div><div class="dc-val" id="ovDate">—</div><div class="dc-sub" id="ovSub">—</div></div>
-              <div class="date-card"><div class="dc-icon">💚</div><div class="dc-label">Fertile Window</div><div class="dc-val" id="fertStart">—</div><div class="dc-sub" id="fertEnd">—</div></div>
-              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label">Cycle Progress</div><div class="dc-val" id="cycleProgress">—</div><div class="dc-sub" id="cycleProgressSub">—</div></div>
+              <div class="date-card"><div class="dc-icon">🩸</div><div class="dc-label" data-i18n="dc_nextperiod">Next Period</div><div class="dc-val" id="nextPeriod">—</div><div class="dc-sub" id="nextPeriodSub">—</div></div>
+              <div class="date-card"><div class="dc-icon">🥚</div><div class="dc-label" data-i18n="dc_ovulation">Ovulation Date</div><div class="dc-val" id="ovDate">—</div><div class="dc-sub" id="ovSub">—</div></div>
+              <div class="date-card"><div class="dc-icon">💚</div><div class="dc-label" data-i18n="dc_fertile">Fertile Window</div><div class="dc-val" id="fertStart">—</div><div class="dc-sub" id="fertEnd">—</div></div>
+              <div class="date-card"><div class="dc-icon">📅</div><div class="dc-label" data-i18n="dc_progress">Cycle Progress</div><div class="dc-val" id="cycleProgress">—</div><div class="dc-sub" id="cycleProgressSub">—</div></div>
             </div>
-            <h3>📆 Next 3 Periods</h3>
+            <h3 data-i18n="upcoming_h3">📆 Next 3 Periods</h3>
             <table class="upcoming-table">
-              <thead><tr><th>Period</th><th>Expected Date</th><th>Day of Week</th></tr></thead>
+              <thead><tr><th data-i18n="th_period">Period</th><th data-i18n="th_date">Expected Date</th><th data-i18n="th_day">Day of Week</th></tr></thead>
               <tbody id="upcomingBody"></tbody>
             </table>
             <div class="phase-guide">
-              <h3>🔄 Your 4 Cycle Phases</h3>
-              <div class="phase-item"><div class="pi-dot" style="background:#e74c3c"></div><div><strong>Menstrual (Days 1–5):</strong> Uterine lining sheds. Rest and hydrate.</div></div>
-              <div class="phase-item"><div class="pi-dot" style="background:#3498db"></div><div><strong>Follicular (Days 1–13):</strong> Follicles mature. Oestrogen rises. Energy increases.</div></div>
-              <div class="phase-item"><div class="pi-dot" style="background:#27ae60"></div><div><strong>Ovulation (~Day 14):</strong> Egg released. Peak fertility. Best time to conceive.</div></div>
-              <div class="phase-item"><div class="pi-dot" style="background:#8e44ad"></div><div><strong>Luteal (Days 15–28):</strong> Progesterone rises. PMS symptoms may appear.</div></div>
+              <h3 data-i18n="phases_h3">🔄 Your 4 Cycle Phases</h3>
+              <div class="phase-item"><div class="pi-dot" style="background:#e74c3c"></div><div data-i18n="phase_men"><strong>Menstrual (Days 1–5):</strong> Uterine lining sheds. Rest and hydrate.</div></div>
+              <div class="phase-item"><div class="pi-dot" style="background:#3498db"></div><div data-i18n="phase_fol"><strong>Follicular (Days 1–13):</strong> Follicles mature. Oestrogen rises. Energy increases.</div></div>
+              <div class="phase-item"><div class="pi-dot" style="background:#27ae60"></div><div data-i18n="phase_ov"><strong>Ovulation (~Day 14):</strong> Egg released. Peak fertility. Best time to conceive.</div></div>
+              <div class="phase-item"><div class="pi-dot" style="background:#8e44ad"></div><div data-i18n="phase_lut"><strong>Luteal (Days 15–28):</strong> Progesterone rises. PMS symptoms may appear.</div></div>
             </div>
-            <button class="btn-reset" onclick="resetTracker()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetTracker()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <!-- EDUCATIONAL -->
-        <h2>Understanding Your Menstrual Cycle</h2>
-        <p class="section-sub">What's happening in your body across the four phases</p>
-        <p>The menstrual cycle is a monthly hormonal process that prepares the body for pregnancy. A typical cycle is 28 days, but anywhere from 21 to 35 days is considered normal. Tracking your cycle helps you understand your body, identify irregularities early, and plan or avoid pregnancy.</p>
-        <h3>When to Worry About Irregular Periods</h3>
-        <p>Cycles that vary by more than 7 days, periods absent for 3+ months, extremely heavy or painful periods, or spotting between cycles may indicate <strong>PCOS, thyroid disorders, endometriosis,</strong> or <strong>premature ovarian insufficiency</strong> — all treatable with early diagnosis.</p>
-        <h3>Period Tracking in Telugu (పీరియడ్ ట్రాకింగ్)</h3>
-        <p>మీ పీరియడ్ తేదీలు ట్రాక్ చేయడం మీ ఆరోగ్యం అర్థం చేసుకోవడానికి సహాయపడుతుంది. క్రమం తప్పిన సైకిళ్ళు PCOS, థైరాయిడ్ సమస్యలు లేదా హార్మోన్ అసమతుల్యత సూచించవచ్చు.</p>
+        <!-- EDUCATIONAL EN -->
+        <div data-lang="en">
+          <h2>Understanding Your Menstrual Cycle</h2>
+          <p class="section-sub">What's happening in your body across the four phases</p>
+          <p>The menstrual cycle is a monthly hormonal process that prepares the body for pregnancy. A typical cycle is 28 days, but anywhere from 21 to 35 days is considered normal. Tracking your cycle helps you understand your body, identify irregularities early, and plan or avoid pregnancy.</p>
+          <h3>When to Worry About Irregular Periods</h3>
+          <p>Cycles that vary by more than 7 days, periods absent for 3+ months, extremely heavy or painful periods, or spotting between cycles may indicate <strong>PCOS, thyroid disorders, endometriosis,</strong> or <strong>premature ovarian insufficiency</strong> — all treatable with early diagnosis.</p>
+        </div>
+        <!-- EDUCATIONAL TE -->
+        <div data-lang="te">
+          <h2>మీ మెన్స్ట్రువల్ సైకిల్ గురించి తెలుసుకోండి</h2>
+          <p class="section-sub">నాలుగు ఫేజుల్లో మీ శరీరంలో ఏం జరుగుతుందో చూద్దాం</p>
+          <p>మెన్స్ట్రువల్ సైకిల్ అంటే ప్రతి నెలా మీ శరీరం ప్రెగ్నెన్సీకి ప్రిపేర్ అయ్యే ప్రాసెస్. సాధారణంగా 28 రోజులు, కానీ 21 నుండి 35 రోజుల మధ్య ఉంటే నార్మల్. మీ పీరియడ్ ట్రాక్ చేస్తే శరీరం అర్థమవుతుంది, ప్రాబ్లమ్స్ ముందే తెలుస్తాయి.</p>
+          <h3>పీరియడ్ క్రమం తప్పితే ఏం చేయాలి?</h3>
+          <p>సైకిల్ 7 రోజులకంటే ఎక్కువ తేడా వస్తుంటే, 3 నెలలు పీరియడ్ రాకపోతే, చాలా heavy bleeding లేదా తీవ్రమైన నొప్పి ఉంటే — అది <strong>PCOS, థైరాయిడ్ ప్రాబ్లమ్, ఎండోమెట్రియోసిస్</strong> వల్ల కావచ్చు. త్వరగా డాక్టర్‌ని చూస్తే ట్రీట్‌మెంట్ ఈజీ అవుతుంది.</p>
+        </div>
       </section>
 
       <!-- FAQ -->
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How accurate is this period tracker?</summary><p>This tracker is most accurate for women with regular cycles (21–35 days). It uses the standard LMP (last menstrual period) method. If your cycles are irregular (vary by more than 7 days), predictions may be less precise — please consult Dr. Prashanthi Reddy for personalised guidance.</p></details>
-          <details><summary>What is a normal menstrual cycle length?</summary><p>A normal cycle is 21–35 days. Cycles shorter than 21 days or longer than 35 days consistently may indicate PCOS, thyroid issues, high prolactin, or premature ovarian insufficiency. If your cycles are irregular, a hormonal blood panel (FSH, LH, AMH, TSH) and pelvic ultrasound is recommended.</p></details>
-          <details><summary>When is my most fertile time?</summary><p>Your fertile window spans 6 days — the 5 days before ovulation and the day of ovulation itself. For a 28-day cycle, ovulation occurs around Day 14, making Days 9–14 the most fertile. Sperm can survive 5 days in the reproductive tract, so intercourse in the days before ovulation is just as important as on ovulation day.</p></details>
-          <details><summary>Why is my period irregular?</summary><p>Common causes: PCOS (most common), thyroid disorders, high prolactin (hyperprolactinaemia), extreme weight changes, excessive exercise, stress, perimenopause, and premature ovarian insufficiency (POI). If cycles vary by more than 7 days or you skip periods, a hormonal panel and ultrasound at Mother Hospitals is recommended.</p></details>
-          <details><summary>What is the luteal phase and why does it matter?</summary><p>The luteal phase is the post-ovulation phase (Days 15–28). Progesterone rises to prepare the uterine lining for implantation. A luteal phase shorter than 10 days (luteal phase defect) can prevent embryo implantation and cause recurrent early miscarriages. Diagnosed with a Day 21 progesterone blood test.</p></details>
-          <details><summary>When should I see a doctor about my periods?</summary><p>See a gynaecologist if: periods are absent for 3+ months, cycles are consistently shorter than 21 or longer than 35 days, bleeding is very heavy, you have severe pelvic pain, or you have been trying to conceive for 6–12 months without success. Mother Hospitals: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How accurate is this period tracker?</summary><p>This tracker is most accurate for women with regular cycles (21–35 days). It uses the standard LMP method. If your cycles are irregular (vary by more than 7 days), predictions may be less precise — consult Dr. Prashanthi Reddy for personalised guidance.</p></details>
+            <details><summary>What is a normal menstrual cycle length?</summary><p>A normal cycle is 21–35 days. Cycles shorter than 21 or longer than 35 days may indicate PCOS, thyroid issues, or premature ovarian insufficiency. A hormonal blood panel and ultrasound is recommended.</p></details>
+            <details><summary>When is my most fertile time?</summary><p>Your fertile window spans 6 days — the 5 days before ovulation and the day of ovulation. For a 28-day cycle, this is Days 9–14. Sperm survive 5 days, so intercourse before ovulation matters as much as on the day itself.</p></details>
+            <details><summary>Why is my period irregular?</summary><p>Common causes: PCOS, thyroid disorders, high prolactin, weight changes, stress, perimenopause, and POI. If cycles vary by more than 7 days or you skip periods, a hormonal panel at Mother Hospitals is recommended.</p></details>
+            <details><summary>What is the luteal phase and why does it matter?</summary><p>The luteal phase (Days 15–28) is post-ovulation. Progesterone rises for implantation. A luteal phase shorter than 10 days can cause recurrent miscarriage. Diagnosed with a Day 21 progesterone test.</p></details>
+            <details><summary>When should I see a doctor about my periods?</summary><p>See a doctor if periods are absent 3+ months, cycles are consistently &lt;21 or &gt;35 days, bleeding is very heavy, pain is severe, or you've been trying to conceive for 6–12 months without success. Call: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>ఈ పీరియడ్ ట్రాకర్ ఎంత కరెక్ట్‌గా ఉంటుంది?</summary><p>మీ సైకిల్ రెగ్యులర్‌గా ఉంటే (21–35 రోజులు) ఈ టూల్ చాలా accurate. సైకిల్ irregular అయితే — అంటే ప్రతిసారి 7 రోజులు తేడా వస్తుంటే — Dr. ప్రశాంతి రెడ్డి గారిని కలవడం బెటర్.</p></details>
+            <details><summary>నార్మల్ సైకిల్ ఎన్ని రోజులు ఉంటుంది?</summary><p>21–35 రోజులు నార్మల్. అంతకంటే తక్కువ లేదా ఎక్కువ అయితే PCOS, థైరాయిడ్, లేదా హార్మోన్ ప్రాబ్లమ్ ఉండవచ్చు. హార్మోన్ బ్లడ్ టెస్ట్ చేయించుకోండి.</p></details>
+            <details><summary>ప్రెగ్నెన్సీకి best time ఎప్పుడు?</summary><p>ఓవ్యులేషన్‌కు 5 రోజుల ముందు నుండి ఓవ్యులేషన్ రోజు వరకు — ఇవే మీ fertile days. 28-రోజుల సైకిల్‌కు Day 9–14 best. Sperm 5 రోజులు survive చేయగలదు, కాబట్టి ముందే ట్రై చేయడం కూడా ముఖ్యం.</p></details>
+            <details><summary>పీరియడ్ irregular అవడానికి కారణాలేంటి?</summary><p>PCOS (అన్నిటికంటే కామన్), థైరాయిడ్ ప్రాబ్లమ్, weight changes, stress, లేదా POI వల్ల కావచ్చు. సైకిల్ skip అవుతుంటే Mother Hospitals‌లో హార్మోన్ టెస్ట్ చేయించుకోండి.</p></details>
+            <details><summary>లూటియల్ ఫేజ్ అంటే ఏమిటి? అది ఎందుకు ముఖ్యం?</summary><p>ఓవ్యులేషన్ తర్వాత రోజులు (Day 15–28) లూటియల్ ఫేజ్. Progesterone హార్మోన్ పెరిగి గర్భధారణకు uterus prepare అవుతుంది. ఈ ఫేజ్ 10 రోజులకంటే తక్కువగా ఉంటే miscarriage రిస్క్ పెరుగుతుంది.</p></details>
+            <details><summary>డాక్టర్‌ని ఎప్పుడు చూడాలి?</summary><p>3 నెలలు పీరియడ్ రాకపోతే, చాలా heavy bleeding ఉంటే, severe pain ఉంటే, లేదా 6–12 నెలలు try చేసినా ప్రెగ్నెన్సీ రాకపోతే వెంటనే కల్వండి: <a href="tel:+919705993366" style="color:var(--teal);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
       </section>
 
@@ -351,13 +374,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Irregular Periods? Trouble Conceiving?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Irregular Periods? Trouble Conceiving?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -384,6 +407,86 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
+// ── Translations ──────────────────────────────────────────────────────
+window.pageT = {
+  en: {
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Period Tracker —<br><em>Predict Your Next Period & Fertile Window</em>',
+    hero_sub:'Enter your last period date and cycle length to instantly predict your next period, ovulation date, fertile window, and current cycle phase. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'🗓 3-Month Forecast',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🩸 Period Tracker',
+    calc_intro:'Enter your details below to get your next period date, ovulation window, and current cycle phase.',
+    label_lmp:'First day of last period',
+    label_cycle:'Average cycle length',
+    label_period:'Period length',
+    btn_track:'Track My Cycle →',
+    btn_reset:'↩ Reset',
+    fertile_alert:'🌟 You are currently in your <strong>fertile window</strong> — best time to try to conceive!',
+    dc_nextperiod:'Next Period', dc_ovulation:'Ovulation Date', dc_fertile:'Fertile Window', dc_progress:'Cycle Progress',
+    upcoming_h3:'📆 Next 3 Periods',
+    th_period:'Period', th_date:'Expected Date', th_day:'Day of Week',
+    phases_h3:'🔄 Your 4 Cycle Phases',
+    phase_men:'<strong>Menstrual (Days 1–5):</strong> Uterine lining sheds. Rest and hydrate.',
+    phase_fol:'<strong>Follicular (Days 1–13):</strong> Follicles mature. Oestrogen rises. Energy increases.',
+    phase_ov:'<strong>Ovulation (~Day 14):</strong> Egg released. Peak fertility. Best time to conceive.',
+    phase_lut:'<strong>Luteal (Days 15–28):</strong> Progesterone rises. PMS symptoms may appear.',
+    cta_h2:'Irregular Periods? Trouble Conceiving?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+    // JS dynamic
+    phase_menstrual_label:'Menstrual Phase', phase_menstrual_desc:'Uterine lining shedding. Rest, hydrate, use heat for cramps.',
+    phase_follicular_label:'Follicular Phase', phase_follicular_desc:'Follicles maturing. Oestrogen rising. Energy levels increasing.',
+    phase_ovulation_label:'Ovulation Phase', phase_ovulation_desc:'Peak fertility! Egg released. Best time to try to conceive.',
+    phase_luteal_label:'Luteal Phase', phase_luteal_desc:'Post-ovulation. Progesterone rises. PMS symptoms may appear.',
+    alert_enter_lmp:'Please enter the first day of your last period.',
+    alert_future:'Last period date cannot be in the future.',
+    today:'Today!', in_days:'in {n} day', in_days_pl:'in {n} days',
+    passed:'Passed this cycle', to_prefix:'to ', complete:'% complete',
+    period_label:'Period', cycle_day:'Day'
+  },
+  te: {
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'పీరియడ్ ట్రాకర్ —<br><em>నెక్స్ట్ పీరియడ్ & ఫెర్టైల్ డేస్ తెలుసుకోండి</em>',
+    hero_sub:'మీ చివరి పీరియడ్ డేట్ వేస్తే, నెక్స్ట్ పీరియడ్, ఓవ్యులేషన్ డేట్, ఫెర్టైల్ విండో అన్నీ వెంటనే తెలుస్తాయి. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'🗓 3 నెలల ప్లాన్',
+    btn_call:'📞 అపాయింట్‌మెంట్ బుక్ చేయండి: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🩸 పీరియడ్ ట్రాకర్',
+    calc_intro:'మీ వివరాలు ఇవ్వండి — నెక్స్ట్ పీరియడ్ డేట్, ఓవ్యులేషన్ టైమ్ అన్నీ చూపిస్తాం.',
+    label_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు',
+    label_cycle:'సైకిల్ ఎన్ని రోజులు?',
+    label_period:'పీరియడ్ ఎన్ని రోజులు వస్తుంది?',
+    btn_track:'నా సైకిల్ చూడండి →',
+    btn_reset:'↩ మళ్ళీ చేయండి',
+    fertile_alert:'🌟 మీరు ఇప్పుడు <strong>ఫెర్టైల్ టైమ్</strong>లో ఉన్నారు — ప్రెగ్నెన్సీకి ట్రై చేయడానికి best time!',
+    dc_nextperiod:'నెక్స్ట్ పీరియడ్', dc_ovulation:'ఓవ్యులేషన్ డేట్', dc_fertile:'ఫెర్టైల్ డేస్', dc_progress:'సైకిల్ ప్రోగ్రెస్',
+    upcoming_h3:'📆 రాబోయే 3 పీరియడ్స్',
+    th_period:'పీరియడ్', th_date:'అంచనా తేదీ', th_day:'వారం రోజు',
+    phases_h3:'🔄 మీ 4 సైకిల్ ఫేజ్‌లు',
+    phase_men:'<strong>మెన్స్ట్రువల్ (Day 1–5):</strong> యూటరస్ లైనింగ్ వస్తుంది. రెస్ట్ తీసుకోండి, నీళ్ళు ఎక్కువ తాగండి.',
+    phase_fol:'<strong>ఫాలిక్యులర్ (Day 1–13):</strong> ఎగ్స్ పెరుగుతాయి. ఎనర్జీ పెరుగుతుంది.',
+    phase_ov:'<strong>ఓవ్యులేషన్ (~Day 14):</strong> ఎగ్ రిలీజ్ అవుతుంది. ప్రెగ్నెన్సీకి best time!',
+    phase_lut:'<strong>లూటియల్ (Day 15–28):</strong> Progesterone పెరుగుతుంది. PMS symptoms రావచ్చు.',
+    cta_h2:'పీరియడ్ ప్రాబ్లమ్స్ ఉన్నాయా? ప్రెగ్నెన్సీ కావాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్ అందుబాటులో ఉంది',
+    // JS dynamic
+    phase_menstrual_label:'మెన్స్ట్రువల్ ఫేజ్', phase_menstrual_desc:'పీరియడ్ వస్తోంది. రెస్ట్ తీసుకోండి, నీళ్ళు ఎక్కువ తాగండి.',
+    phase_follicular_label:'ఫాలిక్యులర్ ఫేజ్', phase_follicular_desc:'ఎగ్స్ డెవలప్ అవుతున్నాయి. ఎనర్జీ పెరుగుతుంది.',
+    phase_ovulation_label:'ఓవ్యులేషన్ ఫేజ్', phase_ovulation_desc:'ఎగ్ రిలీజ్! ప్రెగ్నెన్సీకి try చేయడానికి best time.',
+    phase_luteal_label:'లూటియల్ ఫేజ్', phase_luteal_desc:'ఓవ్యులేషన్ తర్వాత. PMS symptoms రావచ్చు.',
+    alert_enter_lmp:'మీ చివరి పీరియడ్ మొదటి రోజు enter చేయండి.',
+    alert_future:'పీరియడ్ డేట్ ఫ్యూచర్‌లో ఉండకూడదు.',
+    today:'ఈ రోజే!', in_days:'{n} రోజుల్లో', in_days_pl:'{n} రోజుల్లో',
+    passed:'ఈ సైకిల్‌లో గడిచిపోయింది', to_prefix:'వరకు ', complete:'% పూర్తి',
+    period_label:'పీరియడ్', cycle_day:'డే'
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 // Set max date to today
 document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
@@ -400,69 +503,68 @@ function getPhase(day, cycleLen, periodLen){
   return 'luteal';
 }
 
-const PHASE_INFO = {
-  menstrual:  {label:'Menstrual Phase',   desc:'Uterine lining shedding. Rest, hydrate, use heat for cramps.',    cls:'phase-menstrual'},
-  follicular: {label:'Follicular Phase',  desc:'Follicles maturing. Oestrogen rising. Energy levels increasing.',  cls:'phase-follicular'},
-  ovulation:  {label:'Ovulation Phase',   desc:'Peak fertility! Egg released. Best time to try to conceive.',      cls:'phase-ovulation'},
-  luteal:     {label:'Luteal Phase',      desc:'Post-ovulation. Progesterone rises. PMS symptoms may appear.',     cls:'phase-luteal'},
-};
+function getPhaseInfo(phase){
+  return {
+    label: t('phase_'+phase+'_label'),
+    desc:  t('phase_'+phase+'_desc'),
+    cls:   'phase-'+phase
+  };
+}
+
+// Store last result params for re-apply on lang switch
+var _lastTrackParams = null;
 
 function trackPeriod(){
   const lmpVal = document.getElementById('lmp').value;
-  if(!lmpVal){alert('Please enter the first day of your last period.');return;}
+  if(!lmpVal){alert(t('alert_enter_lmp'));return;}
   const lmp = new Date(lmpVal);
   const today = new Date(); today.setHours(0,0,0,0);
-  if(lmp > today){alert('Last period date cannot be in the future.');return;}
+  if(lmp > today){alert(t('alert_future'));return;}
   const cycleLen = parseInt(document.getElementById('cycle').value);
   const periodLen = parseInt(document.getElementById('period').value);
-  const ovDay = cycleLen - 14;
+  _lastTrackParams = {lmpVal, cycleLen, periodLen};
+  _renderTrack(lmp, today, cycleLen, periodLen);
+}
 
+function _renderTrack(lmp, today, cycleLen, periodLen){
   const daysSinceLmp = daysBetween(lmp, today);
   const currentCycleDay = (daysSinceLmp % cycleLen) + 1;
   const phase = getPhase(currentCycleDay, cycleLen, periodLen);
-  const info = PHASE_INFO[phase];
+  const info = getPhaseInfo(phase);
 
-  // Next period
   const cyclesElapsed = Math.ceil((daysSinceLmp + 1) / cycleLen);
   const nextPeriod = addDays(lmp, cycleLen * cyclesElapsed);
   const daysToNext = daysBetween(today, nextPeriod);
-
-  // Ovulation
   const ovDate = addDays(nextPeriod, -14);
   const daysToOv = daysBetween(today, ovDate);
-
-  // Fertile window
   const fertStart = addDays(ovDate, -5);
   const fertEnd = addDays(ovDate, 1);
   const isFertile = today >= fertStart && today <= fertEnd;
 
-  // Update phase banner
   const banner = document.getElementById('phaseBanner');
   banner.className = 'phase-banner ' + info.cls;
   document.getElementById('phaseLabel').textContent = info.label;
   document.getElementById('phaseDesc').textContent = info.desc;
-  document.getElementById('cycleDay').textContent = 'Day ' + currentCycleDay;
+  document.getElementById('cycleDay').textContent = t('cycle_day') + ' ' + currentCycleDay;
 
-  // Fertile alert
   document.getElementById('fertileAlert').style.display = isFertile ? 'block' : 'none';
+  if(isFertile) document.getElementById('fertileAlert').innerHTML = t('fertile_alert');
 
-  // Date cards
   document.getElementById('nextPeriod').textContent = fmt(nextPeriod);
-  document.getElementById('nextPeriodSub').textContent = daysToNext === 0 ? 'Today!' : `in ${daysToNext} day${daysToNext!==1?'s':''}`;
+  document.getElementById('nextPeriodSub').textContent = daysToNext===0 ? t('today') : t('in_days_pl').replace('{n}',daysToNext);
   document.getElementById('ovDate').textContent = fmt(ovDate);
-  document.getElementById('ovSub').textContent = daysToOv > 0 ? `in ${daysToOv} days` : daysToOv === 0 ? 'Today!' : 'Passed this cycle';
+  document.getElementById('ovSub').textContent = daysToOv>0 ? t('in_days_pl').replace('{n}',daysToOv) : daysToOv===0 ? t('today') : t('passed');
   document.getElementById('fertStart').textContent = fmt(fertStart);
-  document.getElementById('fertEnd').textContent = 'to ' + fmt(fertEnd);
+  document.getElementById('fertEnd').textContent = t('to_prefix') + fmt(fertEnd);
   document.getElementById('cycleProgress').textContent = currentCycleDay + ' / ' + cycleLen;
-  document.getElementById('cycleProgressSub').textContent = `${Math.round((currentCycleDay/cycleLen)*100)}% complete`;
+  document.getElementById('cycleProgressSub').textContent = Math.round((currentCycleDay/cycleLen)*100) + t('complete');
 
-  // Next 3 periods table
   const tbody = document.getElementById('upcomingBody');
   tbody.innerHTML = '';
   for(let i=0;i<3;i++){
     const pd = addDays(nextPeriod, cycleLen * i);
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>Period ${i+1}</td><td><strong>${fmt(pd)}</strong></td><td>${fmtDay(pd)}</td>`;
+    tr.innerHTML = `<td>${t('period_label')} ${i+1}</td><td><strong>${fmt(pd)}</strong></td><td>${fmtDay(pd)}</td>`;
     tbody.appendChild(tr);
   }
 
@@ -470,11 +572,23 @@ function trackPeriod(){
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+// Re-render results when language is switched
+window._reapplyResults = function(){
+  if(_lastTrackParams && document.getElementById('result').style.display==='block'){
+    const lmp = new Date(_lastTrackParams.lmpVal);
+    const today = new Date(); today.setHours(0,0,0,0);
+    _renderTrack(lmp, today, _lastTrackParams.cycleLen, _lastTrackParams.periodLen);
+    // re-apply i18n to static elements
+    I18n.apply();
+  }
+};
+
 function resetTracker(){
   document.getElementById('lmp').value='';
   document.getElementById('cycle').value='28';
   document.getElementById('period').value='5';
   document.getElementById('result').style.display='none';
+  _lastTrackParams=null;
 }
 </script>
 </body>
