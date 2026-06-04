@@ -178,18 +178,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>What Does My <em>AMH Level Mean?</em></h1>
-    <p class="hero-sub">Enter your AMH value and age to instantly understand your ovarian reserve, whether your level is normal, low, or high, and what it means for your fertility. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">What Does My <em>AMH Level Mean?</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your AMH value and age to instantly understand your ovarian reserve, whether your level is normal, low, or high, and what it means for your fertility. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">📊 Age-Adjusted</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">📊 Age-Adjusted</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -200,22 +200,22 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
       <section>
         <div class="calc-box">
-          <h2>🧪 AMH Level Interpreter</h2>
-          <p class="calc-intro">Enter your AMH value, select the unit reported by your lab, and choose your age group for an age-adjusted interpretation.</p>
+          <h2 data-i18n="calc_title">🧪 AMH Level Interpreter</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter your AMH value, select the unit reported by your lab, and choose your age group for an age-adjusted interpretation.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="amhVal">Your AMH Value</label>
+              <label for="amhVal" data-i18n="label_amh">Your AMH Value</label>
               <input type="number" id="amhVal" placeholder="e.g. 2.5" step="0.01" min="0">
             </div>
             <div class="form-group">
-              <label for="amhUnit">Unit</label>
+              <label for="amhUnit" data-i18n="label_unit">Unit</label>
               <select id="amhUnit">
                 <option value="ngml">ng/mL</option>
                 <option value="pmol">pmol/L</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="amhAge">Your Age</label>
+              <label for="amhAge" data-i18n="label_age">Your Age</label>
               <select id="amhAge">
                 <option value="25">18–25 years</option>
                 <option value="28">26–30 years</option>
@@ -226,7 +226,7 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="interpretAMH()">Interpret My AMH →</button>
+          <button class="btn-calc" onclick="interpretAMH()" data-i18n="btn_calc">Interpret My AMH →</button>
 
           <div class="result-box" id="result">
             <div class="amh-result-card" id="amhCard">
@@ -235,10 +235,10 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               <div class="result-desc" id="amhDesc">—</div>
             </div>
 
-            <h3>What This Means For You</h3>
+            <h3 data-i18n="result_h3_means">What This Means For You</h3>
             <ul class="flag-list" id="flagList"></ul>
 
-            <h3>📊 AMH Reference Ranges by Age</h3>
+            <h3 data-i18n="result_h3_ref">📊 AMH Reference Ranges by Age</h3>
             <table class="ref-table">
               <thead><tr><th>Age Group</th><th>Low</th><th>Normal Range</th><th>Optimal</th></tr></thead>
               <tbody>
@@ -251,34 +251,61 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
               </tbody>
             </table>
 
-            <h3>🔄 Unit Conversion Reference</h3>
+            <h3 data-i18n="result_h3_conv">🔄 Unit Conversion Reference</h3>
             <p style="font-size:0.85rem">To convert: <strong>pmol/L ÷ 7.14 = ng/mL</strong> &nbsp;|&nbsp; <strong>ng/mL × 7.14 = pmol/L</strong><br>
             Example: 14 pmol/L = 1.96 ng/mL</p>
 
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Understanding AMH (Anti-Müllerian Hormone)</h2>
-        <p class="section-sub">What AMH tells you about your egg supply and fertility timeline</p>
-        <p>AMH (Anti-Müllerian Hormone) is produced by the small follicles in your ovaries. It provides a reliable estimate of your remaining egg supply (ovarian reserve). Unlike other hormones, AMH can be tested on any day of the menstrual cycle and remains relatively stable month to month.</p>
-        <h3>Why AMH Matters for IVF</h3>
-        <p>AMH is the most important predictor of how many eggs will be retrieved during IVF stimulation. Women with higher AMH levels tend to respond well and produce more eggs. However, egg quality — which determines IVF success — is more strongly influenced by age than by AMH level.</p>
-        <h3>Can Low AMH Be Treated?</h3>
-        <p>There is no proven medical treatment to significantly increase AMH or create new eggs. However, DHEA supplementation (under medical guidance), optimising thyroid function, maintaining healthy weight, avoiding smoking, and antioxidant nutrients (CoQ10, Vitamin D) may help preserve existing reserve. If AMH is very low, egg freezing or embryo banking sooner rather than later is recommended.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>Understanding AMH (Anti-Müllerian Hormone)</h2>
+          <p class="section-sub">What AMH tells you about your egg supply and fertility timeline</p>
+          <p>AMH (Anti-Müllerian Hormone) is produced by the small follicles in your ovaries. It provides a reliable estimate of your remaining egg supply (ovarian reserve). Unlike other hormones, AMH can be tested on any day of the menstrual cycle and remains relatively stable month to month.</p>
+          <h3>Why AMH Matters for IVF</h3>
+          <p>AMH is the most important predictor of how many eggs will be retrieved during IVF stimulation. Women with higher AMH levels tend to respond well and produce more eggs. However, egg quality — which determines IVF success — is more strongly influenced by age than by AMH level.</p>
+          <h3>Can Low AMH Be Treated?</h3>
+          <p>There is no proven medical treatment to significantly increase AMH or create new eggs. However, DHEA supplementation (under medical guidance), optimising thyroid function, maintaining healthy weight, avoiding smoking, and antioxidant nutrients (CoQ10, Vitamin D) may help preserve existing reserve. If AMH is very low, egg freezing or embryo banking sooner rather than later is recommended.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>AMH (Anti-Müllerian Hormone) అంటే ఏమిటి?</h2>
+          <p class="section-sub">AMH మీ egg supply మరియు fertility timeline గురించి ఏమి చెప్తుంది</p>
+          <p>AMH అనేది మీ ovaries లో ఉన్న చిన్న follicles produce చేసే hormone. ఇది మీకు మిగిలిన eggs ఎన్ని ఉన్నాయో (ovarian reserve) అంచనా వేయడానికి help చేస్తుంది. ఇతర hormones లాగా కాకుండా, AMH test cycle లో ఏ రోజైనా చేయవచ్చు.</p>
+          <h3>IVF కి AMH ఎందుకు Important?</h3>
+          <p>IVF stimulation లో ఎన్ని eggs retrieve అవుతాయో అంచనా వేయడానికి AMH అత్యంత important predictor. High AMH ఉన్న women కి generally good response వస్తుంది. కానీ IVF success ని determine చేసేది egg quality — అది AMH కంటే వయస్సు మీద ఎక్కువగా depend అవుతుంది.</p>
+          <h3>Low AMH కి Treatment ఉందా?</h3>
+          <p>AMH significant గా పెంచే proven treatment ఏదీ లేదు. అయితే DHEA supplementation (doctor guidance తో), thyroid function optimize చేయడం, healthy weight maintain చేయడం, smoking avoid చేయడం, CoQ10 మరియు Vitamin D తీసుకోవడం వల్ల existing reserve preserve అవుతుంది. AMH చాలా తక్కువగా ఉంటే egg freezing లేదా embryo banking వీలైనంత త్వరగా చేయించుకోవడం recommend చేస్తున్నాం.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>What is a normal AMH level?</summary><p>Normal AMH ranges by age: Age 25–30: 2.5–6.3 ng/mL; Age 30–35: 1.5–4.0 ng/mL; Age 35–40: 1.0–3.5 ng/mL; Age 40–45: 0.5–2.5 ng/mL. AMH below 0.5 ng/mL at any age indicates very low ovarian reserve. These are reference ranges — individual variation exists.</p></details>
-          <details><summary>What does low AMH mean for fertility?</summary><p>Low AMH indicates fewer eggs remaining in the ovaries (diminished ovarian reserve). It does not necessarily mean you cannot conceive naturally — egg quality matters more than quantity. However, low AMH means IVF may retrieve fewer eggs and may suggest acting sooner rather than later. Egg freezing may be advised.</p></details>
-          <details><summary>What is the difference between ng/mL and pmol/L?</summary><p>ng/mL and pmol/L are two different units for reporting AMH. To convert: pmol/L ÷ 7.14 = ng/mL. For example, 14.28 pmol/L = 2.0 ng/mL. Indian labs typically report in ng/mL while some European labs use pmol/L. Our interpreter accepts both units and converts automatically.</p></details>
-          <details><summary>Can AMH levels change over time?</summary><p>AMH levels naturally decline with age and are difficult to increase significantly. However, some research suggests that nutritional status, DHEA supplementation (under medical supervision), and treating underlying conditions like PCOS or thyroid disease may stabilise levels. Lifestyle factors such as reducing smoking and maintaining healthy BMI can help preserve ovarian reserve.</p></details>
-          <details><summary>What if my AMH is very high?</summary><p>Very high AMH (above 5 ng/mL in most age groups) is often associated with PCOS (polycystic ovary syndrome). Women with PCOS have many small follicles that secrete AMH continuously. High AMH with PCOS may indicate risk of ovarian hyperstimulation syndrome (OHSS) during IVF stimulation, requiring a modified protocol.</p></details>
-          <details><summary>Should I get an AMH test?</summary><p>An AMH test is recommended if: you are planning IVF or egg freezing, you have been trying to conceive for 6–12 months without success, you have a family history of early menopause, you have had ovarian surgery or chemotherapy, or you have irregular periods. The AMH blood test can be done on any day of your cycle. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>What is a normal AMH level?</summary><p>Normal AMH ranges by age: Age 25–30: 2.5–6.3 ng/mL; Age 30–35: 1.5–4.0 ng/mL; Age 35–40: 1.0–3.5 ng/mL; Age 40–45: 0.5–2.5 ng/mL. AMH below 0.5 ng/mL at any age indicates very low ovarian reserve. These are reference ranges — individual variation exists.</p></details>
+            <details><summary>What does low AMH mean for fertility?</summary><p>Low AMH indicates fewer eggs remaining in the ovaries (diminished ovarian reserve). It does not necessarily mean you cannot conceive naturally — egg quality matters more than quantity. However, low AMH means IVF may retrieve fewer eggs and may suggest acting sooner rather than later. Egg freezing may be advised.</p></details>
+            <details><summary>What is the difference between ng/mL and pmol/L?</summary><p>ng/mL and pmol/L are two different units for reporting AMH. To convert: pmol/L ÷ 7.14 = ng/mL. For example, 14.28 pmol/L = 2.0 ng/mL. Indian labs typically report in ng/mL while some European labs use pmol/L. Our interpreter accepts both units and converts automatically.</p></details>
+            <details><summary>Can AMH levels change over time?</summary><p>AMH levels naturally decline with age and are difficult to increase significantly. However, some research suggests that nutritional status, DHEA supplementation (under medical supervision), and treating underlying conditions like PCOS or thyroid disease may stabilise levels. Lifestyle factors such as reducing smoking and maintaining healthy BMI can help preserve ovarian reserve.</p></details>
+            <details><summary>What if my AMH is very high?</summary><p>Very high AMH (above 5 ng/mL in most age groups) is often associated with PCOS (polycystic ovary syndrome). Women with PCOS have many small follicles that secrete AMH continuously. High AMH with PCOS may indicate risk of ovarian hyperstimulation syndrome (OHSS) during IVF stimulation, requiring a modified protocol.</p></details>
+            <details><summary>Should I get an AMH test?</summary><p>An AMH test is recommended if: you are planning IVF or egg freezing, you have been trying to conceive for 6–12 months without success, you have a family history of early menopause, you have had ovarian surgery or chemotherapy, or you have irregular periods. The AMH blood test can be done on any day of your cycle. Call Mother Hospitals: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>Normal AMH level ఎంత?</summary><p>వయస్సు ప్రకారం normal AMH: 25–30 సంవత్సరాలు: 2.5–6.3 ng/mL; 30–35: 1.5–4.0 ng/mL; 35–40: 1.0–3.5 ng/mL; 40–45: 0.5–2.5 ng/mL. ఏ వయస్సులోనైనా 0.5 ng/mL కంటే తక్కువ అంటే ovarian reserve చాలా తక్కువగా ఉంది. ఇవి reference ranges మాత్రమే — individual variation ఉంటుంది.</p></details>
+            <details><summary>Low AMH fertility కి ఏమి అర్థం?</summary><p>Low AMH అంటే ovaries లో eggs తక్కువగా మిగిలాయి. దీని వల్ల natural conception impossible కాదు — egg quality అనేది quantity కంటే important. అయితే low AMH ఉంటే IVF లో తక్కువ eggs retrieve అవుతాయి — త్వరగా action తీసుకోవడం better.</p></details>
+            <details><summary>ng/mL మరియు pmol/L తేడా ఏమిటి?</summary><p>ఇవి AMH కొలవడానికి రెండు different units. Convert చేయడానికి: pmol/L ÷ 7.14 = ng/mL. ఉదా: 14.28 pmol/L = 2.0 ng/mL. Indian labs సాధారణంగా ng/mL లో report చేస్తాయి. మా interpreter రెండు units accept చేసి automatically convert చేస్తుంది.</p></details>
+            <details><summary>AMH levels మారుతాయా?</summary><p>AMH వయస్సుతో naturally తగ్గుతుంది — significant గా పెంచడం కష్టం. అయితే DHEA supplementation, thyroid treatment, healthy lifestyle (smoking avoid, healthy BMI) వల్ల existing reserve preserve అవుతుంది.</p></details>
+            <details><summary>AMH చాలా high అయితే ఏమి జరుగుతుంది?</summary><p>చాలా high AMH (5 ng/mL కంటే ఎక్కువ) సాధారణంగా PCOS తో associated గా ఉంటుంది. PCOS ఉన్న women కి చాలా small follicles ఉంటాయి. IVF లో OHSS (ovarian hyperstimulation) risk ఉంటుంది — modified protocol అవసరం.</p></details>
+            <details><summary>AMH test చేయించుకోవాలా?</summary><p>IVF లేదా egg freezing plan చేస్తున్నారా, 6–12 నెలలు try చేసినా pregnant కాలేదా, family లో early menopause history ఉందా, ovarian surgery లేదా chemotherapy అయిందా, irregular periods ఉన్నాయా — అయితే AMH test recommend. Cycle లో ఏ రోజైనా test చేయవచ్చు. Call: <a href="tel:+919705993366" style="color:var(--accent);font-weight:700">97059 93366</a>.</p></details>
+          </div>
+        </div>
 
     </div>
 
@@ -319,13 +346,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Need Personalised Fertility Guidance?</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Need Personalised Fertility Guidance?</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -352,84 +379,173 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
-function interpretAMH(){
-  const rawVal = parseFloat(document.getElementById('amhVal').value);
-  const unit = document.getElementById('amhUnit').value;
-  const ageGroup = parseInt(document.getElementById('amhAge').value);
-  if(isNaN(rawVal)||rawVal<0){alert('Please enter a valid AMH value.');return;}
-
-  // Convert pmol/L to ng/mL
-  const amh = unit==='pmol' ? rawVal/7.14 : rawVal;
-  const displayVal = unit==='pmol' ? `${rawVal} pmol/L (${amh.toFixed(2)} ng/mL)` : `${rawVal} ng/mL`;
-
-  let cls,label,desc;
-  const flags=[];
-
-  if(amh<0.5){
-    cls='amh-very-low';label='Very Low Ovarian Reserve';
-    desc='Your AMH indicates very few eggs remaining. Immediate fertility consultation is strongly recommended. IVF with your own eggs is still possible but time is critical.';
-    flags.push({t:'danger',m:'🔴 Very low AMH — seek urgent fertility consultation'});
-    flags.push({t:'danger',m:'🔴 IVF egg retrieval may yield very few eggs'});
-    flags.push({t:'warn',m:'⚠️ Discuss egg freezing options if you have not yet started a family'});
-    flags.push({t:'warn',m:'⚠️ Donor eggs may be discussed as an option for better IVF outcomes'});
-  } else if(amh<1.0){
-    cls='amh-low';label='Low Ovarian Reserve';
-    desc='Your AMH is below the expected range for your age. Natural conception may still occur, but IVF outcomes may be affected. A fertility consultation is recommended.';
-    flags.push({t:'warn',m:'⚠️ Low AMH — consult a fertility specialist soon'});
-    flags.push({t:'warn',m:'⚠️ Consider fertility preservation (egg freezing) if planning family later'});
-    flags.push({t:'good',m:'✅ Natural conception is still possible — egg quality matters more than quantity'});
-  } else if(amh<2.5){
-    cls='amh-normal-low';label='Low–Normal Ovarian Reserve';
-    desc='Your AMH is within the lower part of the normal range. This is acceptable for your age and indicates moderate ovarian reserve.';
-    flags.push({t:'good',m:'✅ Within normal range — no immediate concern'});
-    flags.push({t:'good',m:'✅ Good response to IVF stimulation expected'});
-    flags.push({t:'warn',m:'⚠️ Monitor annually — AMH declines with age'});
-  } else if(amh<=3.5){
-    cls='amh-normal';label='Normal Ovarian Reserve';
-    desc='Your AMH is in the normal range for your age. This indicates a healthy egg supply and good fertility potential.';
-    flags.push({t:'good',m:'✅ Normal AMH — healthy ovarian reserve'});
-    flags.push({t:'good',m:'✅ Good IVF response expected if needed'});
-    flags.push({t:'good',m:'✅ Continue regular health monitoring'});
-  } else if(amh<=5.0&&ageGroup<35){
-    cls='amh-optimal';label='Optimal Ovarian Reserve';
-    desc='Excellent! Your AMH indicates an optimal egg supply. This suggests excellent fertility potential and good IVF response if needed.';
-    flags.push({t:'good',m:'✅ Excellent ovarian reserve for your age'});
-    flags.push({t:'good',m:'✅ Optimal IVF response expected'});
-    flags.push({t:'good',m:'✅ Fertility preservation (egg freezing) would yield excellent results if desired'});
-  } else if(amh>5.0){
-    cls='amh-high';label='High AMH — Possible PCOS';
-    desc='Very high AMH is often associated with PCOS (polycystic ovary syndrome). While your egg supply is large, PCOS can affect ovulation. Consult a specialist.';
-    flags.push({t:'warn',m:'⚠️ High AMH — PCOS screening recommended'});
-    flags.push({t:'warn',m:'⚠️ Risk of OHSS (ovarian hyperstimulation) during IVF — modified protocol needed'});
-    flags.push({t:'good',m:'✅ Large egg supply — generally good IVF outcomes with careful management'});
-  } else {
-    cls='amh-normal';label='Normal Ovarian Reserve';
-    desc='Your AMH is within the normal range for your age.';
-    flags.push({t:'good',m:'✅ Normal AMH — healthy ovarian reserve'});
+window.pageT = {
+  en: {
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'What Does My <em>AMH Level Mean?</em>',
+    hero_sub:'Enter your AMH value and age to instantly understand your ovarian reserve, whether your level is normal, low, or high, and what it means for your fertility. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'📊 Age-Adjusted',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🧪 AMH Level Interpreter',
+    calc_intro:'Enter your AMH value, select the unit reported by your lab, and choose your age group for an age-adjusted interpretation.',
+    label_amh:'Your AMH Value', label_unit:'Unit', label_age:'Your Age',
+    btn_calc:'Interpret My AMH →', btn_reset:'↩ Reset',
+    result_h3_means:'What This Means For You',
+    result_h3_ref:'📊 AMH Reference Ranges by Age',
+    result_h3_conv:'🔄 Unit Conversion Reference',
+    alert_val:'Please enter a valid AMH value.',
+    cta_h2:'Need Personalised Fertility Guidance?',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+    r_very_low_label:'Very Low Ovarian Reserve',
+    r_very_low_desc:'Your AMH indicates very few eggs remaining. Immediate fertility consultation is strongly recommended. IVF with your own eggs is still possible but time is critical.',
+    r_low_label:'Low Ovarian Reserve',
+    r_low_desc:'Your AMH is below the expected range for your age. Natural conception may still occur, but IVF outcomes may be affected. A fertility consultation is recommended.',
+    r_norm_low_label:'Low–Normal Ovarian Reserve',
+    r_norm_low_desc:'Your AMH is within the lower part of the normal range. This is acceptable for your age and indicates moderate ovarian reserve.',
+    r_normal_label:'Normal Ovarian Reserve',
+    r_normal_desc:'Your AMH is in the normal range for your age. This indicates a healthy egg supply and good fertility potential.',
+    r_optimal_label:'Optimal Ovarian Reserve',
+    r_optimal_desc:'Excellent! Your AMH indicates an optimal egg supply. This suggests excellent fertility potential and good IVF response if needed.',
+    r_high_label:'High AMH — Possible PCOS',
+    r_high_desc:'Very high AMH is often associated with PCOS (polycystic ovary syndrome). While your egg supply is large, PCOS can affect ovulation. Consult a specialist.',
+    f_very_low_1:'🔴 Very low AMH — seek urgent fertility consultation',
+    f_very_low_2:'🔴 IVF egg retrieval may yield very few eggs',
+    f_very_low_3:'⚠️ Discuss egg freezing options if you have not yet started a family',
+    f_very_low_4:'⚠️ Donor eggs may be discussed as an option for better IVF outcomes',
+    f_low_1:'⚠️ Low AMH — consult a fertility specialist soon',
+    f_low_2:'⚠️ Consider fertility preservation (egg freezing) if planning family later',
+    f_low_3:'✅ Natural conception is still possible — egg quality matters more than quantity',
+    f_norm_low_1:'✅ Within normal range — no immediate concern',
+    f_norm_low_2:'✅ Good response to IVF stimulation expected',
+    f_norm_low_3:'⚠️ Monitor annually — AMH declines with age',
+    f_normal_1:'✅ Normal AMH — healthy ovarian reserve',
+    f_normal_2:'✅ Good IVF response expected if needed',
+    f_normal_3:'✅ Continue regular health monitoring',
+    f_optimal_1:'✅ Excellent ovarian reserve for your age',
+    f_optimal_2:'✅ Optimal IVF response expected',
+    f_optimal_3:'✅ Fertility preservation (egg freezing) would yield excellent results if desired',
+    f_high_1:'⚠️ High AMH — PCOS screening recommended',
+    f_high_2:'⚠️ Risk of OHSS (ovarian hyperstimulation) during IVF — modified protocol needed',
+    f_high_3:'✅ Large egg supply — generally good IVF outcomes with careful management',
+  },
+  te: {
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'నా <em>AMH Level అంటే ఏమిటి?</em>',
+    hero_sub:'మీ AMH value మరియు వయస్సు enter చేయండి — ovarian reserve normal గా ఉందా, తక్కువగా ఉందా అని వెంటనే తెలుసుకోండి. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'📊 వయస్సు ప్రకారం',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🧪 AMH Level Interpreter',
+    calc_intro:'మీ AMH value, unit, మరియు age group enter చేయండి — వయస్సు ప్రకారం interpretation చూపిస్తాం.',
+    label_amh:'మీ AMH Value', label_unit:'Unit', label_age:'మీ వయస్సు',
+    btn_calc:'నా AMH Interpret చేయండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    result_h3_means:'ఇది మీకు అర్థం ఏమిటి?',
+    result_h3_ref:'📊 వయస్సు ప్రకారం AMH Reference Ranges',
+    result_h3_conv:'🔄 Unit Conversion',
+    alert_val:'Valid AMH value enter చేయండి.',
+    cta_h2:'ఫెర్టిలిటీ గురించి మాట్లాడాలా?',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+    r_very_low_label:'Ovarian Reserve చాలా తక్కువ',
+    r_very_low_desc:'మీ AMH చాలా తక్కువగా ఉంది — eggs చాలా తక్కువగా మిగిలాయి. వెంటనే fertility specialist ని కలవండి. IVF ఇంకా possible అయినా time చాలా important.',
+    r_low_label:'Ovarian Reserve తక్కువ',
+    r_low_desc:'మీ వయస్సుకి expected range కంటే AMH తక్కువగా ఉంది. Natural conception possible, కానీ IVF outcomes affect అవుతాయి. Fertility consultation recommend.',
+    r_norm_low_label:'Normal కంటే కొంచెం తక్కువ',
+    r_norm_low_desc:'మీ AMH normal range లో lower end లో ఉంది. మీ వయస్సుకి acceptable — moderate ovarian reserve ఉంది.',
+    r_normal_label:'Normal Ovarian Reserve',
+    r_normal_desc:'మీ AMH మీ వయస్సుకి normal range లో ఉంది. Healthy egg supply మరియు good fertility potential ఉంది.',
+    r_optimal_label:'Excellent Ovarian Reserve',
+    r_optimal_desc:'చాలా బాగుంది! మీ AMH optimal గా ఉంది — excellent fertility potential మరియు IVF కి good response expect చేయవచ్చు.',
+    r_high_label:'High AMH — PCOS అయి ఉండవచ్చు',
+    r_high_desc:'చాలా high AMH సాధారణంగా PCOS తో associated గా ఉంటుంది. Egg supply ఎక్కువగా ఉంది కానీ ovulation affect కావచ్చు. Specialist ని కలవండి.',
+    f_very_low_1:'🔴 AMH చాలా తక్కువ — వెంటనే fertility consultation చేయించుకోండి',
+    f_very_low_2:'🔴 IVF లో eggs చాలా తక్కువగా retrieve అయ్యే అవకాశం ఉంది',
+    f_very_low_3:'⚠️ Family plan ఇంకా start చేయకపోతే egg freezing గురించి discuss చేయండి',
+    f_very_low_4:'⚠️ Better IVF outcomes కోసం donor eggs గురించి discuss చేయవచ్చు',
+    f_low_1:'⚠️ AMH తక్కువ — త్వరగా fertility specialist ని కలవండి',
+    f_low_2:'⚠️ తర్వాత family plan చేస్తే egg freezing consider చేయండి',
+    f_low_3:'✅ Natural conception ఇంకా possible — egg quality అనేది quantity కంటే important',
+    f_norm_low_1:'✅ Normal range లో ఉంది — ఇప్పుడు concern లేదు',
+    f_norm_low_2:'✅ IVF stimulation కి good response expect చేయవచ్చు',
+    f_norm_low_3:'⚠️ AMH వయస్సుతో తగ్గుతుంది — yearly check చేయించుకోండి',
+    f_normal_1:'✅ Normal AMH — healthy ovarian reserve ఉంది',
+    f_normal_2:'✅ అవసరమైతే IVF కి good response expect చేయవచ్చు',
+    f_normal_3:'✅ Regular health monitoring continue చేయండి',
+    f_optimal_1:'✅ మీ వయస్సుకి excellent ovarian reserve ఉంది',
+    f_optimal_2:'✅ Optimal IVF response expect చేయవచ్చు',
+    f_optimal_3:'✅ Egg freezing చేస్తే excellent results వస్తాయి',
+    f_high_1:'⚠️ High AMH — PCOS screening recommend చేస్తున్నాం',
+    f_high_2:'⚠️ IVF లో OHSS risk ఉంది — modified protocol అవసరం',
+    f_high_3:'✅ Egg supply చాలా ఉంది — careful management తో IVF outcomes generally good',
   }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
+var _lastAmhResult=null;
 
+function _renderAMH(displayVal,cls,labelKey,descKey,flagDefs){
   document.getElementById('amhDisplay').textContent=displayVal;
-  document.getElementById('amhLabel').textContent=label;
-  document.getElementById('amhDesc').textContent=desc;
-  const card=document.getElementById('amhCard');
-  card.className='amh-result-card '+cls;
-
+  document.getElementById('amhLabel').textContent=t(labelKey);
+  document.getElementById('amhDesc').textContent=t(descKey);
+  document.getElementById('amhCard').className='amh-result-card '+cls;
   const fl=document.getElementById('flagList');
   fl.innerHTML='';
-  flags.forEach(f=>{
-    const li=document.createElement('li');
-    li.className=f.t;li.textContent=f.m;fl.appendChild(li);
-  });
+  flagDefs.forEach(f=>{const li=document.createElement('li');li.className=f.t;li.textContent=t(f.k);fl.appendChild(li);});
+}
 
+function interpretAMH(){
+  const rawVal=parseFloat(document.getElementById('amhVal').value);
+  const unit=document.getElementById('amhUnit').value;
+  const ageGroup=parseInt(document.getElementById('amhAge').value);
+  if(isNaN(rawVal)||rawVal<0){alert(t('alert_val'));return;}
+  const amh=unit==='pmol'?rawVal/7.14:rawVal;
+  const displayVal=unit==='pmol'?`${rawVal} pmol/L (${amh.toFixed(2)} ng/mL)`:`${rawVal} ng/mL`;
+
+  let cls,labelKey,descKey;
+  const flagDefs=[];
+
+  if(amh<0.5){
+    cls='amh-very-low';labelKey='r_very_low_label';descKey='r_very_low_desc';
+    flagDefs.push({t:'danger',k:'f_very_low_1'},{t:'danger',k:'f_very_low_2'},{t:'warn',k:'f_very_low_3'},{t:'warn',k:'f_very_low_4'});
+  } else if(amh<1.0){
+    cls='amh-low';labelKey='r_low_label';descKey='r_low_desc';
+    flagDefs.push({t:'warn',k:'f_low_1'},{t:'warn',k:'f_low_2'},{t:'good',k:'f_low_3'});
+  } else if(amh<2.5){
+    cls='amh-normal-low';labelKey='r_norm_low_label';descKey='r_norm_low_desc';
+    flagDefs.push({t:'good',k:'f_norm_low_1'},{t:'good',k:'f_norm_low_2'},{t:'warn',k:'f_norm_low_3'});
+  } else if(amh<=3.5){
+    cls='amh-normal';labelKey='r_normal_label';descKey='r_normal_desc';
+    flagDefs.push({t:'good',k:'f_normal_1'},{t:'good',k:'f_normal_2'},{t:'good',k:'f_normal_3'});
+  } else if(amh<=5.0&&ageGroup<35){
+    cls='amh-optimal';labelKey='r_optimal_label';descKey='r_optimal_desc';
+    flagDefs.push({t:'good',k:'f_optimal_1'},{t:'good',k:'f_optimal_2'},{t:'good',k:'f_optimal_3'});
+  } else if(amh>5.0){
+    cls='amh-high';labelKey='r_high_label';descKey='r_high_desc';
+    flagDefs.push({t:'warn',k:'f_high_1'},{t:'warn',k:'f_high_2'},{t:'good',k:'f_high_3'});
+  } else {
+    cls='amh-normal';labelKey='r_normal_label';descKey='r_normal_desc';
+    flagDefs.push({t:'good',k:'f_normal_1'});
+  }
+
+  _lastAmhResult={displayVal,cls,labelKey,descKey,flagDefs};
+  _renderAMH(displayVal,cls,labelKey,descKey,flagDefs);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
+
+window._reapplyResults=function(){
+  if(_lastAmhResult) _renderAMH(_lastAmhResult.displayVal,_lastAmhResult.cls,_lastAmhResult.labelKey,_lastAmhResult.descKey,_lastAmhResult.flagDefs);
+};
 
 function resetCalc(){
   document.getElementById('amhVal').value='';
   document.getElementById('amhUnit').value='ngml';
   document.getElementById('amhAge').value='33';
   document.getElementById('result').style.display='none';
+  _lastAmhResult=null;
 }
 </script>
 </body>

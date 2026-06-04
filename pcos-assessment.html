@@ -176,18 +176,18 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Do I Have PCOS? —<br><em>Free Risk Assessment</em></h1>
-    <p class="hero-sub">Answer 9 questions about your symptoms to get your PCOS risk score, recommended tests, and personalised next steps. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1 data-i18n="hero_h1">Do I Have PCOS? —<br><em>Free Risk Assessment</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Answer 9 questions about your symptoms to get your PCOS risk score, recommended tests, and personalised next steps. Free — no sign-up required.</p>
     <div class="hero-chips">
-      <span class="hero-chip">🆓 100% Free</span>
-      <span class="hero-chip">⚡ Instant Result</span>
-      <span class="hero-chip">🩺 Recommended Tests</span>
+      <span class="hero-chip" data-i18n="chip1">🆓 100% Free</span>
+      <span class="hero-chip" data-i18n="chip2">⚡ Instant Result</span>
+      <span class="hero-chip" data-i18n="chip3">🩺 Recommended Tests</span>
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -198,58 +198,85 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 
       <section>
         <div class="calc-box">
-          <h2>🔬 PCOS Risk Assessment</h2>
-          <p class="calc-intro">Answer the 9 questions below honestly. Select the option that best describes your experience over the past 6 months.</p>
+          <h2 data-i18n="calc_title">🔬 PCOS Risk Assessment</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Answer the 9 questions below honestly. Select the option that best describes your experience over the past 6 months.</p>
 
           <div id="quizContainer">
             <!-- Questions injected by JS -->
           </div>
 
-          <button class="btn-calc" onclick="calcPCOS()">Get My PCOS Risk Score →</button>
+          <button class="btn-calc" onclick="calcPCOS()" data-i18n="btn_calc">Get My PCOS Risk Score →</button>
 
           <div class="result-box" id="result">
             <div class="score-card" id="scoreCard">
               <div class="score-num" id="scoreNum">0</div>
-              <div class="score-out">out of 90</div>
+              <div class="score-out" data-i18n="score_out_of">out of 90</div>
               <div class="score-label" id="scoreLabel">—</div>
               <div class="score-desc" id="scoreDesc">—</div>
             </div>
 
             <div class="tests-list">
-              <h3>🩺 Recommended Tests</h3>
+              <h3 data-i18n="result_h3_tests">🩺 Recommended Tests</h3>
               <ul id="testsList"></ul>
             </div>
 
             <div class="next-steps">
-              <h3>➡️ Recommended Next Steps</h3>
+              <h3 data-i18n="result_h3_steps">➡️ Recommended Next Steps</h3>
               <ul id="nextStepsList"></ul>
             </div>
 
-            <p style="font-size:0.8rem;color:var(--text-mid);font-style:italic;margin-top:0.5rem">⚕️ This screening tool does not diagnose PCOS. Formal diagnosis requires clinical evaluation, blood tests, and ultrasound by a qualified doctor.</p>
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <p style="font-size:0.8rem;color:var(--text-mid);font-style:italic;margin-top:0.5rem" data-i18n="result_disclaimer">⚕️ This screening tool does not diagnose PCOS. Formal diagnosis requires clinical evaluation, blood tests, and ultrasound by a qualified doctor.</p>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Understanding PCOS</h2>
-        <p class="section-sub">India's most common hormonal disorder in women of reproductive age</p>
-        <p>PCOS (Polycystic Ovary Syndrome) affects 1 in 5 women in India. It is a hormonal disorder characterised by irregular periods, excess androgens (male hormones), and polycystic ovaries on ultrasound. Despite the name, "cysts" are not the main problem — it's the hormonal imbalance that causes the symptoms.</p>
-        <h3>Rotterdam Criteria for PCOS Diagnosis</h3>
-        <p>A formal PCOS diagnosis requires at least 2 of 3 Rotterdam criteria: (1) irregular or absent periods, (2) clinical or biochemical signs of hyperandrogenism (excess male hormones), and (3) polycystic ovarian morphology on ultrasound. Thyroid disease and high prolactin must first be excluded.</p>
-        <h3>PCOS and Fertility</h3>
-        <p>PCOS is the most common cause of ovulatory infertility, accounting for 70–80% of cases. However, with proper treatment, most women with PCOS can conceive. Ovulation induction with letrozole is highly effective, and IVF works well for PCOS patients when needed.</p>
+        <!-- Educational EN -->
+        <div data-lang="en">
+          <h2>Understanding PCOS</h2>
+          <p class="section-sub">India's most common hormonal disorder in women of reproductive age</p>
+          <p>PCOS (Polycystic Ovary Syndrome) affects 1 in 5 women in India. It is a hormonal disorder characterised by irregular periods, excess androgens (male hormones), and polycystic ovaries on ultrasound. Despite the name, "cysts" are not the main problem — it's the hormonal imbalance that causes the symptoms.</p>
+          <h3>Rotterdam Criteria for PCOS Diagnosis</h3>
+          <p>A formal PCOS diagnosis requires at least 2 of 3 Rotterdam criteria: (1) irregular or absent periods, (2) clinical or biochemical signs of hyperandrogenism (excess male hormones), and (3) polycystic ovarian morphology on ultrasound. Thyroid disease and high prolactin must first be excluded.</p>
+          <h3>PCOS and Fertility</h3>
+          <p>PCOS is the most common cause of ovulatory infertility, accounting for 70–80% of cases. However, with proper treatment, most women with PCOS can conceive. Ovulation induction with letrozole is highly effective, and IVF works well for PCOS patients when needed.</p>
+        </div>
+        <!-- Educational TE -->
+        <div data-lang="te">
+          <h2>PCOS అంటే ఏమిటి?</h2>
+          <p class="section-sub">India లో reproductive age women లో most common hormonal disorder</p>
+          <p>PCOS (Polycystic Ovary Syndrome) అనేది India లో 5 మంది women లో 1 మందిని affect చేస్తుంది. ఇది irregular periods, excess androgens (male hormones), మరియు ultrasound లో polycystic ovaries ద్వారా characterise అవుతుంది. "Cysts" అనేది main problem కాదు — hormonal imbalance symptoms కి cause అవుతుంది.</p>
+          <h3>PCOS Diagnosis కోసం Rotterdam Criteria</h3>
+          <p>Formal PCOS diagnosis కోసం Rotterdam criteria లో 3 లో కనీసం 2 ఉండాలి: (1) irregular లేదా absent periods, (2) hyperandrogenism signs (excess male hormones), (3) ultrasound లో polycystic ovarian morphology. Thyroid disease మరియు high prolactin ముందు exclude చేయాలి.</p>
+          <h3>PCOS మరియు Fertility</h3>
+          <p>PCOS అనేది ovulatory infertility కి most common cause — 70–80% cases లో. అయితే proper treatment తో చాలా మంది PCOS women conceive చేయగలరు. Letrozole తో ovulation induction highly effective, అవసరమైతే IVF కూడా PCOS patients కి well work చేస్తుంది.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How is PCOS diagnosed?</summary><p>PCOS is diagnosed using the Rotterdam criteria: at least 2 of 3 criteria must be present — (1) irregular or absent periods, (2) clinical or biochemical signs of excess androgens (facial hair, acne, elevated testosterone), and (3) polycystic ovaries on ultrasound (12+ small follicles or enlarged ovary >10mL). This screening quiz helps identify risk — formal diagnosis requires clinical evaluation.</p></details>
-          <details><summary>What are the most common PCOS symptoms in Indian women?</summary><p>In Indian women, the most common PCOS symptoms are: irregular or absent periods, weight gain especially around the abdomen, facial and body hair growth (hirsutism), acne that doesn't respond to usual treatments, hair thinning on the scalp, darkened skin patches around the neck (acanthosis nigricans), and difficulty conceiving.</p></details>
-          <details><summary>Can PCOS be cured?</summary><p>PCOS cannot be cured but can be effectively managed. Lifestyle changes (weight loss of even 5–10% can restore ovulation in many women), regular exercise, low-glycaemic index diet, and medications like metformin, clomiphene, or letrozole (for ovulation induction) are all proven treatments. Most women with PCOS can conceive with appropriate treatment.</p></details>
-          <details><summary>What tests are done to diagnose PCOS?</summary><p>Tests for PCOS include: pelvic ultrasound (to check ovarian morphology and antral follicle count), blood tests on Day 2–5 of cycle (FSH, LH, AMH, total testosterone, DHEAS, prolactin, TSH, fasting insulin, fasting glucose, HbA1c). AMH is often elevated in PCOS (&gt;5 ng/mL) and is a useful marker.</p></details>
-          <details><summary>Can I get pregnant with PCOS?</summary><p>Yes — the majority of women with PCOS can conceive, either naturally with lifestyle changes or with fertility treatments. Ovulation induction with letrozole or clomiphene is first-line treatment. IVF is highly effective for PCOS if simpler treatments are unsuccessful. Dr. Prashanthi Reddy has helped thousands of women with PCOS achieve pregnancy at Mother Hospitals.</p></details>
-          <details><summary>Is PCOS related to insulin resistance?</summary><p>Yes — approximately 70% of women with PCOS have some degree of insulin resistance, regardless of body weight. Insulin resistance drives excess androgen production and disrupts ovulation. This is why metformin (an insulin-sensitising drug) and low-GI diets are core treatments for PCOS. All women with PCOS should have fasting insulin and glucose checked.</p></details>
+        <!-- FAQ EN -->
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How is PCOS diagnosed?</summary><p>PCOS is diagnosed using the Rotterdam criteria: at least 2 of 3 criteria must be present — (1) irregular or absent periods, (2) clinical or biochemical signs of excess androgens (facial hair, acne, elevated testosterone), and (3) polycystic ovaries on ultrasound (12+ small follicles or enlarged ovary >10mL). This screening quiz helps identify risk — formal diagnosis requires clinical evaluation.</p></details>
+            <details><summary>What are the most common PCOS symptoms in Indian women?</summary><p>In Indian women, the most common PCOS symptoms are: irregular or absent periods, weight gain especially around the abdomen, facial and body hair growth (hirsutism), acne that doesn't respond to usual treatments, hair thinning on the scalp, darkened skin patches around the neck (acanthosis nigricans), and difficulty conceiving.</p></details>
+            <details><summary>Can PCOS be cured?</summary><p>PCOS cannot be cured but can be effectively managed. Lifestyle changes (weight loss of even 5–10% can restore ovulation in many women), regular exercise, low-glycaemic index diet, and medications like metformin, clomiphene, or letrozole (for ovulation induction) are all proven treatments. Most women with PCOS can conceive with appropriate treatment.</p></details>
+            <details><summary>What tests are done to diagnose PCOS?</summary><p>Tests for PCOS include: pelvic ultrasound (to check ovarian morphology and antral follicle count), blood tests on Day 2–5 of cycle (FSH, LH, AMH, total testosterone, DHEAS, prolactin, TSH, fasting insulin, fasting glucose, HbA1c). AMH is often elevated in PCOS (&gt;5 ng/mL) and is a useful marker.</p></details>
+            <details><summary>Can I get pregnant with PCOS?</summary><p>Yes — the majority of women with PCOS can conceive, either naturally with lifestyle changes or with fertility treatments. Ovulation induction with letrozole or clomiphene is first-line treatment. IVF is highly effective for PCOS if simpler treatments are unsuccessful. Dr. Prashanthi Reddy has helped thousands of women with PCOS achieve pregnancy at Mother Hospitals.</p></details>
+            <details><summary>Is PCOS related to insulin resistance?</summary><p>Yes — approximately 70% of women with PCOS have some degree of insulin resistance, regardless of body weight. Insulin resistance drives excess androgen production and disrupts ovulation. This is why metformin (an insulin-sensitising drug) and low-GI diets are core treatments for PCOS. All women with PCOS should have fasting insulin and glucose checked.</p></details>
+          </div>
         </div>
-      </section>
+        <!-- FAQ TE -->
+        <div data-lang="te">
+          <h2>మీకు ఉన్న సందేహాలు — జవాబులు</h2>
+          <div class="faq-list">
+            <details open><summary>PCOS diagnose ఎలా చేస్తారు?</summary><p>PCOS diagnosis కోసం Rotterdam criteria లో 3 లో కనీసం 2 ఉండాలి: (1) irregular లేదా absent periods, (2) excess androgens signs (facial hair, acne, elevated testosterone), (3) ultrasound లో polycystic ovaries (12+ small follicles లేదా ovary >10mL). ఈ quiz risk identify చేస్తుంది — formal diagnosis కి clinical evaluation అవసరం.</p></details>
+            <details><summary>Indian women లో most common PCOS symptoms ఏమిటి?</summary><p>Indian women లో most common PCOS symptoms: irregular లేదా absent periods, abdomen చుట్టూ weight gain, facial మరియు body hair growth (hirsutism), usual treatment కి respond కాని acne, scalp మీద hair thinning, మెడ మీద dark patches (acanthosis nigricans), మరియు conceive కావడం కష్టంగా ఉండడం.</p></details>
+            <details><summary>PCOS cure అవుతుందా?</summary><p>PCOS cure అవదు కానీ effectively manage చేయవచ్చు. Lifestyle changes (5–10% weight loss వల్ల చాలా మందికి ovulation restore అవుతుంది), regular exercise, low-glycaemic index diet, మరియు metformin, letrozole లాంటి medicines proven treatments. Proper treatment తో చాలా మంది PCOS women conceive చేయగలరు.</p></details>
+            <details><summary>PCOS diagnose చేయడానికి ఏ tests చేస్తారు?</summary><p>PCOS tests: pelvic ultrasound (ovarian morphology, antral follicle count), Day 2–5 blood tests (FSH, LH, AMH, total testosterone, DHEAS, prolactin, TSH, fasting insulin, fasting glucose, HbA1c). PCOS లో AMH సాధారణంగా elevated గా ఉంటుంది (&gt;5 ng/mL).</p></details>
+            <details><summary>PCOS తో pregnant అవుతుందా?</summary><p>అవును — చాలా మంది PCOS women conceive చేయగలరు, lifestyle changes తో naturally లేదా fertility treatments తో. Letrozole తో ovulation induction first-line treatment. Simple treatments పని చేయకపోతే IVF highly effective. Dr. ప్రశాంతి రెడ్డి Mother Hospitals లో వేలాది PCOS women కి pregnancy achieve చేయడంలో help చేశారు.</p></details>
+            <details><summary>PCOS కి insulin resistance తో సంబంధం ఉందా?</summary><p>అవును — PCOS ఉన్న 70% women కి body weight తో సంబంధం లేకుండా insulin resistance ఉంటుంది. Insulin resistance excess androgen production drive చేసి ovulation disrupt చేస్తుంది. అందుకే metformin మరియు low-GI diets PCOS కి core treatments. PCOS ఉన్న అందరూ fasting insulin మరియు glucose test చేయించుకోవాలి.</p></details>
+          </div>
+        </div>
 
     </div>
 
@@ -289,13 +316,13 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
   </div>
 
   <div class="cta-section">
-    <h2>Concerned About PCOS? We Can Help.</h2>
-    <p>Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
+    <h2 data-i18n="cta_h2">Concerned About PCOS? We Can Help.</h2>
+    <p data-i18n="cta_p">Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles · TGMC Reg. 50624</p>
     <div class="cta-btns">
-      <a href="tel:+919705993366" class="ca">📞 Call 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp Appointment</a>
+      <a href="tel:+919705993366" class="ca" data-i18n="cta_call">📞 Call 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="wa" data-i18n="cta_wa">💬 WhatsApp Appointment</a>
     </div>
-    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
+    <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7" data-i18n="cta_sub">📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients</p>
   </div>
 
   <section>
@@ -322,82 +349,124 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:none}footer a:hover{color:
 </div>
 
 <script>
-const QUESTIONS = [
-  {text:'How long are your menstrual cycles on average?',opts:[{l:'21–35 days (regular)',s:0},{l:'36–60 days (infrequent)',s:10},{l:'More than 60 days',s:10},{l:'No periods (absent)',s:10}]},
-  {text:'Have you missed 2 or more periods in the last 6 months?',opts:[{l:'No',s:0},{l:'Once or twice',s:5},{l:'Yes, regularly',s:10}]},
-  {text:'Do you have unwanted facial or body hair (hirsutism)?',opts:[{l:'No',s:0},{l:'Some (mild)',s:5},{l:'Yes, noticeable',s:10}]},
-  {text:'Do you have persistent acne (especially jawline, chin, back)?',opts:[{l:'No or minimal',s:0},{l:'Sometimes',s:5},{l:'Yes, persistent acne',s:10}]},
-  {text:'Have you gained weight unexpectedly or have difficulty losing weight?',opts:[{l:'No',s:0},{l:'Some difficulty',s:5},{l:'Yes, significant weight gain',s:10}]},
-  {text:'Do you have skin tags or dark patches on neck / under arms (acanthosis nigricans)?',opts:[{l:'No',s:0},{l:'Unsure / mild',s:5},{l:'Yes',s:10}]},
-  {text:'Does anyone in your immediate family (mother, sister) have PCOS or irregular periods?',opts:[{l:'No / unknown',s:0},{l:'Possibly',s:5},{l:'Yes, confirmed',s:10}]},
-  {text:'Have you been trying to conceive for more than 6 months without success?',opts:[{l:'Not trying / conceived easily',s:0},{l:'Trying < 6 months',s:0},{l:'Yes, 6–12 months',s:5},{l:'Yes, over 12 months',s:10}]},
-  {text:'Are you experiencing hair thinning or hair loss on the scalp?',opts:[{l:'No',s:0},{l:'Mild shedding',s:5},{l:'Noticeable thinning',s:10}]},
+window.pageT = {
+  en:{
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Do I Have PCOS? —<br><em>Free Risk Assessment</em>',
+    hero_sub:'Answer 9 questions about your symptoms to get your PCOS risk score, recommended tests, and personalised next steps. Free — no sign-up required.',
+    chip1:'🆓 100% Free', chip2:'⚡ Instant Result', chip3:'🩺 Recommended Tests',
+    btn_call:'📞 Book Consultation: 97059 93366', btn_wa:'💬 WhatsApp Us',
+    calc_title:'🔬 PCOS Risk Assessment',
+    calc_intro:'Answer the 9 questions below honestly. Select the option that best describes your experience over the past 6 months.',
+    btn_calc:'Get My PCOS Risk Score →', btn_reset:'↩ Reset',
+    result_h3_tests:'🩺 Recommended Tests',
+    result_h3_steps:'➡️ Recommended Next Steps',
+    result_disclaimer:'⚕️ This screening tool does not diagnose PCOS. Formal diagnosis requires clinical evaluation, blood tests, and ultrasound by a qualified doctor.',
+    score_out_of:'out of 90',
+    alert_all:'Please answer all 9 questions before getting your result.',
+    cta_h2:'Concerned About PCOS? We Can Help.',
+    cta_p:'Dr. Prashanthi Reddy — MBBS, DGO, Diploma in ART (UKSH Kiel, Germany) · 19+ years · 5,000+ IVF cycles',
+    cta_call:'📞 Call 97059 93366', cta_wa:'💬 WhatsApp Appointment',
+    cta_sub:'📍 Boduppal, Hyderabad · Mon–Sat 9am–7pm · Telehealth for NRI patients',
+  },
+  te:{
+    hero_badge:'ఉచిత టూల్ · మదర్ హాస్పిటల్స్ హైదరాబాద్',
+    hero_h1:'నాకు PCOS ఉందా? —<br><em>ఉచిత Risk Assessment</em>',
+    hero_sub:'మీ symptoms గురించి 9 questions కి జవాబు ఇవ్వండి — PCOS risk score, recommend చేయాల్సిన tests, మరియు next steps చూపిస్తాం. ఫ్రీ — రిజిస్ట్రేషన్ అక్కర్లేదు.',
+    chip1:'🆓 పూర్తిగా ఫ్రీ', chip2:'⚡ వెంటనే రిజల్ట్', chip3:'🩺 Recommended Tests',
+    btn_call:'📞 అపాయింట్‌మెంట్: 97059 93366', btn_wa:'💬 WhatsApp చేయండి',
+    calc_title:'🔬 PCOS Risk Assessment',
+    calc_intro:'దిగువ 9 questions కి నిజాయితీగా జవాబు ఇవ్వండి. గత 6 నెలల్లో మీ experience కి సరిపోయే option select చేయండి.',
+    btn_calc:'నా PCOS Risk Score చూడండి →', btn_reset:'↩ మళ్ళీ చేయండి',
+    result_h3_tests:'🩺 Recommend చేయాల్సిన Tests',
+    result_h3_steps:'➡️ తదుపరి చేయాల్సినవి',
+    result_disclaimer:'⚕️ ఈ tool PCOS diagnose చేయదు. Formal diagnosis కి qualified doctor తో clinical evaluation, blood tests, ultrasound అవసరం.',
+    score_out_of:'90 లో',
+    alert_all:'Result చూడడానికి ముందు అన్ని 9 questions కి జవాబు ఇవ్వండి.',
+    cta_h2:'PCOS గురించి concern గా ఉందా? మేము help చేస్తాం.',
+    cta_p:'Dr. ప్రశాంతి రెడ్డి — MBBS, DGO, Diploma in ART (Germany) · 19+ సంవత్సరాల అనుభవం · 5,000+ IVF సైకిల్స్',
+    cta_call:'📞 కాల్ చేయండి: 97059 93366', cta_wa:'💬 WhatsApp అపాయింట్‌మెంట్',
+    cta_sub:'📍 బోడుప్పల్, హైదరాబాద్ · సోమ–శని 9am–7pm · NRI పేషెంట్లకు టెలీహెల్త్',
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
+const QUESTIONS=[
+  {en:'How long are your menstrual cycles on average?',te:'మీ పీరియడ్ సైకిల్ సాధారణంగా ఎంత రోజులు ఉంటుంది?',opts:[{en:'21–35 days (regular)',te:'21–35 రోజులు (regular)',s:0},{en:'36–60 days (infrequent)',te:'36–60 రోజులు (తక్కువగా)',s:10},{en:'More than 60 days',te:'60 రోజులు కంటే ఎక్కువ',s:10},{en:'No periods (absent)',te:'పీరియడ్ రావడం లేదు',s:10}]},
+  {en:'Have you missed 2 or more periods in the last 6 months?',te:'గత 6 నెలల్లో 2 లేదా అంతకంటే ఎక్కువ పీరియడ్స్ miss అయ్యాయా?',opts:[{en:'No',te:'లేదు',s:0},{en:'Once or twice',te:'ఒకటి లేదా రెండుసార్లు',s:5},{en:'Yes, regularly',te:'అవును, regularly',s:10}]},
+  {en:'Do you have unwanted facial or body hair (hirsutism)?',te:'మీకు unwanted facial లేదా body hair (hirsutism) ఉందా?',opts:[{en:'No',te:'లేదు',s:0},{en:'Some (mild)',te:'కొంచెం (mild)',s:5},{en:'Yes, noticeable',te:'అవును, clearly ఉంది',s:10}]},
+  {en:'Do you have persistent acne (especially jawline, chin, back)?',te:'మీకు persistent acne ఉందా (jawline, chin, back మీద)?',opts:[{en:'No or minimal',te:'లేదు లేదా చాలా తక్కువ',s:0},{en:'Sometimes',te:'కొన్నిసార్లు',s:5},{en:'Yes, persistent acne',te:'అవును, persistent గా ఉంది',s:10}]},
+  {en:'Have you gained weight unexpectedly or have difficulty losing weight?',te:'Weight unexpectedly పెరిగిందా లేదా తగ్గించుకోవడం కష్టంగా ఉందా?',opts:[{en:'No',te:'లేదు',s:0},{en:'Some difficulty',te:'కొంచెం కష్టంగా ఉంది',s:5},{en:'Yes, significant weight gain',te:'అవును, significant గా పెరిగింది',s:10}]},
+  {en:'Do you have skin tags or dark patches on neck / under arms (acanthosis nigricans)?',te:'మెడ మీద లేదా underarms మీద dark patches లేదా skin tags ఉన్నాయా?',opts:[{en:'No',te:'లేదు',s:0},{en:'Unsure / mild',te:'తెలియదు / mild గా ఉంది',s:5},{en:'Yes',te:'అవును',s:10}]},
+  {en:'Does anyone in your immediate family (mother, sister) have PCOS or irregular periods?',te:'మీ family లో (అమ్మ, అక్క) PCOS లేదా irregular periods ఉందా?',opts:[{en:'No / unknown',te:'లేదు / తెలియదు',s:0},{en:'Possibly',te:'అయి ఉండవచ్చు',s:5},{en:'Yes, confirmed',te:'అవును, confirmed',s:10}]},
+  {en:'Have you been trying to conceive for more than 6 months without success?',te:'6 నెలలకంటే ఎక్కువ try చేసినా pregnant కాలేదా?',opts:[{en:'Not trying / conceived easily',te:'Try చేయడం లేదు / easily conceived',s:0},{en:'Trying < 6 months',te:'Try చేస్తున్నాం < 6 నెలలు',s:0},{en:'Yes, 6–12 months',te:'అవును, 6–12 నెలలు',s:5},{en:'Yes, over 12 months',te:'అవును, 12 నెలలు కంటే ఎక్కువ',s:10}]},
+  {en:'Are you experiencing hair thinning or hair loss on the scalp?',te:'తల మీద hair తగ్గిపోతోందా?',opts:[{en:'No',te:'లేదు',s:0},{en:'Mild shedding',te:'Mild గా రాలుతోంది',s:5},{en:'Noticeable thinning',te:'Clearly తగ్గిపోతోంది',s:10}]},
 ];
 
-const selections = new Array(QUESTIONS.length).fill(null);
+const RESULT_DATA={
+  low:{cls:'score-low',en:{label:'Low PCOS Risk',desc:'Your symptoms suggest a low likelihood of PCOS. However, if you have irregular periods or difficulty conceiving, a basic hormonal check is still recommended.',tests:['TSH (thyroid function)','Fasting glucose (blood sugar)','Pelvic ultrasound if cycles are irregular'],steps:['✅ Continue regular menstrual tracking','✅ Maintain healthy lifestyle — diet and exercise','✅ Revisit if periods become irregular or you have difficulty conceiving']},te:{label:'PCOS Risk తక్కువ',desc:'మీ symptoms బట్టి PCOS likelihood తక్కువగా ఉంది. అయితే irregular periods లేదా conceive కావడం కష్టంగా ఉంటే basic hormonal check recommend చేస్తున్నాం.',tests:['TSH (thyroid function)','Fasting glucose (blood sugar)','Cycles irregular అయితే pelvic ultrasound'],steps:['✅ Regular గా menstrual tracking చేయండి','✅ Healthy lifestyle maintain చేయండి — diet మరియు exercise','✅ Periods irregular అయితే లేదా conceive కావడం కష్టంగా ఉంటే మళ్ళీ consult చేయండి']}},
+  mod:{cls:'score-mod',en:{label:'Moderate PCOS Risk',desc:'Your symptoms suggest a moderate risk of PCOS. A comprehensive hormonal panel and ultrasound are recommended to confirm or rule out PCOS.',tests:['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone','TSH, Prolactin','Fasting insulin & glucose, HbA1c','Pelvic transvaginal ultrasound (antral follicle count)'],steps:['⚠️ Schedule a consultation with a fertility specialist','⚠️ Request a Day 2–5 blood test for hormones','⚠️ Get a transvaginal ultrasound for ovarian morphology','⚠️ Start a low-GI diet and regular exercise now']},te:{label:'Moderate PCOS Risk',desc:'మీ symptoms బట్టి PCOS moderate risk ఉంది. Confirm లేదా rule out చేయడానికి hormonal panel మరియు ultrasound recommend చేస్తున్నాం.',tests:['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone','TSH, Prolactin','Fasting insulin & glucose, HbA1c','Pelvic transvaginal ultrasound (antral follicle count)'],steps:['⚠️ Fertility specialist ని కలవండి','⚠️ Day 2–5 hormonal blood test చేయించుకోండి','⚠️ Transvaginal ultrasound చేయించుకోండి','⚠️ Low-GI diet మరియు regular exercise ఇప్పుడే start చేయండి']}},
+  high:{cls:'score-high',en:{label:'High PCOS Risk',desc:'Your symptoms strongly suggest PCOS. Please consult a specialist promptly. PCOS is very treatable and most women can conceive with appropriate management.',tests:['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone, DHEAS','TSH, Prolactin (to exclude other causes)','Fasting insulin & glucose, HbA1c, lipid profile','Pelvic transvaginal ultrasound (antral follicle count, ovarian volume)','BMI and blood pressure measurement'],steps:['🔴 Consult Dr. Prashanthi Reddy for formal PCOS evaluation','🔴 Get full hormonal panel and ultrasound urgently','🔴 Start lifestyle changes: low-GI diet, 30 min exercise daily','🔴 Discuss ovulation induction if trying to conceive','🔴 Monitor blood sugar and insulin — metformin may be prescribed']},te:{label:'High PCOS Risk',desc:'మీ symptoms బట్టి PCOS strongly suggest అవుతోంది. వెంటనే specialist ని కలవండి. PCOS చాలా treatable — proper treatment తో చాలా మంది women conceive చేయగలరు.',tests:['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone, DHEAS','TSH, Prolactin (other causes rule out చేయడానికి)','Fasting insulin & glucose, HbA1c, lipid profile','Pelvic transvaginal ultrasound (antral follicle count, ovarian volume)','BMI మరియు blood pressure measurement'],steps:['🔴 Dr. ప్రశాంతి రెడ్డి ని formal PCOS evaluation కోసం కలవండి','🔴 Full hormonal panel మరియు ultrasound urgently చేయించుకోండి','🔴 Lifestyle changes start చేయండి: low-GI diet, రోజూ 30 min exercise','🔴 Conceive try చేస్తున్నారా? Ovulation induction గురించి discuss చేయండి','🔴 Blood sugar మరియు insulin monitor చేయండి — metformin prescribe అవుతుంది']}},
+};
+
+const selections=new Array(QUESTIONS.length).fill(null);
+var _lastPcosTotal=null;
 
 function buildQuiz(){
+  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
   const container=document.getElementById('quizContainer');
+  container.innerHTML='';
   QUESTIONS.forEach((q,qi)=>{
     const div=document.createElement('div');
     div.className='quiz-question';
-    let html=`<div class="q-text">Q${qi+1}. ${q.text}</div><div class="q-options">`;
+    let html=`<div class="q-text">Q${qi+1}. ${lang==='te'?q.te:q.en}</div><div class="q-options">`;
     q.opts.forEach((opt,oi)=>{
-      html+=`<button class="q-opt" onclick="selectOpt(${qi},${oi},${opt.s},this)">${opt.l}</button>`;
+      const sel=selections[qi]===oi?' selected':'';
+      html+=`<button class="q-opt${sel}" onclick="selectOpt(${qi},${oi},this)">${lang==='te'?opt.te:opt.en}</button>`;
     });
     html+='</div>';
-    div.innerHTML=html;
-    container.appendChild(div);
+    div.innerHTML=html;container.appendChild(div);
   });
 }
 
-function selectOpt(qi,oi,score,btn){
-  // Deselect all in this question
-  const opts=btn.parentElement.querySelectorAll('.q-opt');
-  opts.forEach(o=>o.classList.remove('selected'));
+function selectOpt(qi,oi,btn){
+  btn.parentElement.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('selected'));
   btn.classList.add('selected');
-  selections[qi]=score;
+  selections[qi]=oi;
+}
+
+function _renderPCOS(total){
+  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
+  const key=total<30?'low':total<60?'mod':'high';
+  const rd=RESULT_DATA[key];
+  const d=rd[lang]||rd.en;
+  document.getElementById('scoreNum').textContent=total;
+  document.getElementById('scoreLabel').textContent=d.label;
+  document.getElementById('scoreDesc').textContent=d.desc;
+  document.getElementById('scoreCard').className='score-card '+rd.cls;
+  document.getElementById('testsList').innerHTML=d.tests.map(x=>`<li>🔬 ${x}</li>`).join('');
+  document.getElementById('nextStepsList').innerHTML=d.steps.map(x=>`<li>${x}</li>`).join('');
 }
 
 function calcPCOS(){
-  if(selections.some(s=>s===null)){alert('Please answer all 9 questions before getting your result.');return;}
-  const total=selections.reduce((a,b)=>a+b,0);
-  let cls,label,desc,tests=[],steps=[];
-
-  if(total<30){
-    cls='score-low';label='Low PCOS Risk';
-    desc='Your symptoms suggest a low likelihood of PCOS. However, if you have irregular periods or difficulty conceiving, a basic hormonal check is still recommended.';
-    tests=['TSH (thyroid function)','Fasting glucose (blood sugar)','Pelvic ultrasound if cycles are irregular'];
-    steps=['✅ Continue regular menstrual tracking','✅ Maintain healthy lifestyle — diet and exercise','✅ Revisit if periods become irregular or you have difficulty conceiving'];
-  } else if(total<60){
-    cls='score-mod';label='Moderate PCOS Risk';
-    desc='Your symptoms suggest a moderate risk of PCOS. A comprehensive hormonal panel and ultrasound are recommended to confirm or rule out PCOS.';
-    tests=['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone','TSH, Prolactin','Fasting insulin & glucose, HbA1c','Pelvic transvaginal ultrasound (antral follicle count)'];
-    steps=['⚠️ Schedule a consultation with a fertility specialist','⚠️ Request a Day 2–5 blood test for hormones','⚠️ Get a transvaginal ultrasound for ovarian morphology','⚠️ Start a low-GI diet and regular exercise now'];
-  } else {
-    cls='score-high';label='High PCOS Risk';
-    desc='Your symptoms strongly suggest PCOS. Please consult a specialist promptly. PCOS is very treatable and most women can conceive with appropriate management.';
-    tests=['Day 2–5 hormonal panel: FSH, LH, AMH, Total testosterone, DHEAS','TSH, Prolactin (to exclude other causes)','Fasting insulin & glucose, HbA1c, lipid profile','Pelvic transvaginal ultrasound (antral follicle count, ovarian volume)','BMI and blood pressure measurement'];
-    steps=['🔴 Consult Dr. Prashanthi Reddy for formal PCOS evaluation','🔴 Get full hormonal panel and ultrasound urgently','🔴 Start lifestyle changes: low-GI diet, 30 min exercise daily','🔴 Discuss ovulation induction if trying to conceive','🔴 Monitor blood sugar and insulin — metformin may be prescribed'];
-  }
-
-  document.getElementById('scoreNum').textContent=total;
-  document.getElementById('scoreLabel').textContent=label;
-  document.getElementById('scoreDesc').textContent=desc;
-  document.getElementById('scoreCard').className='score-card '+cls;
-
-  const tl=document.getElementById('testsList');
-  tl.innerHTML=tests.map(t=>`<li>🔬 ${t}</li>`).join('');
-  const nl=document.getElementById('nextStepsList');
-  nl.innerHTML=steps.map(s=>`<li>${s}</li>`).join('');
-
+  if(selections.some(s=>s===null)){alert(t('alert_all'));return;}
+  const total=selections.reduce((sum,oi,qi)=>sum+QUESTIONS[qi].opts[oi].s,0);
+  _lastPcosTotal=total;
+  _renderPCOS(total);
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
+window._reapplyResults=function(){
+  buildQuiz();
+  if(_lastPcosTotal!==null) _renderPCOS(_lastPcosTotal);
+};
+
 function resetCalc(){
   selections.fill(null);
-  document.querySelectorAll('.q-opt').forEach(o=>o.classList.remove('selected'));
+  _lastPcosTotal=null;
+  buildQuiz();
   document.getElementById('result').style.display='none';
 }
 
