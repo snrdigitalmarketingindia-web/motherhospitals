@@ -195,9 +195,9 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>IVF Timeline Planner —<br><em>Day-by-Day IVF Schedule</em></h1>
-    <p class="hero-sub">Select your IVF protocol and cycle start date to generate a personalised day-by-day IVF timeline with dates, phases, and descriptions for each step. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1><span data-i18n="hero_h1">IVF Timeline Planner —</span><br><em data-i18n="hero_h1_em">Day-by-Day IVF Schedule</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Select your IVF protocol and cycle start date to generate a personalised day-by-day IVF timeline with dates, phases, and descriptions for each step. Free — no sign-up required.</p>
     <div class="hero-chips">
       <span class="hero-chip">🆓 100% Free</span>
       <span class="hero-chip">⚡ Instant Timeline</span>
@@ -205,8 +205,8 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -216,54 +216,78 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>📋 IVF Timeline Planner</h2>
-          <p class="calc-intro">Select your protocol and the first day of your period (Day 1) to generate your personalised IVF schedule. Timings are estimates — your doctor will adjust based on monitoring.</p>
+          <h2 data-i18n="planner_title">📋 IVF Timeline Planner</h2>
+          <p class="calc-intro" data-i18n="planner_intro">Select your protocol and the first day of your period (Day 1) to generate your personalised IVF schedule. Timings are estimates — your doctor will adjust based on monitoring.</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="protocol">IVF Protocol</label>
+              <label for="protocol" data-i18n="label_protocol">IVF Protocol</label>
               <select id="protocol">
-                <option value="antagonist">Antagonist Protocol (most common)</option>
-                <option value="long">Long Agonist Protocol</option>
-                <option value="fet">Frozen Embryo Transfer (FET)</option>
-                <option value="mini">Mini-IVF (Minimal Stimulation)</option>
+                <option value="antagonist" data-i18n-opt="opt_antagonist">Antagonist Protocol (most common)</option>
+                <option value="long" data-i18n-opt="opt_long">Long Agonist Protocol</option>
+                <option value="fet" data-i18n-opt="opt_fet">Frozen Embryo Transfer (FET)</option>
+                <option value="mini" data-i18n-opt="opt_mini">Mini-IVF (Minimal Stimulation)</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="cycleStart">Day 1 of Period (Cycle Start)</label>
+              <label for="cycleStart" data-i18n="label_cycle_start">Day 1 of Period (Cycle Start)</label>
               <input type="date" id="cycleStart">
             </div>
           </div>
           <div class="toggle-row">
-            <label class="toggle-item"><input type="checkbox" id="blasto"> Blastocyst culture (Day 5 transfer)</label>
-            <label class="toggle-item"><input type="checkbox" id="pgta"> PGT-A (genetic testing of embryos)</label>
+            <label class="toggle-item"><input type="checkbox" id="blasto"> <span data-i18n="label_blasto">Blastocyst culture (Day 5 transfer)</span></label>
+            <label class="toggle-item"><input type="checkbox" id="pgta"> <span data-i18n="label_pgta">PGT-A (genetic testing of embryos)</span></label>
           </div>
-          <button class="btn-calc" onclick="buildTimeline()">Generate My IVF Timeline →</button>
+          <button class="btn-calc" onclick="buildTimeline()" data-i18n="btn_gen">Generate My IVF Timeline →</button>
 
           <div class="result-box" id="result">
-            <div class="disclaimer-box">⚕️ <strong>Important:</strong> This timeline is an estimate based on typical protocol timings. Your actual schedule will be adjusted by Dr. Prashanthi Reddy based on your ultrasound monitoring and blood test results. Always follow your clinic's specific instructions.</div>
+            <div class="disclaimer-box" data-i18n="disclaimer_text">⚕️ <strong>Important:</strong> This timeline is an estimate based on typical protocol timings. Your actual schedule will be adjusted by Dr. Prashanthi Reddy based on your ultrasound monitoring and blood test results. Always follow your clinic's specific instructions.</div>
             <div id="timelineContainer" class="timeline"></div>
-            <button class="btn-reset" onclick="resetPlanner()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Understanding IVF Protocols</h2>
-        <p class="section-sub">What each protocol means and who it is best for</p>
-        <p>The IVF protocol is the plan for using fertility medications to stimulate the ovaries, prevent premature ovulation, trigger egg maturation, and prepare the uterus for embryo transfer. The choice of protocol is tailored to each patient based on age, AMH, antral follicle count, and previous IVF history.</p>
-        <h3>Antagonist Protocol — The Most Common</h3>
-        <p>The antagonist protocol is the standard first-line IVF protocol. Stimulation injections start on Day 2-3. An antagonist injection (Cetrorelix or Ganirelix) is added from Day 5-7 to prevent premature ovulation. Total stimulation: 10-12 days. Preferred for PCOS patients, normal responders, and women at OHSS risk. Mother Hospitals uses this protocol for most patients.</p>
-        <h3>Freeze-All Strategy</h3>
-        <p>In a freeze-all cycle, all embryos are frozen after retrieval rather than performing a fresh transfer. The frozen embryo transfer (FET) occurs in a subsequent prepared cycle. Freeze-all is preferred for women at OHSS risk, those having PGT-A testing, when progesterone rises prematurely, or when the endometrial lining is suboptimal. FET outcomes are generally comparable to fresh transfer.</p>
+        <div data-lang="en">
+          <h2>Understanding IVF Protocols</h2>
+          <p class="section-sub">What each protocol means and who it is best for</p>
+          <p>The IVF protocol is the plan for using fertility medications to stimulate the ovaries, prevent premature ovulation, trigger egg maturation, and prepare the uterus for embryo transfer. The choice of protocol is tailored to each patient based on age, AMH, antral follicle count, and previous IVF history.</p>
+          <h3>Antagonist Protocol — The Most Common</h3>
+          <p>The antagonist protocol is the standard first-line IVF protocol. Stimulation injections start on Day 2-3. An antagonist injection (Cetrorelix or Ganirelix) is added from Day 5-7 to prevent premature ovulation. Total stimulation: 10-12 days. Preferred for PCOS patients, normal responders, and women at OHSS risk. Mother Hospitals uses this protocol for most patients.</p>
+          <h3>Freeze-All Strategy</h3>
+          <p>In a freeze-all cycle, all embryos are frozen after retrieval rather than performing a fresh transfer. The frozen embryo transfer (FET) occurs in a subsequent prepared cycle. Freeze-all is preferred for women at OHSS risk, those having PGT-A testing, when progesterone rises prematurely, or when the endometrial lining is suboptimal. FET outcomes are generally comparable to fresh transfer.</p>
+        </div>
+        <div data-lang="te">
+          <h2>IVF ప్రోటోకాల్స్ అర్థం చేసుకోవడం</h2>
+          <p class="section-sub">ప్రతి ప్రోటోకాల్ ఏమిటో మరియు ఎవరికి అనుకూలమో</p>
+          <p>IVF ప్రోటోకాల్ అంటే ఒవేరీస్ స్టిమ్యులేట్ చేయడానికి, ప్రిమెచ్యూర్ ఒవ్యులేషన్ నివారించడానికి, ఎగ్గ్ మెచ్యురేషన్ ట్రిగర్ చేయడానికి మరియు ఎంబ్రియో ట్రాన్స్‌ఫర్‌కు యూటెరస్ ప్రిపేర్ చేయడానికి ఫెర్టిలిటీ మెడికేషన్స్ ప్లాన్. ప్రోటోకాల్ ఎంపిక వయసు, AMH, ఆంట్రల్ ఫాలికల్ కౌంట్, మరియు మునుపటి IVF హిస్టరీ బేస్డ్‌గా ఉంటుంది.</p>
+          <h3>అంటాగనిస్ట్ ప్రోటోకాల్ — అత్యంత కామన్</h3>
+          <p>అంటాగనిస్ట్ ప్రోటోకాల్ స్టాండర్డ్ ఫస్ట్-లైన్ IVF ప్రోటోకాల్. Day 2-3 న స్టిమ్యులేషన్ ఇంజెక్షన్లు స్టార్ట్ అవుతాయి. Day 5-7 నుండి అంటాగనిస్ట్ ఇంజెక్షన్ (Cetrorelix లేదా Ganirelix) యాడ్ అవుతుంది. టోటల్ స్టిమ్యులేషన్: 10-12 రోజులు. PCOS పేషెంట్లు, OHSS రిస్క్ ఉన్నవారికి ప్రిఫర్డ్. Mother Hospitals లో చాలా పేషెంట్లకు ఈ ప్రోటోకాల్ వాడతారు.</p>
+          <h3>ఫ్రీజ్-ఆల్ స్ట్రాటెజీ</h3>
+          <p>ఫ్రీజ్-ఆల్ సైకిల్‌లో, ఫ్రెష్ ట్రాన్స్‌ఫర్ చేయకుండా రిట్రీవల్ తర్వాత అన్ని ఎంబ్రియోస్ ఫ్రీజ్ చేస్తారు. FET తర్వాతి సైకిల్‌లో జరుగుతుంది. OHSS రిస్క్ ఉన్నవారికి, PGT-A చేయించుకునేవారికి, ప్రొజెస్టెరోన్ ముందే పెరిగినప్పుడు, లేదా ఎండోమెట్రియల్ లైనింగ్ సబ్‌ఆప్టిమల్‌గా ఉన్నప్పుడు ఫ్రీజ్-ఆల్ ప్రిఫర్డ్.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>How long does an IVF cycle take from start to finish?</summary><p>A standard antagonist IVF cycle takes approximately 14-17 days from Day 1 of period to embryo transfer. Including the wait for a pregnancy test, a full cycle is approximately 4-5 weeks. A frozen embryo transfer (FET) cycle adds a preparation phase of 2-4 weeks after the egg retrieval cycle.</p></details>
-          <details><summary>What is the difference between antagonist and long agonist protocols?</summary><p>Antagonist protocol: Stimulation starts Day 2-3, antagonist added Day 5-6 onwards, shorter (12-14 days), preferred for most patients especially those at OHSS risk (PCOS). Long agonist protocol: Starts with down-regulation in the previous cycle (2-4 weeks), then stimulation. More controlled but longer. Preferred for poor responders or patients with endometriosis.</p></details>
-          <details><summary>What is a blastocyst transfer?</summary><p>A blastocyst is an embryo cultured to Day 5 in the laboratory, with about 100-200 cells. Blastocyst transfer has higher implantation rates than Day 3 transfer because only the strongest embryos survive to blastocyst stage. Mother Hospitals prefers blastocyst transfer when sufficient embryos are available.</p></details>
-          <details><summary>What is PGT-A (preimplantation genetic testing)?</summary><p>PGT-A tests embryos for chromosomal abnormalities before transfer. A biopsy is taken from blastocyst stage embryos. Normal (euploid) embryos are frozen and transferred in a subsequent FET cycle. PGT-A significantly improves IVF success rates in women over 37 and those with recurrent implantation failure.</p></details>
-          <details><summary>What happens at the egg retrieval?</summary><p>Egg retrieval (oocyte pick-up / OPU) is performed under sedation. Using transvaginal ultrasound guidance, a thin needle is inserted into each follicle to aspirate the egg. The procedure takes 15-30 minutes. Rest for 24 hours is recommended. Mild cramping and bloating are normal.</p></details>
-          <details><summary>How long after retrieval is the embryo transfer?</summary><p>For a fresh blastocyst transfer: 5-6 days after egg retrieval. For a fresh Day 3 transfer: 3 days after retrieval. For a freeze-all strategy: embryos are frozen after retrieval, and transfer occurs in a subsequent prepared FET cycle, typically 1-2 months later. Freeze-all is preferred for OHSS risk or PGT-A testing.</p></details>
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>How long does an IVF cycle take from start to finish?</summary><p>A standard antagonist IVF cycle takes approximately 14-17 days from Day 1 of period to embryo transfer. Including the wait for a pregnancy test, a full cycle is approximately 4-5 weeks. A frozen embryo transfer (FET) cycle adds a preparation phase of 2-4 weeks after the egg retrieval cycle.</p></details>
+            <details><summary>What is the difference between antagonist and long agonist protocols?</summary><p>Antagonist protocol: Stimulation starts Day 2-3, antagonist added Day 5-6 onwards, shorter (12-14 days), preferred for most patients especially those at OHSS risk (PCOS). Long agonist protocol: Starts with down-regulation in the previous cycle (2-4 weeks), then stimulation. More controlled but longer. Preferred for poor responders or patients with endometriosis.</p></details>
+            <details><summary>What is a blastocyst transfer?</summary><p>A blastocyst is an embryo cultured to Day 5 in the laboratory, with about 100-200 cells. Blastocyst transfer has higher implantation rates than Day 3 transfer because only the strongest embryos survive to blastocyst stage. Mother Hospitals prefers blastocyst transfer when sufficient embryos are available.</p></details>
+            <details><summary>What is PGT-A (preimplantation genetic testing)?</summary><p>PGT-A tests embryos for chromosomal abnormalities before transfer. A biopsy is taken from blastocyst stage embryos. Normal (euploid) embryos are frozen and transferred in a subsequent FET cycle. PGT-A significantly improves IVF success rates in women over 37 and those with recurrent implantation failure.</p></details>
+            <details><summary>What happens at the egg retrieval?</summary><p>Egg retrieval (oocyte pick-up / OPU) is performed under sedation. Using transvaginal ultrasound guidance, a thin needle is inserted into each follicle to aspirate the egg. The procedure takes 15-30 minutes. Rest for 24 hours is recommended. Mild cramping and bloating are normal.</p></details>
+            <details><summary>How long after retrieval is the embryo transfer?</summary><p>For a fresh blastocyst transfer: 5-6 days after egg retrieval. For a fresh Day 3 transfer: 3 days after retrieval. For a freeze-all strategy: embryos are frozen after retrieval, and transfer occurs in a subsequent prepared FET cycle, typically 1-2 months later. Freeze-all is preferred for OHSS risk or PGT-A testing.</p></details>
+          </div>
+        </div>
+        <div data-lang="te">
+          <h2>తరచుగా అడిగే ప్రశ్నలు</h2>
+          <div class="faq-list">
+            <details open><summary>IVF సైకిల్ మొత్తం ఎంత కాలం పడుతుంది?</summary><p>స్టాండర్డ్ అంటాగనిస్ట్ IVF సైకిల్ Day 1 నుండి ఎంబ్రియో ట్రాన్స్‌ఫర్ వరకు దాదాపు 14-17 రోజులు. ప్రెగ్నెన్సీ టెస్ట్ వెయిట్ సహా మొత్తం సైకిల్ దాదాపు 4-5 వారాలు. FET సైకిల్ రిట్రీవల్ తర్వాత మరో 2-4 వారాల ప్రిపరేషన్ ఫేజ్ యాడ్ చేస్తుంది.</p></details>
+            <details><summary>అంటాగనిస్ట్ మరియు లాంగ్ ఆగోనిస్ట్ ప్రోటోకాల్స్ తేడా ఏమిటి?</summary><p>అంటాగనిస్ట్: Day 2-3 స్టిమ్యులేషన్, Day 5-6 నుండి అంటాగనిస్ట్, తక్కువ కాలం (12-14 రోజులు), PCOS మరియు OHSS రిస్క్ పేషెంట్లకు ప్రిఫర్డ్. లాంగ్ ఆగోనిస్ట్: మునుపటి సైకిల్‌లో డౌన్-రెగ్యులేషన్ (2-4 వారాలు), తర్వాత స్టిమ్యులేషన్. ఎక్కువ కంట్రోల్డ్ కానీ నీడుతుంది. పూర్ రెస్పాండర్లు లేదా ఎండోమెట్రియోసిస్ పేషెంట్లకు ప్రిఫర్డ్.</p></details>
+            <details><summary>బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్ అంటే ఏమిటి?</summary><p>బ్లాస్టోసిస్ట్ అంటే Day 5 నాటికి లాబ్‌లో కల్చర్ చేసిన ఎంబ్రియో — దాదాపు 100-200 సెల్స్ ఉంటాయి. Day 3 ట్రాన్స్‌ఫర్ కంటే బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్ హయ్యర్ ఇంప్లాంటేషన్ రేట్స్ ఇస్తుంది ఎందుకంటే అత్యంత బలమైన ఎంబ్రియోస్ మాత్రమే బ్లాస్టోసిస్ట్ వరకు సర్వైవ్ అవుతాయి. Mother Hospitals లో సఫిషియెంట్ ఎంబ్రియోస్ ఉంటే బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్ ప్రిఫర్ చేస్తారు.</p></details>
+            <details><summary>PGT-A (ప్రిఇంప్లాంటేషన్ జెనెటిక్ టెస్టింగ్) అంటే ఏమిటి?</summary><p>PGT-A ట్రాన్స్‌ఫర్ ముందు ఎంబ్రియోస్‌లో క్రోమోజోమల్ అబ్నార్మాలిటీస్ చెక్ చేస్తుంది. బ్లాస్టోసిస్ట్ ఎంబ్రియోస్ నుండి బయాప్సీ తీస్తారు. నార్మల్ (యూప్లాయిడ్) ఎంబ్రియోస్ ఫ్రీజ్ చేసి తర్వాతి FET సైకిల్‌లో ట్రాన్స్‌ఫర్ చేస్తారు. 37 పైన వయసున్నవారికి మరియు రికరెంట్ ఇంప్లాంటేషన్ ఫెయిల్యూర్ ఉన్నవారికి PGT-A సక్సెస్ రేట్స్ గణనీయంగా మెరుగుపరుస్తుంది.</p></details>
+            <details><summary>ఎగ్గ్ రిట్రీవల్ సమయంలో ఏం జరుగుతుంది?</summary><p>ఎగ్గ్ రిట్రీవల్ (OPU) సెడేషన్‌లో జరుగుతుంది. ట్రాన్స్‌వెజైనల్ అల్ట్రాసౌండ్ గైడెన్స్‌తో ఒక్కో ఫాలికల్‌లోకి నీడిల్ ఇన్సర్ట్ చేసి ఎగ్గ్ ఆస్పిరేట్ చేస్తారు. 15-30 నిమిషాలు పడుతుంది. 24 గంటలు రెస్ట్ అవసరం. మైల్డ్ క్రాంపింగ్ మరియు బ్లోటింగ్ నార్మల్.</p></details>
+            <details><summary>రిట్రీవల్ తర్వాత ఎంత కాలానికి ఎంబ్రియో ట్రాన్స్‌ఫర్ జరుగుతుంది?</summary><p>ఫ్రెష్ బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్: రిట్రీవల్ తర్వాత 5-6 రోజులకు. ఫ్రెష్ Day 3 ట్రాన్స్‌ఫర్: 3 రోజులకు. ఫ్రీజ్-ఆల్ స్ట్రాటెజీ: ఎంబ్రియోస్ ఫ్రీజ్ చేసి, తర్వాతి ప్రిపేర్డ్ FET సైకిల్‌లో — సాధారణంగా 1-2 నెలల తర్వాత — ట్రాన్స్‌ఫర్ చేస్తారు. OHSS రిస్క్ లేదా PGT-A చేయించుకునేవారికి ఫ్రీజ్-ఆల్ ప్రిఫర్డ్.</p></details>
+          </div>
         </div>
       </section>
     </div>
@@ -337,82 +361,271 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT={
+  en:{
+    planner_title:'📋 IVF Timeline Planner',
+    planner_intro:'Select your protocol and the first day of your period (Day 1) to generate your personalised IVF schedule. Timings are estimates — your doctor will adjust based on monitoring.',
+    label_protocol:'IVF Protocol',
+    opt_antagonist:'Antagonist Protocol (most common)',opt_long:'Long Agonist Protocol',opt_fet:'Frozen Embryo Transfer (FET)',opt_mini:'Mini-IVF (Minimal Stimulation)',
+    label_cycle_start:'Day 1 of Period (Cycle Start)',
+    label_blasto:'Blastocyst culture (Day 5 transfer)',
+    label_pgta:'PGT-A (genetic testing of embryos)',
+    btn_gen:'Generate My IVF Timeline →',
+    btn_reset:'↩ Reset',
+    disclaimer_text:'⚕️ This timeline is an estimate based on typical protocol timings. Your actual schedule will be adjusted by Dr. Prashanthi Reddy based on your ultrasound monitoring and blood test results. Always follow your clinic\'s specific instructions.',
+    alert_date:'Please enter your cycle start date (Day 1 of period).',
+    day_label:'Day',day_pre:'Pre-cycle Day',
+    ph_baseline:'BASELINE',ph_stim:'STIMULATION',ph_monitor:'MONITORING',ph_trigger:'TRIGGER',ph_retrieval:'RETRIEVAL',ph_lab:'LAB',ph_transfer:'TRANSFER',ph_pgta:'PGT-A',ph_test:'PREGNANCY TEST',
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'IVF Timeline Planner —',hero_h1_em:'Day-by-Day IVF Schedule',
+    hero_sub:'Select your IVF protocol and cycle start date to generate a personalised day-by-day IVF timeline with dates, phases, and descriptions for each step. Free — no sign-up required.',
+    btn_call:'📞 Book Consultation: 97059 93366',btn_wa:'💬 WhatsApp Us'
+  },
+  te:{
+    planner_title:'📋 IVF టైమ్‌లైన్ ప్లానర్',
+    planner_intro:'మీ ప్రోటోకాల్ మరియు పీరియడ్ మొదటి రోజు (Day 1) ఎంచుకోండి — పర్సనలైజ్డ్ IVF షెడ్యూల్ జెనరేట్ చేయడానికి. టైమింగ్స్ ఎస్టిమేట్లు — మీ డాక్టర్ మానిటరింగ్ బేస్డ్‌గా అడ్జస్ట్ చేస్తారు.',
+    label_protocol:'IVF ప్రోటోకాల్',
+    opt_antagonist:'అంటాగనిస్ట్ ప్రోటోకాల్ (అత్యంత కామన్)',opt_long:'లాంగ్ ఆగోనిస్ట్ ప్రోటోకాల్',opt_fet:'ఫ్రోజెన్ ఎంబ్రియో ట్రాన్స్‌ఫర్ (FET)',opt_mini:'మినీ-IVF (మినిమల్ స్టిమ్యులేషన్)',
+    label_cycle_start:'పీరియడ్ మొదటి రోజు (Day 1)',
+    label_blasto:'బ్లాస్టోసిస్ట్ కల్చర్ (Day 5 ట్రాన్స్‌ఫర్)',
+    label_pgta:'PGT-A (ఎంబ్రియో జెనెటిక్ టెస్టింగ్)',
+    btn_gen:'నా IVF టైమ్‌లైన్ జెనరేట్ చేయండి →',
+    btn_reset:'↩ రీసెట్',
+    disclaimer_text:'⚕️ ఈ టైమ్‌లైన్ సాధారణ ప్రోటోకాల్ టైమింగ్స్ ఆధారంగా ఒక అంచనా మాత్రమే. మీ అసలు షెడ్యూల్ అల్ట్రాసౌండ్ మానిటరింగ్ మరియు బ్లడ్ టెస్ట్ రిజల్ట్స్ ఆధారంగా Dr. Prashanthi Reddy అడ్జస్ట్ చేస్తారు. క్లినిక్ ఇన్‌స్ట్రక్షన్స్ ఫాలో చేయండి.',
+    alert_date:'దయచేసి మీ సైకిల్ స్టార్ట్ డేట్ (పీరియడ్ Day 1) ఎంటర్ చేయండి.',
+    day_label:'రోజు',day_pre:'ముందు రోజు',
+    ph_baseline:'బేస్‌లైన్',ph_stim:'స్టిమ్యులేషన్',ph_monitor:'మానిటరింగ్',ph_trigger:'ట్రిగర్',ph_retrieval:'రిట్రీవల్',ph_lab:'లాబ్',ph_transfer:'ట్రాన్స్‌ఫర్',ph_pgta:'PGT-A',ph_test:'ప్రెగ్నెన్సీ టెస్ట్',
+    hero_badge:'ఫ్రీ ఫెర్టిలిటీ టూల్ · Mother Hospitals హైదరాబాద్',
+    hero_h1:'IVF టైమ్‌లైన్ ప్లానర్ —',hero_h1_em:'రోజువారీ IVF షెడ్యూల్',
+    hero_sub:'మీ IVF ప్రోటోకాల్ మరియు సైకిల్ స్టార్ట్ డేట్ ఎంచుకోండి — పర్సనలైజ్డ్ రోజువారీ IVF టైమ్‌లైన్, డేట్స్, ఫేజ్‌లు మరియు ప్రతి స్టెప్ డిస్క్రిప్షన్ తెలుసుకోండి. ఫ్రీ — సైన్-అప్ అవసరం లేదు.',
+    btn_call:'📞 కన్సల్టేషన్ బుక్ చేయండి: 97059 93366',btn_wa:'💬 WhatsApp చేయండి'
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
+
+let _lastTimelineArgs=null;
 
 function buildTimeline(){
   const protocol=document.getElementById('protocol').value;
   const dateVal=document.getElementById('cycleStart').value;
   const blasto=document.getElementById('blasto').checked;
   const pgta=document.getElementById('pgta').checked;
-  if(!dateVal){alert('Please enter your cycle start date (Day 1 of period).');return;}
+  if(!dateVal){alert(t('alert_date'));return;}
+  _lastTimelineArgs={protocol,dateVal,blasto,pgta};
+  _renderTimeline(protocol,dateVal,blasto,pgta);
+}
+
+function _renderTimeline(protocol,dateVal,blasto,pgta){
   const d1=new Date(dateVal);
+  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
 
   let events=[];
   if(protocol==='antagonist'){
     events=[
-      {day:1,date:d1,phase:'baseline',pb:'baseline',event:'Day 1 — Baseline Assessment',desc:'Period starts. Call clinic. Baseline ultrasound and blood tests (AMH, FSH, LH, E2). Protocol confirmed.'},
-      {day:2,date:addDays(d1,1),phase:'stim',pb:'stim',event:'Day 2 — Stimulation Begins',desc:'Start FSH/HMG injections (Gonal-F, Menopur, or Puregon). Dose determined by AMH and body weight.'},
-      {day:5,date:addDays(d1,4),phase:'monitor',pb:'monitor',event:'Day 5 — First Monitoring Scan',desc:'Transvaginal ultrasound to count follicles and measure sizes. Blood E2 level checked. Dose may be adjusted.'},
-      {day:6,date:addDays(d1,5),phase:'stim',pb:'stim',event:'Day 6 — Antagonist Injection Added',desc:'Start Cetrorelix (Cetrotide) or Ganirelix (Orgalutran) 0.25mg daily to prevent premature LH surge.'},
-      {day:8,date:addDays(d1,7),phase:'monitor',pb:'monitor',event:'Day 8 — Second Monitoring Scan',desc:'Follicle growth monitored. Leading follicles should be 12-15mm. Stimulation dose may be adjusted.'},
-      {day:10,date:addDays(d1,9),phase:'monitor',pb:'monitor',event:'Day 10 — Third Monitoring Scan',desc:'Leading follicles typically 17-19mm. Finalise trigger timing. Continue antagonist.'},
-      {day:11,date:addDays(d1,10),phase:'trigger',pb:'trigger',event:'Day 11 — Trigger Injection',desc:'hCG (Ovitrelle) or GnRH agonist (Lupride) trigger given at a precise time (usually 10pm). This matures the eggs.'},
-      {day:13,date:addDays(d1,12),phase:'retrieval',pb:'retrieval',event:'Day 13 — Egg Retrieval (OPU)',desc:'Eggs retrieved under sedation 36 hours after trigger. Typically takes 20-30 minutes. Rest for 24 hours.'},
-      {day:13,date:addDays(d1,12),phase:'lab',pb:'lab',event:'Day 13 — Fertilisation (ICSI)',desc:'Eggs are fertilised using ICSI (single sperm injected into each egg). Fertilisation confirmed next morning.'},
+      {day:1,date:d1,phase:'baseline',
+       event:'Day 1 — Baseline Assessment',event_te:'Day 1 — బేస్‌లైన్ అసెస్‌మెంట్',
+       desc:'Period starts. Call clinic. Baseline ultrasound and blood tests (AMH, FSH, LH, E2). Protocol confirmed.',
+       desc_te:'పీరియడ్ స్టార్ట్ అయింది. క్లినిక్‌కు కాల్ చేయండి. బేస్‌లైన్ అల్ట్రాసౌండ్ మరియు బ్లడ్ టెస్ట్స్ (AMH, FSH, LH, E2). ప్రోటోకాల్ కన్ఫర్మ్ అవుతుంది.'},
+      {day:2,date:addDays(d1,1),phase:'stim',
+       event:'Day 2 — Stimulation Begins',event_te:'Day 2 — స్టిమ్యులేషన్ మొదలవుతుంది',
+       desc:'Start FSH/HMG injections (Gonal-F, Menopur, or Puregon). Dose determined by AMH and body weight.',
+       desc_te:'FSH/HMG ఇంజెక్షన్లు (Gonal-F, Menopur, లేదా Puregon) స్టార్ట్. డోస్ AMH మరియు బాడీ వెయిట్ బేస్డ్‌గా నిర్ణయించబడుతుంది.'},
+      {day:5,date:addDays(d1,4),phase:'monitor',
+       event:'Day 5 — First Monitoring Scan',event_te:'Day 5 — మొదటి మానిటరింగ్ స్కాన్',
+       desc:'Transvaginal ultrasound to count follicles and measure sizes. Blood E2 level checked. Dose may be adjusted.',
+       desc_te:'ఫాలికల్స్ కౌంట్ మరియు సైజ్ చెక్ కోసం ట్రాన్స్‌వెజైనల్ అల్ట్రాసౌండ్. బ్లడ్ E2 లెవల్ చెక్. డోస్ అడ్జస్ట్ అవ్వవచ్చు.'},
+      {day:6,date:addDays(d1,5),phase:'stim',
+       event:'Day 6 — Antagonist Injection Added',event_te:'Day 6 — అంటాగనిస్ట్ ఇంజెక్షన్ యాడ్',
+       desc:'Start Cetrorelix (Cetrotide) or Ganirelix (Orgalutran) 0.25mg daily to prevent premature LH surge.',
+       desc_te:'Cetrorelix లేదా Ganirelix 0.25mg రోజూ స్టార్ట్ — ప్రిమెచ్యూర్ LH surge నివారించడానికి.'},
+      {day:8,date:addDays(d1,7),phase:'monitor',
+       event:'Day 8 — Second Monitoring Scan',event_te:'Day 8 — రెండవ మానిటరింగ్ స్కాన్',
+       desc:'Follicle growth monitored. Leading follicles should be 12-15mm. Stimulation dose may be adjusted.',
+       desc_te:'ఫాలికల్ గ్రోత్ మానిటర్. లీడింగ్ ఫాలికల్స్ 12-15mm ఉండాలి. స్టిమ్ డోస్ అడ్జస్ట్ కావచ్చు.'},
+      {day:10,date:addDays(d1,9),phase:'monitor',
+       event:'Day 10 — Third Monitoring Scan',event_te:'Day 10 — మూడవ మానిటరింగ్ స్కాన్',
+       desc:'Leading follicles typically 17-19mm. Finalise trigger timing. Continue antagonist.',
+       desc_te:'లీడింగ్ ఫాలికల్స్ సాధారణంగా 17-19mm. ట్రిగర్ టైమింగ్ ఫైనలైజ్. అంటాగనిస్ట్ కంటిన్యూ.'},
+      {day:11,date:addDays(d1,10),phase:'trigger',
+       event:'Day 11 — Trigger Injection',event_te:'Day 11 — ట్రిగర్ ఇంజెక్షన్',
+       desc:'hCG (Ovitrelle) or GnRH agonist (Lupride) trigger given at a precise time (usually 10pm). This matures the eggs.',
+       desc_te:'hCG (Ovitrelle) లేదా GnRH agonist (Lupride) ట్రిగర్ ఖచ్చితమైన సమయంలో (సాధారణంగా రాత్రి 10 గంటలకు). ఎగ్గ్స్ మెచ్యూర్ అవుతాయి.'},
+      {day:13,date:addDays(d1,12),phase:'retrieval',
+       event:'Day 13 — Egg Retrieval (OPU)',event_te:'Day 13 — ఎగ్గ్ రిట్రీవల్ (OPU)',
+       desc:'Eggs retrieved under sedation 36 hours after trigger. Typically takes 20-30 minutes. Rest for 24 hours.',
+       desc_te:'సెడేషన్‌లో ఎగ్గ్స్ రిట్రీవ్ — ట్రిగర్ తర్వాత 36 గంటలకు. 20-30 నిమిషాలు పడుతుంది. 24 గంటలు రెస్ట్.'},
+      {day:13,date:addDays(d1,12),phase:'lab',
+       event:'Day 13 — Fertilisation (ICSI)',event_te:'Day 13 — ఫెర్టిలైజేషన్ (ICSI)',
+       desc:'Eggs are fertilised using ICSI (single sperm injected into each egg). Fertilisation confirmed next morning.',
+       desc_te:'ICSI ద్వారా ఎగ్గ్స్ ఫెర్టిలైజ్ (ఒక్కో ఎగ్గ్‌లో ఒక స్పర్మ్ ఇంజెక్ట్). తర్వాతి ఉదయం ఫెర్టిలైజేషన్ కన్ఫర్మ్ అవుతుంది.'},
     ];
     if(blasto&&!pgta){
-      events.push({day:18,date:addDays(d1,17),phase:'transfer',pb:'transfer',event:'Day 18 — Fresh Blastocyst Transfer',desc:'Best quality blastocyst(s) transferred into the uterus under ultrasound guidance. Painless — like a cervical smear. Luteal support (progesterone) begins.'});
-      events.push({day:32,date:addDays(d1,31),phase:'test',pb:'test',event:'Day 32 — Pregnancy Test (Beta hCG)',desc:'Blood pregnancy test (serum beta hCG). Positive result (>25 mIU/mL) indicates pregnancy. An ultrasound is booked at 7 weeks.'});
+      events.push({day:18,date:addDays(d1,17),phase:'transfer',
+        event:'Day 18 — Fresh Blastocyst Transfer',event_te:'Day 18 — ఫ్రెష్ బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్',
+        desc:'Best quality blastocyst(s) transferred into the uterus under ultrasound guidance. Painless — like a cervical smear. Luteal support (progesterone) begins.',
+        desc_te:'అల్ట్రాసౌండ్ గైడెన్స్‌తో అత్యుత్తమ బ్లాస్టోసిస్ట్ యూటెరస్‌లో ట్రాన్స్‌ఫర్. నొప్పి లేదు — సర్వికల్ స్మీర్ లాగే. లుటల్ సపోర్ట్ (ప్రొజెస్టెరోన్) మొదలవుతుంది.'});
+      events.push({day:32,date:addDays(d1,31),phase:'test',
+        event:'Day 32 — Pregnancy Test (Beta hCG)',event_te:'Day 32 — ప్రెగ్నెన్సీ టెస్ట్ (Beta hCG)',
+        desc:'Blood pregnancy test (serum beta hCG). Positive result (>25 mIU/mL) indicates pregnancy. An ultrasound is booked at 7 weeks.',
+        desc_te:'బ్లడ్ ప్రెగ్నెన్సీ టెస్ట్ (సీరమ్ బేటా hCG). పాజిటివ్ (>25 mIU/mL) ప్రెగ్నెన్సీ కన్ఫర్మ్. 7 వారాలకు అల్ట్రాసౌండ్ బుక్.'});
     } else if(pgta){
-      events.push({day:18,date:addDays(d1,17),phase:'pgta',pb:'pgta',event:'Day 18 — Embryo Biopsy for PGT-A',desc:'Blastocyst embryos biopsied for chromosomal analysis. All embryos frozen (freeze-all strategy). Results take 10-14 days.'});
-      events.push({day:32,date:addDays(d1,31),phase:'pgta',pb:'pgta',event:'Day 32 — PGT-A Results',desc:'Euploid (chromosomally normal) embryos identified. FET cycle planning begins.'});
-      events.push({day:45,date:addDays(d1,44),phase:'transfer',pb:'transfer',event:'Day 45 — Frozen Embryo Transfer (FET)',desc:'Prepared FET cycle: best euploid embryo transferred after endometrial preparation with oestrogen and progesterone.'});
-      events.push({day:59,date:addDays(d1,58),phase:'test',pb:'test',event:'Day 59 — Pregnancy Test (Beta hCG)',desc:'Blood pregnancy test. A positive result triggers booking of the 7-week viability scan.'});
+      events.push({day:18,date:addDays(d1,17),phase:'pgta',
+        event:'Day 18 — Embryo Biopsy for PGT-A',event_te:'Day 18 — PGT-A కోసం ఎంబ్రియో బయాప్సీ',
+        desc:'Blastocyst embryos biopsied for chromosomal analysis. All embryos frozen (freeze-all strategy). Results take 10-14 days.',
+        desc_te:'బ్లాస్టోసిస్ట్ ఎంబ్రియోస్ క్రోమోజోమల్ అనాలిసిస్ కోసం బయాప్సీ. అన్ని ఎంబ్రియోస్ ఫ్రీజ్ (ఫ్రీజ్-ఆల్). రిజల్ట్స్ 10-14 రోజుల్లో వస్తాయి.'});
+      events.push({day:32,date:addDays(d1,31),phase:'pgta',
+        event:'Day 32 — PGT-A Results',event_te:'Day 32 — PGT-A రిజల్ట్స్',
+        desc:'Euploid (chromosomally normal) embryos identified. FET cycle planning begins.',
+        desc_te:'యూప్లాయిడ్ (క్రోమోజోమల్లీ నార్మల్) ఎంబ్రియోస్ ఐడెంటిఫై అవుతాయి. FET సైకిల్ ప్లానింగ్ స్టార్ట్.'});
+      events.push({day:45,date:addDays(d1,44),phase:'transfer',
+        event:'Day 45 — Frozen Embryo Transfer (FET)',event_te:'Day 45 — ఫ్రోజెన్ ఎంబ్రియో ట్రాన్స్‌ఫర్ (FET)',
+        desc:'Prepared FET cycle: best euploid embryo transferred after endometrial preparation with oestrogen and progesterone.',
+        desc_te:'ప్రిపేర్డ్ FET సైకిల్: యూప్లాయిడ్ ఎంబ్రియో ఈస్ట్రోజెన్ మరియు ప్రొజెస్టెరోన్‌తో ఎండోమెట్రియల్ ప్రిపరేషన్ తర్వాత ట్రాన్స్‌ఫర్.'});
+      events.push({day:59,date:addDays(d1,58),phase:'test',
+        event:'Day 59 — Pregnancy Test (Beta hCG)',event_te:'Day 59 — ప్రెగ్నెన్సీ టెస్ట్ (Beta hCG)',
+        desc:'Blood pregnancy test. A positive result triggers booking of the 7-week viability scan.',
+        desc_te:'బ్లడ్ ప్రెగ్నెన్సీ టెస్ట్. పాజిటివ్ రిజల్ట్ వస్తే 7-వారాల స్కాన్ బుక్ చేస్తారు.'});
     } else {
-      events.push({day:16,date:addDays(d1,15),phase:'transfer',pb:'transfer',event:'Day 16 — Fresh Day 3 Transfer',desc:'Best quality Day 3 embryos transferred. Luteal support (progesterone suppositories) starts immediately.'});
-      events.push({day:30,date:addDays(d1,29),phase:'test',pb:'test',event:'Day 30 — Pregnancy Test (Beta hCG)',desc:'Blood pregnancy test (serum beta hCG). Positive result (>25 mIU/mL) indicates pregnancy.'});
+      events.push({day:16,date:addDays(d1,15),phase:'transfer',
+        event:'Day 16 — Fresh Day 3 Transfer',event_te:'Day 16 — ఫ్రెష్ Day 3 ట్రాన్స్‌ఫర్',
+        desc:'Best quality Day 3 embryos transferred. Luteal support (progesterone suppositories) starts immediately.',
+        desc_te:'అత్యుత్తమ Day 3 ఎంబ్రియోస్ ట్రాన్స్‌ఫర్. లుటల్ సపోర్ట్ (ప్రొజెస్టెరోన్ సప్పోజిటరీస్) వెంటనే స్టార్ట్.'});
+      events.push({day:30,date:addDays(d1,29),phase:'test',
+        event:'Day 30 — Pregnancy Test (Beta hCG)',event_te:'Day 30 — ప్రెగ్నెన్సీ టెస్ట్ (Beta hCG)',
+        desc:'Blood pregnancy test (serum beta hCG). Positive result (>25 mIU/mL) indicates pregnancy.',
+        desc_te:'బ్లడ్ ప్రెగ్నెన్సీ టెస్ట్ (సీరమ్ బేటా hCG). పాజిటివ్ (>25 mIU/mL) ప్రెగ్నెన్సీ కన్ఫర్మ్.'});
     }
   } else if(protocol==='long'){
     events=[
-      {day:-14,date:addDays(d1,-14),phase:'stim',pb:'stim',event:'Day -14 — Down-regulation Begins (Previous Cycle)',desc:'Start Lupride (Leuprolide) or Buserelin nasal spray in Day 21 of previous cycle to suppress pituitary.'},
-      {day:1,date:d1,phase:'baseline',pb:'baseline',event:'Day 1 — Baseline Assessment',desc:'Period starts. Baseline ultrasound confirms down-regulation (thin lining, quiet ovaries). Blood E2 checked.'},
-      {day:2,date:addDays(d1,1),phase:'stim',pb:'stim',event:'Day 2 — Stimulation Begins',desc:'Start FSH/HMG injections while continuing low-dose Lupride. Higher doses often needed than antagonist protocol.'},
-      {day:7,date:addDays(d1,6),phase:'monitor',pb:'monitor',event:'Day 7 — Monitoring Scan',desc:'Follicle growth assessed. Leading follicles should be 10-13mm. Dose adjusted if needed.'},
-      {day:10,date:addDays(d1,9),phase:'monitor',pb:'monitor',event:'Day 10 — Monitoring Scan',desc:'Leading follicles typically 15-18mm. Trigger timing planned.'},
-      {day:12,date:addDays(d1,11),phase:'trigger',pb:'trigger',event:'Day 12 — Trigger Injection',desc:'hCG trigger given at precise time (36 hours before retrieval).'},
-      {day:14,date:addDays(d1,13),phase:'retrieval',pb:'retrieval',event:'Day 14 — Egg Retrieval',desc:'Egg retrieval under sedation. Fertilisation by ICSI.'},
-      {day:19,date:addDays(d1,18),phase:'transfer',pb:'transfer',event:'Day 19 — Blastocyst Transfer',desc:'Fresh blastocyst transfer on Day 5 after retrieval. Luteal support begins.'},
-      {day:33,date:addDays(d1,32),phase:'test',pb:'test',event:'Day 33 — Pregnancy Test',desc:'Serum beta hCG blood test. Positive result triggers 7-week scan booking.'},
+      {day:-14,date:addDays(d1,-14),phase:'stim',
+       event:'Day -14 — Down-regulation Begins (Previous Cycle)',event_te:'Day -14 — డౌన్-రెగ్యులేషన్ మొదలవుతుంది (మునుపటి సైకిల్)',
+       desc:'Start Lupride (Leuprolide) or Buserelin nasal spray in Day 21 of previous cycle to suppress pituitary.',
+       desc_te:'మునుపటి సైకిల్ Day 21 లో Lupride (Leuprolide) లేదా Buserelin నేజల్ స్ప్రే స్టార్ట్ — పిట్యూటరీ సప్రెస్ చేయడానికి.'},
+      {day:1,date:d1,phase:'baseline',
+       event:'Day 1 — Baseline Assessment',event_te:'Day 1 — బేస్‌లైన్ అసెస్‌మెంట్',
+       desc:'Period starts. Baseline ultrasound confirms down-regulation (thin lining, quiet ovaries). Blood E2 checked.',
+       desc_te:'పీరియడ్ స్టార్ట్. బేస్‌లైన్ అల్ట్రాసౌండ్ డౌన్-రెగ్యులేషన్ కన్ఫర్మ్ చేస్తుంది (తక్కువ లైనింగ్, క్వైయెట్ ఒవేరీస్). బ్లడ్ E2 చెక్.'},
+      {day:2,date:addDays(d1,1),phase:'stim',
+       event:'Day 2 — Stimulation Begins',event_te:'Day 2 — స్టిమ్యులేషన్ మొదలవుతుంది',
+       desc:'Start FSH/HMG injections while continuing low-dose Lupride. Higher doses often needed than antagonist protocol.',
+       desc_te:'లో-డోస్ Lupride కంటిన్యూ చేస్తూ FSH/HMG ఇంజెక్షన్లు స్టార్ట్. అంటాగనిస్ట్ ప్రోటోకాల్ కంటే హయ్యర్ డోసెస్ కావాలి.'},
+      {day:7,date:addDays(d1,6),phase:'monitor',
+       event:'Day 7 — Monitoring Scan',event_te:'Day 7 — మానిటరింగ్ స్కాన్',
+       desc:'Follicle growth assessed. Leading follicles should be 10-13mm. Dose adjusted if needed.',
+       desc_te:'ఫాలికల్ గ్రోత్ అసెస్. లీడింగ్ ఫాలికల్స్ 10-13mm ఉండాలి. అవసరమైతే డోస్ అడ్జస్ట్.'},
+      {day:10,date:addDays(d1,9),phase:'monitor',
+       event:'Day 10 — Monitoring Scan',event_te:'Day 10 — మానిటరింగ్ స్కాన్',
+       desc:'Leading follicles typically 15-18mm. Trigger timing planned.',
+       desc_te:'లీడింగ్ ఫాలికల్స్ సాధారణంగా 15-18mm. ట్రిగర్ టైమింగ్ ప్లాన్.'},
+      {day:12,date:addDays(d1,11),phase:'trigger',
+       event:'Day 12 — Trigger Injection',event_te:'Day 12 — ట్రిగర్ ఇంజెక్షన్',
+       desc:'hCG trigger given at precise time (36 hours before retrieval).',
+       desc_te:'hCG ట్రిగర్ ఖచ్చితమైన సమయంలో ఇస్తారు (రిట్రీవల్‌కు 36 గంటల ముందు).'},
+      {day:14,date:addDays(d1,13),phase:'retrieval',
+       event:'Day 14 — Egg Retrieval',event_te:'Day 14 — ఎగ్గ్ రిట్రీవల్',
+       desc:'Egg retrieval under sedation. Fertilisation by ICSI.',
+       desc_te:'సెడేషన్‌లో ఎగ్గ్ రిట్రీవల్. ICSI ద్వారా ఫెర్టిలైజేషన్.'},
+      {day:19,date:addDays(d1,18),phase:'transfer',
+       event:'Day 19 — Blastocyst Transfer',event_te:'Day 19 — బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్',
+       desc:'Fresh blastocyst transfer on Day 5 after retrieval. Luteal support begins.',
+       desc_te:'రిట్రీవల్ తర్వాత Day 5 న ఫ్రెష్ బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్. లుటల్ సపోర్ట్ మొదలవుతుంది.'},
+      {day:33,date:addDays(d1,32),phase:'test',
+       event:'Day 33 — Pregnancy Test',event_te:'Day 33 — ప్రెగ్నెన్సీ టెస్ట్',
+       desc:'Serum beta hCG blood test. Positive result triggers 7-week scan booking.',
+       desc_te:'సీరమ్ బేటా hCG బ్లడ్ టెస్ట్. పాజిటివ్ రిజల్ట్ వస్తే 7-వారాల స్కాన్ బుక్.'},
     ];
   } else if(protocol==='fet'){
     events=[
-      {day:1,date:d1,phase:'baseline',pb:'baseline',event:'Day 1 — FET Cycle Begins',desc:'Period Day 1. Call clinic. Baseline scan confirms thin lining. Oestrogen tablets (Progynova) started.'},
-      {day:2,date:addDays(d1,1),phase:'stim',pb:'stim',event:'Day 2 — Oestrogen Preparation',desc:'Oestrogen tablets 2-6mg/day to grow the endometrial lining. Continue for 10-12 days.'},
-      {day:10,date:addDays(d1,9),phase:'monitor',pb:'monitor',event:'Day 10 — Lining Check Scan',desc:'Endometrial thickness measured. Target: 8-12mm trilaminar pattern. If adequate, progesterone start date confirmed.'},
-      {day:13,date:addDays(d1,12),phase:'stim',pb:'stim',event:'Day 13 — Progesterone Begins',desc:'Progesterone suppositories (Crinone, Utrogestan) or injections started. Lining becomes receptive after 5-6 days.'},
-      {day:18,date:addDays(d1,17),phase:'transfer',pb:'transfer',event:blasto?'Day 18 — Frozen Blastocyst Transfer (FET)':'Day 16 — Frozen Day 3 Transfer (FET)',desc:'Thawed embryo transferred under ultrasound guidance. Continue oestrogen and progesterone as luteal support.'},
-      {day:32,date:addDays(d1,31),phase:'test',pb:'test',event:'Day 32 — Pregnancy Test (Beta hCG)',desc:'Serum beta hCG blood test. Positive result (>25 mIU/mL) confirms pregnancy. Luteal support continues until 12 weeks.'},
+      {day:1,date:d1,phase:'baseline',
+       event:'Day 1 — FET Cycle Begins',event_te:'Day 1 — FET సైకిల్ మొదలవుతుంది',
+       desc:'Period Day 1. Call clinic. Baseline scan confirms thin lining. Oestrogen tablets (Progynova) started.',
+       desc_te:'పీరియడ్ Day 1. క్లినిక్‌కు కాల్. బేస్‌లైన్ స్కాన్ తక్కువ లైనింగ్ కన్ఫర్మ్. ఈస్ట్రోజెన్ టాబ్లెట్స్ (Progynova) స్టార్ట్.'},
+      {day:2,date:addDays(d1,1),phase:'stim',
+       event:'Day 2 — Oestrogen Preparation',event_te:'Day 2 — ఈస్ట్రోజెన్ ప్రిపరేషన్',
+       desc:'Oestrogen tablets 2-6mg/day to grow the endometrial lining. Continue for 10-12 days.',
+       desc_te:'ఎండోమెట్రియల్ లైనింగ్ పెంచడానికి ఈస్ట్రోజెన్ టాబ్లెట్స్ 2-6mg/రోజు. 10-12 రోజులు కంటిన్యూ.'},
+      {day:10,date:addDays(d1,9),phase:'monitor',
+       event:'Day 10 — Lining Check Scan',event_te:'Day 10 — లైనింగ్ చెక్ స్కాన్',
+       desc:'Endometrial thickness measured. Target: 8-12mm trilaminar pattern. If adequate, progesterone start date confirmed.',
+       desc_te:'ఎండోమెట్రియల్ థిక్‌నెస్ మెజర్మెంట్. టార్గెట్: 8-12mm ట్రైలామినార్ పాటర్న్. అడిక్వేట్ అయితే ప్రొజెస్టెరోన్ స్టార్ట్ డేట్ కన్ఫర్మ్.'},
+      {day:13,date:addDays(d1,12),phase:'stim',
+       event:'Day 13 — Progesterone Begins',event_te:'Day 13 — ప్రొజెస్టెరోన్ మొదలవుతుంది',
+       desc:'Progesterone suppositories (Crinone, Utrogestan) or injections started. Lining becomes receptive after 5-6 days.',
+       desc_te:'ప్రొజెస్టెరోన్ సప్పోజిటరీస్ (Crinone, Utrogestan) లేదా ఇంజెక్షన్లు స్టార్ట్. 5-6 రోజుల తర్వాత లైనింగ్ రిసెప్టివ్ అవుతుంది.'},
+      {day:18,date:addDays(d1,17),phase:'transfer',
+       event:blasto?'Day 18 — Frozen Blastocyst Transfer (FET)':'Day 16 — Frozen Day 3 Transfer (FET)',
+       event_te:blasto?'Day 18 — ఫ్రోజెన్ బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్ (FET)':'Day 16 — ఫ్రోజెన్ Day 3 ట్రాన్స్‌ఫర్ (FET)',
+       desc:'Thawed embryo transferred under ultrasound guidance. Continue oestrogen and progesterone as luteal support.',
+       desc_te:'థాఓడ్ ఎంబ్రియో అల్ట్రాసౌండ్ గైడెన్స్‌తో ట్రాన్స్‌ఫర్. ఈస్ట్రోజెన్ మరియు ప్రొజెస్టెరోన్ లుటల్ సపోర్ట్‌గా కంటిన్యూ.'},
+      {day:32,date:addDays(d1,31),phase:'test',
+       event:'Day 32 — Pregnancy Test (Beta hCG)',event_te:'Day 32 — ప్రెగ్నెన్సీ టెస్ట్ (Beta hCG)',
+       desc:'Serum beta hCG blood test. Positive result (>25 mIU/mL) confirms pregnancy. Luteal support continues until 12 weeks.',
+       desc_te:'సీరమ్ బేటా hCG బ్లడ్ టెస్ట్. పాజిటివ్ (>25 mIU/mL) ప్రెగ్నెన్సీ కన్ఫర్మ్. 12 వారాల వరకు లుటల్ సపోర్ట్ కంటిన్యూ.'},
     ];
   } else { // mini-IVF
     events=[
-      {day:1,date:d1,phase:'baseline',pb:'baseline',event:'Day 1 — Baseline Assessment',desc:'Period starts. Baseline ultrasound. Mini-IVF uses low-dose oral clomiphene plus low-dose FSH injections.'},
-      {day:3,date:addDays(d1,2),phase:'stim',pb:'stim',event:'Day 3 — Clomiphene + Low-dose FSH',desc:'Clomiphene citrate (50-100mg) Days 3-7, plus small-dose FSH injections. Aims for 2-4 mature follicles.'},
-      {day:7,date:addDays(d1,6),phase:'monitor',pb:'monitor',event:'Day 7 — Monitoring Scan',desc:'Follicle count and size checked. Typically 2-4 follicles expected. Dose may be adjusted.'},
-      {day:10,date:addDays(d1,9),phase:'monitor',pb:'monitor',event:'Day 10 — Pre-trigger Scan',desc:'Leading follicles 18-20mm. Trigger timing determined.'},
-      {day:11,date:addDays(d1,10),phase:'trigger',pb:'trigger',event:'Day 11 — Trigger Injection',desc:'hCG or GnRH agonist trigger. Retrieval planned 36 hours later.'},
-      {day:13,date:addDays(d1,12),phase:'retrieval',pb:'retrieval',event:'Day 13 — Egg Retrieval',desc:'Fewer eggs expected (typically 2-5) but high-quality. ICSI fertilisation performed.'},
-      {day:18,date:addDays(d1,17),phase:'transfer',pb:'transfer',event:'Day 18 — Blastocyst Transfer',desc:'Best quality blastocyst transferred. Progesterone support begins.'},
-      {day:32,date:addDays(d1,31),phase:'test',pb:'test',event:'Day 32 — Pregnancy Test',desc:'Serum beta hCG blood test. Multiple cycles may be needed with mini-IVF to accumulate enough embryos.'},
+      {day:1,date:d1,phase:'baseline',
+       event:'Day 1 — Baseline Assessment',event_te:'Day 1 — బేస్‌లైన్ అసెస్‌మెంట్',
+       desc:'Period starts. Baseline ultrasound. Mini-IVF uses low-dose oral clomiphene plus low-dose FSH injections.',
+       desc_te:'పీరియడ్ స్టార్ట్. బేస్‌లైన్ అల్ట్రాసౌండ్. మినీ-IVF లో లో-డోస్ ఓరల్ క్లోమిఫీన్ + లో-డోస్ FSH ఇంజెక్షన్లు వాడతారు.'},
+      {day:3,date:addDays(d1,2),phase:'stim',
+       event:'Day 3 — Clomiphene + Low-dose FSH',event_te:'Day 3 — క్లోమిఫీన్ + లో-డోస్ FSH',
+       desc:'Clomiphene citrate (50-100mg) Days 3-7, plus small-dose FSH injections. Aims for 2-4 mature follicles.',
+       desc_te:'క్లోమిఫీన్ సిట్రేట్ (50-100mg) Days 3-7, plus స్మాల్-డోస్ FSH ఇంజెక్షన్లు. 2-4 మెచ్యూర్ ఫాలికల్స్ టార్గెట్.'},
+      {day:7,date:addDays(d1,6),phase:'monitor',
+       event:'Day 7 — Monitoring Scan',event_te:'Day 7 — మానిటరింగ్ స్కాన్',
+       desc:'Follicle count and size checked. Typically 2-4 follicles expected. Dose may be adjusted.',
+       desc_te:'ఫాలికల్ కౌంట్ మరియు సైజ్ చెక్. సాధారణంగా 2-4 ఫాలికల్స్ ఎక్స్‌పెక్ట్. డోస్ అడ్జస్ట్ కావచ్చు.'},
+      {day:10,date:addDays(d1,9),phase:'monitor',
+       event:'Day 10 — Pre-trigger Scan',event_te:'Day 10 — ప్రీ-ట్రిగర్ స్కాన్',
+       desc:'Leading follicles 18-20mm. Trigger timing determined.',
+       desc_te:'లీడింగ్ ఫాలికల్స్ 18-20mm. ట్రిగర్ టైమింగ్ నిర్ణయించబడుతుంది.'},
+      {day:11,date:addDays(d1,10),phase:'trigger',
+       event:'Day 11 — Trigger Injection',event_te:'Day 11 — ట్రిగర్ ఇంజెక్షన్',
+       desc:'hCG or GnRH agonist trigger. Retrieval planned 36 hours later.',
+       desc_te:'hCG లేదా GnRH agonist ట్రిగర్. రిట్రీవల్ 36 గంటల తర్వాత.'},
+      {day:13,date:addDays(d1,12),phase:'retrieval',
+       event:'Day 13 — Egg Retrieval',event_te:'Day 13 — ఎగ్గ్ రిట్రీవల్',
+       desc:'Fewer eggs expected (typically 2-5) but high-quality. ICSI fertilisation performed.',
+       desc_te:'తక్కువ ఎగ్గ్స్ ఎక్స్‌పెక్ట్ (సాధారణంగా 2-5) కానీ హై-క్వాలిటీ. ICSI ఫెర్టిలైజేషన్.'},
+      {day:18,date:addDays(d1,17),phase:'transfer',
+       event:'Day 18 — Blastocyst Transfer',event_te:'Day 18 — బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్',
+       desc:'Best quality blastocyst transferred. Progesterone support begins.',
+       desc_te:'అత్యుత్తమ బ్లాస్టోసిస్ట్ ట్రాన్స్‌ఫర్. ప్రొజెస్టెరోన్ సపోర్ట్ మొదలవుతుంది.'},
+      {day:32,date:addDays(d1,31),phase:'test',
+       event:'Day 32 — Pregnancy Test',event_te:'Day 32 — ప్రెగ్నెన్సీ టెస్ట్',
+       desc:'Serum beta hCG blood test. Multiple cycles may be needed with mini-IVF to accumulate enough embryos.',
+       desc_te:'సీరమ్ బేటా hCG బ్లడ్ టెస్ట్. తగినన్ని ఎంబ్రియోస్ అక్యుమ్యులేట్ చేయడానికి మినీ-IVF లో మల్టిపుల్ సైకిల్స్ అవసరం కావచ్చు.'},
     ];
   }
+
+  const phaseLabels={
+    baseline:lang==='te'?'బేస్‌లైన్':'BASELINE',
+    stim:lang==='te'?'స్టిమ్యులేషన్':'STIMULATION',
+    monitor:lang==='te'?'మానిటరింగ్':'MONITORING',
+    trigger:lang==='te'?'ట్రిగర్':'TRIGGER',
+    retrieval:lang==='te'?'రిట్రీవల్':'RETRIEVAL',
+    lab:lang==='te'?'లాబ్':'LAB',
+    transfer:lang==='te'?'ట్రాన్స్‌ఫర్':'TRANSFER',
+    pgta:'PGT-A',
+    test:lang==='te'?'ప్రెగ్నెన్సీ టెస్ట్':'PREGNANCY TEST'
+  };
+  const dayLbl=lang==='te'?'రోజు':'Day';
+  const preLbl=lang==='te'?'ముందు రోజు ':'Pre-cycle Day ';
 
   const container=document.getElementById('timelineContainer');
   container.innerHTML='';
   events.forEach(ev=>{
     const item=document.createElement('div');
     item.className=`tl-item ph-${ev.phase}`;
-    item.innerHTML=`<div><span class="phase-badge pb-${ev.pb}">${ev.phase.toUpperCase()}</span><span class="tl-date">${fmt(ev.date)}</span></div><div class="tl-day">Day ${ev.day>=0?ev.day:'Pre-cycle Day '+Math.abs(ev.day)}</div><div class="tl-event">${ev.event}</div><div class="tl-desc">${ev.desc}</div>`;
+    const evText=lang==='te'?(ev.event_te||ev.event):ev.event;
+    const descText=lang==='te'?(ev.desc_te||ev.desc):ev.desc;
+    const dayStr=ev.day>=0?`${dayLbl} ${ev.day}`:`${preLbl}${Math.abs(ev.day)}`;
+    item.innerHTML=`<div><span class="phase-badge pb-${ev.phase}">${phaseLabels[ev.phase]}</span><span class="tl-date">${fmt(ev.date)}</span></div><div class="tl-day">${dayStr}</div><div class="tl-event">${evText}</div><div class="tl-desc">${descText}</div>`;
     container.appendChild(item);
   });
 
@@ -425,8 +638,16 @@ function resetPlanner(){
   document.getElementById('protocol').value='antagonist';
   document.getElementById('blasto').checked=false;
   document.getElementById('pgta').checked=false;
+  _lastTimelineArgs=null;
   document.getElementById('result').style.display='none';
 }
+
+window._reapplyResults=function(){
+  if(_lastTimelineArgs){
+    const{protocol,dateVal,blasto,pgta}=_lastTimelineArgs;
+    _renderTimeline(protocol,dateVal,blasto,pgta);
+  }
+};
 </script>
 </body>
 </html>

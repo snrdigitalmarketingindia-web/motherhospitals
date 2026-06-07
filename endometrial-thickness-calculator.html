@@ -181,9 +181,9 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
-    <h1>Endometrial Thickness Calculator —<br><em>Is My Lining Ready for Transfer?</em></h1>
-    <p class="hero-sub">Enter your endometrial thickness (mm) and pattern from your ultrasound scan to instantly check if your uterine lining is optimal for embryo transfer or natural conception. Free — no sign-up required.</p>
+    <div class="hero-badge" data-i18n="hero_badge">Free Fertility Tool · Mother Hospitals Hyderabad</div>
+    <h1><span data-i18n="hero_h1">Endometrial Thickness Calculator —</span><br><em data-i18n="hero_h1_em">Is My Lining Ready for Transfer?</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Enter your endometrial thickness (mm) and pattern from your ultrasound scan to instantly check if your uterine lining is optimal for embryo transfer or natural conception. Free — no sign-up required.</p>
     <div class="hero-chips">
       <span class="hero-chip">🆓 100% Free</span>
       <span class="hero-chip">⚡ Instant Result</span>
@@ -191,8 +191,8 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
       <span class="hero-chip">📍 Boduppal, Hyderabad</span>
     </div>
     <div class="hero-ctas">
-      <a href="tel:+919705993366" class="btn-call">📞 Book Consultation: 97059 93366</a>
-      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 WhatsApp Us</a>
+      <a href="tel:+919705993366" class="btn-call" data-i18n="btn_call">📞 Book Consultation: 97059 93366</a>
+      <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="btn_wa">💬 WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -202,88 +202,97 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
     <div class="main-content">
       <section>
         <div class="calc-box">
-          <h2>📏 Endometrial Thickness Checker</h2>
-          <p class="calc-intro">Enter your scan measurements below. Endometrial thickness is measured as the total double-layer thickness (bilayer) on transvaginal ultrasound, typically on the trigger day (IVF) or at ovulation (natural cycle).</p>
+          <h2 data-i18n="calc_title">📏 Endometrial Thickness Checker</h2>
+          <p class="calc-intro" data-i18n="calc_intro">Enter your scan measurements below. Endometrial thickness is measured as the total double-layer thickness (bilayer) on transvaginal ultrasound, typically on the trigger day (IVF) or at ovulation (natural cycle).</p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="thickness">Endometrial Thickness (mm)</label>
+              <label for="thickness" data-i18n="label_thickness">Endometrial Thickness (mm)</label>
               <input type="number" id="thickness" min="1" max="30" step="0.1" placeholder="e.g. 9.5">
             </div>
             <div class="form-group">
-              <label for="pattern">Endometrial Pattern (Ultrasound)</label>
+              <label for="pattern" data-i18n="label_pattern">Endometrial Pattern (Ultrasound)</label>
               <select id="pattern">
-                <option value="trilaminar">Trilaminar (3-layer) — Ideal</option>
-                <option value="homogeneous">Homogeneous (uniform) — Less ideal</option>
-                <option value="unknown">Not reported / Unknown</option>
+                <option value="trilaminar" data-i18n-opt="opt_trilaminar">Trilaminar (3-layer) — Ideal</option>
+                <option value="homogeneous" data-i18n-opt="opt_homogeneous">Homogeneous (uniform) — Less ideal</option>
+                <option value="unknown" data-i18n-opt="opt_unknown">Not reported / Unknown</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="context">Clinical Context</label>
+              <label for="context" data-i18n="label_context">Clinical Context</label>
               <select id="context">
-                <option value="ivf-fresh">Fresh IVF Transfer</option>
-                <option value="ivf-fet">Frozen Embryo Transfer (FET)</option>
-                <option value="natural">Natural Conception / IUI</option>
+                <option value="ivf-fresh" data-i18n-opt="ctx_ivf_fresh">Fresh IVF Transfer</option>
+                <option value="ivf-fet" data-i18n-opt="ctx_ivf_fet">Frozen Embryo Transfer (FET)</option>
+                <option value="natural" data-i18n-opt="ctx_natural">Natural Conception / IUI</option>
               </select>
             </div>
           </div>
-          <button class="btn-calc" onclick="checkThickness()">Check My Lining →</button>
+          <button class="btn-calc" onclick="checkThickness()" data-i18n="btn_check">Check My Lining →</button>
 
           <div class="result-box" id="result">
-            <div class="disclaimer-box">⚕️ <strong>Medical Note:</strong> This tool provides educational information only. Your IVF specialist will make the final transfer decision based on the full clinical picture including your lining pattern, progesterone levels, and treatment history.</div>
+            <div class="disclaimer-box" data-i18n="medical_note">⚕️ <strong>Medical Note:</strong> This tool provides educational information only. Your IVF specialist will make the final transfer decision based on the full clinical picture including your lining pattern, progesterone levels, and treatment history.</div>
             <div id="resultCard"></div>
-            <button class="btn-reset" onclick="resetCalc()">↩ Reset</button>
+            <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
           </div>
         </div>
 
-        <h2>Endometrial Thickness Reference Chart</h2>
-        <p class="section-sub">What each thickness range means for IVF and natural conception</p>
-        <div class="thickness-chart">
-          <div class="chart-row">
-            <div class="chart-label">Very Thin</div>
-            <div class="chart-bar-wrap"><div class="chart-bar bar-vt">Below 6mm</div></div>
-            <div class="chart-range" style="color:#e53935;font-weight:700">Cancel / Freeze</div>
+        <div data-lang="en">
+          <h2>Endometrial Thickness Reference Chart</h2>
+          <p class="section-sub">What each thickness range means for IVF and natural conception</p>
+          <div class="thickness-chart">
+            <div class="chart-row"><div class="chart-label">Very Thin</div><div class="chart-bar-wrap"><div class="chart-bar bar-vt">Below 6mm</div></div><div class="chart-range" style="color:#e53935;font-weight:700">Cancel / Freeze</div></div>
+            <div class="chart-row"><div class="chart-label">Thin</div><div class="chart-bar-wrap"><div class="chart-bar bar-t">6–7mm</div></div><div class="chart-range" style="color:#fb8c00;font-weight:700">Borderline</div></div>
+            <div class="chart-row"><div class="chart-label">Acceptable</div><div class="chart-bar-wrap"><div class="chart-bar bar-a">7–8mm</div></div><div class="chart-range" style="color:#f9a825;font-weight:700">Proceed carefully</div></div>
+            <div class="chart-row"><div class="chart-label">Optimal</div><div class="chart-bar-wrap"><div class="chart-bar bar-opt">8–12mm</div></div><div class="chart-range" style="color:#43a047;font-weight:700">Best outcomes</div></div>
+            <div class="chart-row"><div class="chart-label">Thick</div><div class="chart-bar-wrap"><div class="chart-bar bar-thick">Above 14mm</div></div><div class="chart-range" style="color:#1565c0;font-weight:700">Assess further</div></div>
           </div>
-          <div class="chart-row">
-            <div class="chart-label">Thin</div>
-            <div class="chart-bar-wrap"><div class="chart-bar bar-t">6–7mm</div></div>
-            <div class="chart-range" style="color:#fb8c00;font-weight:700">Borderline</div>
-          </div>
-          <div class="chart-row">
-            <div class="chart-label">Acceptable</div>
-            <div class="chart-bar-wrap"><div class="chart-bar bar-a">7–8mm</div></div>
-            <div class="chart-range" style="color:#f9a825;font-weight:700">Proceed carefully</div>
-          </div>
-          <div class="chart-row">
-            <div class="chart-label">Optimal</div>
-            <div class="chart-bar-wrap"><div class="chart-bar bar-opt">8–12mm</div></div>
-            <div class="chart-range" style="color:#43a047;font-weight:700">Best outcomes</div>
-          </div>
-          <div class="chart-row">
-            <div class="chart-label">Thick</div>
-            <div class="chart-bar-wrap"><div class="chart-bar bar-thick">Above 14mm</div></div>
-            <div class="chart-range" style="color:#1565c0;font-weight:700">Assess further</div>
-          </div>
+          <h3>What Makes an Ideal Endometrium for Transfer?</h3>
+          <p>The ideal endometrium for embryo implantation has three key characteristics: (1) <strong>Thickness of 8–12mm</strong>; (2) <strong>Trilaminar (three-layer) pattern</strong> on ultrasound — indicating appropriate oestrogen priming and receptivity; (3) <strong>Good uterine blood flow</strong> on Doppler. A thin or homogeneous endometrium significantly reduces implantation success even with good quality embryos.</p>
+          <h3>Thin Endometrium in IVF: What Next?</h3>
+          <p>If your lining is below 7mm, your IVF specialist may recommend: high-dose oestrogen (Progynova, Estradiol patches), low-dose Aspirin (75mg), Sildenafil vaginal suppositories, Vitamin E, <strong>PRP endometrial therapy</strong> (available at Mother Hospitals), or a freeze-all strategy for a better FET cycle.</p>
+          <h3>Thick Endometrium (Above 14mm)</h3>
+          <p>A very thick endometrium (above 14mm) may indicate endometrial polyps, hyperplasia, or adenomyosis. Typically warrants a hysteroscopy to rule out intrauterine pathology before transfer. Thicker is not necessarily better — quality and pattern matter as much as thickness.</p>
         </div>
-
-        <h3>What Makes an Ideal Endometrium for Transfer?</h3>
-        <p>The ideal endometrium for embryo implantation has three key characteristics: (1) <strong>Thickness of 8–12mm</strong> — thick enough to nourish the implanting embryo, not so thick as to suggest pathology; (2) <strong>Trilaminar (three-layer) pattern</strong> on ultrasound — indicating appropriate oestrogen priming and receptivity; (3) <strong>Good uterine blood flow</strong> on Doppler — assessed by your specialist. A thin or homogeneous endometrium significantly reduces implantation success even with good quality embryos.</p>
-
-        <h3>Thin Endometrium in IVF: What Next?</h3>
-        <p>If your lining is below 7mm on the day of trigger or on the planned transfer day, your IVF specialist may recommend: (a) increasing oestrogen dosage (Progynova tabs, Estradiol patches, or vaginal oestrogen); (b) adding low-dose Aspirin (75mg) to improve uterine blood flow; (c) Sildenafil (Viagra) vaginal suppositories to dilate uterine vessels; (d) Vitamin E supplementation; (e) <strong>Platelet-Rich Plasma (PRP) endometrial therapy</strong> — an emerging treatment offered at Mother Hospitals; or (f) cancelling the fresh transfer and performing a freeze-all strategy for a better FET cycle.</p>
-
-        <h3>Thick Endometrium (Above 14mm)</h3>
-        <p>A very thick endometrium (above 14mm) is unusual and may indicate endometrial polyps, hyperplasia, or adenomyosis. While some studies show acceptable pregnancy rates up to 16mm, anything above 14mm typically warrants a hysteroscopy to rule out intrauterine pathology before transfer. Do not assume thicker is better — the quality and pattern matter as much as thickness.</p>
+        <div data-lang="te">
+          <h2>ఎండోమెట్రియల్ థిక్‌నెస్ రెఫరెన్స్ చార్ట్</h2>
+          <p class="section-sub">ప్రతి థిక్‌నెస్ రేంజ్ IVF మరియు నేచురల్ కన్సెప్షన్‌కు ఏమి సూచిస్తుంది</p>
+          <div class="thickness-chart">
+            <div class="chart-row"><div class="chart-label">చాలా తక్కువ</div><div class="chart-bar-wrap"><div class="chart-bar bar-vt">6mm కంటే తక్కువ</div></div><div class="chart-range" style="color:#e53935;font-weight:700">క్యాన్సెల్/ఫ్రీజ్</div></div>
+            <div class="chart-row"><div class="chart-label">తక్కువ</div><div class="chart-bar-wrap"><div class="chart-bar bar-t">6–7mm</div></div><div class="chart-range" style="color:#fb8c00;font-weight:700">బోర్డర్‌లైన్</div></div>
+            <div class="chart-row"><div class="chart-label">అంగీకారయోగ్యం</div><div class="chart-bar-wrap"><div class="chart-bar bar-a">7–8mm</div></div><div class="chart-range" style="color:#f9a825;font-weight:700">జాగ్రత్తగా ముందుకు</div></div>
+            <div class="chart-row"><div class="chart-label">ఆప్టిమల్</div><div class="chart-bar-wrap"><div class="chart-bar bar-opt">8–12mm</div></div><div class="chart-range" style="color:#43a047;font-weight:700">అత్యుత్తమ ఫలితాలు</div></div>
+            <div class="chart-row"><div class="chart-label">మందంగా</div><div class="chart-bar-wrap"><div class="chart-bar bar-thick">14mm పైన</div></div><div class="chart-range" style="color:#1565c0;font-weight:700">ఫర్థర్ అసెస్</div></div>
+          </div>
+          <h3>ట్రాన్స్‌ఫర్‌కు ఐడియల్ ఎండోమెట్రియం ఎలా ఉండాలి?</h3>
+          <p>ఎంబ్రియో ఇంప్లాంటేషన్‌కు ఐడియల్ ఎండోమెట్రియం మూడు కీ కారెక్టరిస్టిక్స్ ఉండాలి: (1) <strong>8–12mm థిక్‌నెస్</strong>; (2) అల్ట్రాసౌండ్‌లో <strong>ట్రైలామినార్ (మూడు-లేయర్) పాటర్న్</strong> — సరైన ఈస్ట్రోజెన్ ప్రైమింగ్ మరియు రిసెప్టివిటీ చూపిస్తుంది; (3) డాప్లర్‌లో <strong>మంచి యూటరైన్ బ్లడ్ ఫ్లో</strong>. తక్కువ లేదా హోమోజెనియస్ ఎండోమెట్రియం మంచి ఎంబ్రియోస్ ఉన్నా కూడా ఇంప్లాంటేషన్ సక్సెస్ గణనీయంగా తగ్గిస్తుంది.</p>
+          <h3>IVF లో థిన్ ఎండోమెట్రియం: తర్వాత ఏం చేయాలి?</h3>
+          <p>లైనింగ్ 7mm కంటే తక్కువగా ఉంటే, స్పెషలిస్ట్ రెకమెండ్ చేయవచ్చు: హై-డోస్ ఈస్ట్రోజెన్ (Progynova, Estradiol పాచెస్), లో-డోస్ ఆస్పిరిన్ (75mg), సిల్డెనాఫిల్ వెజైనల్ సప్పోజిటరీస్, విటమిన్ E, <strong>PRP ఎండోమెట్రియల్ థెరపీ</strong> (Mother Hospitals లో అందుబాటులో ఉంది), లేదా బెటర్ FET సైకిల్ కోసం ఫ్రీజ్-ఆల్ స్ట్రాటెజీ.</p>
+          <h3>థిక్ ఎండోమెట్రియం (14mm పైన)</h3>
+          <p>చాలా థిక్ ఎండోమెట్రియం (14mm పైన) ఎండోమెట్రియల్ పాలిప్స్, హైపర్‌ప్లాసియా, లేదా అడెనోమైయోసిస్ సూచించవచ్చు. ట్రాన్స్‌ఫర్ ముందు ఇంట్రాయూటరైన్ పాథాలజీ రూల్ అవుట్ చేయడానికి హిస్టెరోస్కోపీ సాధారణంగా అవసరం. మందంగా ఉంటే బెటర్ కాదు — క్వాలిటీ మరియు పాటర్న్ కూడా థిక్‌నెస్ అంత ఇంపార్టెంట్.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details open><summary>What is the minimum endometrial thickness for embryo transfer?</summary><p>Most IVF specialists require a minimum of 7mm for embryo transfer, with 8–12mm considered optimal. Below 7mm significantly reduces implantation rates. Some clinics proceed at 6mm with caution, but below 6mm, transfer is usually cancelled and embryos frozen for a better cycle.</p></details>
-          <details><summary>What is a trilaminar endometrial pattern?</summary><p>A trilaminar pattern on ultrasound shows three distinct dark and bright lines. This is seen in the mid-follicular phase (Days 9–14) and indicates well-developed, oestrogen-primed lining ready for implantation. A homogeneous (featureless, bright) pattern in the pre-transfer period is less favourable and associated with lower success rates.</p></details>
-          <details><summary>What causes a thin endometrium?</summary><p>Common causes include low oestrogen levels, Asherman's syndrome (intrauterine adhesions from previous D&C or infection), chronic endometritis, previous uterine surgery, fibroids, or poor uterine blood flow. Treatment includes high-dose oestrogen, Sildenafil (vaginal), aspirin, vitamin E, and PRP therapy.</p></details>
-          <details><summary>Can I get pregnant with a thin endometrium?</summary><p>Pregnancy is possible but implantation rates are significantly lower. If your lining is consistently below 7mm on transfer day, your doctor may recommend cancelling the fresh transfer, freezing embryos, and preparing the lining more aggressively for a FET cycle. Dr. Prashanthi Reddy offers PRP endometrial therapy for recurrent thin lining cases.</p></details>
-          <details><summary>When is endometrial thickness measured in IVF?</summary><p>In a fresh IVF cycle: at baseline (Day 2–3), mid-stimulation (Day 7–9), and on trigger day. In FET cycles: around Day 10–12 of oestrogen preparation before switching to progesterone. The ideal thickness is confirmed before starting progesterone.</p></details>
-          <details><summary>What endometrial thickness is needed for natural conception?</summary><p>For natural conception, 8–14mm at ovulation (around Day 14 in a 28-day cycle) is optimal. Below 7mm at ovulation may reduce natural conception chances but is not an absolute barrier. See a fertility specialist if your lining is consistently thin on monitoring scans.</p></details>
+        <div data-lang="en">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details open><summary>What is the minimum endometrial thickness for embryo transfer?</summary><p>Most IVF specialists require a minimum of 7mm for embryo transfer, with 8–12mm considered optimal. Below 7mm significantly reduces implantation rates. Some clinics proceed at 6mm with caution, but below 6mm, transfer is usually cancelled and embryos frozen for a better cycle.</p></details>
+            <details><summary>What is a trilaminar endometrial pattern?</summary><p>A trilaminar pattern on ultrasound shows three distinct dark and bright lines. This is seen in the mid-follicular phase (Days 9–14) and indicates well-developed, oestrogen-primed lining ready for implantation. A homogeneous (featureless, bright) pattern in the pre-transfer period is less favourable and associated with lower success rates.</p></details>
+            <details><summary>What causes a thin endometrium?</summary><p>Common causes include low oestrogen levels, Asherman's syndrome (intrauterine adhesions from previous D&C or infection), chronic endometritis, previous uterine surgery, fibroids, or poor uterine blood flow. Treatment includes high-dose oestrogen, Sildenafil (vaginal), aspirin, vitamin E, and PRP therapy.</p></details>
+            <details><summary>Can I get pregnant with a thin endometrium?</summary><p>Pregnancy is possible but implantation rates are significantly lower. If your lining is consistently below 7mm on transfer day, your doctor may recommend cancelling the fresh transfer, freezing embryos, and preparing the lining more aggressively for a FET cycle. Dr. Prashanthi Reddy offers PRP endometrial therapy for recurrent thin lining cases.</p></details>
+            <details><summary>When is endometrial thickness measured in IVF?</summary><p>In a fresh IVF cycle: at baseline (Day 2–3), mid-stimulation (Day 7–9), and on trigger day. In FET cycles: around Day 10–12 of oestrogen preparation before switching to progesterone. The ideal thickness is confirmed before starting progesterone.</p></details>
+            <details><summary>What endometrial thickness is needed for natural conception?</summary><p>For natural conception, 8–14mm at ovulation (around Day 14 in a 28-day cycle) is optimal. Below 7mm at ovulation may reduce natural conception chances but is not an absolute barrier. See a fertility specialist if your lining is consistently thin on monitoring scans.</p></details>
+          </div>
+        </div>
+        <div data-lang="te">
+          <h2>తరచుగా అడిగే ప్రశ్నలు</h2>
+          <div class="faq-list">
+            <details open><summary>ఎంబ్రియో ట్రాన్స్‌ఫర్‌కు కనీస ఎండోమెట్రియల్ థిక్‌నెస్ ఎంత?</summary><p>చాలా IVF స్పెషలిస్ట్లు కనీసం 7mm కావాలని అంటారు, 8–12mm ఆప్టిమల్. 7mm కంటే తక్కువ ఉంటే ఇంప్లాంటేషన్ రేట్స్ గణనీయంగా తగ్గుతాయి. కొన్ని క్లినిక్స్ 6mm వద్ద జాగ్రత్తగా ముందుకు వెళ్తాయి, కానీ 6mm కంటే తక్కువ అయితే సాధారణంగా ట్రాన్స్‌ఫర్ క్యాన్సెల్ అవుతుంది.</p></details>
+            <details><summary>ట్రైలామినార్ ఎండోమెట్రియల్ పాటర్న్ అంటే ఏమిటి?</summary><p>అల్ట్రాసౌండ్‌లో ట్రైలామినార్ పాటర్న్ మూడు వేర్వేరు డార్క్ మరియు బ్రైట్ లైన్లు చూపిస్తుంది. ఇది మిడ్-ఫాలిక్యులర్ ఫేజ్‌లో (Days 9–14) కనిపిస్తుంది మరియు వెల్-డెవలప్డ్, ఈస్ట్రోజెన్-ప్రైమ్డ్ లైనింగ్ సూచిస్తుంది. హోమోజెనియస్ (ఫీచర్‌లెస్, బ్రైట్) పాటర్న్ తక్కువ ఫేవరబుల్.</p></details>
+            <details><summary>థిన్ ఎండోమెట్రియం కారణాలు ఏమిటి?</summary><p>కామన్ కారణాలు: లో ఈస్ట్రోజెన్, అష్ర్మాన్ సిండ్రోమ్ (ఇంట్రాయూటరైన్ అడ్హెజన్స్), క్రానిక్ ఎండోమెట్రైటిస్, మునుపటి యూటరైన్ సర్జరీ, ఫైబ్రాయిడ్స్, లేదా పూర్ యూటరైన్ బ్లడ్ ఫ్లో. ట్రీట్‌మెంట్: హై-డోస్ ఈస్ట్రోజెన్, సిల్డెనాఫిల్ (వెజైనల్), ఆస్పిరిన్, విటమిన్ E, మరియు PRP థెరపీ.</p></details>
+            <details><summary>థిన్ ఎండోమెట్రియంతో ప్రెగ్నెంట్ అవ్వవచ్చా?</summary><p>ప్రెగ్నెన్సీ సాధ్యమే కానీ ఇంప్లాంటేషన్ రేట్స్ గణనీయంగా తగ్గుతాయి. ట్రాన్స్‌ఫర్ డేలో లైనింగ్ నిరంతరం 7mm కంటే తక్కువగా ఉంటే, ఫ్రెష్ ట్రాన్స్‌ఫర్ క్యాన్సెల్ చేసి ఎంబ్రియోస్ ఫ్రీజ్ చేయాలని, బెటర్ FET సైకిల్‌కు అగ్రెసివ్‌గా లైనింగ్ ప్రిపేర్ చేయాలని రెకమెండ్ చేయవచ్చు. Dr. Prashanthi Reddy రికరెంట్ థిన్ లైనింగ్ కేసులకు PRP ఎండోమెట్రియల్ థెరపీ అందిస్తారు.</p></details>
+            <details><summary>IVF లో ఎండోమెట్రియల్ థిక్‌నెస్ ఎప్పుడు మెజర్ చేస్తారు?</summary><p>ఫ్రెష్ IVF సైకిల్‌లో: బేస్‌లైన్ (Day 2–3), మిడ్-స్టిమ్యులేషన్ (Day 7–9), మరియు ట్రిగర్ డేలో. FET సైకిల్స్‌లో: ప్రొజెస్టెరోన్ స్విచ్ ముందు ఈస్ట్రోజెన్ ప్రిపరేషన్ Day 10–12 లో. ప్రొజెస్టెరోన్ స్టార్ట్ ముందు ఐడియల్ థిక్‌నెస్ కన్ఫర్మ్ అవుతుంది.</p></details>
+            <details><summary>నేచురల్ కన్సెప్షన్‌కు ఎంత ఎండోమెట్రియల్ థిక్‌నెస్ కావాలి?</summary><p>నేచురల్ కన్సెప్షన్‌కు ఒవ్యులేషన్ వేళ (28-రోజుల సైకిల్‌లో Day 14 లో) 8–14mm ఆప్టిమల్. 7mm కంటే తక్కువ నేచురల్ కన్సెప్షన్ చాన్సెస్ తగ్గించవచ్చు కానీ అబ్సొల్యూట్ బ్యారియర్ కాదు. మానిటరింగ్ స్కాన్స్‌లో నిరంతరం లైనింగ్ తక్కువగా ఉంటే ఫెర్టిలిటీ స్పెషలిస్ట్ని కన్సల్ట్ చేయండి.</p></details>
+          </div>
         </div>
       </section>
     </div>
@@ -357,55 +366,146 @@ footer a{color:rgba(255,255,255,0.85)}footer a:hover{color:#fff}
 </div>
 
 <script>
+window.pageT={
+  en:{
+    calc_title:'📏 Endometrial Thickness Checker',
+    calc_intro:'Enter your scan measurements below. Endometrial thickness is measured as the total double-layer thickness (bilayer) on transvaginal ultrasound, typically on the trigger day (IVF) or at ovulation (natural cycle).',
+    label_thickness:'Endometrial Thickness (mm)',
+    label_pattern:'Endometrial Pattern (Ultrasound)',
+    opt_trilaminar:'Trilaminar (3-layer) — Ideal',opt_homogeneous:'Homogeneous (uniform) — Less ideal',opt_unknown:'Not reported / Unknown',
+    label_context:'Clinical Context',
+    ctx_ivf_fresh:'Fresh IVF Transfer',ctx_ivf_fet:'Frozen Embryo Transfer (FET)',ctx_natural:'Natural Conception / IUI',
+    btn_check:'Check My Lining →',btn_reset:'↩ Reset',
+    medical_note:'⚕️ This tool provides educational information only. Your IVF specialist will make the final transfer decision based on the full clinical picture including your lining pattern, progesterone levels, and treatment history.',
+    alert_val:'Please enter a valid thickness between 1–30mm.',
+    lbl_thickness:'Thickness',lbl_pattern:'Pattern',lbl_context:'Context',lbl_what:'What to do',
+    pat_tri:'Trilaminar (ideal)',pat_homo:'Homogeneous',pat_unk:'Not reported',
+    status_very_thin:'Very Thin Endometrium',
+    status_thin:'Thin Endometrium — Borderline',
+    status_acceptable:'Acceptable Endometrium',
+    status_optimal:'Optimal Endometrium ✓',
+    status_good_upper:'Good — Upper Range',
+    status_very_thick:'Very Thick — Assessment Needed',
+    verdict_very_thin:'Lining is very thin — embryo transfer is not recommended at this thickness.',
+    verdict_thin:'Lining is thin and borderline for embryo transfer.',
+    verdict_acceptable:'Lining is acceptable — transfer can proceed with caution.',
+    verdict_optimal:'Excellent lining — optimal for embryo implantation!',
+    verdict_good_upper:'Good lining — in the upper acceptable range.',
+    verdict_very_thick:'Lining is unusually thick — further assessment recommended.',
+    detail_very_thin:'Your endometrial thickness of <strong>{mm}mm</strong> is below the minimum threshold of 6mm. Implantation rates are very low below this level.',
+    detail_thin:'Your endometrial thickness of <strong>{mm}mm</strong> is in the borderline range (6–7mm). Many specialists prefer to wait for better lining or freeze embryos.',
+    detail_acceptable:'Your endometrial thickness of <strong>{mm}mm</strong> meets the minimum threshold. Pregnancy is achievable but success rates are higher with a thicker lining (8–12mm).',
+    detail_optimal:'Your endometrial thickness of <strong>{mm}mm</strong> is in the ideal range (8–12mm). This gives you the best possible conditions for implantation.',
+    detail_good_upper:'Your endometrial thickness of <strong>{mm}mm</strong> is slightly above the optimal range but still acceptable. Most studies show good pregnancy rates up to 14mm.',
+    detail_very_thick:'Your endometrial thickness of <strong>{mm}mm</strong> is above the typical range. Very thick endometrium (>14mm) may indicate polyps, hyperplasia, or adenomyosis.',
+    advice_very_thin:'Your doctor will likely recommend cancelling the fresh transfer and freezing your embryos (freeze-all strategy). Options to improve lining: high-dose oestrogen (oral + vaginal), Sildenafil suppositories, low-dose Aspirin, and PRP endometrial therapy. Please contact Dr. Prashanthi Reddy to discuss next steps.',
+    advice_thin:'Your IVF specialist will assess whether to proceed with transfer or freeze embryos for a better FET cycle. Options to improve: additional oestrogen supplementation, vaginal Sildenafil, low-dose Aspirin, and Vitamin E. Pattern matters too — a trilaminar pattern at 6.5mm may be acceptable at some centres.',
+    advice_acceptable_tri:'A trilaminar pattern at this thickness is reassuring. Your doctor may choose to proceed with transfer or optimize further. Continue luteal support as prescribed.',
+    advice_acceptable_homo:'A homogeneous pattern at this thickness is less ideal — discuss with your doctor. Your doctor may choose to proceed with transfer or optimize further. Continue luteal support as prescribed.',
+    advice_optimal_tri:'Trilaminar pattern confirmed — your uterine lining looks excellent. Proceed as planned with your transfer. Continue progesterone and oestrogen support as prescribed. Great news!',
+    advice_optimal_homo:'A trilaminar (3-layer) pattern is ideal — mention to your doctor if not confirmed. Proceed as planned with your transfer. Continue progesterone and oestrogen support as prescribed. Great news!',
+    advice_good_upper:'Lining above 12mm can still yield excellent results. Your doctor may want to confirm there are no polyps or other intrauterine abnormalities. Proceed as planned unless your specialist advises otherwise.',
+    advice_very_thick:'A thick endometrium does not necessarily mean better implantation. Your doctor may recommend a hysteroscopy to rule out intrauterine pathology (polyps, septum, hyperplasia) before proceeding with embryo transfer. Please consult Dr. Prashanthi Reddy for assessment.',
+    hero_badge:'Free Fertility Tool · Mother Hospitals Hyderabad',
+    hero_h1:'Endometrial Thickness Calculator —',hero_h1_em:'Is My Lining Ready for Transfer?',
+    hero_sub:'Enter your endometrial thickness (mm) and pattern from your ultrasound scan to instantly check if your uterine lining is optimal for embryo transfer or natural conception. Free — no sign-up required.',
+    btn_call:'📞 Book Consultation: 97059 93366',btn_wa:'💬 WhatsApp Us'
+  },
+  te:{
+    calc_title:'📏 ఎండోమెట్రియల్ థిక్‌నెస్ చెకర్',
+    calc_intro:'మీ స్కాన్ మెజర్‌మెంట్స్ ఎంటర్ చేయండి. ఎండోమెట్రియల్ థిక్‌నెస్ ట్రాన్స్‌వెజైనల్ అల్ట్రాసౌండ్‌లో టోటల్ డబుల్-లేయర్ థిక్‌నెస్ (బైలేయర్) గా మెజర్ చేస్తారు — సాధారణంగా ట్రిగర్ డేలో (IVF) లేదా ఒవ్యులేషన్ వేళ (నేచురల్ సైకిల్).',
+    label_thickness:'ఎండోమెట్రియల్ థిక్‌నెస్ (mm)',
+    label_pattern:'ఎండోమెట్రియల్ పాటర్న్ (అల్ట్రాసౌండ్)',
+    opt_trilaminar:'ట్రైలామినార్ (3-లేయర్) — ఐడియల్',opt_homogeneous:'హోమోజెనియస్ (యూనిఫార్మ్) — తక్కువ ఐడియల్',opt_unknown:'రిపోర్ట్ చేయలేదు / తెలియదు',
+    label_context:'క్లినికల్ కాంటెక్స్ట్',
+    ctx_ivf_fresh:'ఫ్రెష్ IVF ట్రాన్స్‌ఫర్',ctx_ivf_fet:'ఫ్రోజెన్ ఎంబ్రియో ట్రాన్స్‌ఫర్ (FET)',ctx_natural:'నేచురల్ కన్సెప్షన్ / IUI',
+    btn_check:'నా లైనింగ్ చెక్ చేయండి →',btn_reset:'↩ రీసెట్',
+    medical_note:'⚕️ ఈ టూల్ ఎడ్యుకేషనల్ ఇన్ఫర్మేషన్ మాత్రమే ఇస్తుంది. మీ IVF స్పెషలిస్ట్ లైనింగ్ పాటర్న్, ప్రొజెస్టెరోన్ లెవల్స్, ట్రీట్‌మెంట్ హిస్టరీ సహా పూర్తి క్లినికల్ పిక్చర్ బేస్డ్‌గా ఫైనల్ ట్రాన్స్‌ఫర్ డెసిషన్ తీసుకుంటారు.',
+    alert_val:'దయచేసి 1–30mm మధ్య వాలిడ్ థిక్‌నెస్ ఎంటర్ చేయండి.',
+    lbl_thickness:'థిక్‌నెస్',lbl_pattern:'పాటర్న్',lbl_context:'కాంటెక్స్ట్',lbl_what:'ఏం చేయాలి',
+    pat_tri:'ట్రైలామినార్ (ఐడియల్)',pat_homo:'హోమోజెనియస్',pat_unk:'రిపోర్ట్ చేయలేదు',
+    status_very_thin:'చాలా థిన్ ఎండోమెట్రియం',
+    status_thin:'థిన్ ఎండోమెట్రియం — బోర్డర్‌లైన్',
+    status_acceptable:'అంగీకారయోగ్యమైన ఎండోమెట్రియం',
+    status_optimal:'ఆప్టిమల్ ఎండోమెట్రియం ✓',
+    status_good_upper:'గుడ్ — అప్పర్ రేంజ్',
+    status_very_thick:'చాలా థిక్ — అసెస్‌మెంట్ అవసరం',
+    verdict_very_thin:'లైనింగ్ చాలా తక్కువగా ఉంది — ఈ థిక్‌నెస్‌లో ఎంబ్రియో ట్రాన్స్‌ఫర్ రెకమెండ్ కాదు.',
+    verdict_thin:'లైనింగ్ తక్కువగా మరియు ఎంబ్రియో ట్రాన్స్‌ఫర్‌కు బోర్డర్‌లైన్‌లో ఉంది.',
+    verdict_acceptable:'లైనింగ్ అంగీకారయోగ్యంగా ఉంది — జాగ్రత్తగా ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళవచ్చు.',
+    verdict_optimal:'అద్భుతమైన లైనింగ్ — ఎంబ్రియో ఇంప్లాంటేషన్‌కు ఆప్టిమల్!',
+    verdict_good_upper:'గుడ్ లైనింగ్ — అప్పర్ అంగీకారయోగ్య రేంజ్‌లో ఉంది.',
+    verdict_very_thick:'లైనింగ్ అసాధారణంగా మందంగా ఉంది — ఫర్థర్ అసెస్‌మెంట్ రెకమెండ్.',
+    detail_very_thin:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> కనీస 6mm థ్రెషోల్డ్ కంటే తక్కువ. ఈ లెవల్‌లో ఇంప్లాంటేషన్ రేట్స్ చాలా తక్కువ.',
+    detail_thin:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> బోర్డర్‌లైన్ రేంజ్ (6–7mm) లో ఉంది. చాలా స్పెషలిస్ట్లు బెటర్ లైనింగ్ కోసం వెయిట్ చేయడం లేదా ఎంబ్రియోస్ ఫ్రీజ్ చేయడం ప్రిఫర్ చేస్తారు.',
+    detail_acceptable:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> కనీస థ్రెషోల్డ్ మీట్ చేస్తుంది. ప్రెగ్నెన్సీ సాధ్యమే కానీ థిక్కర్ లైనింగ్ (8–12mm) తో సక్సెస్ రేట్స్ ఎక్కువ.',
+    detail_optimal:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> ఐడియల్ రేంజ్ (8–12mm) లో ఉంది. ఇంప్లాంటేషన్‌కు అత్యుత్తమ కండిషన్స్ ఉన్నాయి.',
+    detail_good_upper:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> ఆప్టిమల్ రేంజ్ కంటే కొంచెం ఎక్కువ కానీ ఇంకా అంగీకారయోగ్యం. చాలా స్టడీస్ 14mm వరకు మంచి ప్రెగ్నెన్సీ రేట్స్ చూపిస్తాయి.',
+    detail_very_thick:'మీ ఎండోమెట్రియల్ థిక్‌నెస్ <strong>{mm}mm</strong> టిపికల్ రేంజ్ పైన ఉంది. చాలా థిక్ ఎండోమెట్రియం (>14mm) పాలిప్స్, హైపర్‌ప్లాసియా, లేదా అడెనోమైయోసిస్ సూచించవచ్చు.',
+    advice_very_thin:'మీ డాక్టర్ ఫ్రెష్ ట్రాన్స్‌ఫర్ క్యాన్సెల్ చేసి ఎంబ్రియోస్ ఫ్రీజ్ చేయమని రెకమెండ్ చేయవచ్చు. లైనింగ్ ఇంప్రూవ్ చేయడానికి ఆప్షన్స్: హై-డోస్ ఈస్ట్రోజెన్, సిల్డెనాఫిల్ సప్పోజిటరీస్, లో-డోస్ ఆస్పిరిన్, మరియు PRP ఎండోమెట్రియల్ థెరపీ. తదుపరి స్టెప్స్ గురించి Dr. Prashanthi Reddy ని కాంటాక్ట్ చేయండి.',
+    advice_thin:'మీ IVF స్పెషలిస్ట్ ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళాలా లేదా బెటర్ FET సైకిల్ కోసం ఎంబ్రియోస్ ఫ్రీజ్ చేయాలా అని అసెస్ చేస్తారు. ఇంప్రూవ్ చేయడానికి: అదనపు ఈస్ట్రోజెన్, వెజైనల్ సిల్డెనాఫిల్, లో-డోస్ ఆస్పిరిన్, విటమిన్ E. పాటర్న్ కూడా ముఖ్యం — కొన్ని సెంటర్లలో 6.5mm తో ట్రైలామినార్ పాటర్న్ అంగీకారయోగ్యం.',
+    advice_acceptable_tri:'ఈ థిక్‌నెస్‌లో ట్రైలామినార్ పాటర్న్ రీఆష్యూరింగ్. మీ డాక్టర్ ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళాలా లేదా ఫర్థర్ ఆప్టిమైజ్ చేయాలా అని చూస్తారు. ప్రెస్క్రైబ్ చేసిన లుటల్ సపోర్ట్ కంటిన్యూ చేయండి.',
+    advice_acceptable_homo:'ఈ థిక్‌నెస్‌లో హోమోజెనియస్ పాటర్న్ తక్కువ ఐడియల్ — మీ డాక్టర్‌తో డిస్కస్ చేయండి. ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళాలా లేదా ఫర్థర్ ఆప్టిమైజ్ చేయాలా అని మీ డాక్టర్ నిర్ణయిస్తారు. లుటల్ సపోర్ట్ కంటిన్యూ చేయండి.',
+    advice_optimal_tri:'ట్రైలామినార్ పాటర్న్ కన్ఫర్మ్ అయింది — మీ యూటరైన్ లైనింగ్ అద్భుతంగా కనిపిస్తుంది. ప్లాన్ ప్రకారం ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళండి. ప్రెస్క్రైబ్ చేసిన ప్రొజెస్టెరోన్ మరియు ఈస్ట్రోజెన్ సపోర్ట్ కంటిన్యూ చేయండి. గ్రేట్ న్యూస్!',
+    advice_optimal_homo:'ట్రైలామినార్ (3-లేయర్) పాటర్న్ ఐడియల్ — కన్ఫర్మ్ కాకపోతే మీ డాక్టర్‌కు చెప్పండి. ప్లాన్ ప్రకారం ట్రాన్స్‌ఫర్ ముందుకు వెళ్ళండి. ప్రొజెస్టెరోన్ మరియు ఈస్ట్రోజెన్ సపోర్ట్ కంటిన్యూ చేయండి. గ్రేట్ న్యూస్!',
+    advice_good_upper:'12mm పైన ఉన్న లైనింగ్ ఇంకా అద్భుతమైన రిజల్ట్స్ ఇవ్వగలదు. పాలిప్స్ లేదా ఇతర ఇంట్రాయూటరైన్ అబ్నార్మాలిటీస్ లేవని కన్ఫర్మ్ చేయాలని మీ డాక్టర్ అనవచ్చు. స్పెషలిస్ట్ చెప్పకపోతే ప్లాన్ ప్రకారం ముందుకు వెళ్ళండి.',
+    advice_very_thick:'థిక్ ఎండోమెట్రియం బెటర్ ఇంప్లాంటేషన్ అని కాదు. ఎంబ్రియో ట్రాన్స్‌ఫర్ ముందు ఇంట్రాయూటరైన్ పాథాలజీ (పాలిప్స్, సెప్టం, హైపర్‌ప్లాసియా) రూల్ అవుట్ చేయడానికి హిస్టెరోస్కోపీ రెకమెండ్ చేయవచ్చు. అసెస్‌మెంట్ కోసం Dr. Prashanthi Reddy ని కన్సల్ట్ చేయండి.',
+    hero_badge:'ఫ్రీ ఫెర్టిలిటీ టూల్ · Mother Hospitals హైదరాబాద్',
+    hero_h1:'ఎండోమెట్రియల్ థిక్‌నెస్ కాల్క్యులేటర్ —',hero_h1_em:'నా లైనింగ్ ట్రాన్స్‌ఫర్‌కు రెడీగా ఉందా?',
+    hero_sub:'అల్ట్రాసౌండ్ స్కాన్ నుండి మీ ఎండోమెట్రియల్ థిక్‌నెస్ (mm) మరియు పాటర్న్ ఎంటర్ చేయండి — మీ యూటరైన్ లైనింగ్ ఎంబ్రియో ట్రాన్స్‌ఫర్ లేదా నేచురల్ కన్సెప్షన్‌కు ఆప్టిమల్‌గా ఉందో చెక్ చేయండి. ఫ్రీ.',
+    btn_call:'📞 కన్సల్టేషన్ బుక్ చేయండి: 97059 93366',btn_wa:'💬 WhatsApp చేయండి'
+  }
+};
+</script>
+<script src="/scripts/i18n.js"></script>
+<script>
+let _lastThicknessArgs=null;
+
 function checkThickness(){
-  const t=parseFloat(document.getElementById('thickness').value);
+  const mm=parseFloat(document.getElementById('thickness').value);
   const pattern=document.getElementById('pattern').value;
   const ctx=document.getElementById('context').value;
-  if(!t||t<1||t>30){alert('Please enter a valid thickness between 1–30mm.');return;}
+  if(!mm||mm<1||mm>30){alert(t('alert_val'));return;}
+  _lastThicknessArgs={mm,pattern,ctx};
+  _renderThickness(mm,pattern,ctx);
+}
 
-  let status,cls,icon,verdict,detail,advice;
+function _renderThickness(mm,pattern,ctx){
+  let statusKey,cls,icon,verdictKey,detailKey,adviceKey;
 
-  if(t<6){
-    status='Very Thin Endometrium';cls='very-thin';icon='🔴';
-    verdict='Lining is very thin — embryo transfer is not recommended at this thickness.';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> is below the minimum threshold of 6mm. Implantation rates are very low below this level.`;
-    advice='Your doctor will likely recommend cancelling the fresh transfer and freezing your embryos (freeze-all strategy). Options to improve lining: high-dose oestrogen (oral + vaginal), Sildenafil suppositories, low-dose Aspirin, and Platelet-Rich Plasma (PRP) endometrial therapy. Please contact Dr. Prashanthi Reddy to discuss next steps.';
-  } else if(t<7){
-    status='Thin Endometrium — Borderline';cls='thin';icon='🟠';
-    verdict='Lining is thin and borderline for embryo transfer.';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> is in the borderline range (6–7mm). Many specialists prefer to wait for better lining or freeze embryos.`;
-    advice='Your IVF specialist will assess whether to proceed with transfer or freeze embryos for a better FET cycle. Options to improve: additional oestrogen supplementation, vaginal Sildenafil, low-dose Aspirin, and Vitamin E. Pattern matters too — a trilaminar pattern at 6.5mm may be acceptable at some centres.';
-  } else if(t<8){
-    status='Acceptable Endometrium';cls='acceptable';icon='🟡';
-    verdict='Lining is acceptable — transfer can proceed with caution.';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> meets the minimum threshold. Pregnancy is achievable but success rates are higher with a thicker lining (8–12mm).`;
-    advice=`${pattern==='trilaminar'?'A trilaminar pattern at this thickness is reassuring. ':'A homogeneous pattern at this thickness is less ideal — discuss with your doctor. '}Your doctor may choose to proceed with transfer or optimize further. Continue luteal support as prescribed.`;
-  } else if(t<=12){
-    status='Optimal Endometrium ✓';cls='optimal';icon='🟢';
-    verdict='Excellent lining — optimal for embryo implantation!';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> is in the ideal range (8–12mm). This gives you the best possible conditions for implantation.`;
-    advice=`${pattern==='trilaminar'?'Trilaminar pattern confirmed — your uterine lining looks excellent. ':'A trilaminar (3-layer) pattern is ideal — mention to your doctor if not confirmed. '}Proceed as planned with your transfer. Continue progesterone and oestrogen support as prescribed. Great news!`;
-  } else if(t<=14){
-    status='Good — Upper Range';cls='optimal';icon='🟢';
-    verdict='Good lining — in the upper acceptable range.';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> is slightly above the optimal range but still acceptable. Most studies show good pregnancy rates up to 14mm.`;
-    advice='Lining above 12mm can still yield excellent results. Your doctor may want to confirm there are no polyps or other intrauterine abnormalities. Proceed as planned unless your specialist advises otherwise.';
+  if(mm<6){
+    statusKey='status_very_thin';cls='very-thin';icon='🔴';
+    verdictKey='verdict_very_thin';detailKey='detail_very_thin';adviceKey='advice_very_thin';
+  } else if(mm<7){
+    statusKey='status_thin';cls='thin';icon='🟠';
+    verdictKey='verdict_thin';detailKey='detail_thin';adviceKey='advice_thin';
+  } else if(mm<8){
+    statusKey='status_acceptable';cls='acceptable';icon='🟡';
+    verdictKey='verdict_acceptable';detailKey='detail_acceptable';
+    adviceKey=pattern==='trilaminar'?'advice_acceptable_tri':'advice_acceptable_homo';
+  } else if(mm<=12){
+    statusKey='status_optimal';cls='optimal';icon='🟢';
+    verdictKey='verdict_optimal';detailKey='detail_optimal';
+    adviceKey=pattern==='trilaminar'?'advice_optimal_tri':'advice_optimal_homo';
+  } else if(mm<=14){
+    statusKey='status_good_upper';cls='optimal';icon='🟢';
+    verdictKey='verdict_good_upper';detailKey='detail_good_upper';adviceKey='advice_good_upper';
   } else {
-    status='Very Thick — Assessment Needed';cls='thin';icon='🔵';
-    verdict='Lining is unusually thick — further assessment recommended.';
-    detail=`Your endometrial thickness of <strong>${t}mm</strong> is above the typical range. Very thick endometrium (>14mm) may indicate polyps, hyperplasia, or adenomyosis.`;
-    advice='A thick endometrium does not necessarily mean better implantation. Your doctor may recommend a hysteroscopy to rule out intrauterine pathology (polyps, septum, hyperplasia) before proceeding with embryo transfer. Please consult Dr. Prashanthi Reddy for assessment.';
+    statusKey='status_very_thick';cls='thin';icon='🔵';
+    verdictKey='verdict_very_thick';detailKey='detail_very_thick';adviceKey='advice_very_thick';
   }
 
-  const contextLabel=ctx==='ivf-fresh'?'Fresh IVF Transfer':ctx==='ivf-fet'?'Frozen Embryo Transfer (FET)':'Natural Conception / IUI';
+  const patLabel=pattern==='trilaminar'?t('pat_tri'):pattern==='homogeneous'?t('pat_homo'):t('pat_unk');
+  const ctxLabel=ctx==='ivf-fresh'?t('ctx_ivf_fresh'):ctx==='ivf-fet'?t('ctx_ivf_fet'):t('ctx_natural');
+  const detail=t(detailKey).replace('{mm}',mm);
 
   document.getElementById('resultCard').innerHTML=`
     <div class="result-card ${cls}">
-      <div class="result-status ${cls}">${icon} ${status}</div>
-      <div class="result-detail"><strong>Thickness:</strong> ${t}mm &nbsp;|&nbsp; <strong>Pattern:</strong> ${pattern==='trilaminar'?'Trilaminar (ideal)':pattern==='homogeneous'?'Homogeneous':'Not reported'} &nbsp;|&nbsp; <strong>Context:</strong> ${contextLabel}</div>
-      <div class="result-detail">${verdict}</div>
+      <div class="result-status ${cls}">${icon} ${t(statusKey)}</div>
+      <div class="result-detail"><strong>${t('lbl_thickness')}:</strong> ${mm}mm &nbsp;|&nbsp; <strong>${t('lbl_pattern')}:</strong> ${patLabel} &nbsp;|&nbsp; <strong>${t('lbl_context')}:</strong> ${ctxLabel}</div>
+      <div class="result-detail">${t(verdictKey)}</div>
       <div class="result-detail">${detail}</div>
-      <div class="result-advice">💡 <strong>What to do:</strong> ${advice}</div>
+      <div class="result-advice">💡 <strong>${t('lbl_what')}:</strong> ${t(adviceKey)}</div>
     </div>`;
 
   document.getElementById('result').style.display='block';
@@ -416,8 +516,16 @@ function resetCalc(){
   document.getElementById('thickness').value='';
   document.getElementById('pattern').value='trilaminar';
   document.getElementById('context').value='ivf-fresh';
+  _lastThicknessArgs=null;
   document.getElementById('result').style.display='none';
 }
+
+window._reapplyResults=function(){
+  if(_lastThicknessArgs){
+    const{mm,pattern,ctx}=_lastThicknessArgs;
+    _renderThickness(mm,pattern,ctx);
+  }
+};
 </script>
 </body>
 </html>
