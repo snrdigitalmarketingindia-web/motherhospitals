@@ -1,0 +1,41 @@
+name: GSC Indexing — Submit Sitemap URLs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "sitemap.xml"          # Only run when sitemap changes (new/updated pages)
+      - "*.html"               # Or when any HTML page is added/changed
+      - "gsc-indexing/**"      # Or when the script itself is updated
+
+  workflow_dispatch:           # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  submit-to-gsc:
+    name: Submit URLs to Google Indexing API
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r gsc-indexing/requirements.txt
+
+      - name: Submit all sitemap URLs to Google Indexing API
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "Submitting all $( grep -c '<loc>' sitemap.xml ) URLs from sitemap.xml..."
+          python gsc-indexing/submit_sitemap_urls.py
+
+      - name: Summary
+        if: always()
+        run: echo "GSC indexing submission complete. Check logs above for details."
