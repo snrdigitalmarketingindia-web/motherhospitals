@@ -24,7 +24,7 @@ import requests
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 SITE_URL      = "https://motherhospitals.co.in"
 INDEXNOW_KEY  = "ee61857d31f748f48aa64b652b738a10"
-INDEXNOW_API  = "https://api.indexnow.org/indexnow"   # Central endpoint → Google, Bing, Yandex
+INDEXNOW_API  = "https://www.bing.com/indexnow"   # Bing direct endpoint (site verified)
 SITEMAP_LOCAL = os.path.join(os.path.dirname(__file__), "../sitemap.xml")
 SITEMAP_URL   = "https://motherhospitals.co.in/sitemap.xml"
 # ─────────────────────────────────────────────────────────────────────────────
@@ -62,7 +62,6 @@ def submit_urls(urls, dry_run=False):
     payload = {
         "host": "motherhospitals.co.in",
         "key": INDEXNOW_KEY,
-        "keyLocation": f"{SITE_URL}/{INDEXNOW_KEY}.txt",
         "urlList": urls,
     }
 
