@@ -1565,5 +1565,19 @@ window.addEventListener('load', function() {
   })(window, document, "clarity", "script", "wqa31zckot");
 });
 </script>
+
+<script>
+/* Strip junk query params that cause duplicate indexing issues in GSC */
+(function(){
+  var junkParams = ['olsPage','blog'];
+  var params = new URLSearchParams(window.location.search);
+  var dirty = false;
+  junkParams.forEach(function(p){ if(params.has(p)){ params.delete(p); dirty=true; } });
+  if(dirty){
+    var clean = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.replaceState(null,'',clean);
+  }
+})();
+</script>
 </body>
 </html>

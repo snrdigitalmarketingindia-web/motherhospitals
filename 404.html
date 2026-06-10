@@ -113,5 +113,39 @@
   <p style="margin-top:6px"><a href="/">Home</a> · <a href="/contact-us.html">Contact</a> · <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> · <a href="/blog/">Blog</a></p>
 </footer>
 
+<script>
+/* ── Smart 301-equivalent redirects for old Wix / OLS URLs ── */
+(function(){
+  var path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+  var redirectMap = {
+    /* Old Wix blog posts → nearest live page */
+    '/f/choosing-the-best-ivf-center-in-hyderabad-–-a-couple’s-checklist': '/best-ivf-hospital-hyderabad.html',
+    '/f/welcome-to-mother-hospitals-ivf-center-–-boduppal-hyderabad':           '/',
+    '/f/why-mother-hospitals-ivf-center-boduppal-is-hyderabad’s-trust':         '/best-ivf-hospital-hyderabad.html',
+    '/f/understanding-amh-levels-and-their-role-in-fertility':                       '/amh-levels-explained.html',
+    '/f/how-ivf-works-a-complete-guide-for-couples-in-hyderabad':                   '/ivf-treatment-hyderabad.html',
+    /* OLS / cart paths */
+    '/ols/cart':                                    '/',
+    '/ols/cart/f/how-ivf-works-a-complete-guide-for-couples-in-hyderabad': '/ivf-treatment-hyderabad.html',
+    /* Old account / misc */
+    '/m/create-account':                            '/',
+    '/f.rss':                                       '/',
+    '/f.atom':                                      '/',
+    /* Catch-all for any remaining /f/ paths */
+  };
+
+  /* Exact match */
+  if (redirectMap[path]) {
+    window.location.replace(redirectMap[path]);
+    return;
+  }
+
+  /* Prefix match for /f/ paths not in the map above */
+  if (path.startsWith('/f/') || path.startsWith('/ols/') || path.startsWith('/m/')) {
+    window.location.replace('/');
+  }
+})();
+</script>
+
 </body>
 </html>
