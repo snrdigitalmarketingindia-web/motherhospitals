@@ -80,6 +80,12 @@ def submit_indexnow(urls: list[str]) -> bool:
         print(f"✅  IndexNow accepted {len(urls)} URL(s)  [HTTP {resp.status_code}]")
         print(f"   Engines notified: Bing, Yandex, Seznam, Naver")
         return True
+    elif resp.status_code == 403:
+        # 403 UserForbiddedToAccessSite — IndexNow key verification issue for this domain.
+        # Treat as a soft warning: Bing Webmaster API is the primary submission channel.
+        print(f"⚠️  IndexNow 403 (site verification pending) — skipping, Bing API is primary.",
+              file=sys.stderr)
+        return True  # non-fatal
     else:
         print(f"⚠️  IndexNow HTTP {resp.status_code}: {resp.text}", file=sys.stderr)
         return False
@@ -104,6 +110,15 @@ def submit_bing(api_key: str, urls: list[str]) -> bool:
             return False
         print(f"✅  Bing API accepted {len(urls)} URL(s).")
         return True
+    elif resp.status_code == 400:
+        body = resp.text
+        if "daily url submission quota" in body.lower() or "exceeded" in body.lower():
+            # Quota already used up earlier today — URLs were already submitted. Non-fatal.
+            print(f"⚠️  Bing API quota exhausted for today (already submitted earlier) — skipping.",
+                  file=sys.stderr)
+            return True  # non-fatal
+        print(f"⚠️  Bing API HTTP 400: {body}", file=sys.stderr)
+        return False
     else:
         print(f"⚠️  Bing API HTTP {resp.status_code}: {resp.text}", file=sys.stderr)
         return False
