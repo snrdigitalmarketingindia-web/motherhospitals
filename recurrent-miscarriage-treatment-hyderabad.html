@@ -50,515 +50,443 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-.cause-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.cause-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.cause-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.cause-table tr:nth-child(even) td{background:var(--purple-pale)}
-.badge-treatable{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-partial{display:inline-block;background:#1565c0;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-good{display:inline-block;background:#6a1b9a;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.step-list{counter-reset:steps;list-style:none;margin:1.5rem 0}
-.step-list li{counter-increment:steps;display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--purple-light);align-items:flex-start}
-.step-list li:last-child{border-bottom:none}
-.step-num{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:700;font-size:1rem;flex-shrink:0}
-.step-content h3{font-family:var(--font-d);font-size:1rem;color:var(--purple);margin-bottom:0.25rem}
-.step-content p{font-size:0.87rem;color:var(--text-mid)}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}.cause-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.cause-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.cause-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.cause-table tr:nth-child(even) td{background:var(--purple-pale)}.badge-treatable{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-partial{display:inline-block;background:#1565c0;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-good{display:inline-block;background:#6a1b9a;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.step-list{counter-reset:steps;list-style:none;margin:1.5rem 0}.step-list li{counter-increment:steps;display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--purple-light);align-items:flex-start}.step-list li:last-child{border-bottom:none}.step-num{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:700;font-size:1rem;flex-shrink:0}.step-content h3{font-family:var(--font-d);font-size:1rem;color:var(--purple);margin-bottom:0.25rem}.step-content p{font-size:0.87rem;color:var(--text-mid)}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 @media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Recurrent Miscarriage Treatment Hyderabad — Find the Cause, Keep the Baby",
-  "url":"https://motherhospitals.co.in/recurrent-miscarriage-treatment-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Recurrent Miscarriage Treatment Hyderabad — Find the Cause, Keep the Baby",
+ "url":"https://motherhospitals.co.in/recurrent-miscarriage-treatment-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20had%20multiple%20miscarriages%20and%20want%20to%20know%20about%20recurrent%20pregnancy%20loss%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20had%20multiple%20miscarriages%20and%20want%20to%20know%20about%20recurrent%20pregnancy%20loss%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🧬</span> RPL Specialist Clinic</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🧬</span> RPL Specialist Clinic</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › Recurrent Miscarriage Treatment
-    </div>
-    <h1>Recurrent Miscarriage in Hyderabad — <em>Find the Cause. Keep the Baby.</em></h1>
-    <p class="hero-sub">Two or three miscarriages does not mean you cannot have a baby. It means something specific is stopping your pregnancies — and we can find it. At Mother Hospitals, 80% of our recurrent pregnancy loss patients go on to deliver a healthy baby.</p>
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Book RPL Consultation — 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20consultation%20for%20recurrent%20miscarriage%20treatment" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
-    </div>
-  </div>
+ <div class="page-hero-inner">
+ <div class="breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › Recurrent Miscarriage Treatment
+ </div>
+ <h1>Recurrent Miscarriage in Hyderabad — <em>Find the Cause. Keep the Baby.</em></h1>
+ <p class="hero-sub">Two or three miscarriages does not mean you cannot have a baby. It means something specific is stopping your pregnancies — and we can find it. At Mother Hospitals, 80% of our recurrent pregnancy loss patients go on to deliver a healthy baby.</p>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Book RPL Consultation — 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20consultation%20for%20recurrent%20miscarriage%20treatment" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">80%</div><div class="stat-label">RPL patients go on to have a healthy baby</div></div>
-      <div class="stat-box"><div class="stat-num">1–2%</div><div class="stat-label">Couples affected by recurrent pregnancy loss</div></div>
-      <div class="stat-box"><div class="stat-num">50–60%</div><div class="stat-label">Cases have a clear, identifiable cause</div></div>
-      <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Losses — when a full RPL workup should begin</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">80%</div><div class="stat-label">RPL patients go on to have a healthy baby</div></div>
+ <div class="stat-box"><div class="stat-num">1–2%</div><div class="stat-label">Couples affected by recurrent pregnancy loss</div></div>
+ <div class="stat-box"><div class="stat-num">50–60%</div><div class="stat-label">Cases have a clear, identifiable cause</div></div>
+ <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Losses — when a full RPL workup should begin</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- WHAT IS RPL -->
 <section class="section" style="padding-top:30px">
-  <div class="section-inner">
-    <h2>What Is <em>Recurrent Pregnancy Loss</em>?</h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">Recurrent miscarriage — medically called Recurrent Pregnancy Loss (RPL) — is defined as 2 or more pregnancy losses before 20 weeks. It is different from a single miscarriage, which is common. With RPL, there is usually an underlying reason that keeps repeating.</p>
+ <div class="section-inner">
+ <h2>What Is <em>Recurrent Pregnancy Loss</em>?</h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">Recurrent miscarriage — medically called Recurrent Pregnancy Loss (RPL) — is defined as 2 or more pregnancy losses before 20 weeks. It is different from a single miscarriage, which is common. With RPL, there is usually an underlying reason that keeps repeating.</p>
 
-    <div class="voice-box">
-      <strong>"Doctor, I have had 3 miscarriages. Everyone says 'try again.' But I cannot keep going through this."</strong><br/>
-      We hear this almost every week at our clinic in Boduppal. The heartbreak is real — and so is the solution. You should NOT simply "try again" without investigation. A full RPL workup takes one week. It can identify the cause in most couples and completely change your outcome.
-    </div>
+ <div class="voice-box">
+ <strong>"Doctor, I have had 3 miscarriages. Everyone says 'try again.' But I cannot keep going through this."</strong><br/>
+ We hear this almost every week at our clinic in Boduppal. The heartbreak is real — and so is the solution. You should NOT simply "try again" without investigation. A full RPL workup takes one week. It can identify the cause in most couples and completely change your outcome.
+ </div>
 
-    <div class="fact-bar">
-      <strong>Important:</strong> A single miscarriage is not recurrent pregnancy loss. But after 2 losses — especially if you are over 35 — you should start investigating immediately. Waiting for a 3rd loss is not necessary or advisable.
-    </div>
+ <div class="fact-bar">
+ <strong>Important:</strong> A single miscarriage is not recurrent pregnancy loss. But after 2 losses — especially if you are over 35 — you should start investigating immediately. Waiting for a 3rd loss is not necessary or advisable.
+ </div>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>🔴 What is NOT a recurrent miscarriage</h3>
-        <ul>
-          <li>A single early miscarriage (very common — 1 in 5 pregnancies)</li>
-          <li>A biochemical pregnancy (faint positive, then period)</li>
-          <li>A blighted ovum (sac without embryo) — once only</li>
-          <li>A molar pregnancy (separate management)</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>🟣 When to seek RPL care</h3>
-        <ul>
-          <li>2 or more confirmed pregnancy losses</li>
-          <li>Loss after seeing a heartbeat (especially concerning)</li>
-          <li>Second trimester loss (after 12 weeks)</li>
-          <li>Any loss if you are over 38 years old</li>
-          <li>Loss in an IVF cycle with a good-quality embryo</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>🔴 What is NOT a recurrent miscarriage</h3>
+ <ul>
+ <li>A single early miscarriage (very common — 1 in 5 pregnancies)</li>
+ <li>A biochemical pregnancy (faint positive, then period)</li>
+ <li>A blighted ovum (sac without embryo) — once only</li>
+ <li>A molar pregnancy (separate management)</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>🟣 When to seek RPL care</h3>
+ <ul>
+ <li>2 or more confirmed pregnancy losses</li>
+ <li>Loss after seeing a heartbeat (especially concerning)</li>
+ <li>Second trimester loss (after 12 weeks)</li>
+ <li>Any loss if you are over 38 years old</li>
+ <li>Loss in an IVF cycle with a good-quality embryo</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- CAUSES TABLE -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Causes of <em>Recurrent Miscarriage</em> — and Treatability</h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">Most causes of recurrent pregnancy loss are treatable. Here is what our RPL panel looks for:</p>
+ <div class="section-inner">
+ <h2>Causes of <em>Recurrent Miscarriage</em> — and Treatability</h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">Most causes of recurrent pregnancy loss are treatable. Here is what our RPL panel looks for:</p>
 
-    <table class="cause-table">
-      <thead>
-        <tr>
-          <th>Cause</th>
-          <th>How Common</th>
-          <th>Tests Used</th>
-          <th>Treatability</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Chromosomal (embryo)</strong> — abnormal embryos that cannot develop</td>
-          <td>50–60% of early losses</td>
-          <td>Karyotyping, PGT-A</td>
-          <td><span class="badge-good">IVF+PGT-A</span></td>
-        </tr>
-        <tr>
-          <td><strong>Uterine abnormalities</strong> — septum, fibroids, polyps, adhesions</td>
-          <td>15–20%</td>
-          <td>Ultrasound, Hysteroscopy, 3D scan</td>
-          <td><span class="badge-treatable">Highly Treatable</span></td>
-        </tr>
-        <tr>
-          <td><strong>Antiphospholipid syndrome (APS)</strong> — blood clots in placenta</td>
-          <td>10–15%</td>
-          <td>APA, anti-beta2 GP, Lupus anticoagulant</td>
-          <td><span class="badge-treatable">Highly Treatable</span></td>
-        </tr>
-        <tr>
-          <td><strong>Hormonal imbalances</strong> — thyroid, prolactin, progesterone, PCOS</td>
-          <td>10–15%</td>
-          <td>TSH, prolactin, LH, FSH, AMH, progesterone</td>
-          <td><span class="badge-treatable">Highly Treatable</span></td>
-        </tr>
-        <tr>
-          <td><strong>Thrombophilia</strong> — inherited clotting disorders (MTHFR, Factor V Leiden)</td>
-          <td>5–10%</td>
-          <td>Thrombophilia screen, homocysteine</td>
-          <td><span class="badge-partial">Treatable with anticoagulants</span></td>
-        </tr>
-        <tr>
-          <td><strong>Male factor</strong> — high sperm DNA fragmentation</td>
-          <td>5–8%</td>
-          <td>Sperm DNA fragmentation (DFI) test</td>
-          <td><span class="badge-treatable">Treatable with antioxidants / ICSI</span></td>
-        </tr>
-        <tr>
-          <td><strong>Immune factors</strong> — elevated Natural Killer cells, alloimmune</td>
-          <td>5–10%</td>
-          <td>NK cell assay, HLA typing</td>
-          <td><span class="badge-partial">Specialist treatment available</span></td>
-        </tr>
-        <tr>
-          <td><strong>Unexplained RPL</strong> — no identifiable cause found</td>
-          <td>30–40%</td>
-          <td>Full workup returns normal</td>
-          <td><span class="badge-good">70% success with supportive care</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+ <table class="cause-table">
+ <thead>
+ <tr>
+ <th>Cause</th>
+ <th>How Common</th>
+ <th>Tests Used</th>
+ <th>Treatability</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Chromosomal (embryo)</strong> — abnormal embryos that cannot develop</td>
+ <td>50–60% of early losses</td>
+ <td>Karyotyping, PGT-A</td>
+ <td><span class="badge-good">IVF+PGT-A</span></td>
+ </tr>
+ <tr>
+ <td><strong>Uterine abnormalities</strong> — septum, fibroids, polyps, adhesions</td>
+ <td>15–20%</td>
+ <td>Ultrasound, Hysteroscopy, 3D scan</td>
+ <td><span class="badge-treatable">Highly Treatable</span></td>
+ </tr>
+ <tr>
+ <td><strong>Antiphospholipid syndrome (APS)</strong> — blood clots in placenta</td>
+ <td>10–15%</td>
+ <td>APA, anti-beta2 GP, Lupus anticoagulant</td>
+ <td><span class="badge-treatable">Highly Treatable</span></td>
+ </tr>
+ <tr>
+ <td><strong>Hormonal imbalances</strong> — thyroid, prolactin, progesterone, PCOS</td>
+ <td>10–15%</td>
+ <td>TSH, prolactin, LH, FSH, AMH, progesterone</td>
+ <td><span class="badge-treatable">Highly Treatable</span></td>
+ </tr>
+ <tr>
+ <td><strong>Thrombophilia</strong> — inherited clotting disorders (MTHFR, Factor V Leiden)</td>
+ <td>5–10%</td>
+ <td>Thrombophilia screen, homocysteine</td>
+ <td><span class="badge-partial">Treatable with anticoagulants</span></td>
+ </tr>
+ <tr>
+ <td><strong>Male factor</strong> — high sperm DNA fragmentation</td>
+ <td>5–8%</td>
+ <td>Sperm DNA fragmentation (DFI) test</td>
+ <td><span class="badge-treatable">Treatable with antioxidants / ICSI</span></td>
+ </tr>
+ <tr>
+ <td><strong>Immune factors</strong> — elevated Natural Killer cells, alloimmune</td>
+ <td>5–10%</td>
+ <td>NK cell assay, HLA typing</td>
+ <td><span class="badge-partial">Specialist treatment available</span></td>
+ </tr>
+ <tr>
+ <td><strong>Unexplained RPL</strong> — no identifiable cause found</td>
+ <td>30–40%</td>
+ <td>Full workup returns normal</td>
+ <td><span class="badge-good">70% success with supportive care</span></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
 </section>
 
 <!-- OUR RPL PROTOCOL -->
 <section class="section" style="padding-top:40px">
-  <div class="section-inner">
-    <h2>Our Step-by-Step <em>RPL Investigation Protocol</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">At Mother Hospitals Boduppal, we run a structured RPL clinic. Here is what to expect when you come to us after recurrent pregnancy loss:</p>
+ <div class="section-inner">
+ <h2>Our Step-by-Step <em>RPL Investigation Protocol</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">At Mother Hospitals Boduppal, we run a structured RPL clinic. Here is what to expect when you come to us after recurrent pregnancy loss:</p>
 
-    <ol class="step-list">
-      <li>
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h3>Detailed History & Timeline Review</h3>
-          <p>We map every pregnancy — gestational age at loss, symptoms, any heartbeat seen, results of any previous tests, and medications taken. Pattern recognition matters: losses at 5–6 weeks point to different causes than losses at 8–10 weeks.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h3>Uterine Assessment — Ultrasound + Hysteroscopy</h3>
-          <p>A 3D pelvic ultrasound checks for uterine septum, fibroids, and polyps. If suspicious, we proceed to diagnostic hysteroscopy — a camera inside the uterus — to see and fix problems directly. A uterine septum, for example, doubles miscarriage risk and can be corrected in a single outpatient procedure.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h3>Full Hormonal Blood Panel</h3>
-          <p>TSH, Free T3, Free T4, prolactin, FSH, LH, AMH, progesterone on Day 2–3, fasting insulin, and DHEAS. Hormonal imbalances — especially undiagnosed thyroid disease and high prolactin — are among the most correctable causes of RPL.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h3>Antiphospholipid & Thrombophilia Screen</h3>
-          <p>Blood tests for APA, anti-beta2 glycoprotein, lupus anticoagulant, homocysteine, Factor V Leiden, Protein C & S, and MTHFR mutation. If positive, treatment with low-dose aspirin and low molecular weight heparin dramatically improves outcomes — live birth rates improve from 10% to 70–80%.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <h3>Chromosomal Karyotyping — Both Partners</h3>
-          <p>A blood test that checks if either partner carries a balanced chromosomal translocation. This is rare (3–5%) but explains repeated abnormal embryos. If found, IVF with PGT-A (preimplantation genetic testing) selects normal embryos before transfer.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <h3>Sperm DNA Fragmentation Test (for the Partner)</h3>
-          <p>High sperm DNA damage leads to embryos that start dividing but then arrest — appearing as early miscarriages. A DFI (DNA Fragmentation Index) above 25% needs treatment. Antioxidants, lifestyle changes, and ICSI with testicular sperm can resolve this.</p>
-        </div>
-      </li>
-      <li>
-        <div class="step-num">7</div>
-        <div class="step-content">
-          <h3>Personalised Treatment Plan & Follow-Up</h3>
-          <p>All results are reviewed together and a customised plan is made. For some it is a simple hormonal correction. For others, hysteroscopic surgery + progesterone support. For chromosomal cases, IVF with PGT-A. You will know exactly what the next pregnancy needs to be different.</p>
-        </div>
-      </li>
-    </ol>
-  </div>
+ <ol class="step-list">
+ <li>
+ <div class="step-num">1</div>
+ <div class="step-content">
+ <h3>Detailed History & Timeline Review</h3>
+ <p>We map every pregnancy — gestational age at loss, symptoms, any heartbeat seen, results of any previous tests, and medications taken. Pattern recognition matters: losses at 5–6 weeks point to different causes than losses at 8–10 weeks.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">2</div>
+ <div class="step-content">
+ <h3>Uterine Assessment — Ultrasound + Hysteroscopy</h3>
+ <p>A 3D pelvic ultrasound checks for uterine septum, fibroids, and polyps. If suspicious, we proceed to diagnostic hysteroscopy — a camera inside the uterus — to see and fix problems directly. A uterine septum, for example, doubles miscarriage risk and can be corrected in a single outpatient procedure.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">3</div>
+ <div class="step-content">
+ <h3>Full Hormonal Blood Panel</h3>
+ <p>TSH, Free T3, Free T4, prolactin, FSH, LH, AMH, progesterone on Day 2–3, fasting insulin, and DHEAS. Hormonal imbalances — especially undiagnosed thyroid disease and high prolactin — are among the most correctable causes of RPL.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">4</div>
+ <div class="step-content">
+ <h3>Antiphospholipid & Thrombophilia Screen</h3>
+ <p>Blood tests for APA, anti-beta2 glycoprotein, lupus anticoagulant, homocysteine, Factor V Leiden, Protein C & S, and MTHFR mutation. If positive, treatment with low-dose aspirin and low molecular weight heparin dramatically improves outcomes — live birth rates improve from 10% to 70–80%.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">5</div>
+ <div class="step-content">
+ <h3>Chromosomal Karyotyping — Both Partners</h3>
+ <p>A blood test that checks if either partner carries a balanced chromosomal translocation. This is rare (3–5%) but explains repeated abnormal embryos. If found, IVF with PGT-A (preimplantation genetic testing) selects normal embryos before transfer.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">6</div>
+ <div class="step-content">
+ <h3>Sperm DNA Fragmentation Test (for the Partner)</h3>
+ <p>High sperm DNA damage leads to embryos that start dividing but then arrest — appearing as early miscarriages. A DFI (DNA Fragmentation Index) above 25% needs treatment. Antioxidants, lifestyle changes, and ICSI with testicular sperm can resolve this.</p>
+ </div>
+ </li>
+ <li>
+ <div class="step-num">7</div>
+ <div class="step-content">
+ <h3>Personalised Treatment Plan & Follow-Up</h3>
+ <p>All results are reviewed together and a customised plan is made. For some it is a simple hormonal correction. For others, hysteroscopic surgery + progesterone support. For chromosomal cases, IVF with PGT-A. You will know exactly what the next pregnancy needs to be different.</p>
+ </div>
+ </li>
+ </ol>
+ </div>
 </section>
 
 <!-- TREATMENTS -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Treatments That <em>Work for RPL</em> in Hyderabad</h2>
-    <p style="color:var(--text-mid);margin-bottom:1.5rem">Based on what your investigations find, here are the evidence-based treatments we use:</p>
+ <div class="section-inner">
+ <h2>Treatments That <em>Work for RPL</em> in Hyderabad</h2>
+ <p style="color:var(--text-mid);margin-bottom:1.5rem">Based on what your investigations find, here are the evidence-based treatments we use:</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>🧬 IVF + PGT-A (Preimplantation Genetic Testing)</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For couples where chromosomal abnormalities in embryos are the cause. PGT-A screens all embryos before transfer — only chromosomally normal embryos are transferred. This drops miscarriage rate per transfer to under 10%.</p>
-      </div>
-      <div class="col-card">
-        <h3>🔬 Hysteroscopic Surgery</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For uterine septum, polyps, fibroids inside the cavity, or Asherman's adhesions. Done as a day procedure under short anaesthesia. After correction, the uterus is rechecked and pregnancy success rates improve significantly.</p>
-      </div>
-      <div class="col-card">
-        <h3>💊 Progesterone + Hormonal Support</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">Luteal phase defect (low progesterone) is a correctable cause. Vaginal progesterone or oral dydrogesterone from ovulation or embryo transfer, continued through 12–16 weeks, significantly reduces loss risk.</p>
-      </div>
-      <div class="col-card">
-        <h3>💉 Aspirin + Heparin Protocol</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For antiphospholipid syndrome and thrombophilia. Low-dose aspirin (75 mg daily from conception) plus low molecular weight heparin injections through pregnancy converts a 10% live birth rate into 70–80%. Simple and highly effective.</p>
-      </div>
-      <div class="col-card">
-        <h3>🦋 Thyroid Optimisation</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">Getting TSH below 2.5 before conception with levothyroxine. Thyroid management continues throughout pregnancy as requirements increase by 30–50%. Unmanaged hypothyroidism during pregnancy is a leading, preventable cause of repeated loss.</p>
-      </div>
-      <div class="col-card">
-        <h3>🧪 Sperm DNA Repair Protocol</h3>
-        <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For high DFI (sperm DNA fragmentation). Medical antioxidant therapy for 3 months (CoQ10, L-carnitine, vitamin E, zinc), followed by re-test. For severe cases, testicular sperm extraction (TESE-ICSI) bypasses damaged sperm entirely.</p>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>🧬 IVF + PGT-A (Preimplantation Genetic Testing)</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For couples where chromosomal abnormalities in embryos are the cause. PGT-A screens all embryos before transfer — only chromosomally normal embryos are transferred. This drops miscarriage rate per transfer to under 10%.</p>
+ </div>
+ <div class="col-card">
+ <h3>🔬 Hysteroscopic Surgery</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For uterine septum, polyps, fibroids inside the cavity, or Asherman's adhesions. Done as a day procedure under short anaesthesia. After correction, the uterus is rechecked and pregnancy success rates improve significantly.</p>
+ </div>
+ <div class="col-card">
+ <h3>💊 Progesterone + Hormonal Support</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">Luteal phase defect (low progesterone) is a correctable cause. Vaginal progesterone or oral dydrogesterone from ovulation or embryo transfer, continued through 12–16 weeks, significantly reduces loss risk.</p>
+ </div>
+ <div class="col-card">
+ <h3>💉 Aspirin + Heparin Protocol</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For antiphospholipid syndrome and thrombophilia. Low-dose aspirin (75 mg daily from conception) plus low molecular weight heparin injections through pregnancy converts a 10% live birth rate into 70–80%. Simple and highly effective.</p>
+ </div>
+ <div class="col-card">
+ <h3>🦋 Thyroid Optimisation</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">Getting TSH below 2.5 before conception with levothyroxine. Thyroid management continues throughout pregnancy as requirements increase by 30–50%. Unmanaged hypothyroidism during pregnancy is a leading, preventable cause of repeated loss.</p>
+ </div>
+ <div class="col-card">
+ <h3>🧪 Sperm DNA Repair Protocol</h3>
+ <p style="font-size:0.87rem;color:var(--text-mid);margin-top:0.5rem">For high DFI (sperm DNA fragmentation). Medical antioxidant therapy for 3 months (CoQ10, L-carnitine, vitamin E, zinc), followed by re-test. For severe cases, testicular sperm extraction (TESE-ICSI) bypasses damaged sperm entirely.</p>
+ </div>
+ </div>
 
-    <div class="highlight-box">
-      <h3>Supportive Care for Unexplained RPL</h3>
-      <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0.8rem">When investigations are all normal, we do not leave you without a plan. Evidence supports:</p>
-      <ul class="check-list">
-        <li>Progesterone support from confirmed ovulation or embryo transfer</li>
-        <li>Baby aspirin 75 mg from conception to 34 weeks</li>
-        <li>Folic acid 5 mg (not 400 mcg) — higher dose for RPL patients</li>
-        <li>Vitamin D3, B12, and iron optimisation before conception</li>
-        <li>Weekly early pregnancy scans for reassurance from 5 weeks</li>
-        <li>Emotional support — RPL causes real psychological trauma that affects outcomes</li>
-      </ul>
-      <p style="font-size:0.88rem;color:var(--text-mid);margin-top:0.8rem">With this supportive protocol, 70% of couples with unexplained RPL carry a pregnancy to term.</p>
-    </div>
-  </div>
+ <div class="highlight-box">
+ <h3>Supportive Care for Unexplained RPL</h3>
+ <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0.8rem">When investigations are all normal, we do not leave you without a plan. Evidence supports:</p>
+ <ul class="check-list">
+ <li>Progesterone support from confirmed ovulation or embryo transfer</li>
+ <li>Baby aspirin 75 mg from conception to 34 weeks</li>
+ <li>Folic acid 5 mg (not 400 mcg) — higher dose for RPL patients</li>
+ <li>Vitamin D3, B12, and iron optimisation before conception</li>
+ <li>Weekly early pregnancy scans for reassurance from 5 weeks</li>
+ <li>Emotional support — RPL causes real psychological trauma that affects outcomes</li>
+ </ul>
+ <p style="font-size:0.88rem;color:var(--text-mid);margin-top:0.8rem">With this supportive protocol, 70% of couples with unexplained RPL carry a pregnancy to term.</p>
+ </div>
+ </div>
 </section>
 
 <!-- EMOTIONAL SECTION -->
 <section class="section" style="padding-top:40px">
-  <div class="section-inner">
-    <h2>The Emotional Weight of <em>Repeated Loss</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">Recurrent miscarriage is not just a medical condition. Each loss is a grief. The fear of trying again, the anxiety of every early scan, the isolation of not knowing whether to tell people you are pregnant — these are real, and we see them every day.</p>
+ <div class="section-inner">
+ <h2>The Emotional Weight of <em>Repeated Loss</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">Recurrent miscarriage is not just a medical condition. Each loss is a grief. The fear of trying again, the anxiety of every early scan, the isolation of not knowing whether to tell people you are pregnant — these are real, and we see them every day.</p>
 
-    <div class="voice-box">
-      <strong>"I am scared to feel happy when I get pregnant now. I just wait for it to go wrong."</strong><br/>
-      Anticipatory grief after RPL is one of the most common feelings we hear. It is completely normal — and it does not mean you have given up. Our team includes counselling support alongside medical care. You are not just a case file here. We remember every couple's story.
-    </div>
+ <div class="voice-box">
+ <strong>"I am scared to feel happy when I get pregnant now. I just wait for it to go wrong."</strong><br/>
+ Anticipatory grief after RPL is one of the most common feelings we hear. It is completely normal — and it does not mean you have given up. Our team includes counselling support alongside medical care. You are not just a case file here. We remember every couple's story.
+ </div>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>💜 What we offer beyond medicine</h3>
-        <ul>
-          <li>Early pregnancy scanning from 5 weeks (every week if needed)</li>
-          <li>Direct doctor WhatsApp contact during early pregnancy</li>
-          <li>Dedicated RPL nurse coordinator — same person every visit</li>
-          <li>Counselling support for both partners</li>
-          <li>Flexible appointment times for couples working in IT / MNCs</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>📍 Who comes to us</h3>
-        <ul>
-          <li>Couples from Boduppal, Uppal, ECIL, Nagole, Ghatkesar</li>
-          <li>IT professionals from Hitech City relocating to east Hyderabad</li>
-          <li>Couples who have been told "nothing is wrong" but keep losing</li>
-          <li>Women referred after 3+ failed IVF cycles elsewhere</li>
-          <li>Couples who simply want a second opinion before giving up</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>💜 What we offer beyond medicine</h3>
+ <ul>
+ <li>Early pregnancy scanning from 5 weeks (every week if needed)</li>
+ <li>Direct doctor WhatsApp contact during early pregnancy</li>
+ <li>Dedicated RPL nurse coordinator — same person every visit</li>
+ <li>Counselling support for both partners</li>
+ <li>Flexible appointment times for couples working in IT / MNCs</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>📍 Who comes to us</h3>
+ <ul>
+ <li>Couples from Boduppal, Uppal, ECIL, Nagole, Ghatkesar</li>
+ <li>IT professionals from Hitech City relocating to east Hyderabad</li>
+ <li>Couples who have been told "nothing is wrong" but keep losing</li>
+ <li>Women referred after 3+ failed IVF cycles elsewhere</li>
+ <li>Couples who simply want a second opinion before giving up</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- DR STRIP -->
 <section class="section" style="padding-top:0;padding-bottom:40px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — Recurrent Miscarriage Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. Prashanthi Reddy</h3>
-        <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
-        19+ years specialising in reproductive medicine including recurrent pregnancy loss, IVF, and high-risk obstetrics at Mother Hospitals, Boduppal, Hyderabad.<br/>
-        <strong style="opacity:1">RPL Clinic: Monday–Saturday · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — Recurrent Miscarriage Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. Prashanthi Reddy</h3>
+ <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
+ 19+ years specialising in reproductive medicine including recurrent pregnancy loss, IVF, and high-risk obstetrics at Mother Hospitals, Boduppal, Hyderabad.<br/>
+ <strong style="opacity:1">RPL Clinic: Monday–Saturday · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Frequently Asked Questions — <em>Recurrent Miscarriage</em></h2>
+ <div class="section-inner">
+ <h2>Frequently Asked Questions — <em>Recurrent Miscarriage</em></h2>
 
-    <details class="faq-item">
-      <summary class="faq-q">What is recurrent miscarriage?</summary>
-      <div class="faq-a">Recurrent miscarriage (recurrent pregnancy loss / RPL) means 2 or more pregnancy losses before 20 weeks. It affects 1–2% of couples. Unlike a single miscarriage, which is often random, recurrent loss usually has an underlying cause — identifiable in 50–60% of cases. Most couples go on to have a healthy baby with the right investigation and treatment.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What is recurrent miscarriage?</summary>
+ <div class="faq-a">Recurrent miscarriage (recurrent pregnancy loss / RPL) means 2 or more pregnancy losses before 20 weeks. It affects 1–2% of couples. Unlike a single miscarriage, which is often random, recurrent loss usually has an underlying cause — identifiable in 50–60% of cases. Most couples go on to have a healthy baby with the right investigation and treatment.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">What causes recurrent miscarriage?</summary>
-      <div class="faq-a">The main causes are: chromosomal abnormalities in the embryo (50–60% of early losses), uterine structural problems like a septum or polyps (15–20%), antiphospholipid syndrome / blood clotting disorders (10–15%), hormonal imbalances including thyroid disease, PCOS, and low progesterone (10–15%), thrombophilia, high sperm DNA fragmentation, and immune factors. In 30–40% of cases, no cause is found — but most of these couples still have a live birth with supportive care.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What causes recurrent miscarriage?</summary>
+ <div class="faq-a">The main causes are: chromosomal abnormalities in the embryo (50–60% of early losses), uterine structural problems like a septum or polyps (15–20%), antiphospholipid syndrome / blood clotting disorders (10–15%), hormonal imbalances including thyroid disease, PCOS, and low progesterone (10–15%), thrombophilia, high sperm DNA fragmentation, and immune factors. In 30–40% of cases, no cause is found — but most of these couples still have a live birth with supportive care.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">After 3 miscarriages, what tests should I do?</summary>
-      <div class="faq-a">After 2–3 miscarriages a full RPL panel is recommended: karyotyping of both partners, pelvic ultrasound and hysteroscopy (uterine check), antiphospholipid antibody panel, thrombophilia screen (Factor V Leiden, MTHFR, Protein C & S), full hormonal profile (TSH, prolactin, AMH, FSH, LH, progesterone), and sperm DNA fragmentation test for the male partner. At Mother Hospitals we run this as a structured one-week workup so you have all answers in one place.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">After 3 miscarriages, what tests should I do?</summary>
+ <div class="faq-a">After 2–3 miscarriages a full RPL panel is recommended: karyotyping of both partners, pelvic ultrasound and hysteroscopy (uterine check), antiphospholipid antibody panel, thrombophilia screen (Factor V Leiden, MTHFR, Protein C & S), full hormonal profile (TSH, prolactin, AMH, FSH, LH, progesterone), and sperm DNA fragmentation test for the male partner. At Mother Hospitals we run this as a structured one-week workup so you have all answers in one place.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can IVF help after multiple miscarriages?</summary>
-      <div class="faq-a">Yes. IVF with PGT-A (Preimplantation Genetic Testing for aneuploidy) helps significantly when chromosomal abnormalities are the cause. PGT-A screens all embryos before transfer, selecting only chromosomally normal ones. This reduces miscarriage rates per transfer from 30–40% to under 10%. IVF also allows hysteroscopic surgery to fix any uterine problem before the frozen embryo transfer.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Can IVF help after multiple miscarriages?</summary>
+ <div class="faq-a">Yes. IVF with PGT-A (Preimplantation Genetic Testing for aneuploidy) helps significantly when chromosomal abnormalities are the cause. PGT-A screens all embryos before transfer, selecting only chromosomally normal ones. This reduces miscarriage rates per transfer from 30–40% to under 10%. IVF also allows hysteroscopic surgery to fix any uterine problem before the frozen embryo transfer.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">What is the success rate after recurrent miscarriage treatment?</summary>
-      <div class="faq-a">Studies consistently show 70–80% of couples with recurrent pregnancy loss — even after 3 or more miscarriages — go on to have a live birth with proper treatment. Women under 35 with a clear identifiable cause have the highest success rates (85–90%). Even women over 40 have a 50–60% live birth rate with IVF and PGT-A. The key is investigation first — then a targeted treatment plan.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What is the success rate after recurrent miscarriage treatment?</summary>
+ <div class="faq-a">Studies consistently show 70–80% of couples with recurrent pregnancy loss — even after 3 or more miscarriages — go on to have a live birth with proper treatment. Women under 35 with a clear identifiable cause have the highest success rates (85–90%). Even women over 40 have a 50–60% live birth rate with IVF and PGT-A. The key is investigation first — then a targeted treatment plan.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Is recurrent miscarriage common in women in Hyderabad?</summary>
-      <div class="faq-a">Yes. At Mother Hospitals Boduppal, RPL is one of the top 5 reasons for fertility consultation. Thyroid disease (hypothyroidism), PCOS, antiphospholipid syndrome, and nutritional deficiencies (Vitamin D3, B12) are particularly common in Indian women and are all treatable. Women in Telangana and AP have a higher prevalence of thyroid disease, which is a key and correctable cause of RPL. Do not simply "try again" — come in for a workup.</div>
-    </details>
-  </div>
+ <details class="faq-item">
+ <summary class="faq-q">Is recurrent miscarriage common in women in Hyderabad?</summary>
+ <div class="faq-a">Yes. At Mother Hospitals Boduppal, RPL is one of the top 5 reasons for fertility consultation. Thyroid disease (hypothyroidism), PCOS, antiphospholipid syndrome, and nutritional deficiencies (Vitamin D3, B12) are particularly common in Indian women and are all treatable. Women in Telangana and AP have a higher prevalence of thyroid disease, which is a key and correctable cause of RPL. Do not simply "try again" — come in for a workup.</div>
+ </details>
+ </div>
 </section>
 
 <!-- RELATED ARTICLES -->
 <section class="section" style="padding-top:40px;padding-bottom:60px">
-  <div class="section-inner">
-    <h2>Related <em>Articles</em> at Mother Hospitals</h2>
-    <div class="related-grid">
-      <a href="/thyroid-and-fertility-hyderabad.html" class="related-card">🦋 Thyroid & Fertility</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
-      <a href="/blastocyst-transfer-explained.html" class="related-card">🔬 Blastocyst Transfer</a>
-      <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
-      <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
-      <a href="/male-infertility-hyderabad.html" class="related-card">👨 Male Infertility</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Articles</em> at Mother Hospitals</h2>
+ <div class="related-grid">
+ <a href="/thyroid-and-fertility-hyderabad.html" class="related-card">🦋 Thyroid & Fertility</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
+ <a href="/blastocyst-transfer-explained.html" class="related-card">🔬 Blastocyst Transfer</a>
+ <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
+ <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
+ <a href="/male-infertility-hyderabad.html" class="related-card">👨 Male Infertility</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
-  <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
-  <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
-  <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy or your fertility specialist for guidance specific to your situation.</p>
-  <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
+ <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
+ <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
+ <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
+ <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy or your fertility specialist for guidance specific to your situation.</p>
+ <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
 </body>

@@ -47,395 +47,322 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-nav a{text-decoration:none}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+nav a{text-decoration:none}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.section-sub{color:var(--text-soft);margin-bottom:2rem}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.grade-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.grade-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.grade-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}
-.grade-table tr:nth-child(even) td{background:var(--purple-pale)}
-.grade-badge{display:inline-block;background:var(--purple);color:#fff;border-radius:6px;padding:0.1rem 0.5rem;font-size:0.8rem;font-weight:700;font-family:var(--font-d)}
-.grade-badge.good{background:var(--purple-mid)}
-.grade-badge.fair{background:var(--text-soft)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card.purple{border-color:var(--purple)}
-.col-card.magenta{border-color:var(--magenta)}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-.expansion-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.expansion-table th{background:var(--purple);color:#fff;padding:0.65rem 0.9rem;text-align:left;font-family:var(--font-d);font-size:0.88rem}
-.expansion-table td{padding:0.6rem 0.9rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.expansion-table tr:nth-child(even) td{background:var(--purple-pale)}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.section-sub{color:var(--text-soft);margin-bottom:2rem}.stats-row{display:flex;gap:2rem;flex-wrap:wrap}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.grade-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.grade-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.grade-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}.grade-table tr:nth-child(even) td{background:var(--purple-pale)}.grade-badge{display:inline-block;background:var(--purple);color:#fff;border-radius:6px;padding:0.1rem 0.5rem;font-size:0.8rem;font-weight:700;font-family:var(--font-d)}.grade-badge.good{background:var(--purple-mid)}.grade-badge.fair{background:var(--text-soft)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card.purple{border-color:var(--purple)}.col-card.magenta{border-color:var(--magenta)}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}.expansion-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.expansion-table th{background:var(--purple);color:#fff;padding:0.65rem 0.9rem;text-align:left;font-family:var(--font-d);font-size:0.88rem}.expansion-table td{padding:0.6rem 0.9rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.expansion-table tr:nth-child(even) td{background:var(--purple-pale)}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
+@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Blastocyst Transfer Explained | Mother Hospitals Hyderabad",
-  "url":"https://motherhospitals.co.in/blastocyst-transfer-explained.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Blastocyst Transfer Explained | Mother Hospitals Hyderabad",
+ "url":"https://motherhospitals.co.in/blastocyst-transfer-explained.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20blastocyst%20transfer%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20blastocyst%20transfer%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › Blastocyst Transfer Explained
-    </nav>
-    <h1>Blastocyst Transfer <em>Explained</em></h1>
-    <p class="hero-sub">Day 5 blastocyst transfer gives embryos the best chance of implantation. Understand blastocyst grading (3AA, 4AB, 5BB), why Day 5 is better than Day 3, and what your embryo's grade really means — explained by Dr. E. Prashanthi Reddy, Mother Hospitals & IVF Center, Boduppal, Hyderabad.</p>
+ <div class="page-hero-inner">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › Blastocyst Transfer Explained
+ </nav>
+ <h1>Blastocyst Transfer <em>Explained</em></h1>
+ <p class="hero-sub">Day 5 blastocyst transfer gives embryos the best chance of implantation. Understand blastocyst grading (3AA, 4AB, 5BB), why Day 5 is better than Day 3, and what your embryo's grade really means — explained by Dr. E. Prashanthi Reddy, Mother Hospitals & IVF Center, Boduppal, Hyderabad.</p>
 
-    <div class="voice-box">
-      <strong>Quick Answer:</strong> A blastocyst is a Day 5 embryo with two cell types — the inner cell mass (future baby) and trophectoderm (future placenta). Blastocysts are graded by expansion (1–6) and quality of ICM and TE (A/B/C). Top grades are 4AA or 5AA. Even 3BB or 4AB blastocysts regularly result in successful pregnancies. Day 5 blastocyst transfer has higher implantation rates than Day 3 transfer.
-    </div>
+ <div class="voice-box">
+ <strong>Quick Answer:</strong> A blastocyst is a Day 5 embryo with two cell types — the inner cell mass (future baby) and trophectoderm (future placenta). Blastocysts are graded by expansion (1–6) and quality of ICM and TE (A/B/C). Top grades are 4AA or 5AA. Even 3BB or 4AB blastocysts regularly result in successful pregnancies. Day 5 blastocyst transfer has higher implantation rates than Day 3 transfer.
+ </div>
 
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20blastocyst%20grading%20and%20transfer" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-    </div>
-  </div>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20blastocyst%20grading%20and%20transfer" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:40px;background:var(--white)">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">Day 5</div><div class="stat-label">Optimal Transfer Day</div></div>
-      <div class="stat-box"><div class="stat-num">>95%</div><div class="stat-label">Vitrification Survival Rate</div></div>
-      <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles at Mother Hospitals</div></div>
-      <div class="stat-box"><div class="stat-num">₹99K</div><div class="stat-label">All-Inclusive IVF+ICSI</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">Day 5</div><div class="stat-label">Optimal Transfer Day</div></div>
+ <div class="stat-box"><div class="stat-num">>95%</div><div class="stat-label">Vitrification Survival Rate</div></div>
+ <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles at Mother Hospitals</div></div>
+ <div class="stat-box"><div class="stat-num">₹99K</div><div class="stat-label">All-Inclusive IVF+ICSI</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- WHAT IS A BLASTOCYST -->
 <section class="section">
-  <div class="section-inner">
-    <h2>What Is a <em>Blastocyst?</em></h2>
-    <p class="section-sub">An embryo's journey from fertilised egg to blastocyst takes 5 days.</p>
-    <div class="fact-bar">
-      <strong>Key fact:</strong> In a natural conception, the embryo reaches the uterus as a blastocyst on Day 5. Blastocyst transfer synchronises the embryo and uterine lining — improving implantation.
-    </div>
-    <table class="expansion-table">
-      <thead>
-        <tr><th>Day</th><th>Stage</th><th>Cell Count</th><th>What's Happening</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Day 0</strong></td><td>Egg retrieval / Fertilisation</td><td>1 cell (zygote)</td><td>Egg retrieved; sperm injected by ICSI</td></tr>
-        <tr><td><strong>Day 1</strong></td><td>Pronuclear stage</td><td>2 pronuclei</td><td>Fertilisation confirmed — embryo checked next morning</td></tr>
-        <tr><td><strong>Day 2</strong></td><td>2–4 cell embryo</td><td>2–4</td><td>First cell divisions; embryo graded for symmetry and fragmentation</td></tr>
-        <tr><td><strong>Day 3</strong></td><td>8-cell embryo (cleavage)</td><td>6–10</td><td>Day 3 transfer is possible here; blastocyst culture continues if >4 embryos</td></tr>
-        <tr><td><strong>Day 4</strong></td><td>Morula</td><td>16–32</td><td>Cells compact together; morula forms</td></tr>
-        <tr><td><strong>Day 5</strong></td><td>Blastocyst ✓</td><td>100–200+</td><td>ICM and TE differentiate; cavity (blastocoel) forms — optimal transfer day</td></tr>
-        <tr><td><strong>Day 6</strong></td><td>Expanded / Hatching blastocyst</td><td>200+</td><td>Late blastocyst; still viable for transfer or vitrification</td></tr>
-      </tbody>
-    </table>
-  </div>
+ <div class="section-inner">
+ <h2>What Is a <em>Blastocyst?</em></h2>
+ <p class="section-sub">An embryo's journey from fertilised egg to blastocyst takes 5 days.</p>
+ <div class="fact-bar">
+ <strong>Key fact:</strong> In a natural conception, the embryo reaches the uterus as a blastocyst on Day 5. Blastocyst transfer synchronises the embryo and uterine lining — improving implantation.
+ </div>
+ <table class="expansion-table">
+ <thead>
+ <tr><th>Day</th><th>Stage</th><th>Cell Count</th><th>What's Happening</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Day 0</strong></td><td>Egg retrieval / Fertilisation</td><td>1 cell (zygote)</td><td>Egg retrieved; sperm injected by ICSI</td></tr>
+ <tr><td><strong>Day 1</strong></td><td>Pronuclear stage</td><td>2 pronuclei</td><td>Fertilisation confirmed — embryo checked next morning</td></tr>
+ <tr><td><strong>Day 2</strong></td><td>2–4 cell embryo</td><td>2–4</td><td>First cell divisions; embryo graded for symmetry and fragmentation</td></tr>
+ <tr><td><strong>Day 3</strong></td><td>8-cell embryo (cleavage)</td><td>6–10</td><td>Day 3 transfer is possible here; blastocyst culture continues if >4 embryos</td></tr>
+ <tr><td><strong>Day 4</strong></td><td>Morula</td><td>16–32</td><td>Cells compact together; morula forms</td></tr>
+ <tr><td><strong>Day 5</strong></td><td>Blastocyst ✓</td><td>100–200+</td><td>ICM and TE differentiate; cavity (blastocoel) forms — optimal transfer day</td></tr>
+ <tr><td><strong>Day 6</strong></td><td>Expanded / Hatching blastocyst</td><td>200+</td><td>Late blastocyst; still viable for transfer or vitrification</td></tr>
+ </tbody>
+ </table>
+ </div>
 </section>
 
 <!-- GRADING TABLE -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Blastocyst <em>Grading Table</em> — Complete Guide</h2>
-    <p class="section-sub">The Gardner grading system — used internationally and at Mother Hospitals — grades blastocysts by expansion stage + ICM quality + TE quality.</p>
+ <div class="section-inner">
+ <h2>Blastocyst <em>Grading Table</em> — Complete Guide</h2>
+ <p class="section-sub">The Gardner grading system — used internationally and at Mother Hospitals — grades blastocysts by expansion stage + ICM quality + TE quality.</p>
 
-    <h3 style="margin-bottom:1rem;margin-top:1.5rem">Step 1 — Expansion Stage (Number 1–6)</h3>
-    <table class="grade-table">
-      <thead><tr><th>Grade</th><th>Name</th><th>Description</th></tr></thead>
-      <tbody>
-        <tr><td><strong>1</strong></td><td>Early blastocyst</td><td>Blastocoel cavity less than half the embryo volume</td></tr>
-        <tr><td><strong>2</strong></td><td>Blastocyst</td><td>Blastocoel cavity more than half the embryo volume</td></tr>
-        <tr><td><strong>3</strong></td><td>Full blastocyst</td><td>Blastocoel fills the entire embryo; zona thinning</td></tr>
-        <tr><td><strong>4</strong></td><td>Expanded blastocyst</td><td>Volume larger than original; zona very thin — best for transfer</td></tr>
-        <tr><td><strong>5</strong></td><td>Hatching blastocyst</td><td>Trophectoderm starting to herniate through zona</td></tr>
-        <tr><td><strong>6</strong></td><td>Hatched blastocyst</td><td>Blastocyst fully escaped from zona pellucida</td></tr>
-      </tbody>
-    </table>
+ <h3 style="margin-bottom:1rem;margin-top:1.5rem">Step 1 — Expansion Stage (Number 1–6)</h3>
+ <table class="grade-table">
+ <thead><tr><th>Grade</th><th>Name</th><th>Description</th></tr></thead>
+ <tbody>
+ <tr><td><strong>1</strong></td><td>Early blastocyst</td><td>Blastocoel cavity less than half the embryo volume</td></tr>
+ <tr><td><strong>2</strong></td><td>Blastocyst</td><td>Blastocoel cavity more than half the embryo volume</td></tr>
+ <tr><td><strong>3</strong></td><td>Full blastocyst</td><td>Blastocoel fills the entire embryo; zona thinning</td></tr>
+ <tr><td><strong>4</strong></td><td>Expanded blastocyst</td><td>Volume larger than original; zona very thin — best for transfer</td></tr>
+ <tr><td><strong>5</strong></td><td>Hatching blastocyst</td><td>Trophectoderm starting to herniate through zona</td></tr>
+ <tr><td><strong>6</strong></td><td>Hatched blastocyst</td><td>Blastocyst fully escaped from zona pellucida</td></tr>
+ </tbody>
+ </table>
 
-    <h3 style="margin-bottom:1rem;margin-top:2rem">Step 2 — ICM Grade (First Letter A/B/C)</h3>
-    <table class="grade-table">
-      <thead><tr><th>Grade</th><th>Inner Cell Mass Quality</th><th>Significance</th></tr></thead>
-      <tbody>
-        <tr><td><span class="grade-badge">A</span></td><td>Many cells — tightly packed and well-defined</td><td>Best potential for foetal development</td></tr>
-        <tr><td><span class="grade-badge good">B</span></td><td>Several cells — loosely grouped</td><td>Good — still results in healthy pregnancies</td></tr>
-        <tr><td><span class="grade-badge fair">C</span></td><td>Very few cells</td><td>Reduced but not eliminated implantation potential</td></tr>
-      </tbody>
-    </table>
+ <h3 style="margin-bottom:1rem;margin-top:2rem">Step 2 — ICM Grade (First Letter A/B/C)</h3>
+ <table class="grade-table">
+ <thead><tr><th>Grade</th><th>Inner Cell Mass Quality</th><th>Significance</th></tr></thead>
+ <tbody>
+ <tr><td><span class="grade-badge">A</span></td><td>Many cells — tightly packed and well-defined</td><td>Best potential for foetal development</td></tr>
+ <tr><td><span class="grade-badge good">B</span></td><td>Several cells — loosely grouped</td><td>Good — still results in healthy pregnancies</td></tr>
+ <tr><td><span class="grade-badge fair">C</span></td><td>Very few cells</td><td>Reduced but not eliminated implantation potential</td></tr>
+ </tbody>
+ </table>
 
-    <h3 style="margin-bottom:1rem;margin-top:2rem">Step 3 — TE Grade (Second Letter A/B/C)</h3>
-    <table class="grade-table">
-      <thead><tr><th>Grade</th><th>Trophectoderm Quality</th><th>Significance</th></tr></thead>
-      <tbody>
-        <tr><td><span class="grade-badge">A</span></td><td>Many cells forming a cohesive single layer</td><td>Best placenta potential</td></tr>
-        <tr><td><span class="grade-badge good">B</span></td><td>Few cells forming a loose epithelium</td><td>Good — very common in high-success cycles</td></tr>
-        <tr><td><span class="grade-badge fair">C</span></td><td>Very few large cells</td><td>Lower implantation rate but pregnancies do occur</td></tr>
-      </tbody>
-    </table>
+ <h3 style="margin-bottom:1rem;margin-top:2rem">Step 3 — TE Grade (Second Letter A/B/C)</h3>
+ <table class="grade-table">
+ <thead><tr><th>Grade</th><th>Trophectoderm Quality</th><th>Significance</th></tr></thead>
+ <tbody>
+ <tr><td><span class="grade-badge">A</span></td><td>Many cells forming a cohesive single layer</td><td>Best placenta potential</td></tr>
+ <tr><td><span class="grade-badge good">B</span></td><td>Few cells forming a loose epithelium</td><td>Good — very common in high-success cycles</td></tr>
+ <tr><td><span class="grade-badge fair">C</span></td><td>Very few large cells</td><td>Lower implantation rate but pregnancies do occur</td></tr>
+ </tbody>
+ </table>
 
-    <h3 style="margin-bottom:1rem;margin-top:2rem">Common Blastocyst Grades — What They Mean</h3>
-    <table class="grade-table">
-      <thead><tr><th>Grade</th><th>Quality</th><th>Typical Implantation Potential</th><th>Recommendation</th></tr></thead>
-      <tbody>
-        <tr><td><span class="grade-badge">4AA / 5AA / 6AA</span></td><td>Top grade</td><td>Highest (~50–60% per transfer)</td><td>First choice for transfer</td></tr>
-        <tr><td><span class="grade-badge">4AB / 5AB / 4BA</span></td><td>Excellent</td><td>High (~45–55%)</td><td>Excellent for transfer</td></tr>
-        <tr><td><span class="grade-badge good">3AA / 4BB / 5BB</span></td><td>Good</td><td>Good (~35–50%)</td><td>Good option for transfer</td></tr>
-        <tr><td><span class="grade-badge good">3AB / 4BC / 3BA</span></td><td>Fair-good</td><td>Moderate (~25–40%)</td><td>Suitable for transfer</td></tr>
-        <tr><td><span class="grade-badge fair">3BB / 4CB / 3BC</span></td><td>Fair</td><td>Moderate (~20–35%)</td><td>Transfer if no better embryo</td></tr>
-        <tr><td><span class="grade-badge fair">2–3 + CC</span></td><td>Low grade</td><td>Lower but not zero</td><td>Transfer if only option; many still result in pregnancy</td></tr>
-      </tbody>
-    </table>
-    <p style="font-size:0.82rem;color:var(--text-soft);margin-top:0.5rem">* Implantation rates are approximate and depend on many additional factors including patient age, uterine receptivity, and embryo chromosomal status.</p>
-  </div>
+ <h3 style="margin-bottom:1rem;margin-top:2rem">Common Blastocyst Grades — What They Mean</h3>
+ <table class="grade-table">
+ <thead><tr><th>Grade</th><th>Quality</th><th>Typical Implantation Potential</th><th>Recommendation</th></tr></thead>
+ <tbody>
+ <tr><td><span class="grade-badge">4AA / 5AA / 6AA</span></td><td>Top grade</td><td>Highest (~50–60% per transfer)</td><td>First choice for transfer</td></tr>
+ <tr><td><span class="grade-badge">4AB / 5AB / 4BA</span></td><td>Excellent</td><td>High (~45–55%)</td><td>Excellent for transfer</td></tr>
+ <tr><td><span class="grade-badge good">3AA / 4BB / 5BB</span></td><td>Good</td><td>Good (~35–50%)</td><td>Good option for transfer</td></tr>
+ <tr><td><span class="grade-badge good">3AB / 4BC / 3BA</span></td><td>Fair-good</td><td>Moderate (~25–40%)</td><td>Suitable for transfer</td></tr>
+ <tr><td><span class="grade-badge fair">3BB / 4CB / 3BC</span></td><td>Fair</td><td>Moderate (~20–35%)</td><td>Transfer if no better embryo</td></tr>
+ <tr><td><span class="grade-badge fair">2–3 + CC</span></td><td>Low grade</td><td>Lower but not zero</td><td>Transfer if only option; many still result in pregnancy</td></tr>
+ </tbody>
+ </table>
+ <p style="font-size:0.82rem;color:var(--text-soft);margin-top:0.5rem">* Implantation rates are approximate and depend on many additional factors including patient age, uterine receptivity, and embryo chromosomal status.</p>
+ </div>
 </section>
 
 <!-- DAY 3 VS DAY 5 -->
 <section class="section">
-  <div class="section-inner">
-    <h2>Day 3 vs Day 5 Transfer — <em>Which Is Better?</em></h2>
-    <div class="two-col">
-      <div class="col-card purple">
-        <h3>🔵 Day 5 Blastocyst Transfer</h3>
-        <ul>
-          <li>Higher implantation rate per embryo transferred</li>
-          <li>Better synchrony with uterine lining</li>
-          <li>Self-selection — only competent embryos survive to Day 5</li>
-          <li>Fewer embryos transferred needed for pregnancy</li>
-          <li>Recommended when ≥4 embryos available on Day 3</li>
-          <li>Better candidates for PGT-A chromosomal testing</li>
-        </ul>
-      </div>
-      <div class="col-card magenta">
-        <h3>🟣 Day 3 Cleavage Transfer</h3>
-        <ul>
-          <li>Appropriate when ≤3 embryos available</li>
-          <li>Reduces risk of total embryo arrest in culture</li>
-          <li>Some embryos develop better in the uterus than in the lab</li>
-          <li>Good option for older patients or poor ovarian reserve</li>
-          <li>Same cumulative success rates in many studies</li>
-          <li>Embryologist decides based on your specific embryo development</li>
-        </ul>
-      </div>
-    </div>
-    <div class="fact-bar" style="margin-top:1rem">
-      <strong>Mother Hospitals policy:</strong> We aim for Day 5 blastocyst culture in all cycles where ≥4 embryos are developing. The embryologist contacts you daily with development updates and recommends the optimal transfer day for your individual cycle.
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Day 3 vs Day 5 Transfer — <em>Which Is Better?</em></h2>
+ <div class="two-col">
+ <div class="col-card purple">
+ <h3>🔵 Day 5 Blastocyst Transfer</h3>
+ <ul>
+ <li>Higher implantation rate per embryo transferred</li>
+ <li>Better synchrony with uterine lining</li>
+ <li>Self-selection — only competent embryos survive to Day 5</li>
+ <li>Fewer embryos transferred needed for pregnancy</li>
+ <li>Recommended when ≥4 embryos available on Day 3</li>
+ <li>Better candidates for PGT-A chromosomal testing</li>
+ </ul>
+ </div>
+ <div class="col-card magenta">
+ <h3>🟣 Day 3 Cleavage Transfer</h3>
+ <ul>
+ <li>Appropriate when ≤3 embryos available</li>
+ <li>Reduces risk of total embryo arrest in culture</li>
+ <li>Some embryos develop better in the uterus than in the lab</li>
+ <li>Good option for older patients or poor ovarian reserve</li>
+ <li>Same cumulative success rates in many studies</li>
+ <li>Embryologist decides based on your specific embryo development</li>
+ </ul>
+ </div>
+ </div>
+ <div class="fact-bar" style="margin-top:1rem">
+ <strong>Mother Hospitals policy:</strong> We aim for Day 5 blastocyst culture in all cycles where ≥4 embryos are developing. The embryologist contacts you daily with development updates and recommends the optimal transfer day for your individual cycle.
+ </div>
+ </div>
 </section>
 
 <!-- FROZEN VS FRESH -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Fresh Blastocyst Transfer vs <em>Frozen Blastocyst Transfer (FET)</em></h2>
-    <p class="section-sub">Both are excellent options. The choice depends on your stimulation response and endometrial lining.</p>
-    <div class="two-col">
-      <div class="col-card purple">
-        <h3>Fresh Blastocyst Transfer</h3>
-        <ul>
-          <li>Transfer on Day 5 of the same stimulation cycle</li>
-          <li>Appropriate if stimulation response was moderate (no OHSS risk)</li>
-          <li>Endometrial lining assessed before transfer</li>
-          <li>Results available within the same treatment cycle</li>
-          <li>Cost-effective — no additional FET cycle charge</li>
-        </ul>
-      </div>
-      <div class="col-card magenta">
-        <h3>Frozen Blastocyst Transfer (FET)</h3>
-        <ul>
-          <li>All blastocysts vitrified; transfer in next natural or medicated cycle</li>
-          <li>Recommended if stimulation was heavy (OHSS risk)</li>
-          <li>Lining has fully recovered from stimulation medications</li>
-          <li>May have equal or higher success rates than fresh in some patients</li>
-          <li>Vitrification survival rate >95% at Mother Hospitals</li>
-          <li>Extra embryos stored for future siblings</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Fresh Blastocyst Transfer vs <em>Frozen Blastocyst Transfer (FET)</em></h2>
+ <p class="section-sub">Both are excellent options. The choice depends on your stimulation response and endometrial lining.</p>
+ <div class="two-col">
+ <div class="col-card purple">
+ <h3>Fresh Blastocyst Transfer</h3>
+ <ul>
+ <li>Transfer on Day 5 of the same stimulation cycle</li>
+ <li>Appropriate if stimulation response was moderate (no OHSS risk)</li>
+ <li>Endometrial lining assessed before transfer</li>
+ <li>Results available within the same treatment cycle</li>
+ <li>Cost-effective — no additional FET cycle charge</li>
+ </ul>
+ </div>
+ <div class="col-card magenta">
+ <h3>Frozen Blastocyst Transfer (FET)</h3>
+ <ul>
+ <li>All blastocysts vitrified; transfer in next natural or medicated cycle</li>
+ <li>Recommended if stimulation was heavy (OHSS risk)</li>
+ <li>Lining has fully recovered from stimulation medications</li>
+ <li>May have equal or higher success rates than fresh in some patients</li>
+ <li>Vitrification survival rate >95% at Mother Hospitals</li>
+ <li>Extra embryos stored for future siblings</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- DOCTOR STRIP -->
 <section class="section" style="padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. E. Prashanthi Reddy</h3>
-        <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
-        19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
-        <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. E. Prashanthi Reddy</h3>
+ <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
+ 19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
+ <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Frequently Asked <em>Questions</em></h2>
-    <div style="margin-top:1.5rem">
-      <details class="faq-item"><summary class="faq-q">What is a blastocyst and when does it form?</summary><div class="faq-a">A blastocyst is an embryo that has reached Day 5 of development. It has two distinct cell types: the inner cell mass (ICM — becomes the baby) and the trophectoderm (TE — becomes the placenta). Blastocysts have a significantly higher implantation rate than Day 3 embryos because they have proven their developmental competence.</div></details>
-      <details class="faq-item"><summary class="faq-q">What does my blastocyst grade (like 4AB or 3BB) mean?</summary><div class="faq-a">Blastocyst grading uses the Gardner system. The number (3–6) indicates expansion: 3 = full blastocyst, 4 = expanded, 5 = hatching, 6 = hatched. The first letter (A/B/C) grades the inner cell mass: A = tightly packed cells, B = loosely grouped, C = very few cells. The second letter grades the trophectoderm: A = many cohesive cells, B = few loose cells, C = very few large cells. 4AA and 5AA are top grades. 4AB, 3AA, and 4BA are all excellent. Even 3BB blastocysts frequently result in successful pregnancies.</div></details>
-      <details class="faq-item"><summary class="faq-q">Is Day 5 blastocyst transfer better than Day 3?</summary><div class="faq-a">Day 5 blastocyst transfer generally has higher implantation rates per embryo transferred. The embryo is more synchronised with the uterine lining, and only developmentally competent embryos reach Day 5. However, Day 3 transfer is appropriate when fewer embryos are available — extending culture risks all embryos arresting. The embryologist decides based on your specific embryo development.</div></details>
-      <details class="faq-item"><summary class="faq-q">What happens if none of my embryos reach blastocyst stage?</summary><div class="faq-a">If embryos do not reach blastocyst by Day 5, the embryologist may transfer on Day 3 instead. If all embryos arrest, this provides diagnostic information. The team will adjust the next cycle: optimise stimulation, add antioxidants, use ICSI if IVF was used, or investigate sperm DNA fragmentation.</div></details>
-      <details class="faq-item"><summary class="faq-q">Can a lower-grade blastocyst (3BB or 4BC) still result in pregnancy?</summary><div class="faq-a">Yes. Many healthy pregnancies and births have resulted from lower-grade blastocysts. Grade is one factor among many — the embryo's chromosomal status (confirmed by PGT-A) and uterine environment are equally important. Never dismiss a lower-grade blastocyst without discussion with your doctor.</div></details>
-      <details class="faq-item"><summary class="faq-q">How long can blastocysts be stored frozen?</summary><div class="faq-a">Vitrified blastocysts can be stored indefinitely with no significant degradation in quality. Most clinics store embryos for 5–10 years under a signed consent agreement. At Mother Hospitals, vitrified blastocysts have a survival rate >95% on thawing.</div></details>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Frequently Asked <em>Questions</em></h2>
+ <div style="margin-top:1.5rem">
+ <details class="faq-item"><summary class="faq-q">What is a blastocyst and when does it form?</summary><div class="faq-a">A blastocyst is an embryo that has reached Day 5 of development. It has two distinct cell types: the inner cell mass (ICM — becomes the baby) and the trophectoderm (TE — becomes the placenta). Blastocysts have a significantly higher implantation rate than Day 3 embryos because they have proven their developmental competence.</div></details>
+ <details class="faq-item"><summary class="faq-q">What does my blastocyst grade (like 4AB or 3BB) mean?</summary><div class="faq-a">Blastocyst grading uses the Gardner system. The number (3–6) indicates expansion: 3 = full blastocyst, 4 = expanded, 5 = hatching, 6 = hatched. The first letter (A/B/C) grades the inner cell mass: A = tightly packed cells, B = loosely grouped, C = very few cells. The second letter grades the trophectoderm: A = many cohesive cells, B = few loose cells, C = very few large cells. 4AA and 5AA are top grades. 4AB, 3AA, and 4BA are all excellent. Even 3BB blastocysts frequently result in successful pregnancies.</div></details>
+ <details class="faq-item"><summary class="faq-q">Is Day 5 blastocyst transfer better than Day 3?</summary><div class="faq-a">Day 5 blastocyst transfer generally has higher implantation rates per embryo transferred. The embryo is more synchronised with the uterine lining, and only developmentally competent embryos reach Day 5. However, Day 3 transfer is appropriate when fewer embryos are available — extending culture risks all embryos arresting. The embryologist decides based on your specific embryo development.</div></details>
+ <details class="faq-item"><summary class="faq-q">What happens if none of my embryos reach blastocyst stage?</summary><div class="faq-a">If embryos do not reach blastocyst by Day 5, the embryologist may transfer on Day 3 instead. If all embryos arrest, this provides diagnostic information. The team will adjust the next cycle: optimise stimulation, add antioxidants, use ICSI if IVF was used, or investigate sperm DNA fragmentation.</div></details>
+ <details class="faq-item"><summary class="faq-q">Can a lower-grade blastocyst (3BB or 4BC) still result in pregnancy?</summary><div class="faq-a">Yes. Many healthy pregnancies and births have resulted from lower-grade blastocysts. Grade is one factor among many — the embryo's chromosomal status (confirmed by PGT-A) and uterine environment are equally important. Never dismiss a lower-grade blastocyst without discussion with your doctor.</div></details>
+ <details class="faq-item"><summary class="faq-q">How long can blastocysts be stored frozen?</summary><div class="faq-a">Vitrified blastocysts can be stored indefinitely with no significant degradation in quality. Most clinics store embryos for 5–10 years under a signed consent agreement. At Mother Hospitals, vitrified blastocysts have a survival rate >95% on thawing.</div></details>
+ </div>
+ </div>
 </section>
 
 <!-- RELATED -->
 <section class="section" style="padding-top:40px;padding-bottom:80px">
-  <div class="section-inner">
-    <h2>Explore More of the <em>IVF Journey</em></h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
-      <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
-      <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
-      <a href="/ivf-injections-explained.html" class="related-card">💉 IVF Injections</a>
-      <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
-      <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
-      <a href="/ivf-recovery-aftercare.html" class="related-card">🛌 IVF Recovery</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
-      <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
-      <a href="/best-ivf-treatment-male-infertility.html" class="related-card">♂ IVF for Male Infertility</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Explore More of the <em>IVF Journey</em></h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
+ <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
+ <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
+ <a href="/ivf-injections-explained.html" class="related-card">💉 IVF Injections</a>
+ <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
+ <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
+ <a href="/ivf-recovery-aftercare.html" class="related-card">🛌 IVF Recovery</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
+ <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
+ <a href="/best-ivf-treatment-male-infertility.html" class="related-card">♂ IVF for Male Infertility</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
-  <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
-  <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice.</p>
+ <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
+ <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
+ <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice.</p>
 </footer>
 
 </body>

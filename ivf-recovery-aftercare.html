@@ -49,397 +49,325 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-nav a{text-decoration:none}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+nav a{text-decoration:none}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.section-sub{color:var(--text-soft);margin-bottom:2rem}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card.purple{border-color:var(--purple)}
-.col-card.magenta{border-color:var(--magenta)}
-.col-card.red{border-color:#c62828}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li.check::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.col-card ul li.cross::before{content:"✗";color:#c62828;font-weight:700;flex-shrink:0}
-.col-card ul li.warn::before{content:"⚠";color:#e65100;flex-shrink:0}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.ohss-box{background:linear-gradient(135deg,#fff8e1,#ffe0b2);border:2px solid #f57c00;border-radius:18px;padding:1.8rem;margin:1.5rem 0}
-.ohss-box h3{font-family:var(--font-d);font-size:1.3rem;color:#e65100;margin-bottom:0.8rem}
-.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1rem 0}
-.ohss-card{border-radius:12px;padding:1.2rem;border:1.5px solid}
-.ohss-mild{background:#e8f5e9;border-color:#4caf50}
-.ohss-moderate{background:#fff8e1;border-color:#ff8f00}
-.ohss-severe{background:#ffebee;border-color:#c62828}
-.ohss-card h4{font-family:var(--font-d);font-size:1rem;margin-bottom:0.4rem}
-.ohss-card ul{list-style:none;font-size:0.82rem;color:var(--text-mid)}
-.ohss-card ul li{padding:0.2rem 0}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.section-sub{color:var(--text-soft);margin-bottom:2rem}.stats-row{display:flex;gap:2rem;flex-wrap:wrap}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card.purple{border-color:var(--purple)}.col-card.magenta{border-color:var(--magenta)}.col-card.red{border-color:#c62828}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li.check::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.col-card ul li.cross::before{content:"✗";color:#c62828;font-weight:700;flex-shrink:0}.col-card ul li.warn::before{content:"⚠";color:#e65100;flex-shrink:0}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.ohss-box{background:linear-gradient(135deg,#fff8e1,#ffe0b2);border:2px solid #f57c00;border-radius:18px;padding:1.8rem;margin:1.5rem 0}.ohss-box h3{font-family:var(--font-d);font-size:1.3rem;color:#e65100;margin-bottom:0.8rem}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1rem 0}.ohss-card{border-radius:12px;padding:1.2rem;border:1.5px solid}.ohss-mild{background:#e8f5e9;border-color:#4caf50}.ohss-moderate{background:#fff8e1;border-color:#ff8f00}.ohss-severe{background:#ffebee;border-color:#c62828}.ohss-card h4{font-family:var(--font-d);font-size:1rem;margin-bottom:0.4rem}.ohss-card ul{list-style:none;font-size:0.82rem;color:var(--text-mid)}.ohss-card ul li{padding:0.2rem 0}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
+@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"IVF Recovery & Aftercare | Mother Hospitals Hyderabad",
-  "url":"https://motherhospitals.co.in/ivf-recovery-aftercare.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"IVF Recovery & Aftercare | Mother Hospitals Hyderabad",
+ "url":"https://motherhospitals.co.in/ivf-recovery-aftercare.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20a%20question%20about%20IVF%20recovery%20and%20aftercare%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20a%20question%20about%20IVF%20recovery%20and%20aftercare%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › IVF Recovery & Aftercare
-    </nav>
-    <h1>IVF Recovery & <em>Aftercare</em></h1>
-    <p class="hero-sub">What to expect after egg retrieval and embryo transfer — and how to manage the two-week wait. Clear, honest guidance from Dr. E. Prashanthi Reddy, Mother Hospitals & IVF Center, Boduppal, Hyderabad.</p>
+ <div class="page-hero-inner">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › IVF Recovery & Aftercare
+ </nav>
+ <h1>IVF Recovery & <em>Aftercare</em></h1>
+ <p class="hero-sub">What to expect after egg retrieval and embryo transfer — and how to manage the two-week wait. Clear, honest guidance from Dr. E. Prashanthi Reddy, Mother Hospitals & IVF Center, Boduppal, Hyderabad.</p>
 
-    <div class="voice-box">
-      <strong>Quick Answer:</strong> After egg retrieval, rest at home for the day and resume normal gentle activity the next day. After embryo transfer, strict bed rest is NOT needed — gentle walking is encouraged. Continue progesterone daily. Avoid alcohol, heavy exercise, and hot baths. Attend the beta-hCG blood test exactly 14 days after transfer. Contact the clinic immediately for severe abdominal pain, heavy bleeding, fever, or breathlessness.
-    </div>
+ <div class="voice-box">
+ <strong>Quick Answer:</strong> After egg retrieval, rest at home for the day and resume normal gentle activity the next day. After embryo transfer, strict bed rest is NOT needed — gentle walking is encouraged. Continue progesterone daily. Avoid alcohol, heavy exercise, and hot baths. Attend the beta-hCG blood test exactly 14 days after transfer. Contact the clinic immediately for severe abdominal pain, heavy bleeding, fever, or breathlessness.
+ </div>
 
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20a%20question%20about%20IVF%20aftercare%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp a Question</a>
-    </div>
-  </div>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20a%20question%20about%20IVF%20aftercare%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp a Question</a>
+ </div>
+ </div>
 </section>
 
 <section class="section" style="padding-top:40px;padding-bottom:40px;background:var(--white)">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">Next Day</div><div class="stat-label">Return to Gentle Activity</div></div>
-      <div class="stat-box"><div class="stat-num">24 hrs</div><div class="stat-label">No Driving After Sedation</div></div>
-      <div class="stat-box"><div class="stat-num">14 Days</div><div class="stat-label">Until Pregnancy Test</div></div>
-      <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Emergency Contact Available</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">Next Day</div><div class="stat-label">Return to Gentle Activity</div></div>
+ <div class="stat-box"><div class="stat-num">24 hrs</div><div class="stat-label">No Driving After Sedation</div></div>
+ <div class="stat-box"><div class="stat-num">14 Days</div><div class="stat-label">Until Pregnancy Test</div></div>
+ <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Emergency Contact Available</div></div>
+ </div>
+ </div>
 </section>
 
 <section class="section">
-  <div class="section-inner">
-    <h2>After Egg Retrieval — <em>What to Expect</em></h2>
-    <div class="fact-bar">
-      <strong>Normal after retrieval:</strong> Mild cramping (period-like), light spotting, bloating, and mild nausea are all expected and resolve within 1–2 days. They are a normal result of the procedure and rising progesterone.
-    </div>
-    <div class="two-col">
-      <div class="col-card purple">
-        <h3>✓ What to Do After Retrieval</h3>
-        <ul>
-          <li class="check">Rest at home for the remainder of retrieval day</li>
-          <li class="check">Take paracetamol if cramping is uncomfortable (NOT ibuprofen)</li>
-          <li class="check">Stay very well hydrated — water and coconut water (electrolytes)</li>
-          <li class="check">Start progesterone pessaries as prescribed (usually that evening)</li>
-          <li class="check">Eat light, easily digestible meals</li>
-          <li class="check">Return to gentle normal activities from Day 1 after retrieval</li>
-          <li class="check">Await embryologist's call for fertilisation report (Day 1 morning)</li>
-        </ul>
-      </div>
-      <div class="col-card magenta">
-        <h3>✗ What to Avoid After Retrieval</h3>
-        <ul>
-          <li class="cross">Driving for 24 hours after sedation</li>
-          <li class="cross">Strenuous exercise or heavy lifting for 3–5 days</li>
-          <li class="cross">Sexual intercourse until after embryo transfer</li>
-          <li class="cross">Ibuprofen, aspirin, or anti-inflammatory pain relief (can thin lining)</li>
-          <li class="cross">Hot baths or saunas</li>
-          <li class="cross">Alcohol</li>
-          <li class="cross">Tight or restrictive clothing if bloating present</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>After Egg Retrieval — <em>What to Expect</em></h2>
+ <div class="fact-bar">
+ <strong>Normal after retrieval:</strong> Mild cramping (period-like), light spotting, bloating, and mild nausea are all expected and resolve within 1–2 days. They are a normal result of the procedure and rising progesterone.
+ </div>
+ <div class="two-col">
+ <div class="col-card purple">
+ <h3>✓ What to Do After Retrieval</h3>
+ <ul>
+ <li class="check">Rest at home for the remainder of retrieval day</li>
+ <li class="check">Take paracetamol if cramping is uncomfortable (NOT ibuprofen)</li>
+ <li class="check">Stay very well hydrated — water and coconut water (electrolytes)</li>
+ <li class="check">Start progesterone pessaries as prescribed (usually that evening)</li>
+ <li class="check">Eat light, easily digestible meals</li>
+ <li class="check">Return to gentle normal activities from Day 1 after retrieval</li>
+ <li class="check">Await embryologist's call for fertilisation report (Day 1 morning)</li>
+ </ul>
+ </div>
+ <div class="col-card magenta">
+ <h3>✗ What to Avoid After Retrieval</h3>
+ <ul>
+ <li class="cross">Driving for 24 hours after sedation</li>
+ <li class="cross">Strenuous exercise or heavy lifting for 3–5 days</li>
+ <li class="cross">Sexual intercourse until after embryo transfer</li>
+ <li class="cross">Ibuprofen, aspirin, or anti-inflammatory pain relief (can thin lining)</li>
+ <li class="cross">Hot baths or saunas</li>
+ <li class="cross">Alcohol</li>
+ <li class="cross">Tight or restrictive clothing if bloating present</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>After Embryo Transfer — <em>Two-Week Wait Guide</em></h2>
-    <p class="section-sub">The 14 days after embryo transfer are emotionally the most demanding part of IVF. Here is how to manage them.</p>
-    <div class="two-col">
-      <div class="col-card purple">
-        <h3>✓ Do During the Two-Week Wait</h3>
-        <ul>
-          <li class="check">Continue progesterone pessaries or gel daily without missing a dose</li>
-          <li class="check">Walk gently — light daily activity is encouraged</li>
-          <li class="check">Eat a balanced, nutritious diet rich in protein and vegetables</li>
-          <li class="check">Stay hydrated — plenty of water</li>
-          <li class="check">Continue normal work if desired</li>
-          <li class="check">Sleep normally — rest when tired</li>
-          <li class="check">Engage in light relaxing activities — reading, music, gentle yoga</li>
-          <li class="check">Take prescribed supplements — folic acid, Vitamin D as advised</li>
-          <li class="check">Attend beta-hCG blood test on Day 14</li>
-        </ul>
-      </div>
-      <div class="col-card magenta">
-        <h3>✗ Avoid During the Two-Week Wait</h3>
-        <ul>
-          <li class="cross">Vigorous exercise, running, swimming, gym sessions</li>
-          <li class="cross">Heavy lifting (>5kg)</li>
-          <li class="cross">Sexual intercourse</li>
-          <li class="cross">Hot baths, saunas, steam rooms</li>
-          <li class="cross">Alcohol and smoking</li>
-          <li class="cross">Non-prescribed medications — ask before taking anything</li>
-          <li class="cross">Early home pregnancy tests before Day 10 — unreliable</li>
-          <li class="cross">Stopping progesterone without doctor instruction</li>
-        </ul>
-      </div>
-    </div>
-    <div class="fact-bar" style="margin-top:1.5rem">
-      <strong>Evidence-based fact:</strong> Multiple studies confirm that strict bed rest after embryo transfer does NOT improve IVF success rates. Light walking and gentle daily activity are safe and do not reduce implantation chances.
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>After Embryo Transfer — <em>Two-Week Wait Guide</em></h2>
+ <p class="section-sub">The 14 days after embryo transfer are emotionally the most demanding part of IVF. Here is how to manage them.</p>
+ <div class="two-col">
+ <div class="col-card purple">
+ <h3>✓ Do During the Two-Week Wait</h3>
+ <ul>
+ <li class="check">Continue progesterone pessaries or gel daily without missing a dose</li>
+ <li class="check">Walk gently — light daily activity is encouraged</li>
+ <li class="check">Eat a balanced, nutritious diet rich in protein and vegetables</li>
+ <li class="check">Stay hydrated — plenty of water</li>
+ <li class="check">Continue normal work if desired</li>
+ <li class="check">Sleep normally — rest when tired</li>
+ <li class="check">Engage in light relaxing activities — reading, music, gentle yoga</li>
+ <li class="check">Take prescribed supplements — folic acid, Vitamin D as advised</li>
+ <li class="check">Attend beta-hCG blood test on Day 14</li>
+ </ul>
+ </div>
+ <div class="col-card magenta">
+ <h3>✗ Avoid During the Two-Week Wait</h3>
+ <ul>
+ <li class="cross">Vigorous exercise, running, swimming, gym sessions</li>
+ <li class="cross">Heavy lifting (>5kg)</li>
+ <li class="cross">Sexual intercourse</li>
+ <li class="cross">Hot baths, saunas, steam rooms</li>
+ <li class="cross">Alcohol and smoking</li>
+ <li class="cross">Non-prescribed medications — ask before taking anything</li>
+ <li class="cross">Early home pregnancy tests before Day 10 — unreliable</li>
+ <li class="cross">Stopping progesterone without doctor instruction</li>
+ </ul>
+ </div>
+ </div>
+ <div class="fact-bar" style="margin-top:1.5rem">
+ <strong>Evidence-based fact:</strong> Multiple studies confirm that strict bed rest after embryo transfer does NOT improve IVF success rates. Light walking and gentle daily activity are safe and do not reduce implantation chances.
+ </div>
+ </div>
 </section>
 
 <section class="section">
-  <div class="section-inner">
-    <h2>OHSS — <em>When to Call the Clinic</em></h2>
-    <p class="section-sub">Ovarian hyperstimulation syndrome (OHSS) can occur after egg retrieval, particularly in women who had many eggs retrieved or high oestrogen levels. Most cases are mild. Know the signs.</p>
-    <div class="ohss-box">
-      <h3>⚠️ OHSS Severity Guide</h3>
-      <div class="three-col">
-        <div class="ohss-card ohss-mild">
-          <h4 style="color:#2e7d32">Mild OHSS — Manage at Home</h4>
-          <ul>
-            <li>• Mild to moderate bloating</li>
-            <li>• Mild abdominal discomfort</li>
-            <li>• Mild nausea</li>
-            <li>• Weight gain &lt;1kg/day</li>
-            <li>• Normal urine output</li>
-            <li><strong>Action:</strong> Rest, increase fluids (water + coconut water), light diet, paracetamol for discomfort. Call clinic to report.</li>
-          </ul>
-        </div>
-        <div class="ohss-card ohss-moderate">
-          <h4 style="color:#e65100">Moderate OHSS — Call the Clinic Today</h4>
-          <ul>
-            <li>• Significant abdominal swelling</li>
-            <li>• Nausea and vomiting</li>
-            <li>• Reduced urine output</li>
-            <li>• Weight gain 1–2kg in 24 hours</li>
-            <li>• Difficulty lying flat</li>
-            <li><strong>Action:</strong> Contact Mother Hospitals immediately — you may need IV fluids or admission for monitoring.</li>
-          </ul>
-        </div>
-        <div class="ohss-card ohss-severe">
-          <h4 style="color:#c62828">Severe OHSS — Attend Emergency Immediately</h4>
-          <ul>
-            <li>• Severe abdominal pain</li>
-            <li>• Rapid weight gain (&gt;2kg/day)</li>
-            <li>• Very little or no urine output</li>
-            <li>• Breathlessness / difficulty breathing</li>
-            <li>• Fainting or dizziness</li>
-            <li><strong>Action:</strong> Go to emergency immediately — or call 97059 93366 for guidance.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="fact-bar">
-      <strong>Mother Hospitals OHSS Prevention:</strong> If your follicle count or oestrogen levels indicate high OHSS risk, we switch the trigger injection to a GnRH agonist and freeze all embryos (freeze-all strategy) — eliminating the risk of severe OHSS while preserving all your embryos for a future frozen transfer.
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>OHSS — <em>When to Call the Clinic</em></h2>
+ <p class="section-sub">Ovarian hyperstimulation syndrome (OHSS) can occur after egg retrieval, particularly in women who had many eggs retrieved or high oestrogen levels. Most cases are mild. Know the signs.</p>
+ <div class="ohss-box">
+ <h3>⚠️ OHSS Severity Guide</h3>
+ <div class="three-col">
+ <div class="ohss-card ohss-mild">
+ <h4 style="color:#2e7d32">Mild OHSS — Manage at Home</h4>
+ <ul>
+ <li>• Mild to moderate bloating</li>
+ <li>• Mild abdominal discomfort</li>
+ <li>• Mild nausea</li>
+ <li>• Weight gain &lt;1kg/day</li>
+ <li>• Normal urine output</li>
+ <li><strong>Action:</strong> Rest, increase fluids (water + coconut water), light diet, paracetamol for discomfort. Call clinic to report.</li>
+ </ul>
+ </div>
+ <div class="ohss-card ohss-moderate">
+ <h4 style="color:#e65100">Moderate OHSS — Call the Clinic Today</h4>
+ <ul>
+ <li>• Significant abdominal swelling</li>
+ <li>• Nausea and vomiting</li>
+ <li>• Reduced urine output</li>
+ <li>• Weight gain 1–2kg in 24 hours</li>
+ <li>• Difficulty lying flat</li>
+ <li><strong>Action:</strong> Contact Mother Hospitals immediately — you may need IV fluids or admission for monitoring.</li>
+ </ul>
+ </div>
+ <div class="ohss-card ohss-severe">
+ <h4 style="color:#c62828">Severe OHSS — Attend Emergency Immediately</h4>
+ <ul>
+ <li>• Severe abdominal pain</li>
+ <li>• Rapid weight gain (&gt;2kg/day)</li>
+ <li>• Very little or no urine output</li>
+ <li>• Breathlessness / difficulty breathing</li>
+ <li>• Fainting or dizziness</li>
+ <li><strong>Action:</strong> Go to emergency immediately — or call 97059 93366 for guidance.</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ <div class="fact-bar">
+ <strong>Mother Hospitals OHSS Prevention:</strong> If your follicle count or oestrogen levels indicate high OHSS risk, we switch the trigger injection to a GnRH agonist and freeze all embryos (freeze-all strategy) — eliminating the risk of severe OHSS while preserving all your embryos for a future frozen transfer.
+ </div>
+ </div>
 </section>
 
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Normal vs <em>Concerning Symptoms</em></h2>
-    <div class="two-col">
-      <div class="col-card purple">
-        <h3>✓ Normal — No Need to Worry</h3>
-        <ul>
-          <li class="check">Mild period-like cramping after retrieval and transfer</li>
-          <li class="check">Light spotting (implantation bleed) 5–7 days post-transfer</li>
-          <li class="check">Breast tenderness and bloating (progesterone side effects)</li>
-          <li class="check">Mood swings, fatigue, headaches</li>
-          <li class="check">Increased urination</li>
-          <li class="check">Mild nausea especially in the morning</li>
-          <li class="check">Some white/yellow vaginal discharge from pessaries</li>
-        </ul>
-      </div>
-      <div class="col-card red">
-        <h3>⚠️ Call the Clinic If You Have</h3>
-        <ul>
-          <li class="warn">Severe abdominal pain not relieved by paracetamol</li>
-          <li class="warn">Heavy vaginal bleeding (soaking a pad)</li>
-          <li class="warn">Fever above 38°C</li>
-          <li class="warn">Significant abdominal swelling/distension</li>
-          <li class="warn">Decreased or absent urine output</li>
-          <li class="warn">Breathlessness or chest pain</li>
-          <li class="warn">Severe nausea and vomiting — unable to keep fluids down</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Normal vs <em>Concerning Symptoms</em></h2>
+ <div class="two-col">
+ <div class="col-card purple">
+ <h3>✓ Normal — No Need to Worry</h3>
+ <ul>
+ <li class="check">Mild period-like cramping after retrieval and transfer</li>
+ <li class="check">Light spotting (implantation bleed) 5–7 days post-transfer</li>
+ <li class="check">Breast tenderness and bloating (progesterone side effects)</li>
+ <li class="check">Mood swings, fatigue, headaches</li>
+ <li class="check">Increased urination</li>
+ <li class="check">Mild nausea especially in the morning</li>
+ <li class="check">Some white/yellow vaginal discharge from pessaries</li>
+ </ul>
+ </div>
+ <div class="col-card red">
+ <h3>⚠️ Call the Clinic If You Have</h3>
+ <ul>
+ <li class="warn">Severe abdominal pain not relieved by paracetamol</li>
+ <li class="warn">Heavy vaginal bleeding (soaking a pad)</li>
+ <li class="warn">Fever above 38°C</li>
+ <li class="warn">Significant abdominal swelling/distension</li>
+ <li class="warn">Decreased or absent urine output</li>
+ <li class="warn">Breathlessness or chest pain</li>
+ <li class="warn">Severe nausea and vomiting — unable to keep fluids down</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <section class="section" style="padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. E. Prashanthi Reddy</h3>
-        <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
-        19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
-        <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. E. Prashanthi Reddy</h3>
+ <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
+ 19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
+ <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Frequently Asked <em>Questions</em></h2>
-    <div style="margin-top:1.5rem">
-      <details class="faq-item"><summary class="faq-q">How long is recovery after IVF egg retrieval?</summary><div class="faq-a">Most women feel well enough to resume gentle normal activities the day after egg retrieval. The retrieval day itself requires rest at home. Sedation clears within 4–6 hours. Avoid driving for 24 hours post-sedation. Strenuous exercise should be avoided for 3–5 days. Most women return to work the day after retrieval.</div></details>
-      <details class="faq-item"><summary class="faq-q">Do I need bed rest after embryo transfer?</summary><div class="faq-a">No. Evidence consistently shows strict bed rest after embryo transfer does NOT improve IVF success rates. Rest for 20–30 minutes at the clinic after transfer, then resume gentle normal activities. The embryo cannot fall out — it is not yet implanted and is unaffected by normal daily movement.</div></details>
-      <details class="faq-item"><summary class="faq-q">What are OHSS symptoms I should watch for?</summary><div class="faq-a">Mild (manage at home): bloating, mild abdominal discomfort, nausea. Moderate (call clinic today): significant swelling, nausea/vomiting, reduced urine output. Severe (attend emergency): severe abdominal pain, rapid weight gain, breathlessness, very reduced urine. Mother Hospitals uses a freeze-all strategy when OHSS risk is high — preventing severe OHSS while preserving all embryos.</div></details>
-      <details class="faq-item"><summary class="faq-q">Can I exercise after embryo transfer?</summary><div class="faq-a">Gentle walking and normal daily activities are fine from the day after transfer. Avoid vigorous exercise, heavy lifting, and high-impact sports for 2 weeks. Gentle yoga and stretching are generally safe. Swimming should be avoided due to infection risk (pessaries).</div></details>
-      <details class="faq-item"><summary class="faq-q">When can I do a home pregnancy test after IVF?</summary><div class="faq-a">Home tests may show a positive result from Day 10–12 post-transfer, but results before Day 14 can be misleading — progesterone support can cause a false positive, and hCG from the trigger injection may still be detectable. The definitive test is the beta-hCG blood test on Day 14 post-transfer. Do NOT stop progesterone based on a home test result — always attend for the blood test first.</div></details>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Frequently Asked <em>Questions</em></h2>
+ <div style="margin-top:1.5rem">
+ <details class="faq-item"><summary class="faq-q">How long is recovery after IVF egg retrieval?</summary><div class="faq-a">Most women feel well enough to resume gentle normal activities the day after egg retrieval. The retrieval day itself requires rest at home. Sedation clears within 4–6 hours. Avoid driving for 24 hours post-sedation. Strenuous exercise should be avoided for 3–5 days. Most women return to work the day after retrieval.</div></details>
+ <details class="faq-item"><summary class="faq-q">Do I need bed rest after embryo transfer?</summary><div class="faq-a">No. Evidence consistently shows strict bed rest after embryo transfer does NOT improve IVF success rates. Rest for 20–30 minutes at the clinic after transfer, then resume gentle normal activities. The embryo cannot fall out — it is not yet implanted and is unaffected by normal daily movement.</div></details>
+ <details class="faq-item"><summary class="faq-q">What are OHSS symptoms I should watch for?</summary><div class="faq-a">Mild (manage at home): bloating, mild abdominal discomfort, nausea. Moderate (call clinic today): significant swelling, nausea/vomiting, reduced urine output. Severe (attend emergency): severe abdominal pain, rapid weight gain, breathlessness, very reduced urine. Mother Hospitals uses a freeze-all strategy when OHSS risk is high — preventing severe OHSS while preserving all embryos.</div></details>
+ <details class="faq-item"><summary class="faq-q">Can I exercise after embryo transfer?</summary><div class="faq-a">Gentle walking and normal daily activities are fine from the day after transfer. Avoid vigorous exercise, heavy lifting, and high-impact sports for 2 weeks. Gentle yoga and stretching are generally safe. Swimming should be avoided due to infection risk (pessaries).</div></details>
+ <details class="faq-item"><summary class="faq-q">When can I do a home pregnancy test after IVF?</summary><div class="faq-a">Home tests may show a positive result from Day 10–12 post-transfer, but results before Day 14 can be misleading — progesterone support can cause a false positive, and hCG from the trigger injection may still be detectable. The definitive test is the beta-hCG blood test on Day 14 post-transfer. Do NOT stop progesterone based on a home test result — always attend for the blood test first.</div></details>
+ </div>
+ </div>
 </section>
 
 <section class="section" style="padding-top:40px;padding-bottom:80px">
-  <div class="section-inner">
-    <h2>Explore the Full <em>IVF Journey</em></h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
-      <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
-      <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
-      <a href="/blastocyst-transfer-explained.html" class="related-card">🔵 Blastocyst Transfer</a>
-      <a href="/ivf-injections-explained.html" class="related-card">💉 IVF Injections</a>
-      <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
-      <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
-      <a href="/ivf-procedure-explained.html" class="related-card">🔬 IVF Procedure</a>
-      <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Explore the Full <em>IVF Journey</em></h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
+ <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
+ <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
+ <a href="/blastocyst-transfer-explained.html" class="related-card">🔵 Blastocyst Transfer</a>
+ <a href="/ivf-injections-explained.html" class="related-card">💉 IVF Injections</a>
+ <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
+ <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
+ <a href="/ivf-procedure-explained.html" class="related-card">🔬 IVF Procedure</a>
+ <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
-  <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
-  <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice. Contact the clinic for individual medical guidance.</p>
+ <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
+ <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
+ <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice. Contact the clinic for individual medical guidance.</p>
 </footer>
 
 </body>

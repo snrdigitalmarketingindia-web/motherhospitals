@@ -50,418 +50,352 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-.tsh-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.tsh-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.tsh-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.tsh-table tr:nth-child(even) td{background:var(--purple-pale)}
-.badge-ok{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-warn{display:inline-block;background:#e65100;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-caution{display:inline-block;background:#f57f17;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}.tsh-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.tsh-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.tsh-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.tsh-table tr:nth-child(even) td{background:var(--purple-pale)}.badge-ok{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-warn{display:inline-block;background:#e65100;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-caution{display:inline-block;background:#f57f17;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 @media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Thyroid and Fertility — How TSH Levels Affect Pregnancy | Mother Hospitals Hyderabad",
-  "url":"https://motherhospitals.co.in/thyroid-and-fertility-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Thyroid and Fertility — How TSH Levels Affect Pregnancy | Mother Hospitals Hyderabad",
+ "url":"https://motherhospitals.co.in/thyroid-and-fertility-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20thyroid%20and%20fertility%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20thyroid%20and%20fertility%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🦋</span> Thyroid-Fertility Specialists</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🦋</span> Thyroid-Fertility Specialists</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › Thyroid and Fertility
-    </div>
-    <h1>Thyroid Problems & <em>Infertility</em> — What Every Woman in Hyderabad Must Know</h1>
-    <p class="hero-sub">1 in 3 women in Hyderabad has thyroid dysfunction. It is the most common hidden cause of difficulty getting pregnant — and it is completely treatable. Here is everything you need to know.</p>
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Check Your TSH Today — 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20thyroid%20fertility%20consultation" class="btn-secondary" target="_blank" rel="noopener">💬 Book Free Consultation</a>
-    </div>
-  </div>
+ <div class="page-hero-inner">
+ <div class="breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › Thyroid and Fertility
+ </div>
+ <h1>Thyroid Problems & <em>Infertility</em> — What Every Woman in Hyderabad Must Know</h1>
+ <p class="hero-sub">1 in 3 women in Hyderabad has thyroid dysfunction. It is the most common hidden cause of difficulty getting pregnant — and it is completely treatable. Here is everything you need to know.</p>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Check Your TSH Today — 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20thyroid%20fertility%20consultation" class="btn-secondary" target="_blank" rel="noopener">💬 Book Free Consultation</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">1 in 3</div><div class="stat-label">Indian women have thyroid dysfunction</div></div>
-      <div class="stat-box"><div class="stat-num">2.5</div><div class="stat-label">Ideal TSH (mIU/L) for conception & IVF</div></div>
-      <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">Miscarriages linked to uncontrolled thyroid</div></div>
-      <div class="stat-box"><div class="stat-num">95%+</div><div class="stat-label">Women with thyroid can conceive with treatment</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">1 in 3</div><div class="stat-label">Indian women have thyroid dysfunction</div></div>
+ <div class="stat-box"><div class="stat-num">2.5</div><div class="stat-label">Ideal TSH (mIU/L) for conception & IVF</div></div>
+ <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">Miscarriages linked to uncontrolled thyroid</div></div>
+ <div class="stat-box"><div class="stat-num">95%+</div><div class="stat-label">Women with thyroid can conceive with treatment</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- HOW THYROID AFFECTS FERTILITY -->
 <section class="section" style="padding-top:30px">
-  <div class="section-inner">
-    <h2>How Thyroid Problems <em>Affect Your Fertility</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.5rem">The thyroid gland — a small butterfly-shaped gland in your neck — controls your entire metabolism including your reproductive hormones. When it is out of balance, your ability to conceive is directly affected.</p>
+ <div class="section-inner">
+ <h2>How Thyroid Problems <em>Affect Your Fertility</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.5rem">The thyroid gland — a small butterfly-shaped gland in your neck — controls your entire metabolism including your reproductive hormones. When it is out of balance, your ability to conceive is directly affected.</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>🔵 Hypothyroidism (Underactive Thyroid)</h3>
-        <p style="font-size:0.85rem;color:var(--text-soft);margin-bottom:0.8rem">TSH is HIGH (above 4.5 mIU/L)</p>
-        <ul>
-          <li>Irregular or absent periods (anovulation)</li>
-          <li>Poor egg quality</li>
-          <li>Thin uterine lining — embryo cannot implant</li>
-          <li>Elevated prolactin → disrupts ovulation</li>
-          <li>Increased risk of miscarriage</li>
-          <li>Fatigue, weight gain, hair loss, feeling cold</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>🔴 Hyperthyroidism (Overactive Thyroid)</h3>
-        <p style="font-size:0.85rem;color:var(--text-soft);margin-bottom:0.8rem">TSH is LOW (below 0.4 mIU/L)</p>
-        <ul>
-          <li>Irregular periods or very heavy periods</li>
-          <li>Premature ovarian aging</li>
-          <li>Low AMH (ovarian reserve)</li>
-          <li>Higher risk of pregnancy complications</li>
-          <li>Preterm birth if untreated during pregnancy</li>
-          <li>Heart palpitations, weight loss, anxiety</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>🔵 Hypothyroidism (Underactive Thyroid)</h3>
+ <p style="font-size:0.85rem;color:var(--text-soft);margin-bottom:0.8rem">TSH is HIGH (above 4.5 mIU/L)</p>
+ <ul>
+ <li>Irregular or absent periods (anovulation)</li>
+ <li>Poor egg quality</li>
+ <li>Thin uterine lining — embryo cannot implant</li>
+ <li>Elevated prolactin → disrupts ovulation</li>
+ <li>Increased risk of miscarriage</li>
+ <li>Fatigue, weight gain, hair loss, feeling cold</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>🔴 Hyperthyroidism (Overactive Thyroid)</h3>
+ <p style="font-size:0.85rem;color:var(--text-soft);margin-bottom:0.8rem">TSH is LOW (below 0.4 mIU/L)</p>
+ <ul>
+ <li>Irregular periods or very heavy periods</li>
+ <li>Premature ovarian aging</li>
+ <li>Low AMH (ovarian reserve)</li>
+ <li>Higher risk of pregnancy complications</li>
+ <li>Preterm birth if untreated during pregnancy</li>
+ <li>Heart palpitations, weight loss, anxiety</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="fact-bar">
-      <strong>Important:</strong> Even subclinical hypothyroidism — where TSH is 2.5–4.5 but symptoms are mild — can reduce IVF success rates by 20–30% and increase miscarriage risk significantly. Most women do not know they have it.
-    </div>
+ <div class="fact-bar">
+ <strong>Important:</strong> Even subclinical hypothyroidism — where TSH is 2.5–4.5 but symptoms are mild — can reduce IVF success rates by 20–30% and increase miscarriage risk significantly. Most women do not know they have it.
+ </div>
 
-    <div class="voice-box">
-      <strong>"Doctor, my reports show TSH is 4.1. Is that normal?"</strong><br/>
-      This is one of the most common questions at our clinic. For the general population, labs mark 0.4–4.5 as "normal." But for fertility and IVF, we target TSH below 2.5 — ideally 1.0–2.0. A TSH of 4.1 needs treatment before IVF.
-    </div>
-  </div>
+ <div class="voice-box">
+ <strong>"Doctor, my reports show TSH is 4.1. Is that normal?"</strong><br/>
+ This is one of the most common questions at our clinic. For the general population, labs mark 0.4–4.5 as "normal." But for fertility and IVF, we target TSH below 2.5 — ideally 1.0–2.0. A TSH of 4.1 needs treatment before IVF.
+ </div>
+ </div>
 </section>
 
 <!-- TSH TABLE -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>TSH Levels — <em>What Do They Mean for Fertility?</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">Use this quick reference to understand your TSH report:</p>
-    <table class="tsh-table">
-      <thead>
-        <tr><th>TSH Level (mIU/L)</th><th>What It Means</th><th>Fertility Impact</th><th>Action Needed</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Below 1.0</strong></td><td>Optimal range</td><td>Best for conception & IVF</td><td><span class="badge-ok">✓ Ideal</span></td></tr>
-        <tr><td><strong>1.0 – 2.5</strong></td><td>Good range</td><td>Excellent fertility window</td><td><span class="badge-ok">✓ Good</span></td></tr>
-        <tr><td><strong>2.5 – 4.5</strong></td><td>Borderline / subclinical</td><td>Reduced IVF success, miscarriage risk</td><td><span class="badge-caution">⚠ Treat before IVF</span></td></tr>
-        <tr><td><strong>Above 4.5</strong></td><td>Hypothyroidism</td><td>Blocks ovulation, prevents implantation</td><td><span class="badge-warn">✗ Must treat first</span></td></tr>
-        <tr><td><strong>Below 0.4</strong></td><td>Hyperthyroidism</td><td>Irregular periods, pregnancy risk</td><td><span class="badge-warn">✗ Specialist review</span></td></tr>
-      </tbody>
-    </table>
-    <p style="font-size:0.82rem;color:var(--text-soft);margin-top:0.5rem">*Target TSH for IVF: &lt; 2.5 mIU/L. Target during pregnancy: &lt; 2.5 (1st trimester), &lt; 3.0 (2nd–3rd trimester).</p>
-  </div>
+ <div class="section-inner">
+ <h2>TSH Levels — <em>What Do They Mean for Fertility?</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">Use this quick reference to understand your TSH report:</p>
+ <table class="tsh-table">
+ <thead>
+ <tr><th>TSH Level (mIU/L)</th><th>What It Means</th><th>Fertility Impact</th><th>Action Needed</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Below 1.0</strong></td><td>Optimal range</td><td>Best for conception & IVF</td><td><span class="badge-ok">✓ Ideal</span></td></tr>
+ <tr><td><strong>1.0 – 2.5</strong></td><td>Good range</td><td>Excellent fertility window</td><td><span class="badge-ok">✓ Good</span></td></tr>
+ <tr><td><strong>2.5 – 4.5</strong></td><td>Borderline / subclinical</td><td>Reduced IVF success, miscarriage risk</td><td><span class="badge-caution">⚠ Treat before IVF</span></td></tr>
+ <tr><td><strong>Above 4.5</strong></td><td>Hypothyroidism</td><td>Blocks ovulation, prevents implantation</td><td><span class="badge-warn">✗ Must treat first</span></td></tr>
+ <tr><td><strong>Below 0.4</strong></td><td>Hyperthyroidism</td><td>Irregular periods, pregnancy risk</td><td><span class="badge-warn">✗ Specialist review</span></td></tr>
+ </tbody>
+ </table>
+ <p style="font-size:0.82rem;color:var(--text-soft);margin-top:0.5rem">*Target TSH for IVF: &lt; 2.5 mIU/L. Target during pregnancy: &lt; 2.5 (1st trimester), &lt; 3.0 (2nd–3rd trimester).</p>
+ </div>
 </section>
 
 <!-- TESTS -->
 <section class="section">
-  <div class="section-inner">
-    <h2>Thyroid Tests to Do <em>Before Trying to Conceive</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">At Mother Hospitals, we test the full thyroid panel — not just TSH — to get the complete picture:</p>
+ <div class="section-inner">
+ <h2>Thyroid Tests to Do <em>Before Trying to Conceive</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">At Mother Hospitals, we test the full thyroid panel — not just TSH — to get the complete picture:</p>
 
-    <div class="highlight-box">
-      <h3>🧪 Complete Thyroid Fertility Panel</h3>
-      <ul class="check-list">
-        <li><strong>TSH</strong> — most important. Must be below 2.5 for IVF</li>
-        <li><strong>Free T3 &amp; Free T4</strong> — active thyroid hormones affecting egg &amp; embryo quality</li>
-        <li><strong>TPO Antibodies</strong> — detects Hashimoto's (autoimmune thyroid disease). Even with normal TSH, high TPO antibodies double your miscarriage risk</li>
-        <li><strong>Anti-Thyroglobulin Antibodies</strong> — further autoimmune screening</li>
-        <li><strong>Prolactin</strong> — often elevated with hypothyroidism, blocks ovulation</li>
-      </ul>
-      <p style="font-size:0.88rem;color:var(--text-mid);margin-top:1rem">💡 Many women have <strong>normal TSH but high TPO antibodies</strong>. This silent condition — called euthyroid Hashimoto's — still needs treatment before IVF.</p>
-    </div>
-  </div>
+ <div class="highlight-box">
+ <h3>🧪 Complete Thyroid Fertility Panel</h3>
+ <ul class="check-list">
+ <li><strong>TSH</strong> — most important. Must be below 2.5 for IVF</li>
+ <li><strong>Free T3 &amp; Free T4</strong> — active thyroid hormones affecting egg &amp; embryo quality</li>
+ <li><strong>TPO Antibodies</strong> — detects Hashimoto's (autoimmune thyroid disease). Even with normal TSH, high TPO antibodies double your miscarriage risk</li>
+ <li><strong>Anti-Thyroglobulin Antibodies</strong> — further autoimmune screening</li>
+ <li><strong>Prolactin</strong> — often elevated with hypothyroidism, blocks ovulation</li>
+ </ul>
+ <p style="font-size:0.88rem;color:var(--text-mid);margin-top:1rem">💡 Many women have <strong>normal TSH but high TPO antibodies</strong>. This silent condition — called euthyroid Hashimoto's — still needs treatment before IVF.</p>
+ </div>
+ </div>
 </section>
 
 <!-- TREATMENT -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Thyroid Treatment <em>Before &amp; During IVF</em></h2>
-    <div class="two-col">
-      <div class="col-card">
-        <h3>💊 Hypothyroidism Treatment</h3>
-        <ul>
-          <li>Levothyroxine (thyroxine) tablets — once daily, before food</li>
-          <li>Dose adjusted to bring TSH below 2.5 before IVF starts</li>
-          <li>Safe during pregnancy — dose often increased in 1st trimester</li>
-          <li>TSH monitored every 4–6 weeks during IVF &amp; pregnancy</li>
-          <li>For TPO antibodies: low-dose levothyroxine even if TSH is normal</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>⚕️ Hyperthyroidism Treatment</h3>
-        <ul>
-          <li>Anti-thyroid medications (carbimazole / propylthiouracil)</li>
-          <li>IVF should wait until thyroid is controlled — rushing increases miscarriage risk</li>
-          <li>Radioactive iodine NOT recommended if planning pregnancy</li>
-          <li>After thyroidectomy: lifelong thyroxine replacement needed</li>
-          <li>Careful monitoring during stimulation phase of IVF</li>
-        </ul>
-      </div>
-    </div>
-    <div class="fact-bar">
-      <strong>Good News:</strong> Most women with thyroid disorders achieve pregnancy with the right treatment. At Mother Hospitals, we optimise your thyroid levels before starting IVF — this one step significantly improves your success rate.
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Thyroid Treatment <em>Before &amp; During IVF</em></h2>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>💊 Hypothyroidism Treatment</h3>
+ <ul>
+ <li>Levothyroxine (thyroxine) tablets — once daily, before food</li>
+ <li>Dose adjusted to bring TSH below 2.5 before IVF starts</li>
+ <li>Safe during pregnancy — dose often increased in 1st trimester</li>
+ <li>TSH monitored every 4–6 weeks during IVF &amp; pregnancy</li>
+ <li>For TPO antibodies: low-dose levothyroxine even if TSH is normal</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>⚕️ Hyperthyroidism Treatment</h3>
+ <ul>
+ <li>Anti-thyroid medications (carbimazole / propylthiouracil)</li>
+ <li>IVF should wait until thyroid is controlled — rushing increases miscarriage risk</li>
+ <li>Radioactive iodine NOT recommended if planning pregnancy</li>
+ <li>After thyroidectomy: lifelong thyroxine replacement needed</li>
+ <li>Careful monitoring during stimulation phase of IVF</li>
+ </ul>
+ </div>
+ </div>
+ <div class="fact-bar">
+ <strong>Good News:</strong> Most women with thyroid disorders achieve pregnancy with the right treatment. At Mother Hospitals, we optimise your thyroid levels before starting IVF — this one step significantly improves your success rate.
+ </div>
+ </div>
 </section>
 
 <!-- SYMPTOMS -->
 <section class="section">
-  <div class="section-inner">
-    <h2>Warning Signs — <em>Could Thyroid Be Your Problem?</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">Check if you have any of these. Even 2–3 symptoms are reason enough to test your TSH:</p>
+ <div class="section-inner">
+ <h2>Warning Signs — <em>Could Thyroid Be Your Problem?</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">Check if you have any of these. Even 2–3 symptoms are reason enough to test your TSH:</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>Hypothyroid Symptoms</h3>
-        <ul>
-          <li>Weight gain without reason</li>
-          <li>Feeling cold all the time</li>
-          <li>Fatigue &amp; sluggishness</li>
-          <li>Hair thinning or hair fall</li>
-          <li>Irregular or heavy periods</li>
-          <li>Dry skin</li>
-          <li>Depression or mood swings</li>
-          <li>Difficulty concentrating ("brain fog")</li>
-          <li>Constipation</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>Hyperthyroid Symptoms</h3>
-        <ul>
-          <li>Weight loss despite eating well</li>
-          <li>Always feeling hot / sweating</li>
-          <li>Heart palpitations</li>
-          <li>Anxiety or nervousness</li>
-          <li>Trembling hands</li>
-          <li>Light or missed periods</li>
-          <li>Difficulty sleeping</li>
-          <li>Bulging eyes (in Graves' disease)</li>
-          <li>Weakness</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>Hypothyroid Symptoms</h3>
+ <ul>
+ <li>Weight gain without reason</li>
+ <li>Feeling cold all the time</li>
+ <li>Fatigue &amp; sluggishness</li>
+ <li>Hair thinning or hair fall</li>
+ <li>Irregular or heavy periods</li>
+ <li>Dry skin</li>
+ <li>Depression or mood swings</li>
+ <li>Difficulty concentrating ("brain fog")</li>
+ <li>Constipation</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>Hyperthyroid Symptoms</h3>
+ <ul>
+ <li>Weight loss despite eating well</li>
+ <li>Always feeling hot / sweating</li>
+ <li>Heart palpitations</li>
+ <li>Anxiety or nervousness</li>
+ <li>Trembling hands</li>
+ <li>Light or missed periods</li>
+ <li>Difficulty sleeping</li>
+ <li>Bulging eyes (in Graves' disease)</li>
+ <li>Weakness</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="voice-box">
-      <strong>"I have been trying to conceive for 14 months. I feel tired all the time and my periods are irregular. Could it be thyroid?"</strong><br/>
-      — Very likely yes. These are classic hypothyroid symptoms. A simple blood test (TSH) done fasting in the morning gives the answer. At Mother Hospitals, we can test and review your results the same day.
-    </div>
-  </div>
+ <div class="voice-box">
+ <strong>"I have been trying to conceive for 14 months. I feel tired all the time and my periods are irregular. Could it be thyroid?"</strong><br/>
+ — Very likely yes. These are classic hypothyroid symptoms. A simple blood test (TSH) done fasting in the morning gives the answer. At Mother Hospitals, we can test and review your results the same day.
+ </div>
+ </div>
 </section>
 
 <!-- DR STRIP -->
 <section class="section" style="padding-top:0">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr Prashanthi Reddy — Fertility & Thyroid Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. Prashanthi Reddy</h3>
-        <p>MBBS · MD (OBG) · Fellowship in Reproductive Medicine<br/>19+ Years | Fertility Specialist & Gynaecologist<br/>Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/><br/>
-        "Thyroid disorder is the most underdiagnosed cause of infertility I see. Many patients have been trying for years without anyone testing their TSH properly. A simple tablet taken daily can change everything."</p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr Prashanthi Reddy — Fertility & Thyroid Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. Prashanthi Reddy</h3>
+ <p>MBBS · MD (OBG) · Fellowship in Reproductive Medicine<br/>19+ Years | Fertility Specialist & Gynaecologist<br/>Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/><br/>
+ "Thyroid disorder is the most underdiagnosed cause of infertility I see. Many patients have been trying for years without anyone testing their TSH properly. A simple tablet taken daily can change everything."</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- WHY MOTHER HOSPITALS -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Why Choose Mother Hospitals for <em>Thyroid-Related Infertility?</em></h2>
-    <ul class="check-list" style="font-size:0.95rem">
-      <li>Full thyroid panel tested before every fertility treatment — not just TSH</li>
-      <li>TSH optimised to below 2.5 before starting IVF protocol</li>
-      <li>Endocrinologist &amp; fertility team work together for complex cases</li>
-      <li>Monitoring throughout IVF and pregnancy — dose adjusted as needed</li>
-      <li>Convenient location: Boduppal, Hyderabad — serving Uppal, ECIL, Nagole, Ghatkesar, Medipally</li>
-      <li>Same-day thyroid reports available</li>
-      <li>19+ years experience in fertility &amp; reproductive medicine</li>
-    </ul>
-    <div style="margin-top:1.5rem">
-      <a href="tel:+919705993366" class="btn-primary">📞 Book Thyroid Fertility Test — 97059 93366</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Why Choose Mother Hospitals for <em>Thyroid-Related Infertility?</em></h2>
+ <ul class="check-list" style="font-size:0.95rem">
+ <li>Full thyroid panel tested before every fertility treatment — not just TSH</li>
+ <li>TSH optimised to below 2.5 before starting IVF protocol</li>
+ <li>Endocrinologist &amp; fertility team work together for complex cases</li>
+ <li>Monitoring throughout IVF and pregnancy — dose adjusted as needed</li>
+ <li>Convenient location: Boduppal, Hyderabad — serving Uppal, ECIL, Nagole, Ghatkesar, Medipally</li>
+ <li>Same-day thyroid reports available</li>
+ <li>19+ years experience in fertility &amp; reproductive medicine</li>
+ </ul>
+ <div style="margin-top:1.5rem">
+ <a href="tel:+919705993366" class="btn-primary">📞 Book Thyroid Fertility Test — 97059 93366</a>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section">
-  <div class="section-inner">
-    <h2>Frequently Asked <em>Questions</em></h2>
-    <div style="margin-top:1.5rem">
-      <details class="faq-item"><summary class="faq-q">Can thyroid problems cause infertility?</summary><div class="faq-a">Yes. Both hypothyroidism (underactive) and hyperthyroidism (overactive) can cause infertility by disrupting ovulation, hormonal balance, and uterine lining. Even mild, "subclinical" hypothyroidism with TSH between 2.5–4.5 can reduce fertility. The good news is that thyroid-related infertility is highly treatable.</div></details>
+ <div class="section-inner">
+ <h2>Frequently Asked <em>Questions</em></h2>
+ <div style="margin-top:1.5rem">
+ <details class="faq-item"><summary class="faq-q">Can thyroid problems cause infertility?</summary><div class="faq-a">Yes. Both hypothyroidism (underactive) and hyperthyroidism (overactive) can cause infertility by disrupting ovulation, hormonal balance, and uterine lining. Even mild, "subclinical" hypothyroidism with TSH between 2.5–4.5 can reduce fertility. The good news is that thyroid-related infertility is highly treatable.</div></details>
 
-      <details class="faq-item"><summary class="faq-q">What TSH level is needed for pregnancy and IVF?</summary><div class="faq-a">For pregnancy and IVF, TSH should ideally be below 2.5 mIU/L — and many fertility specialists prefer below 2.0. The standard lab "normal range" of 0.4–4.5 is for the general population and is too wide for fertility purposes. At Mother Hospitals, we target TSH &lt; 2.5 before starting IVF.</div></details>
+ <details class="faq-item"><summary class="faq-q">What TSH level is needed for pregnancy and IVF?</summary><div class="faq-a">For pregnancy and IVF, TSH should ideally be below 2.5 mIU/L — and many fertility specialists prefer below 2.0. The standard lab "normal range" of 0.4–4.5 is for the general population and is too wide for fertility purposes. At Mother Hospitals, we target TSH &lt; 2.5 before starting IVF.</div></details>
 
-      <details class="faq-item"><summary class="faq-q">I have hypothyroidism but my TSH is 3.8. Can I do IVF now?</summary><div class="faq-a">We would recommend optimising your TSH below 2.5 first — typically by adjusting your levothyroxine dose. This usually takes 4–6 weeks. Starting IVF with TSH of 3.8 reduces your success rate and increases miscarriage risk. The short wait is worth it for much better results.</div></details>
+ <details class="faq-item"><summary class="faq-q">I have hypothyroidism but my TSH is 3.8. Can I do IVF now?</summary><div class="faq-a">We would recommend optimising your TSH below 2.5 first — typically by adjusting your levothyroxine dose. This usually takes 4–6 weeks. Starting IVF with TSH of 3.8 reduces your success rate and increases miscarriage risk. The short wait is worth it for much better results.</div></details>
 
-      <details class="faq-item"><summary class="faq-q">My TSH is normal but my TPO antibodies are high. Does this affect fertility?</summary><div class="faq-a">Yes. High TPO antibodies (Hashimoto's thyroiditis) double your risk of miscarriage even when TSH is normal. Many studies show that low-dose levothyroxine treatment reduces miscarriage risk in women with positive TPO antibodies. At Mother Hospitals, we treat this condition before IVF.</div></details>
+ <details class="faq-item"><summary class="faq-q">My TSH is normal but my TPO antibodies are high. Does this affect fertility?</summary><div class="faq-a">Yes. High TPO antibodies (Hashimoto's thyroiditis) double your risk of miscarriage even when TSH is normal. Many studies show that low-dose levothyroxine treatment reduces miscarriage risk in women with positive TPO antibodies. At Mother Hospitals, we treat this condition before IVF.</div></details>
 
-      <details class="faq-item"><summary class="faq-q">Can I continue taking thyroid tablets during IVF and pregnancy?</summary><div class="faq-a">Absolutely — you must. Levothyroxine is safe and essential during pregnancy. Your dose may need to increase in the first trimester as thyroid demand rises significantly. We monitor TSH every 4–6 weeks during IVF and every trimester during pregnancy.</div></details>
+ <details class="faq-item"><summary class="faq-q">Can I continue taking thyroid tablets during IVF and pregnancy?</summary><div class="faq-a">Absolutely — you must. Levothyroxine is safe and essential during pregnancy. Your dose may need to increase in the first trimester as thyroid demand rises significantly. We monitor TSH every 4–6 weeks during IVF and every trimester during pregnancy.</div></details>
 
-      <details class="faq-item"><summary class="faq-q">Is thyroid problem common in Hyderabad?</summary><div class="faq-a">Very common. Approximately 1 in 3 women in Hyderabad and across Telangana has thyroid dysfunction. Iodine deficiency in some regions, autoimmune factors, stress, and genetic predisposition all contribute. This is why thyroid testing is a standard part of our initial fertility workup.</div></details>
-    </div>
-  </div>
+ <details class="faq-item"><summary class="faq-q">Is thyroid problem common in Hyderabad?</summary><div class="faq-a">Very common. Approximately 1 in 3 women in Hyderabad and across Telangana has thyroid dysfunction. Iodine deficiency in some regions, autoimmune factors, stress, and genetic predisposition all contribute. This is why thyroid testing is a standard part of our initial fertility workup.</div></details>
+ </div>
+ </div>
 </section>
 
 <!-- RELATED -->
 <section class="section" style="padding-top:30px;padding-bottom:80px">
-  <div class="section-inner">
-    <h2>Related <em>Fertility Topics</em></h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Treatment Hyderabad</a>
-      <a href="/pcos-treatment-hyderabad.html" class="related-card">🌀 PCOS Treatment</a>
-      <a href="/low-amh-treatment-hyderabad.html" class="related-card">🧬 Low AMH Treatment</a>
-      <a href="/iui-treatment-hyderabad.html" class="related-card">💉 IUI Treatment</a>
-      <a href="/ovulation-problems-treatment-hyderabad.html" class="related-card">🥚 Ovulation Problems</a>
-      <a href="/ivf-success-rate-hyderabad.html" class="related-card">📊 IVF Success Rates</a>
-      <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
-      <a href="/ivf-cost-hyderabad.html" class="related-card">💰 IVF Cost Hyderabad</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Fertility Topics</em></h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Treatment Hyderabad</a>
+ <a href="/pcos-treatment-hyderabad.html" class="related-card">🌀 PCOS Treatment</a>
+ <a href="/low-amh-treatment-hyderabad.html" class="related-card">🧬 Low AMH Treatment</a>
+ <a href="/iui-treatment-hyderabad.html" class="related-card">💉 IUI Treatment</a>
+ <a href="/ovulation-problems-treatment-hyderabad.html" class="related-card">🥚 Ovulation Problems</a>
+ <a href="/ivf-success-rate-hyderabad.html" class="related-card">📊 IVF Success Rates</a>
+ <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
+ <a href="/ivf-cost-hyderabad.html" class="related-card">💰 IVF Cost Hyderabad</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p><strong>Mother Hospitals &amp; IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
-  <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
-  <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center. This page is for informational purposes only and does not constitute medical advice. Please consult your doctor.</p>
+ <p><strong>Mother Hospitals &amp; IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
+ <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
+ <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center. This page is for informational purposes only and does not constitute medical advice. Please consult your doctor.</p>
 </footer>
 
 </body>

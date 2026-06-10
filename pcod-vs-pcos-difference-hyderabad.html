@@ -50,482 +50,407 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-/* Comparison table */
-.comp-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.comp-table th{padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.comp-table th:first-child{background:var(--purple);color:#fff}
-.comp-table th.pcod-head{background:#1565c0;color:#fff}
-.comp-table th.pcos-head{background:#b5206e;color:#fff}
-.comp-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.comp-table td:first-child{font-weight:600;color:var(--purple);background:var(--purple-pale)}
-.comp-table td.pcod-col{background:#e3f2fd}
-.comp-table td.pcos-col{background:#fce4ec}
-.comp-table tr:last-child td{border-bottom:none}
-.badge-mild{display:inline-block;background:#1565c0;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-serious{display:inline-block;background:#b5206e;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.badge-ok{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}
+/* Comparison table */.comp-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.comp-table th{padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.comp-table th:first-child{background:var(--purple);color:#fff}.comp-table th.pcod-head{background:#1565c0;color:#fff}.comp-table th.pcos-head{background:#b5206e;color:#fff}.comp-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.comp-table td:first-child{font-weight:600;color:var(--purple);background:var(--purple-pale)}.comp-table td.pcod-col{background:#e3f2fd}.comp-table td.pcos-col{background:#fce4ec}.comp-table tr:last-child td{border-bottom:none}.badge-mild{display:inline-block;background:#1565c0;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-serious{display:inline-block;background:#b5206e;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.badge-ok{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.15rem 0.55rem;font-size:0.78rem;font-weight:700}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
-/* Answer box — optimised for featured snippet */
-.answer-box{background:#fff;border:2.5px solid var(--purple);border-radius:16px;padding:1.6rem;margin:1.5rem 0}
-.answer-box h3{font-family:var(--font-d);font-size:1.2rem;color:var(--purple);margin-bottom:0.7rem}
-.answer-box p{font-size:0.93rem;color:var(--text-mid);line-height:1.75}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
+/* Answer box — optimised for featured snippet */.answer-box{background:#fff;border:2.5px solid var(--purple);border-radius:16px;padding:1.6rem;margin:1.5rem 0}.answer-box h3{font-family:var(--font-d);font-size:1.2rem;color:var(--purple);margin-bottom:0.7rem}.answer-box p{font-size:0.93rem;color:var(--text-mid);line-height:1.75}
 @media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}.comp-table{font-size:0.8rem}}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"PCOD vs PCOS — What is the Difference? | Mother Hospitals Hyderabad",
-  "url":"https://motherhospitals.co.in/pcod-vs-pcos-difference-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"PCOD vs PCOS — What is the Difference? | Mother Hospitals Hyderabad",
+ "url":"https://motherhospitals.co.in/pcod-vs-pcos-difference-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20PCOD%20or%20PCOS%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20PCOD%20or%20PCOS%20treatment%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🔬</span> PCOS Specialist Clinic</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🔬</span> PCOS Specialist Clinic</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/gynaecology-hyderabad.html">Gynaecology</a> › PCOD vs PCOS
-    </div>
-    <h1>PCOD vs PCOS — <em>What Is the Difference</em> and Which Affects Your Fertility?</h1>
-    <p class="hero-sub">Most women in Hyderabad use PCOD and PCOS interchangeably — but they are different conditions with different treatments. Knowing which one you have is the first step to the right treatment and a healthy pregnancy.</p>
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Get Diagnosed Today — 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20PCOD%20PCOS%20consultation" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
-    </div>
-  </div>
+ <div class="page-hero-inner">
+ <div class="breadcrumb">
+ <a href="/">Home</a> › <a href="/gynaecology-hyderabad.html">Gynaecology</a> › PCOD vs PCOS
+ </div>
+ <h1>PCOD vs PCOS — <em>What Is the Difference</em> and Which Affects Your Fertility?</h1>
+ <p class="hero-sub">Most women in Hyderabad use PCOD and PCOS interchangeably — but they are different conditions with different treatments. Knowing which one you have is the first step to the right treatment and a healthy pregnancy.</p>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Get Diagnosed Today — 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20PCOD%20PCOS%20consultation" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">1 in 5</div><div class="stat-label">Women have PCOD globally</div></div>
-      <div class="stat-box"><div class="stat-num">1 in 10</div><div class="stat-label">Women have PCOS — more serious</div></div>
-      <div class="stat-box"><div class="stat-num">70%</div><div class="stat-label">PCOD women conceive naturally with lifestyle changes</div></div>
-      <div class="stat-box"><div class="stat-num">85%+</div><div class="stat-label">PCOS patients at Mother Hospitals achieve pregnancy</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">1 in 5</div><div class="stat-label">Women have PCOD globally</div></div>
+ <div class="stat-box"><div class="stat-num">1 in 10</div><div class="stat-label">Women have PCOS — more serious</div></div>
+ <div class="stat-box"><div class="stat-num">70%</div><div class="stat-label">PCOD women conceive naturally with lifestyle changes</div></div>
+ <div class="stat-box"><div class="stat-num">85%+</div><div class="stat-label">PCOS patients at Mother Hospitals achieve pregnancy</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- QUICK ANSWER — FEATURED SNIPPET TARGET -->
 <section class="section" style="padding-top:30px;padding-bottom:10px">
-  <div class="section-inner">
-    <div class="answer-box">
-      <h3>What is the difference between PCOD and PCOS? — Quick Answer</h3>
-      <p><strong>PCOD (Polycystic Ovarian Disease)</strong> is a condition where the ovaries produce too many immature eggs that form small cysts, causing hormonal imbalance. It is milder, more common, and often reverses with lifestyle changes.</p>
-      <p style="margin-top:0.7rem"><strong>PCOS (Polycystic Ovary Syndrome)</strong> is a broader metabolic and hormonal disorder involving insulin resistance, high androgen levels, and often absent ovulation. It is more serious, affects more systems in the body, and requires more structured treatment.</p>
-      <p style="margin-top:0.7rem"><strong>Both can affect fertility</strong> — but PCOS has a greater impact. Both are treatable and most women with either condition can have a successful pregnancy with the right care.</p>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="answer-box">
+ <h3>What is the difference between PCOD and PCOS? — Quick Answer</h3>
+ <p><strong>PCOD (Polycystic Ovarian Disease)</strong> is a condition where the ovaries produce too many immature eggs that form small cysts, causing hormonal imbalance. It is milder, more common, and often reverses with lifestyle changes.</p>
+ <p style="margin-top:0.7rem"><strong>PCOS (Polycystic Ovary Syndrome)</strong> is a broader metabolic and hormonal disorder involving insulin resistance, high androgen levels, and often absent ovulation. It is more serious, affects more systems in the body, and requires more structured treatment.</p>
+ <p style="margin-top:0.7rem"><strong>Both can affect fertility</strong> — but PCOS has a greater impact. Both are treatable and most women with either condition can have a successful pregnancy with the right care.</p>
+ </div>
+ </div>
 </section>
 
 <!-- COMPARISON TABLE -->
 <section class="section" style="padding-top:20px">
-  <div class="section-inner">
-    <h2>PCOD vs PCOS — <em>Side by Side Comparison</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">Here is a clear table showing the key differences between PCOD and PCOS:</p>
+ <div class="section-inner">
+ <h2>PCOD vs PCOS — <em>Side by Side Comparison</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">Here is a clear table showing the key differences between PCOD and PCOS:</p>
 
-    <table class="comp-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th class="pcod-head">PCOD (Polycystic Ovarian Disease)</th>
-          <th class="pcos-head">PCOS (Polycystic Ovary Syndrome)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>What it is</td>
-          <td class="pcod-col">Ovaries release immature eggs → cysts form</td>
-          <td class="pcos-col">Full hormonal + metabolic syndrome affecting whole body</td>
-        </tr>
-        <tr>
-          <td>How common</td>
-          <td class="pcod-col">Very common — 1 in 5 women</td>
-          <td class="pcos-col">Common — 1 in 10 women</td>
-        </tr>
-        <tr>
-          <td>Severity</td>
-          <td class="pcod-col"><span class="badge-mild">Milder condition</span></td>
-          <td class="pcos-col"><span class="badge-serious">More serious — systemic disorder</span></td>
-        </tr>
-        <tr>
-          <td>Androgens (male hormones)</td>
-          <td class="pcod-col">Mildly elevated or normal</td>
-          <td class="pcos-col">Significantly elevated — causes acne, hair on face/body, hair thinning</td>
-        </tr>
-        <tr>
-          <td>Insulin resistance</td>
-          <td class="pcod-col">Usually absent or mild</td>
-          <td class="pcos-col">Present in 70–80% of cases — linked to weight gain and diabetes risk</td>
-        </tr>
-        <tr>
-          <td>Periods</td>
-          <td class="pcod-col">Irregular but periods do occur</td>
-          <td class="pcos-col">Often absent for months (oligomenorrhoea / amenorrhoea)</td>
-        </tr>
-        <tr>
-          <td>Ovulation</td>
-          <td class="pcod-col">Irregular — but usually happens</td>
-          <td class="pcos-col">Often absent — the main cause of infertility</td>
-        </tr>
-        <tr>
-          <td>Weight</td>
-          <td class="pcod-col">Not always linked to weight</td>
-          <td class="pcos-col">60–70% have weight gain; also affects lean women</td>
-        </tr>
-        <tr>
-          <td>Long-term risks</td>
-          <td class="pcod-col">Low — mostly reversible</td>
-          <td class="pcos-col">Type 2 diabetes, cardiovascular disease, endometrial cancer if unmanaged</td>
-        </tr>
-        <tr>
-          <td>Fertility impact</td>
-          <td class="pcod-col">Mild — most conceive with lifestyle changes</td>
-          <td class="pcos-col">Significant — often needs ovulation induction or IVF</td>
-        </tr>
-        <tr>
-          <td>Reversible?</td>
-          <td class="pcod-col">Often yes — with diet and exercise</td>
-          <td class="pcos-col">Manageable, not fully curable — but pregnancy is very achievable</td>
-        </tr>
-      </tbody>
-    </table>
+ <table class="comp-table">
+ <thead>
+ <tr>
+ <th>Feature</th>
+ <th class="pcod-head">PCOD (Polycystic Ovarian Disease)</th>
+ <th class="pcos-head">PCOS (Polycystic Ovary Syndrome)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>What it is</td>
+ <td class="pcod-col">Ovaries release immature eggs → cysts form</td>
+ <td class="pcos-col">Full hormonal + metabolic syndrome affecting whole body</td>
+ </tr>
+ <tr>
+ <td>How common</td>
+ <td class="pcod-col">Very common — 1 in 5 women</td>
+ <td class="pcos-col">Common — 1 in 10 women</td>
+ </tr>
+ <tr>
+ <td>Severity</td>
+ <td class="pcod-col"><span class="badge-mild">Milder condition</span></td>
+ <td class="pcos-col"><span class="badge-serious">More serious — systemic disorder</span></td>
+ </tr>
+ <tr>
+ <td>Androgens (male hormones)</td>
+ <td class="pcod-col">Mildly elevated or normal</td>
+ <td class="pcos-col">Significantly elevated — causes acne, hair on face/body, hair thinning</td>
+ </tr>
+ <tr>
+ <td>Insulin resistance</td>
+ <td class="pcod-col">Usually absent or mild</td>
+ <td class="pcos-col">Present in 70–80% of cases — linked to weight gain and diabetes risk</td>
+ </tr>
+ <tr>
+ <td>Periods</td>
+ <td class="pcod-col">Irregular but periods do occur</td>
+ <td class="pcos-col">Often absent for months (oligomenorrhoea / amenorrhoea)</td>
+ </tr>
+ <tr>
+ <td>Ovulation</td>
+ <td class="pcod-col">Irregular — but usually happens</td>
+ <td class="pcos-col">Often absent — the main cause of infertility</td>
+ </tr>
+ <tr>
+ <td>Weight</td>
+ <td class="pcod-col">Not always linked to weight</td>
+ <td class="pcos-col">60–70% have weight gain; also affects lean women</td>
+ </tr>
+ <tr>
+ <td>Long-term risks</td>
+ <td class="pcod-col">Low — mostly reversible</td>
+ <td class="pcos-col">Type 2 diabetes, cardiovascular disease, endometrial cancer if unmanaged</td>
+ </tr>
+ <tr>
+ <td>Fertility impact</td>
+ <td class="pcod-col">Mild — most conceive with lifestyle changes</td>
+ <td class="pcos-col">Significant — often needs ovulation induction or IVF</td>
+ </tr>
+ <tr>
+ <td>Reversible?</td>
+ <td class="pcod-col">Often yes — with diet and exercise</td>
+ <td class="pcos-col">Manageable, not fully curable — but pregnancy is very achievable</td>
+ </tr>
+ </tbody>
+ </table>
 
-    <div class="fact-bar">
-      <strong>Key point:</strong> Both PCOD and PCOS show multiple follicles ("cysts") on ultrasound. This is why they are often confused. But the ultrasound finding alone does not distinguish them — the diagnosis requires blood hormone levels, symptoms, and clinical assessment.
-    </div>
-  </div>
+ <div class="fact-bar">
+ <strong>Key point:</strong> Both PCOD and PCOS show multiple follicles ("cysts") on ultrasound. This is why they are often confused. But the ultrasound finding alone does not distinguish them — the diagnosis requires blood hormone levels, symptoms, and clinical assessment.
+ </div>
+ </div>
 </section>
 
 <!-- SYMPTOMS -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Symptoms — <em>How to Know Which One You Have</em></h2>
+ <div class="section-inner">
+ <h2>Symptoms — <em>How to Know Which One You Have</em></h2>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3 style="color:#1565c0">🔵 PCOD Symptoms</h3>
-        <ul>
-          <li>Irregular periods (cycles of 35–45 days)</li>
-          <li>Mild bloating or pelvic discomfort</li>
-          <li>Slightly oily skin or mild acne</li>
-          <li>Mild weight gain around abdomen</li>
-          <li>Multiple small follicles on ultrasound</li>
-          <li>Periods present — just delayed or irregular</li>
-          <li>Fertility usually preserved with treatment</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3 style="color:var(--magenta)">🔴 PCOS Symptoms</h3>
-        <ul>
-          <li>Absent or very infrequent periods (8 or fewer per year)</li>
-          <li>Significant acne — jaw, chin, back</li>
-          <li>Facial hair (upper lip, chin) or chest/abdomen hair</li>
-          <li>Hair thinning on scalp (androgenic alopecia)</li>
-          <li>Unexplained weight gain — difficult to lose</li>
-          <li>Dark patches of skin (acanthosis nigricans) on neck, underarms</li>
-          <li>Mood changes, anxiety, depression</li>
-          <li>Difficulty conceiving</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3 style="color:#1565c0">🔵 PCOD Symptoms</h3>
+ <ul>
+ <li>Irregular periods (cycles of 35–45 days)</li>
+ <li>Mild bloating or pelvic discomfort</li>
+ <li>Slightly oily skin or mild acne</li>
+ <li>Mild weight gain around abdomen</li>
+ <li>Multiple small follicles on ultrasound</li>
+ <li>Periods present — just delayed or irregular</li>
+ <li>Fertility usually preserved with treatment</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3 style="color:var(--magenta)">🔴 PCOS Symptoms</h3>
+ <ul>
+ <li>Absent or very infrequent periods (8 or fewer per year)</li>
+ <li>Significant acne — jaw, chin, back</li>
+ <li>Facial hair (upper lip, chin) or chest/abdomen hair</li>
+ <li>Hair thinning on scalp (androgenic alopecia)</li>
+ <li>Unexplained weight gain — difficult to lose</li>
+ <li>Dark patches of skin (acanthosis nigricans) on neck, underarms</li>
+ <li>Mood changes, anxiety, depression</li>
+ <li>Difficulty conceiving</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="voice-box">
-      <strong>"My ultrasound shows multiple cysts. Does that mean I have PCOS?"</strong><br/>
-      Not necessarily. Polycystic-looking ovaries on ultrasound are seen in up to 25% of normal women. The diagnosis of PCOS requires at least 2 of 3 Rotterdam criteria: (1) irregular or absent ovulation, (2) elevated androgens in blood or symptoms of androgen excess, (3) polycystic ovaries on ultrasound. All three together confirm PCOS. Many women are incorrectly labelled based on ultrasound alone — which leads to unnecessary worry or under-treatment.
-    </div>
-  </div>
+ <div class="voice-box">
+ <strong>"My ultrasound shows multiple cysts. Does that mean I have PCOS?"</strong><br/>
+ Not necessarily. Polycystic-looking ovaries on ultrasound are seen in up to 25% of normal women. The diagnosis of PCOS requires at least 2 of 3 Rotterdam criteria: (1) irregular or absent ovulation, (2) elevated androgens in blood or symptoms of androgen excess, (3) polycystic ovaries on ultrasound. All three together confirm PCOS. Many women are incorrectly labelled based on ultrasound alone — which leads to unnecessary worry or under-treatment.
+ </div>
+ </div>
 </section>
 
 <!-- EFFECT ON FERTILITY -->
 <section class="section" style="padding-top:40px">
-  <div class="section-inner">
-    <h2>How PCOD and PCOS Affect <em>Fertility and Pregnancy</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.5rem">The good news: most women with either PCOD or PCOS can get pregnant. Here is what differs in their journey:</p>
+ <div class="section-inner">
+ <h2>How PCOD and PCOS Affect <em>Fertility and Pregnancy</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.5rem">The good news: most women with either PCOD or PCOS can get pregnant. Here is what differs in their journey:</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>🔵 PCOD and Pregnancy</h3>
-        <ul>
-          <li>Most women with PCOD ovulate — just irregularly</li>
-          <li>Lifestyle changes (diet + exercise) often restore regular ovulation</li>
-          <li>Low-dose letrozole or clomiphene is usually sufficient</li>
-          <li>IUI or IVF rarely needed unless other factors exist</li>
-          <li>Pregnancy outcomes are generally good with monitoring</li>
-          <li>Gestational diabetes risk is slightly higher — monitoring advised</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>🔴 PCOS and Pregnancy</h3>
-        <ul>
-          <li>Absent ovulation is the main barrier to conception</li>
-          <li>Weight loss of 5–10% restores ovulation in 70% of overweight PCOS women</li>
-          <li>Ovulation induction with letrozole or FSH injections is standard first step</li>
-          <li>IUI when ovulation is confirmed but conception does not occur</li>
-          <li>IVF (with careful stimulation to avoid OHSS) when other treatments fail</li>
-          <li>Higher risk of gestational diabetes, preeclampsia, preterm birth — closely monitored</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>🔵 PCOD and Pregnancy</h3>
+ <ul>
+ <li>Most women with PCOD ovulate — just irregularly</li>
+ <li>Lifestyle changes (diet + exercise) often restore regular ovulation</li>
+ <li>Low-dose letrozole or clomiphene is usually sufficient</li>
+ <li>IUI or IVF rarely needed unless other factors exist</li>
+ <li>Pregnancy outcomes are generally good with monitoring</li>
+ <li>Gestational diabetes risk is slightly higher — monitoring advised</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>🔴 PCOS and Pregnancy</h3>
+ <ul>
+ <li>Absent ovulation is the main barrier to conception</li>
+ <li>Weight loss of 5–10% restores ovulation in 70% of overweight PCOS women</li>
+ <li>Ovulation induction with letrozole or FSH injections is standard first step</li>
+ <li>IUI when ovulation is confirmed but conception does not occur</li>
+ <li>IVF (with careful stimulation to avoid OHSS) when other treatments fail</li>
+ <li>Higher risk of gestational diabetes, preeclampsia, preterm birth — closely monitored</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="highlight-box">
-      <h3>PCOS Treatment Ladder at Mother Hospitals Boduppal</h3>
-      <ul class="check-list">
-        <li><strong>Step 1:</strong> Lifestyle modification — low glycaemic diet, 150 min/week exercise, target 5–10% weight loss if overweight</li>
-        <li><strong>Step 2:</strong> Metformin (if insulin resistant) + inositol supplementation to improve egg quality and insulin sensitivity</li>
-        <li><strong>Step 3:</strong> Ovulation induction with letrozole (first choice over clomiphene — fewer side effects, better outcomes in PCOS)</li>
-        <li><strong>Step 4:</strong> Monitored FSH injection cycles if tablets fail — timed intercourse or IUI</li>
-        <li><strong>Step 5:</strong> IVF with gentle stimulation protocols — freeze-all to prevent OHSS, then frozen embryo transfer</li>
-        <li><strong>Throughout:</strong> Vitamin D3, B12, folic acid 5 mg, and thyroid optimisation (thyroid disease is 4× more common in PCOS women)</li>
-      </ul>
-    </div>
-  </div>
+ <div class="highlight-box">
+ <h3>PCOS Treatment Ladder at Mother Hospitals Boduppal</h3>
+ <ul class="check-list">
+ <li><strong>Step 1:</strong> Lifestyle modification — low glycaemic diet, 150 min/week exercise, target 5–10% weight loss if overweight</li>
+ <li><strong>Step 2:</strong> Metformin (if insulin resistant) + inositol supplementation to improve egg quality and insulin sensitivity</li>
+ <li><strong>Step 3:</strong> Ovulation induction with letrozole (first choice over clomiphene — fewer side effects, better outcomes in PCOS)</li>
+ <li><strong>Step 4:</strong> Monitored FSH injection cycles if tablets fail — timed intercourse or IUI</li>
+ <li><strong>Step 5:</strong> IVF with gentle stimulation protocols — freeze-all to prevent OHSS, then frozen embryo transfer</li>
+ <li><strong>Throughout:</strong> Vitamin D3, B12, folic acid 5 mg, and thyroid optimisation (thyroid disease is 4× more common in PCOS women)</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
 <!-- DIET / LIFESTYLE -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Diet and Lifestyle for <em>PCOD and PCOS</em> in Hyderabad</h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">Lifestyle changes are the most powerful — and most underused — treatment for both conditions. Here is what works:</p>
+ <div class="section-inner">
+ <h2>Diet and Lifestyle for <em>PCOD and PCOS</em> in Hyderabad</h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">Lifestyle changes are the most powerful — and most underused — treatment for both conditions. Here is what works:</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>🥗 Foods to Include</h3>
-        <ul>
-          <li>Millets (jowar, bajra, ragi) — low glycaemic, locally available</li>
-          <li>Protein at every meal — eggs, lentils (dal), paneer, fish</li>
-          <li>Leafy greens — palak, methi, coriander</li>
-          <li>Turmeric, cinnamon — anti-inflammatory, improve insulin sensitivity</li>
-          <li>Nuts and seeds — walnuts, flaxseeds, chia seeds</li>
-          <li>Whole fruits — not juices. Guava, papaya, pomegranate are good</li>
-          <li>Plenty of water — minimum 2.5 litres per day</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>🚫 Foods to Limit</h3>
-        <ul>
-          <li>White rice and maida (refined flour) — spike insulin</li>
-          <li>Sugary drinks, packaged juices, soft drinks</li>
-          <li>Deep-fried snacks — samosas, pakoras, chips</li>
-          <li>White bread, biscuits, bakery items</li>
-          <li>Processed foods and instant noodles</li>
-          <li>Full-fat dairy in excess — can increase androgens</li>
-          <li>Late-night eating — disrupts insulin rhythm</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>🥗 Foods to Include</h3>
+ <ul>
+ <li>Millets (jowar, bajra, ragi) — low glycaemic, locally available</li>
+ <li>Protein at every meal — eggs, lentils (dal), paneer, fish</li>
+ <li>Leafy greens — palak, methi, coriander</li>
+ <li>Turmeric, cinnamon — anti-inflammatory, improve insulin sensitivity</li>
+ <li>Nuts and seeds — walnuts, flaxseeds, chia seeds</li>
+ <li>Whole fruits — not juices. Guava, papaya, pomegranate are good</li>
+ <li>Plenty of water — minimum 2.5 litres per day</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>🚫 Foods to Limit</h3>
+ <ul>
+ <li>White rice and maida (refined flour) — spike insulin</li>
+ <li>Sugary drinks, packaged juices, soft drinks</li>
+ <li>Deep-fried snacks — samosas, pakoras, chips</li>
+ <li>White bread, biscuits, bakery items</li>
+ <li>Processed foods and instant noodles</li>
+ <li>Full-fat dairy in excess — can increase androgens</li>
+ <li>Late-night eating — disrupts insulin rhythm</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="fact-bar">
-      <strong>The 5% rule:</strong> In overweight women with PCOS, losing just 5% of body weight restores regular periods in 50% of women and regular ovulation in 70%. If you weigh 70 kg, that is just 3.5 kg. This is more powerful than any medication at this step.
-    </div>
-  </div>
+ <div class="fact-bar">
+ <strong>The 5% rule:</strong> In overweight women with PCOS, losing just 5% of body weight restores regular periods in 50% of women and regular ovulation in 70%. If you weigh 70 kg, that is just 3.5 kg. This is more powerful than any medication at this step.
+ </div>
+ </div>
 </section>
 
 <!-- DR STRIP -->
 <section class="section" style="padding-top:30px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — PCOS Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. Prashanthi Reddy</h3>
-        <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
-        19+ years treating PCOD and PCOS in women across Hyderabad. Specialises in ovulation induction, IVF for PCOS, and combined hormonal and lifestyle management that gets results.<br/>
-        <strong style="opacity:1">PCOS Clinic: Monday–Saturday · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — PCOS Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. Prashanthi Reddy</h3>
+ <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
+ 19+ years treating PCOD and PCOS in women across Hyderabad. Specialises in ovulation induction, IVF for PCOS, and combined hormonal and lifestyle management that gets results.<br/>
+ <strong style="opacity:1">PCOS Clinic: Monday–Saturday · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Frequently Asked Questions — <em>PCOD vs PCOS</em></h2>
+ <div class="section-inner">
+ <h2>Frequently Asked Questions — <em>PCOD vs PCOS</em></h2>
 
-    <details class="faq-item">
-      <summary class="faq-q">What is the difference between PCOD and PCOS?</summary>
-      <div class="faq-a">PCOD (Polycystic Ovarian Disease) is a condition where the ovaries produce too many immature eggs that become small cysts, causing mild hormonal imbalance. PCOS (Polycystic Ovary Syndrome) is a broader metabolic and hormonal disorder involving insulin resistance, significantly elevated androgens, and often absent ovulation. PCOS is more serious and has greater impact on fertility, long-term metabolic health, and risk of diabetes and heart disease. PCOD is more common (1 in 5 women) but often reverses with lifestyle changes. Both are treatable and pregnancy is possible with the right care.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What is the difference between PCOD and PCOS?</summary>
+ <div class="faq-a">PCOD (Polycystic Ovarian Disease) is a condition where the ovaries produce too many immature eggs that become small cysts, causing mild hormonal imbalance. PCOS (Polycystic Ovary Syndrome) is a broader metabolic and hormonal disorder involving insulin resistance, significantly elevated androgens, and often absent ovulation. PCOS is more serious and has greater impact on fertility, long-term metabolic health, and risk of diabetes and heart disease. PCOD is more common (1 in 5 women) but often reverses with lifestyle changes. Both are treatable and pregnancy is possible with the right care.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Is PCOD more common than PCOS?</summary>
-      <div class="faq-a">Yes. PCOD affects about 1 in 5 women, while PCOS affects about 1 in 10. However, PCOS is the more serious condition. In India the prevalence of PCOS is 10–22%, higher in urban women. In Hyderabad, both are very common reasons for gynaecology and fertility consultation — especially among women in the 20–35 age group.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Is PCOD more common than PCOS?</summary>
+ <div class="faq-a">Yes. PCOD affects about 1 in 5 women, while PCOS affects about 1 in 10. However, PCOS is the more serious condition. In India the prevalence of PCOS is 10–22%, higher in urban women. In Hyderabad, both are very common reasons for gynaecology and fertility consultation — especially among women in the 20–35 age group.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can women with PCOD get pregnant?</summary>
-      <div class="faq-a">Yes. Most women with PCOD get pregnant naturally or with minimal help. Since PCOD is milder and ovulation usually happens (just irregularly), lifestyle changes — regular exercise, balanced low glycaemic diet, and maintaining healthy weight — often restore regular cycles. When needed, a short course of letrozole or clomiphene to trigger ovulation is usually sufficient. Women with PCOD who get pregnant are not at significantly higher risk of complications.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Can women with PCOD get pregnant?</summary>
+ <div class="faq-a">Yes. Most women with PCOD get pregnant naturally or with minimal help. Since PCOD is milder and ovulation usually happens (just irregularly), lifestyle changes — regular exercise, balanced low glycaemic diet, and maintaining healthy weight — often restore regular cycles. When needed, a short course of letrozole or clomiphene to trigger ovulation is usually sufficient. Women with PCOD who get pregnant are not at significantly higher risk of complications.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can women with PCOS get pregnant?</summary>
-      <div class="faq-a">Yes, absolutely. PCOS is the leading cause of anovulatory infertility but it is very treatable. The main barrier is absent or infrequent ovulation. Treatment options include weight management (restores ovulation in many women), letrozole for ovulation induction, FSH injections with monitored cycles, IUI, and IVF. At Mother Hospitals Boduppal, the majority of PCOS patients achieve pregnancy within 2–3 treatment cycles. IVF is reserved for those who do not respond to simpler treatments or who have additional factors.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Can women with PCOS get pregnant?</summary>
+ <div class="faq-a">Yes, absolutely. PCOS is the leading cause of anovulatory infertility but it is very treatable. The main barrier is absent or infrequent ovulation. Treatment options include weight management (restores ovulation in many women), letrozole for ovulation induction, FSH injections with monitored cycles, IUI, and IVF. At Mother Hospitals Boduppal, the majority of PCOS patients achieve pregnancy within 2–3 treatment cycles. IVF is reserved for those who do not respond to simpler treatments or who have additional factors.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">What is the treatment for PCOS in Hyderabad?</summary>
-      <div class="faq-a">PCOS treatment at Mother Hospitals is personalised. For symptom management: lifestyle changes (low-GI diet, exercise, target weight loss), metformin for insulin resistance, and inositol supplements. For fertility: letrozole or FSH for ovulation induction, monitored IUI, and IVF with gentle stimulation (freeze-all protocol to prevent OHSS). Thyroid testing is done routinely since thyroid disease is 4× more common in PCOS. The goal is to address root causes — not just suppress symptoms.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What is the treatment for PCOS in Hyderabad?</summary>
+ <div class="faq-a">PCOS treatment at Mother Hospitals is personalised. For symptom management: lifestyle changes (low-GI diet, exercise, target weight loss), metformin for insulin resistance, and inositol supplements. For fertility: letrozole or FSH for ovulation induction, monitored IUI, and IVF with gentle stimulation (freeze-all protocol to prevent OHSS). Thyroid testing is done routinely since thyroid disease is 4× more common in PCOS. The goal is to address root causes — not just suppress symptoms.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Does PCOS go away after pregnancy?</summary>
-      <div class="faq-a">PCOS does not disappear after pregnancy, but symptoms often improve, particularly if weight is well managed during and after delivery. Periods may become more regular after childbirth. However, the underlying hormonal and metabolic tendencies of PCOS persist. Long-term management — healthy weight, exercise, regular blood sugar checks, and gynaecological follow-up — is important to prevent type 2 diabetes, cardiovascular disease, and endometrial thickening that are associated with untreated PCOS.</div>
-    </details>
-  </div>
+ <details class="faq-item">
+ <summary class="faq-q">Does PCOS go away after pregnancy?</summary>
+ <div class="faq-a">PCOS does not disappear after pregnancy, but symptoms often improve, particularly if weight is well managed during and after delivery. Periods may become more regular after childbirth. However, the underlying hormonal and metabolic tendencies of PCOS persist. Long-term management — healthy weight, exercise, regular blood sugar checks, and gynaecological follow-up — is important to prevent type 2 diabetes, cardiovascular disease, and endometrial thickening that are associated with untreated PCOS.</div>
+ </details>
+ </div>
 </section>
 
 <!-- RELATED ARTICLES -->
 <section class="section" style="padding-top:40px;padding-bottom:60px">
-  <div class="section-inner">
-    <h2>Related <em>Articles</em> at Mother Hospitals</h2>
-    <div class="related-grid">
-      <a href="/thyroid-and-fertility-hyderabad.html" class="related-card">🦋 Thyroid & Fertility</a>
-      <a href="/recurrent-miscarriage-treatment-hyderabad.html" class="related-card">💜 Recurrent Miscarriage</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
-      <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
-      <a href="/gynaecology-hyderabad.html" class="related-card">👩 Gynaecology</a>
-      <a href="/male-infertility-hyderabad.html" class="related-card">👨 Male Infertility</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Articles</em> at Mother Hospitals</h2>
+ <div class="related-grid">
+ <a href="/thyroid-and-fertility-hyderabad.html" class="related-card">🦋 Thyroid & Fertility</a>
+ <a href="/recurrent-miscarriage-treatment-hyderabad.html" class="related-card">💜 Recurrent Miscarriage</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
+ <a href="/fertility-faq-hyderabad.html" class="related-card">❓ Fertility FAQs</a>
+ <a href="/gynaecology-hyderabad.html" class="related-card">👩 Gynaecology</a>
+ <a href="/male-infertility-hyderabad.html" class="related-card">👨 Male Infertility</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
-  <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
-  <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
-  <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy or your gynaecologist for guidance specific to your situation.</p>
-  <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
+ <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
+ <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
+ <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
+ <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy or your gynaecologist for guidance specific to your situation.</p>
+ <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
 </body>

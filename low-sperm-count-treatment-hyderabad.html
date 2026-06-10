@@ -50,389 +50,313 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-nav a{text-decoration:none}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+nav a{text-decoration:none}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.section-sub{color:var(--text-soft);margin-bottom:2rem}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.grade-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.grade-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:1rem}
-.grade-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}
-.grade-table tr:nth-child(even) td{background:var(--purple-pale)}
-.cause-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin:1.5rem 0}
-.cause-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:14px;padding:1.2rem 1.4rem}
-.cause-card:hover{border-color:var(--purple)}
-.cause-icon{font-size:1.6rem;margin-bottom:0.5rem}
-.cause-title{font-weight:700;color:var(--purple);font-size:0.92rem;margin-bottom:0.3rem}
-.cause-body{font-size:0.82rem;color:var(--text-mid);line-height:1.6}
-.treatment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0}
-.treatment-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem;transition:border-color 0.2s}
-.treatment-card:hover{border-color:var(--purple)}
-.treatment-tag{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:50px;padding:0.15rem 0.65rem;font-size:0.72rem;font-weight:600;color:var(--purple);margin-bottom:0.6rem}
-.treatment-card h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.treatment-card p{font-size:0.88rem;color:var(--text-mid);line-height:1.65}
-.steps-list{list-style:none;margin:1.5rem 0}
-.step-item{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:1rem;background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem}
-.step-num{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0;font-family:var(--font-d)}
-.step-body h3{font-family:var(--font-d);font-size:1rem;color:var(--purple);margin-bottom:0.2rem}
-.step-body p{font-size:0.85rem;color:var(--text-mid);line-height:1.6}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.privacy-note{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem 1.4rem;font-size:0.85rem;color:var(--text-soft);display:flex;gap:0.6rem;align-items:flex-start;margin:1.5rem 0}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.section-sub{color:var(--text-soft);margin-bottom:2rem}.stats-row{display:flex;gap:2rem;flex-wrap:wrap}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.grade-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.grade-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:1rem}.grade-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}.grade-table tr:nth-child(even) td{background:var(--purple-pale)}.cause-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin:1.5rem 0}.cause-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:14px;padding:1.2rem 1.4rem}.cause-card:hover{border-color:var(--purple)}.cause-icon{font-size:1.6rem;margin-bottom:0.5rem}.cause-title{font-weight:700;color:var(--purple);font-size:0.92rem;margin-bottom:0.3rem}.cause-body{font-size:0.82rem;color:var(--text-mid);line-height:1.6}.treatment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0}.treatment-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem;transition:border-color 0.2s}.treatment-card:hover{border-color:var(--purple)}.treatment-tag{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:50px;padding:0.15rem 0.65rem;font-size:0.72rem;font-weight:600;color:var(--purple);margin-bottom:0.6rem}.treatment-card h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.treatment-card p{font-size:0.88rem;color:var(--text-mid);line-height:1.65}.steps-list{list-style:none;margin:1.5rem 0}.step-item{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:1rem;background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem}.step-num{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0;font-family:var(--font-d)}.step-body h3{font-family:var(--font-d);font-size:1rem;color:var(--purple);margin-bottom:0.2rem}.step-body p{font-size:0.85rem;color:var(--text-mid);line-height:1.6}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.privacy-note{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem 1.4rem;font-size:0.85rem;color:var(--text-soft);display:flex;gap:0.6rem;align-items:flex-start;margin:1.5rem 0}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
+@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Low Sperm Count Treatment Hyderabad | Mother Hospitals",
-  "url":"https://motherhospitals.co.in/low-sperm-count-treatment-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Low Sperm Count Treatment Hyderabad | Mother Hospitals",
+ "url":"https://motherhospitals.co.in/low-sperm-count-treatment-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20low%20sperm%20count%20and%20need%20treatment%20in%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20low%20sperm%20count%20and%20need%20treatment%20in%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/male-infertility-hyderabad.html">Male Infertility</a> › Low Sperm Count Treatment Hyderabad
-    </nav>
-    <h1>Low Sperm Count Treatment in <em>Hyderabad</em></h1>
-    <p class="hero-sub">A low sperm count does not mean you cannot become a father. At Mother Hospitals & IVF Center, Boduppal, even men with very few or severely abnormal sperm have achieved pregnancy through ICSI — Intracytoplasmic Sperm Injection. Dr. E. Prashanthi Reddy, 5,000+ ICSI cycles.</p>
+ <div class="page-hero-inner">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="/">Home</a> › <a href="/male-infertility-hyderabad.html">Male Infertility</a> › Low Sperm Count Treatment Hyderabad
+ </nav>
+ <h1>Low Sperm Count Treatment in <em>Hyderabad</em></h1>
+ <p class="hero-sub">A low sperm count does not mean you cannot become a father. At Mother Hospitals & IVF Center, Boduppal, even men with very few or severely abnormal sperm have achieved pregnancy through ICSI — Intracytoplasmic Sperm Injection. Dr. E. Prashanthi Reddy, 5,000+ ICSI cycles.</p>
 
-    <div class="voice-box">
-      <strong>Quick Answer:</strong> Low sperm count (oligospermia) is treated at Mother Hospitals & IVF Center, Boduppal, Hyderabad using ICSI — where a single sperm is injected into the egg. Even men with very low counts (below 1 million/mL) can father children. Call: 97059 93366 or WhatsApp: 90520 74999.
-    </div>
+ <div class="voice-box">
+ <strong>Quick Answer:</strong> Low sperm count (oligospermia) is treated at Mother Hospitals & IVF Center, Boduppal, Hyderabad using ICSI — where a single sperm is injected into the egg. Even men with very low counts (below 1 million/mL) can father children. Call: 97059 93366 or WhatsApp: 90520 74999.
+ </div>
 
-    <div class="privacy-note">
-      <span>🔒</span>
-      <span>All male infertility consultations are <strong>completely confidential</strong>. You may attend alone or with your partner. WhatsApp consultations available.</span>
-    </div>
+ <div class="privacy-note">
+ <span>🔒</span>
+ <span>All male infertility consultations are <strong>completely confidential</strong>. You may attend alone or with your partner. WhatsApp consultations available.</span>
+ </div>
 
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20low%20sperm%20count%20and%20need%20treatment%20in%20Hyderabad" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-    </div>
-  </div>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20have%20low%20sperm%20count%20and%20need%20treatment%20in%20Hyderabad" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:40px;background:var(--white)">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">1 sperm</div><div class="stat-label">is enough for ICSI</div></div>
-      <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles</div></div>
-      <div class="stat-box"><div class="stat-num">19+</div><div class="stat-label">Years Experience</div></div>
-      <div class="stat-box"><div class="stat-num">4.7★</div><div class="stat-label">Google Rating</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">1 sperm</div><div class="stat-label">is enough for ICSI</div></div>
+ <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles</div></div>
+ <div class="stat-box"><div class="stat-num">19+</div><div class="stat-label">Years Experience</div></div>
+ <div class="stat-box"><div class="stat-num">4.7★</div><div class="stat-label">Google Rating</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- KEY FACT -->
 <section class="section" style="padding-top:30px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="fact-bar">
-      <strong>Important:</strong> 1 in 20 men has a low sperm count. It is one of the most common causes of male infertility — and also one of the most treatable. ICSI can achieve fertilisation with even a single healthy sperm. Do not delay seeking a diagnosis.
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="fact-bar">
+ <strong>Important:</strong> 1 in 20 men has a low sperm count. It is one of the most common causes of male infertility — and also one of the most treatable. ICSI can achieve fertilisation with even a single healthy sperm. Do not delay seeking a diagnosis.
+ </div>
+ </div>
 </section>
 
 <!-- GRADES TABLE -->
 <section class="section" style="background:var(--white)">
-  <div class="section-inner">
-    <h2>Understanding <em>Sperm Count Grades</em></h2>
-    <p class="section-sub">WHO 2021 reference values — what your semen analysis result means</p>
-    <table class="grade-table">
-      <thead>
-        <tr><th>Grade</th><th>Sperm Count</th><th>Meaning</th><th>Recommended Treatment</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Normal</td><td>≥16 million/mL</td><td>Within reference range</td><td>Natural conception / IUI if indicated</td></tr>
-        <tr><td>Mild Oligospermia</td><td>5–15 million/mL</td><td>Mildly low count</td><td>IUI + ovulation induction / IVF+ICSI</td></tr>
-        <tr><td>Moderate Oligospermia</td><td>1–5 million/mL</td><td>Significantly low count</td><td>IVF + ICSI</td></tr>
-        <tr><td>Severe Oligospermia</td><td>&lt;1 million/mL</td><td>Very few sperm present</td><td>ICSI (even 1 sperm is enough)</td></tr>
-        <tr><td>Cryptozoospermia</td><td>Only found after centrifugation</td><td>Near-absent sperm</td><td>ICSI or TESA if no sperm found</td></tr>
-      </tbody>
-    </table>
-  </div>
+ <div class="section-inner">
+ <h2>Understanding <em>Sperm Count Grades</em></h2>
+ <p class="section-sub">WHO 2021 reference values — what your semen analysis result means</p>
+ <table class="grade-table">
+ <thead>
+ <tr><th>Grade</th><th>Sperm Count</th><th>Meaning</th><th>Recommended Treatment</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Normal</td><td>≥16 million/mL</td><td>Within reference range</td><td>Natural conception / IUI if indicated</td></tr>
+ <tr><td>Mild Oligospermia</td><td>5–15 million/mL</td><td>Mildly low count</td><td>IUI + ovulation induction / IVF+ICSI</td></tr>
+ <tr><td>Moderate Oligospermia</td><td>1–5 million/mL</td><td>Significantly low count</td><td>IVF + ICSI</td></tr>
+ <tr><td>Severe Oligospermia</td><td>&lt;1 million/mL</td><td>Very few sperm present</td><td>ICSI (even 1 sperm is enough)</td></tr>
+ <tr><td>Cryptozoospermia</td><td>Only found after centrifugation</td><td>Near-absent sperm</td><td>ICSI or TESA if no sperm found</td></tr>
+ </tbody>
+ </table>
+ </div>
 </section>
 
 <!-- CAUSES -->
 <section class="section" style="background:var(--cream)">
-  <div class="section-inner">
-    <h2>Common Causes of <em>Low Sperm Count</em></h2>
-    <p class="section-sub">Identifying the cause helps choose the most effective treatment</p>
-    <div class="cause-grid">
-      <div class="cause-card">
-        <div class="cause-icon">🩺</div>
-        <div class="cause-title">Varicocele (Most Common)</div>
-        <div class="cause-body">Dilated veins in the scrotum raise testicular temperature and impair sperm production. Found in 35–40% of infertile men. Correctable with varicocelectomy — can significantly improve sperm count.</div>
-      </div>
-      <div class="cause-card">
-        <div class="cause-icon">⚗️</div>
-        <div class="cause-title">Hormonal Imbalance</div>
-        <div class="cause-body">Low testosterone, elevated FSH, or high prolactin suppress sperm production. Hormone panel (FSH, LH, testosterone, prolactin) identifies this. Treatable with hormonal medication.</div>
-      </div>
-      <div class="cause-card">
-        <div class="cause-icon">🚬</div>
-        <div class="cause-title">Smoking & Alcohol</div>
-        <div class="cause-body">Smoking reduces sperm count by 20–40% and significantly damages motility and morphology. Heavy alcohol lowers testosterone. Quitting smoking improves parameters within 3 months.</div>
-      </div>
-      <div class="cause-card">
-        <div class="cause-icon">🌡️</div>
-        <div class="cause-title">Heat Exposure</div>
-        <div class="cause-body">Frequent hot baths, saunas, laptops on the lap, or tight underwear raise scrotal temperature and impair sperm production. Sperm require 2–4°C below body temperature to develop normally.</div>
-      </div>
-      <div class="cause-card">
-        <div class="cause-icon">💊</div>
-        <div class="cause-title">Anabolic Steroids</div>
-        <div class="cause-body">Anabolic steroids (bodybuilding supplements) severely suppress sperm production — sometimes to zero. This can persist for months or years after stopping. Always disclose steroid use to your doctor.</div>
-      </div>
-      <div class="cause-card">
-        <div class="cause-icon">🧬</div>
-        <div class="cause-title">Genetic Causes</div>
-        <div class="cause-body">Y-chromosome microdeletion and Klinefelter's syndrome (47,XXY) cause severe oligospermia or azoospermia. Karyotyping and Y-deletion testing identify genetic causes, guiding further treatment.</div>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Common Causes of <em>Low Sperm Count</em></h2>
+ <p class="section-sub">Identifying the cause helps choose the most effective treatment</p>
+ <div class="cause-grid">
+ <div class="cause-card">
+ <div class="cause-icon">🩺</div>
+ <div class="cause-title">Varicocele (Most Common)</div>
+ <div class="cause-body">Dilated veins in the scrotum raise testicular temperature and impair sperm production. Found in 35–40% of infertile men. Correctable with varicocelectomy — can significantly improve sperm count.</div>
+ </div>
+ <div class="cause-card">
+ <div class="cause-icon">⚗️</div>
+ <div class="cause-title">Hormonal Imbalance</div>
+ <div class="cause-body">Low testosterone, elevated FSH, or high prolactin suppress sperm production. Hormone panel (FSH, LH, testosterone, prolactin) identifies this. Treatable with hormonal medication.</div>
+ </div>
+ <div class="cause-card">
+ <div class="cause-icon">🚬</div>
+ <div class="cause-title">Smoking & Alcohol</div>
+ <div class="cause-body">Smoking reduces sperm count by 20–40% and significantly damages motility and morphology. Heavy alcohol lowers testosterone. Quitting smoking improves parameters within 3 months.</div>
+ </div>
+ <div class="cause-card">
+ <div class="cause-icon">🌡️</div>
+ <div class="cause-title">Heat Exposure</div>
+ <div class="cause-body">Frequent hot baths, saunas, laptops on the lap, or tight underwear raise scrotal temperature and impair sperm production. Sperm require 2–4°C below body temperature to develop normally.</div>
+ </div>
+ <div class="cause-card">
+ <div class="cause-icon">💊</div>
+ <div class="cause-title">Anabolic Steroids</div>
+ <div class="cause-body">Anabolic steroids (bodybuilding supplements) severely suppress sperm production — sometimes to zero. This can persist for months or years after stopping. Always disclose steroid use to your doctor.</div>
+ </div>
+ <div class="cause-card">
+ <div class="cause-icon">🧬</div>
+ <div class="cause-title">Genetic Causes</div>
+ <div class="cause-body">Y-chromosome microdeletion and Klinefelter's syndrome (47,XXY) cause severe oligospermia or azoospermia. Karyotyping and Y-deletion testing identify genetic causes, guiding further treatment.</div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- TREATMENT PATH -->
 <section class="section" style="background:var(--white)">
-  <div class="section-inner">
-    <h2>Treatment Pathway for <em>Low Sperm Count</em></h2>
-    <p class="section-sub">Personalised step-by-step approach at Mother Hospitals Hyderabad</p>
-    <ul class="steps-list">
-      <li class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Semen Analysis + Hormone Panel</h3>
-          <p>Full semen analysis (WHO 2021) measuring count, motility, morphology, volume. Hormone panel (FSH, LH, testosterone, prolactin). Results explained in plain language — no confusing reports handed without discussion.</p>
-        </div>
-      </li>
-      <li class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Identify & Treat the Cause</h3>
-          <p>Varicocele repair if varicocele is detected. Hormonal medication if hormones are abnormal. Lifestyle changes — quit smoking, reduce alcohol, avoid scrotal heat. Antioxidant supplements for 3 months (CoQ10, Vitamin C/E, Zinc, L-Carnitine).</p>
-        </div>
-      </li>
-      <li class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>IUI (Mild Cases)</h3>
-          <p>For mild oligospermia (5–15 million/mL) with good motility, IUI — placing concentrated sperm inside the uterus — is a lower-cost first step. Usually tried for 2–3 cycles before proceeding to IVF/ICSI.</p>
-        </div>
-      </li>
-      <li class="step-item">
-        <div class="step-num">4</div>
-        <div class="step-body">
-          <h3>IVF + ICSI (Moderate to Severe)</h3>
-          <p>For moderate or severe oligospermia, ICSI — where a single sperm is injected directly into an egg under high magnification — is the gold-standard treatment. Mother Hospitals has performed 5,000+ ICSI cycles with excellent success rates.</p>
-        </div>
-      </li>
-      <li class="step-item">
-        <div class="step-num">5</div>
-        <div class="step-body">
-          <h3>TESA / PESA if No Sperm Found</h3>
-          <p>If no sperm are found in the ejaculate (cryptozoospermia progressing to azoospermia), TESA or PESA retrieves sperm directly from the testis or epididymis for use in ICSI. Available at Mother Hospitals as an outpatient day procedure.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+ <div class="section-inner">
+ <h2>Treatment Pathway for <em>Low Sperm Count</em></h2>
+ <p class="section-sub">Personalised step-by-step approach at Mother Hospitals Hyderabad</p>
+ <ul class="steps-list">
+ <li class="step-item">
+ <div class="step-num">1</div>
+ <div class="step-body">
+ <h3>Semen Analysis + Hormone Panel</h3>
+ <p>Full semen analysis (WHO 2021) measuring count, motility, morphology, volume. Hormone panel (FSH, LH, testosterone, prolactin). Results explained in plain language — no confusing reports handed without discussion.</p>
+ </div>
+ </li>
+ <li class="step-item">
+ <div class="step-num">2</div>
+ <div class="step-body">
+ <h3>Identify & Treat the Cause</h3>
+ <p>Varicocele repair if varicocele is detected. Hormonal medication if hormones are abnormal. Lifestyle changes — quit smoking, reduce alcohol, avoid scrotal heat. Antioxidant supplements for 3 months (CoQ10, Vitamin C/E, Zinc, L-Carnitine).</p>
+ </div>
+ </li>
+ <li class="step-item">
+ <div class="step-num">3</div>
+ <div class="step-body">
+ <h3>IUI (Mild Cases)</h3>
+ <p>For mild oligospermia (5–15 million/mL) with good motility, IUI — placing concentrated sperm inside the uterus — is a lower-cost first step. Usually tried for 2–3 cycles before proceeding to IVF/ICSI.</p>
+ </div>
+ </li>
+ <li class="step-item">
+ <div class="step-num">4</div>
+ <div class="step-body">
+ <h3>IVF + ICSI (Moderate to Severe)</h3>
+ <p>For moderate or severe oligospermia, ICSI — where a single sperm is injected directly into an egg under high magnification — is the gold-standard treatment. Mother Hospitals has performed 5,000+ ICSI cycles with excellent success rates.</p>
+ </div>
+ </li>
+ <li class="step-item">
+ <div class="step-num">5</div>
+ <div class="step-body">
+ <h3>TESA / PESA if No Sperm Found</h3>
+ <p>If no sperm are found in the ejaculate (cryptozoospermia progressing to azoospermia), TESA or PESA retrieves sperm directly from the testis or epididymis for use in ICSI. Available at Mother Hospitals as an outpatient day procedure.</p>
+ </div>
+ </li>
+ </ul>
+ </div>
 </section>
 
 <!-- WHY ICSI -->
 <section class="section" style="background:var(--cream)">
-  <div class="section-inner">
-    <h2>Why <em>ICSI</em> Works for Low Sperm Count</h2>
-    <div class="highlight-box">
-      <h3>Even 1 Sperm is Enough for ICSI</h3>
-      <p style="color:var(--text-mid);font-size:0.92rem;margin-bottom:1rem">In conventional IVF, hundreds of thousands of sperm compete to fertilise an egg — which rules out severe oligospermia patients. ICSI completely bypasses this barrier. A single sperm is selected — the healthiest-looking, best-moving one — and injected directly into the egg under a high-powered microscope.</p>
-      <ul class="check-list">
-        <li>Works with as few as 1 sperm in the sample</li>
-        <li>Sperm motility is less critical — the embryologist selects and injects it</li>
-        <li>Morphology (shape) matters less — the embryologist picks the best sperm</li>
-        <li>60–80% fertilisation rate per mature egg at Mother Hospitals</li>
-        <li>Same day procedure for both egg collection and sperm collection</li>
-        <li>Cryopreservation of extra embryos for future attempts</li>
-      </ul>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Why <em>ICSI</em> Works for Low Sperm Count</h2>
+ <div class="highlight-box">
+ <h3>Even 1 Sperm is Enough for ICSI</h3>
+ <p style="color:var(--text-mid);font-size:0.92rem;margin-bottom:1rem">In conventional IVF, hundreds of thousands of sperm compete to fertilise an egg — which rules out severe oligospermia patients. ICSI completely bypasses this barrier. A single sperm is selected — the healthiest-looking, best-moving one — and injected directly into the egg under a high-powered microscope.</p>
+ <ul class="check-list">
+ <li>Works with as few as 1 sperm in the sample</li>
+ <li>Sperm motility is less critical — the embryologist selects and injects it</li>
+ <li>Morphology (shape) matters less — the embryologist picks the best sperm</li>
+ <li>60–80% fertilisation rate per mature egg at Mother Hospitals</li>
+ <li>Same day procedure for both egg collection and sperm collection</li>
+ <li>Cryopreservation of extra embryos for future attempts</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
 <!-- DOCTOR -->
 <section class="section" style="padding-top:20px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi1.jpeg" alt="Dr. E. Prashanthi Reddy – Male Infertility & ICSI Specialist, Mother Hospitals Hyderabad" class="dr-photo" width="100" height="100" loading="lazy"/>
-      <div class="dr-info">
-        <h3>Dr. E. Prashanthi Reddy</h3>
-        <p>MBBS · DGO · PG Diploma in ART – Kiel University, Germany · Cosmetic Gynecology Certified (2024)<br/>
-        Founder &amp; Medical Director — Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad<br/>
-        TGMC Reg: 50624 · 19+ Years · 5,000+ IVF &amp; ICSI Cycles<br/>
-        Specialised in ICSI for Male Factor Infertility, Low Sperm Count &amp; Azoospermia</p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi1.jpeg" alt="Dr. E. Prashanthi Reddy – Male Infertility & ICSI Specialist, Mother Hospitals Hyderabad" class="dr-photo" width="100" height="100" loading="lazy"/>
+ <div class="dr-info">
+ <h3>Dr. E. Prashanthi Reddy</h3>
+ <p>MBBS · DGO · PG Diploma in ART – Kiel University, Germany · Cosmetic Gynecology Certified (2024)<br/>
+ Founder &amp; Medical Director — Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad<br/>
+ TGMC Reg: 50624 · 19+ Years · 5,000+ IVF &amp; ICSI Cycles<br/>
+ Specialised in ICSI for Male Factor Infertility, Low Sperm Count &amp; Azoospermia</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQs -->
 <section class="section" style="background:var(--cream)">
-  <div class="section-inner">
-    <h2>Frequently Asked Questions — <em>Low Sperm Count</em></h2>
-    <details class="faq-item"><summary class="faq-q">What is low sperm count (oligospermia)?</summary><div class="faq-a">Low sperm count, medically called oligospermia, means fewer than 16 million sperm per millilitre of semen (WHO 2021 criteria). Grades: mild (5–15 million/mL), moderate (1–5 million/mL), severe (below 1 million/mL), cryptozoospermia (only found after centrifugation). All grades are treatable with ICSI — even one sperm is enough to fertilise an egg.</div></details>
-    <details class="faq-item"><summary class="faq-q">Can a man with very low sperm count father a child?</summary><div class="faq-a">Yes. Even men with extremely low sperm counts (severe oligospermia or cryptozoospermia) can father biological children through ICSI. In ICSI, a single healthy sperm is selected under a microscope and injected directly into an egg. Mother Hospitals Hyderabad has helped hundreds of men with low sperm count achieve successful pregnancies through ICSI.</div></details>
-    <details class="faq-item"><summary class="faq-q">What causes low sperm count?</summary><div class="faq-a">Common causes include: varicocele (dilated scrotal veins — most common correctable cause), hormonal imbalances (low testosterone, high FSH/prolactin), past infections (mumps orchitis), heat exposure (hot baths, laptops, tight underwear), anabolic steroid use, smoking, heavy alcohol, obesity, genetic factors (Y-chromosome microdeletion), and undescended testes. A full semen analysis plus hormone panel identifies the cause.</div></details>
-    <details class="faq-item"><summary class="faq-q">What is the treatment for low sperm count in Hyderabad?</summary><div class="faq-a">Treatment depends on severity: Mild oligospermia — IUI + ovulation induction. Moderate/Severe oligospermia — IVF+ICSI. All grades — antioxidant supplementation (CoQ10, Vitamin C/E, Zinc, L-Carnitine) for 3 months to improve parameters, plus hormonal treatment if indicated. Varicocele repair if varicocele is the cause. At Mother Hospitals Hyderabad, all these options are available under Dr. E. Prashanthi Reddy.</div></details>
-    <details class="faq-item"><summary class="faq-q">How long does it take to improve sperm count naturally?</summary><div class="faq-a">Sperm production takes approximately 72–90 days (2.5–3 months). Lifestyle improvements — quitting smoking, reducing alcohol, avoiding scrotal heat, losing weight, taking antioxidant supplements — take at least 3 months to show results in a semen analysis. During this time, IVF/ICSI can be planned in parallel if conception is urgent.</div></details>
-    <details class="faq-item"><summary class="faq-q">Is the treatment for low sperm count confidential at Mother Hospitals?</summary><div class="faq-a">Yes. All male infertility consultations at Mother Hospitals & IVF Center, Boduppal, Hyderabad are completely confidential. You can attend alone or with your partner. WhatsApp consultations are available for initial queries. Your semen analysis results and treatment discussions remain strictly private.</div></details>
-  </div>
+ <div class="section-inner">
+ <h2>Frequently Asked Questions — <em>Low Sperm Count</em></h2>
+ <details class="faq-item"><summary class="faq-q">What is low sperm count (oligospermia)?</summary><div class="faq-a">Low sperm count, medically called oligospermia, means fewer than 16 million sperm per millilitre of semen (WHO 2021 criteria). Grades: mild (5–15 million/mL), moderate (1–5 million/mL), severe (below 1 million/mL), cryptozoospermia (only found after centrifugation). All grades are treatable with ICSI — even one sperm is enough to fertilise an egg.</div></details>
+ <details class="faq-item"><summary class="faq-q">Can a man with very low sperm count father a child?</summary><div class="faq-a">Yes. Even men with extremely low sperm counts (severe oligospermia or cryptozoospermia) can father biological children through ICSI. In ICSI, a single healthy sperm is selected under a microscope and injected directly into an egg. Mother Hospitals Hyderabad has helped hundreds of men with low sperm count achieve successful pregnancies through ICSI.</div></details>
+ <details class="faq-item"><summary class="faq-q">What causes low sperm count?</summary><div class="faq-a">Common causes include: varicocele (dilated scrotal veins — most common correctable cause), hormonal imbalances (low testosterone, high FSH/prolactin), past infections (mumps orchitis), heat exposure (hot baths, laptops, tight underwear), anabolic steroid use, smoking, heavy alcohol, obesity, genetic factors (Y-chromosome microdeletion), and undescended testes. A full semen analysis plus hormone panel identifies the cause.</div></details>
+ <details class="faq-item"><summary class="faq-q">What is the treatment for low sperm count in Hyderabad?</summary><div class="faq-a">Treatment depends on severity: Mild oligospermia — IUI + ovulation induction. Moderate/Severe oligospermia — IVF+ICSI. All grades — antioxidant supplementation (CoQ10, Vitamin C/E, Zinc, L-Carnitine) for 3 months to improve parameters, plus hormonal treatment if indicated. Varicocele repair if varicocele is the cause. At Mother Hospitals Hyderabad, all these options are available under Dr. E. Prashanthi Reddy.</div></details>
+ <details class="faq-item"><summary class="faq-q">How long does it take to improve sperm count naturally?</summary><div class="faq-a">Sperm production takes approximately 72–90 days (2.5–3 months). Lifestyle improvements — quitting smoking, reducing alcohol, avoiding scrotal heat, losing weight, taking antioxidant supplements — take at least 3 months to show results in a semen analysis. During this time, IVF/ICSI can be planned in parallel if conception is urgent.</div></details>
+ <details class="faq-item"><summary class="faq-q">Is the treatment for low sperm count confidential at Mother Hospitals?</summary><div class="faq-a">Yes. All male infertility consultations at Mother Hospitals & IVF Center, Boduppal, Hyderabad are completely confidential. You can attend alone or with your partner. WhatsApp consultations are available for initial queries. Your semen analysis results and treatment discussions remain strictly private.</div></details>
+ </div>
 </section>
 
 <!-- RELATED PAGES -->
 <section class="section" style="background:var(--white)">
-  <div class="section-inner">
-    <h2>Related <em>Services</em></h2>
-    <div class="related-grid">
-      <a href="/male-infertility-hyderabad.html" class="related-card">Male Infertility Hub</a>
-      <a href="/azoospermia-treatment-hyderabad.html" class="related-card">Azoospermia Treatment</a>
-      <a href="/zero-sperm-motility-treatment.html" class="related-card">Poor Sperm Motility</a>
-      <a href="/sperm-dna-fragmentation-explained.html" class="related-card">DNA Fragmentation</a>
-      <a href="/semen-analysis-test-explained.html" class="related-card">Semen Analysis</a>
-      <a href="/male-fertility-test-hyderabad.html" class="related-card">Male Fertility Tests</a>
-      <a href="/best-ivf-treatment-male-infertility.html" class="related-card">IVF for Male Infertility</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">IVF Treatment</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Services</em></h2>
+ <div class="related-grid">
+ <a href="/male-infertility-hyderabad.html" class="related-card">Male Infertility Hub</a>
+ <a href="/azoospermia-treatment-hyderabad.html" class="related-card">Azoospermia Treatment</a>
+ <a href="/zero-sperm-motility-treatment.html" class="related-card">Poor Sperm Motility</a>
+ <a href="/sperm-dna-fragmentation-explained.html" class="related-card">DNA Fragmentation</a>
+ <a href="/semen-analysis-test-explained.html" class="related-card">Semen Analysis</a>
+ <a href="/male-fertility-test-hyderabad.html" class="related-card">Male Fertility Tests</a>
+ <a href="/best-ivf-treatment-male-infertility.html" class="related-card">IVF for Male Infertility</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">IVF Treatment</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p><strong>Mother Hospitals &amp; IVF Center</strong></p>
-  <p style="margin:0.4rem 0">Unit Nos. 201–204, Block A, Aakruthi Township, Tulip Block, Boduppal, Hyderabad – 500092</p>
-  <p>📞 <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; 📞 <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
-  <p style="margin-top:0.6rem;font-size:0.8rem;opacity:0.7">© 2026 Mother Hospitals &amp; IVF Center · TGMC Reg: 50624 · ART Act 2021 Certified</p>
+ <p><strong>Mother Hospitals &amp; IVF Center</strong></p>
+ <p style="margin:0.4rem 0">Unit Nos. 201–204, Block A, Aakruthi Township, Tulip Block, Boduppal, Hyderabad – 500092</p>
+ <p>📞 <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; 📞 <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
+ <p style="margin-top:0.6rem;font-size:0.8rem;opacity:0.7">© 2026 Mother Hospitals &amp; IVF Center · TGMC Reg: 50624 · ART Act 2021 Certified</p>
 </footer>
 
 </body>

@@ -40,7 +40,7 @@
 ]
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
@@ -49,72 +49,18 @@
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.75}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0}
-.logo-img{height:46px;width:46px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--purple)}
-.logo-sub{font-size:0.65rem;color:var(--text-soft);letter-spacing:0.08em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.2rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.article-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 60%,#fde8f3 100%);padding:50px 5% 40px}
-.article-hero-inner{max-width:800px;margin:0 auto}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.article-title{font-family:var(--font-d);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:0.8rem}
-.article-meta{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:0.82rem;color:var(--text-soft);margin-bottom:1rem}
-.article-body{max-width:800px;margin:0 auto;padding:40px 5% 60px}
-.article-body h2{font-family:var(--font-d);font-size:1.7rem;color:var(--purple);font-weight:700;margin:2rem 0 0.8rem;line-height:1.25}
-.article-body h3{font-family:var(--font-d);font-size:1.25rem;color:var(--purple-mid);font-weight:600;margin:1.5rem 0 0.6rem}
-.article-body p{margin-bottom:1.1rem;color:var(--text-mid);font-size:0.96rem}
-.article-body ul,.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid);font-size:0.96rem}
-.article-body li{margin-bottom:0.4rem;line-height:1.65}
-.article-body a{color:var(--purple);text-decoration:underline}
-.article-body a:hover{color:var(--magenta)}
-.article-body strong{color:var(--text)}
-.cta-box{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:16px;padding:2rem;margin:2rem 0;text-align:center}
-.cta-box h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.6rem;color:#fff}
-.cta-box p{color:#fff;margin-bottom:1.2rem;font-size:0.92rem}
-.cta-box-btns{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
-.btn-white{background:#fff;color:var(--purple);padding:0.65rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.88rem}
-.btn-outline-w{border:2px solid #fff;color:#fff;padding:0.63rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.88rem}
-.faq-section{background:var(--purple-pale);padding:2rem;border-radius:16px;margin:2rem 0}
-.faq-section h2{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin-bottom:1.2rem}
-.faq-item{margin-bottom:1.2rem;border-bottom:1px solid var(--purple-light);padding-bottom:1rem}
-.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.faq-q{font-weight:600;color:var(--text);margin-bottom:0.4rem;font-size:0.95rem}
-.faq-a{color:var(--text-mid);font-size:0.9rem;line-height:1.65}
-.author-box{display:flex;gap:1.2rem;align-items:flex-start;background:var(--white);border:1px solid var(--purple-light);border-radius:16px;padding:1.5rem;margin:2rem 0}
-.author-img{width:70px;height:70px;border-radius:50%;object-fit:cover;flex-shrink:0}
-.author-name{font-weight:700;color:var(--purple);font-size:1rem}
-.author-creds{font-size:0.82rem;color:var(--text-soft);margin-top:0.2rem;line-height:1.5}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1rem 0}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple)}
-.related-card-title{font-family:var(--font-d);font-size:1rem;color:var(--purple);font-weight:600;line-height:1.3;margin-bottom:0.3rem}
-.related-card-type{font-size:0.75rem;color:var(--text-soft)}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;display:flex;background:var(--white);border-top:1px solid var(--purple-light);padding:0.6rem 1rem;gap:0.6rem}
-.sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.65rem 0.5rem;border-radius:10px;font-size:0.85rem;font-weight:600;text-decoration:none}
-.sticky-wa{background:#25D366;color:#fff}
-.sticky-call{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0}.logo-img{height:46px;width:46px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--purple)}.logo-sub{font-size:0.65rem;color:var(--text-soft);letter-spacing:0.08em;text-transform:uppercase}.nav-links{display:flex;gap:1.2rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.article-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 60%,#fde8f3 100%);padding:50px 5% 40px}.article-hero-inner{max-width:800px;margin:0 auto}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1rem}.breadcrumb a{color:var(--purple);text-decoration:none}.article-title{font-family:var(--font-d);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:0.8rem}.article-meta{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:0.82rem;color:var(--text-soft);margin-bottom:1rem}.article-body{max-width:800px;margin:0 auto;padding:40px 5% 60px}.article-body h2{font-family:var(--font-d);font-size:1.7rem;color:var(--purple);font-weight:700;margin:2rem 0 0.8rem;line-height:1.25}.article-body h3{font-family:var(--font-d);font-size:1.25rem;color:var(--purple-mid);font-weight:600;margin:1.5rem 0 0.6rem}.article-body p{margin-bottom:1.1rem;color:var(--text-mid);font-size:0.96rem}.article-body ul.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid);font-size:0.96rem}.article-body li{margin-bottom:0.4rem;line-height:1.65}.article-body a{color:var(--purple);text-decoration:underline}.article-body a:hover{color:var(--magenta)}.article-body strong{color:var(--text)}.cta-box{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:16px;padding:2rem;margin:2rem 0;text-align:center}.cta-box h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.6rem;color:#fff}.cta-box p{color:#fff;margin-bottom:1.2rem;font-size:0.92rem}.cta-box-btns{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}.btn-white{background:#fff;color:var(--purple);padding:0.65rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.88rem}.btn-outline-w{border:2px solid #fff;color:#fff;padding:0.63rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.88rem}.faq-section{background:var(--purple-pale);padding:2rem;border-radius:16px;margin:2rem 0}.faq-section h2{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin-bottom:1.2rem}.faq-item{margin-bottom:1.2rem;border-bottom:1px solid var(--purple-light);padding-bottom:1rem}.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}.faq-q{font-weight:600;color:var(--text);margin-bottom:0.4rem;font-size:0.95rem}.faq-a{color:var(--text-mid);font-size:0.9rem;line-height:1.65}.author-box{display:flex;gap:1.2rem;align-items:flex-start;background:var(--white);border:1px solid var(--purple-light);border-radius:16px;padding:1.5rem;margin:2rem 0}.author-img{width:70px;height:70px;border-radius:50%;object-fit:cover;flex-shrink:0}.author-name{font-weight:700;color:var(--purple);font-size:1rem}.author-creds{font-size:0.82rem;color:var(--text-soft);margin-top:0.2rem;line-height:1.5}.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1rem 0}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);transition:border-color 0.2s}.related-card:hover{border-color:var(--purple)}.related-card-title{font-family:var(--font-d);font-size:1rem;color:var(--purple);font-weight:600;line-height:1.3;margin-bottom:0.3rem}.related-card-type{font-size:0.75rem;color:var(--text-soft)}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;display:flex;background:var(--white);border-top:1px solid var(--purple-light);padding:0.6rem 1rem;gap:0.6rem}.sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.65rem 0.5rem;border-radius:10px;font-size:0.85rem;font-weight:600;text-decoration:none}.sticky-wa{background:#25D366;color:#fff}.sticky-call{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2rem 5%;text-align:center;font-size:0.85rem}
 footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 @media(max-width:768px){.nav-links{display:none}.article-body{padding-bottom:80px}}
-@media(min-width:769px){.sticky-cta{display:none}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+@media(min-width:769px){.sticky-cta{display:none}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wqa31zckot");
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "wqa31zckot");
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SpeakableSpecification","cssSelector":[".article-title", ".article-body", ".faq-a"]}
@@ -124,34 +70,34 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 </script>
 </head><body><nav>
 <div class="nav-wrap">
-  <a href="/" class="logo-wrap">
-    <img src="/assets/logo.png" alt="Mother Hospitals IVF Center" class="logo-img" width="46" height="46" loading="lazy"/>
-    <div><div class="logo-name">Mother Hospitals</div><div class="logo-sub">IVF Center · Boduppal</div></div>
-  </a>
-    <ul class="nav-links">
-    <li><a href="https://motherhospitals.co.in">Home</a></li>
-    <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-    <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-    <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-    <li><a href="/mother9-programme.html">Mother 9</a></li>
-    <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-    <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-  </ul>
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center" class="logo-img" width="46" height="46" loading="lazy"/>
+ <div><div class="logo-name">Mother Hospitals</div><div class="logo-sub">IVF Center · Boduppal</div></div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
 </div>
 </nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 <section class='article-hero'><div class='article-hero-inner'><div class='breadcrumb'><a href='/'>Home</a> › <a href='/blog/'>Blog</a> › ERA Test Guide</div><h1 class='article-title'>ERA Test (Endometrial Receptivity Assay) — Is It Right for You?</h1><div class='article-meta'><span>✍️ Dr. E. Prashanthi Reddy</span><span>📅 May 11, 2026</span><span>⏱️ 8 min read</span></div></div></section><div class="article-body">
 <h2>What Is the ERA Test and Why Does It Matter?</h2>
@@ -162,37 +108,37 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 <p>The ERA test analyses the expression of 248 genes in the endometrial tissue. These genes either "switch on" or "switch off" during the implantation window, and the ERA test can determine whether your endometrium is in a receptive, pre-receptive, or post-receptive state at the time of a standard frozen embryo transfer (FET).</p>
 <h3>The ERA Test Procedure Step by Step</h3>
 <ol>
-  <li><strong>Simulated FET cycle:</strong> Your uterine lining is prepared exactly as it would be for a frozen embryo transfer — using oestrogen and progesterone supplements.</li>
-  <li><strong>Endometrial biopsy:</strong> On the day that would normally be your embryo transfer day, a small sample of endometrial tissue is taken using a thin catheter. The procedure takes only a few minutes and causes mild cramping.</li>
-  <li><strong>Laboratory analysis:</strong> The tissue sample is sent to a specialised laboratory where the 248-gene panel is analysed. Results take approximately 2-3 weeks.</li>
-  <li><strong>Personalised transfer timing:</strong> Based on the results, your doctor adjusts your next embryo transfer timing by hours or days to align with your personal implantation window.</li>
+ <li><strong>Simulated FET cycle:</strong> Your uterine lining is prepared exactly as it would be for a frozen embryo transfer — using oestrogen and progesterone supplements.</li>
+ <li><strong>Endometrial biopsy:</strong> On the day that would normally be your embryo transfer day, a small sample of endometrial tissue is taken using a thin catheter. The procedure takes only a few minutes and causes mild cramping.</li>
+ <li><strong>Laboratory analysis:</strong> The tissue sample is sent to a specialised laboratory where the 248-gene panel is analysed. Results take approximately 2-3 weeks.</li>
+ <li><strong>Personalised transfer timing:</strong> Based on the results, your doctor adjusts your next embryo transfer timing by hours or days to align with your personal implantation window.</li>
 </ol>
 
 <h2>Who Should Consider the ERA Test?</h2>
 <p>The ERA test is not necessary for every IVF patient. Dr. Prashanthi Reddy recommends it for:</p>
 <ul>
-  <li>Women who have had <strong>2 or more failed IVF or FET cycles</strong> with good quality embryos</li>
-  <li>Patients with <strong>unexplained recurrent implantation failure</strong></li>
-  <li>Women with a <strong>thin endometrium</strong> or suspected uterine receptivity issues</li>
-  <li>Older patients (over 38) with poor track record of implantation</li>
-  <li>Patients with <strong>adenomyosis or endometriosis</strong>, which can alter implantation timing</li>
+ <li>Women who have had <strong>2 or more failed IVF or FET cycles</strong> with good quality embryos</li>
+ <li>Patients with <strong>unexplained recurrent implantation failure</strong></li>
+ <li>Women with a <strong>thin endometrium</strong> or suspected uterine receptivity issues</li>
+ <li>Older patients (over 38) with poor track record of implantation</li>
+ <li>Patients with <strong>adenomyosis or endometriosis</strong>, which can alter implantation timing</li>
 </ul>
 
 <div class="cta-box">
-  <h3>Discuss ERA Testing with Our Fertility Experts</h3>
-  <p>All-inclusive IVF package at ₹99,000/- · 19+ years experience · 4.7★ Google rated · ART Act 2021 certified</p>
-  <div class="cta-box-btns">
-    <a href="https://wa.me/919052074999" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp Now</a>
-    <a href="tel:+919705993366" class="btn-outline-w">📞 97059 93366</a>
-  </div>
+ <h3>Discuss ERA Testing with Our Fertility Experts</h3>
+ <p>All-inclusive IVF package at an all-inclusive, transparent price · 19+ years experience · 4.7★ Google rated · ART Act 2021 certified</p>
+ <div class="cta-box-btns">
+ <a href="https://wa.me/919052074999" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp Now</a>
+ <a href="tel:+919705993366" class="btn-outline-w">📞 97059 93366</a>
+ </div>
 </div>
 
 <h2>What Do ERA Test Results Mean?</h2>
 <p>ERA results fall into three categories:</p>
 <ul>
-  <li><strong>Receptive:</strong> Your endometrium is receptive at the standard transfer time. Your next transfer can proceed at the usual timing.</li>
-  <li><strong>Pre-receptive:</strong> Your window opens later than standard. Transfer will be scheduled a few hours to 1-2 days later.</li>
-  <li><strong>Post-receptive:</strong> Your window closes earlier than standard. Transfer will be scheduled earlier in the next cycle.</li>
+ <li><strong>Receptive:</strong> Your endometrium is receptive at the standard transfer time. Your next transfer can proceed at the usual timing.</li>
+ <li><strong>Pre-receptive:</strong> Your window opens later than standard. Transfer will be scheduled a few hours to 1-2 days later.</li>
+ <li><strong>Post-receptive:</strong> Your window closes earlier than standard. Transfer will be scheduled earlier in the next cycle.</li>
 </ul>
 <p>Studies show that approximately 25-30% of patients with recurrent implantation failure have a displaced implantation window — meaning the standard transfer timing is simply wrong for them. Correcting this timing through ERA-guided transfer has shown improved pregnancy rates in multiple studies.</p>
 
@@ -203,10 +149,10 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 <h2>ERA Test Combined with Other Diagnostics</h2>
 <p>At Mother Hospitals, the ERA test is often combined with other investigations for patients with recurrent IVF failure, including:</p>
 <ul>
-  <li>Hysteroscopy (to rule out polyps, fibroids, or scarring)</li>
-  <li>Thrombophilia and immunological testing</li>
-  <li>Sperm DNA fragmentation testing</li>
-  <li><a href="/blog/recurrent-ivf-failure-treatment.html">Recurrent IVF failure protocol review</a></li>
+ <li>Hysteroscopy (to rule out polyps, fibroids, or scarring)</li>
+ <li>Thrombophilia and immunological testing</li>
+ <li>Sperm DNA fragmentation testing</li>
+ <li><a href="/blog/recurrent-ivf-failure-treatment.html">Recurrent IVF failure protocol review</a></li>
 </ul>
 
 <h2>Related Articles</h2><div class="related-grid"><a href="/blog/recurrent-ivf-failure-treatment.html" class="related-card"><div class="related-card-type">Blog</div><div class="related-card-title">Recurrent IVF Failure Treatment</div></a>
@@ -216,11 +162,11 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 </div>
 
 <div class="author-box">
-  <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy – Fertility Specialist" class="author-img" width="70" height="70" loading="lazy"/>
-  <div>
-    <div class="author-name">Dr. E. Prashanthi Reddy</div>
-    <div class="author-creds">MBBS · DGO · PG Diploma in ART – Kiel University, Germany<br/>Founder &amp; Medical Director, Mother Hospitals &amp; IVF Center, Boduppal<br/>19+ Years Experience · TGMC Reg No: 50624 · ART Act 2021 Certified</div>
-  </div>
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy – Fertility Specialist" class="author-img" width="70" height="70" loading="lazy"/>
+ <div>
+ <div class="author-name">Dr. E. Prashanthi Reddy</div>
+ <div class="author-creds">MBBS · DGO · PG Diploma in ART – Kiel University, Germany<br/>Founder &amp; Medical Director, Mother Hospitals &amp; IVF Center, Boduppal<br/>19+ Years Experience · TGMC Reg No: 50624 · ART Act 2021 Certified</div>
+ </div>
 </div>
 
 <div class="faq-section">
@@ -233,10 +179,10 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 </div>
 
 </div><div class="sticky-cta">
-  <a href="https://wa.me/919052074999" class="sticky-wa" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-  <a href="tel:+919705993366" class="sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999" class="sticky-wa" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+ <a href="tel:+919705993366" class="sticky-call">📞 Call Now</a>
 </div><footer>
-  <p><strong>Mother Hospitals &amp; IVF Center</strong> — Boduppal, Hyderabad · <a href="tel:+919705993366">+91 97059 93366</a></p>
-  <p style="margin-top:0.4rem"><a href="/">Home</a> · <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> · <a href="/ivf-cost-hyderabad.html">IVF Cost</a> · <a href="/blog/">Blog</a> · <a href="/#contact">Book Appointment</a></p>
-  <p style="margin-top:0.5rem;opacity:0.6;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center · ART Act 2021 Certified · Medically authored by Dr. E. Prashanthi Reddy</p>
+ <p><strong>Mother Hospitals &amp; IVF Center</strong> — Boduppal, Hyderabad · <a href="tel:+919705993366">+91 97059 93366</a></p>
+ <p style="margin-top:0.4rem"><a href="/">Home</a> · <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> · <a href="/ivf-cost-hyderabad.html">IVF Cost</a> · <a href="/blog/">Blog</a> · <a href="/#contact">Book Appointment</a></p>
+ <p style="margin-top:0.5rem;opacity:0.6;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center · ART Act 2021 Certified · Medically authored by Dr. E. Prashanthi Reddy</p>
 </footer></body></html>

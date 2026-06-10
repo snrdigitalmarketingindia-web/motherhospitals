@@ -47,425 +47,366 @@
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--magenta-light:#f5d0e5;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.75}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0}
-.logo-img{height:46px;width:46px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--purple)}
-.nav-links{display:flex;gap:1.2rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.direct-answer{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:14px;padding:1.4rem 1.6rem;margin:0 auto 2rem;max-width:800px;font-size:0.95rem;color:var(--text-mid);line-height:1.7}
-.direct-answer strong{color:var(--purple)}
-.article-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 60%,#fde8f3 100%);padding:50px 5% 40px}
-.article-hero-inner{max-width:800px;margin:0 auto}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.article-title{font-family:var(--font-d);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:0.8rem}
-.article-meta{font-size:0.82rem;color:var(--text-soft);margin-bottom:1.2rem;display:flex;gap:1.5rem;flex-wrap:wrap}
-.article-body{max-width:800px;margin:0 auto;padding:40px 5%}
-.article-body h2{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin:2rem 0 0.8rem}
-.article-body h3{font-size:1.1rem;color:var(--text-mid);font-weight:600;margin:1.5rem 0 0.5rem}
-.article-body p{margin-bottom:1.1rem;color:var(--text-mid)}
-.article-body ul,.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid)}
-.article-body li{margin-bottom:0.4rem}
-.highlight-box{background:var(--purple-pale);border-left:4px solid var(--purple);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0}
-.highlight-box p{margin:0;color:var(--text-mid)}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
-.stat-card{background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.2rem 1rem;text-align:center}
-.stat-card .stat-number{font-family:var(--font-d);font-size:2rem;font-weight:700;color:var(--purple);line-height:1}
-.stat-card .stat-label{font-size:0.8rem;color:var(--text-soft);margin-top:0.3rem}
-.cause-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:0.9rem}
-.cause-table th{background:var(--purple);color:#fff;padding:0.7rem 1rem;text-align:left}
-.cause-table td{padding:0.65rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.cause-table tr:nth-child(even) td{background:var(--purple-pale)}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid)}
-.cta-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;text-align:center;margin:2.5rem 0}
-.cta-box h3{font-family:var(--font-d);font-size:1.4rem;margin-bottom:0.5rem}
-.cta-box p{opacity:0.88;font-size:0.9rem;margin-bottom:1.2rem}
-.btn-white{background:#fff;color:var(--purple);padding:0.7rem 1.6rem;border-radius:50px;font-weight:700;text-decoration:none;display:inline-block;margin:0.3rem}
-.hope-box{background:linear-gradient(135deg,var(--magenta-light),var(--purple-pale));border-radius:16px;padding:1.8rem;margin:2rem 0;border:1px solid var(--purple-light)}
-.hope-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--magenta);margin-bottom:0.8rem}
-.hope-box p{color:var(--text-mid);margin-bottom:0.6rem}
-.hope-box p:last-child{margin-bottom:0}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:#5a1f7a;color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.tag{display:inline-block;background:var(--purple-pale);color:var(--purple);padding:0.2rem 0.7rem;border-radius:20px;font-size:0.75rem;font-weight:600;margin-right:0.4rem}
-.ivf-package{background:linear-gradient(135deg,#f5edfb,#fde8f3);border:2px solid var(--purple-light);border-radius:16px;padding:1.5rem;margin:2rem 0;text-align:center}
-.ivf-package .pkg-price{font-family:var(--font-d);font-size:2.2rem;font-weight:700;color:var(--purple)}
-.ivf-package .pkg-label{font-size:0.85rem;color:var(--text-soft);margin-top:0.2rem}
-.ivf-package .pkg-note{font-size:0.82rem;color:var(--text-soft);margin-top:0.6rem}
-@media(max-width:768px){.nav-links{display:none}.article-meta{gap:0.8rem}.cause-table{font-size:0.82rem}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0}.logo-img{height:46px;width:46px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--purple)}.nav-links{display:flex;gap:1.2rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.4rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.direct-answer{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:14px;padding:1.4rem 1.6rem;margin:0 auto 2rem;max-width:800px;font-size:0.95rem;color:var(--text-mid);line-height:1.7}.direct-answer strong{color:var(--purple)}.article-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 60%,#fde8f3 100%);padding:50px 5% 40px}.article-hero-inner{max-width:800px;margin:0 auto}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1rem}.breadcrumb a{color:var(--purple);text-decoration:none}.article-title{font-family:var(--font-d);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:0.8rem}.article-meta{font-size:0.82rem;color:var(--text-soft);margin-bottom:1.2rem;display:flex;gap:1.5rem;flex-wrap:wrap}.article-body{max-width:800px;margin:0 auto;padding:40px 5%}.article-body h2{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin:2rem 0 0.8rem}.article-body h3{font-size:1.1rem;color:var(--text-mid);font-weight:600;margin:1.5rem 0 0.5rem}.article-body p{margin-bottom:1.1rem;color:var(--text-mid)}.article-body ul.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid)}.article-body li{margin-bottom:0.4rem}.highlight-box{background:var(--purple-pale);border-left:4px solid var(--purple);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0}.highlight-box p{margin:0;color:var(--text-mid)}.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}.stat-card{background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.2rem 1rem;text-align:center}.stat-card.stat-number{font-family:var(--font-d);font-size:2rem;font-weight:700;color:var(--purple);line-height:1}.stat-card.stat-label{font-size:0.8rem;color:var(--text-soft);margin-top:0.3rem}.cause-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:0.9rem}.cause-table th{background:var(--purple);color:#fff;padding:0.7rem 1rem;text-align:left}.cause-table td{padding:0.65rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.cause-table tr:nth-child(even) td{background:var(--purple-pale)}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid)}.cta-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;text-align:center;margin:2.5rem 0}.cta-box h3{font-family:var(--font-d);font-size:1.4rem;margin-bottom:0.5rem}.cta-box p{opacity:0.88;font-size:0.9rem;margin-bottom:1.2rem}.btn-white{background:#fff;color:var(--purple);padding:0.7rem 1.6rem;border-radius:50px;font-weight:700;text-decoration:none;display:inline-block;margin:0.3rem}.hope-box{background:linear-gradient(135deg,var(--magenta-light),var(--purple-pale));border-radius:16px;padding:1.8rem;margin:2rem 0;border:1px solid var(--purple-light)}.hope-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--magenta);margin-bottom:0.8rem}.hope-box p{color:var(--text-mid);margin-bottom:0.6rem}.hope-box p:last-child{margin-bottom:0}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:#5a1f7a;color:#fff}.sticky-wa{background:#25d366;color:#fff}.tag{display:inline-block;background:var(--purple-pale);color:var(--purple);padding:0.2rem 0.7rem;border-radius:20px;font-size:0.75rem;font-weight:600;margin-right:0.4rem}.ivf-package{background:linear-gradient(135deg,#f5edfb,#fde8f3);border:2px solid var(--purple-light);border-radius:16px;padding:1.5rem;margin:2rem 0;text-align:center}.ivf-package.pkg-price{font-family:var(--font-d);font-size:2.2rem;font-weight:700;color:var(--purple)}.ivf-package.pkg-label{font-size:0.85rem;color:var(--text-soft);margin-top:0.2rem}.ivf-package.pkg-note{font-size:0.82rem;color:var(--text-soft);margin-top:0.6rem}
+@media(max-width:768px){.nav-links{display:none}.article-meta{gap:0.8rem}.cause-table{font-size:0.82rem}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wqa31zckot");
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "wqa31zckot");
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav><div class="nav-wrap">
-  <a href="/" class="logo-wrap">
-    <img src="/assets/logo.png" alt="Mother Hospitals IVF" class="logo-img" width="46" height="46"/>
-    <div class="logo-name">Mother Hospitals</div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://motherhospitals.co.in">Home</a></li>
-    <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-    <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-    <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-    <li><a href="/mother9-programme.html">Mother 9</a></li>
-    <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-    <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-  </ul>
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF" class="logo-img" width="46" height="46"/>
+ <div class="logo-name">Mother Hospitals</div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
 </div></nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 
 <!-- Direct Answer Block — AI/voice-search optimised -->
 <div class="direct-answer" role="note" aria-label="Quick Answer">
-  <strong>Quick Answer:</strong> Recurrent miscarriage (2 or more consecutive pregnancy losses before 20 weeks) affects 1–2% of couples trying to conceive. At Mother Hospitals &amp; IVF Center in Hyderabad, Dr. E. Prashanthi Reddy investigates the root cause — chromosomal, uterine, clotting, hormonal, or immune — and offers targeted treatment including IVF with PGT-A genetic embryo testing. With the right diagnosis and treatment, <strong>60–80% of couples go on to achieve a healthy live birth.</strong> Call 97059 93366 or WhatsApp 90520 74999 to start your investigation today.
+ <strong>Quick Answer:</strong> Recurrent miscarriage (2 or more consecutive pregnancy losses before 20 weeks) affects 1–2% of couples trying to conceive. At Mother Hospitals &amp; IVF Center in Hyderabad, Dr. E. Prashanthi Reddy investigates the root cause — chromosomal, uterine, clotting, hormonal, or immune — and offers targeted treatment including IVF with PGT-A genetic embryo testing. With the right diagnosis and treatment, <strong>60–80% of couples go on to achieve a healthy live birth.</strong> Call 97059 93366 or WhatsApp 90520 74999 to start your investigation today.
 </div>
 
 <section class="article-hero">
-  <div class="article-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/blog/">Blog</a> › Recurrent Miscarriage — Causes, Treatment &amp; IVF Options in Hyderabad
-    </nav>
-    <h1 class="article-title">Recurrent Miscarriage — Causes, Treatment &amp; IVF Options in Hyderabad</h1>
-    <div class="article-meta">
-      <span>✍️ Dr. E. Prashanthi Reddy</span>
-      <span>📅 2026-05-18</span>
-      <span>⏱️ 12 min read</span>
-    </div>
-    <div>
-      <span class="tag">Recurrent Miscarriage</span>
-      <span class="tag">Pregnancy Loss</span>
-      <span class="tag">PGT-A</span>
-      <span class="tag">IVF</span>
-      <span class="tag">Hyderabad</span>
-    </div>
-  </div>
+ <div class="article-hero-inner">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="/">Home</a> › <a href="/blog/">Blog</a> › Recurrent Miscarriage — Causes, Treatment &amp; IVF Options in Hyderabad
+ </nav>
+ <h1 class="article-title">Recurrent Miscarriage — Causes, Treatment &amp; IVF Options in Hyderabad</h1>
+ <div class="article-meta">
+ <span>✍️ Dr. E. Prashanthi Reddy</span>
+ <span>📅 2026-05-18</span>
+ <span>⏱️ 12 min read</span>
+ </div>
+ <div>
+ <span class="tag">Recurrent Miscarriage</span>
+ <span class="tag">Pregnancy Loss</span>
+ <span class="tag">PGT-A</span>
+ <span class="tag">IVF</span>
+ <span class="tag">Hyderabad</span>
+ </div>
+ </div>
 </section>
 
 <article class="article-body">
 
-  <p>Suffering one miscarriage is devastating. Suffering two, three, or more in a row can feel like the end of hope. If you have experienced recurrent pregnancy loss and are wondering "why does this keep happening to me?", you are not alone — and crucially, you are not without options. Recurrent miscarriage is a medical condition, not bad luck, and in the majority of cases a treatable underlying cause can be identified or specifically managed.</p>
+ <p>Suffering one miscarriage is devastating. Suffering two, three, or more in a row can feel like the end of hope. If you have experienced recurrent pregnancy loss and are wondering "why does this keep happening to me?", you are not alone — and crucially, you are not without options. Recurrent miscarriage is a medical condition, not bad luck, and in the majority of cases a treatable underlying cause can be identified or specifically managed.</p>
 
-  <p>At Mother Hospitals &amp; IVF Center in Boduppal, Hyderabad, Dr. E. Prashanthi Reddy — MBBS, DGO, Diploma in ART from Kiel University Germany, with over 19 years of reproductive medicine experience — has helped many couples who came in having suffered repeated pregnancy losses go on to achieve healthy pregnancies. This article explains what recurrent miscarriage is, why it happens, what investigations reveal, and what treatments — including IVF with PGT-A genetic testing — can do to change the outcome.</p>
+ <p>At Mother Hospitals &amp; IVF Center in Boduppal, Hyderabad, Dr. E. Prashanthi Reddy — MBBS, DGO, Diploma in ART from Kiel University Germany, with over 19 years of reproductive medicine experience — has helped many couples who came in having suffered repeated pregnancy losses go on to achieve healthy pregnancies. This article explains what recurrent miscarriage is, why it happens, what investigations reveal, and what treatments — including IVF with PGT-A genetic testing — can do to change the outcome.</p>
 
-  <h2>What Is Recurrent Miscarriage?</h2>
+ <h2>What Is Recurrent Miscarriage?</h2>
 
-  <p>Recurrent miscarriage — also called recurrent pregnancy loss (RPL) or, in older terminology, habitual abortion — is clinically defined as two or more consecutive pregnancy losses before 20 weeks of gestation. Some guidelines, including those from the Royal College of Obstetricians and Gynaecologists (RCOG), recommend investigation after two losses; others historically required three.</p>
+ <p>Recurrent miscarriage — also called recurrent pregnancy loss (RPL) or, in older terminology, habitual abortion — is clinically defined as two or more consecutive pregnancy losses before 20 weeks of gestation. Some guidelines, including those from the Royal College of Obstetricians and Gynaecologists (RCOG), recommend investigation after two losses; others historically required three.</p>
 
-  <p>At <a href="/ivf-treatment-hyderabad.html" style="color:#c2185b;font-weight:500">Mother Hospitals, Hyderabad</a>, we recommend beginning investigation after two consecutive losses, particularly in women over 35 or in couples where the emotional toll is significant. Early investigation means early answers — and earlier treatment. For couples where chromosomal embryo errors are the cause, <a href="/icsi-treatment-hyderabad.html" style="color:#c2185b;font-weight:500">IVF with ICSI and PGT-A</a> is the most effective way to select chromosomally normal embryos and break the cycle of loss.</p>
+ <p>At <a href="/ivf-treatment-hyderabad.html" style="color:#c2185b;font-weight:500">Mother Hospitals, Hyderabad</a>, we recommend beginning investigation after two consecutive losses, particularly in women over 35 or in couples where the emotional toll is significant. Early investigation means early answers — and earlier treatment. For couples where chromosomal embryo errors are the cause, <a href="/icsi-treatment-hyderabad.html" style="color:#c2185b;font-weight:500">IVF with ICSI and PGT-A</a> is the most effective way to select chromosomally normal embryos and break the cycle of loss.</p>
 
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="stat-number">1–2%</div>
-      <div class="stat-label">of couples affected by recurrent miscarriage</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">50–60%</div>
-      <div class="stat-label">of early miscarriages due to chromosomal abnormalities</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">60–80%</div>
-      <div class="stat-label">of couples achieve live birth with investigation and treatment</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">&lt;10%</div>
-      <div class="stat-label">miscarriage rate with IVF + PGT-A (vs ~30% without)</div>
-    </div>
-  </div>
+ <div class="stat-grid">
+ <div class="stat-card">
+ <div class="stat-number">1–2%</div>
+ <div class="stat-label">of couples affected by recurrent miscarriage</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-number">50–60%</div>
+ <div class="stat-label">of early miscarriages due to chromosomal abnormalities</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-number">60–80%</div>
+ <div class="stat-label">of couples achieve live birth with investigation and treatment</div>
+ </div>
+ <div class="stat-card">
+ <div class="stat-number">&lt;10%</div>
+ <div class="stat-label">miscarriage rate with IVF + PGT-A (vs ~30% without)</div>
+ </div>
+ </div>
 
-  <h2>Common Causes of Recurrent Miscarriage</h2>
+ <h2>Common Causes of Recurrent Miscarriage</h2>
 
-  <p>Recurrent pregnancy loss is rarely due to a single cause. A thorough work-up is essential because different causes require entirely different treatments. The main categories are:</p>
+ <p>Recurrent pregnancy loss is rarely due to a single cause. A thorough work-up is essential because different causes require entirely different treatments. The main categories are:</p>
 
-  <h3>1. Chromosomal Abnormalities (50–60% of Early Losses)</h3>
-  <p>The most common cause of any individual miscarriage — and a significant contributor to recurrent losses — is chromosomal abnormality in the embryo. When an egg and sperm combine, if the resulting embryo has the wrong number of chromosomes (aneuploidy), it cannot develop normally and the pregnancy ends, often before the woman even knows she was pregnant.</p>
-  <p>In most cases these chromosomal errors are random, but in a proportion of couples one or both partners carry a chromosomal rearrangement (such as a balanced translocation) that consistently produces abnormal embryos. Karyotyping of both partners identifies this.</p>
+ <h3>1. Chromosomal Abnormalities (50–60% of Early Losses)</h3>
+ <p>The most common cause of any individual miscarriage — and a significant contributor to recurrent losses — is chromosomal abnormality in the embryo. When an egg and sperm combine, if the resulting embryo has the wrong number of chromosomes (aneuploidy), it cannot develop normally and the pregnancy ends, often before the woman even knows she was pregnant.</p>
+ <p>In most cases these chromosomal errors are random, but in a proportion of couples one or both partners carry a chromosomal rearrangement (such as a balanced translocation) that consistently produces abnormal embryos. Karyotyping of both partners identifies this.</p>
 
-  <h3>2. Uterine Abnormalities</h3>
-  <p>A structurally abnormal uterine cavity can prevent a healthy embryo from implanting securely or cause pregnancy loss once implanted. Important uterine causes include:</p>
-  <ul>
-    <li><strong>Uterine septum:</strong> A fibrous band of tissue dividing the uterine cavity, the most common correctable uterine cause of recurrent miscarriage. It can be removed via hysteroscopy (keyhole surgery through the cervix).</li>
-    <li><strong>Submucosal fibroids:</strong> Fibroids that protrude into the uterine cavity distort the endometrium and interfere with implantation.</li>
-    <li><strong>Endometrial polyps:</strong> Overgrowths of the uterine lining that occupy space in the cavity and impair embryo attachment.</li>
-    <li><strong>Asherman's syndrome:</strong> Intrauterine adhesions (scar tissue) following previous uterine surgery (D&amp;C, myomectomy), reducing usable endometrial area.</li>
-    <li><strong>Congenital uterine anomalies:</strong> Bicornuate uterus, arcuate uterus, and other developmental variations that may affect pregnancy continuation.</li>
-  </ul>
+ <h3>2. Uterine Abnormalities</h3>
+ <p>A structurally abnormal uterine cavity can prevent a healthy embryo from implanting securely or cause pregnancy loss once implanted. Important uterine causes include:</p>
+ <ul>
+ <li><strong>Uterine septum:</strong> A fibrous band of tissue dividing the uterine cavity, the most common correctable uterine cause of recurrent miscarriage. It can be removed via hysteroscopy (keyhole surgery through the cervix).</li>
+ <li><strong>Submucosal fibroids:</strong> Fibroids that protrude into the uterine cavity distort the endometrium and interfere with implantation.</li>
+ <li><strong>Endometrial polyps:</strong> Overgrowths of the uterine lining that occupy space in the cavity and impair embryo attachment.</li>
+ <li><strong>Asherman's syndrome:</strong> Intrauterine adhesions (scar tissue) following previous uterine surgery (D&amp;C, myomectomy), reducing usable endometrial area.</li>
+ <li><strong>Congenital uterine anomalies:</strong> Bicornuate uterus, arcuate uterus, and other developmental variations that may affect pregnancy continuation.</li>
+ </ul>
 
-  <h3>3. Blood Clotting Disorders (Thrombophilia)</h3>
-  <p>Certain clotting conditions cause tiny blood clots to form in the small blood vessels supplying the placenta, cutting off oxygen and nutrient flow to the developing embryo — causing pregnancy loss, often in the second trimester.</p>
-  <ul>
-    <li><strong>Antiphospholipid Syndrome (APS):</strong> The most important treatable thrombophilic cause of RPL. Antibodies (antiphospholipid antibodies, lupus anticoagulant) cause recurrent clots. Treated effectively with low-molecular-weight heparin and low-dose aspirin from the time of a positive pregnancy test.</li>
-    <li><strong>Inherited thrombophilias:</strong> Factor V Leiden mutation, prothrombin gene mutation, deficiencies in protein C, protein S, or antithrombin III. Their contribution to RPL is debated, but testing is part of a complete work-up.</li>
-  </ul>
+ <h3>3. Blood Clotting Disorders (Thrombophilia)</h3>
+ <p>Certain clotting conditions cause tiny blood clots to form in the small blood vessels supplying the placenta, cutting off oxygen and nutrient flow to the developing embryo — causing pregnancy loss, often in the second trimester.</p>
+ <ul>
+ <li><strong>Antiphospholipid Syndrome (APS):</strong> The most important treatable thrombophilic cause of RPL. Antibodies (antiphospholipid antibodies, lupus anticoagulant) cause recurrent clots. Treated effectively with low-molecular-weight heparin and low-dose aspirin from the time of a positive pregnancy test.</li>
+ <li><strong>Inherited thrombophilias:</strong> Factor V Leiden mutation, prothrombin gene mutation, deficiencies in protein C, protein S, or antithrombin III. Their contribution to RPL is debated, but testing is part of a complete work-up.</li>
+ </ul>
 
-  <h3>4. Hormonal Disorders</h3>
-  <ul>
-    <li><strong>Thyroid dysfunction:</strong> Both hypothyroidism and hyperthyroidism increase miscarriage risk. Even subclinical hypothyroidism (slightly elevated TSH) is associated with pregnancy loss and should be treated before attempting further conception.</li>
-    <li><strong>PCOS:</strong> Polycystic ovary syndrome is associated with elevated LH levels, insulin resistance, and androgen excess — all of which can impair implantation and early pregnancy development.</li>
-    <li><strong>Luteal phase defect:</strong> Inadequate progesterone production after ovulation can fail to adequately support the endometrium for early pregnancy. Progesterone supplementation in the first trimester is now standard practice for women with recurrent miscarriage.</li>
-    <li><strong>Elevated prolactin:</strong> Hyperprolactinaemia can suppress progesterone and impair implantation.</li>
-  </ul>
+ <h3>4. Hormonal Disorders</h3>
+ <ul>
+ <li><strong>Thyroid dysfunction:</strong> Both hypothyroidism and hyperthyroidism increase miscarriage risk. Even subclinical hypothyroidism (slightly elevated TSH) is associated with pregnancy loss and should be treated before attempting further conception.</li>
+ <li><strong>PCOS:</strong> Polycystic ovary syndrome is associated with elevated LH levels, insulin resistance, and androgen excess — all of which can impair implantation and early pregnancy development.</li>
+ <li><strong>Luteal phase defect:</strong> Inadequate progesterone production after ovulation can fail to adequately support the endometrium for early pregnancy. Progesterone supplementation in the first trimester is now standard practice for women with recurrent miscarriage.</li>
+ <li><strong>Elevated prolactin:</strong> Hyperprolactinaemia can suppress progesterone and impair implantation.</li>
+ </ul>
 
-  <h3>5. Immunological Factors</h3>
-  <p>The maternal immune system must be finely calibrated to accept the embryo — which is genetically foreign — without attacking it. In some women, elevated natural killer (NK) cell activity in the uterine lining may contribute to recurrent implantation failure and pregnancy loss. This is a complex and evolving area, and treatment (low-dose steroids, IVIG) is considered in selected cases.</p>
+ <h3>5. Immunological Factors</h3>
+ <p>The maternal immune system must be finely calibrated to accept the embryo — which is genetically foreign — without attacking it. In some women, elevated natural killer (NK) cell activity in the uterine lining may contribute to recurrent implantation failure and pregnancy loss. This is a complex and evolving area, and treatment (low-dose steroids, IVIG) is considered in selected cases.</p>
 
-  <h3>6. Male Factor — Sperm DNA Fragmentation</h3>
-  <p>An often-overlooked contributor to recurrent miscarriage is damaged DNA within sperm. High sperm DNA fragmentation (SDF) — even when standard semen analysis appears normal — is associated with poor embryo quality, failed implantation, and early pregnancy loss. A sperm DNA fragmentation test is now part of our standard recurrent miscarriage work-up. Antioxidant therapy, lifestyle modification, and surgical sperm retrieval (TESA/PESA, which avoids epididymal transit where damage accumulates) can improve outcomes.</p>
+ <h3>6. Male Factor — Sperm DNA Fragmentation</h3>
+ <p>An often-overlooked contributor to recurrent miscarriage is damaged DNA within sperm. High sperm DNA fragmentation (SDF) — even when standard semen analysis appears normal — is associated with poor embryo quality, failed implantation, and early pregnancy loss. A sperm DNA fragmentation test is now part of our standard recurrent miscarriage work-up. Antioxidant therapy, lifestyle modification, and surgical sperm retrieval (TESA/PESA, which avoids epididymal transit where damage accumulates) can improve outcomes.</p>
 
-  <h3>7. Unexplained Recurrent Miscarriage</h3>
-  <p>Even after a thorough investigation, approximately 50% of couples with recurrent miscarriage have no identifiable cause. This is called unexplained recurrent miscarriage. It is frustrating, but not hopeless — the prognosis for eventual live birth is still good (approximately 60–65%), and empirical treatments (progesterone support, aspirin, tender loving care protocols) can help. IVF with PGT-A may also be considered to ensure chromosomally normal embryos are transferred.</p>
+ <h3>7. Unexplained Recurrent Miscarriage</h3>
+ <p>Even after a thorough investigation, approximately 50% of couples with recurrent miscarriage have no identifiable cause. This is called unexplained recurrent miscarriage. It is frustrating, but not hopeless — the prognosis for eventual live birth is still good (approximately 60–65%), and empirical treatments (progesterone support, aspirin, tender loving care protocols) can help. IVF with PGT-A may also be considered to ensure chromosomally normal embryos are transferred.</p>
 
-  <table class="cause-table">
-    <thead>
-      <tr>
-        <th>Cause Category</th>
-        <th>Approximate Frequency</th>
-        <th>Primary Treatment</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Chromosomal (embryo/parental)</td>
-        <td>50–60%</td>
-        <td>IVF with PGT-A; parental counselling</td>
-      </tr>
-      <tr>
-        <td>Uterine abnormalities</td>
-        <td>10–15%</td>
-        <td>Hysteroscopic surgery</td>
-      </tr>
-      <tr>
-        <td>Antiphospholipid Syndrome (APS)</td>
-        <td>5–20%</td>
-        <td>Heparin + aspirin in pregnancy</td>
-      </tr>
-      <tr>
-        <td>Thrombophilia (inherited)</td>
-        <td>Debated (~5–10%)</td>
-        <td>Anticoagulation; specialist guidance</td>
-      </tr>
-      <tr>
-        <td>Thyroid disorder</td>
-        <td>5–10%</td>
-        <td>Levothyroxine; optimise TSH &lt;2.5</td>
-      </tr>
-      <tr>
-        <td>PCOS / hormonal</td>
-        <td>~10%</td>
-        <td>Metformin, progesterone, lifestyle</td>
-      </tr>
-      <tr>
-        <td>Sperm DNA fragmentation</td>
-        <td>~15% (male contribution)</td>
-        <td>Antioxidants, TESA, ICSI</td>
-      </tr>
-      <tr>
-        <td>Immunological (NK cells)</td>
-        <td>~10–20%</td>
-        <td>Low-dose steroids; IVIG (selected)</td>
-      </tr>
-      <tr>
-        <td>Unexplained</td>
-        <td>~50%</td>
-        <td>Progesterone support; IVF+PGT-A</td>
-      </tr>
-    </tbody>
-  </table>
+ <table class="cause-table">
+ <thead>
+ <tr>
+ <th>Cause Category</th>
+ <th>Approximate Frequency</th>
+ <th>Primary Treatment</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Chromosomal (embryo/parental)</td>
+ <td>50–60%</td>
+ <td>IVF with PGT-A; parental counselling</td>
+ </tr>
+ <tr>
+ <td>Uterine abnormalities</td>
+ <td>10–15%</td>
+ <td>Hysteroscopic surgery</td>
+ </tr>
+ <tr>
+ <td>Antiphospholipid Syndrome (APS)</td>
+ <td>5–20%</td>
+ <td>Heparin + aspirin in pregnancy</td>
+ </tr>
+ <tr>
+ <td>Thrombophilia (inherited)</td>
+ <td>Debated (~5–10%)</td>
+ <td>Anticoagulation; specialist guidance</td>
+ </tr>
+ <tr>
+ <td>Thyroid disorder</td>
+ <td>5–10%</td>
+ <td>Levothyroxine; optimise TSH &lt;2.5</td>
+ </tr>
+ <tr>
+ <td>PCOS / hormonal</td>
+ <td>~10%</td>
+ <td>Metformin, progesterone, lifestyle</td>
+ </tr>
+ <tr>
+ <td>Sperm DNA fragmentation</td>
+ <td>~15% (male contribution)</td>
+ <td>Antioxidants, TESA, ICSI</td>
+ </tr>
+ <tr>
+ <td>Immunological (NK cells)</td>
+ <td>~10–20%</td>
+ <td>Low-dose steroids; IVIG (selected)</td>
+ </tr>
+ <tr>
+ <td>Unexplained</td>
+ <td>~50%</td>
+ <td>Progesterone support; IVF+PGT-A</td>
+ </tr>
+ </tbody>
+ </table>
 
-  <h2>Investigations at Mother Hospitals</h2>
+ <h2>Investigations at Mother Hospitals</h2>
 
-  <p>When a couple presents with recurrent pregnancy loss, Dr. Prashanthi Reddy conducts a structured, evidence-based investigation to identify or rule out each possible cause. This is not a one-size-fits-all panel — the investigation is tailored based on history (timing of losses, results of previous tests, partner history), but typically includes:</p>
+ <p>When a couple presents with recurrent pregnancy loss, Dr. Prashanthi Reddy conducts a structured, evidence-based investigation to identify or rule out each possible cause. This is not a one-size-fits-all panel — the investigation is tailored based on history (timing of losses, results of previous tests, partner history), but typically includes:</p>
 
-  <ul>
-    <li><strong>Parental karyotyping:</strong> Blood test examining the chromosomes of both partners to detect balanced translocations, inversions, or other structural abnormalities.</li>
-    <li><strong>Hysteroscopy:</strong> A thin camera inserted through the cervix directly visualises the uterine cavity, identifying and often simultaneously treating polyps, fibroids, septa, and adhesions.</li>
-    <li><strong>3D pelvic ultrasound:</strong> Non-invasive assessment of uterine shape and cavity to detect structural anomalies and measure endometrial thickness.</li>
-    <li><strong>Thrombophilia screen:</strong> Blood tests for Factor V Leiden, prothrombin gene mutation, protein C activity, protein S activity, antithrombin III, homocysteine.</li>
-    <li><strong>Antiphospholipid antibody panel:</strong> Anticardiolipin antibodies (IgG and IgM), anti-beta-2-glycoprotein-1 antibodies, lupus anticoagulant — tested on two occasions 12 weeks apart before APS is formally diagnosed.</li>
-    <li><strong>Thyroid panel:</strong> TSH, free T4, anti-TPO antibodies (to detect autoimmune thyroid disease).</li>
-    <li><strong>Hormonal panel:</strong> Progesterone (mid-luteal), prolactin, fasting insulin and glucose (for PCOS assessment), LH:FSH ratio.</li>
-    <li><strong>Sperm DNA fragmentation test:</strong> Assesses the integrity of DNA within sperm — a standard part of our RPL work-up even when basic semen analysis is normal.</li>
-    <li><strong>Immunological assessment:</strong> Uterine natural killer cell testing and immune markers considered in cases of unexplained RPL or after other causes are excluded.</li>
-  </ul>
+ <ul>
+ <li><strong>Parental karyotyping:</strong> Blood test examining the chromosomes of both partners to detect balanced translocations, inversions, or other structural abnormalities.</li>
+ <li><strong>Hysteroscopy:</strong> A thin camera inserted through the cervix directly visualises the uterine cavity, identifying and often simultaneously treating polyps, fibroids, septa, and adhesions.</li>
+ <li><strong>3D pelvic ultrasound:</strong> Non-invasive assessment of uterine shape and cavity to detect structural anomalies and measure endometrial thickness.</li>
+ <li><strong>Thrombophilia screen:</strong> Blood tests for Factor V Leiden, prothrombin gene mutation, protein C activity, protein S activity, antithrombin III, homocysteine.</li>
+ <li><strong>Antiphospholipid antibody panel:</strong> Anticardiolipin antibodies (IgG and IgM), anti-beta-2-glycoprotein-1 antibodies, lupus anticoagulant — tested on two occasions 12 weeks apart before APS is formally diagnosed.</li>
+ <li><strong>Thyroid panel:</strong> TSH, free T4, anti-TPO antibodies (to detect autoimmune thyroid disease).</li>
+ <li><strong>Hormonal panel:</strong> Progesterone (mid-luteal), prolactin, fasting insulin and glucose (for PCOS assessment), LH:FSH ratio.</li>
+ <li><strong>Sperm DNA fragmentation test:</strong> Assesses the integrity of DNA within sperm — a standard part of our RPL work-up even when basic semen analysis is normal.</li>
+ <li><strong>Immunological assessment:</strong> Uterine natural killer cell testing and immune markers considered in cases of unexplained RPL or after other causes are excluded.</li>
+ </ul>
 
-  <div class="highlight-box">
-    <p><strong>Dr. Prashanthi's approach:</strong> "Couples who come to us after multiple miscarriages have usually been through significant emotional trauma. Our investigation is thorough, compassionate, and systematic. We don't guess — we look for every possible cause, because the treatment is completely different depending on what we find. A couple with APS needs heparin, not IVF. A couple with a uterine septum needs hysteroscopy. A couple with parental chromosomal rearrangement needs IVF with PGT-A. Getting the diagnosis right is everything."</p>
-  </div>
+ <div class="highlight-box">
+ <p><strong>Dr. Prashanthi's approach:</strong> "Couples who come to us after multiple miscarriages have usually been through significant emotional trauma. Our investigation is thorough, compassionate, and systematic. We don't guess — we look for every possible cause, because the treatment is completely different depending on what we find. A couple with APS needs heparin, not IVF. A couple with a uterine septum needs hysteroscopy. A couple with parental chromosomal rearrangement needs IVF with PGT-A. Getting the diagnosis right is everything."</p>
+ </div>
 
-  <h2>Treatment Options for Recurrent Miscarriage</h2>
+ <h2>Treatment Options for Recurrent Miscarriage</h2>
 
-  <p>The treatment of recurrent miscarriage is cause-specific. Once the investigation reveals the likely underlying factor, targeted treatment can begin:</p>
+ <p>The treatment of recurrent miscarriage is cause-specific. Once the investigation reveals the likely underlying factor, targeted treatment can begin:</p>
 
-  <h3>Uterine Correction via Hysteroscopy</h3>
-  <p>For structural problems within the uterine cavity — septa, fibroids, polyps, or Asherman's adhesions — hysteroscopic surgery is the treatment of choice. Performed under brief anaesthesia, hysteroscopy uses a thin camera and instruments introduced through the cervix (no external incisions). A uterine septum can be divided, polyps and submucosal fibroids resected, and adhesions released in the same procedure. Recovery is rapid. Studies show hysteroscopic correction of a uterine septum significantly reduces subsequent miscarriage rates.</p>
+ <h3>Uterine Correction via Hysteroscopy</h3>
+ <p>For structural problems within the uterine cavity — septa, fibroids, polyps, or Asherman's adhesions — hysteroscopic surgery is the treatment of choice. Performed under brief anaesthesia, hysteroscopy uses a thin camera and instruments introduced through the cervix (no external incisions). A uterine septum can be divided, polyps and submucosal fibroids resected, and adhesions released in the same procedure. Recovery is rapid. Studies show hysteroscopic correction of a uterine septum significantly reduces subsequent miscarriage rates.</p>
 
-  <h3>Anticoagulation for Clotting Disorders</h3>
-  <p>For confirmed antiphospholipid syndrome, the combination of low-molecular-weight heparin (injections) and low-dose aspirin (75–100 mg daily), started as soon as a positive pregnancy test is confirmed, reduces miscarriage risk from approximately 80% to under 30% in this group — a transformative treatment. Heparin does not cross the placenta and is safe in pregnancy. Women with inherited thrombophilias may also be candidates for anticoagulation in pregnancy.</p>
+ <h3>Anticoagulation for Clotting Disorders</h3>
+ <p>For confirmed antiphospholipid syndrome, the combination of low-molecular-weight heparin (injections) and low-dose aspirin (75–100 mg daily), started as soon as a positive pregnancy test is confirmed, reduces miscarriage risk from approximately 80% to under 30% in this group — a transformative treatment. Heparin does not cross the placenta and is safe in pregnancy. Women with inherited thrombophilias may also be candidates for anticoagulation in pregnancy.</p>
 
-  <h3>Thyroid and Hormonal Correction</h3>
-  <p>Thyroid disorders are straightforwardly treated with levothyroxine supplementation, with the aim of maintaining TSH below 2.5 mIU/L during pregnancy. PCOS-related hormonal imbalances are managed with metformin, lifestyle modification (weight management, diet changes), and where needed, ovulation induction. Hyperprolactinaemia is treated with dopamine agonists (cabergoline, bromocriptine).</p>
+ <h3>Thyroid and Hormonal Correction</h3>
+ <p>Thyroid disorders are straightforwardly treated with levothyroxine supplementation, with the aim of maintaining TSH below 2.5 mIU/L during pregnancy. PCOS-related hormonal imbalances are managed with metformin, lifestyle modification (weight management, diet changes), and where needed, ovulation induction. Hyperprolactinaemia is treated with dopamine agonists (cabergoline, bromocriptine).</p>
 
-  <h3>Progesterone Supplementation in Early Pregnancy</h3>
-  <p>Progesterone is the hormone that maintains the uterine lining (endometrium) in a state receptive to and supportive of early pregnancy. In women with recurrent miscarriage — regardless of identified cause — vaginal progesterone supplementation from the time of a positive pregnancy test through 12–16 weeks is now widely recommended. The PRISM trial (UK, 2019) showed a statistically significant benefit in women with a history of three or more miscarriages.</p>
+ <h3>Progesterone Supplementation in Early Pregnancy</h3>
+ <p>Progesterone is the hormone that maintains the uterine lining (endometrium) in a state receptive to and supportive of early pregnancy. In women with recurrent miscarriage — regardless of identified cause — vaginal progesterone supplementation from the time of a positive pregnancy test through 12–16 weeks is now widely recommended. The PRISM trial (UK, 2019) showed a statistically significant benefit in women with a history of three or more miscarriages.</p>
 
-  <h3>Immunological Treatment</h3>
-  <p>For women with elevated uterine natural killer cell activity or other immune abnormalities, low-dose prednisolone (a steroid), intralipid infusions, or intravenous immunoglobulin (IVIG) may be recommended. These are specialist treatments considered in carefully selected cases — typically women with unexplained RPL after exclusion of other causes.</p>
+ <h3>Immunological Treatment</h3>
+ <p>For women with elevated uterine natural killer cell activity or other immune abnormalities, low-dose prednisolone (a steroid), intralipid infusions, or intravenous immunoglobulin (IVIG) may be recommended. These are specialist treatments considered in carefully selected cases — typically women with unexplained RPL after exclusion of other causes.</p>
 
-  <h3>Sperm DNA Fragmentation — Management</h3>
-  <p>High sperm DNA fragmentation is addressed through antioxidant therapy (CoQ10, vitamin C, E, zinc, selenium — for a minimum of 3 months before attempted conception), lifestyle changes (avoid heat, smoking cessation, reduce alcohol), and where appropriate, surgical sperm retrieval (TESA) to obtain sperm directly from the testis, bypassing the epididymis where much DNA damage accumulates during transit. ICSI (intracytoplasmic sperm injection) with testicular sperm is associated with better embryo quality in men with high SDF.</p>
+ <h3>Sperm DNA Fragmentation — Management</h3>
+ <p>High sperm DNA fragmentation is addressed through antioxidant therapy (CoQ10, vitamin C, E, zinc, selenium — for a minimum of 3 months before attempted conception), lifestyle changes (avoid heat, smoking cessation, reduce alcohol), and where appropriate, surgical sperm retrieval (TESA) to obtain sperm directly from the testis, bypassing the epididymis where much DNA damage accumulates during transit. ICSI (intracytoplasmic sperm injection) with testicular sperm is associated with better embryo quality in men with high SDF.</p>
 
-  <h2>IVF with PGT-A for Recurrent Miscarriage</h2>
+ <h2>IVF with PGT-A for Recurrent Miscarriage</h2>
 
-  <p>When chromosomal abnormalities — either in the embryo due to random aneuploidy or due to parental chromosomal rearrangements — are identified as the likely cause of recurrent pregnancy loss, IVF combined with PGT-A (Preimplantation Genetic Testing for Aneuploidies) offers a transformative solution.</p>
+ <p>When chromosomal abnormalities — either in the embryo due to random aneuploidy or due to parental chromosomal rearrangements — are identified as the likely cause of recurrent pregnancy loss, IVF combined with PGT-A (Preimplantation Genetic Testing for Aneuploidies) offers a transformative solution.</p>
 
-  <h3>What Is PGT-A?</h3>
-  <p>PGT-A is a laboratory technique that analyses the chromosomal content of embryos created through IVF before any embryo is transferred to the uterus. After fertilisation and 5–6 days of culture, a small number of cells are biopsied from each embryo at the blastocyst stage and sent for genetic analysis. Embryos with the correct number of chromosomes (euploid embryos) are identified and only these are transferred. Chromosomally abnormal (aneuploid) embryos — which would have resulted in either failed implantation or miscarriage — are not transferred.</p>
+ <h3>What Is PGT-A?</h3>
+ <p>PGT-A is a laboratory technique that analyses the chromosomal content of embryos created through IVF before any embryo is transferred to the uterus. After fertilisation and 5–6 days of culture, a small number of cells are biopsied from each embryo at the blastocyst stage and sent for genetic analysis. Embryos with the correct number of chromosomes (euploid embryos) are identified and only these are transferred. Chromosomally abnormal (aneuploid) embryos — which would have resulted in either failed implantation or miscarriage — are not transferred.</p>
 
-  <h3>How PGT-A Reduces Miscarriage Risk</h3>
-  <ul>
-    <li>In a natural conception or standard IVF cycle, any embryo regardless of chromosomal status may be transferred or implanted. The miscarriage rate with unselected embryos is approximately 25–35%.</li>
-    <li>With PGT-A, only euploid (chromosomally normal) embryos are transferred. The miscarriage rate per euploid embryo transfer drops to under 10%.</li>
-    <li>For couples with parental balanced translocations, PGT-SR (structural rearrangement testing) can additionally screen for the specific chromosomal rearrangement carried by the parents.</li>
-    <li>PGT-A also improves the chance of a live birth per embryo transfer, as chromosomally normal embryos have a higher implantation rate.</li>
-  </ul>
+ <h3>How PGT-A Reduces Miscarriage Risk</h3>
+ <ul>
+ <li>In a natural conception or standard IVF cycle, any embryo regardless of chromosomal status may be transferred or implanted. The miscarriage rate with unselected embryos is approximately 25–35%.</li>
+ <li>With PGT-A, only euploid (chromosomally normal) embryos are transferred. The miscarriage rate per euploid embryo transfer drops to under 10%.</li>
+ <li>For couples with parental balanced translocations, PGT-SR (structural rearrangement testing) can additionally screen for the specific chromosomal rearrangement carried by the parents.</li>
+ <li>PGT-A also improves the chance of a live birth per embryo transfer, as chromosomally normal embryos have a higher implantation rate.</li>
+ </ul>
 
-  <h3>Who Is PGT-A Most Appropriate For?</h3>
-  <ul>
-    <li>Couples with two or more miscarriages where chromosomal cause is suspected or unexplained</li>
-    <li>Women over 35 (age-related aneuploidy rates increase significantly after 35)</li>
-    <li>Couples where one partner carries a chromosomal balanced translocation</li>
-    <li>Couples with previous implantation failure in IVF cycles</li>
-    <li>Women with unexplained recurrent miscarriage where all other tests are negative</li>
-  </ul>
+ <h3>Who Is PGT-A Most Appropriate For?</h3>
+ <ul>
+ <li>Couples with two or more miscarriages where chromosomal cause is suspected or unexplained</li>
+ <li>Women over 35 (age-related aneuploidy rates increase significantly after 35)</li>
+ <li>Couples where one partner carries a chromosomal balanced translocation</li>
+ <li>Couples with previous implantation failure in IVF cycles</li>
+ <li>Women with unexplained recurrent miscarriage where all other tests are negative</li>
+ </ul>
 
-  <div class="ivf-package">
-    <div class="pkg-price">₹99,000</div>
-    <div class="pkg-label">All-inclusive IVF Package at Mother Hospitals &amp; IVF Center</div>
-    <div class="pkg-note">Package includes stimulation monitoring, egg retrieval, ICSI, embryo culture and transfer. PGT-A genetic testing quoted separately as it depends on number of embryos biopsied. Enquire for full details.</div>
-  </div>
+ <div class="ivf-package">
+ <div class="pkg-price"></div>
+ <div class="pkg-label">All-inclusive IVF Package at Mother Hospitals &amp; IVF Center</div>
+ <div class="pkg-note">Package includes stimulation monitoring, egg retrieval, ICSI, embryo culture and transfer. PGT-A genetic testing quoted separately as it depends on number of embryos biopsied. Enquire for full details.</div>
+ </div>
 
-  <div class="cta-box">
-    <h3>Ready to Investigate? Talk to Dr. Prashanthi</h3>
-    <p>Get a structured recurrent miscarriage work-up at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad — rated 4.7★ with highly rated by patients</p>
-    <a href="tel:+919705993366" class="btn-white">📞 97059 93366</a>
-    <a href="tel:+919705993355" class="btn-white">📞 97059 93355</a>
-    <a href="https://wa.me/919052074999" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp 90520 74999</a>
-  </div>
+ <div class="cta-box">
+ <h3>Ready to Investigate? Talk to Dr. Prashanthi</h3>
+ <p>Get a structured recurrent miscarriage work-up at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad — rated 4.7★ with highly rated by patients</p>
+ <a href="tel:+919705993366" class="btn-white">📞 97059 93366</a>
+ <a href="tel:+919705993355" class="btn-white">📞 97059 93355</a>
+ <a href="https://wa.me/919052074999" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp 90520 74999</a>
+ </div>
 
-  <h2>What Are the Chances of a Successful Pregnancy After Recurrent Miscarriage?</h2>
+ <h2>What Are the Chances of a Successful Pregnancy After Recurrent Miscarriage?</h2>
 
-  <div class="hope-box">
-    <h3>There Is Genuine Hope</h3>
-    <p>The statistics on recurrent miscarriage outcomes are more encouraging than many couples realise. Even after three consecutive losses — which is deeply traumatic — the majority of couples who seek specialist investigation and treatment go on to have a successful pregnancy.</p>
-    <p><strong>With investigation and treatment, 60–80% of couples with recurrent miscarriage achieve a healthy live birth.</strong> Even in unexplained cases, the live birth rate with supportive care (progesterone, low-dose aspirin, close early pregnancy monitoring) is approximately 60–65%.</p>
-    <p>The critical message is this: do not give up without specialist investigation. Most couples experiencing recurrent miscarriage have not yet had a complete work-up. A diagnosis changes everything — because treatment can only follow diagnosis.</p>
-  </div>
+ <div class="hope-box">
+ <h3>There Is Genuine Hope</h3>
+ <p>The statistics on recurrent miscarriage outcomes are more encouraging than many couples realise. Even after three consecutive losses — which is deeply traumatic — the majority of couples who seek specialist investigation and treatment go on to have a successful pregnancy.</p>
+ <p><strong>With investigation and treatment, 60–80% of couples with recurrent miscarriage achieve a healthy live birth.</strong> Even in unexplained cases, the live birth rate with supportive care (progesterone, low-dose aspirin, close early pregnancy monitoring) is approximately 60–65%.</p>
+ <p>The critical message is this: do not give up without specialist investigation. Most couples experiencing recurrent miscarriage have not yet had a complete work-up. A diagnosis changes everything — because treatment can only follow diagnosis.</p>
+ </div>
 
-  <p>The emotional burden of recurrent miscarriage is immense, and Dr. Prashanthi's approach at Mother Hospitals combines thorough medical investigation with compassionate care. Each couple is given time, a full explanation of findings, and a clearly explained treatment plan. Early pregnancy monitoring with frequent scans and direct access to the clinical team provides reassurance in subsequent pregnancies.</p>
+ <p>The emotional burden of recurrent miscarriage is immense, and Dr. Prashanthi's approach at Mother Hospitals combines thorough medical investigation with compassionate care. Each couple is given time, a full explanation of findings, and a clearly explained treatment plan. Early pregnancy monitoring with frequent scans and direct access to the clinical team provides reassurance in subsequent pregnancies.</p>
 
-  <p>If you have experienced two or more miscarriages, do not wait for a third. Book a recurrent miscarriage consultation at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad. Early investigation means earlier answers — and an earlier path to the family you deserve.</p>
+ <p>If you have experienced two or more miscarriages, do not wait for a third. Book a recurrent miscarriage consultation at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad. Early investigation means earlier answers — and an earlier path to the family you deserve.</p>
 
-  <h2>Frequently Asked Questions</h2>
+ <h2>Frequently Asked Questions</h2>
 
-  <div class="faq-item">
-    <details>
-      <summary class="faq-q">What causes recurrent miscarriage?</summary>
-      <div class="faq-a">Recurrent miscarriage can be caused by chromosomal abnormalities in the embryo (50–60% of early losses), uterine structural problems (septum, fibroids, polyps, Asherman's syndrome), blood clotting disorders such as antiphospholipid syndrome (APS), hormonal imbalances (thyroid disorders, PCOS, luteal phase defect), immunological factors such as elevated natural killer cell activity, and sperm DNA fragmentation in the male partner. In around 50% of cases, no definitive cause is found despite thorough investigation — this is called unexplained recurrent miscarriage. Even so, most couples still achieve a healthy pregnancy with appropriate support and treatment.</div>
-    </details>
-  </div>
+ <div class="faq-item">
+ <details>
+ <summary class="faq-q">What causes recurrent miscarriage?</summary>
+ <div class="faq-a">Recurrent miscarriage can be caused by chromosomal abnormalities in the embryo (50–60% of early losses), uterine structural problems (septum, fibroids, polyps, Asherman's syndrome), blood clotting disorders such as antiphospholipid syndrome (APS), hormonal imbalances (thyroid disorders, PCOS, luteal phase defect), immunological factors such as elevated natural killer cell activity, and sperm DNA fragmentation in the male partner. In around 50% of cases, no definitive cause is found despite thorough investigation — this is called unexplained recurrent miscarriage. Even so, most couples still achieve a healthy pregnancy with appropriate support and treatment.</div>
+ </details>
+ </div>
 
-  <div class="faq-item">
-    <details>
-      <summary class="faq-q">How many miscarriages before investigation?</summary>
-      <div class="faq-a">Traditionally, three consecutive miscarriages were required before specialist investigation was recommended. Current guidance — including from the RCOG and many Indian fertility specialists — recommends investigation after two consecutive losses, particularly in women over 35, or where there is significant emotional distress. At Mother Hospitals Hyderabad, Dr. Prashanthi Reddy begins a structured recurrent miscarriage work-up after two consecutive pregnancy losses. We believe in acting early rather than waiting for further loss.</div>
-    </details>
-  </div>
+ <div class="faq-item">
+ <details>
+ <summary class="faq-q">How many miscarriages before investigation?</summary>
+ <div class="faq-a">Traditionally, three consecutive miscarriages were required before specialist investigation was recommended. Current guidance — including from the RCOG and many Indian fertility specialists — recommends investigation after two consecutive losses, particularly in women over 35, or where there is significant emotional distress. At Mother Hospitals Hyderabad, Dr. Prashanthi Reddy begins a structured recurrent miscarriage work-up after two consecutive pregnancy losses. We believe in acting early rather than waiting for further loss.</div>
+ </details>
+ </div>
 
-  <div class="faq-item">
-    <details>
-      <summary class="faq-q">Can IVF prevent recurrent miscarriage?</summary>
-      <div class="faq-a">IVF combined with PGT-A (Preimplantation Genetic Testing for Aneuploidies) can significantly reduce the risk of miscarriage for couples whose losses are caused by chromosomal abnormalities in embryos. PGT-A screens all available embryos before transfer and selects only those with a normal chromosome number (euploid), reducing the miscarriage rate per transfer from approximately 30% down to under 10%. IVF alone (without PGT-A) does not inherently prevent miscarriage. The decision to use IVF + PGT-A is made after investigation confirms chromosomal cause is likely or probable.</div>
-    </details>
-  </div>
+ <div class="faq-item">
+ <details>
+ <summary class="faq-q">Can IVF prevent recurrent miscarriage?</summary>
+ <div class="faq-a">IVF combined with PGT-A (Preimplantation Genetic Testing for Aneuploidies) can significantly reduce the risk of miscarriage for couples whose losses are caused by chromosomal abnormalities in embryos. PGT-A screens all available embryos before transfer and selects only those with a normal chromosome number (euploid), reducing the miscarriage rate per transfer from approximately 30% down to under 10%. IVF alone (without PGT-A) does not inherently prevent miscarriage. The decision to use IVF + PGT-A is made after investigation confirms chromosomal cause is likely or probable.</div>
+ </details>
+ </div>
 
-  <div class="faq-item">
-    <details>
-      <summary class="faq-q">Is recurrent miscarriage my fault?</summary>
-      <div class="faq-a">Absolutely not. Recurrent miscarriage is not caused by anything a woman does or does not do. It is not caused by exercise, sexual activity, stress, lifting, travelling, or any normal daily activity. The vast majority of early miscarriages are caused by chromosomal abnormalities that occur at the time of fertilisation — a random biological event entirely outside anyone's control. Feeling guilt is a natural and common emotional response to pregnancy loss, but it is medically unfounded. Please be kind to yourself, and seek specialist support — both medical and emotional — without delay.</div>
-    </details>
-  </div>
+ <div class="faq-item">
+ <details>
+ <summary class="faq-q">Is recurrent miscarriage my fault?</summary>
+ <div class="faq-a">Absolutely not. Recurrent miscarriage is not caused by anything a woman does or does not do. It is not caused by exercise, sexual activity, stress, lifting, travelling, or any normal daily activity. The vast majority of early miscarriages are caused by chromosomal abnormalities that occur at the time of fertilisation — a random biological event entirely outside anyone's control. Feeling guilt is a natural and common emotional response to pregnancy loss, but it is medically unfounded. Please be kind to yourself, and seek specialist support — both medical and emotional — without delay.</div>
+ </details>
+ </div>
 
-  <div class="faq-item">
-    <details>
-      <summary class="faq-q">What tests are done for recurrent miscarriage in Hyderabad?</summary>
-      <div class="faq-a">At Mother Hospitals Hyderabad, our recurrent miscarriage investigation includes: parental karyotyping (chromosomal blood test for both partners), hysteroscopy to directly assess the uterine cavity, 3D pelvic ultrasound, thrombophilia screen (Factor V Leiden, prothrombin mutation, protein C/S, antithrombin III), antiphospholipid antibody panel (anticardiolipin antibodies, anti-beta-2-GP1, lupus anticoagulant — tested twice, 12 weeks apart), thyroid function tests (TSH, free T4, anti-TPO antibodies), progesterone and prolactin levels, fasting insulin and glucose (for PCOS assessment), and sperm DNA fragmentation test for the male partner. Immunological testing (uterine NK cell assessment) is considered in selected unexplained cases.</div>
-    </details>
-  </div>
+ <div class="faq-item">
+ <details>
+ <summary class="faq-q">What tests are done for recurrent miscarriage in Hyderabad?</summary>
+ <div class="faq-a">At Mother Hospitals Hyderabad, our recurrent miscarriage investigation includes: parental karyotyping (chromosomal blood test for both partners), hysteroscopy to directly assess the uterine cavity, 3D pelvic ultrasound, thrombophilia screen (Factor V Leiden, prothrombin mutation, protein C/S, antithrombin III), antiphospholipid antibody panel (anticardiolipin antibodies, anti-beta-2-GP1, lupus anticoagulant — tested twice, 12 weeks apart), thyroid function tests (TSH, free T4, anti-TPO antibodies), progesterone and prolactin levels, fasting insulin and glucose (for PCOS assessment), and sperm DNA fragmentation test for the male partner. Immunological testing (uterine NK cell assessment) is considered in selected unexplained cases.</div>
+ </details>
+ </div>
 
-  <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--purple-light)">
-    <h3 style="color:var(--purple);margin-bottom:1rem">Related Articles</h3>
-    <ul>
-      <li style="margin-bottom:0.5rem"><a href="/blog/why-implantation-fails-ivf.html" style="color:var(--purple)">Why Implantation Fails in IVF — Causes and Solutions</a></li>
-      <li style="margin-bottom:0.5rem"><a href="/blog/pgt-a-embryo-testing-guide.html" style="color:var(--purple)">PGT-A Embryo Testing — Complete Guide for IVF Patients</a></li>
-      <li style="margin-bottom:0.5rem"><a href="/blog/recurrent-ivf-failure-treatment.html" style="color:var(--purple)">Recurrent IVF Failure — Causes and Treatment in Hyderabad</a></li>
-      <li style="margin-bottom:0.5rem"><a href="/ivf-treatment-hyderabad.html" style="color:var(--purple)">IVF Treatment at Mother Hospitals Hyderabad — Full Overview</a></li>
-    </ul>
-  </div>
+ <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--purple-light)">
+ <h3 style="color:var(--purple);margin-bottom:1rem">Related Articles</h3>
+ <ul>
+ <li style="margin-bottom:0.5rem"><a href="/blog/why-implantation-fails-ivf.html" style="color:var(--purple)">Why Implantation Fails in IVF — Causes and Solutions</a></li>
+ <li style="margin-bottom:0.5rem"><a href="/blog/pgt-a-embryo-testing-guide.html" style="color:var(--purple)">PGT-A Embryo Testing — Complete Guide for IVF Patients</a></li>
+ <li style="margin-bottom:0.5rem"><a href="/blog/recurrent-ivf-failure-treatment.html" style="color:var(--purple)">Recurrent IVF Failure — Causes and Treatment in Hyderabad</a></li>
+ <li style="margin-bottom:0.5rem"><a href="/ivf-treatment-hyderabad.html" style="color:var(--purple)">IVF Treatment at Mother Hospitals Hyderabad — Full Overview</a></li>
+ </ul>
+ </div>
 
 </article>
 
 <footer style="background:#5a1f7a;color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem;padding-bottom:80px">
-  <p><strong>Mother Hospitals &amp; IVF Center</strong> — Boduppal, Hyderabad, Telangana</p>
-  <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366" style="color:rgba(255,255,255,0.75)">+91 97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355" style="color:rgba(255,255,255,0.75)">+91 97059 93355</a></p>
-  <p style="margin-top:0.5rem">💬 <a href="https://wa.me/919052074999" style="color:rgba(255,255,255,0.75)" target="_blank" rel="noopener">WhatsApp: +91 90520 74999</a></p>
-  <p style="margin-top:0.5rem;opacity:0.6;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center · ART Act 2021 Certified · Dr. E. Prashanthi Reddy TGMC Reg: 50624</p>
-  <p style="margin-top:0.4rem;opacity:0.5;font-size:0.73rem">This article is for informational purposes only and does not constitute medical advice. Please consult a qualified fertility specialist for personalised guidance.</p>
+ <p><strong>Mother Hospitals &amp; IVF Center</strong> — Boduppal, Hyderabad, Telangana</p>
+ <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366" style="color:rgba(255,255,255,0.75)">+91 97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355" style="color:rgba(255,255,255,0.75)">+91 97059 93355</a></p>
+ <p style="margin-top:0.5rem">💬 <a href="https://wa.me/919052074999" style="color:rgba(255,255,255,0.75)" target="_blank" rel="noopener">WhatsApp: +91 90520 74999</a></p>
+ <p style="margin-top:0.5rem;opacity:0.6;font-size:0.78rem">© 2026 Mother Hospitals &amp; IVF Center · ART Act 2021 Certified · Dr. E. Prashanthi Reddy TGMC Reg: 50624</p>
+ <p style="margin-top:0.4rem;opacity:0.5;font-size:0.73rem">This article is for informational purposes only and does not constitute medical advice. Please consult a qualified fertility specialist for personalised guidance.</p>
 </footer>
 
 </body>

@@ -49,395 +49,332 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-.age-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.age-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.age-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}
-.age-table tr:nth-child(even) td{background:var(--purple-pale)}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}.age-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.age-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.age-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid)}.age-table tr:nth-child(even) td{background:var(--purple-pale)}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 @media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"IVF After 35 Hyderabad — Success Rates, Egg Quality & Treatment | Mother Hospitals",
-  "url":"https://motherhospitals.co.in/ivf-after-35-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"IVF After 35 Hyderabad — Success Rates, Egg Quality & Treatment | Mother Hospitals",
+ "url":"https://motherhospitals.co.in/ivf-after-35-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20above%2035%20and%20want%20to%20know%20about%20IVF%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20above%2035%20and%20want%20to%20know%20about%20IVF%20at%20Mother%20Hospitals%20Hyderabad" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🧬</span> Advanced IVF + PGT-A</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🧬</span> Advanced IVF + PGT-A</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › IVF After 35
-    </div>
-    <h1>IVF After 35 in Hyderabad — <em>It Is Not Too Late.</em> Here Is What You Need to Know.</h1>
-    <p class="hero-sub">Many women in Hyderabad — IT professionals, executives, women who married later — are pursuing IVF after 35, 38, even 40. Age matters for egg quality, but it does not determine your outcome alone. With the right testing and protocol, pregnancy after 35 is absolutely achievable.</p>
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Get Your AMH Tested — 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20above%2035%20and%20want%20IVF%20consultation%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Consultation</a>
-    </div>
-  </div>
+ <div class="page-hero-inner">
+ <div class="breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › IVF After 35
+ </div>
+ <h1>IVF After 35 in Hyderabad — <em>It Is Not Too Late.</em> Here Is What You Need to Know.</h1>
+ <p class="hero-sub">Many women in Hyderabad — IT professionals, executives, women who married later — are pursuing IVF after 35, 38, even 40. Age matters for egg quality, but it does not determine your outcome alone. With the right testing and protocol, pregnancy after 35 is absolutely achievable.</p>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Get Your AMH Tested — 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20above%2035%20and%20want%20IVF%20consultation%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Consultation</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">40–50%</div><div class="stat-label">IVF live birth rate at age 35–37 per transfer</div></div>
-      <div class="stat-box"><div class="stat-num">30–40%</div><div class="stat-label">IVF live birth rate at age 38–40 per transfer</div></div>
-      <div class="stat-box"><div class="stat-num">55–70%</div><div class="stat-label">Donor egg IVF success rate — age independent</div></div>
-      <div class="stat-box"><div class="stat-num">37</div><div class="stat-label">Age when PGT-A testing of embryos is recommended</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">40–50%</div><div class="stat-label">IVF live birth rate at age 35–37 per transfer</div></div>
+ <div class="stat-box"><div class="stat-num">30–40%</div><div class="stat-label">IVF live birth rate at age 38–40 per transfer</div></div>
+ <div class="stat-box"><div class="stat-num">55–70%</div><div class="stat-label">Donor egg IVF success rate — age independent</div></div>
+ <div class="stat-box"><div class="stat-num">37</div><div class="stat-label">Age when PGT-A testing of embryos is recommended</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- HOW AGE AFFECTS FERTILITY -->
 <section class="section" style="padding-top:30px">
-  <div class="section-inner">
-    <h2>How Age Affects <em>Fertility and IVF</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">The most important thing age affects in IVF is <strong>egg quality</strong> — specifically the chromosomal health of eggs. As women age, more eggs carry chromosomal abnormalities (aneuploidy), which leads to lower fertilisation, fewer quality embryos, lower implantation, and higher miscarriage rates.</p>
+ <div class="section-inner">
+ <h2>How Age Affects <em>Fertility and IVF</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">The most important thing age affects in IVF is <strong>egg quality</strong> — specifically the chromosomal health of eggs. As women age, more eggs carry chromosomal abnormalities (aneuploidy), which leads to lower fertilisation, fewer quality embryos, lower implantation, and higher miscarriage rates.</p>
 
-    <table class="age-table">
-      <thead>
-        <tr>
-          <th>Age</th>
-          <th>% Normal (Euploid) Eggs</th>
-          <th>IVF Live Birth Rate (per transfer)</th>
-          <th>Miscarriage Risk</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Under 35</strong></td>
-          <td>~65–70% normal</td>
-          <td>50–60%</td>
-          <td>10–15%</td>
-        </tr>
-        <tr>
-          <td><strong>35–37</strong></td>
-          <td>~50–55% normal</td>
-          <td>40–50%</td>
-          <td>15–20%</td>
-        </tr>
-        <tr>
-          <td><strong>38–40</strong></td>
-          <td>~35–40% normal</td>
-          <td>30–40%</td>
-          <td>25–30%</td>
-        </tr>
-        <tr>
-          <td><strong>40–42</strong></td>
-          <td>~20–30% normal</td>
-          <td>20–30%</td>
-          <td>35–45%</td>
-        </tr>
-        <tr>
-          <td><strong>42–44</strong></td>
-          <td>~10–20% normal</td>
-          <td>10–20% (own eggs)</td>
-          <td>50–60%</td>
-        </tr>
-        <tr>
-          <td><strong>Donor eggs (any age)</strong></td>
-          <td>~65–70% (young donor)</td>
-          <td>55–70%</td>
-          <td>Under 15%</td>
-        </tr>
-      </tbody>
-    </table>
+ <table class="age-table">
+ <thead>
+ <tr>
+ <th>Age</th>
+ <th>% Normal (Euploid) Eggs</th>
+ <th>IVF Live Birth Rate (per transfer)</th>
+ <th>Miscarriage Risk</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Under 35</strong></td>
+ <td>~65–70% normal</td>
+ <td>50–60%</td>
+ <td>10–15%</td>
+ </tr>
+ <tr>
+ <td><strong>35–37</strong></td>
+ <td>~50–55% normal</td>
+ <td>40–50%</td>
+ <td>15–20%</td>
+ </tr>
+ <tr>
+ <td><strong>38–40</strong></td>
+ <td>~35–40% normal</td>
+ <td>30–40%</td>
+ <td>25–30%</td>
+ </tr>
+ <tr>
+ <td><strong>40–42</strong></td>
+ <td>~20–30% normal</td>
+ <td>20–30%</td>
+ <td>35–45%</td>
+ </tr>
+ <tr>
+ <td><strong>42–44</strong></td>
+ <td>~10–20% normal</td>
+ <td>10–20% (own eggs)</td>
+ <td>50–60%</td>
+ </tr>
+ <tr>
+ <td><strong>Donor eggs (any age)</strong></td>
+ <td>~65–70% (young donor)</td>
+ <td>55–70%</td>
+ <td>Under 15%</td>
+ </tr>
+ </tbody>
+ </table>
 
-    <div class="fact-bar">
-      <strong>Important:</strong> AMH levels and antral follicle count tell you how MANY eggs you have — not how good they are. A 40-year-old with a high AMH still has egg quality challenges. A 38-year-old with a low AMH may still have good quality eggs. Quality matters more than quantity after 37.
-    </div>
+ <div class="fact-bar">
+ <strong>Important:</strong> AMH levels and antral follicle count tell you how MANY eggs you have — not how good they are. A 40-year-old with a high AMH still has egg quality challenges. A 38-year-old with a low AMH may still have good quality eggs. Quality matters more than quantity after 37.
+ </div>
 
-    <div class="voice-box">
-      <strong>"I am 38 and was told my AMH is low. Does this mean IVF will not work for me?"</strong><br/>
-      Low AMH means fewer eggs per stimulation cycle — not zero. Many women with AMH of 0.5–1.0 ng/ml successfully conceive with IVF, especially when each egg is treated as precious: gentle stimulation, extended blastocyst culture, PGT-A testing, and personalised frozen embryo transfer. At Mother Hospitals, we see women with AMH as low as 0.3 ng/ml achieve pregnancy.
-    </div>
-  </div>
+ <div class="voice-box">
+ <strong>"I am 38 and was told my AMH is low. Does this mean IVF will not work for me?"</strong><br/>
+ Low AMH means fewer eggs per stimulation cycle — not zero. Many women with AMH of 0.5–1.0 ng/ml successfully conceive with IVF, especially when each egg is treated as precious: gentle stimulation, extended blastocyst culture, PGT-A testing, and personalised frozen embryo transfer. At Mother Hospitals, we see women with AMH as low as 0.3 ng/ml achieve pregnancy.
+ </div>
+ </div>
 </section>
 
 <!-- WHAT TO DO AFTER 35 -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Your Action Plan — <em>IVF After 35 at Mother Hospitals</em></h2>
+ <div class="section-inner">
+ <h2>Your Action Plan — <em>IVF After 35 at Mother Hospitals</em></h2>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>📋 Essential tests before starting IVF after 35</h3>
-        <ul>
-          <li>AMH (Anti-Müllerian Hormone) — ovarian reserve</li>
-          <li>Antral Follicle Count (AFC) — ultrasound scan</li>
-          <li>Day 2–3 FSH and Estradiol — ovarian function</li>
-          <li>TSH — thyroid (must be below 2.5 before IVF)</li>
-          <li>Prolactin, DHEAS, testosterone</li>
-          <li>Pelvic ultrasound — uterus and ovaries</li>
-          <li>Uterine cavity check (saline infusion or hysteroscopy)</li>
-          <li>Partner semen analysis</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>🧬 Protocol adjustments for IVF after 37</h3>
-        <ul>
-          <li>PGT-A — genetic testing of embryos before transfer (strongly recommended from 37)</li>
-          <li>Extended blastocyst culture (day 5–6) to select strongest embryos</li>
-          <li>Freeze-all + FET — gives uterine lining optimal conditions</li>
-          <li>Gentle antagonist protocols — preserve egg quality during stimulation</li>
-          <li>CoQ10 (600–800 mg/day) — shown to improve egg quality in older women</li>
-          <li>DHEA supplementation when indicated — improves AMH and response in low reserve</li>
-          <li>ERA personalised transfer — identifies exact implantation window</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>📋 Essential tests before starting IVF after 35</h3>
+ <ul>
+ <li>AMH (Anti-Müllerian Hormone) — ovarian reserve</li>
+ <li>Antral Follicle Count (AFC) — ultrasound scan</li>
+ <li>Day 2–3 FSH and Estradiol — ovarian function</li>
+ <li>TSH — thyroid (must be below 2.5 before IVF)</li>
+ <li>Prolactin, DHEAS, testosterone</li>
+ <li>Pelvic ultrasound — uterus and ovaries</li>
+ <li>Uterine cavity check (saline infusion or hysteroscopy)</li>
+ <li>Partner semen analysis</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>🧬 Protocol adjustments for IVF after 37</h3>
+ <ul>
+ <li>PGT-A — genetic testing of embryos before transfer (strongly recommended from 37)</li>
+ <li>Extended blastocyst culture (day 5–6) to select strongest embryos</li>
+ <li>Freeze-all + FET — gives uterine lining optimal conditions</li>
+ <li>Gentle antagonist protocols — preserve egg quality during stimulation</li>
+ <li>CoQ10 (600–800 mg/day) — shown to improve egg quality in older women</li>
+ <li>DHEA supplementation when indicated — improves AMH and response in low reserve</li>
+ <li>ERA personalised transfer — identifies exact implantation window</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="highlight-box">
-      <h3>Do Not Wait — The Most Important Advice for Women Over 35</h3>
-      <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0.8rem">In fertility medicine, the difference between acting at 36 vs 38, or 38 vs 40, is significant. Egg quality declines in a non-linear curve — the drop accelerates after 37. What to do right now:</p>
-      <ul class="check-list">
-        <li>Book an AMH test and Day 2 scan immediately — know your actual ovarian reserve</li>
-        <li>If AMH is borderline — do not wait and "try naturally" for more months</li>
-        <li>Start CoQ10, Vitamin D3, folic acid 5 mg now — takes 3 months to improve egg quality</li>
-        <li>Get thyroid checked — undiagnosed hypothyroidism is common and delays IVF unnecessarily</li>
-        <li>Have the IVF conversation — knowing your options is not committing to them</li>
-        <li>If partner's semen analysis is old — redo it. Sperm quality affects outcomes too</li>
-      </ul>
-    </div>
-  </div>
+ <div class="highlight-box">
+ <h3>Do Not Wait — The Most Important Advice for Women Over 35</h3>
+ <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0.8rem">In fertility medicine, the difference between acting at 36 vs 38, or 38 vs 40, is significant. Egg quality declines in a non-linear curve — the drop accelerates after 37. What to do right now:</p>
+ <ul class="check-list">
+ <li>Book an AMH test and Day 2 scan immediately — know your actual ovarian reserve</li>
+ <li>If AMH is borderline — do not wait and "try naturally" for more months</li>
+ <li>Start CoQ10, Vitamin D3, folic acid 5 mg now — takes 3 months to improve egg quality</li>
+ <li>Get thyroid checked — undiagnosed hypothyroidism is common and delays IVF unnecessarily</li>
+ <li>Have the IVF conversation — knowing your options is not committing to them</li>
+ <li>If partner's semen analysis is old — redo it. Sperm quality affects outcomes too</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
 <!-- DONOR EGGS -->
 <section class="section" style="padding-top:40px">
-  <div class="section-inner">
-    <h2>When Donor Eggs Are the <em>Right Option</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">Donor egg IVF is not "giving up" — it is choosing the most effective path to your baby. The embryo grows in <em>your</em> uterus, your body nourishes the pregnancy, and you give birth. Donor egg IVF is considered when:</p>
+ <div class="section-inner">
+ <h2>When Donor Eggs Are the <em>Right Option</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">Donor egg IVF is not "giving up" — it is choosing the most effective path to your baby. The embryo grows in <em>your</em> uterus, your body nourishes the pregnancy, and you give birth. Donor egg IVF is considered when:</p>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>When donor eggs are recommended</h3>
-        <ul>
-          <li>Age over 42 with own eggs (success with own eggs is low)</li>
-          <li>Very low AMH (below 0.3 ng/ml) with poor response to stimulation</li>
-          <li>Multiple failed IVF cycles with poor embryo quality</li>
-          <li>Premature ovarian insufficiency (POI) — early menopause</li>
-          <li>Genetic conditions that cannot be treated with PGT-A</li>
-          <li>No retrievable eggs in stimulation cycle</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>What donor egg IVF involves</h3>
-        <ul>
-          <li>Donor — screened young woman, anonymous under ART Act 2021</li>
-          <li>Her eggs fertilised with your partner's sperm in our lab</li>
-          <li>You receive embryo transfer in your prepared uterus</li>
-          <li>Success rates: 55–70% per transfer regardless of your age</li>
-          <li>Pregnancy feels and is biologically yours — you carry and deliver</li>
-          <li>Fully legal and confidential under ART Act 2021 India</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>When donor eggs are recommended</h3>
+ <ul>
+ <li>Age over 42 with own eggs (success with own eggs is low)</li>
+ <li>Very low AMH (below 0.3 ng/ml) with poor response to stimulation</li>
+ <li>Multiple failed IVF cycles with poor embryo quality</li>
+ <li>Premature ovarian insufficiency (POI) — early menopause</li>
+ <li>Genetic conditions that cannot be treated with PGT-A</li>
+ <li>No retrievable eggs in stimulation cycle</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>What donor egg IVF involves</h3>
+ <ul>
+ <li>Donor — screened young woman, anonymous under ART Act 2021</li>
+ <li>Her eggs fertilised with your partner's sperm in our lab</li>
+ <li>You receive embryo transfer in your prepared uterus</li>
+ <li>Success rates: 55–70% per transfer regardless of your age</li>
+ <li>Pregnancy feels and is biologically yours — you carry and deliver</li>
+ <li>Fully legal and confidential under ART Act 2021 India</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- DR STRIP -->
 <section class="section" style="padding-top:0;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — IVF After 35 Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. Prashanthi Reddy</h3>
-        <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
-        19+ years helping women over 35, 38, and 40 achieve pregnancy with personalised IVF protocols, PGT-A embryo testing, and when appropriate, donor egg IVF. Age is a factor — not the final answer.<br/>
-        <strong style="opacity:1">Clinic: Monday–Saturday 9AM–7PM · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — IVF After 35 Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. Prashanthi Reddy</h3>
+ <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
+ 19+ years helping women over 35, 38, and 40 achieve pregnancy with personalised IVF protocols, PGT-A embryo testing, and when appropriate, donor egg IVF. Age is a factor — not the final answer.<br/>
+ <strong style="opacity:1">Clinic: Monday–Saturday 9AM–7PM · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Frequently Asked Questions — <em>IVF After 35</em></h2>
+ <div class="section-inner">
+ <h2>Frequently Asked Questions — <em>IVF After 35</em></h2>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can I get pregnant with IVF after 35?</summary>
-      <div class="faq-a">Yes. Many women in Hyderabad successfully conceive with IVF after 35. The key variable is egg quality — which declines with age but varies greatly between individuals. IVF success rates at 35–37 remain strong (40–50% per transfer). With PGT-A genetic testing of embryos and personalised frozen embryo transfer, many women 38–40 also achieve healthy pregnancies. Do not assume 35 is too late — get an AMH test and fertility assessment to know exactly where you stand.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Can I get pregnant with IVF after 35?</summary>
+ <div class="faq-a">Yes. Many women in Hyderabad successfully conceive with IVF after 35. The key variable is egg quality — which declines with age but varies greatly between individuals. IVF success rates at 35–37 remain strong (40–50% per transfer). With PGT-A genetic testing of embryos and personalised frozen embryo transfer, many women 38–40 also achieve healthy pregnancies. Do not assume 35 is too late — get an AMH test and fertility assessment to know exactly where you stand.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">What is the IVF success rate after 35 in Hyderabad?</summary>
-      <div class="faq-a">IVF live birth rates per transfer at Mother Hospitals: under 35: 50–60%; age 35–37: 40–50%; age 38–40: 30–40%; age 40–42: 20–30%; age 42–44 (own eggs): 10–20%. With PGT-A tested chromosomally normal embryos, per-transfer success rates improve and miscarriage rates drop significantly across all age groups. Donor egg IVF (any age) achieves 55–70% per transfer.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What is the IVF success rate after 35 in Hyderabad?</summary>
+ <div class="faq-a">IVF live birth rates per transfer at Mother Hospitals: under 35: 50–60%; age 35–37: 40–50%; age 38–40: 30–40%; age 40–42: 20–30%; age 42–44 (own eggs): 10–20%. With PGT-A tested chromosomally normal embryos, per-transfer success rates improve and miscarriage rates drop significantly across all age groups. Donor egg IVF (any age) achieves 55–70% per transfer.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">How does age affect IVF?</summary>
-      <div class="faq-a">Age primarily affects egg chromosomal quality (aneuploidy rate). At 35, roughly 50% of eggs are chromosomally normal. By 40, this drops to 30%. By 42–43, only 10–20% of eggs may be normal. This means: older women may need more cycles to get enough normal embryos, and PGT-A testing becomes increasingly valuable to select the normal ones. It also means fewer eggs retrieved per cycle on average. However, women's responses vary widely — some 40-year-olds respond better than some 38-year-olds.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">How does age affect IVF?</summary>
+ <div class="faq-a">Age primarily affects egg chromosomal quality (aneuploidy rate). At 35, roughly 50% of eggs are chromosomally normal. By 40, this drops to 30%. By 42–43, only 10–20% of eggs may be normal. This means: older women may need more cycles to get enough normal embryos, and PGT-A testing becomes increasingly valuable to select the normal ones. It also means fewer eggs retrieved per cycle on average. However, women's responses vary widely — some 40-year-olds respond better than some 38-year-olds.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">What tests should I do before IVF after 35?</summary>
-      <div class="faq-a">Essential pre-IVF tests after 35: AMH (ovarian reserve), Antral Follicle Count (AFC) via ultrasound, Day 2–3 FSH and Estradiol, TSH (thyroid — must be below 2.5), prolactin, DHEAS, pelvic ultrasound, uterine cavity assessment, and partner semen analysis. These take one week and give a complete picture of your fertility status. Do not delay this assessment — the information is empowering, not frightening.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">What tests should I do before IVF after 35?</summary>
+ <div class="faq-a">Essential pre-IVF tests after 35: AMH (ovarian reserve), Antral Follicle Count (AFC) via ultrasound, Day 2–3 FSH and Estradiol, TSH (thyroid — must be below 2.5), prolactin, DHEAS, pelvic ultrasound, uterine cavity assessment, and partner semen analysis. These take one week and give a complete picture of your fertility status. Do not delay this assessment — the information is empowering, not frightening.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Is donor egg IVF an option after 40 in Hyderabad?</summary>
-      <div class="faq-a">Yes. Donor egg IVF is a well-established option for women over 40 or those with very low ovarian reserve at any age. Eggs from a young screened donor are fertilised with your partner's sperm, and embryos are transferred into your uterus. Success rates with donor eggs are 55–70% per transfer regardless of the recipient's age. The pregnancy is carried in your body — you experience the full pregnancy and delivery. All donor programmes at Mother Hospitals comply with ART Act 2021 and ICMR guidelines. Full confidentiality is maintained.</div>
-    </details>
-  </div>
+ <details class="faq-item">
+ <summary class="faq-q">Is donor egg IVF an option after 40 in Hyderabad?</summary>
+ <div class="faq-a">Yes. Donor egg IVF is a well-established option for women over 40 or those with very low ovarian reserve at any age. Eggs from a young screened donor are fertilised with your partner's sperm, and embryos are transferred into your uterus. Success rates with donor eggs are 55–70% per transfer regardless of the recipient's age. The pregnancy is carried in your body — you experience the full pregnancy and delivery. All donor programmes at Mother Hospitals comply with ART Act 2021 and ICMR guidelines. Full confidentiality is maintained.</div>
+ </details>
+ </div>
 </section>
 
 <!-- RELATED ARTICLES -->
 <section class="section" style="padding-top:40px;padding-bottom:60px">
-  <div class="section-inner">
-    <h2>Related <em>Articles</em> at Mother Hospitals</h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
-      <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
-      <a href="/frozen-embryo-transfer-hyderabad.html" class="related-card">❄️ Frozen Embryo Transfer</a>
-      <a href="/ivf-vs-iui-which-is-better-hyderabad.html" class="related-card">⚖️ IVF vs IUI</a>
-      <a href="/unexplained-infertility-treatment-hyderabad.html" class="related-card">❓ Unexplained Infertility</a>
-      <a href="/fertility-faq-hyderabad.html" class="related-card">💬 Fertility FAQs</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Articles</em> at Mother Hospitals</h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
+ <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
+ <a href="/frozen-embryo-transfer-hyderabad.html" class="related-card">❄️ Frozen Embryo Transfer</a>
+ <a href="/ivf-vs-iui-which-is-better-hyderabad.html" class="related-card">⚖️ IVF vs IUI</a>
+ <a href="/unexplained-infertility-treatment-hyderabad.html" class="related-card">❓ Unexplained Infertility</a>
+ <a href="/fertility-faq-hyderabad.html" class="related-card">💬 Fertility FAQs</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
-  <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
-  <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
-  <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes only and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy for guidance specific to your situation.</p>
-  <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
+ <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
+ <p>Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
+ <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sun: 10:30 AM – 1:30 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
+ <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes only and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy for guidance specific to your situation.</p>
+ <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
 </body>

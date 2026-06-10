@@ -49,380 +49,313 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}
-.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}
-.col-card ul{list-style:none;padding:0}
-.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
-.col-card ul li::before{content:"→";color:var(--magenta)}
-.timeline-simple{list-style:none;margin:1.5rem 0}
-.timeline-simple li{display:flex;gap:1rem;padding:0.9rem 0;border-bottom:1px solid var(--purple-light);align-items:flex-start}
-.timeline-simple li:last-child{border-bottom:none}
-.tl-icon{font-size:1.3rem;flex-shrink:0;margin-top:0.1rem}
-.tl-text h3{font-family:var(--font-d);font-size:0.97rem;color:var(--purple);margin-bottom:0.2rem}
-.tl-text p{font-size:0.85rem;color:var(--text-mid)}
-.badge-green{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.12rem 0.5rem;font-size:0.75rem;font-weight:700;margin-left:0.4rem}
-.badge-yellow{display:inline-block;background:#f57f17;color:#fff;border-radius:6px;padding:0.12rem 0.5rem;font-size:0.75rem;font-weight:700;margin-left:0.4rem}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.stats-row{display:flex;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.highlight-box{background:linear-gradient(135deg,var(--purple-pale),#fce4ec);border-radius:18px;padding:1.8rem;border:1px solid var(--purple-light);margin:1.5rem 0}.highlight-box h3{font-family:var(--font-d);font-size:1.3rem;color:var(--purple);margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.col-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.col-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.6rem}.col-card ul{list-style:none;padding:0}.col-card ul li{font-size:0.88rem;color:var(--text-mid);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}.col-card ul li::before{content:"→";color:var(--magenta)}.timeline-simple{list-style:none;margin:1.5rem 0}.timeline-simple li{display:flex;gap:1rem;padding:0.9rem 0;border-bottom:1px solid var(--purple-light);align-items:flex-start}.timeline-simple li:last-child{border-bottom:none}.tl-icon{font-size:1.3rem;flex-shrink:0;margin-top:0.1rem}.tl-text h3{font-family:var(--font-d);font-size:0.97rem;color:var(--purple);margin-bottom:0.2rem}.tl-text p{font-size:0.85rem;color:var(--text-mid)}.badge-green{display:inline-block;background:#2e7d32;color:#fff;border-radius:6px;padding:0.12rem 0.5rem;font-size:0.75rem;font-weight:700;margin-left:0.4rem}.badge-yellow{display:inline-block;background:#f57f17;color:#fff;border-radius:6px;padding:0.12rem 0.5rem;font-size:0.75rem;font-weight:700;margin-left:0.4rem}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 @media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"IVF for Working Women Hyderabad — Fertility Treatment Without Career Disruption",
-  "url":"https://motherhospitals.co.in/ivf-for-working-women-hyderabad.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"IVF for Working Women Hyderabad — Fertility Treatment Without Career Disruption",
+ "url":"https://motherhospitals.co.in/ivf-for-working-women-hyderabad.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20a%20working%20woman%20in%20Hyderabad%20and%20want%20to%20know%20about%20IVF%20without%20long%20leave%20at%20Mother%20Hospitals" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20a%20working%20woman%20in%20Hyderabad%20and%20want%20to%20know%20about%20IVF%20without%20long%20leave%20at%20Mother%20Hospitals" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👩‍💻</span> IT Professional Friendly</div>
-    <div class="trust-item"><span>🕗</span> Early Morning Slots: 8 AM</div>
-    <div class="trust-item"><span>💬</span> WhatsApp Consultations</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👩‍💻</span> IT Professional Friendly</div>
+ <div class="trust-item"><span>🕗</span> Early Morning Slots: 8 AM</div>
+ <div class="trust-item"><span>💬</span> WhatsApp Consultations</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › IVF for Working Women
-    </div>
-    <h1>IVF for <em>Working Women</em> in Hyderabad — No, You Do Not Need to Take Months Off</h1>
-    <p class="hero-sub">You have a demanding job. You also want a baby. IVF does not mean choosing one over the other. At Mother Hospitals Boduppal, most working women — including IT professionals, doctors, teachers, and executives — complete their IVF cycle with just 1–2 days of planned leave.</p>
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Book Early Morning Slot — 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20a%20working%20woman%20and%20want%20to%20plan%20IVF%20around%20my%20work%20schedule%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
-    </div>
-  </div>
+ <div class="page-hero-inner">
+ <div class="breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment</a> › IVF for Working Women
+ </div>
+ <h1>IVF for <em>Working Women</em> in Hyderabad — No, You Do Not Need to Take Months Off</h1>
+ <p class="hero-sub">You have a demanding job. You also want a baby. IVF does not mean choosing one over the other. At Mother Hospitals Boduppal, most working women — including IT professionals, doctors, teachers, and executives — complete their IVF cycle with just 1–2 days of planned leave.</p>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Book Early Morning Slot — 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20am%20a%20working%20woman%20and%20want%20to%20plan%20IVF%20around%20my%20work%20schedule%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp for Appointment</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">1–2</div><div class="stat-label">Days of leave needed for a full IVF cycle</div></div>
-      <div class="stat-box"><div class="stat-num">8 AM</div><div class="stat-label">Early morning scan slots — before work</div></div>
-      <div class="stat-box"><div class="stat-num">70%</div><div class="stat-label">Of our IVF patients are full-time working professionals</div></div>
-      <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">WhatsApp support for questions between appointments</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">1–2</div><div class="stat-label">Days of leave needed for a full IVF cycle</div></div>
+ <div class="stat-box"><div class="stat-num">8 AM</div><div class="stat-label">Early morning scan slots — before work</div></div>
+ <div class="stat-box"><div class="stat-num">70%</div><div class="stat-label">Of our IVF patients are full-time working professionals</div></div>
+ <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">WhatsApp support for questions between appointments</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- REAL TALK -->
 <section class="section" style="padding-top:30px">
-  <div class="section-inner">
-    <h2>The Real Reason Working Women <em>Delay IVF</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1rem">At Mother Hospitals, we hear the same hesitation repeatedly from working women in Hyderabad — especially those in IT companies at Hitech City, ECIL, Uppal, and Infosys Pocharam. The worry is not IVF itself — it is the perceived disruption to work.</p>
+ <div class="section-inner">
+ <h2>The Real Reason Working Women <em>Delay IVF</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1rem">At Mother Hospitals, we hear the same hesitation repeatedly from working women in Hyderabad — especially those in IT companies at Hitech City, ECIL, Uppal, and Infosys Pocharam. The worry is not IVF itself — it is the perceived disruption to work.</p>
 
-    <div class="voice-box">
-      <strong>"I keep postponing because I cannot afford to take 3–4 weeks off. My project deadlines are constant. Can I really do IVF while working?"</strong><br/>
-      Yes — and most of our patients do exactly this. IVF does not require bed rest. It does not require weeks off. With early morning scans, self-administered evening injections, and planned leave for just the retrieval and transfer, most working women complete IVF without their colleagues even knowing.
-    </div>
+ <div class="voice-box">
+ <strong>"I keep postponing because I cannot afford to take 3–4 weeks off. My project deadlines are constant. Can I really do IVF while working?"</strong><br/>
+ Yes — and most of our patients do exactly this. IVF does not require bed rest. It does not require weeks off. With early morning scans, self-administered evening injections, and planned leave for just the retrieval and transfer, most working women complete IVF without their colleagues even knowing.
+ </div>
 
-    <div class="fact-bar">
-      <strong>The truth:</strong> Delaying IVF by 6–12 months to find the "right time" at work is one of the most common — and most costly — mistakes in fertility planning. Egg quality declines every month after 35. There is rarely a perfect time at work. The best time is now.
-    </div>
-  </div>
+ <div class="fact-bar">
+ <strong>The truth:</strong> Delaying IVF by 6–12 months to find the "right time" at work is one of the most common — and most costly — mistakes in fertility planning. Egg quality declines every month after 35. There is rarely a perfect time at work. The best time is now.
+ </div>
+ </div>
 </section>
 
 <!-- WHAT IVF ACTUALLY REQUIRES AT WORK -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>What an IVF Cycle Actually <em>Requires from You</em></h2>
-    <p style="color:var(--text-mid);margin-bottom:1.2rem">Here is a realistic day-by-day view of what working women actually need to manage during an IVF cycle:</p>
+ <div class="section-inner">
+ <h2>What an IVF Cycle Actually <em>Requires from You</em></h2>
+ <p style="color:var(--text-mid);margin-bottom:1.2rem">Here is a realistic day-by-day view of what working women actually need to manage during an IVF cycle:</p>
 
-    <ul class="timeline-simple">
-      <li>
-        <div class="tl-icon">📅</div>
-        <div class="tl-text">
-          <h3>Cycle Planning (1 clinic visit) <span class="badge-green">Half morning</span></h3>
-          <p>Baseline scan on Day 2–3 of your period — usually takes 30–45 minutes. Prescriptions explained. Can be done before work at 8 AM.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">💉</div>
-        <div class="tl-text">
-          <h3>Daily Injections — Days 1–10 of Stimulation <span class="badge-green">5 min at home</span></h3>
-          <p>Self-administered subcutaneous injections at home — typically done at 8–9 PM. Simple pen injectors. Nurse teaches you on Day 1. No clinic visit for this. No impact on work.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">🔬</div>
-        <div class="tl-text">
-          <h3>Monitoring Scans (3–4 visits) <span class="badge-green">Before work — 8–9 AM</span></h3>
-          <p>Usually on Day 5, Day 8, Day 10 of stimulation. Each scan takes 20–30 minutes. We offer 8 AM appointments for working women. Done before your 10 AM work start. Ultrasound only — no blood draws needed for every scan.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">🏥</div>
-        <div class="tl-text">
-          <h3>Egg Retrieval Day <span class="badge-yellow">1 day off — plan for Friday</span></h3>
-          <p>Short sedation (not general anaesthesia). Retrieval takes 20–30 minutes. You rest in clinic for 2–3 hours, then go home. Rest that day at home. Most women return to desk work the next day. We can schedule retrievals on Fridays where possible.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">🧬</div>
-        <div class="tl-text">
-          <h3>Lab Days — Embryo Development (Day 3–5 post retrieval) <span class="badge-green">No clinic visit needed</span></h3>
-          <p>Embryologist calls/WhatsApps you with daily embryo development reports. You are at work. No visits required. Just wait for the updates.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">🌸</div>
-        <div class="tl-text">
-          <h3>Embryo Transfer Day (FET) <span class="badge-green">Half day or full day optional</span></h3>
-          <p>Transfer takes 15–20 minutes. No sedation. You can drive yourself. Many women go to work after the transfer — light desk work is perfectly fine. Taking the rest of the day off is optional, not mandatory.</p>
-        </div>
-      </li>
-      <li>
-        <div class="tl-icon">⏳</div>
-        <div class="tl-text">
-          <h3>Two Week Wait <span class="badge-green">Normal work — no restrictions</span></h3>
-          <p>Continue medications as prescribed (oral tablets, vaginal pessaries). Normal desk work is completely fine. Avoid strenuous gym workouts. Staying busy at work actually helps reduce the anxiety of waiting. Pregnancy blood test at Day 14.</p>
-        </div>
-      </li>
-    </ul>
+ <ul class="timeline-simple">
+ <li>
+ <div class="tl-icon">📅</div>
+ <div class="tl-text">
+ <h3>Cycle Planning (1 clinic visit) <span class="badge-green">Half morning</span></h3>
+ <p>Baseline scan on Day 2–3 of your period — usually takes 30–45 minutes. Prescriptions explained. Can be done before work at 8 AM.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">💉</div>
+ <div class="tl-text">
+ <h3>Daily Injections — Days 1–10 of Stimulation <span class="badge-green">5 min at home</span></h3>
+ <p>Self-administered subcutaneous injections at home — typically done at 8–9 PM. Simple pen injectors. Nurse teaches you on Day 1. No clinic visit for this. No impact on work.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">🔬</div>
+ <div class="tl-text">
+ <h3>Monitoring Scans (3–4 visits) <span class="badge-green">Before work — 8–9 AM</span></h3>
+ <p>Usually on Day 5, Day 8, Day 10 of stimulation. Each scan takes 20–30 minutes. We offer 8 AM appointments for working women. Done before your 10 AM work start. Ultrasound only — no blood draws needed for every scan.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">🏥</div>
+ <div class="tl-text">
+ <h3>Egg Retrieval Day <span class="badge-yellow">1 day off — plan for Friday</span></h3>
+ <p>Short sedation (not general anaesthesia). Retrieval takes 20–30 minutes. You rest in clinic for 2–3 hours, then go home. Rest that day at home. Most women return to desk work the next day. We can schedule retrievals on Fridays where possible.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">🧬</div>
+ <div class="tl-text">
+ <h3>Lab Days — Embryo Development (Day 3–5 post retrieval) <span class="badge-green">No clinic visit needed</span></h3>
+ <p>Embryologist calls/WhatsApps you with daily embryo development reports. You are at work. No visits required. Just wait for the updates.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">🌸</div>
+ <div class="tl-text">
+ <h3>Embryo Transfer Day (FET) <span class="badge-green">Half day or full day optional</span></h3>
+ <p>Transfer takes 15–20 minutes. No sedation. You can drive yourself. Many women go to work after the transfer — light desk work is perfectly fine. Taking the rest of the day off is optional, not mandatory.</p>
+ </div>
+ </li>
+ <li>
+ <div class="tl-icon">⏳</div>
+ <div class="tl-text">
+ <h3>Two Week Wait <span class="badge-green">Normal work — no restrictions</span></h3>
+ <p>Continue medications as prescribed (oral tablets, vaginal pessaries). Normal desk work is completely fine. Avoid strenuous gym workouts. Staying busy at work actually helps reduce the anxiety of waiting. Pregnancy blood test at Day 14.</p>
+ </div>
+ </li>
+ </ul>
 
-    <div class="highlight-box">
-      <h3>Total Leave Required for IVF at Mother Hospitals</h3>
-      <ul class="check-list">
-        <li><strong>Mandatory time off:</strong> 1 day for egg retrieval (ideally a Friday)</li>
-        <li><strong>Optional time off:</strong> Half day for embryo transfer (or come back to work same afternoon)</li>
-        <li><strong>Early morning before-work visits:</strong> 3–4 scan appointments at 8 AM</li>
-        <li><strong>Home-based:</strong> All daily injections (5 min/evening) + oral medications</li>
-        <li><strong>WhatsApp:</strong> Embryo development updates without clinic visit</li>
-        <li><strong>Total leave used by most working patients:</strong> 1.5–2 days</li>
-      </ul>
-    </div>
-  </div>
+ <div class="highlight-box">
+ <h3>Total Leave Required for IVF at Mother Hospitals</h3>
+ <ul class="check-list">
+ <li><strong>Mandatory time off:</strong> 1 day for egg retrieval (ideally a Friday)</li>
+ <li><strong>Optional time off:</strong> Half day for embryo transfer (or come back to work same afternoon)</li>
+ <li><strong>Early morning before-work visits:</strong> 3–4 scan appointments at 8 AM</li>
+ <li><strong>Home-based:</strong> All daily injections (5 min/evening) + oral medications</li>
+ <li><strong>WhatsApp:</strong> Embryo development updates without clinic visit</li>
+ <li><strong>Total leave used by most working patients:</strong> 1.5–2 days</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
 <!-- HOW WE SUPPORT WORKING WOMEN -->
 <section class="section" style="padding-top:40px">
-  <div class="section-inner">
-    <h2>How Mother Hospitals <em>Supports Working Women</em></h2>
+ <div class="section-inner">
+ <h2>How Mother Hospitals <em>Supports Working Women</em></h2>
 
-    <div class="two-col">
-      <div class="col-card">
-        <h3>⏰ Schedule-Friendly Services</h3>
-        <ul>
-          <li>Early morning scan slots from 8:00 AM — before work start</li>
-          <li>Saturday retrieval and transfer options when needed</li>
-          <li>Quick 20–30 minute scan appointments — in and out</li>
-          <li>No unnecessary visits — only when clinically needed</li>
-          <li>Cycle planning to avoid heavy project periods where possible</li>
-          <li>Evening calls available for consultation after work hours</li>
-        </ul>
-      </div>
-      <div class="col-card">
-        <h3>💬 Digital-First Communication</h3>
-        <ul>
-          <li>WhatsApp updates for all embryo development news</li>
-          <li>Medication reminders via WhatsApp</li>
-          <li>Scan result explanations on WhatsApp (no need to wait)</li>
-          <li>Dedicated nurse coordinator — same person throughout</li>
-          <li>Teleconsultation for non-urgent follow-up questions</li>
-          <li>Reports available digitally — no need to collect in person</li>
-        </ul>
-      </div>
-    </div>
+ <div class="two-col">
+ <div class="col-card">
+ <h3>⏰ Schedule-Friendly Services</h3>
+ <ul>
+ <li>Early morning scan slots from 8:00 AM — before work start</li>
+ <li>Saturday retrieval and transfer options when needed</li>
+ <li>Quick 20–30 minute scan appointments — in and out</li>
+ <li>No unnecessary visits — only when clinically needed</li>
+ <li>Cycle planning to avoid heavy project periods where possible</li>
+ <li>Evening calls available for consultation after work hours</li>
+ </ul>
+ </div>
+ <div class="col-card">
+ <h3>💬 Digital-First Communication</h3>
+ <ul>
+ <li>WhatsApp updates for all embryo development news</li>
+ <li>Medication reminders via WhatsApp</li>
+ <li>Scan result explanations on WhatsApp (no need to wait)</li>
+ <li>Dedicated nurse coordinator — same person throughout</li>
+ <li>Teleconsultation for non-urgent follow-up questions</li>
+ <li>Reports available digitally — no need to collect in person</li>
+ </ul>
+ </div>
+ </div>
 
-    <div class="voice-box">
-      <strong>"I am a software engineer at Infosys Pocharam. I did my IVF at Mother Hospitals while working full time. All my scans were at 8 AM — I was at my desk by 10. Only took one day off for the retrieval. My team never knew."</strong><br/>
-      This is the experience we aim for every working woman at our Boduppal clinic. IVF should fit around your life — not the other way around.
-    </div>
+ <div class="voice-box">
+ <strong>"I am a software engineer at Infosys Pocharam. I did my IVF at Mother Hospitals while working full time. All my scans were at 8 AM — I was at my desk by 10. Only took one day off for the retrieval. My team never knew."</strong><br/>
+ This is the experience we aim for every working woman at our Boduppal clinic. IVF should fit around your life — not the other way around.
+ </div>
 
-    <p style="color:var(--text-mid);margin-top:1.5rem">Mother Hospitals is located in Boduppal — easily accessible from ECIL, Uppal, Nagole, Ghatkesar, and the Pocharam-Kompally corridor. Most patients from these areas reach us in under 20 minutes.</p>
-  </div>
+ <p style="color:var(--text-mid);margin-top:1.5rem">Mother Hospitals is located in Boduppal — easily accessible from ECIL, Uppal, Nagole, Ghatkesar, and the Pocharam-Kompally corridor. Most patients from these areas reach us in under 20 minutes.</p>
+ </div>
 </section>
 
 <!-- DR STRIP -->
 <section class="section" style="padding-top:20px;padding-bottom:30px">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — IVF for Working Women Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. Prashanthi Reddy</h3>
-        <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
-        19+ years helping working women in Hyderabad — IT professionals, doctors, teachers, business owners — balance their careers with their fertility journey. IVF designed around your life, not the other way around.<br/>
-        <strong style="opacity:1">Early Slots from 8 AM · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. Prashanthi Reddy — IVF for Working Women Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. Prashanthi Reddy</h3>
+ <p>MD (OBG) · Fertility & IVF Specialist · TGMC Reg: 50624<br/>
+ 19+ years helping working women in Hyderabad — IT professionals, doctors, teachers, business owners — balance their careers with their fertility journey. IVF designed around your life, not the other way around.<br/>
+ <strong style="opacity:1">Early Slots from 8 AM · Call 97059 93366 or WhatsApp 97059 93355</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--purple-pale);padding-top:40px;padding-bottom:40px">
-  <div class="section-inner">
-    <h2>Frequently Asked Questions — <em>IVF for Working Women</em></h2>
+ <div class="section-inner">
+ <h2>Frequently Asked Questions — <em>IVF for Working Women</em></h2>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can I do IVF while working full time?</summary>
-      <div class="faq-a">Yes. Most working women complete an IVF cycle while continuing their jobs. Monitoring scans (3–4 total) can be scheduled at 8 AM before work. Daily injections are self-administered at home in the evening and take 5 minutes. Only the egg retrieval (one day, sedation) and embryo transfer (half day, no sedation) require clinic attendance. Post-transfer, normal desk work is completely fine — no bed rest needed. Most working women at Mother Hospitals take just 1–2 days of leave total.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Can I do IVF while working full time?</summary>
+ <div class="faq-a">Yes. Most working women complete an IVF cycle while continuing their jobs. Monitoring scans (3–4 total) can be scheduled at 8 AM before work. Daily injections are self-administered at home in the evening and take 5 minutes. Only the egg retrieval (one day, sedation) and embryo transfer (half day, no sedation) require clinic attendance. Post-transfer, normal desk work is completely fine — no bed rest needed. Most working women at Mother Hospitals take just 1–2 days of leave total.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">How many days leave do I need for IVF?</summary>
-      <div class="faq-a">Realistically: 1 mandatory day off for egg retrieval (ideally schedule for a Friday), and optionally half a day for embryo transfer (many women return to work the same afternoon). Monitoring scans — 3–4 visits — are done at early morning 8 AM slots before your work start. Daily injections are done at home. Embryo development updates come via WhatsApp without clinic visits. Total leave: 1–2 days for most working women at our Boduppal clinic.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">How many days leave do I need for IVF?</summary>
+ <div class="faq-a">Realistically: 1 mandatory day off for egg retrieval (ideally schedule for a Friday), and optionally half a day for embryo transfer (many women return to work the same afternoon). Monitoring scans — 3–4 visits — are done at early morning 8 AM slots before your work start. Daily injections are done at home. Embryo development updates come via WhatsApp without clinic visits. Total leave: 1–2 days for most working women at our Boduppal clinic.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Does stress from work affect IVF success?</summary>
-      <div class="faq-a">Moderate work stress during IVF does not significantly reduce success rates — this is backed by multiple studies. IVF does not require rest or complete lifestyle shutdown. What matters more: avoiding strenuous exercise during ovarian stimulation, maintaining good sleep, avoiding alcohol, and taking medications on schedule. Many women find that staying engaged at work actually reduces the anxiety of the two-week wait. The key is avoiding extreme overwork — not normal work activity.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">Does stress from work affect IVF success?</summary>
+ <div class="faq-a">Moderate work stress during IVF does not significantly reduce success rates — this is backed by multiple studies. IVF does not require rest or complete lifestyle shutdown. What matters more: avoiding strenuous exercise during ovarian stimulation, maintaining good sleep, avoiding alcohol, and taking medications on schedule. Many women find that staying engaged at work actually reduces the anxiety of the two-week wait. The key is avoiding extreme overwork — not normal work activity.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">When is the best time to schedule IVF for working women in Hyderabad?</summary>
-      <div class="faq-a">The best timing: plan your scan appointments for 8 AM (available at Mother Hospitals Monday–Saturday), schedule egg retrieval for a Friday so you have the weekend to rest, and time the cycle start to avoid your busiest project weeks. Discuss your work calendar with our IVF coordinator — we can start your cycle on a specific day-of-cycle to fit your schedule. However, do not delay IVF indefinitely waiting for a perfect window — there rarely is one, and egg quality does not wait for convenient project timelines.</div>
-    </details>
+ <details class="faq-item">
+ <summary class="faq-q">When is the best time to schedule IVF for working women in Hyderabad?</summary>
+ <div class="faq-a">The best timing: plan your scan appointments for 8 AM (available at Mother Hospitals Monday–Saturday), schedule egg retrieval for a Friday so you have the weekend to rest, and time the cycle start to avoid your busiest project weeks. Discuss your work calendar with our IVF coordinator — we can start your cycle on a specific day-of-cycle to fit your schedule. However, do not delay IVF indefinitely waiting for a perfect window — there rarely is one, and egg quality does not wait for convenient project timelines.</div>
+ </details>
 
-    <details class="faq-item">
-      <summary class="faq-q">Can I travel for work during IVF?</summary>
-      <div class="faq-a">Short local travel is fine. During stimulation (10–12 days), you need to be in Hyderabad for 3–4 morning scans — so multi-day outstation travel during this window should be avoided. After embryo transfer, avoid travel for 2–3 days. We advise against air travel on retrieval day. With good calendar planning, most IVF cycles can be completed without major work travel disruption. Discuss any planned travel with our coordinator when planning your cycle start date.</div>
-    </details>
-  </div>
+ <details class="faq-item">
+ <summary class="faq-q">Can I travel for work during IVF?</summary>
+ <div class="faq-a">Short local travel is fine. During stimulation (10–12 days), you need to be in Hyderabad for 3–4 morning scans — so multi-day outstation travel during this window should be avoided. After embryo transfer, avoid travel for 2–3 days. We advise against air travel on retrieval day. With good calendar planning, most IVF cycles can be completed without major work travel disruption. Discuss any planned travel with our coordinator when planning your cycle start date.</div>
+ </details>
+ </div>
 </section>
 
 <!-- RELATED ARTICLES -->
 <section class="section" style="padding-top:40px;padding-bottom:60px">
-  <div class="section-inner">
-    <h2>Related <em>Articles</em> at Mother Hospitals</h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
-      <a href="/ivf-after-35-hyderabad.html" class="related-card">⏰ IVF After 35</a>
-      <a href="/frozen-embryo-transfer-hyderabad.html" class="related-card">❄️ Frozen Embryo Transfer</a>
-      <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
-      <a href="/ivf-vs-iui-which-is-better-hyderabad.html" class="related-card">⚖️ IVF vs IUI</a>
-      <a href="/fertility-faq-hyderabad.html" class="related-card">💬 Fertility FAQs</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Related <em>Articles</em> at Mother Hospitals</h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🧬 IVF Treatment Hyderabad</a>
+ <a href="/ivf-after-35-hyderabad.html" class="related-card">⏰ IVF After 35</a>
+ <a href="/frozen-embryo-transfer-hyderabad.html" class="related-card">❄️ Frozen Embryo Transfer</a>
+ <a href="/egg-freezing-hyderabad.html" class="related-card">🥚 Egg Freezing</a>
+ <a href="/ivf-vs-iui-which-is-better-hyderabad.html" class="related-card">⚖️ IVF vs IUI</a>
+ <a href="/fertility-faq-hyderabad.html" class="related-card">💬 Fertility FAQs</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
-  <p>Plot 34–35, Nagole Road, Boduppal, Hyderabad – 500 092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
-  <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sat: 9 AM – 7 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
-  <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes only and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy for guidance specific to your situation.</p>
-  <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
+ <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem">Mother Hospitals &amp; IVF Center</p>
+ <p>Plot 34–35, Nagole Road, Boduppal, Hyderabad – 500 092 &nbsp;|&nbsp; <a href="tel:+919705993366">97059 93366</a> &nbsp;|&nbsp; <a href="tel:+919705993355">97059 93355</a></p>
+ <p style="margin-top:0.4rem"><a href="https://motherhospitals.co.in">motherhospitals.co.in</a> &nbsp;|&nbsp; Mon–Sat: 9 AM – 7 PM &nbsp;|&nbsp; Emergency: 24 × 7</p>
+ <p style="margin-top:0.8rem;font-size:0.78rem;opacity:0.65">This article is for educational purposes only and does not replace personalised medical advice. Please consult Dr. Prashanthi Reddy for guidance specific to your situation.</p>
+ <p style="margin-top:0.6rem;font-size:0.78rem;opacity:0.65">© 2026 Mother Hospitals &amp; IVF Center. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
 </body>

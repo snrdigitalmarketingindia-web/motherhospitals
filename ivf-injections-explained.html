@@ -51,375 +51,304 @@
 </script>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FBTVLBBCH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3FBTVLBBCH');</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag{dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-3FBTVLBBCH');</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#5a1f7a;--purple-mid:#7b3fa0;--purple-light:#e8d5f5;--purple-pale:#f7f0fd;--magenta:#b5206e;--cream:#fdf8ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
-.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}
-.logo-img{height:50px;width:50px;object-fit:contain}
-.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}
-.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--magenta)}
-.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
-nav a{text-decoration:none}
-.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}
-.breadcrumb a{color:var(--purple);text-decoration:none}
-.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
-.page-hero-inner{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+nav a{text-decoration:none}.breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.2rem}.breadcrumb a{color:var(--purple);text-decoration:none}.page-hero{background:linear-gradient(150deg,#f0e6f8 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}.page-hero-inner{max-width:1240px;margin:0 auto}
 h1{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--purple);line-height:1.2;margin-bottom:1rem}
 h1 em{font-style:italic;color:var(--magenta)}
 h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--purple);margin-bottom:0.5rem}
 h2 em{font-style:italic;color:var(--magenta)}
-h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
-.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}
-.cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}
-.section{padding:60px 5%}
-.section-inner{max-width:1240px;margin:0 auto}
-.section-sub{color:var(--text-soft);margin-bottom:2rem}
-.stats-row{display:flex;gap:2rem;flex-wrap:wrap}
-.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}
-.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}
-.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}
-.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}
-.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}
-.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}
-.voice-box strong{color:var(--purple)}
-.inj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:1.5rem 0}
-.inj-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}
-.inj-card:hover{border-color:var(--purple)}
-.inj-icon{font-size:1.8rem;margin-bottom:0.5rem}
-.inj-tag{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:50px;padding:0.12rem 0.6rem;font-size:0.72rem;font-weight:600;color:var(--purple);margin-bottom:0.5rem}
-.inj-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.4rem}
-.inj-card p{font-size:0.85rem;color:var(--text-mid);line-height:1.6}
-.inj-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}
-.inj-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}
-.inj-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}
-.inj-table tr:nth-child(even) td{background:var(--purple-pale)}
-.needleless-box{background:linear-gradient(135deg,#e8f5e9,#f3e5f5);border:2px solid var(--purple);border-radius:20px;padding:2rem;margin:2rem 0}
-.needleless-box h3{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin-bottom:0.8rem}
-.needleless-box p{font-size:0.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:0.8rem}
-.check-list{list-style:none;margin:0.8rem 0}
-.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
-.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
-.side-effects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
-.se-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1.1rem;text-align:center}
-.se-icon{font-size:1.5rem;margin-bottom:0.4rem}
-.se-title{font-weight:700;font-size:0.9rem;color:var(--purple)}
-.se-desc{font-size:0.8rem;color:var(--text-mid);margin-top:0.3rem;line-height:1.5}
-.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}
-.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}
-.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}
-.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}
-.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}
-.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
-details[open] .faq-q::after{content:"▲"}
-.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
-.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}
-.related-card:hover{border-color:var(--purple);color:var(--purple)}
+h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}.hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:700px;margin-bottom:1.5rem}.cta-group{display:flex;gap:1rem;flex-wrap:wrap}.btn-primary{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.8rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.btn-secondary{background:#fff;color:var(--purple);border:2px solid var(--purple);padding:0.72rem 1.6rem;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-block}.section{padding:60px 5%}.section-inner{max-width:1240px;margin:0 auto}.section-sub{color:var(--text-soft);margin-bottom:2rem}.stats-row{display:flex;gap:2rem;flex-wrap:wrap}.stat-box{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:16px;padding:1.5rem 2rem;text-align:center;flex:1;min-width:140px}.stat-num{font-family:var(--font-d);font-size:2rem;font-weight:700}.stat-label{font-size:0.82rem;opacity:0.85;margin-top:0.3rem}.fact-bar{background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:14px;padding:1.2rem 1.8rem;margin:1.5rem 0;font-size:0.95rem;font-weight:500}.fact-bar strong{font-family:var(--font-d);font-size:1.1rem}.voice-box{background:var(--purple-pale);border-left:4px solid var(--magenta);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.92rem;color:var(--text-mid)}.voice-box strong{color:var(--purple)}.inj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:1.5rem 0}.inj-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem}.inj-card:hover{border-color:var(--purple)}.inj-icon{font-size:1.8rem;margin-bottom:0.5rem}.inj-tag{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:50px;padding:0.12rem 0.6rem;font-size:0.72rem;font-weight:600;color:var(--purple);margin-bottom:0.5rem}.inj-card h3{font-family:var(--font-d);font-size:1.1rem;color:var(--purple);margin-bottom:0.4rem}.inj-card p{font-size:0.85rem;color:var(--text-mid);line-height:1.6}.inj-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem}.inj-table th{background:var(--purple);color:#fff;padding:0.75rem 1rem;text-align:left;font-family:var(--font-d);font-size:0.95rem}.inj-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--purple-light);color:var(--text-mid);vertical-align:top}.inj-table tr:nth-child(even) td{background:var(--purple-pale)}.needleless-box{background:linear-gradient(135deg,#e8f5e9,#f3e5f5);border:2px solid var(--purple);border-radius:20px;padding:2rem;margin:2rem 0}.needleless-box h3{font-family:var(--font-d);font-size:1.5rem;color:var(--purple);margin-bottom:0.8rem}.needleless-box p{font-size:0.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:0.8rem}.check-list{list-style:none;margin:0.8rem 0}.check-list li{padding:0.35rem 0;font-size:0.88rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}.check-list li::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}.side-effects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}.se-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1.1rem;text-align:center}.se-icon{font-size:1.5rem;margin-bottom:0.4rem}.se-title{font-weight:700;font-size:0.9rem;color:var(--purple)}.se-desc{font-size:0.8rem;color:var(--text-mid);margin-top:0.3rem;line-height:1.5}.dr-strip{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap}.dr-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.4)}.dr-info h3{font-family:var(--font-d);font-size:1.5rem;margin-bottom:0.3rem}.dr-info p{opacity:0.88;font-size:0.9rem;line-height:1.6}.faq-item{border:1px solid var(--purple-light);border-radius:12px;margin-bottom:0.8rem;overflow:hidden}.faq-q{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-mid);list-style:none;background:var(--white)}.faq-q::-webkit-details-marker{display:none}.faq-q::after{content:"▼";float:right;font-size:0.8rem;color:var(--purple)}
+details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
-footer a{color:rgba(255,255,255,0.75);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}
-.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}
-.sticky-call{background:var(--purple);color:#fff}
-.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}}
-.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}
-.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}
-.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}
-.trust-item:last-child{border-right:none}
-.trust-item span{font-size:0.85rem}
+footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
+@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 </style>
-<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"IVF Injections Explained | Needleless IVF | Mother Hospitals Hyderabad",
-  "url":"https://motherhospitals.co.in/ivf-injections-explained.html",
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
-  "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"IVF Injections Explained | Needleless IVF | Mother Hospitals Hyderabad",
+ "url":"https://motherhospitals.co.in/ivf-injections-explained.html",
+ "speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".section-title",".hero-sub","[data-speakable]"]},
+ "isPartOf":{"@type":"WebSite","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Physician",
-  "name":"Dr. E. Prashanthi Reddy",
-  "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
-  "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
-  "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
-  "telephone":"+919705993366",
-  "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
-  "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
+ "@context":"https://schema.org",
+ "@type":"Physician",
+ "name":"Dr. E. Prashanthi Reddy",
+ "description":"IVF specialist with 19+ years experience. MBBS, DGO, PG Diploma in ART from Kiel University, Germany. TGMC Reg: 50624.",
+ "medicalSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics and Gynecology"},
+ "worksFor":{"@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}},
+ "telephone":"+919705993366",
+ "image":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg",
+ "sameAs":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"
 }
 </script>
 </head>
 <body>
 
 <div class="sticky-cta">
-  <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20IVF%20injections%20and%20Needleless%20IVF%20at%20Mother%20Hospitals" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+ <a href="tel:+919705993366" class="sticky-btn sticky-call">📞 Call Now</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20IVF%20injections%20and%20Needleless%20IVF%20at%20Mother%20Hospitals" class="sticky-btn sticky-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <nav>
-  <div class="nav-wrap">
-    <a href="/" class="logo-wrap">
-      <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
-      <div>
-        <div class="logo-name">Mother Hospitals</div>
-        <div class="logo-sub">IVF Center · Boduppal</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://motherhospitals.co.in">Home</a></li>
-      <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
-      <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
-      <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
-      <li><a href="/mother9-programme.html">Mother 9</a></li>
-      <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
-      <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
-    </ul>
-  </div>
+ <div class="nav-wrap">
+ <a href="/" class="logo-wrap">
+ <img src="/assets/logo.png" alt="Mother Hospitals IVF Center Logo" class="logo-img" width="50" height="50"/>
+ <div>
+ <div class="logo-name">Mother Hospitals</div>
+ <div class="logo-sub">IVF Center · Boduppal</div>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="https://motherhospitals.co.in">Home</a></li>
+ <li><a href="/ivf-treatment-hyderabad.html">IVF</a></li>
+ <li><a href="/maternity-care-hyderabad.html">Maternity</a></li>
+ <li><a href="/gynaecology-hyderabad.html">Gynaecology</a></li>
+ <li><a href="/mother9-programme.html">Mother 9</a></li>
+ <li><a href="/dr-prashanthi-reddy.html">Our Team</a></li>
+ <li><a href="/fertility-faq-hyderabad.html">FAQs</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
+ </ul>
+ </div>
 </nav>
 <div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
-    <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
-    <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
-    <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
-    <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
-    <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
-    <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
-    <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
-  </div>
+ <div class="trust-inner">
+ <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
+ <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
+ <div class="trust-item"><span>🏆</span> 19+ Years Experience</div>
+ <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
+ <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ </div>
 </div>
 
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › IVF Injections Explained
-    </nav>
-    <h1>IVF Injections <em>Explained</em></h1>
-    <p class="hero-sub">Worried about IVF injections? Understand every type — stimulation, antagonist, trigger, progesterone — and discover the Needleless IVF option available at Mother Hospitals & IVF Center, Boduppal, Hyderabad. Dr. E. Prashanthi Reddy, 19+ years, 5,000+ cycles.</p>
+ <div class="page-hero-inner">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="/">Home</a> › <a href="/ivf-treatment-hyderabad.html">IVF Treatment Hyderabad</a> › IVF Injections Explained
+ </nav>
+ <h1>IVF Injections <em>Explained</em></h1>
+ <p class="hero-sub">Worried about IVF injections? Understand every type — stimulation, antagonist, trigger, progesterone — and discover the Needleless IVF option available at Mother Hospitals & IVF Center, Boduppal, Hyderabad. Dr. E. Prashanthi Reddy, 19+ years, 5,000+ cycles.</p>
 
-    <div class="voice-box">
-      <strong>Quick Answer:</strong> A standard IVF cycle requires 10–14 daily stimulation injections (FSH/LH), antagonist injections from Day 5–7, one trigger injection, and progesterone support after transfer. At Mother Hospitals, a Needleless IVF protocol is available for suitable patients — replacing needle injections with nasal sprays, oral tablets, or patches. Call: 97059 93366 to ask if Needleless IVF is right for you.
-    </div>
+ <div class="voice-box">
+ <strong>Quick Answer:</strong> A standard IVF cycle requires 10–14 daily stimulation injections (FSH/LH), antagonist injections from Day 5–7, one trigger injection, and progesterone support after transfer. At Mother Hospitals, a Needleless IVF protocol is available for suitable patients — replacing needle injections with nasal sprays, oral tablets, or patches. Call: 97059 93366 to ask if Needleless IVF is right for you.
+ </div>
 
-    <div class="cta-group">
-      <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
-      <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20Needleless%20IVF%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 Ask About Needleless IVF</a>
-    </div>
-  </div>
+ <div class="cta-group">
+ <a href="tel:+919705993366" class="btn-primary">📞 Call: 97059 93366</a>
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20about%20Needleless%20IVF%20at%20Mother%20Hospitals" class="btn-secondary" target="_blank" rel="noopener">💬 Ask About Needleless IVF</a>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="section" style="padding-top:40px;padding-bottom:40px;background:var(--white)">
-  <div class="section-inner">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">10–14</div><div class="stat-label">Stimulation Days</div></div>
-      <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Types of IVF Injections</div></div>
-      <div class="stat-box"><div class="stat-num">✓</div><div class="stat-label">Needleless IVF Available</div></div>
-      <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles at Mother Hospitals</div></div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="stats-row">
+ <div class="stat-box"><div class="stat-num">10–14</div><div class="stat-label">Stimulation Days</div></div>
+ <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Types of IVF Injections</div></div>
+ <div class="stat-box"><div class="stat-num">✓</div><div class="stat-label">Needleless IVF Available</div></div>
+ <div class="stat-box"><div class="stat-num">5,000+</div><div class="stat-label">ICSI Cycles at Mother Hospitals</div></div>
+ </div>
+ </div>
 </section>
 
 <!-- TYPES OF INJECTIONS -->
 <section class="section">
-  <div class="section-inner">
-    <h2>The 4 Types of <em>IVF Injections</em></h2>
-    <p class="section-sub">Each injection serves a different purpose in the IVF process. Here is exactly what each one does and when it is given.</p>
-    <div class="inj-grid">
-      <div class="inj-card">
-        <div class="inj-icon">🔵</div>
-        <div class="inj-tag">Days 2–12 · Daily</div>
-        <h3>1. Stimulation Injections (FSH / LH)</h3>
-        <p>The main injections of IVF. FSH (follicle-stimulating hormone) and sometimes LH (luteinising hormone) stimulate multiple follicles to develop simultaneously. Brand names: Gonal-F, Puregon, Menopur, Fostimon. Given subcutaneously (into abdominal fat) with a very fine pen-needle. Dose is personalised based on your AMH, antral follicle count, and prior response.</p>
-      </div>
-      <div class="inj-card">
-        <div class="inj-icon">🟣</div>
-        <div class="inj-tag">Days 5–7 · Daily until trigger</div>
-        <h3>2. GnRH Antagonist (Suppression)</h3>
-        <p>Cetrorelix (Cetrotide) or ganirelix (Orgalutran) — added from Days 5–7 to prevent the body from releasing eggs prematurely before retrieval. Given as a small subcutaneous injection. Usually one additional injection per day alongside FSH, ending when the trigger is given.</p>
-      </div>
-      <div class="inj-card">
-        <div class="inj-icon">⚡</div>
-        <div class="inj-tag">One injection · Precisely timed</div>
-        <h3>3. Trigger Injection (Ovulation Induction)</h3>
-        <p>When follicles reach 18–20mm, a trigger injection matures the eggs and initiates final maturation. Two types: hCG trigger (Ovitrelle, Pregnyl) — the standard trigger. GnRH agonist trigger (Lupron, Decapeptyl) — used when OHSS risk is high. Given at a precisely timed hour (usually 10pm). Egg retrieval is scheduled exactly 36 hours later — timing is critical.</p>
-      </div>
-      <div class="inj-card">
-        <div class="inj-icon">🟢</div>
-        <div class="inj-tag">Post-retrieval · Until pregnancy test</div>
-        <h3>4. Progesterone Support</h3>
-        <p>After egg retrieval, progesterone supplements support the uterine lining and early pregnancy. Given as vaginal pessaries (Utrogestan, Cyclogest), vaginal gel (Crinone), or occasionally as intramuscular injections. Continued for 2 weeks post-transfer; if pregnant, continued to 10–12 weeks. Most women prefer pessaries over injections for this phase.</p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>The 4 Types of <em>IVF Injections</em></h2>
+ <p class="section-sub">Each injection serves a different purpose in the IVF process. Here is exactly what each one does and when it is given.</p>
+ <div class="inj-grid">
+ <div class="inj-card">
+ <div class="inj-icon">🔵</div>
+ <div class="inj-tag">Days 2–12 · Daily</div>
+ <h3>1. Stimulation Injections (FSH / LH)</h3>
+ <p>The main injections of IVF. FSH (follicle-stimulating hormone) and sometimes LH (luteinising hormone) stimulate multiple follicles to develop simultaneously. Brand names: Gonal-F, Puregon, Menopur, Fostimon. Given subcutaneously (into abdominal fat) with a very fine pen-needle. Dose is personalised based on your AMH, antral follicle count, and prior response.</p>
+ </div>
+ <div class="inj-card">
+ <div class="inj-icon">🟣</div>
+ <div class="inj-tag">Days 5–7 · Daily until trigger</div>
+ <h3>2. GnRH Antagonist (Suppression)</h3>
+ <p>Cetrorelix (Cetrotide) or ganirelix (Orgalutran) — added from Days 5–7 to prevent the body from releasing eggs prematurely before retrieval. Given as a small subcutaneous injection. Usually one additional injection per day alongside FSH, ending when the trigger is given.</p>
+ </div>
+ <div class="inj-card">
+ <div class="inj-icon">⚡</div>
+ <div class="inj-tag">One injection · Precisely timed</div>
+ <h3>3. Trigger Injection (Ovulation Induction)</h3>
+ <p>When follicles reach 18–20mm, a trigger injection matures the eggs and initiates final maturation. Two types: hCG trigger (Ovitrelle, Pregnyl) — the standard trigger. GnRH agonist trigger (Lupron, Decapeptyl) — used when OHSS risk is high. Given at a precisely timed hour (usually 10pm). Egg retrieval is scheduled exactly 36 hours later — timing is critical.</p>
+ </div>
+ <div class="inj-card">
+ <div class="inj-icon">🟢</div>
+ <div class="inj-tag">Post-retrieval · Until pregnancy test</div>
+ <h3>4. Progesterone Support</h3>
+ <p>After egg retrieval, progesterone supplements support the uterine lining and early pregnancy. Given as vaginal pessaries (Utrogestan, Cyclogest), vaginal gel (Crinone), or occasionally as intramuscular injections. Continued for 2 weeks post-transfer; if pregnant, continued to 10–12 weeks. Most women prefer pessaries over injections for this phase.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- INJECTION SCHEDULE TABLE -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>IVF Injection <em>Schedule</em> — Day by Day</h2>
-    <table class="inj-table">
-      <thead>
-        <tr><th>Day</th><th>Injection(s)</th><th>Route</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Day 2</strong></td><td>FSH (± LH)</td><td>Subcutaneous — abdomen</td><td>Start stimulation; baseline scan done first</td></tr>
-        <tr><td><strong>Days 3–4</strong></td><td>FSH (± LH)</td><td>Subcutaneous</td><td>Continue same time each day</td></tr>
-        <tr><td><strong>Day 5 scan</strong></td><td>FSH (± LH)</td><td>Subcutaneous</td><td>First monitoring scan; dose adjustment if needed</td></tr>
-        <tr><td><strong>Days 5–7</strong></td><td>FSH + GnRH antagonist</td><td>Subcutaneous (two separate injections)</td><td>Antagonist starts based on follicle size/E2 level</td></tr>
-        <tr><td><strong>Days 7–11</strong></td><td>FSH + GnRH antagonist</td><td>Subcutaneous</td><td>Scans every 1–2 days; dose adjusted per response</td></tr>
-        <tr><td><strong>Day 10–13 (trigger day)</strong></td><td>Trigger (hCG or agonist)</td><td>Subcutaneous</td><td>Given at exact prescribed time (e.g., 10pm); stop all other injections</td></tr>
-        <tr><td><strong>Day 14 (egg retrieval)</strong></td><td>None (sedation only)</td><td>IV sedation</td><td>36 hours after trigger; no morning injections</td></tr>
-        <tr><td><strong>Day 14 onwards</strong></td><td>Progesterone support</td><td>Vaginal pessary/gel or IM injection</td><td>Start evening of retrieval or next morning</td></tr>
-        <tr><td><strong>14 days post-transfer</strong></td><td>Progesterone (if positive: continue)</td><td>Vaginal</td><td>Beta-hCG test; continue progesterone if pregnant until 10–12 weeks</td></tr>
-      </tbody>
-    </table>
-  </div>
+ <div class="section-inner">
+ <h2>IVF Injection <em>Schedule</em> — Day by Day</h2>
+ <table class="inj-table">
+ <thead>
+ <tr><th>Day</th><th>Injection(s)</th><th>Route</th><th>Notes</th></tr>
+ </thead>
+ <tbody>
+ <tr><td><strong>Day 2</strong></td><td>FSH (± LH)</td><td>Subcutaneous — abdomen</td><td>Start stimulation; baseline scan done first</td></tr>
+ <tr><td><strong>Days 3–4</strong></td><td>FSH (± LH)</td><td>Subcutaneous</td><td>Continue same time each day</td></tr>
+ <tr><td><strong>Day 5 scan</strong></td><td>FSH (± LH)</td><td>Subcutaneous</td><td>First monitoring scan; dose adjustment if needed</td></tr>
+ <tr><td><strong>Days 5–7</strong></td><td>FSH + GnRH antagonist</td><td>Subcutaneous (two separate injections)</td><td>Antagonist starts based on follicle size/E2 level</td></tr>
+ <tr><td><strong>Days 7–11</strong></td><td>FSH + GnRH antagonist</td><td>Subcutaneous</td><td>Scans every 1–2 days; dose adjusted per response</td></tr>
+ <tr><td><strong>Day 10–13 (trigger day)</strong></td><td>Trigger (hCG or agonist)</td><td>Subcutaneous</td><td>Given at exact prescribed time (e.g., 10pm); stop all other injections</td></tr>
+ <tr><td><strong>Day 14 (egg retrieval)</strong></td><td>None (sedation only)</td><td>IV sedation</td><td>36 hours after trigger; no morning injections</td></tr>
+ <tr><td><strong>Day 14 onwards</strong></td><td>Progesterone support</td><td>Vaginal pessary/gel or IM injection</td><td>Start evening of retrieval or next morning</td></tr>
+ <tr><td><strong>14 days post-transfer</strong></td><td>Progesterone (if positive: continue)</td><td>Vaginal</td><td>Beta-hCG test; continue progesterone if pregnant until 10–12 weeks</td></tr>
+ </tbody>
+ </table>
+ </div>
 </section>
 
 <!-- NEEDLELESS IVF HIGHLIGHT -->
 <section class="section">
-  <div class="section-inner">
-    <div class="needleless-box">
-      <h3>🌿 Needleless IVF — Available at Mother Hospitals</h3>
-      <p>Many women's biggest anxiety about IVF is the daily injections. Mother Hospitals offers a <strong>Needleless IVF protocol</strong> for suitable patients — replacing subcutaneous stimulation injections with alternative hormone delivery methods that eliminate needles entirely or significantly reduce their number.</p>
-      <p>Needleless options may include: nasal sprays, oral gonadotrophin preparations, transdermal patches, or vaginal suppositories — depending on what is appropriate for your specific protocol and response profile.</p>
-      <ul class="check-list">
-        <li>No daily needle injections for stimulation</li>
-        <li>Significantly reduced needle anxiety and injection site discomfort</li>
-        <li>Suitable for patients with needle phobia or injection anxiety</li>
-        <li>Candidacy assessed at consultation — depends on AMH, AFC, and expected response</li>
-        <li>Same monitoring protocol (serial scans) as standard IVF</li>
-        <li>Ask about Needleless IVF at your first consultation</li>
-      </ul>
-      <div style="margin-top:1.2rem">
-        <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20if%20I%20am%20a%20candidate%20for%20Needleless%20IVF%20at%20Mother%20Hospitals" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block">💬 Ask About Needleless IVF</a>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="needleless-box">
+ <h3>🌿 Needleless IVF — Available at Mother Hospitals</h3>
+ <p>Many women's biggest anxiety about IVF is the daily injections. Mother Hospitals offers a <strong>Needleless IVF protocol</strong> for suitable patients — replacing subcutaneous stimulation injections with alternative hormone delivery methods that eliminate needles entirely or significantly reduce their number.</p>
+ <p>Needleless options may include: nasal sprays, oral gonadotrophin preparations, transdermal patches, or vaginal suppositories — depending on what is appropriate for your specific protocol and response profile.</p>
+ <ul class="check-list">
+ <li>No daily needle injections for stimulation</li>
+ <li>Significantly reduced needle anxiety and injection site discomfort</li>
+ <li>Suitable for patients with needle phobia or injection anxiety</li>
+ <li>Candidacy assessed at consultation — depends on AMH, AFC, and expected response</li>
+ <li>Same monitoring protocol (serial scans) as standard IVF</li>
+ <li>Ask about Needleless IVF at your first consultation</li>
+ </ul>
+ <div style="margin-top:1.2rem">
+ <a href="https://wa.me/919052074999?text=Hi%2C%20I%20want%20to%20know%20if%20I%20am%20a%20candidate%20for%20Needleless%20IVF%20at%20Mother%20Hospitals" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block">💬 Ask About Needleless IVF</a>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- SIDE EFFECTS -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>IVF Injection <em>Side Effects</em></h2>
-    <p class="section-sub">Most side effects are mild and temporary — a result of elevated hormone levels as multiple follicles develop.</p>
-    <div class="side-effects-grid">
-      <div class="se-card"><div class="se-icon">🫃</div><div class="se-title">Bloating</div><div class="se-desc">Abdominal fullness as follicles grow — very common, usually mild</div></div>
-      <div class="se-card"><div class="se-icon">😢</div><div class="se-title">Mood Swings</div><div class="se-desc">Emotional sensitivity due to elevated oestrogen — normal and temporary</div></div>
-      <div class="se-card"><div class="se-icon">😴</div><div class="se-title">Fatigue</div><div class="se-desc">Tiredness during stimulation phase — rest is recommended</div></div>
-      <div class="se-card"><div class="se-icon">🤕</div><div class="se-title">Headaches</div><div class="se-desc">Particularly during the antagonist phase — usually mild</div></div>
-      <div class="se-card"><div class="se-icon">🔴</div><div class="se-title">Injection Site</div><div class="se-desc">Bruising, redness or mild swelling — rotate injection sites daily</div></div>
-      <div class="se-card"><div class="se-icon">⚠️</div><div class="se-title">OHSS Risk</div><div class="se-desc">Ovarian hyperstimulation syndrome — rare, monitored by serial scans; freeze-all if risk is high</div></div>
-    </div>
-    <div class="fact-bar">
-      <strong>OHSS Prevention:</strong> At Mother Hospitals, if your follicle count is high or E2 levels rise rapidly, the trigger is switched to a GnRH agonist and all embryos are frozen (freeze-all strategy) — eliminating the risk of severe OHSS.
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>IVF Injection <em>Side Effects</em></h2>
+ <p class="section-sub">Most side effects are mild and temporary — a result of elevated hormone levels as multiple follicles develop.</p>
+ <div class="side-effects-grid">
+ <div class="se-card"><div class="se-icon">🫃</div><div class="se-title">Bloating</div><div class="se-desc">Abdominal fullness as follicles grow — very common, usually mild</div></div>
+ <div class="se-card"><div class="se-icon">😢</div><div class="se-title">Mood Swings</div><div class="se-desc">Emotional sensitivity due to elevated oestrogen — normal and temporary</div></div>
+ <div class="se-card"><div class="se-icon">😴</div><div class="se-title">Fatigue</div><div class="se-desc">Tiredness during stimulation phase — rest is recommended</div></div>
+ <div class="se-card"><div class="se-icon">🤕</div><div class="se-title">Headaches</div><div class="se-desc">Particularly during the antagonist phase — usually mild</div></div>
+ <div class="se-card"><div class="se-icon">🔴</div><div class="se-title">Injection Site</div><div class="se-desc">Bruising, redness or mild swelling — rotate injection sites daily</div></div>
+ <div class="se-card"><div class="se-icon">⚠️</div><div class="se-title">OHSS Risk</div><div class="se-desc">Ovarian hyperstimulation syndrome — rare, monitored by serial scans; freeze-all if risk is high</div></div>
+ </div>
+ <div class="fact-bar">
+ <strong>OHSS Prevention:</strong> At Mother Hospitals, if your follicle count is high or E2 levels rise rapidly, the trigger is switched to a GnRH agonist and all embryos are frozen (freeze-all strategy) — eliminating the risk of severe OHSS.
+ </div>
+ </div>
 </section>
 
 <!-- HOW TO INJECT -->
 <section class="section">
-  <div class="section-inner">
-    <h2>How to Administer <em>IVF Injections</em></h2>
-    <p class="section-sub">Most injections are self-administered. The nurse at Mother Hospitals will train you before you start. Here are the key steps.</p>
-    <ol style="list-style:none;padding:0">
-      <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
-        <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">1</div>
-        <div><strong style="color:var(--purple)">Wash hands thoroughly</strong> — clean technique reduces infection risk at the injection site.</div>
-      </li>
-      <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
-        <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">2</div>
-        <div><strong style="color:var(--purple)">Prepare the pen or syringe</strong> — prime the pen as demonstrated; check dose matches your prescription.</div>
-      </li>
-      <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
-        <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">3</div>
-        <div><strong style="color:var(--purple)">Choose injection site</strong> — lower abdomen (2–3 fingers below navel, either side) or outer thigh. Rotate sites daily to prevent bruising.</div>
-      </li>
-      <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
-        <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">4</div>
-        <div><strong style="color:var(--purple)">Pinch skin, insert needle at 45–90°</strong> — FSH pen needles are very fine (4–5mm). Insert smoothly, press pen button, hold for 10 seconds, withdraw.</div>
-      </li>
-      <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
-        <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">5</div>
-        <div><strong style="color:var(--purple)">Dispose of needle safely</strong> — use a sharps container provided. Never recap needles. Contact the clinic if you need more needles or have questions.</div>
-      </li>
-    </ol>
-  </div>
+ <div class="section-inner">
+ <h2>How to Administer <em>IVF Injections</em></h2>
+ <p class="section-sub">Most injections are self-administered. The nurse at Mother Hospitals will train you before you start. Here are the key steps.</p>
+ <ol style="list-style:none;padding:0">
+ <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
+ <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">1</div>
+ <div><strong style="color:var(--purple)">Wash hands thoroughly</strong> — clean technique reduces infection risk at the injection site.</div>
+ </li>
+ <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
+ <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">2</div>
+ <div><strong style="color:var(--purple)">Prepare the pen or syringe</strong> — prime the pen as demonstrated; check dose matches your prescription.</div>
+ </li>
+ <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
+ <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">3</div>
+ <div><strong style="color:var(--purple)">Choose injection site</strong> — lower abdomen (2–3 fingers below navel, either side) or outer thigh. Rotate sites daily to prevent bruising.</div>
+ </li>
+ <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
+ <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">4</div>
+ <div><strong style="color:var(--purple)">Pinch skin, insert needle at 45–90°</strong> — FSH pen needles are very fine (4–5mm). Insert smoothly, press pen button, hold for 10 seconds, withdraw.</div>
+ </li>
+ <li style="background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start">
+ <div style="background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0">5</div>
+ <div><strong style="color:var(--purple)">Dispose of needle safely</strong> — use a sharps container provided. Never recap needles. Contact the clinic if you need more needles or have questions.</div>
+ </li>
+ </ol>
+ </div>
 </section>
 
 <!-- DOCTOR STRIP -->
 <section class="section" style="padding-top:0">
-  <div class="section-inner">
-    <div class="dr-strip">
-      <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
-      <div class="dr-info">
-        <h3>Dr. E. Prashanthi Reddy</h3>
-        <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
-        19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
-        <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
-      </div>
-    </div>
-  </div>
+ <div class="section-inner">
+ <div class="dr-strip">
+ <img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy — IVF Specialist Hyderabad" class="dr-photo" width="100" height="100"/>
+ <div class="dr-info">
+ <h3>Dr. E. Prashanthi Reddy</h3>
+ <p>MBBS, DGO · ART Training — Kiel University, Germany · TGMC Reg: 50624<br/>
+ 19+ Years Experience · 5,000+ ICSI Cycles · Mother Hospitals & IVF Center, Boduppal, Hyderabad<br/>
+ <strong style="opacity:1">📞 97059 93366 / 97059 93355 &nbsp;|&nbsp; 💬 WhatsApp: 90520 74999</strong></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section" style="background:var(--white);padding-top:50px;padding-bottom:50px">
-  <div class="section-inner">
-    <h2>Frequently Asked <em>Questions</em></h2>
-    <div style="margin-top:1.5rem">
-      <details class="faq-item"><summary class="faq-q">How many injections are required for IVF?</summary><div class="faq-a">A typical IVF cycle requires 10–14 daily stimulation injections (FSH/LH), antagonist injections from Day 5–7, and one trigger injection — approximately 12–17 total needle injections over 12–16 days. After retrieval, progesterone is usually given as vaginal pessaries (not injections). The Needleless IVF protocol at Mother Hospitals can eliminate the daily needle injections for suitable patients.</div></details>
-      <details class="faq-item"><summary class="faq-q">Are IVF injections painful?</summary><div class="faq-a">Most women rate IVF injections as mild to moderate discomfort — not significantly painful. The stimulation pen needles are very fine (4–5mm, similar to insulin needles). The injection itself takes 5–10 seconds. The main discomforts are bloating, mood changes, and mild injection-site bruising — not the injections themselves. Needleless IVF eliminates this concern entirely for suitable patients.</div></details>
-      <details class="faq-item"><summary class="faq-q">What is Needleless IVF and is it available in Hyderabad?</summary><div class="faq-a">Needleless IVF replaces standard subcutaneous injection protocols with alternative hormone delivery — nasal sprays, oral preparations, transdermal patches, or vaginal suppositories. Yes, it is available at Mother Hospitals & IVF Center, Boduppal, Hyderabad. Not every patient is a candidate — suitability depends on ovarian reserve (AMH), antral follicle count, and expected stimulation response. Discuss at your first consultation.</div></details>
-      <details class="faq-item"><summary class="faq-q">What are the side effects of IVF stimulation injections?</summary><div class="faq-a">Common: bloating, abdominal fullness, mood swings, fatigue, headaches, mild injection-site bruising. Uncommon: significant OHSS (ovarian hyperstimulation syndrome) — causing severe bloating, nausea, fluid retention. OHSS risk is monitored carefully at Mother Hospitals. If risk is high, the trigger is changed to a GnRH agonist and all embryos are frozen (freeze-all) to eliminate severe OHSS.</div></details>
-      <details class="faq-item"><summary class="faq-q">Can someone else give me the IVF injection if I am afraid of needles?</summary><div class="faq-a">Yes. A partner, family member, or nurse can administer the injections. Mother Hospitals trains both patient and partner in injection technique before the cycle starts. Alternatively, you can attend the clinic for your daily injection if you prefer not to do it at home. Needleless IVF eliminates this concern entirely — ask about candidacy at your consultation.</div></details>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Frequently Asked <em>Questions</em></h2>
+ <div style="margin-top:1.5rem">
+ <details class="faq-item"><summary class="faq-q">How many injections are required for IVF?</summary><div class="faq-a">A typical IVF cycle requires 10–14 daily stimulation injections (FSH/LH), antagonist injections from Day 5–7, and one trigger injection — approximately 12–17 total needle injections over 12–16 days. After retrieval, progesterone is usually given as vaginal pessaries (not injections). The Needleless IVF protocol at Mother Hospitals can eliminate the daily needle injections for suitable patients.</div></details>
+ <details class="faq-item"><summary class="faq-q">Are IVF injections painful?</summary><div class="faq-a">Most women rate IVF injections as mild to moderate discomfort — not significantly painful. The stimulation pen needles are very fine (4–5mm, similar to insulin needles). The injection itself takes 5–10 seconds. The main discomforts are bloating, mood changes, and mild injection-site bruising — not the injections themselves. Needleless IVF eliminates this concern entirely for suitable patients.</div></details>
+ <details class="faq-item"><summary class="faq-q">What is Needleless IVF and is it available in Hyderabad?</summary><div class="faq-a">Needleless IVF replaces standard subcutaneous injection protocols with alternative hormone delivery — nasal sprays, oral preparations, transdermal patches, or vaginal suppositories. Yes, it is available at Mother Hospitals & IVF Center, Boduppal, Hyderabad. Not every patient is a candidate — suitability depends on ovarian reserve (AMH), antral follicle count, and expected stimulation response. Discuss at your first consultation.</div></details>
+ <details class="faq-item"><summary class="faq-q">What are the side effects of IVF stimulation injections?</summary><div class="faq-a">Common: bloating, abdominal fullness, mood swings, fatigue, headaches, mild injection-site bruising. Uncommon: significant OHSS (ovarian hyperstimulation syndrome) — causing severe bloating, nausea, fluid retention. OHSS risk is monitored carefully at Mother Hospitals. If risk is high, the trigger is changed to a GnRH agonist and all embryos are frozen (freeze-all) to eliminate severe OHSS.</div></details>
+ <details class="faq-item"><summary class="faq-q">Can someone else give me the IVF injection if I am afraid of needles?</summary><div class="faq-a">Yes. A partner, family member, or nurse can administer the injections. Mother Hospitals trains both patient and partner in injection technique before the cycle starts. Alternatively, you can attend the clinic for your daily injection if you prefer not to do it at home. Needleless IVF eliminates this concern entirely — ask about candidacy at your consultation.</div></details>
+ </div>
+ </div>
 </section>
 
 <!-- RELATED -->
 <section class="section" style="padding-top:40px;padding-bottom:80px">
-  <div class="section-inner">
-    <h2>Explore the Full <em>IVF Journey</em></h2>
-    <div class="related-grid">
-      <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
-      <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
-      <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
-      <a href="/blastocyst-transfer-explained.html" class="related-card">🔵 Blastocyst Transfer</a>
-      <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
-      <a href="/ivf-recovery-aftercare.html" class="related-card">🛌 IVF Recovery</a>
-      <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
-      <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
-      <a href="/ivf-procedure-explained.html" class="related-card">🔬 IVF Procedure</a>
-      <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
-    </div>
-  </div>
+ <div class="section-inner">
+ <h2>Explore the Full <em>IVF Journey</em></h2>
+ <div class="related-grid">
+ <a href="/ivf-treatment-step-by-step.html" class="related-card">📋 IVF Step by Step</a>
+ <a href="/egg-retrieval-procedure.html" class="related-card">🥚 Egg Retrieval</a>
+ <a href="/embryo-transfer-procedure.html" class="related-card">🌱 Embryo Transfer</a>
+ <a href="/blastocyst-transfer-explained.html" class="related-card">🔵 Blastocyst Transfer</a>
+ <a href="/ivf-timeline-day-by-day.html" class="related-card">📅 Day-by-Day Timeline</a>
+ <a href="/ivf-recovery-aftercare.html" class="related-card">🛌 IVF Recovery</a>
+ <a href="/ivf-success-factors.html" class="related-card">📊 IVF Success Factors</a>
+ <a href="/ivf-treatment-hyderabad.html" class="related-card">🏥 IVF Hyderabad</a>
+ <a href="/ivf-procedure-explained.html" class="related-card">🔬 IVF Procedure</a>
+ <a href="/what-happens-during-ivf-treatment.html" class="related-card">❓ What Happens in IVF?</a>
+ </div>
+ </div>
 </section>
 
 <footer>
-  <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
-  <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
-  <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice.</p>
+ <p><strong>Mother Hospitals & IVF Center</strong> — Unit Nos. 201–204, Tulip Block, Aakruthi Township, Boduppal, Hyderabad 500092</p>
+ <p style="margin-top:0.5rem">📞 <a href="tel:+919705993366">97059 93366</a> / <a href="tel:+919705993355">97059 93355</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/919052074999">WhatsApp: 90520 74999</a></p>
+ <p style="margin-top:0.8rem;opacity:0.65;font-size:0.78rem">© 2025 Mother Hospitals & IVF Center. This page is for informational purposes only and does not constitute medical advice.</p>
 </footer>
 
 </body>
