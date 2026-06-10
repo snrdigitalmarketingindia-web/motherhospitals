@@ -1,4 +1,4 @@
-name: IndexNow — Notify Google/Bing on Push
+name: Bing — Submit Sitemap URLs on Push
 
 on:
   push:
@@ -31,7 +31,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Submit all sitemap URLs via IndexNow
+      - name: Submit all sitemap URLs to Bing
+        env:
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: |
           echo "Submitting $(grep -c '<loc>' sitemap.xml) URLs from sitemap.xml..."
           python gsc-indexing/submit_sitemap_urls.py
