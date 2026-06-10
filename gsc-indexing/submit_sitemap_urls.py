@@ -24,7 +24,7 @@ import requests
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 SITE_URL      = "https://motherhospitals.co.in"
 INDEXNOW_KEY  = "ee61857d31f748f48aa64b652b738a10"
-INDEXNOW_API  = "https://yandex.com/indexnow"   # Yandex endpoint — confirmed working
+INDEXNOW_API  = "https://api.indexnow.org/indexnow"   # Central endpoint → Google, Bing, Yandex
 SITEMAP_LOCAL = os.path.join(os.path.dirname(__file__), "../sitemap.xml")
 SITEMAP_URL   = "https://motherhospitals.co.in/sitemap.xml"
 # ─────────────────────────────────────────────────────────────────────────────
