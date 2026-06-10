@@ -1,39 +1,33 @@
-name: Bing — Submit Sitemap URLs on Push
+name: Bing URL Indexing
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
-      - "sitemap.xml"
-      - "*.html"
-      - "gsc-indexing/**"
-
-  workflow_dispatch:   # Manual trigger from GitHub Actions tab
+      - '**.html'
+      - 'sitemap.xml'
+      - 'gsc-indexing/**'
+  workflow_dispatch:   # allow manual trigger from GitHub Actions UI
 
 jobs:
-  submit-indexnow:
-    name: Submit sitemap URLs via IndexNow
+  bing-submit:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r gsc-indexing/requirements.txt
 
-      - name: Submit all sitemap URLs to Bing
+      - name: Submit URLs to Bing + IndexNow
         env:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
-        run: |
-          echo "Submitting $(grep -c '<loc>' sitemap.xml) URLs from sitemap.xml..."
-          python gsc-indexing/submit_sitemap_urls.py
+        run: python gsc-indexing/submit_sitemap_urls.py
