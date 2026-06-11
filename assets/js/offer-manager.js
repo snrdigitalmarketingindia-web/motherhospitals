@@ -58,12 +58,13 @@
         '">✕</button>' +
       '</div>';
 
-    /* insert before <nav> if present, else prepend to body */
-    var nav = document.querySelector('nav');
-    if (nav) {
-      nav.parentNode.insertBefore(banner, nav);
+    /* insert after .trust-bar (original position on site), fallback to before <nav> */
+    var trustBar = document.querySelector('.trust-bar');
+    if (trustBar && trustBar.nextSibling) {
+      trustBar.parentNode.insertBefore(banner, trustBar.nextSibling);
     } else {
-      document.body.insertBefore(banner, document.body.firstChild);
+      var nav = document.querySelector('nav');
+      nav ? nav.parentNode.insertBefore(banner, nav) : document.body.insertBefore(banner, document.body.firstChild);
     }
   }
 
