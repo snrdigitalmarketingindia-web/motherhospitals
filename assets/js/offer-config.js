@@ -34,7 +34,7 @@ window.MH_OFFERS = [
     popup_subtitle: "Germany-trained specialist · 5,000+ IVF cycles · ART Act 2021 certified",
 
     /* Where to show this offer */
-    display_locations: ["top_banner", "navbar", "popup"],
+    display_locations: ["top_banner", "popup"],
 
     /* Popup delay in ms */
     popup_delay_ms: 4000,
