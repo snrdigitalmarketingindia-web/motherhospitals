@@ -266,11 +266,11 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 footer a:hover{color:#fff}.footer-links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin:1rem 0}
 
 /* Responsive */
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:0.8rem}.stat-box{padding:1.1rem 1rem}.why-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:0.9rem}.dr-strip{flex-direction:column;align-items:flex-start;gap:1.2rem}.m9-box{padding:1.8rem 1.2rem}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.stats-row{gap:0.8rem}.stat-box{padding:1.1rem 1rem}.why-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:0.9rem}.dr-strip{flex-direction:column;align-items:flex-start;gap:1.2rem}.m9-box{padding:1.8rem 1.2rem}
 }
 @media(max-width:480px){.page-hero{padding:40px 5% 36px}.section{padding:44px 5%}.stat-num{font-size:1.6rem}.services-grid{grid-template-columns:1fr 1fr}
 }.top-bar{background:#5a1f7a;color:#fff;font-size:0.76rem;padding:0.4rem 5%;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.top-bar a{color:rgba(255,255,255,0.9);text-decoration:none}.top-bar a:hover{color:#fff}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
-</style>
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fdf8ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SpeakableSpecification","cssSelector":[".direct-answer",".page-h1",".hero-sub",".faq-answer",".section-title",".section-sub"]}
 </script>
@@ -315,6 +315,21 @@ footer a:hover{color:#fff}.footer-links{display:flex;gap:1.5rem;justify-content:
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
+ <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ <div class="mob-menu">
+ <a href="https://motherhospitals.co.in">Home</a>
+ <a href="/ivf-treatment-hyderabad.html">IVF</a>
+ <a href="/maternity-care-hyderabad.html">Maternity</a>
+ <a href="/gynaecology-hyderabad.html">Gynaecology</a>
+ <a href="/mother9-programme.html">Mother 9</a>
+ <a href="/dr-prashanthi-reddy.html">Our Team</a>
+ <a href="/fertility-faq-hyderabad.html">FAQs</a>
+ <a href="/fertility-tools.html">🧮 Free Fertility Tools</a>
+ <a href="/blog/">Blog</a>
+ <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
  </div>
 </nav>
 <div class="trust-bar">

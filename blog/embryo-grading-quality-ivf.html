@@ -45,7 +45,7 @@
 body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.8}
 a{color:var(--magenta)}
 nav{background:#fff;border-bottom:1px solid var(--purple-light);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:66px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(90,31,122,0.07)}.logo-text strong{font-size:0.95rem;color:var(--purple);font-weight:700}.logo-text span{font-size:0.7rem;color:var(--magenta);font-weight:500;display:block}.logo-wrap{display:flex;align-items:center;gap:9px;text-decoration:none}.logo-wrap img{height:42px;border-radius:8px}.nav-links{display:flex;gap:1.3rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:var(--magenta);color:#fff!important;padding:0.45rem 1rem;border-radius:50px;font-weight:600}
-@media(max-width:768px){.nav-links{display:none}}.breadcrumb{padding:0.7rem 5%;background:var(--cream);font-size:0.82rem;color:var(--text-mid)}.breadcrumb a{color:var(--purple);text-decoration:none}.article-hero{background:linear-gradient(135deg,var(--purple) 0%,#7b3fa0 60%,var(--magenta) 100%);color:#fff;padding:3rem 5% 2.5rem}.article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.25;max-width:800px;margin-bottom:0.8rem}.article-meta{font-size:0.83rem;opacity:0.85;display:flex;flex-wrap:wrap;gap:1rem}.article-wrap{max-width:900px;margin:0 auto;padding:2.5rem 5%}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}}.breadcrumb{padding:0.7rem 5%;background:var(--cream);font-size:0.82rem;color:var(--text-mid)}.breadcrumb a{color:var(--purple);text-decoration:none}.article-hero{background:linear-gradient(135deg,var(--purple) 0%,#7b3fa0 60%,var(--magenta) 100%);color:#fff;padding:3rem 5% 2.5rem}.article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.25;max-width:800px;margin-bottom:0.8rem}.article-meta{font-size:0.83rem;opacity:0.85;display:flex;flex-wrap:wrap;gap:1rem}.article-wrap{max-width:900px;margin:0 auto;padding:2.5rem 5%}
 h2{font-size:1.45rem;color:var(--purple);margin:2rem 0 0.8rem;padding-bottom:0.4rem;border-bottom:2px solid var(--purple-light)}
 h3{font-size:1.1rem;color:var(--purple);margin:1.4rem 0 0.5rem}
 p{color:var(--text-mid);margin-bottom:1rem}
@@ -63,7 +63,7 @@ table{width:100%;border-collapse:collapse;margin:1.2rem 0}
 th{background:var(--purple);color:#fff;padding:0.6rem 0.8rem;font-size:0.88rem;text-align:left}
 td{padding:0.55rem 0.8rem;border-bottom:1px solid var(--purple-light);font-size:0.88rem;color:var(--text-mid)}
 tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cream);border-left:4px solid var(--magenta);border-radius:0 10px 10px 0;padding:1rem 1.2rem;margin:1.2rem 0}.highlight-box p{margin:0;color:var(--text-mid)}.direct-answer{background:var(--cream);border-left:4px solid var(--purple);border-radius:0 10px 10px 0;padding:1.1rem 1.3rem;margin:1.5rem 0}.direct-answer strong{display:block;color:var(--purple);margin-bottom:0.3rem;font-size:0.92rem;text-transform:uppercase;letter-spacing:0.04em}.direct-answer p{margin:0;color:var(--text-mid)}.grade-badge{display:inline-block;padding:0.15rem 0.6rem;border-radius:50px;font-weight:700;font-size:0.82rem;margin-right:0.3rem}.grade-a{background:#d4edda;color:#155724}.grade-b{background:#d1ecf1;color:#0c5460}.grade-c{background:#fff3cd;color:#856404}.grade-d{background:#f8d7da;color:#721c24}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
-</style>
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fdf8ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 <script type="text/javascript">
  (function(c,l,a,r,i,t,y){
  c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};
@@ -142,6 +142,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
 <h2>Day 3 Embryo Grading: The 1–4 Scale</h2>
 <p>By Day 3 of development, a fertilised egg (zygote) should have divided into roughly 6–8 cells. The embryologist examines the embryo and grades it on two main features: cell regularity (are the cells equal in size and shape?) and fragmentation (are there debris-like fragments between the cells?).</p>
 
+<div style="overflow-x:auto">
 <table>
  <tr><th>Grade</th><th>Cell Appearance</th><th>Fragmentation</th><th>Implantation Potential</th></tr>
  <tr><td><span class="grade-badge grade-a">Grade 1</span></td><td>All cells equal in size, symmetrical</td><td>None (0%)</td><td>Highest</td></tr>
@@ -149,6 +150,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
  <tr><td><span class="grade-badge grade-c">Grade 3</span></td><td>Uneven cell sizes, moderate irregularity</td><td>Significant (10–25%)</td><td>Fair</td></tr>
  <tr><td><span class="grade-badge grade-d">Grade 4</span></td><td>Severely unequal cells or poor cell number</td><td>Heavy (&gt;25%)</td><td>Low</td></tr>
 </table>
+</div>
 
 <h3>What each grade means in practice</h3>
 <p><strong>Grade 1:</strong> The ideal Day 3 embryo. All cells are identical in size and the embryo is free of fragmentation. These embryos have the best chance of continuing to develop into a blastocyst and implanting successfully.</p>
@@ -166,6 +168,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
 
 <h3>1. Expansion Stage (1–6)</h3>
 <p>This number describes how far the blastocyst has expanded and whether it has begun to "hatch" out of the zona pellucida (its outer shell).</p>
+<div style="overflow-x:auto">
 <table>
  <tr><th>Number</th><th>Stage</th></tr>
  <tr><td>1</td><td>Early blastocyst — cavity less than half the embryo volume</td></tr>
@@ -175,6 +178,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
  <tr><td>5</td><td>Hatching blastocyst — trophectoderm beginning to exit zona</td></tr>
  <tr><td>6</td><td>Hatched blastocyst — completely emerged from zona</td></tr>
 </table>
+</div>
 
 <h3>2. Inner Cell Mass Grade (A, B, or C)</h3>
 <p>The Inner Cell Mass (ICM) is the cluster of cells that will become the baby itself (the fetus). A higher ICM grade means more cells that are tightly packed together.</p>
@@ -194,6 +198,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
 
 <h3>Reading your blastocyst grade</h3>
 <p>A blastocyst grade is written as the expansion number followed by the two letter grades, for example: <strong>4AA</strong>, <strong>3BB</strong>, or <strong>5AB</strong>. Here are common grades and what they indicate:</p>
+<div style="overflow-x:auto">
 <table>
  <tr><th>Grade</th><th>Quality</th><th>Clinical Interpretation</th></tr>
  <tr><td>4AA / 5AA / 6AA</td><td>Excellent</td><td>Best possible grade — highest implantation potential</td></tr>
@@ -202,6 +207,7 @@ tr:nth-child(even) td{background:var(--cream)}.highlight-box{background:var(--cr
  <tr><td>3BC / 3CB</td><td>Fair</td><td>Lower rates, but pregnancies regularly achieved</td></tr>
  <tr><td>2BB / 3CC</td><td>Poor</td><td>May still be transferred if no better option exists</td></tr>
 </table>
+</div>
 
 <div class="highlight-box">
  <p><strong>Key statistic:</strong> Day 5 blastocyst transfers carry success rates of approximately 45–65% per transfer in women under 35, compared to 30–40% for Day 3 transfers. This difference is partly due to natural self-selection — weaker embryos typically arrest before Day 5 — and partly because the blastocyst stage is more developmentally synchronised with the receptive uterine environment.</p>

@@ -27,7 +27,7 @@
   .status-live{color:#059669;font-weight:700}
   .status-off{color:#dc2626;font-weight:700}
   .arch{background:#1e1b4b;color:#c7d2fe;padding:1.2rem 1.5rem;border-radius:10px;font-size:0.82rem;line-height:1.8;white-space:pre-wrap}
-</style>
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fdf8ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 </head>
 <body>
 
@@ -331,7 +331,9 @@ window.addEventListener('load', function() {
       '<td>' + o.priority + '</td>' +
     '</tr>';
   }).join('');
-  tableEl.innerHTML = '<table><thead><tr><th>ID</th><th>Enabled</th><th>Start</th><th>End</th><th>Status</th><th>Locations</th><th>Priority</th></tr></thead><tbody>' + rows + '</tbody></table>';
+  tableEl.innerHTML = '<div style="overflow-x:auto">
+<table><thead><tr><th>ID</th><th>Enabled</th><th>Start</th><th>End</th><th>Status</th><th>Locations</th><th>Priority</th></tr></thead><tbody>' + rows + '</tbody></table>
+</div>';
 });
 </script>
 

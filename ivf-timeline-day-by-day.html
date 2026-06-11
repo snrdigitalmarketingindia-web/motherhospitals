@@ -69,8 +69,8 @@ h2 em{font-style:italic;color:var(--magenta)}.hero-sub{font-size:1.05rem;color:v
 details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
 footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.timeline-table{font-size:0.78rem}.timeline-table th.timeline-table td{padding:0.5rem 0.6rem}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
-</style>
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.timeline-table{font-size:0.78rem}.timeline-table th.timeline-table td{padding:0.5rem 0.6rem}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fdf8ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
@@ -124,6 +124,21 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
+ <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ <div class="mob-menu">
+ <a href="https://motherhospitals.co.in">Home</a>
+ <a href="/ivf-treatment-hyderabad.html">IVF</a>
+ <a href="/maternity-care-hyderabad.html">Maternity</a>
+ <a href="/gynaecology-hyderabad.html">Gynaecology</a>
+ <a href="/mother9-programme.html">Mother 9</a>
+ <a href="/dr-prashanthi-reddy.html">Our Team</a>
+ <a href="/fertility-faq-hyderabad.html">FAQs</a>
+ <a href="/fertility-tools.html">🧮 Free Fertility Tools</a>
+ <a href="/blog/">Blog</a>
+ <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
  </div>
 </nav>
 <div class="trust-bar">
@@ -175,7 +190,8 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <div class="section-inner">
  <h2>Phase 1 — <em>Pre-Cycle Investigations</em> (1–2 weeks before)</h2>
  <p class="section-sub">Before stimulation begins, both partners are fully investigated. These tests take 1–2 weeks and guide the personalised protocol chosen for you.</p>
- <table class="timeline-table">
+ <div style="overflow-x:auto">
+<table class="timeline-table">
  <thead><tr><th>Timing</th><th>Event</th><th>What Happens</th><th>Your Role</th></tr></thead>
  <tbody>
  <tr><td><span class="day-badge">Week –2</span></td><td>Initial Consultation</td><td>Full fertility history review; existing reports assessed; plan discussed</td><td>Attend with partner; bring all previous fertility reports</td></tr>
@@ -186,6 +202,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <tr><td><span class="day-badge">Week –1</span></td><td>Injection Training</td><td>Nurse demonstrates FSH pen/syringe technique; you practise with trainer pen</td><td>Learn injection technique; collect medications</td></tr>
  </tbody>
  </table>
+</div>
  </div>
 </section>
 
@@ -197,7 +214,8 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <div class="fact-bar">
  <strong>Important:</strong> All injections should be given at the same time each day (e.g., 9pm every evening). Consistency of timing is important for optimal follicle development.
  </div>
- <table class="timeline-table">
+ <div style="overflow-x:auto">
+<table class="timeline-table">
  <thead><tr><th>Day</th><th>Event</th><th>What Happens</th><th>Your Role</th></tr></thead>
  <tbody>
  <tr class="highlight-row"><td><span class="day-badge key">Day 2</span></td><td>🟢 Stimulation Starts</td><td>Baseline scan confirms ovaries are quiet; first FSH (± LH) injection given at clinic or at home</td><td>Attend clinic for baseline scan; administer first injection as trained</td></tr>
@@ -212,6 +230,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <tr class="highlight-row"><td><span class="day-badge key">Day 12–13</span></td><td>⚡ Trigger Injection</td><td>When leading follicles reach 18–20mm, trigger (hCG or GnRH agonist) given at EXACTLY the prescribed hour (e.g., 10pm sharp); STOP all other injections; egg retrieval booked for 36 hours later</td><td>Administer trigger at exact hour; confirm retrieval appointment; fast from midnight</td></tr>
  </tbody>
  </table>
+</div>
  </div>
 </section>
 
@@ -219,7 +238,8 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
 <section class="section">
  <div class="section-inner">
  <h2>Phase 3 — <em>Egg Retrieval & Laboratory</em> (Days 14–19)</h2>
- <table class="timeline-table">
+ <div style="overflow-x:auto">
+<table class="timeline-table">
  <thead><tr><th>Day</th><th>Event</th><th>What Happens</th><th>Your Role</th></tr></thead>
  <tbody>
  <tr class="highlight-row"><td><span class="day-badge key">Day 14</span></td><td>🥚 Egg Retrieval (OPU)</td><td>IV sedation; transvaginal needle aspiration of all follicles (20–30 min); partner provides semen sample; embryologist identifies mature eggs; ICSI performed same afternoon; rest 2–3 hrs; discharged home</td><td>Fast from midnight; arrive at clinic as instructed; partner attends; arrange lift home; rest remainder of day</td></tr>
@@ -231,6 +251,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <tr class="highlight-row"><td><span class="day-badge key">Day 19</span></td><td>🌱 Embryo Transfer</td><td>Best blastocyst(s) graded and selected; embryo transfer by thin catheter (5 min, painless, no anaesthesia); abdominal US guidance; rest 30 min; discharged; extra embryos vitrified</td><td>Drink water before appointment; attend clinic; rest 30 min; go home; continue progesterone</td></tr>
  </tbody>
  </table>
+</div>
  </div>
 </section>
 
@@ -239,7 +260,8 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <div class="section-inner">
  <h2>Phase 4 — <em>Two-Week Wait</em> (Days 19–33)</h2>
  <p class="section-sub">The 14 days between embryo transfer and pregnancy test. Continue progesterone daily throughout.</p>
- <table class="timeline-table">
+ <div style="overflow-x:auto">
+<table class="timeline-table">
  <thead><tr><th>Days Post-Transfer</th><th>What is Happening (Inside)</th><th>What You May Feel</th><th>Your Role</th></tr></thead>
  <tbody>
  <tr><td><span class="day-badge">Days 1–2</span></td><td>Embryo floating freely in uterine cavity</td><td>Mild cramping, bloating — from retrieval and progesterone</td><td>Rest, gentle activity, continue progesterone</td></tr>
@@ -251,6 +273,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <tr><td><span class="day-badge">Week 6–7 (if positive)</span></td><td>Foetal heartbeat developing</td><td>Increasing pregnancy symptoms — nausea, fatigue, breast changes</td><td>Attend 6–7 week scan to confirm heartbeat; transition to antenatal care</td></tr>
  </tbody>
  </table>
+</div>
  <div class="fact-bar" style="margin-top:1.5rem">
  <strong>Important:</strong> Pregnancy symptoms during the 2WW are largely caused by progesterone — not pregnancy. Both positive and negative cycles have identical symptoms during the wait. The blood test is the only reliable indicator.
  </div>

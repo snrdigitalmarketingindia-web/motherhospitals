@@ -65,8 +65,8 @@ h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purpl
 details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:var(--purple-pale);border-top:1px solid var(--purple-light);color:var(--text-mid);font-size:0.9rem;line-height:1.75}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}.related-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem;text-align:center;text-decoration:none;color:var(--text-mid);font-size:0.88rem;font-weight:500;transition:border-color 0.2s}.related-card:hover{border-color:var(--purple);color:var(--purple)}
 footer{background:var(--purple);color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem}
 footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:300;display:flex;box-shadow:0 -4px 20px rgba(90,31,122,0.2)}.sticky-btn{flex:1;padding:1rem;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.4rem}.sticky-call{background:var(--purple);color:#fff}.sticky-wa{background:#25d366;color:#fff}
-@media(max-width:768px){.nav-links{display:none}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
-</style>
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.stats-row{gap:1rem}.dr-strip{flex-direction:column}.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fdf8ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
 <script type="application/ld+json">
 {
@@ -120,6 +120,21 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}.sticky-cta{position:
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
+ <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ <div class="mob-menu">
+ <a href="https://motherhospitals.co.in">Home</a>
+ <a href="/ivf-treatment-hyderabad.html">IVF</a>
+ <a href="/maternity-care-hyderabad.html">Maternity</a>
+ <a href="/gynaecology-hyderabad.html">Gynaecology</a>
+ <a href="/mother9-programme.html">Mother 9</a>
+ <a href="/dr-prashanthi-reddy.html">Our Team</a>
+ <a href="/fertility-faq-hyderabad.html">FAQs</a>
+ <a href="/fertility-tools.html">🧮 Free Fertility Tools</a>
+ <a href="/blog/">Blog</a>
+ <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
  </div>
 </nav>
 <div class="trust-bar">
