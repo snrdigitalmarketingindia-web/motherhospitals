@@ -658,5 +658,6 @@ document.querySelectorAll('.hamburger').forEach(b=>b.addEventListener('click',=>
 document.addEventListener('click',function(e){var l=e.target.closest('a[href]');if(!l)return;var h=l.getAttribute('href')|'';if(h.includes('wa.me'))gtag('event','whatsapp_click',{event_category:'CTA',event_label:'Blog-BleedingIVF'});else if(h.startsWith('tel:'))gtag('event','phone_call_click',{event_category:'CTA',event_label:'Blog-BleedingIVF'});});
 </script>
 <script src="/assets/lang-toggle.js" defer></script>
+<script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

@@ -31,13 +31,37 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 .mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
 
 /* OFFER BANNER */
-.offer-banner{background:linear-gradient(135deg,var(--purple),#8b2fc9,var(--magenta));color:#fff;padding:1rem 5%}
+/* ── OFFER MANAGEMENT SYSTEM (injected by offer-manager.js) ── */
+.offer-banner{background:linear-gradient(135deg,var(--purple),#8b2fc9,var(--magenta));color:#fff;padding:1rem 5%;position:relative}
 .offer-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center}
 .offer-badge{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:0.28rem 0.9rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
 .offer-text{font-family:var(--font-d);font-size:1.25rem;font-weight:600}
 .offer-text strong{color:#ffd700;font-size:1.5rem}
 .offer-detail{font-size:0.77rem;opacity:0.85}
 .offer-cta{background:#fff;color:var(--purple);padding:0.45rem 1.3rem;border-radius:50px;text-decoration:none;font-size:0.82rem;font-weight:600;white-space:nowrap;flex-shrink:0}
+.offer-close{background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.1rem;cursor:pointer;padding:0.2rem 0.5rem;margin-left:0.5rem;line-height:1;flex-shrink:0}
+.offer-close:hover{color:#fff}
+/* Navbar offer link */
+.offer-nav-link{background:var(--magenta)!important;color:#fff!important;border-radius:50px;padding:0.3rem 0.9rem!important;font-size:0.8rem!important;font-weight:600!important;white-space:nowrap}
+.offer-nav-link:hover{background:var(--purple)!important;color:#fff!important}
+.offer-mob-link{background:linear-gradient(135deg,var(--purple),var(--magenta))!important;color:#fff!important;border-radius:8px;padding:0.6rem 1rem!important;font-weight:600!important;margin-bottom:0.3rem}
+/* Popup overlay */
+.offer-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;transition:opacity 0.3s ease;pointer-events:none}
+.offer-popup-overlay.offer-popup-visible{opacity:1;pointer-events:all}
+.offer-popup-card{background:#fff;border-radius:18px;padding:2rem 2rem 1.5rem;max-width:420px;width:100%;position:relative;text-align:center;box-shadow:0 20px 60px rgba(90,31,122,0.25);transform:translateY(20px);transition:transform 0.3s ease}
+.offer-popup-overlay.offer-popup-visible .offer-popup-card{transform:translateY(0)}
+.offer-popup-close{position:absolute;top:0.8rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-mid);line-height:1}
+.offer-popup-close:hover{color:var(--purple)}
+.offer-popup-badge{display:inline-block;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:50px;padding:0.25rem 0.9rem;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:0.8rem}
+.offer-popup-title{font-family:var(--font-d);font-size:1.5rem;font-weight:700;color:var(--purple);margin:0 0 0.4rem}
+.offer-popup-sub{font-size:0.78rem;color:var(--text-mid);margin:0 0 0.8rem}
+.offer-popup-desc{font-size:0.88rem;color:var(--text-dark);line-height:1.6;margin:0 0 1.2rem}
+.offer-popup-cta{display:block;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;border-radius:50px;padding:0.7rem 1.5rem;text-decoration:none;font-weight:700;font-size:0.95rem;margin-bottom:0.8rem}
+.offer-popup-cta:hover{opacity:0.9}
+.offer-popup-dismiss{margin:0}
+.offer-popup-dismiss button{background:none;border:none;color:var(--text-mid);font-size:0.78rem;cursor:pointer;text-decoration:underline}
+.offer-popup-dismiss button:hover{color:var(--purple)}
+@media(max-width:600px){.offer-popup-card{padding:1.5rem 1.2rem 1.2rem}.offer-popup-title{font-size:1.25rem}}
 
 /* TRUST BADGES */
 .trust-bar{background:var(--white);border-bottom:1px solid var(--purple-light);overflow:hidden}

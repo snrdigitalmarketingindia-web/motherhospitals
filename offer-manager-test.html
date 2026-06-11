@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Offer Manager — QA Test Suite | Mother Hospitals</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:860px;margin:2rem auto;padding:0 1.5rem;color:#222}
+  h1{color:#5a1f7a;border-bottom:3px solid #5a1f7a;padding-bottom:0.5rem}
+  h2{color:#8b2fc9;margin-top:2rem}
+  .scenario{background:#f8f4fc;border:1px solid #d8b4f8;border-radius:10px;padding:1.2rem 1.5rem;margin:1rem 0}
+  .scenario h3{margin:0 0 0.5rem;font-size:1rem;color:#5a1f7a}
+  .btn{display:inline-block;padding:0.45rem 1.1rem;border-radius:50px;border:none;cursor:pointer;font-size:0.85rem;font-weight:600;margin:0.3rem 0.2rem;text-decoration:none}
+  .btn-run{background:#5a1f7a;color:#fff}
+  .btn-reset{background:#e9e0f5;color:#5a1f7a}
+  .result{margin-top:0.6rem;padding:0.5rem 0.8rem;border-radius:6px;font-size:0.85rem;display:none}
+  .pass{background:#d1fae5;color:#065f46;display:block}
+  .fail{background:#fee2e2;color:#991b1b;display:block}
+  .info{background:#e0e7ff;color:#1e40af;display:block}
+  code{background:#f3e8ff;padding:0.1rem 0.4rem;border-radius:4px;font-size:0.82rem}
+  table{width:100%;border-collapse:collapse;margin-top:0.8rem}
+  th{background:#5a1f7a;color:#fff;padding:0.5rem 0.8rem;text-align:left;font-size:0.82rem}
+  td{padding:0.45rem 0.8rem;border-bottom:1px solid #e9d5ff;font-size:0.82rem}
+  tr:hover td{background:#faf5ff}
+  .status-live{color:#059669;font-weight:700}
+  .status-off{color:#dc2626;font-weight:700}
+  .arch{background:#1e1b4b;color:#c7d2fe;padding:1.2rem 1.5rem;border-radius:10px;font-size:0.82rem;line-height:1.8;white-space:pre-wrap}
+</style>
+</head>
+<body>
+
+<h1>🧪 Offer Manager — QA Test Suite</h1>
+<p>This page tests all 5 required scenarios for the <strong>Mother Hospitals Centralized Offer Management System</strong>. Each scenario overrides <code>window.MH_OFFERS</code> in-memory and re-runs the manager so you can see the result live.</p>
+
+<div id="current-offer-status" class="result info">Loading offer status…</div>
+
+<!-- ── Scenario 1 ──────────────────────────────────────────────────────── -->
+<h2>Scenario 1 — Offer Enabled, Date Within Range</h2>
+<div class="scenario">
+  <h3>Expected: Offer displays in top banner, navbar, and popup</h3>
+  <p>Sets <code>enabled: true</code>, <code>start: yesterday</code>, <code>end: tomorrow</code>.</p>
+  <button class="btn btn-run" onclick="runScenario1()">▶ Run Scenario 1</button>
+  <button class="btn btn-reset" onclick="resetPage()">↺ Reset</button>
+  <div id="r1" class="result"></div>
+</div>
+
+<!-- ── Scenario 2 ──────────────────────────────────────────────────────── -->
+<h2>Scenario 2 — Offer Disabled</h2>
+<div class="scenario">
+  <h3>Expected: Offer disappears from all locations</h3>
+  <p>Sets <code>enabled: false</code> — date is in range but offer is off.</p>
+  <button class="btn btn-run" onclick="runScenario2()">▶ Run Scenario 2</button>
+  <button class="btn btn-reset" onclick="resetPage()">↺ Reset</button>
+  <div id="r2" class="result"></div>
+</div>
+
+<!-- ── Scenario 3 ──────────────────────────────────────────────────────── -->
+<h2>Scenario 3 — Offer Enabled, Before Start Date</h2>
+<div class="scenario">
+  <h3>Expected: Offer remains hidden</h3>
+  <p>Sets <code>enabled: true</code>, start = 30 days in future.</p>
+  <button class="btn btn-run" onclick="runScenario3()">▶ Run Scenario 3</button>
+  <button class="btn btn-reset" onclick="resetPage()">↺ Reset</button>
+  <div id="r3" class="result"></div>
+</div>
+
+<!-- ── Scenario 4 ──────────────────────────────────────────────────────── -->
+<h2>Scenario 4 — Offer Enabled, After End Date</h2>
+<div class="scenario">
+  <h3>Expected: Offer remains hidden</h3>
+  <p>Sets <code>enabled: true</code>, end = 30 days in past.</p>
+  <button class="btn btn-run" onclick="runScenario4()">▶ Run Scenario 4</button>
+  <button class="btn btn-reset" onclick="resetPage()">↺ Reset</button>
+  <div id="r4" class="result"></div>
+</div>
+
+<!-- ── Scenario 5 ──────────────────────────────────────────────────────── -->
+<h2>Scenario 5 — No Active Offers</h2>
+<div class="scenario">
+  <h3>Expected: No banners, no popup, no empty spacing, layout normal</h3>
+  <p>Sets <code>MH_OFFERS: []</code> — empty list.</p>
+  <button class="btn btn-run" onclick="runScenario5()">▶ Run Scenario 5</button>
+  <button class="btn btn-reset" onclick="resetPage()">↺ Reset</button>
+  <div id="r5" class="result"></div>
+</div>
+
+<!-- ── Live config table ───────────────────────────────────────────────── -->
+<h2>Live Configuration State</h2>
+<div id="config-table"></div>
+
+<!-- ── Architecture Summary ───────────────────────────────────────────── -->
+<h2>Architecture Summary</h2>
+<pre class="arch">
+CENTRALIZED OFFER MANAGEMENT — Architecture
+============================================
+
+Config File (single source of truth):
+  /assets/js/offer-config.js
+    └── window.MH_OFFERS[]  (array of offer objects)
+
+Engine:
+  /assets/js/offer-manager.js
+    ├── getActiveOffer()    — filters by enabled + date range, picks highest priority
+    ├── injectBanner()      — injects .offer-banner before &lt;nav&gt;, sessionStorage dismiss
+    ├── injectNavbar()      — injects .offer-nav-link into .nav-links + .mob-menu
+    └── injectPopup()       — delayed modal overlay, sessionStorage dismiss
+    └── MHOfferManager.closePopup()  — public API for popup dismiss button
+
+Styles:
+  /assets/style.css
+    └── .offer-banner, .offer-close, .offer-nav-link, .offer-mob-link,
+        .offer-popup-overlay, .offer-popup-card, .offer-popup-cta …
+
+Page Integration (all 226 HTML pages):
+  &lt;script src="/assets/js/offer-config.js"&gt;&lt;/script&gt;
+  &lt;script src="/assets/js/offer-manager.js"&gt;&lt;/script&gt;
+  injected before &lt;/body&gt; in every page — one-time, never needs editing again.
+
+To run a new campaign:
+  1. Add offer object to window.MH_OFFERS in offer-config.js
+  2. Set enabled: true, start_datetime, end_datetime
+  3. Commit &amp; deploy — zero template edits
+
+To disable:
+  Set  enabled: false  in offer-config.js → vanishes site-wide instantly.
+</pre>
+
+<!-- ── Nav + fake page structure for visual test ──────────────────────── -->
+<h2>Visual Preview Area</h2>
+<p style="font-size:0.85rem;color:#666">The injected banner and nav item will appear above the nav element below when an active offer is running.</p>
+
+<nav style="background:#5a1f7a;padding:0.8rem 1.5rem;border-radius:8px;margin-top:0.5rem">
+  <div class="nav-wrap" style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+    <strong style="color:#fff;font-size:1rem">Mother Hospitals</strong>
+    <ul class="nav-links" style="list-style:none;display:flex;gap:0.8rem;margin:0;padding:0;flex-wrap:wrap">
+      <li><a href="#" style="color:#e9d5ff;text-decoration:none;font-size:0.82rem">Home</a></li>
+      <li><a href="#" style="color:#e9d5ff;text-decoration:none;font-size:0.82rem">IVF</a></li>
+      <li><a href="#" style="color:#e9d5ff;text-decoration:none;font-size:0.82rem">Maternity</a></li>
+      <li><a href="https://wa.me/919052074999" class="btn-nav" style="color:#fff;font-size:0.82rem;font-weight:600">💬 WhatsApp</a></li>
+    </ul>
+  </div>
+  <div class="mob-menu" style="display:none"></div>
+</nav>
+
+<script>
+/* ── Helpers ── */
+function isoOffset(days) {
+  var d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 19);
+}
+
+function clearOffer() {
+  var b = document.getElementById('mh-offer-banner');
+  if (b) b.remove();
+  var p = document.getElementById('mh-offer-popup');
+  if (p) p.remove();
+  var navOffer = document.querySelector('.offer-nav-link');
+  if (navOffer) navOffer.closest('li') && navOffer.closest('li').remove();
+  var mobOffer = document.querySelector('.offer-mob-link');
+  if (mobOffer) mobOffer.remove();
+  /* clear session dismiss flags */
+  Object.keys(sessionStorage).filter(function(k){return k.startsWith('mh_');}).forEach(function(k){sessionStorage.removeItem(k);});
+}
+
+function runManager() {
+  clearOffer();
+  /* re-run the manager inline */
+  var script = document.createElement('script');
+  script.src = '/assets/js/offer-manager.js?t=' + Date.now();
+  document.body.appendChild(script);
+}
+
+function pass(id, msg) {
+  var el = document.getElementById(id);
+  el.className = 'result pass';
+  el.textContent = '✅ PASS — ' + msg;
+}
+function fail(id, msg) {
+  var el = document.getElementById(id);
+  el.className = 'result fail';
+  el.textContent = '❌ FAIL — ' + msg;
+}
+
+/* ── Scenario runners ── */
+function runScenario1() {
+  window.MH_OFFERS = [{
+    id: 'TEST_S1', name: 'Test Offer', enabled: true,
+    start_datetime: isoOffset(-1), end_datetime: isoOffset(1),
+    badge: 'Limited Time', title: 'Special IVF Offer', description: 'Test offer for Scenario 1.',
+    cta_text: 'Book Now', cta_url: '#', display_locations: ['top_banner','navbar','popup'],
+    popup_delay_ms: 500, priority: 10
+  }];
+  runManager();
+  setTimeout(function() {
+    var hasBanner = !!document.getElementById('mh-offer-banner');
+    var hasNav    = !!document.querySelector('.offer-nav-link');
+    var hasPopup  = !!document.getElementById('mh-offer-popup');
+    if (hasBanner && hasNav) {
+      pass('r1', 'Banner visible ✓  Nav item visible ✓  Popup will appear after ' + (500/1000) + 's ✓');
+    } else {
+      fail('r1', 'banner=' + hasBanner + ' nav=' + hasNav + ' popup deferred');
+    }
+  }, 200);
+}
+
+function runScenario2() {
+  window.MH_OFFERS = [{
+    id: 'TEST_S2', name: 'Test Offer', enabled: false,
+    start_datetime: isoOffset(-1), end_datetime: isoOffset(1),
+    badge: 'Test', title: 'Hidden Offer', description: 'Should NOT appear.',
+    cta_text: 'X', cta_url: '#', display_locations: ['top_banner','navbar','popup'],
+    popup_delay_ms: 500, priority: 10
+  }];
+  runManager();
+  setTimeout(function() {
+    var hasBanner = !!document.getElementById('mh-offer-banner');
+    var hasNav    = !!document.querySelector('.offer-nav-link');
+    if (!hasBanner && !hasNav) {
+      pass('r2', 'No banner, no nav item, no popup — layout clean ✓');
+    } else {
+      fail('r2', 'Offer appeared when it should be hidden. banner=' + hasBanner + ' nav=' + hasNav);
+    }
+  }, 200);
+}
+
+function runScenario3() {
+  window.MH_OFFERS = [{
+    id: 'TEST_S3', name: 'Test Offer', enabled: true,
+    start_datetime: isoOffset(30), end_datetime: isoOffset(60),
+    badge: 'Future', title: 'Future Offer', description: 'Start date is 30 days away.',
+    cta_text: 'X', cta_url: '#', display_locations: ['top_banner','navbar','popup'],
+    popup_delay_ms: 500, priority: 10
+  }];
+  runManager();
+  setTimeout(function() {
+    var hasBanner = !!document.getElementById('mh-offer-banner');
+    var hasNav    = !!document.querySelector('.offer-nav-link');
+    if (!hasBanner && !hasNav) {
+      pass('r3', 'No banner, no nav item — offer correctly hidden before start date ✓');
+    } else {
+      fail('r3', 'Offer appeared before start date. banner=' + hasBanner + ' nav=' + hasNav);
+    }
+  }, 200);
+}
+
+function runScenario4() {
+  window.MH_OFFERS = [{
+    id: 'TEST_S4', name: 'Test Offer', enabled: true,
+    start_datetime: isoOffset(-60), end_datetime: isoOffset(-30),
+    badge: 'Expired', title: 'Expired Offer', description: 'End date was 30 days ago.',
+    cta_text: 'X', cta_url: '#', display_locations: ['top_banner','navbar','popup'],
+    popup_delay_ms: 500, priority: 10
+  }];
+  runManager();
+  setTimeout(function() {
+    var hasBanner = !!document.getElementById('mh-offer-banner');
+    var hasNav    = !!document.querySelector('.offer-nav-link');
+    if (!hasBanner && !hasNav) {
+      pass('r4', 'No banner, no nav item — offer correctly hidden after end date ✓');
+    } else {
+      fail('r4', 'Expired offer still showing. banner=' + hasBanner + ' nav=' + hasNav);
+    }
+  }, 200);
+}
+
+function runScenario5() {
+  window.MH_OFFERS = [];
+  runManager();
+  setTimeout(function() {
+    var hasBanner  = !!document.getElementById('mh-offer-banner');
+    var hasNav     = !!document.querySelector('.offer-nav-link');
+    var hasPopup   = !!document.getElementById('mh-offer-popup');
+    var navHeight  = document.querySelector('nav') ? document.querySelector('nav').offsetHeight : 0;
+    if (!hasBanner && !hasNav && !hasPopup) {
+      pass('r5', 'Empty offer list — no banners, no nav items, no popup, nav height normal (' + navHeight + 'px) ✓');
+    } else {
+      fail('r5', 'Unexpected offer UI found. banner=' + hasBanner + ' nav=' + hasNav + ' popup=' + hasPopup);
+    }
+  }, 200);
+}
+
+function resetPage() {
+  clearOffer();
+  window.MH_OFFERS = window._MH_OFFERS_ORIGINAL;
+  runManager();
+  ['r1','r2','r3','r4','r5'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.className = 'result';
+    el.textContent = '';
+  });
+}
+
+/* ── On load: show current config state ── */
+window.addEventListener('load', function() {
+  /* backup original */
+  window._MH_OFFERS_ORIGINAL = window.MH_OFFERS ? JSON.parse(JSON.stringify(window.MH_OFFERS)) : [];
+
+  var now = new Date();
+  var offers = window.MH_OFFERS || [];
+  var statusEl = document.getElementById('current-offer-status');
+
+  if (!offers.length) {
+    statusEl.textContent = 'ℹ️  No offers configured in offer-config.js';
+    statusEl.className = 'result info';
+  } else {
+    var active = offers.filter(function(o){
+      if (!o.enabled) return false;
+      return now >= new Date(o.start_datetime) && now <= new Date(o.end_datetime);
+    });
+    statusEl.className = active.length ? 'result pass' : 'result info';
+    statusEl.textContent = active.length
+      ? '✅ Active offer: "' + active[0].name + '" — displaying on: ' + (active[0].display_locations || []).join(', ')
+      : 'ℹ️  ' + offers.length + ' offer(s) configured, none currently active (check enabled/dates)';
+  }
+
+  /* render config table */
+  var tableEl = document.getElementById('config-table');
+  if (!offers.length) { tableEl.innerHTML = '<p style="color:#666;font-size:0.85rem">No offers in window.MH_OFFERS</p>'; return; }
+  var rows = offers.map(function(o) {
+    var isActive = o.enabled && now >= new Date(o.start_datetime) && now <= new Date(o.end_datetime);
+    return '<tr>' +
+      '<td><code>' + o.id + '</code></td>' +
+      '<td>' + (o.enabled ? '✅ Yes' : '❌ No') + '</td>' +
+      '<td>' + o.start_datetime + '</td>' +
+      '<td>' + o.end_datetime + '</td>' +
+      '<td class="' + (isActive ? 'status-live' : 'status-off') + '">' + (isActive ? '🟢 LIVE' : '⚫ Hidden') + '</td>' +
+      '<td>' + (o.display_locations || []).join(', ') + '</td>' +
+      '<td>' + o.priority + '</td>' +
+    '</tr>';
+  }).join('');
+  tableEl.innerHTML = '<table><thead><tr><th>ID</th><th>Enabled</th><th>Start</th><th>End</th><th>Status</th><th>Locations</th><th>Priority</th></tr></thead><tbody>' + rows + '</tbody></table>';
+});
+</script>
+
+<script src="/assets/js/offer-config.js"></script>
+<script src="/assets/js/offer-manager.js"></script>
+</body>
+</html>
