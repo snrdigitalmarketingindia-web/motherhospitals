@@ -146,7 +146,13 @@
   /* ── 6. Bootstrap ────────────────────────────────────────────────────── */
   function init() {
     var offer = getActiveOffer();
-    if (!offer) return; /* no active offer → nothing injected, layout stays clean */
+    if (!offer) {
+      document.body.classList.remove('mh-offer-active');
+      return; /* no active offer → static price-cards hidden, nothing injected */
+    }
+
+    /* reveal static .price-card sections on this page */
+    document.body.classList.add('mh-offer-active');
 
     var locs = offer.display_locations || [];
     if (locs.indexOf('top_banner') !== -1) injectBanner(offer);
