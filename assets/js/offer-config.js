@@ -23,14 +23,14 @@ window.MH_OFFERS = [
     start_datetime: "2026-06-01T00:00:00",
     end_datetime:   "2026-06-30T23:59:59",
 
-    /* UI copy */
-    badge:       "Limited Time",
-    title:       "Special IVF Offer",
-    description: "All-inclusive IVF package — consultations, stimulation injections, OPU, ICSI & monitoring scans. Transparent pricing, no hidden costs.",
-    cta_text:    "Book Free Consultation",
-    cta_url:     "/ivf-treatment-hyderabad.html#contact",
+    /* UI copy — restored from original campaign (main branch) */
+    badge:       "🌟 Limited Time",
+    title:       "IVF Package ₹99,000/- Only",
+    description: "Stimulation Injections · OPU · ICSI · Consultations · Scans · Valid till 30th June 2026",
+    cta_text:    "Enquire Now →",
+    cta_url:     "https://wa.me/919052074999",
 
-    /* Popup-only sub-copy (optional) */
+    /* Popup-only sub-copy */
     popup_subtitle: "Germany-trained specialist · 5,000+ IVF cycles · ART Act 2021 certified",
 
     /* Where to show this offer */
