@@ -76,6 +76,9 @@ body.mh-offer-active .price-card{display:block!important}
 .trust-item:last-child{border-right:none}
 .trust-item span{font-size:0.85rem}
 
+/* Dark-background hero text overrides — ensures readability on pages with dark hero sections */
+.hero .sub,.hero .hero-sub,.hero .page-sub,.hero .subtitle,.hero .hero-desc,.hero .section-sub{color:rgba(255,255,255,0.88)!important}
+
 /* HERO */
 #home{min-height:100vh;background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 55%,#fde8f3 100%);display:flex;align-items:center;padding:80px 5% 60px;position:relative;overflow:hidden}
 .orb{position:absolute;border-radius:50%;pointer-events:none}
