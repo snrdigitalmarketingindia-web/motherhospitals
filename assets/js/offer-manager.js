@@ -39,9 +39,7 @@
 
   /* ── 2. Top banner ───────────────────────────────────────────────────── */
   function injectBanner(offer) {
-    var dismissKey = 'mh_banner_dismissed_' + offer.id;
-    if (sessionStorage.getItem(dismissKey)) return;
-
+    /* force_show: banner always visible — no dismiss button, no session check */
     var banner = document.createElement('div');
     banner.id        = 'mh-offer-banner';
     banner.className = 'offer-banner';
@@ -56,10 +54,6 @@
         '</div>' +
         '<div class="offer-actions">' +
           '<a href="' + _esc(offer.cta_url) + '" class="offer-cta">' + _esc(offer.cta_text) + '</a>' +
-          '<button class="offer-close" aria-label="Dismiss offer" onclick="' +
-            'sessionStorage.setItem(\'mh_banner_dismissed_' + offer.id + '\',\'1\');' +
-            'document.getElementById(\'mh-offer-banner\').remove()' +
-          '">✕</button>' +
         '</div>' +
       '</div>';
 
