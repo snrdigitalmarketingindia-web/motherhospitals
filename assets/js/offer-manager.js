@@ -48,14 +48,19 @@
     banner.setAttribute('role', 'banner');
     banner.innerHTML =
       '<div class="offer-inner">' +
-        '<span class="offer-badge">' + _esc(offer.badge) + '</span>' +
-        '<span class="offer-text">' + _esc(offer.title) + '</span>' +
-        '<span class="offer-detail">' + _esc(offer.description) + '</span>' +
-        '<a href="' + _esc(offer.cta_url) + '" class="offer-cta">' + _esc(offer.cta_text) + '</a>' +
-        '<button class="offer-close" aria-label="Dismiss offer" onclick="' +
-          'sessionStorage.setItem(\'mh_banner_dismissed_' + offer.id + '\',\'1\');' +
-          'document.getElementById(\'mh-offer-banner\').remove()' +
-        '">✕</button>' +
+        '<div class="offer-main">' +
+          '<span class="offer-badge">' + _esc(offer.badge) + '</span>' +
+          '<span class="offer-text">' + _esc(offer.title) + '</span>' +
+          '<span class="offer-sep">·</span>' +
+          '<span class="offer-detail">' + _esc(offer.description) + '</span>' +
+        '</div>' +
+        '<div class="offer-actions">' +
+          '<a href="' + _esc(offer.cta_url) + '" class="offer-cta">' + _esc(offer.cta_text) + '</a>' +
+          '<button class="offer-close" aria-label="Dismiss offer" onclick="' +
+            'sessionStorage.setItem(\'mh_banner_dismissed_' + offer.id + '\',\'1\');' +
+            'document.getElementById(\'mh-offer-banner\').remove()' +
+          '">✕</button>' +
+        '</div>' +
       '</div>';
 
     /* insert after .trust-bar (original position on site), fallback to before <nav> */

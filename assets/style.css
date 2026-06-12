@@ -32,15 +32,18 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 
 /* OFFER BANNER */
 /* ── OFFER MANAGEMENT SYSTEM (injected by offer-manager.js) ── */
-.offer-banner{background:linear-gradient(135deg,var(--purple),#8b2fc9,var(--magenta));color:#fff;padding:1rem 5%;position:relative}
-.offer-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center}
-.offer-badge{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:0.28rem 0.9rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
-.offer-text{font-family:var(--font-d);font-size:1.25rem;font-weight:600}
-.offer-text strong{color:#ffd700;font-size:1.5rem}
-.offer-detail{font-size:0.77rem;opacity:0.85}
-.offer-cta{background:#fff;color:var(--purple);padding:0.45rem 1.3rem;border-radius:50px;text-decoration:none;font-size:0.82rem;font-weight:600;white-space:nowrap;flex-shrink:0}
-.offer-close{background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.1rem;cursor:pointer;padding:0.2rem 0.5rem;margin-left:0.5rem;line-height:1;flex-shrink:0}
+.offer-banner{background:linear-gradient(135deg,var(--purple),#8b2fc9,var(--magenta));color:#fff;padding:0.6rem 4%}
+.offer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem}
+.offer-main{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;min-width:0}
+.offer-actions{display:flex;align-items:center;gap:0.5rem;flex-shrink:0}
+.offer-badge{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:0.2rem 0.7rem;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;white-space:nowrap;flex-shrink:0}
+.offer-text{font-family:var(--font-d);font-size:1rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+.offer-sep{opacity:0.4;flex-shrink:0}
+.offer-detail{font-size:0.73rem;opacity:0.9;line-height:1.4}
+.offer-cta{background:#fff;color:var(--purple);padding:0.35rem 1rem;border-radius:50px;text-decoration:none;font-size:0.78rem;font-weight:700;white-space:nowrap}
+.offer-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:1rem;cursor:pointer;padding:0.2rem 0.4rem;line-height:1}
 .offer-close:hover{color:#fff}
+@media(max-width:640px){.offer-inner{grid-template-columns:1fr}.offer-actions{justify-content:center}.offer-sep{display:none}}
 /* Navbar offer link */
 .offer-nav-link{background:var(--magenta)!important;color:#fff!important;border-radius:50px;padding:0.3rem 0.9rem!important;font-size:0.8rem!important;font-weight:600!important;white-space:nowrap}
 .offer-nav-link:hover{background:var(--purple)!important;color:#fff!important}
