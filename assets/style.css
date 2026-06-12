@@ -544,7 +544,9 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 /* ═══════════════════════════════════════════════════════════
    #26 — TOUCH TARGETS (WCAG 2.5.5 — minimum 44×44 px)
 ═══════════════════════════════════════════════════════════ */
-a[href],button,[role="button"],[type="button"],[type="submit"],[type="reset"]{min-height:44px}
+/* Scope touch targets to interactive controls only — NOT bare inline text links */
+button,[role="button"],[type="button"],[type="submit"],[type="reset"]{min-height:44px}
+.btn,.btn-primary,.btn-secondary,.btn-wa,.btn-white,.btn-call,.btn-outline,.btn-outline-w,.btn-nav,.btn-after,.btn-video,.btn-wa-white,.offer-cta,.mob-cta-btn,.wa-float{min-height:44px}
 /* Inline/icon links exempt (no block layout) — bump interactive controls only */
 nav .nav-links a{min-height:44px;display:inline-flex;align-items:center}
 .mob-menu a{min-height:44px;display:flex;align-items:center}
