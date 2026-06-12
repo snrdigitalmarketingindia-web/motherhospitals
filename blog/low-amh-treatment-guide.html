@@ -178,6 +178,10 @@ details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:v
 #content-te.article-body h2{font-size:1.35rem}
 @media(max-width:768px){.lang-switch-bar{border-radius:12px;width:100%}.lang-btn{flex:1;text-align:center;min-height:44px}}.trust-bar{background:#fff;border-bottom:1px solid #e8d5f5;overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:#4a2d5e;font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid #e8d5f5}.trust-item:last-child{border-right:none}.trust-item span{font-size:0.85rem}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#333);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fff2ff);border-top:1px solid var(--purple-light,#e8d5f5);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
+<style>
+.wa-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,0.4);z-index:999;transition:transform 0.2s}
+.wa-float:hover{transform:scale(1.1)}
+</style>
 </head>
 <body>
 <div class="sticky-cta">
@@ -409,6 +413,39 @@ details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:v
 </article>
 </div><!-- /content-te -->
 
+<section style="background:linear-gradient(135deg,#f5edfb 0%,#fff2ff 60%,#fde8f3 100%);padding:50px 5%">
+<div style="max-width:640px;margin:0 auto">
+<div style="text-align:center;margin-bottom:1.5rem">
+<p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:#aa045a;font-weight:500;margin-bottom:0.4rem">Free Consultation</p>
+<h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;color:#1e0a2e;line-height:1.2;margin-bottom:0.5rem">Speak with Dr. Prashanthi Reddy</h2>
+<p style="font-size:0.88rem;color:#4a2d5e;max-width:440px;margin:0 auto">Germany-trained IVF specialist &bull; TGMC Reg: 50624 &bull; Call back within 2 hours</p>
+</div>
+<div style="background:#fff;border-radius:18px;padding:1.8rem;border:1px solid #e8d5f5;box-shadow:0 8px 30px rgba(90,31,122,0.07)">
+<div style="display:flex;gap:0.8rem;margin-bottom:1.2rem;flex-wrap:wrap">
+<a href="tel:+919705993366" style="flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:linear-gradient(135deg,#aa045a,#58037c);color:#fff;padding:0.7rem 1rem;border-radius:10px;text-decoration:none;font-size:0.82rem;font-weight:600">&#128222; 97059 93366</a>
+<a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" style="flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:#25D366;color:#fff;padding:0.7rem 1rem;border-radius:10px;text-decoration:none;font-size:0.82rem;font-weight:600">&#128172; WhatsApp</a>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.9rem">
+<div><label style="display:block;font-size:0.75rem;color:#4a2d5e;font-weight:500;margin-bottom:0.28rem">Full Name *</label><input type="text" id="blc_name_low_amh_treatment_guid" placeholder="Your name" required style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:9px;padding:0.65rem 0.9rem;font-size:0.85rem;color:#1e0a2e;outline:none;box-sizing:border-box"/></div>
+<div><label style="display:block;font-size:0.75rem;color:#4a2d5e;font-weight:500;margin-bottom:0.28rem">Phone *</label><input type="tel" id="blc_phone_low_amh_treatment_guid" placeholder="+91 XXXXX XXXXX" required style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:9px;padding:0.65rem 0.9rem;font-size:0.85rem;color:#1e0a2e;outline:none;box-sizing:border-box"/></div>
+</div>
+<button onclick="submitBLC_low_amh_treatment_guid()" style="width:100%;background:linear-gradient(135deg,#aa045a,#58037c);color:#fff;padding:0.88rem;border-radius:50px;border:none;cursor:pointer;font-size:0.9rem;font-weight:600;font-family:'DM Sans',sans-serif">Book Free Consultation &#8594;</button>
+<div id="blc_ok_low_amh_treatment_guid" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:1rem;text-align:center;margin-top:0.9rem">
+<p style="font-weight:600;color:#166534;margin-bottom:0.2rem">&#9989; Thank you! We&#8217;ll call you within 2 hours.</p>
+<p style="font-size:0.82rem;color:#15803d">Or call now: <a href="tel:+919705993366" style="color:#15803d;font-weight:700">97059 93366</a></p>
+</div>
+</div></div></section>
+<script>
+function submitBLC_low_amh_treatment_guid(){
+  var n=document.getElementById('blc_name_low_amh_treatment_guid').value.trim();
+  var p=document.getElementById('blc_phone_low_amh_treatment_guid').value.trim();
+  if(!n||!p){alert('Please enter your name and phone number.');return;}
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: low_amh_treatment_guid');
+  fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
+  document.getElementById('blc_ok_low_amh_treatment_guid').style.display='block';
+}
+</script>
+
 <footer style="background:#58037c;color:rgba(255,255,255,0.85);padding:2.5rem 5%;text-align:center;font-size:0.85rem;padding-bottom:80px">
 <address style="font-style:normal;font-size:0.78rem;opacity:0.8;margin-bottom:0.5rem">1st Floor, Unit Nos. 201–204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar, Boduppal, Hyderabad, Telangana 500092</address>
  <p><strong>Mother Hospitals &amp; IVF Center</strong> — Boduppal, Hyderabad</p>
@@ -417,5 +454,6 @@ details[open].faq-q::after{content:"▲"}.faq-a{padding:1rem 1.2rem;background:v
 </footer>
 <script src="/assets/lang-toggle.js" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
+<a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
 </body>
 </html>
