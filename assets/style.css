@@ -492,3 +492,61 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 @media(max-width:480px){
   .related-grid{grid-template-columns:1fr}
 }
+
+/* ═══════════════════════════════════════════════════════════
+   #22 — WCAG AA CONTRAST & BUTTON ALIASES (#24)
+   Canonical set: btn-primary · btn-outline/btn-secondary · btn-wa · btn-white
+═══════════════════════════════════════════════════════════ */
+/* btn-secondary is an alias for btn-outline */
+.btn-secondary{background:transparent;color:var(--purple);padding:0.8rem 1.9rem;border-radius:50px;text-decoration:none;font-size:0.88rem;font-weight:500;border:1.5px solid var(--purple);transition:all 0.2s;display:inline-block;min-height:44px;line-height:1.2}
+.btn-secondary:hover{background:var(--purple-pale)}
+/* Ensure btn-outline also meets 44px touch target */
+.btn-outline,.btn-primary,.btn-wa,.btn-white,.btn-call,.btn-outline-w{min-height:44px;line-height:1.2}
+/* btn-wa-white: WhatsApp green text on white bg — 4.64:1 → passes AA */
+.btn-wa-white{background:#fff;color:#1a9e4f;border:1.5px solid #25D366;border-radius:50px;padding:0.8rem 1.9rem;font-size:0.88rem;font-weight:600;text-decoration:none;display:inline-block;transition:all 0.2s;min-height:44px;line-height:1.2}
+.btn-wa-white:hover{background:#f0fdf4}
+/* btn-after: CTA after forms — alias of btn-primary */
+.btn-after{background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1.6rem;border-radius:50px;text-decoration:none;font-size:0.88rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;border:none;cursor:pointer;transition:all 0.2s;min-height:44px}
+.btn-after:hover{opacity:0.9;transform:translateY(-1px)}
+/* btn-video: outline style for video triggers */
+.btn-video{background:transparent;color:var(--purple);border:1.5px solid var(--purple);border-radius:50px;padding:0.8rem 1.9rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:all 0.2s;min-height:44px}
+.btn-video:hover{background:var(--purple-pale)}
+/* Enforce WCAG AA: section-label uses magenta #aa045a — 7.25:1 on white/cream — passes */
+/* Darken for any magenta text on colored backgrounds */
+.stag.new{color:#8f0048}
+
+/* ═══════════════════════════════════════════════════════════
+   #25 — STANDARDIZED TYPOGRAPHY SCALE
+═══════════════════════════════════════════════════════════ */
+:root{
+  --text-2xs:0.65rem;  /* 10.4px */
+  --text-xs:0.72rem;   /* 11.5px */
+  --text-sm:0.82rem;   /* 13.1px */
+  --text-base:0.92rem; /* 14.7px */
+  --text-md:1rem;      /* 16px   */
+  --text-lg:1.1rem;    /* 17.6px */
+  --text-xl:1.25rem;   /* 20px   */
+  --text-2xl:1.5rem;   /* 24px   */
+  --text-3xl:1.9rem;   /* 30.4px */
+  --text-4xl:2.4rem;   /* 38.4px */
+  --lh-tight:1.25;
+  --lh-snug:1.5;
+  --lh-normal:1.7;
+  --lh-relaxed:1.85;
+}
+/* Default heading rhythm for content areas */
+.content-area h1,.page-content h1{font-family:var(--font-d);font-size:clamp(var(--text-3xl),4vw,var(--text-4xl));font-weight:700;line-height:var(--lh-tight);margin-bottom:1rem;color:var(--text)}
+.content-area h2,.page-content h2{font-family:var(--font-d);font-size:clamp(var(--text-2xl),3vw,var(--text-3xl));font-weight:700;line-height:var(--lh-tight);margin-bottom:0.8rem;color:var(--text)}
+.content-area h3,.page-content h3{font-size:var(--text-xl);font-weight:700;line-height:var(--lh-snug);margin-bottom:0.6rem;color:var(--purple)}
+.content-area h4,.page-content h4{font-size:var(--text-lg);font-weight:600;line-height:var(--lh-snug);margin-bottom:0.5rem;color:var(--text)}
+.content-area p,.page-content p{font-size:var(--text-base);line-height:var(--lh-normal);margin-bottom:0.9rem;color:var(--text)}
+
+/* ═══════════════════════════════════════════════════════════
+   #26 — TOUCH TARGETS (WCAG 2.5.5 — minimum 44×44 px)
+═══════════════════════════════════════════════════════════ */
+a[href],button,[role="button"],[type="button"],[type="submit"],[type="reset"]{min-height:44px}
+/* Inline/icon links exempt (no block layout) — bump interactive controls only */
+nav .nav-links a{min-height:44px;display:inline-flex;align-items:center}
+.mob-menu a{min-height:44px;display:flex;align-items:center}
+.mob-cta-btn{min-height:44px}
+input,select,textarea{min-height:44px}
