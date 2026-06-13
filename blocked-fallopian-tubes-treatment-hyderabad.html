@@ -98,19 +98,18 @@
 }
 </script>
 
-<style>
-:root{--purple:#58037c;--purple-mid:#6e0f99;--purple-light:#e8d5f5;--purple-pale:#f3eaf9;--magenta:#aa045a;--magenta-light:#fce8f3;--cream:#fff2ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
+<style>:root{--purple:#58037c;--purple-mid:#6e0f99;--purple-light:#e8d5f5;--purple-pale:#f3eaf9;--magenta:#aa045a;--magenta-light:#fce8f3;--cream:#fff2ff;--white:#fff;--text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
 a{color:inherit;text-decoration:none}
 
-/* Top bar */.top-bar{background:var(--purple);color:#fff;font-size:0.76rem;padding:0.4rem 5%;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.top-bar a{color:rgba(255,255,255,0.9);text-decoration:none}
+/* Top bar */.top-bar a{color:rgba(255,255,255,0.9);text-decoration:none}
 
 /* Nav */
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px}.logo-wrap{display:flex;align-items:center;gap:0.65rem;text-decoration:none}.logo-img{height:50px;width:50px;object-fit:contain}.logo-name{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--purple);line-height:1.15}.logo-sub{font-size:0.67rem;color:var(--text-soft);letter-spacing:0.1em;text-transform:uppercase}.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}.hamburger span{width:22px;height:2px;background:var(--text,#1e0a2e);border-radius:2px;display:block}.mob-menu{display:none;flex-direction:column;background:var(--cream,#fff2ff);border-top:1px solid var(--purple-light);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}.mob-menu.open{display:flex}.mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
-@media(max-width:768px){.nav-links{display:none!important}.hamburger{display:flex!important}}
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}.nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}.nav-links a:hover{color:var(--magenta)}.hamburger span{width:22px;height:2px;background:var(--text,#1e0a2e);border-radius:2px;display:block}.mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
+@media(max-width:768px){}
 
-/* Trust bar */.trust-bar{background:#fff;border-bottom:1px solid var(--purple-light);overflow:hidden}.trust-inner{display:flex;align-items:center;flex-wrap:nowrap;justify-content:space-around}.trust-item{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 0.6rem;font-size:0.72rem;color:var(--text-mid);font-weight:500;white-space:nowrap;flex:1;justify-content:center;border-right:1px solid var(--purple-light)}.trust-item:last-child{border-right:none}
+/* Trust bar */
 
 /* Offer banner */
 
@@ -149,8 +148,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 footer{background:var(--purple);color:rgba(255,255,255,0.85);text-align:center;padding:2rem 1.5rem;font-size:0.85rem;padding-bottom:80px}
 footer a{color:rgba(255,255,255,0.85);text-decoration:underline}
 
-@media(max-width:600px){.top-bar{justify-content:center;text-align:center}}
-</style>
+@media(max-width:600px){}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
