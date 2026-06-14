@@ -543,8 +543,8 @@ const WILCOX = {'-5':4,'-4':6,'-3':10,'-2':28,'-1':33,'0':33,'1':2};
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
 function fmtShort(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});}
-function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
-function sameDay(a,b){return a.toDateString===b.toDateString;}
+function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
+function sameDay(a,b){return a.toDateString()===b.toDateString();}
 
 var _lastBestDays=null;
 

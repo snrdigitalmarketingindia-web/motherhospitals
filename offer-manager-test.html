@@ -331,9 +331,7 @@ window.addEventListener('load', function() {
       '<td>' + o.priority + '</td>' +
     '</tr>';
   }).join('');
-  tableEl.innerHTML = '<div style="overflow-x:auto">
-<table><thead><tr><th>ID</th><th>Enabled</th><th>Start</th><th>End</th><th>Status</th><th>Locations</th><th>Priority</th></tr></thead><tbody>' + rows + '</tbody></table>
-</div>';
+  tableEl.innerHTML = '<div style="overflow-x:auto"><table><thead><tr><th>ID</th><th>Enabled</th><th>Start</th><th>End</th><th>Status</th><th>Locations</th><th>Priority</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
 });
 </script>
 

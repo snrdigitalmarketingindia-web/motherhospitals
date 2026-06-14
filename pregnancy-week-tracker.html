@@ -611,7 +611,7 @@ let currentWeekDisplay=4;
 let lmpForNav=null;
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
-function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
+function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
 
 function updateTrackMode(){

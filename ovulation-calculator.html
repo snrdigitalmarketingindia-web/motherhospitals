@@ -560,9 +560,9 @@ var _lastOvParams = null;
 document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
-function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
+function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
-function sameDay(a,b){return a.toDateString===b.toDateString;}
+function sameDay(a,b){return a.toDateString()===b.toDateString();}
 
 function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  const firstDay = new Date(year,month,1);
@@ -571,11 +571,11 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  const days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
  let html=`<div class="month-title">${monthName}</div><div style="overflow-x:auto">
 <table class="cal-table"><thead><tr>${days.map(d=>`<th>${d}</th>`).join('')}</tr></thead><tbody><tr>`;
- let startDow = firstDay.getDay;
+ let startDow = firstDay.getDay();
  for(let i=0;i<startDow;i++) html+='<td></td>';
  let col=startDow;
  const today=new Date;today.setHours(0,0,0,0);
- for(let d=1;d<=lastDay.getDate;d++){
+ for(let d=1;d<=lastDay.getDate();d++){
  const dt=new Date(year,month,d);
  let cls='';
  // Determine if fertile/ovulation for any cycle
@@ -597,7 +597,7 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  else if(isPeriod) cls='cal-period';
  html+=`<td class="${cls} ${todayCls}">${d}</td>`;
  col++;
- if(col%7===0&&d<lastDay.getDate) html+='</tr><tr>';
+ if(col%7===0&&d<lastDay.getDate()) html+='</tr><tr>';
  }
  while(col%7!==0){html+='<td></td>';col++;}
  html+='</tr></tbody></table></div>';
@@ -642,12 +642,12 @@ function _renderOv(lmp,today,cycleLen,periodLen){
  // Build 3-month calendars from LMP perspective
  const calContainer=document.getElementById('calContainer');
  calContainer.innerHTML='';
- const startYear=lmp.getFullYear;
- const startMonth=lmp.getMonth;
+ const startYear=lmp.getFullYear();
+ const startMonth=lmp.getMonth();
  // Show 3 months starting from current month
  for(let m=0;m<3;m++){
- const yr=today.getFullYear+(today.getMonth+m>11?1:0);
- const mo=(today.getMonth+m)%12;
+ const yr=today.getFullYear()+(today.getMonth()+m>11?1:0);
+ const mo=(today.getMonth()+m)%12;
  const div=document.createElement('div');
  div.style.marginBottom='1rem';
  div.innerHTML=buildCal(yr,mo,nextOv,periodLen,cycleLen,lmp);
