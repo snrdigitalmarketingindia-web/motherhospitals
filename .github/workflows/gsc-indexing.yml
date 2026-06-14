@@ -41,7 +41,7 @@ jobs:
           GA4_API_SECRET: ${{ secrets.GA4_API_SECRET }}
         run: |
           curl -s -X POST \
-            "https://www.google-analytics.com/mp/collect?measurement_id=G-3FBTVLBBCH&api_secret=${GA4_API_SECRET}" \
+            "https://www.google-analytics.com/mp/collect?measurement_id=G-RBR9NWNXGN&api_secret=${GA4_API_SECRET}" \
             -H "Content-Type: application/json" \
             -d "{
               \"client_id\": \"github-actions-deploy\",
