@@ -1390,7 +1390,7 @@ postnatal care Boduppal, women wellness clinic Hyderabad, fertility nutrition Hy
  </select>
  </div>
  <div class="fg"><label>Message / Concern</label><textarea id="f_msg" placeholder="Tell us briefly about your concern..."></textarea></div>
- <button class="btn-primary" id="submitBtn" onclick="submitForm" style="width:100%;padding:0.95rem;font-size:0.93rem">Submit Enquiry</button>
+ <button class="btn-primary" id="submitBtn" onclick="submitForm()" style="width:100%;padding:0.95rem;font-size:0.93rem">Submit Enquiry</button>
  <div id="successBox">
  <div style="font-size:1.5rem;margin-bottom:0.4rem">✅</div>
  <p style="font-weight:600;color:#166534;margin-bottom:0.3rem">Enquiry Submitted Successfully!</p>
@@ -1489,11 +1489,11 @@ postnatal care Boduppal, women wellness clinic Hyderabad, fertility nutrition Hy
 
 <script>
 function submitForm(){
- var name = document.getElementById('f_name').value.trim;
- var phone = document.getElementById('f_phone').value.trim;
- var email = document.getElementById('f_email').value.trim;
+ var name = document.getElementById('f_name').value.trim();
+ var phone = document.getElementById('f_phone').value.trim();
+ var email = document.getElementById('f_email').value.trim();
  var service = document.getElementById('f_service').value;
- var msg = document.getElementById('f_msg').value.trim;
+ var msg = document.getElementById('f_msg').value.trim();
  if (!name) { alert('Please enter your full name.'); return; }
  if (!phone) { alert('Please enter your phone number.'); return; }
  if (!service) { alert('Please select a service.'); return; }
@@ -1504,7 +1504,7 @@ function submitForm(){
  formData.append('entry.1895050244', service);
  formData.append('entry.957846797', msg);
  formData.append('fvv', '1');
- formData.append('fbzx', Math.floor(Math.random * 9e15).toString);
+ formData.append('fbzx', Math.floor(Math.random() * 9e15).toString());
  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse', {
  method: 'POST', mode: 'no-cors', body: formData
  }).then(function(){
@@ -1524,7 +1524,7 @@ function submitForm(){
 document.addEventListener('click', function(e) {
  var link = e.target.closest('a[href]');
  if (!link) return;
- var href = link.getAttribute('href') | '';
+ var href = link.getAttribute('href') || '';
  if (href.includes('wa.me')) {
  gtag('event', 'whatsapp_click', {
  event_category: 'CTA',
