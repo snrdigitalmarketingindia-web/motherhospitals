@@ -115,8 +115,8 @@ nav{background:#fff;border-bottom:1px solid var(--purple-light);padding:0 5%;dis
 .logo-text strong{font-size:1rem;color:var(--purple);font-weight:700;line-height:1.2}
 .logo-text span{font-size:0.72rem;color:var(--magenta);font-weight:500}
 @media(max-width:768px){}
-/* HERO */.hero{background:linear-gradient(135deg,var(--purple) 0%,var(--purple-mid) 50%,var(--magenta) 100%);color:#fff;padding:3.5rem 5% 3rem}
-.hero-img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,0.3);background:#e0c8f7;display:flex;align-items:center;justify-content:center;font-size:5rem}
+/* HERO */.hero{background:linear-gradient(135deg,var(--purple) 0%,var(--purple-mid) 50%,var(--magenta) 100%);color:#fff;padding:2rem 5%}
+.hero-img{width:320px;height:400px;border-radius:20px;object-fit:cover;border:5px solid rgba(255,255,255,0.3);background:#e0c8f7;display:flex;align-items:center;justify-content:center;font-size:5rem}
 .hero h1{font-size:2.1rem;font-weight:800;margin-bottom:0.4rem}
 .hero .title-tag{font-size:1rem;opacity:0.9;margin-bottom:1rem;color:#fff}
 .creds{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.2rem}
@@ -125,13 +125,14 @@ nav{background:#fff;border-bottom:1px solid var(--purple-light);padding:0 5%;dis
 .stat-box{background:rgba(255,255,255,0.12);border-radius:12px;padding:0.7rem 1.2rem;text-align:center;min-width:110px}
 .stat-box strong{display:block;font-size:1.6rem;font-weight:800;line-height:1}
 .stat-box span{font-size:0.75rem;opacity:0.85}
-@media(max-width:700px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero-img{margin:0 auto}.stat-row{justify-content:center}}
+@media(max-width:700px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero-img{width:100%;height:260px;margin:0 auto}.stat-row{justify-content:center}}
+@media(max-width:768px){.awards-3col{grid-template-columns:repeat(2,1fr)!important}.team-4col{grid-template-columns:repeat(2,1fr)!important}.videos-2col{grid-template-columns:1fr!important}}
 /* BREADCRUMB */.breadcrumb{padding:0.8rem 5%;background:var(--cream);font-size:0.83rem;color:var(--text-mid)}
 .breadcrumb a{color:var(--purple)}
 /* MAIN */.main{max-width:1100px;margin:0 auto;padding:2.5rem 5%;display:grid;grid-template-columns:1fr 320px;gap:2.5rem}
 @media(max-width:900px){.main{grid-template-columns:1fr}}
 /* SECTIONS */
-section{margin-bottom:2rem}
+section{margin-bottom:0.5rem}
 h2{font-size:1.5rem;color:var(--purple);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--purple-light)}
 h3{font-size:1.1rem;color:var(--purple);margin:1.2rem 0 0.5rem}
 p{color:var(--text-mid);margin-bottom:0.8rem}
@@ -265,7 +266,7 @@ footer a{color:rgba(255,255,255,0.8)}
 <!-- HERO -->
 <div class="hero">
  <div class="hero-inner">
- <div class="hero-img" style="overflow:hidden;padding:0"><picture><source srcset="/assets/Prashanthi/Prashanthi2.webp" type="image/webp"/><img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy – IVF Specialist & Founder, Mother Hospitals Boduppal Hyderabad" style="width:100%;height:100%;object-fit:cover;border-radius:50%" loading="lazy"/></picture></div>
+ <div class="hero-img" style="overflow:hidden;padding:0"><picture><source srcset="/assets/Prashanthi/Prashanthi2.webp" type="image/webp"/><img src="/assets/Prashanthi/Prashanthi2.jpeg" alt="Dr. E. Prashanthi Reddy – IVF Specialist & Founder, Mother Hospitals Boduppal Hyderabad" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;border-radius:20px" loading="lazy"/></picture></div>
  <div>
  <h1>Dr. E. Prashanthi Reddy</h1>
  <p class="title-tag">Founder & Medical Director · Mother Hospitals &amp; IVF Center, Hyderabad</p>
@@ -419,7 +420,7 @@ footer a{color:rgba(255,255,255,0.8)}
  <section>
  <h2>Awards &amp; <em>Achievements</em></h2>
  <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:0.95rem">Recognised for excellence in fertility care and women's health across Telangana and nationally.</p>
- <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem">
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem">
 
  <div style="background:var(--cream);border-radius:14px;overflow:hidden;border:1px solid var(--purple-light)">
  <picture><source srcset="assets/awards/award_stv.webp" type="image/webp"/><img src="assets/awards/award_stv.png" alt="STV Suman TV Doctor Award – Dr. E. Prashanthi Reddy" loading="lazy" style="width:100%;display:block;height:180px;object-fit:cover"/></picture>
@@ -459,17 +460,17 @@ footer a{color:rgba(255,255,255,0.8)}
  <section>
  <h2>Our <em>Supporting Team</em></h2>
  <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:0.95rem">Dr. Prashanthi is supported by a highly skilled team of embryologists, counsellors and specialists.</p>
- <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem">
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem">
 
  <div style="background:var(--cream);border-radius:14px;padding:1.5rem;text-align:center;border:1px solid var(--purple-light)">
- <picture><source srcset="assets/team/Naveena_May2026.webp" type="image/webp"/><img src="assets/team/Naveena_May2026.jpg" alt="Naveena Ailapuram – Embryologist, Mother Hospitals" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--magenta);margin-bottom:0.8rem" loading="lazy"/></picture>
+ <picture><source srcset="assets/team/Naveena_May2026.webp" type="image/webp"/><img src="assets/team/Naveena_May2026.jpg" alt="Naveena Ailapuram – Embryologist, Mother Hospitals" style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid var(--magenta);margin-bottom:0.8rem" loading="lazy"/></picture>
  <div style="font-weight:700;color:var(--purple);font-size:0.95rem">Naveena Ailapuram</div>
  <div style="font-size:0.78rem;color:var(--text-mid);margin-top:0.2rem">B.Sc. Genetics · M.Sc. Biotechnology</div>
  <div style="font-size:0.82rem;color:var(--magenta);font-weight:600;margin-top:0.3rem">Embryologist &amp; Counsellor</div>
  </div>
 
  <div style="background:var(--cream);border-radius:14px;padding:1.5rem;text-align:center;border:1px solid var(--purple-light)">
- <img src="assets/team/Noor_May2026.JPG" alt="Shaik Noorjahan Begum – IVF Counsellor, Mother Hospitals" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--magenta);margin-bottom:0.8rem" loading="lazy"/>
+ <img src="assets/team/Noor_May2026.JPG" alt="Shaik Noorjahan Begum – IVF Counsellor, Mother Hospitals" style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 35%;border:3px solid var(--magenta);margin-bottom:0.8rem" loading="lazy"/>
  <div style="font-weight:700;color:var(--purple);font-size:0.95rem">Shaik Noorjahan Begum</div>
  <div style="font-size:0.78rem;color:var(--text-mid);margin-top:0.2rem">IVF Counsellor</div>
  <div style="font-size:0.82rem;color:var(--magenta);font-weight:600;margin-top:0.3rem">Patient Care Coordinator</div>
@@ -496,7 +497,7 @@ footer a{color:rgba(255,255,255,0.8)}
  <section>
  <h2>Dr. Prashanthi <em>in Action</em></h2>
  <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:0.95rem">Watch Dr. Prashanthi share fertility advice, patient stories and celebrate the joy of parenthood.</p>
- <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem">
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
  <div style="aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--purple-light)"><iframe src="https://www.youtube.com/embed/p59bRS2kD2g" title="Mother Hospitals &amp; IVF Center Hyderabad" allowfullscreen loading="lazy" style="width:100%;height:100%;display:block"></iframe></div>
  <div style="aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--purple-light)"><iframe src="https://www.youtube.com/embed/R6pnpLBuWeQ" title="Mother Hospitals IVF Treatment" allowfullscreen loading="lazy" style="width:100%;height:100%;display:block"></iframe></div>
  </div>
