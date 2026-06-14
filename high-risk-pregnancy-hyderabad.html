@@ -667,7 +667,7 @@ function submitLC_high_risk_pregnancy_(){
   if(!n||!p){alert('Please enter your name and phone number.');return;}
   var s=document.getElementById('lc_service_high_risk_pregnancy_').value;
   var m=document.getElementById('lc_msg_high_risk_pregnancy_').value.trim();
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service='+encodeURIComponent(s)+'&entry.message='+encodeURIComponent(m);
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244='+encodeURIComponent(s)+'&entry.957846797='+encodeURIComponent(m);
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('lc_success_high_risk_pregnancy_').style.display='block';
   if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'high_risk_pregnancy_','page':window.location.pathname});

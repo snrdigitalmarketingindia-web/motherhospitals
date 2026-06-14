@@ -385,7 +385,7 @@ function submitLC_ivf_success_factors(){
   if(!n||!p){alert('Please enter your name and phone number.');return;}
   var s=document.getElementById('lc_svc_ivf_success_factors').value;
   var m=document.getElementById('lc_msg_ivf_success_factors').value.trim();
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service='+encodeURIComponent(s)+'&entry.message='+encodeURIComponent(m);
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244='+encodeURIComponent(s)+'&entry.957846797='+encodeURIComponent(m);
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('lc_ok_ivf_success_factors').style.display='block';
   if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'ivf_success_factors','page':window.location.pathname});
