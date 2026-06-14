@@ -362,56 +362,58 @@ footer a{color:rgba(255,255,255,0.85);text-decoration:underline}
 </div>
 
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
+<!-- FORM_START -->
+<!-- FORM_START -->
 <section style="background:linear-gradient(135deg,#f5edfb 0%,#fff2ff 60%,#fde8f3 100%);padding:60px 5%">
 <div style="max-width:680px;margin:0 auto">
 <div style="text-align:center;margin-bottom:1.8rem">
-<h2 style="font-family:var(--font-d);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:0.6rem">Book a Consultation</h2>
-<p style="font-size:0.92rem;color:var(--text-mid);max-width:480px;margin:0 auto">Germany-trained IVF specialist &middot; TGMC Reg: 50624 &middot; Call back within 2 hours</p>
+<h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;color:#1e0a2e;line-height:1.2;margin-bottom:0.6rem">Book a Consultation</h2>
+<p style="font-size:0.92rem;color:#4a2d5e;max-width:480px;margin:0 auto">Dr. E. Prashanthi Reddy · TGMC Reg: 50624 · Call back within 2 hours</p>
 </div>
-<div style="background:#fff;border-radius:20px;padding:2rem;border:1px solid var(--purple-light);box-shadow:0 12px 38px rgba(90,31,122,0.08)">
-<div style="display:flex;gap:0.8rem;margin-bottom:1.5rem;flex-wrap:wrap">
-<a href="tel:+919705993366" style="flex:1;min-width:130px;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.75rem 1rem;border-radius:12px;text-decoration:none;font-size:0.83rem;font-weight:600">&#128222; 97059 93366</a>
-<a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" style="flex:1;min-width:130px;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:#25D366;color:#fff;padding:0.75rem 1rem;border-radius:12px;text-decoration:none;font-size:0.83rem;font-weight:600">&#128172; WhatsApp</a>
-</div>
+<div style="background:#fff;border-radius:20px;padding:2rem;border:1px solid #e8d5f5;box-shadow:0 12px 38px rgba(90,31,122,0.08)">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.95rem;margin-bottom:1rem">
-<div><label style="display:block;font-size:0.77rem;color:var(--text-mid);font-weight:500;margin-bottom:0.32rem">Full Name *</label><input type="text" id="lc_name_ivf_center_trimulgherry" placeholder="Your full name" required style="width:100%;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;font-family:var(--font-b);color:var(--text);outline:none;box-sizing:border-box"/></div>
-<div><label style="display:block;font-size:0.77rem;color:var(--text-mid);font-weight:500;margin-bottom:0.32rem">Phone Number *</label><input type="tel" id="lc_phone_ivf_center_trimulgherry" placeholder="+91 XXXXX XXXXX" required style="width:100%;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;font-family:var(--font-b);color:var(--text);outline:none;box-sizing:border-box"/></div>
+<div><label style="display:block;font-size:0.77rem;color:#4a2d5e;font-weight:500;margin-bottom:0.32rem">Full Name *</label><input type="text" id="lc_name" placeholder="Your full name" required style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;color:#1e0a2e;outline:none;box-sizing:border-box"/></div>
+<div><label style="display:block;font-size:0.77rem;color:#4a2d5e;font-weight:500;margin-bottom:0.32rem">Phone Number *</label><input type="tel" id="lc_phone" placeholder="+91 XXXXX XXXXX" required style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;color:#1e0a2e;outline:none;box-sizing:border-box"/></div>
 </div>
-<div style="margin-bottom:1rem"><label style="display:block;font-size:0.77rem;color:var(--text-mid);font-weight:500;margin-bottom:0.32rem">Service of Interest</label>
-<select id="lc_service_ivf_center_trimulgherry" style="width:100%;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;font-family:var(--font-b);color:var(--text);outline:none;box-sizing:border-box">
-<option value="IVF" selected>IVF Treatment</option>
-<option value="IVF">Needleless IVF</option>
-<option value="IUI">IUI</option>
-<option value="ICSI/FET">ICSI / FET</option>
-<option value="Fertility Evaluation">Low AMH / Male Infertility</option>
-<option value="Egg/Embryo Freezing">Egg / Embryo Freezing</option>
-<option value="Gynaecology/PCOS">PCOS / Gynaecology</option>
-<option value="Maternity/Delivery">Maternity / Delivery</option>
-<option value="Others">Other</option>
-</select>
-</div>
-<div style="margin-bottom:1.2rem"><label style="display:block;font-size:0.77rem;color:var(--text-mid);font-weight:500;margin-bottom:0.32rem">Message / Concern</label><textarea id="lc_msg_ivf_center_trimulgherry" placeholder="Briefly describe your concern..." style="width:100%;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;font-family:var(--font-b);color:var(--text);outline:none;height:80px;resize:vertical;box-sizing:border-box"></textarea></div>
-<button onclick="submitLC_ivf_center_trimulgherry()" style="width:100%;background:linear-gradient(135deg,var(--magenta),var(--purple));color:#fff;padding:0.95rem;border-radius:50px;border:none;cursor:pointer;font-size:0.93rem;font-weight:600;font-family:var(--font-b)">Book Consultation &#8594;</button>
-<div id="lc_success_ivf_center_trimulgherry" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:14px;padding:1.2rem 1.4rem;text-align:center;margin-top:1rem">
-<div style="font-size:1.5rem;margin-bottom:0.4rem">&#9989;</div>
-<p style="font-weight:600;color:#166534;margin-bottom:0.3rem">Thank you! We will call you back shortly.</p>
-<p style="font-size:0.83rem;color:#15803d">Or call us now: <a href="tel:+919705993366" style="color:#15803d;font-weight:700">97059 93366</a></p>
-</div>
-</div>
-</div>
-</section>
+<div style="margin-bottom:1rem"><label style="display:block;font-size:0.77rem;color:#4a2d5e;font-weight:500;margin-bottom:0.32rem">I am looking for</label>
+<select id="lc_svc" style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;color:#1e0a2e;outline:none;box-sizing:border-box">
+<option>IVF Treatment</option>
+<option>ICSI (Male Factor)</option>
+<option>IUI Treatment</option>
+<option>Needleless IVF</option>
+<option>Low AMH / Poor Ovarian Reserve</option>
+<option>PCOS / PMOS Treatment</option>
+<option>Blocked Fallopian Tubes</option>
+<option>Endometriosis</option>
+<option>Hysteroscopy</option>
+<option>Recurrent Miscarriage</option>
+<option>Male Infertility / Low Sperm Count</option>
+<option>Varicocele Treatment</option>
+<option>Egg Freezing</option>
+<option>Second Opinion on IVF</option>
+<option>Maternity / Antenatal Care</option>
+<option>Other / Not Sure</option>
+</select></div>
+<div style="margin-bottom:1.2rem"><label style="display:block;font-size:0.77rem;color:#4a2d5e;font-weight:500;margin-bottom:0.32rem">Your Concern (optional)</label><textarea id="lc_msg" placeholder="Briefly describe your concern..." style="width:100%;background:#fff2ff;border:1px solid #e8d5f5;border-radius:10px;padding:0.72rem 0.95rem;font-size:0.86rem;color:#1e0a2e;outline:none;height:80px;resize:vertical;box-sizing:border-box"></textarea></div>
+<button onclick="submitLeadCapture()" style="width:100%;background:linear-gradient(135deg,#aa045a,#58037c);color:#fff;padding:0.95rem;border-radius:50px;border:none;cursor:pointer;font-size:0.93rem;font-weight:600">Book Consultation &#8594;</button>
+<div id="lc_ok" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:14px;padding:1.2rem;text-align:center;margin-top:1rem">
+<p style="font-weight:600;color:#166534;margin-bottom:0.3rem">&#9989; Thank you! We will call you within 2 hours.</p>
+<p style="font-size:0.83rem;color:#15803d">Call now: <a href="tel:+919705993366" style="color:#15803d;font-weight:700">97059 93366</a></p>
+</div></div></div></section>
 <script>
-function submitLC_ivf_center_trimulgherry(){
-  var n=document.getElementById('lc_name_ivf_center_trimulgherry').value.trim();
-  var p=document.getElementById('lc_phone_ivf_center_trimulgherry').value.trim();
-  if(!n||!p){alert('Please enter your name and phone number.');return;}
-  var s=document.getElementById('lc_service_ivf_center_trimulgherry').value;
-  var m=document.getElementById('lc_msg_ivf_center_trimulgherry').value.trim();
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244='+encodeURIComponent(s)+'&entry.957846797='+encodeURIComponent(m);
-  fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
-  document.getElementById('lc_success_ivf_center_trimulgherry').style.display='block';
-  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'ivf_center_trimulgherry','page':window.location.pathname});
+function submitLeadCapture(){
+ var n=document.getElementById('lc_name').value.trim();
+ var p=document.getElementById('lc_phone').value.trim();
+ if(!n||!p){alert('Please enter your name and phone number.');return;}
+ var s=document.getElementById('lc_svc').value;
+ var m=document.getElementById('lc_msg').value.trim();
+ var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244='+encodeURIComponent(s)+'&entry.957846797='+encodeURIComponent(m);
+ fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
+ document.getElementById('lc_ok').style.display='block';
+ if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'consultation','page':window.location.pathname});
 }
 </script>
+<!-- FORM_END -->
+<!-- FORM_END -->
 </body>
 </html>

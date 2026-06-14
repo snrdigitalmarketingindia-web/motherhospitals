@@ -37,11 +37,13 @@ TRUST     = load_component('trust-bar.html')
 FOOTER    = load_component('footer.html')
 MOB       = load_component('mob-cta-bar.html')
 WA        = load_component('wa-float.html')
+FORM      = load_component('lead-form.html')
 
 # ── Detection patterns (used for bootstrap — first run only) ───────────────
 DETECT = {
     'NAV':    (r'<div class="top-bar"[\s\S]*?</nav>',         NAV),
     'TRUST':  (r'<div class="trust-bar"[\s\S]*?</div>\s*</div>', TRUST),
+    'FORM':   (r'<section[^>]*background:linear-gradient\(135deg,#f5edfb[\s\S]*?</script>', FORM),
     'FOOTER': (r'<footer>[\s\S]*?</footer>',                   FOOTER),
     'MOB':    (r'<div[^>]+class="mob-cta-bar"[\s\S]*?</div>\s*</div>', MOB),
     'WA':     (r'<a[^>]+class="wa-float"[\s\S]*?</a>',         WA),
@@ -50,9 +52,9 @@ DETECT = {
 def wrap(name, content):
     return f'<!-- {name}_START -->\n{content}\n<!-- {name}_END -->'
 
-def inject_markers(html):
+def inject_markers(html, detect):
     """Bootstrap: detect component blocks and wrap with markers."""
-    for name, (pattern, canonical) in DETECT.items():
+    for name, (pattern, canonical) in detect.items():
         if f'<!-- {name}_START -->' in html:
             continue  # already marked
         if canonical is None:
@@ -62,9 +64,9 @@ def inject_markers(html):
             html = html[:m.start()] + wrap(name, m.group(0)) + html[m.end():]
     return html
 
-def replace_components(html):
+def replace_components(html, detect):
     """Replace content between existing markers with canonical version."""
-    for name, (_, canonical) in DETECT.items():
+    for name, (_, canonical) in detect.items():
         if canonical is None:
             continue
         pattern = rf'<!-- {name}_START -->[\s\S]*?<!-- {name}_END -->'
@@ -81,15 +83,20 @@ def process_file(path, check_only=False):
     if len(original) < 500:
         return False
 
-    # Skip pages that should keep custom nav (404, offer-manager-test)
+    # Skip pages that should keep custom nav/form
     basename = os.path.basename(path)
     if basename in ('404.html', 'offer-manager-test.html', 'mother_hospitals_v10.html'):
         return False
+    # Blog pages keep their own lead form (dark-bg style) — don't overwrite with standard form
+    if path.startswith('blog/') or path.startswith('./blog/'):
+        detect = {k: v for k, v in DETECT.items() if k != 'FORM'}
+    else:
+        detect = DETECT
 
     # Step 1: bootstrap markers if absent
-    html = inject_markers(original)
+    html = inject_markers(original, detect)
     # Step 2: replace between markers with canonical
-    html = replace_components(html)
+    html = replace_components(html, detect)
 
     if html == original:
         return False
