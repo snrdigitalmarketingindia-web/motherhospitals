@@ -513,9 +513,9 @@ document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 window._reapplyResults=function(){};
 
-function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
+function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});}
-function sameDay(a,b){return a.toDateString===b.toDateString;}
+function sameDay(a,b){return a.toDateString()===b.toDateString();}
 
 function buildCalendar(year,month,cycles,periodLen){
  const firstDay=new Date(year,month,1);
@@ -525,7 +525,7 @@ function buildCalendar(year,month,cycles,periodLen){
  const today=new Date;today.setHours(0,0,0,0);
  let html=`<div style="overflow-x:auto">
 <table class="cal-table"><thead><tr>${dows.map(d=>`<th>${d}</th>`).join('')}</tr></thead><tbody><tr>`;
- let startDow=firstDay.getDay;
+ let startDow=firstDay.getDay();
  for(let i=0;i<startDow;i++) html+='<td></td>';
  let col=startDow;
 
@@ -535,18 +535,18 @@ function buildCalendar(year,month,cycles,periodLen){
  const ovDate=addDays(lmp,cycleLen-14);
  const fertStart=addDays(ovDate,-5);
  const fertEnd=addDays(ovDate,1);
- for(let d=new Date(fertStart);d<=fertEnd;d.setDate(d.getDate+1)){
- if(sameDay(d,ovDate)) ovDays.add(d.toDateString);
- else fertileDays.add(d.toDateString);
+ for(let d=new Date(fertStart);d<=fertEnd;d.setDate(d.getDate()+1)){
+ if(sameDay(d,ovDate)) ovDays.add(d.toDateString());
+ else fertileDays.add(d.toDateString());
  }
- for(let d=new Date(lmp),i=0;i<periodLen;i++,d.setDate(d.getDate+1)){
- periodDays.add(d.toDateString);
+ for(let d=new Date(lmp),i=0;i<periodLen;i++,d.setDate(d.getDate()+1)){
+ periodDays.add(d.toDateString());
  }
  });
 
- for(let d=1;d<=lastDay.getDate;d++){
+ for(let d=1;d<=lastDay.getDate();d++){
  const dt=new Date(year,month,d);
- const ds=dt.toDateString;
+ const ds=dt.toDateString();
  let cls='';
  const todayCls=sameDay(dt,today)?'d-today':'';
  if(ovDays.has(ds)) cls='d-ov';
@@ -554,7 +554,7 @@ function buildCalendar(year,month,cycles,periodLen){
  else if(periodDays.has(ds)) cls='d-period';
  html+=`<td class="${cls} ${todayCls}">${d}</td>`;
  col++;
- if(col%7===0&&d<lastDay.getDate) html+='</tr><tr>';
+ if(col%7===0&&d<lastDay.getDate()) html+='</tr><tr>';
  }
  while(col%7!==0){html+='<td></td>';col++;}
  html+='</tr></tbody></table>
@@ -587,8 +587,8 @@ function buildPlanner(){
 
  // Build calendar for the month of this cycle's ovulation
  const targetDate=ovDate;
- const yr=targetDate.getFullYear;
- const mo=targetDate.getMonth;
+ const yr=targetDate.getFullYear();
+ const mo=targetDate.getMonth();
 
  // Pass all 3 cycles for cross-month highlighting
  const allCycles=[];
@@ -598,7 +598,7 @@ function buildPlanner(){
 
  // Build intercourse chips
  const chips=[];
- for(let d=new Date(fertStart);d<=fertEnd;d.setDate(d.getDate+1)){
+ for(let d=new Date(fertStart);d<=fertEnd;d.setDate(d.getDate()+1)){
  const isOv=sameDay(d,ovDate);
  const isD1Before=sameDay(d,addDays(ovDate,-1));
  const cls=(isOv|isD1Before)?'ic-chip ic-peak':'ic-chip ic-good';
