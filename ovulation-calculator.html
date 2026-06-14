@@ -600,8 +600,7 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  if(col%7===0&&d<lastDay.getDate) html+='</tr><tr>';
  }
  while(col%7!==0){html+='<td></td>';col++;}
- html+='</tr></tbody></table>
-</div>';
+ html+='</tr></tbody></table></div>';
  return html;
 }
 
