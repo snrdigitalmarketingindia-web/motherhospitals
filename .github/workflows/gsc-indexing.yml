@@ -1,4 +1,4 @@
-name: Bing URL Indexing
+name: URL Indexing — Bing + Google Sitemap Ping
 
 on:
   push:
@@ -31,3 +31,7 @@ jobs:
         env:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: python gsc-indexing/submit_sitemap_urls.py
+
+      - name: Ping Google with sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://motherhospitals.co.in/sitemap.xml" -o /dev/null -w "Google ping HTTP status: %{http_code}\n"
