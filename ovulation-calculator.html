@@ -290,7 +290,7 @@ footer a:hover{color:#fff}
  </select>
  </div>
  </div>
- <button class="btn-calc" onclick="calcOvulation" data-i18n="btn_calc">Find My Fertile Window →</button>
+ <button class="btn-calc" onclick="calcOvulation()" data-i18n="btn_calc">Find My Fertile Window →</button>
 
  <div class="result-box" id="result">
  <div class="ov-banner">
@@ -322,7 +322,7 @@ footer a:hover{color:#fff}
  <tbody id="summaryBody"></tbody>
  </table>
 </div>
- <button class="btn-reset" onclick="resetCalc" data-i18n="btn_reset">↩ Reset</button>
+ <button class="btn-reset" onclick="resetCalc()" data-i18n="btn_reset">↩ Reset</button>
  </div>
  </div>
 
@@ -557,7 +557,7 @@ window.pageT = {
 <script src="/scripts/i18n.js"></script>
 <script>
 var _lastOvParams = null;
-document.getElementById('lmp').max = new Date.toISOString.split('T')[0];
+document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});}
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}

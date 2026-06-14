@@ -304,7 +304,7 @@ footer a:hover{color:#fff}
  </select>
  </div>
  </div>
- <button class="btn-calc" onclick="trackPeriod" data-i18n="btn_track">Track My Cycle →</button>
+ <button class="btn-calc" onclick="trackPeriod()" data-i18n="btn_track">Track My Cycle →</button>
 
  <div class="result-box" id="result">
  <div id="phaseBanner" class="phase-banner phase-follicular">
@@ -336,7 +336,7 @@ footer a:hover{color:#fff}
  <div class="phase-item"><div class="pi-dot" style="background:#27ae60"></div><div data-i18n="phase_ov"><strong>Ovulation (~Day 14):</strong> Egg released. Peak fertility. Best time to conceive.</div></div>
  <div class="phase-item"><div class="pi-dot" style="background:#8e44ad"></div><div data-i18n="phase_lut"><strong>Luteal (Days 15–28):</strong> Progesterone rises. PMS symptoms may appear.</div></div>
  </div>
- <button class="btn-reset" onclick="resetTracker" data-i18n="btn_reset">↩ Reset</button>
+ <button class="btn-reset" onclick="resetTracker()" data-i18n="btn_reset">↩ Reset</button>
  </div>
  </div>
 
@@ -587,7 +587,7 @@ window.pageT = {
 <script src="/scripts/i18n.js"></script>
 <script>
 // Set max date to today
-document.getElementById('lmp').max = new Date.toISOString.split('T')[0];
+document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 function fmt(d){const opts={day:'numeric',month:'short',year:'numeric'};return d.toLocaleDateString('en-IN',opts);}
 function fmtDay(d){return d.toLocaleDateString('en-IN',{weekday:'long'});}

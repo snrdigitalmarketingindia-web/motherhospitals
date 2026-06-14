@@ -300,12 +300,12 @@ footer a:hover{color:#fff}
  <label class="toggle-item"><input type="checkbox" id="blasto"> <span data-i18n="label_blasto">Blastocyst culture (Day 5 transfer)</span></label>
  <label class="toggle-item"><input type="checkbox" id="pgta"> <span data-i18n="label_pgta">PGT-A (genetic testing of embryos)</span></label>
  </div>
- <button class="btn-calc" onclick="buildTimeline" data-i18n="btn_gen">Generate My IVF Timeline →</button>
+ <button class="btn-calc" onclick="buildTimeline()" data-i18n="btn_gen">Generate My IVF Timeline →</button>
 
  <div class="result-box" id="result">
  <div class="disclaimer-box" data-i18n="disclaimer_text">⚕️ <strong>Important:</strong> This timeline is an estimate based on typical protocol timings. Your actual schedule will be adjusted by Dr. E. Prashanthi Reddy based on your ultrasound monitoring and blood test results. Always follow your clinic's specific instructions.</div>
  <div id="timelineContainer" class="timeline"></div>
- <button class="btn-reset" onclick="resetPlanner" data-i18n="btn_reset">↩ Reset</button>
+ <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
  </div>
  </div>
 

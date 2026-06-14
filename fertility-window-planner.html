@@ -286,7 +286,7 @@ footer a:hover{color:#fff}
  </select>
  </div>
  </div>
- <button class="btn-calc" onclick="buildPlanner" data-i18n="btn_calc">Generate My 3-Month Planner →</button>
+ <button class="btn-calc" onclick="buildPlanner()" data-i18n="btn_calc">Generate My 3-Month Planner →</button>
 
  <div class="result-box" id="result">
  <div class="legend">
@@ -296,7 +296,7 @@ footer a:hover{color:#fff}
  <div class="leg-item"><div class="leg-dot" style="background:#fff;border:2px solid #f39c12"></div> <span data-i18n="leg_today">Today</span></div>
  </div>
  <div class="cal-grid" id="calGrid"></div>
- <button class="btn-reset" onclick="resetPlanner" data-i18n="btn_reset">↩ Reset</button>
+ <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
  </div>
  </div>
 
@@ -509,7 +509,7 @@ window.pageT={
 </script>
 <script src="/scripts/i18n.js"></script>
 <script>
-document.getElementById('lmp').max = new Date.toISOString.split('T')[0];
+document.getElementById('lmp').max = new Date().toISOString().split('T')[0];
 
 window._reapplyResults=function(){};
 
