@@ -414,6 +414,7 @@ function submitLC_iui_treatment_hydera(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service='+encodeURIComponent(s)+'&entry.message='+encodeURIComponent(m);
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('lc_success_iui_treatment_hydera').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'iui_treatment_hydera','page':window.location.pathname});
 }
 </script>
 

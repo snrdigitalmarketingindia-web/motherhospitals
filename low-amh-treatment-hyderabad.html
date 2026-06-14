@@ -233,6 +233,7 @@ function submitLC_low_amh_treatment_hy(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service='+encodeURIComponent(s)+'&entry.message='+encodeURIComponent(m);
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('lc_success_low_amh_treatment_hy').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'low_amh_treatment_hy','page':window.location.pathname});
 }
 </script>
 
