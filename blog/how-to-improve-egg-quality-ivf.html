@@ -247,6 +247,7 @@ function submitBLC_how_to_improve_egg_qua(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: how_to_improve_egg_qua');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_how_to_improve_egg_qua').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'how_to_improve_egg_qua','page':window.location.pathname});
 }
 </script>
 

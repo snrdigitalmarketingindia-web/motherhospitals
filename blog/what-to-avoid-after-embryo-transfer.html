@@ -749,6 +749,7 @@ function submitBLC_what_to_avoid_after_em(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: what_to_avoid_after_em');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_what_to_avoid_after_em').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'what_to_avoid_after_em','page':window.location.pathname});
 }
 </script>
 

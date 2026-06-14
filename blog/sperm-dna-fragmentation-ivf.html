@@ -521,6 +521,7 @@ function submitBLC_sperm_dna_fragmentatio(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: sperm_dna_fragmentatio');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_sperm_dna_fragmentatio').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'sperm_dna_fragmentatio','page':window.location.pathname});
 }
 </script>
 

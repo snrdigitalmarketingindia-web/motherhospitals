@@ -383,6 +383,7 @@ function submitBLC_can_low_amh_patients_g(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: can_low_amh_patients_g');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_can_low_amh_patients_g').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'can_low_amh_patients_g','page':window.location.pathname});
 }
 </script>
 

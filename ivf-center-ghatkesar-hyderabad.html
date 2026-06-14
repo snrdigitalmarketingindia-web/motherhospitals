@@ -312,6 +312,7 @@ function submitLC_ivf_center_ghatkesar(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service='+encodeURIComponent(s)+'&entry.message='+encodeURIComponent(m);
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('lc_ok_ivf_center_ghatkesar').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'treatment','page_id':'ivf_center_ghatkesar','page':window.location.pathname});
 }
 </script>
 

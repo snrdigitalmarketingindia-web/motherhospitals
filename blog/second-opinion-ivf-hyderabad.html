@@ -301,6 +301,7 @@ function submitBLC_second_opinion_ivf_hyd(){
   var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: second_opinion_ivf_hyd');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_second_opinion_ivf_hyd').style.display='block';
+  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'second_opinion_ivf_hyd','page':window.location.pathname});
 }
 </script>
 
