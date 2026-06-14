@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Inject canonical components
+        run: python3 build.py
+
       - name: Site health scan
         run: python3 scripts/scan_site.py
 
