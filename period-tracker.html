@@ -451,7 +451,7 @@ function getPhaseInfo(phase){
 // Store last result params for re-apply on lang switch
 var _lastTrackParams = null;
 
-function trackPeriod{
+function trackPeriod(){
  const lmpVal = document.getElementById('lmp').value;
  if(!lmpVal){alert(t('alert_enter_lmp'));return;}
  const lmp = new Date(lmpVal);
@@ -510,7 +510,7 @@ function _renderTrack(lmp, today, cycleLen, periodLen){
 }
 
 // Re-render results when language is switched
-window._reapplyResults = function{
+window._reapplyResults = function(){
  if(_lastTrackParams && document.getElementById('result').style.display==='block'){
  const lmp = new Date(_lastTrackParams.lmpVal);
  const today = new Date; today.setHours(0,0,0,0);
@@ -520,7 +520,7 @@ window._reapplyResults = function{
  }
 };
 
-function resetTracker{
+function resetTracker(){
  document.getElementById('lmp').value='';
  document.getElementById('cycle').value='28';
  document.getElementById('period').value='5';

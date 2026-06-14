@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Site health scan
+        run: python3 scripts/scan_site.py
+
       - name: Install dependencies
         run: pip install -r gsc-indexing/requirements.txt
 

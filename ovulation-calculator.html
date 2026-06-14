@@ -435,7 +435,7 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  return html;
 }
 
-function calcOvulation{
+function calcOvulation(){
  const lmpVal=document.getElementById('lmp').value;
  if(!lmpVal){alert(t('alert_lmp'));return;}
  const lmp=new Date(lmpVal);
@@ -501,7 +501,7 @@ function _renderOv(lmp,today,cycleLen,periodLen){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastOvParams&&document.getElementById('result').style.display==='block'){
  const lmp=new Date(_lastOvParams.lmpVal);
  const today=new Date;today.setHours(0,0,0,0);
@@ -510,7 +510,7 @@ window._reapplyResults=function{
  }
 };
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('lmp').value='';
  document.getElementById('cycle').value='28';
  document.getElementById('result').style.display='none';

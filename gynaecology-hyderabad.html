@@ -770,7 +770,7 @@ function submitLC_gynaecology_hyderaba(){
 <script>
 // FAQ accordion — close others when one opens
 document.querySelectorAll('details.faq-item').forEach(function(detail){
- detail.addEventListener('toggle', function{
+ detail.addEventListener('toggle', function(){
  if(detail.open){
  document.querySelectorAll('details.faq-item').forEach(function(other){
  if(other !== detail && other.open) other.removeAttribute('open');

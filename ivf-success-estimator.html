@@ -475,7 +475,7 @@ function toggleChip(el,id){
  document.getElementById('dx_'+id).checked=el.classList.contains('checked');
 }
 
-function calcIVF{
+function calcIVF(){
  const age=parseInt(document.getElementById('ivfAge').value);
  const amh=document.getElementById('ivfAMH').value;
  const prevCycles=parseInt(document.getElementById('prevCycles').value);
@@ -557,9 +557,9 @@ function _renderIVF(a){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{if(_lastIvfArgs) _renderIVF(_lastIvfArgs);};
+window._reapplyResults=function(){if(_lastIvfArgs) _renderIVF(_lastIvfArgs);};
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('ivfAge').value='35';
  document.getElementById('ivfAMH').value='normal';
  document.getElementById('prevCycles').value='0';

@@ -369,7 +369,7 @@ function daysBetween(a,b){return Math.round((b-a)/86400000);}
 
 var _lastConcResult=null;
 
-function updateMode{
+function updateMode(){
  const mode=document.getElementById('mode').value;
  const keyMap={edd:'label_edd',lmp:'label_lmp',ivf5:'label_ivf5',ivf3:'label_ivf3'};
  const lbl=document.getElementById('dateLabel');
@@ -391,7 +391,7 @@ function _renderConception(r){
  document.getElementById('embryoDisplay').textContent=r.embryoDays>0?`${r.embryoWeeks}w ${r.embryoDaysR}d`:t('not_yet_conceived');
 }
 
-function calcConception{
+function calcConception(){
  const mode=document.getElementById('mode').value;
  const dateVal=document.getElementById('inputDate').value;
  if(!dateVal){alert(t('alert_date'));return;}
@@ -419,9 +419,9 @@ function calcConception{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{if(_lastConcResult) _renderConception(_lastConcResult);};
+window._reapplyResults=function(){if(_lastConcResult) _renderConception(_lastConcResult);};
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('inputDate').value='';
  document.getElementById('mode').value='edd';
  _lastConcResult=null;

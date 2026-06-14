@@ -1243,7 +1243,7 @@ function submitLC_fertility_glossary(){
 document.querySelectorAll('.hamburger').forEach(b=>b.addEventListener('click',()=>document.querySelector('.mob-menu').classList.toggle('open')));
 // Toggle + / - on FAQ items
 document.querySelectorAll('.faq-item').forEach(function(el){
- el.addEventListener('toggle',function{
+ el.addEventListener('toggle',function(){
  var span=el.querySelector('summary span');
  if(span) span.textContent=el.open?'−':'+';
  });

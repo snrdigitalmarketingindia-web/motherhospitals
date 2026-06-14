@@ -404,7 +404,7 @@ window.pageT={
 <script>
 let _lastThicknessArgs=null;
 
-function checkThickness{
+function checkThickness(){
  const mm=parseFloat(document.getElementById('thickness').value);
  const pattern=document.getElementById('pattern').value;
  const ctx=document.getElementById('context').value;
@@ -455,7 +455,7 @@ function _renderThickness(mm,pattern,ctx){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('thickness').value='';
  document.getElementById('pattern').value='trilaminar';
  document.getElementById('context').value='ivf-fresh';
@@ -463,7 +463,7 @@ function resetCalc{
  document.getElementById('result').style.display='none';
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastThicknessArgs){
  const{mm,pattern,ctx}=_lastThicknessArgs;
  _renderThickness(mm,pattern,ctx);

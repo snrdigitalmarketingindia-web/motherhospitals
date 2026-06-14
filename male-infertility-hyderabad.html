@@ -522,9 +522,9 @@ function submitLC_male_infertility_hyd(){
 </div>
 
 <script>
-document.querySelector('.hamburger').addEventListener('click',function{document.querySelector('.mob-menu').classList.toggle('open')});
+document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('.mob-menu').classList.toggle('open')});
 document.querySelectorAll('.faq-item').forEach(function(el){
- el.addEventListener('toggle',function{
+ el.addEventListener('toggle',function(){
  var s=el.querySelector('summary span');
  if(s) s.textContent=el.open?'−':'+';
  });

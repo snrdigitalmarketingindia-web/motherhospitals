@@ -363,7 +363,7 @@ const RESULT_DATA={
 const selections=new Array(QUESTIONS.length).fill(null);
 var _lastPcosTotal=null;
 
-function buildQuiz{
+function buildQuiz(){
  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
  const container=document.getElementById('quizContainer');
  container.innerHTML='';
@@ -399,7 +399,7 @@ function _renderPCOS(total){
  document.getElementById('nextStepsList').innerHTML=d.steps.map(x=>`<li>${x}</li>`).join('');
 }
 
-function calcPCOS{
+function calcPCOS(){
  if(selections.some(s=>s===null)){alert(t('alert_all'));return;}
  const total=selections.reduce((sum,oi,qi)=>sum+QUESTIONS[qi].opts[oi].s,0);
  _lastPcosTotal=total;
@@ -408,12 +408,12 @@ function calcPCOS{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  buildQuiz;
  if(_lastPcosTotal!==null) _renderPCOS(_lastPcosTotal);
 };
 
-function resetCalc{
+function resetCalc(){
  selections.fill(null);
  _lastPcosTotal=null;
  buildQuiz;

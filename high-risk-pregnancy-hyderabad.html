@@ -714,13 +714,13 @@ function submitLC_high_risk_pregnancy_(){
 
 <script>
  // Hamburger menu
- document.querySelector('.hamburger').addEventListener('click', function {
+ document.querySelector('.hamburger').addEventListener('click', function(){
  document.querySelector('.mob-menu').classList.toggle('open');
  });
 
  // FAQ collapse: rotate icon on open/close
  document.querySelectorAll('.faq-item').forEach(function(detail) {
- detail.addEventListener('toggle', function {
+ detail.addEventListener('toggle', function(){
  var icon = this.querySelector('.faq-icon');
  if (icon) {
  icon.textContent = this.open ? '×' : '+';

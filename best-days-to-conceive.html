@@ -421,7 +421,7 @@ function _renderBestDays(nextOv,cycleLen){
  }
 }
 
-function calcBestDays{
+function calcBestDays(){
  const lmpVal=document.getElementById('lmp').value;
  if(!lmpVal){alert(t('alert_lmp'));return;}
  const lmp=new Date(lmpVal);
@@ -438,11 +438,11 @@ function calcBestDays{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastBestDays) _renderBestDays(_lastBestDays.nextOv,_lastBestDays.cycleLen);
 };
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('lmp').value='';
  document.getElementById('cycle').value='28';
  _lastBestDays=null;

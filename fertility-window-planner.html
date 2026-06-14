@@ -349,7 +349,7 @@ window.pageT={
 <script>
 document.getElementById('lmp').max = new Date.toISOString.split('T')[0];
 
-window._reapplyResults=function{};
+window._reapplyResults=function(){};
 
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
 function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});}
@@ -400,7 +400,7 @@ function buildCalendar(year,month,cycles,periodLen){
  return {title:monthName,table:html};
 }
 
-function buildPlanner{
+function buildPlanner(){
  const lmpVal=document.getElementById('lmp').value;
  if(!lmpVal){alert(t('alert_lmp'));return;}
  const lmp=new Date(lmpVal);
@@ -454,7 +454,7 @@ function buildPlanner{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function resetPlanner{
+function resetPlanner(){
  document.getElementById('lmp').value='';
  document.getElementById('cycle').value='28';
  document.getElementById('periodLen').value='5';

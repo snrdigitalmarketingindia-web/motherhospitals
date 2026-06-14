@@ -441,7 +441,7 @@ function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
 
-function updateMode{
+function updateMode(){
  const mode=document.getElementById('dateMode').value;
  const lbl=document.getElementById('mainDateLabel');
  const usInputs=document.getElementById('usInputs');
@@ -503,7 +503,7 @@ function _renderResults(lmp,edd){
  });
 }
 
-function calcEDD{
+function calcEDD(){
  const mode=document.getElementById('dateMode').value;
  const dateVal=document.getElementById('mainDate').value;
  if(!dateVal){alert(t('alert_date'));return;}
@@ -526,11 +526,11 @@ function calcEDD{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastLmp&&_lastEdd) _renderResults(_lastLmp,_lastEdd);
 };
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('mainDate').value='';
  document.getElementById('dateMode').value='lmp';
  _lastLmp=null;_lastEdd=null;

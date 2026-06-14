@@ -463,12 +463,12 @@ function _renderSemen(vals,dfiVal){
  document.getElementById('overallBanner').className='overall-banner '+dxCls;
  document.getElementById('dxLabel').textContent=t(dxKey+'_label');
  document.getElementById('dxDesc').textContent=t(dxKey+'_desc');
- let treatments=[...(T[txKey]|[])];
+ let treatments=[...(T[txKey]||[])];
  if(!isNaN(dfiVal)&&dfiVal>25) treatments.push(t('tx_dfi_high'));
  document.getElementById('treatmentList').innerHTML=treatments.map(x=>`<li>${x}</li>`).join('');
 }
 
-function interpretSemen{
+function interpretSemen(){
  const vals={vol:parseFloat(document.getElementById('vol').value),conc:parseFloat(document.getElementById('conc').value),totMot:parseFloat(document.getElementById('totMot').value),progMot:parseFloat(document.getElementById('progMot').value),morph:parseFloat(document.getElementById('morph').value)};
  const dfiVal=parseFloat(document.getElementById('dfi').value);
  for(const k in vals){if(isNaN(vals[k])|vals[k]<0){alert(t('alert_params'));return;}}
@@ -478,11 +478,11 @@ function interpretSemen{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastSemenArgs) _renderSemen(_lastSemenArgs.vals,_lastSemenArgs.dfiVal);
 };
 
-function resetCalc{
+function resetCalc(){
  ['vol','conc','totMot','progMot','morph','dfi'].forEach(id=>document.getElementById(id).value='');
  _lastSemenArgs=null;
  document.getElementById('result').style.display='none';

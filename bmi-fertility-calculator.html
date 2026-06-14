@@ -463,7 +463,7 @@ function switchUnit(unit){
  document.getElementById('result').style.display='none';
 }
 
-function calcBMI{
+function calcBMI(){
  let weightKg,heightM;
  if(currentUnit==='metric'){
  weightKg=parseFloat(document.getElementById('weightKg').value);
@@ -547,7 +547,7 @@ function _renderBMI(weightKg,heightM,condition){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('weightKg').value='';
  document.getElementById('heightCm').value='';
  document.getElementById('weightLbs').value='';
@@ -559,7 +559,7 @@ function resetCalc{
  document.getElementById('result').style.display='none';
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastBmiArgs){
  const{weightKg,heightM,condition}=_lastBmiArgs;
  _renderBMI(weightKg,heightM,condition);

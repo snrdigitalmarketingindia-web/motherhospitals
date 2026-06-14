@@ -574,7 +574,7 @@ postnatal care Boduppal, women wellness clinic Hyderabad, fertility nutrition Hy
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBR9NWNXGN"></script>
 <script>
- window.dataLayer = window.dataLayer | [];
+ window.dataLayer=window.dataLayer||[];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date);
  gtag('config', 'G-RBR9NWNXGN');
@@ -1494,7 +1494,7 @@ postnatal care Boduppal, women wellness clinic Hyderabad, fertility nutrition Hy
 </div>
 
 <script>
-function submitForm {
+function submitForm(){
  var name = document.getElementById('f_name').value.trim;
  var phone = document.getElementById('f_phone').value.trim;
  var email = document.getElementById('f_email').value.trim;
@@ -1513,12 +1513,12 @@ function submitForm {
  formData.append('fbzx', Math.floor(Math.random * 9e15).toString);
  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse', {
  method: 'POST', mode: 'no-cors', body: formData
- }).then(function {
+ }).then(function(){
  document.getElementById('successBox').style.display = 'block';
  document.getElementById('submitBtn').style.display = 'none';
  ['f_name','f_phone','f_email','f_service','f_msg'].forEach(function(id){document.getElementById(id).value='';});
  document.getElementById('successBox').scrollIntoView({behavior:'smooth',block:'center'});
- }).catch(function {
+ }).catch(function(){
  document.getElementById('successBox').style.display = 'block';
  document.getElementById('submitBtn').style.display = 'none';
  });
@@ -1549,7 +1549,7 @@ document.addEventListener('click', function(e) {
 
 <!-- FIX: Microsoft Clarity deferred — loads after page is interactive (INP improvement) -->
 <script>
-window.addEventListener('load', function {
+window.addEventListener('load', function(){
  (function(c,l,a,r,i,t,y){
  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -1560,7 +1560,7 @@ window.addEventListener('load', function {
 
 <script>
 /* Strip junk query params that cause duplicate indexing issues in GSC */
-(function{
+(function(){
  var junkParams = ['olsPage','blog'];
  var params = new URLSearchParams(window.location.search);
  var dirty = false;

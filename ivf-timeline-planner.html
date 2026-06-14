@@ -336,7 +336,7 @@ function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
 
 let _lastTimelineArgs=null;
 
-function buildTimeline{
+function buildTimeline(){
  const protocol=document.getElementById('protocol').value;
  const dateVal=document.getElementById('cycleStart').value;
  const blasto=document.getElementById('blasto').checked;
@@ -560,7 +560,7 @@ function _renderTimeline(protocol,dateVal,blasto,pgta){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function resetPlanner{
+function resetPlanner(){
  document.getElementById('cycleStart').value='';
  document.getElementById('protocol').value='antagonist';
  document.getElementById('blasto').checked=false;
@@ -569,7 +569,7 @@ function resetPlanner{
  document.getElementById('result').style.display='none';
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastTimelineArgs){
  const{protocol,dateVal,blasto,pgta}=_lastTimelineArgs;
  _renderTimeline(protocol,dateVal,blasto,pgta);

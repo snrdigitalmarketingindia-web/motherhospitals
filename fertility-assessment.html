@@ -411,7 +411,7 @@ const QS=[
 const sels=new Array(QS.length).fill(null);
 let _lastTotal=null;
 
-function buildQuiz{
+function buildQuiz(){
  const c=document.getElementById('quizContainer');
  c.innerHTML='';
  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
@@ -492,20 +492,20 @@ function _renderAssessment(total){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function calcAssessment{
+function calcAssessment(){
  if(sels.some(s=>s===null)){alert(t('alert_all'));return;}
  const total=sels.reduce((sum,oi,qi)=>sum+QS[qi].opts[oi].s,0);
  _renderAssessment(total);
 }
 
-function resetQuiz{
+function resetQuiz(){
  sels.fill(null);
  _lastTotal=null;
  buildQuiz;
  document.getElementById('result').style.display='none';
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  buildQuiz;
  if(_lastTotal!==null) _renderAssessment(_lastTotal);
 };

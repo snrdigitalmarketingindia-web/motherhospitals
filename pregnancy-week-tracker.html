@@ -444,7 +444,7 @@ function fmt(d){return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'
 function addDays(d,n){const r=new Date(d);r.setDate(r.getDate+n);return r;}
 function daysBetween(a,b){return Math.round((b-a)/86400000);}
 
-function updateTrackMode{
+function updateTrackMode(){
  const mode=document.getElementById('trackMode').value;
  const manual=document.getElementById('manualInputs');
  const dateGrp=document.getElementById('dateGroup');
@@ -457,7 +457,7 @@ function updateTrackMode{
  }
 }
 
-function trackWeek{
+function trackWeek(){
  const mode=document.getElementById('trackMode').value;
  const today=new Date;today.setHours(0,0,0,0);
  let gestDaysTotal,lmp;
@@ -527,7 +527,7 @@ function showWeek(lmp,gestDaysTotal){
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastLmpTrack&&_lastGestDaysTrack) showWeek(_lastLmpTrack,_lastGestDaysTrack);
 };
 
@@ -539,7 +539,7 @@ function navWeek(dir){
  showWeek(lmpForNav,gestDaysTotal);
 }
 
-function resetTracker{
+function resetTracker(){
  document.getElementById('trackDate').value='';
  document.getElementById('trackMode').value='lmp';
  _lastLmpTrack=null;_lastGestDaysTrack=null;lmpForNav=null;

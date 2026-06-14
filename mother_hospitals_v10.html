@@ -762,7 +762,7 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBR9NWNXGN"></script>
 <script>
- window.dataLayer = window.dataLayer | [];
+ window.dataLayer=window.dataLayer||[];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date);
  gtag('config', 'G-RBR9NWNXGN');
@@ -1445,7 +1445,7 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 <a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
 
 <script>
-function submitForm {
+function submitForm(){
  var name = document.getElementById('f_name').value.trim;
  var phone = document.getElementById('f_phone').value.trim;
  var email = document.getElementById('f_email').value.trim;
@@ -1462,12 +1462,12 @@ function submitForm {
  formData.append('entry.957846797', msg);
  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse', {
  method: 'POST', mode: 'no-cors', body: formData
- }).then(function {
+ }).then(function(){
  document.getElementById('successBox').style.display = 'block';
  document.getElementById('submitBtn').style.display = 'none';
  ['f_name','f_phone','f_email','f_service','f_msg'].forEach(function(id){document.getElementById(id).value='';});
  document.getElementById('successBox').scrollIntoView({behavior:'smooth',block:'center'});
- }).catch(function {
+ }).catch(function(){
  document.getElementById('successBox').style.display = 'block';
  document.getElementById('submitBtn').style.display = 'none';
  });

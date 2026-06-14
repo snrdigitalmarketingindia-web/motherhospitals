@@ -446,7 +446,7 @@ function _renderAMH(displayVal,cls,labelKey,descKey,flagDefs){
  flagDefs.forEach(f=>{const li=document.createElement('li');li.className=f.t;li.textContent=t(f.k);fl.appendChild(li);});
 }
 
-function interpretAMH{
+function interpretAMH(){
  const rawVal=parseFloat(document.getElementById('amhVal').value);
  const unit=document.getElementById('amhUnit').value;
  const ageGroup=parseInt(document.getElementById('amhAge').value);
@@ -486,11 +486,11 @@ function interpretAMH{
  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-window._reapplyResults=function{
+window._reapplyResults=function(){
  if(_lastAmhResult) _renderAMH(_lastAmhResult.displayVal,_lastAmhResult.cls,_lastAmhResult.labelKey,_lastAmhResult.descKey,_lastAmhResult.flagDefs);
 };
 
-function resetCalc{
+function resetCalc(){
  document.getElementById('amhVal').value='';
  document.getElementById('amhUnit').value='ngml';
  document.getElementById('amhAge').value='33';
