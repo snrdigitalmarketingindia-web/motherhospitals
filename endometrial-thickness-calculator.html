@@ -173,7 +173,13 @@ footer a:hover{color:#fff}
 .sticky-mob.wa{background:#25d366;color:#fff}
 .sticky-mob.call{background:var(--accent2);color:#fff}
 @media(min-width:769px){.sticky-mob{display:none!important}}
-.mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
+.mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}
+/* Hero dark-bg overrides: make stats + buttons visible on dark gradient */
+.hero .stat-num{background:linear-gradient(135deg,#ffb3de,#fff)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.hero .stat-label{color:rgba(255,255,255,0.75)!important}
+.hero-ctas .btn-call{background:rgba(255,255,255,0.15)!important;border:2px solid rgba(255,255,255,0.6)!important;color:#fff!important;box-shadow:none!important}
+.hero-ctas .btn-call:hover{background:rgba(255,255,255,0.25)!important}
+</style>
 
 <!-- NAV_START -->
 <div class="top-bar">
