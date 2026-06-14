@@ -24,7 +24,6 @@ Disallow: /.claude/
 Disallow: /SEO-STRATEGY-2026.md
 Disallow: /content-output/
 Disallow: /content-topics/
-Disallow: /scripts/
 
 # LLMs.txt
 LLMs: https://motherhospitals.co.in/llms.txt
