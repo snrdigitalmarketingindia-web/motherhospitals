@@ -25,5 +25,13 @@ Disallow: /SEO-STRATEGY-2026.md
 Disallow: /content-output/
 Disallow: /content-topics/
 
+# Block junk query parameters (prevent crawl budget waste)
+Disallow: /*?blog=
+Disallow: /*?s=
+Disallow: /*?search=
+Disallow: /*?q=
+Disallow: /*?p=
+Disallow: /index.html
+
 # LLMs.txt
 LLMs: https://motherhospitals.co.in/llms.txt
