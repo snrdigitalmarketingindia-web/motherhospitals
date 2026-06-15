@@ -16,7 +16,7 @@ User-agent: Googlebot
 Allow: /
 
 # Sitemap
-Sitemap: https://www.motherhospitals.co.in/sitemap.xml
+Sitemap: https://motherhospitals.co.in/sitemap.xml
 
 # Disallow admin/junk
 Disallow: /cdn-cgi/
