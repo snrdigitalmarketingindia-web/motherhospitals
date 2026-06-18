@@ -555,7 +555,7 @@ function buildCalendar(year,month,cycles,periodLen){
  if(ovDays.has(ds)) cls='d-ov';
  else if(fertileDays.has(ds)) cls='d-fertile';
  else if(periodDays.has(ds)) cls='d-period';
- const inner = cls==='d-fertile' ? `${d}<span style="display:block;font-size:0.6em;line-height:1">💋</span>` : cls==='d-period' ? `${d}<span style="display:block;font-size:0.6em;line-height:1">🩸</span>` : `${d}`;
+ const inner = cls==='d-fertile' ? `${d}<span style="display:block;font-size:0.6em;line-height:1">💕</span>` : cls==='d-period' ? `${d}<span style="display:block;font-size:0.6em;line-height:1">🩸</span>` : `${d}`;
  html+=`<td class="${cls} ${todayCls}">${inner}</td>`;
  col++;
  if(col%7===0&&d<lastDay.getDate()) html+='</tr><tr>';
@@ -611,7 +611,7 @@ function buildPlanner(){
 
  const block=document.createElement('div');
  block.className='cal-block';
- block.innerHTML=`<div class="cal-block-left"><div class="cal-header">${title}</div>${table}</div><div class="intercourse-chips"><div class="ic-chips-title">💋 Best Days</div>${chips.join('')}</div>`;
+ block.innerHTML=`<div class="cal-block-left"><div class="cal-header">${title}</div>${table}</div><div class="intercourse-chips"><div class="ic-chips-title">💕 Best Days</div>${chips.join('')}</div>`;
  grid.appendChild(block);
  }
 
