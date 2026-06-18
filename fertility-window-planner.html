@@ -120,9 +120,9 @@ p{color:var(--text-mid);margin-bottom:0.8rem}
 @media(max-width:768px){.cal-grid{grid-template-columns:1fr}}
 .cal-block{background:#fff;border:1px solid #a8d5be;border-radius:var(--radius);overflow:hidden}
 .cal-header{background:var(--navy);color:#fff;text-align:center;padding:0.7rem;font-weight:700;font-size:0.9rem}
-.cal-table{width:100%;border-collapse:collapse;font-size:0.78rem}
-.cal-table th{background:var(--accent-light);color:var(--navy);padding:0.3rem 0.2rem;text-align:center;font-weight:700;font-size:0.7rem}
-.cal-table td{padding:0.3rem 0.2rem;text-align:center;border:1px solid #e0ede7;min-width:28px;height:28px;font-size:0.78rem}
+.cal-table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.cal-table th{background:var(--accent-light);color:var(--navy);padding:0.5rem 0.3rem;text-align:center;font-weight:700;font-size:0.8rem}
+.cal-table td{padding:0.4rem 0.2rem;text-align:center;border:1px solid #e0ede7;min-width:38px;height:42px;font-size:0.88rem}
 .d-ov{background:var(--accent)!important;color:#fff!important;font-weight:800;border-radius:50%}
 .d-fertile{background:#a8d5be!important;color:#1a4a35!important;font-weight:600}
 .d-period{background:#ffe0f0!important;color:#aa045a!important;font-weight:600}
@@ -287,17 +287,6 @@ footer a:hover{color:#fff}
  </div>
  </div>
  <button class="btn-calc" onclick="buildPlanner()" data-i18n="btn_calc">Generate My 3-Month Planner →</button>
-
- <div class="result-box" id="result">
- <div class="legend">
- <div class="leg-item"><div class="leg-dot" style="background:var(--accent);border-radius:50%"></div> <span data-i18n="leg_ov">Ovulation Day</span></div>
- <div class="leg-item"><div class="leg-dot" style="background:#a8d5be"></div> <span data-i18n="leg_fertile">Fertile Window</span></div>
- <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div> <span data-i18n="leg_period">Period Days</span></div>
- <div class="leg-item"><div class="leg-dot" style="background:#fff;border:2px solid #f39c12"></div> <span data-i18n="leg_today">Today</span></div>
- </div>
- <div class="cal-grid" id="calGrid"></div>
- <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
- </div>
  </div>
 
  <!-- Educational EN -->
@@ -383,6 +372,18 @@ footer a:hover{color:#fff}
  <p style="font-size:0.82rem;color:var(--text-mid);margin:0">This planner provides estimates based on average cycle lengths. Actual ovulation dates may vary. Consult Dr. E. Prashanthi Reddy for personalised fertility guidance.</p>
  </div>
  </aside>
+ </div>
+
+ <!-- Full-width calendar result — outside two-col so all 3 months get full page width -->
+ <div class="result-box" id="result" style="margin-bottom:2rem">
+ <div class="legend">
+ <div class="leg-item"><div class="leg-dot" style="background:var(--accent);border-radius:50%"></div> <span data-i18n="leg_ov">Ovulation Day</span></div>
+ <div class="leg-item"><div class="leg-dot" style="background:#a8d5be"></div> <span data-i18n="leg_fertile">Fertile Window</span></div>
+ <div class="leg-item"><div class="leg-dot" style="background:#ffe0f0"></div> <span data-i18n="leg_period">Period Days</span></div>
+ <div class="leg-item"><div class="leg-dot" style="background:#fff;border:2px solid #f39c12"></div> <span data-i18n="leg_today">Today</span></div>
+ </div>
+ <div class="cal-grid" id="calGrid"></div>
+ <button class="btn-reset" onclick="resetPlanner()" data-i18n="btn_reset">↩ Reset</button>
  </div>
 
  <div class="cta-section">
@@ -613,7 +614,7 @@ function buildPlanner(){
  }
 
  document.getElementById('result').style.display='block';
- document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+ document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function resetPlanner(){
