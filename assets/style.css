@@ -24,6 +24,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 .nav-links a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--magenta)}
 .btn-nav{background:linear-gradient(135deg,var(--magenta),var(--purple))!important;color:#fff!important;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap}
+.btn-free{background:#16a34a!important;color:#fff!important;padding:0.38rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap;font-weight:600}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
 .mob-menu{display:none;flex-direction:column;background:var(--cream);border-top:1px solid var(--purple-light);padding:1rem 5% 1.5rem;position:fixed;top:70px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}
