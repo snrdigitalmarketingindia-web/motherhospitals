@@ -200,7 +200,7 @@ window.pageT = {
 </script>
 <body>
 <!-- GOOGLE SIGN-IN OVERLAY -->
-<div id="gsi-overlay" style="position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,#1a0a2e 0%,#58037c 60%,#aa045a 100%);display:flex;align-items:center;justify-content:center;padding:1rem;">
+<div id="gsi-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(135deg,#1a0a2e 0%,#58037c 60%,#aa045a 100%);display:flex;align-items:center;justify-content:center;padding:1rem;">
 <div style="background:#fff;border-radius:20px;padding:2.5rem 2rem;max-width:420px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,0.35);">
   <picture><source srcset="/assets/logo.webp" type="image/webp"/><img src="/assets/logo.png" alt="Mother Hospitals Logo" style="height:56px;width:56px;object-fit:contain;margin-bottom:0.8rem"/></picture>
   <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:700;color:#58037c;line-height:1.2;margin-bottom:0.3rem">Mother Hospitals &amp; IVF Center</div>
@@ -209,25 +209,12 @@ window.pageT = {
     <div style="font-size:0.95rem;font-weight:600;color:#1e0a2e;margin-bottom:0.5rem">🔓 Access 15 Free Fertility Tools</div>
     <div style="font-size:0.84rem;color:#4a2d5e;line-height:1.6">Sign in with your Google account to unlock all calculators — Period Tracker, Ovulation Calculator, IVF Success Estimator and 12 more.</div>
   </div>
-  <div id="g_id_onload"
-    data-client_id="741518418347-r0e28h8v6la6g00q4ouoshglro50dao7.apps.googleusercontent.com"
-    data-callback="handleGoogleSignIn"
-    data-auto_prompt="false">
-  </div>
-  <div class="g_id_signin"
-    data-type="standard"
-    data-size="large"
-    data-theme="outline"
-    data-text="signin_with"
-    data-shape="pill"
-    data-logo_alignment="left"
-    style="display:flex;justify-content:center">
-  </div>
+  <div id="gsi-btn-container" style="display:flex;justify-content:center;min-height:44px;"></div>
   <div style="font-size:0.75rem;color:#8a6a9a;margin-top:1.2rem">🔒 Your data stays private. Nothing is stored on our servers.</div>
 </div>
 </div>
 <!-- USER BADGE (shown after sign-in) -->
-<div id="user-badge" style="display:none;position:fixed;top:12px;right:16px;z-index:300;background:#fff;border:1px solid #e8d5f5;border-radius:50px;padding:5px 14px 5px 6px;display:none;align-items:center;gap:8px;box-shadow:0 2px 12px rgba(88,3,124,0.12)">
+<div id="user-badge" style="display:none;position:fixed;top:12px;right:16px;z-index:300;background:#fff;border:1px solid #e8d5f5;border-radius:50px;padding:5px 14px 5px 6px;align-items:center;gap:8px;box-shadow:0 2px 12px rgba(88,3,124,0.12)">
   <img id="user-avatar" src="" alt="" style="width:28px;height:28px;border-radius:50%;object-fit:cover"/>
   <span id="user-name" style="font-size:0.8rem;font-weight:500;color:#1e0a2e"></span>
   <button onclick="signOut()" style="background:none;border:none;cursor:pointer;font-size:0.75rem;color:#8a6a9a;padding:0;margin-left:4px" title="Sign out">✕</button>
@@ -645,36 +632,52 @@ function filterTools(cat, btn){
     }
   }
 
-  window.handleGoogleSignIn = function(response){
+  function onSignIn(response){
     var payload = parseJwt(response.credential);
     if(!payload) return;
-    var user = {name: payload.name, given_name: payload.given_name, email: payload.email, picture: payload.picture, exp: payload.exp};
+    var user = {name:payload.name, given_name:payload.given_name, email:payload.email, picture:payload.picture, exp:payload.exp};
     localStorage.setItem(SK, JSON.stringify(user));
     showUser(user);
     if(typeof gtag !== 'undefined') gtag('event','login',{method:'Google',page:'fertility-tools'});
-  };
+  }
 
   window.signOut = function(){
     localStorage.removeItem(SK);
-    var badge = document.getElementById('user-badge');
-    if(badge) badge.style.display = 'none';
-    var overlay = document.getElementById('gsi-overlay');
-    if(overlay) overlay.style.display = 'flex';
+    document.getElementById('user-badge').style.display = 'none';
+    document.getElementById('gsi-overlay').style.display = 'flex';
     if(window.google && google.accounts) google.accounts.id.disableAutoSelect();
   };
 
-  /* auto-login returning users */
+  /* check returning user first — skip overlay if valid session */
   var saved = localStorage.getItem(SK);
   if(saved){
     try{
-      var user = JSON.parse(saved);
-      if(user.exp && Date.now()/1000 < user.exp){
-        showUser(user);
-      } else {
-        localStorage.removeItem(SK);
-      }
-    } catch(e){ localStorage.removeItem(SK); }
+      var u = JSON.parse(saved);
+      if(u.exp && Date.now()/1000 < u.exp){ showUser(u); saved = null; }
+      else localStorage.removeItem(SK);
+    } catch(e){ localStorage.removeItem(SK); saved = null; }
   }
+
+  /* initialise GIS only after script loads — render button explicitly, NO auto-prompt */
+  function initGSI(){
+    google.accounts.id.initialize({
+      client_id: CLIENT_ID,
+      callback: onSignIn,
+      auto_select: false,
+      cancel_on_tap_outside: true
+    });
+    /* cancel any One Tap that might fire */
+    google.accounts.id.cancel();
+    /* render the standard "Sign in with Google" button */
+    google.accounts.id.renderButton(
+      document.getElementById('gsi-btn-container'),
+      {theme:'outline', size:'large', shape:'pill', text:'signin_with', logo_alignment:'left', width:280}
+    );
+  }
+
+  /* wait for GIS script to be ready */
+  if(window.google && google.accounts){ initGSI(); }
+  else { window.addEventListener('load', function(){ if(window.google && google.accounts) initGSI(); }); }
 })();
 </script>
 </body>
