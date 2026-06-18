@@ -638,6 +638,11 @@ function filterTools(cat, btn){
     var user = {name:payload.name, given_name:payload.given_name, email:payload.email, picture:payload.picture, exp:payload.exp};
     localStorage.setItem(SK, JSON.stringify(user));
     showUser(user);
+    /* dismiss Google's post-sign-in toast immediately */
+    if(window.google && google.accounts && google.accounts.id){
+      google.accounts.id.cancel();
+      google.accounts.id.disableAutoSelect();
+    }
     if(typeof gtag !== 'undefined') gtag('event','login',{method:'Google',page:'fertility-tools'});
   }
 
@@ -664,7 +669,8 @@ function filterTools(cat, btn){
       client_id: CLIENT_ID,
       callback: onSignIn,
       auto_select: false,
-      cancel_on_tap_outside: true
+      cancel_on_tap_outside: true,
+      use_fedcm_for_prompt: false
     });
     /* cancel any One Tap that might fire */
     google.accounts.id.cancel();
