@@ -116,20 +116,22 @@ p{color:var(--text-mid);margin-bottom:0.8rem}
 .legend{display:flex;flex-wrap:wrap;gap:0.8rem;margin-bottom:1rem;font-size:0.82rem}
 .leg-item{display:flex;align-items:center;gap:0.4rem}
 .leg-dot{width:16px;height:16px;border-radius:4px;flex-shrink:0}
-.cal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
-@media(max-width:768px){.cal-grid{grid-template-columns:1fr}}
-.cal-block{background:#fff;border:1px solid #a8d5be;border-radius:var(--radius);overflow:hidden}
-.cal-header{background:var(--navy);color:#fff;text-align:center;padding:0.7rem;font-weight:700;font-size:0.9rem}
-.cal-table{width:100%;border-collapse:collapse;font-size:0.9rem}
-.cal-table th{background:var(--accent-light);color:var(--navy);padding:0.5rem 0.3rem;text-align:center;font-weight:700;font-size:0.8rem}
-.cal-table td{padding:0.4rem 0.2rem;text-align:center;border:1px solid #e0ede7;min-width:38px;height:42px;font-size:0.88rem}
+.cal-grid{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:1.5rem}
+.cal-block{display:grid;grid-template-columns:auto 1fr;border:1px solid #a8d5be;border-radius:var(--radius);overflow:hidden;background:#fff}
+.cal-block-left{display:flex;flex-direction:column}
+.cal-header{background:var(--navy);color:#fff;text-align:center;padding:0.7rem 1.2rem;font-weight:700;font-size:0.95rem}
+.cal-table{border-collapse:collapse;font-size:0.92rem}
+.cal-table th{background:var(--accent-light);color:var(--navy);padding:0.55rem 0.5rem;text-align:center;font-weight:700;font-size:0.82rem}
+.cal-table td{padding:0.45rem 0.4rem;text-align:center;border:1px solid #e0ede7;min-width:46px;height:48px;font-size:0.92rem}
 .d-ov{background:var(--accent)!important;color:#fff!important;font-weight:800;border-radius:50%}
 .d-fertile{background:#a8d5be!important;color:#1a4a35!important;font-weight:600}
 .d-period{background:#ffe0f0!important;color:#aa045a!important;font-weight:600}
 .d-today{outline:2px solid #f39c12;outline-offset:-1px}
-.intercourse-chips{display:flex;flex-wrap:wrap;gap:0.4rem;padding:0.7rem;border-top:1px solid #a8d5be;background:#f0f9f5}
-.ic-chip{padding:0.25rem 0.6rem;border-radius:50px;font-size:0.72rem;font-weight:700}
+.intercourse-chips{display:flex;flex-direction:column;gap:0.4rem;padding:1rem 1.2rem;background:#f0f9f5;border-left:1px solid #a8d5be;justify-content:center}
+.ic-chips-title{font-size:0.78rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.04em}
+.ic-chip{padding:0.35rem 0.8rem;border-radius:50px;font-size:0.82rem;font-weight:700;white-space:nowrap}
 .ic-peak{background:var(--accent);color:#fff}
+@media(max-width:768px){.cal-block{grid-template-columns:1fr}.intercourse-chips{border-left:none;border-top:1px solid #a8d5be;flex-direction:row;flex-wrap:wrap}}
 .ic-good{background:#a8d5be;color:#1a4a35}
 .faq-list details{border:1px solid #a8d5be;border-radius:var(--radius);margin-bottom:0.6rem;overflow:hidden}
 .faq-list details summary{padding:1rem 1.2rem;font-size:0.9rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--navy)}
@@ -609,7 +611,7 @@ function buildPlanner(){
 
  const block=document.createElement('div');
  block.className='cal-block';
- block.innerHTML=`<div class="cal-header">${title}</div>${table}<div class="intercourse-chips">${chips.join('')}</div>`;
+ block.innerHTML=`<div class="cal-block-left"><div class="cal-header">${title}</div>${table}</div><div class="intercourse-chips"><div class="ic-chips-title">💑 Best Days</div>${chips.join('')}</div>`;
  grid.appendChild(block);
  }
 
