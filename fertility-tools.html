@@ -632,18 +632,29 @@ function filterTools(cat, btn){
     }
   }
 
+  function submitLead(user){
+    var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse';
+    var url = FORM
+      + '?entry.1033771490=' + encodeURIComponent(user.name)
+      + '&entry.826156409='  + encodeURIComponent(user.email)
+      + '&entry.1895050244=' + encodeURIComponent('Free Tools Sign-In')
+      + '&entry.957846797='  + encodeURIComponent('Google Sign-In — Free Fertility Tools');
+    fetch(url, {method:'POST', mode:'no-cors'}).catch(function(){});
+  }
+
   function onSignIn(response){
     var payload = parseJwt(response.credential);
     if(!payload) return;
     var user = {name:payload.name, given_name:payload.given_name, email:payload.email, picture:payload.picture, exp:payload.exp};
     localStorage.setItem(SK, JSON.stringify(user));
     showUser(user);
+    submitLead(user);
     /* dismiss Google's post-sign-in toast immediately */
     if(window.google && google.accounts && google.accounts.id){
       google.accounts.id.cancel();
       google.accounts.id.disableAutoSelect();
     }
-    if(typeof gtag !== 'undefined') gtag('event','login',{method:'Google',page:'fertility-tools'});
+    if(typeof gtag !== 'undefined') gtag('event','generate_lead',{method:'Google',form_type:'free_tools_signin',page:'fertility-tools'});
   }
 
   window.signOut = function(){
