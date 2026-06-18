@@ -595,7 +595,8 @@ function buildCal(year,month,ovDate,periodLen,cycleLen,lmp){
  if(isOv) cls='cal-ov';
  else if(isFert) cls='cal-fertile';
  else if(isPeriod) cls='cal-period';
- html+=`<td class="${cls} ${todayCls}">${d}</td>`;
+ const sym=cls==='cal-fertile'?`<span style="display:block;font-size:0.6em;line-height:1">💕</span>`:cls==='cal-period'?`<span style="display:block;font-size:0.6em;line-height:1">🩸</span>`:'';
+ html+=`<td class="${cls} ${todayCls}">${d}${sym}</td>`;
  col++;
  if(col%7===0&&d<lastDay.getDate()) html+='</tr><tr>';
  }
