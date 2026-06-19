@@ -31,7 +31,6 @@ Disallow: /*?s=
 Disallow: /*?search=
 Disallow: /*?q=
 Disallow: /*?p=
-Disallow: /index.html
 
 # LLMs.txt
 LLMs: https://motherhospitals.co.in/llms.txt
