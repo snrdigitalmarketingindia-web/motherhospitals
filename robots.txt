@@ -25,6 +25,12 @@ Disallow: /SEO-STRATEGY-2026.md
 Disallow: /content-output/
 Disallow: /content-topics/
 
+# Block junk paths from bot crawlers
+Disallow: /f/
+Disallow: /m/
+Disallow: /ols/
+Disallow: /*?olsPage=
+
 # Block junk query parameters (prevent crawl budget waste)
 Disallow: /*?blog=
 Disallow: /*?s=
