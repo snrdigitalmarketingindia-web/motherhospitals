@@ -1,5 +1,5 @@
 # Mother Hospitals — Website Build State
-# Last Updated: 2026-06-28
+# Last Updated: 2026-06-28 (Pages 4 & 5 complete)
 
 ## Site Facts
 - URL: https://motherhospitals.co.in
@@ -44,8 +44,8 @@
 | 1 | hpv-vaccine-hyderabad.html | 🔄 Building | Agent-HPV |
 | 2 | pap-smear-hyderabad.html | 🔄 Building | Agent-PAP |
 | 3 | breast-screening-hyderabad.html | 🔄 Building | Agent-BREAST |
-| 4 | nt-scan-hyderabad.html | 🔄 Building | Agent-SCAN |
-| 5 | anomaly-scan-hyderabad.html | 🔄 Building | Agent-SCAN |
+| 4 | nt-scan-hyderabad.html | ✅ Complete | Agent-SCAN |
+| 5 | anomaly-scan-hyderabad.html | ✅ Complete | Agent-SCAN |
 | 6 | myomectomy-hyderabad.html | 🔄 Building | Agent-GYN |
 | 7 | ovarian-cyst-surgery-hyderabad.html | 🔄 Building | Agent-GYN |
 | 8 | tesa-pesa-micro-tese-hyderabad.html | ⏳ Queued | - |
