@@ -1,5 +1,5 @@
 # Mother Hospitals — Website Build State
-# Last Updated: 2026-06-28 (Pages 1–22 complete)
+# Last Updated: 2026-06-28 (Pages 1–28 complete)
 
 ## Site Facts
 - URL: https://motherhospitals.co.in
@@ -74,9 +74,9 @@
 | 23 | sperm-freezing-hyderabad.html | ✅ Complete |
 | 24 | embryo-freezing-hyderabad.html | ✅ Complete |
 | 25 | imsi-treatment-hyderabad.html | ✅ Complete |
-| 26 | vaginismus-treatment-hyderabad.html | ⏳ Queued |
-| 27 | pelvic-floor-disorders-hyderabad.html | ⏳ Queued |
-| 28 | adolescent-gynaecology-hyderabad.html | ⏳ Queued |
+| 26 | vaginismus-treatment-hyderabad.html | ✅ Complete |
+| 27 | pelvic-floor-disorders-hyderabad.html | ✅ Complete |
+| 28 | adolescent-gynaecology-hyderabad.html | ✅ Complete |
 | 29 | antenatal-yoga-pregnancy-classes-hyderabad.html | ⏳ Queued |
 | 30 | postpartum-depression-hyderabad.html | ⏳ Queued |
 | 31 | thyroid-pregnancy-hyderabad.html | ⏳ Queued |
