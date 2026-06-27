@@ -64,16 +64,16 @@
 | 17 | growth-scan-doppler-hyderabad.html | ✅ Complete |
 | 18 | womens-wellness-checkup-hyderabad.html | ✅ Complete |
 | 19 | preconception-counselling-hyderabad.html | ✅ Complete |
-| 20 | premature-ovarian-insufficiency-hyderabad.html | ⏳ Queued |
+| 20 | premature-ovarian-insufficiency-hyderabad.html | ✅ Complete |
 
 ### PHASE 3
 | # | URL | Status |
 |---|---|---|
-| 21 | assisted-hatching-ivf-hyderabad.html | ⏳ Queued |
-| 22 | time-lapse-embryo-monitoring-hyderabad.html | ⏳ Queued |
-| 23 | sperm-freezing-hyderabad.html | ⏳ Queued |
-| 24 | embryo-freezing-hyderabad.html | ⏳ Queued |
-| 25 | imsi-treatment-hyderabad.html | ⏳ Queued |
+| 21 | assisted-hatching-ivf-hyderabad.html | ✅ Complete |
+| 22 | time-lapse-embryo-monitoring-hyderabad.html | ✅ Complete |
+| 23 | sperm-freezing-hyderabad.html | ✅ Complete |
+| 24 | embryo-freezing-hyderabad.html | ✅ Complete |
+| 25 | imsi-treatment-hyderabad.html | ✅ Complete |
 | 26 | vaginismus-treatment-hyderabad.html | ⏳ Queued |
 | 27 | pelvic-floor-disorders-hyderabad.html | ⏳ Queued |
 | 28 | adolescent-gynaecology-hyderabad.html | ⏳ Queued |
