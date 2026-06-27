@@ -1,5 +1,5 @@
 # Mother Hospitals — Website Build State
-# Last Updated: 2026-06-28 (Pages 1–16 complete)
+# Last Updated: 2026-06-28 (Pages 1–22 complete)
 
 ## Site Facts
 - URL: https://motherhospitals.co.in
@@ -61,9 +61,9 @@
 | 14 | semen-analysis-test-hyderabad.html | ✅ Complete |
 | 15 | amh-test-guide-hyderabad.html | ✅ Complete |
 | 16 | dating-scan-hyderabad.html | ✅ Complete |
-| 17 | growth-scan-doppler-hyderabad.html | ⏳ Queued |
-| 18 | womens-wellness-checkup-hyderabad.html | ⏳ Queued |
-| 19 | preconception-counselling-hyderabad.html | ⏳ Queued |
+| 17 | growth-scan-doppler-hyderabad.html | ✅ Complete |
+| 18 | womens-wellness-checkup-hyderabad.html | ✅ Complete |
+| 19 | preconception-counselling-hyderabad.html | ✅ Complete |
 | 20 | premature-ovarian-insufficiency-hyderabad.html | ⏳ Queued |
 
 ### PHASE 3
