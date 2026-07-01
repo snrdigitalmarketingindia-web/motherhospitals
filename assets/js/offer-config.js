@@ -14,34 +14,51 @@
 
 window.MH_OFFERS = [
 
+  /* ── PAST OFFER — re-enable by setting enabled: true and updating dates ──
   {
     id:          "IVF_JUNE_2026",
     name:        "Special IVF Offer — June 2026",
-    enabled:     true,
+    enabled:     false,
 
-    /* ISO-8601 strings — browser local time (IST = UTC+5:30) */
     start_datetime: "2026-06-01T00:00:00",
     end_datetime:   "2026-06-30T23:59:59",
 
-    /* UI copy — restored from original campaign (main branch) */
     badge:       "🌟 Limited Time",
     title:       "IVF Package ₹99,000/- Only",
     description: "Stimulation Injections · OPU · ICSI · Consultations · Scans · Valid till 30th June 2026",
     cta_text:    "Enquire Now →",
     cta_url:     "https://wa.me/919052074999",
 
-    /* Popup-only sub-copy */
     popup_subtitle: "Germany-trained specialist · 5,000+ IVF cycles · ART Act 2021 certified",
 
-    /* Where to show this offer */
     display_locations: ["top_banner", "popup"],
-
-    /* Popup delay in ms */
     popup_delay_ms: 4000,
-
-    /* Priority — higher number shown first when multiple active offers exist */
     priority: 10
   }
+  ── */
+
+  /* ── NEXT OFFER — copy this template, fill in details, set enabled: true ──
+  {
+    id:          "IVF_NEXT_CAMPAIGN",
+    name:        "Campaign Name",
+    enabled:     false,
+
+    start_datetime: "2026-MM-DDT00:00:00",
+    end_datetime:   "2026-MM-DDT23:59:59",
+
+    badge:       "🌟 Limited Time",
+    title:       "IVF Package ₹XX,000/- Only",
+    description: "Stimulation Injections · OPU · ICSI · Consultations · Scans · Valid till DDth Month YYYY",
+    cta_text:    "Enquire Now →",
+    cta_url:     "https://wa.me/919052074999",
+
+    popup_subtitle: "Germany-trained specialist · 5,000+ IVF cycles · ART Act 2021 certified",
+
+    display_locations: ["top_banner", "popup"],
+    popup_delay_ms: 4000,
+    priority: 10
+  }
+  ── */
 
   /* ── Add future offers below ──────────────────────────────────────────────
   ,{
