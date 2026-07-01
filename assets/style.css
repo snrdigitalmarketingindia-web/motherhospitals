@@ -69,6 +69,9 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 /* Static offer sections (price-card) — hidden by default, shown only when offer is active */
 .price-card{display:none!important}
 body.mh-offer-active .price-card{display:block!important}
+/* Inline offer price text — hidden by default, shown only when offer is active */
+.mh-offer-price{display:none!important}
+body.mh-offer-active .mh-offer-price{display:inline!important}
 
 /* TRUST BADGES */
 .trust-bar{background:var(--white);border-bottom:1px solid var(--purple-light);overflow:hidden}
