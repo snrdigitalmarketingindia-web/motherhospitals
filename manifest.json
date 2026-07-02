@@ -1,0 +1,28 @@
+{
+  "name": "Mother Hospitals & IVF Center",
+  "short_name": "Mother Hospitals",
+  "description": "Best IVF & Fertility Center in Boduppal, Hyderabad. Dr. E. Prashanthi Reddy — 20+ years, 5,000+ IVF cycles. ART Act 2021 certified.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf8ff",
+  "theme_color": "#58037c",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "categories": ["medical", "health"],
+  "icons": [
+    {"src": "/assets/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/assets/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "screenshots": [
+    {"src": "/assets/Prashanthi/Prashanthi2.jpeg", "sizes": "1200x630", "type": "image/jpeg", "label": "Mother Hospitals IVF Center Hyderabad"}
+  ],
+  "shortcuts": [
+    {"name": "Book Consultation", "url": "/#contact", "description": "Book an appointment with Dr. Prashanthi Reddy"},
+    {"name": "IVF Treatment", "url": "/ivf-treatment-hyderabad.html", "description": "Learn about our IVF services"},
+    {"name": "Free Fertility Tools", "url": "/fertility-tools.html", "description": "AMH calculator, IVF timeline & more"},
+    {"name": "WhatsApp Us", "url": "https://wa.me/919052074999", "description": "Chat with us on WhatsApp"}
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
