@@ -387,7 +387,7 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 .dept-list li::before{content:'✓';position:absolute;left:0;color:var(--magenta);font-weight:700}
 
 /* ── PATIENT JOURNEY / PROCESS STEPS ── */
-.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:2rem}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
 .step-card{background:var(--purple-pale);border-radius:16px;padding:1.4rem;position:relative}
 .step-num{font-family:var(--font-d);font-size:3rem;font-weight:700;color:var(--purple-light);position:absolute;top:0.5rem;right:1rem;line-height:1}
 .step-title{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem;position:relative;z-index:1}
