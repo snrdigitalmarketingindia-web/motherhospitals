@@ -14,7 +14,7 @@ body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflo
 .top-bar a{color:rgba(255,255,255,0.9);text-decoration:none}.top-bar a:hover{color:#fff}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
+nav.main-nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--purple-light)}
 .nav-wrap{max-width:1240px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:94px}
 .logo-wrap{display:flex;align-items:center;gap:0.65rem}
 .logo-img{height:64px;width:64px;object-fit:contain}
@@ -27,7 +27,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(253,248,255,0.97);backdrop
 .btn-free{background:#16a34a!important;color:#fff!important;padding:0.38rem 1rem;border-radius:50px;font-size:0.8rem!important;white-space:nowrap;font-weight:600}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
-.mob-menu{display:none;flex-direction:column;background:var(--cream);border-top:1px solid var(--purple-light);padding:1rem 5% 1.5rem;position:fixed;top:94px;left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}
+.mob-menu{display:none;flex-direction:column;background:var(--cream);border-top:1px solid var(--purple-light);padding:1rem 5% 1.5rem;position:fixed;top:var(--nav-h);left:0;right:0;z-index:199;box-shadow:0 10px 30px rgba(90,31,122,0.1)}
 .mob-menu.open{display:flex}
 .mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
 
@@ -626,7 +626,7 @@ input,select,textarea{min-height:44px}
 }
 
 /* ── PREMIUM NAVIGATION ─────────────────────────────────────── */
-nav{
+nav.main-nav{
   height:var(--nav-h);
   border-bottom:1px solid rgba(90,31,122,0.1);
   box-shadow:0 2px 20px rgba(90,31,122,0.06);
