@@ -376,7 +376,7 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 .mem-pill:hover::before{color:#fff;opacity:1}
 
 /* ── DEPARTMENT AUTHORITY CARDS ── */
-.dept-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem}
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
 .dept-card{background:var(--white);border-radius:20px;padding:1.8rem;border:1px solid var(--purple-light);border-top:4px solid var(--magenta);transition:transform 0.25s,box-shadow 0.25s}
 .dept-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(90,31,122,0.1)}
 .dept-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--magenta-light),var(--purple-light));display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.1rem}
