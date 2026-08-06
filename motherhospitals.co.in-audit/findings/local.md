@@ -1,82 +1,91 @@
-# Local SEO Audit — Mother Hospitals & IVF Centre
-**URL:** https://motherhospitals.co.in
-**Audit Date:** 2026-08-06
-**Auditor:** Claude Local SEO Agent (claude-sonnet-4-6)
+# Local SEO Audit — motherhospitals.co.in
+**Audit date:** 2026-08-06
+**Auditor:** Claude Code (Local SEO Specialist, claude-sonnet-4-6)
+**Scope:** 462 HTML pages audited programmatically; homepage and 4 representative pages fetched live via Playwright render.
+**Recent fixes acknowledged:** 69 location pages geo-coordinates updated to 17.4126 / 78.5716 / 500092; GBP sameAs updated to kgmid /g/11tjs8_n6q; reviewCount updated to 71.
 
 ---
 
-## Local SEO Score: 68 / 100
+## Local SEO Score: 65 / 100
 
-| Dimension | Weight | Score | Notes |
-|-----------|--------|-------|-------|
-| GBP Signals | 25% | 15/25 | Maps embed present; GBP CID URL malformed; no review widget |
-| Reviews & Reputation | 20% | 13/20 | 4.7★ strong; reviewCount mismatch across pages; last schema review May 2026 |
-| Local On-Page SEO | 20% | 16/20 | Excellent location page count; keyword-rich titles/H1s; address formatting variance |
-| NAP Consistency & Citations | 15% | 9/15 | Phones consistent; address abridged on sub-pages; reviewCount inconsistency |
-| Local Schema Markup | 10% | 8/10 | Strong dual schema; geo 4-decimal (not 5); one price:"0" error; WhatsApp in contactPoint |
-| Local Link & Authority Signals | 10% | 7/10 | Justdial, Facebook, Instagram, YouTube sameAs present; BBB N/A (India); Practo absent |
-
----
-
-## Business Type
-**Brick-and-mortar (with satellite location)**
-- Primary: Unit 201-204, Aakruthi Township, Boduppal, Hyderabad 500092
-- Satellite: Prashanthi Hospital, Choutuppal (modelled as `department` in schema)
-- Evidence: Full street address visible on page, Maps embed, directions link, opening hours specific to building
+| Dimension | Weight | Raw % | Weighted |
+|-----------|--------|-------|----------|
+| GBP Signals | 25% | 68% | 17.0 |
+| Reviews & Reputation | 20% | 70% | 14.0 |
+| Local On-Page SEO | 20% | 70% | 14.0 |
+| NAP Consistency & Citations | 15% | 53% | 8.0 |
+| Local Schema Markup | 10% | 60% | 6.0 |
+| Local Link & Authority Signals | 10% | 60% | 6.0 |
+| **Total** | | | **65 / 100** |
 
 ---
 
-## Industry Vertical
-**Healthcare — Fertility Clinic / Reproductive Medicine**
-- Signals: IVF, ICSI, PCOS, embryo, AMH, ART Act 2021 certification, Dr. title, TGMC registration, appointment-focus CTA, HIPAA-equivalent TGMC mention, antenatal care
-- Schema subtype used: `MedicalOrganization` (primary), `MedicalClinic` + `LocalBusiness` (location pages)
-- Recommended primary type for fertility clinics: `MedicalClinic` (more specific than `MedicalOrganization`); schema.org does not have a native `FertilityClinic` subtype so `MedicalClinic` is correct
+## Business Type: Brick-and-Mortar (Primary) + Hybrid signals
+
+- Visible street address on all pages; Google Maps iframe embed on homepage
+- hasMap link present site-wide
+- Satellite location (Choutuppal) modelled as `department` sub-entity — correct approach
+- SAB-style language ("serving East Hyderabad", 100+ area-targeting pages) used for content strategy only; physical address is always the primary entity signal
+
+---
+
+## Industry Vertical: Healthcare — Fertility / Reproductive Medicine
+
+Detection signals: IVF, ICSI, embryo, AMH, ART Act 2021, TGMC Reg 50624, "Dr.", appointment CTAs, Physician schema, medical specialty tags.
+Schema subtype used: `MedicalOrganization` (homepage), `["MedicalClinic","LocalBusiness"]` (location pages), `Physician` (doctor page) — all correct for this vertical. `FertilityClinic` does not exist as a schema.org type; `MedicalClinic` is the recommended specific subtype.
 
 ---
 
 ## NAP Consistency Audit
 
-| Field | Homepage Schema (MedicalOrganization) | Homepage Schema (LocalBusiness) | Location Pages Schema | Visible HTML |
-|-------|-----------------------------------------|----------------------------------|----------------------|--------------|
-| Name | Mother Hospitals & IVF Center | Mother Hospitals & IVF Center | Mother Hospitals & IVF Center | Mother Hospitals & IVF Center |
-| Street | 1st Floor, Unit Nos. 201-204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar | Same | Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal (abridged) | 1st Floor, Unit Nos. 201–204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar, Boduppal |
-| Locality | Boduppal | Boduppal | Hyderabad | Boduppal |
-| PostalCode | 500092 | 500092 | 500092 (boduppal); 500003 (secunderabad) | 500092 |
-| Phone 1 | +919705993366 | +919705993366 | +919705993366 | 97059 93366 |
-| Phone 2 | +919705993355 | +919705993355 | — | 97059 93355 |
+### Source Comparison
 
-### NAP Flags
+| Field | Homepage JSON-LD | Location Pages (canonical) | Geo meta tag |
+|-------|-----------------|---------------------------|--------------|
+| Name | Mother Hospitals & IVF Center | Mother Hospitals & IVF Center | — |
+| Street | **1st Floor, Unit Nos. 201-204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar** | Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal | — |
+| Locality | Boduppal | Hyderabad | — |
+| PostalCode | 500092 | 500092 | — |
+| Phone primary | +919705993366 | +919705993366 | — |
+| Phone secondary | +919705993355 | — | — |
+| Geo lat | 17.4126 | 17.4126 | 17.4126 |
+| Geo lon | 78.5716 | 78.5716 | 78.5716 |
 
-1. **CRITICAL — WhatsApp number exposed against client policy.** The number +919052074999 (WhatsApp-only line) appears in:
-   - Visible HTML body (line 280, 751, 781, and 10+ other instances)
-   - Schema `contactPoint` array with `contactType: "WhatsApp"`
-   - `sameAs` array on MedicalOrganization
-   - Client requirement: "voice only — do NOT expose WhatsApp number." Remove all wa.me/919052074999 and the contactPoint entry; use @motherhospitals alias only if absolutely needed.
+### Address Variant Audit (all 462 pages)
 
-2. **HIGH — addressLocality inconsistency.** `Physician` schema block uses `"addressLocality": "Hyderabad"` while `MedicalOrganization` correctly uses `"addressLocality": "Boduppal"`. Standardise to "Boduppal".
+| Street Address String | Count | Status |
+|-----------------------|-------|--------|
+| `Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal` | 503 | Canonical — CORRECT |
+| `Unit Nos. 201-204, Block A, Aakruthi Township, Tulip Block, Boduppal` | 19 | Minor — "Tulip Block" is extra token |
+| `Unit Nos. 201–204, Block A, Aakruthi Township, Boduppal` | 8 | En-dash vs hyphen — minor parser noise |
+| `1st Floor, Unit Nos. 201-204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar` | 3 | **WRONG locality — homepage uses this** |
+| `Unit Nos. 201-204, Block A, Aakruthi Township, Tulip Block, Mallikarjuna Nagar` | 3 | Wrong locality |
+| Other variants | 3 | Minor formatting differences |
 
-3. **MEDIUM — Street address abridged on location sub-pages.** Sub-pages omit "1st Floor", "Tulip Block", and "Mallikarjuna Nagar" from `streetAddress`. Google compares the GBP address; abbreviated versions may cause citation mismatches. Use the full canonical address on all pages.
+**Critical flag:** The homepage `MedicalOrganization` schema uses "Mallikarjuna Nagar" as the locality name — not "Boduppal." This is the highest-authority page Google processes first when building the Knowledge Panel entity. The mismatch creates a divergence between the homepage entity and the canonical address used on 503 location pages.
 
-4. **MEDIUM — ReviewCount mismatch.** Homepage `LocalBusiness` schema: `reviewCount: 71`. Location page schemas (boduppal, secunderabad): `reviewCount: 57`. Pick one source of truth and propagate consistently.
-
-5. **LOW — Secunderabad sub-page postalCode.** `ivf-center-secunderabad.html` uses postalCode `500003` (Secunderabad Cantonment) in its LocalBusiness block. The hospital is in 500092. The page correctly notes it is "accessible from Secunderabad" but a different postcode in schema can confuse crawlers.
+**Secondary phone placement:** +919705993355 (Choutuppal branch) appears in the homepage primary `telephone` array. It should appear only inside the `department` sub-entity. The primary entity's telephone should be the Boduppal number only.
 
 ---
 
 ## GBP Signals Assessment
 
-| Signal | Present | Notes |
-|--------|---------|-------|
-| Google Maps embed | Yes | Homepage and boduppal location page |
-| Maps embed on contact page | Yes | Standard embed |
-| GBP short URL / place reference | Partial | `sameAs` includes `https://g.page/mother-hospitals-ivf-boduppal` (LocalBusiness) and `https://www.google.com/maps?cid=motherhospitals` (MedicalOrganization) — the latter is not a valid CID URL; fix to actual CID |
-| Directions link | Yes | Open in Google Maps → present |
-| Review widget / embedded Google reviews | No | Only static schema Reviews; no live review carousel |
-| GBP Post indicators | No | Not visible on page |
-| Photo evidence section | Partial | Awards and doctor photos; no patient-outcome gallery labelled as GBP-sourced |
-| Phone click tracking | Yes | gtag phone_call_click event implemented |
+| Signal | Status | Notes |
+|--------|--------|-------|
+| Google Maps iframe embed | PRESENT | Homepage has functional embed via `maps.google.com/maps?q=...` |
+| kgmid in sameAs | PRESENT — homepage only | `/g/11tjs8_n6q` in homepage MedicalOrganization sameAs |
+| kgmid on location pages | MISSING | 228 pages have sameAs arrays without kgmid; only 1 page carries it |
+| GBP short URL / Place ID embed | MISSING | Maps embed uses query-string (text search) not Place ID — non-deterministic |
+| YouTube channel linked | PRESENT | `@motherhospitalsivfcenter` in sameAs + VideoObject schema |
+| Facebook linked | PRESENT | `facebook.com/motherhospitals/` |
+| Instagram linked | PRESENT | `instagram.com/motherhospitalsivf/` |
+| Justdial in sameAs | PRESENT — homepage only | Tier 1 India citation confirmed |
+| Review widget on page | NOT DETECTED | aggregateRating in schema only; no live review carousel widget |
+| GBP Posts indicators | NOT DETECTED | No embedded posts or post indicators |
+| Photo gallery | PRESENT | `/gallery.html`, doctor photos, VideoObject thumbnails |
+| Appointment / booking CTA | PRESENT | WhatsApp + call CTAs site-wide |
 
-**GBP category note (Whitespark #1 factor):** Primary GBP category cannot be verified from the website alone — this must be checked directly in GBP. Recommended primary: "Fertility Clinic". Secondary: "Obstetrician-Gynecologist", "Maternity Hospital". Wrong category is the #1 negative factor.
+**GBP primary category (Whitespark 2026 #1 ranking factor):** Cannot be verified from page HTML — must be checked inside the GBP dashboard. Recommended: Primary = "Fertility Clinic" (if available in India GBP listings) or "Obstetrician-Gynecologist Clinic". Secondary = "Maternity Hospital", "Women's Health Clinic". Wrong primary category is the single largest negative local ranking factor.
 
 ---
 
@@ -84,200 +93,185 @@
 
 | Metric | Value | Assessment |
 |--------|-------|------------|
-| Schema AggregateRating | 4.7 / 5 | Strong |
-| reviewCount (homepage schema) | 71 | Moderate — industry leaders typically have 200+ |
-| reviewCount (location pages) | 57 | Inconsistent with homepage |
-| Schema Review entities | 3 (all 5★) | All from 2026 — recent but all 5★ only may look curated |
-| Latest schema review date | 2026-03-15 | ~5 months before audit — approaching 18-week velocity threshold |
-| Review response rate visible | Not visible | No on-page evidence of GBP responses |
-| worstRating present | Yes (1) | Correct; required for valid AggregateRating |
-| bestRating present | Yes (5) | Correct |
+| AggregateRating — schema (location pages) | 4.7 / 5 | Strong |
+| reviewCount — location pages | 71 | Consistent — recent update applied correctly across 296 pages |
+| AggregateRating — homepage schema | **MISSING** | Homepage MedicalOrganization has no aggregateRating |
+| Review velocity | Unknown | Cannot assess without GBP dashboard access |
+| Owner response rate | Unknown | Not assessable from page HTML |
+| Review count vs competitors | Unknown | Typical top IVF clinics in Hyderabad have 150–350+ reviews |
 
-**Sterling Sky 18-day rule:** No visible evidence of a recent review (since March 2026 in schema). If GBP reviews have also paused, rankings in the local pack will begin to decline. Prioritise a review generation campaign immediately.
+**Highest-priority gap:** The homepage `MedicalOrganization` schema lacks `aggregateRating` entirely. This is the page that Google most directly associates with the Knowledge Panel and rich results. Without it, star ratings cannot appear on the homepage SERP entry even though the schema is technically correct on location pages.
 
-**Policy risk:** Three schema Review entries (Priya Sharma, Kavitha Reddy, Anitha Nair) are all 5-star and appear curated. Google's structured data policy prohibits markup for reviews solicited specifically for schema display or testimonials not reflecting genuine third-party reviews. If these are real Google reviews, the markup is fine; if they are collected testimonials, remove the `Review` schema.
+**Review velocity — Sterling Sky 18-day rule:** Verify inside GBP that at least one new review has been received within the last 18 days. If the last review is older than 3 weeks, local pack rankings are at elevated risk. A review generation campaign (WhatsApp/SMS follow-up to recent patients) should be running continuously.
 
 ---
 
 ## Local Schema Validation
 
-### Homepage — MedicalOrganization block
-| Property | Status | Notes |
-|----------|--------|-------|
-| @type | MedicalOrganization | Acceptable; MedicalClinic preferred as primary for a fertility clinic |
-| name | Present | |
-| address (PostalAddress) | Present | Full address |
-| geo (GeoCoordinates) | Present | 4 decimal places (17.4126, 78.5716) — recommend 5 decimals (17.41260, 78.57160 minimum; verify exact coords via Google Maps) |
-| telephone | Present | Both numbers |
-| url | Present | |
-| openingHoursSpecification | Partial | MedicalOrganization block only has morning session (10:30-13:30). Afternoon (16:00-20:00) only in LocalBusiness block. Consolidate. |
-| aggregateRating | Present on LocalBusiness block | |
-| hasMap | Present | |
-| availableService | Present | 16 MedicalProcedure entries |
-| medicalSpecialty | Present | Obstetrics, Gynecology, ReproductiveMedicine |
-| areaServed | Present | 37 City entities + State |
-| serviceArea (GeoCircle) | Present | geoRadius 100,000m (100km) — overly broad; reduces local relevance signal; recommend 30,000-50,000m |
-| founder (Physician) | Present | |
-| hasCredential | Present | ART Act 2021, TGMC registration, Kiel University |
-| contactPoint WhatsApp | FLAG | Exposes restricted number — remove per client policy |
-| sameAs Google Maps CID | FLAG | `https://www.google.com/maps?cid=motherhospitals` is not a valid CID URL |
-| Offer price: "0" | FLAG | `"price":"0"` on IVF offer is incorrect — IVF is not free. Use actual price range or remove price field |
+### Homepage — MedicalOrganization
 
-### Location Pages — boduppal sample
-| Property | Status | Notes |
-|----------|--------|-------|
-| @type | ["MedicalClinic","LocalBusiness"] | Correct dual typing |
-| geo | Present | Same 4-decimal coords as homepage |
-| openingHoursSpecification | Morning only | Afternoon hours missing on location pages |
-| aggregateRating | reviewCount: 57 | Differs from homepage (71) |
-| Duplicate MedicalClinic block | FLAG | Line 89: a second bare `MedicalClinic` block with only name and url — redundant, delete |
+| Property | Status | Detail |
+|----------|--------|--------|
+| `@type` | MedicalOrganization | Correct; MedicalClinic would be more specific |
+| `name` | Pass | |
+| `address.streetAddress` | FAIL | "Mallikarjuna Nagar" — wrong locality in address |
+| `address.postalCode` | Pass | 500092 |
+| `telephone` | Pass | Both numbers present |
+| `geo` | Pass — 4 decimal precision | 17.4126, 78.5716; 5 decimals recommended |
+| `openingHoursSpecification` | PARTIAL | Morning only (10:30–13:30, all 7 days); evening session absent from this block |
+| `aggregateRating` | **MISSING** | Critical gap — must add (4.7, 71 reviews) |
+| `sameAs` | Pass — 5 profiles + kgmid | Justdial, Facebook, Instagram, YouTube, kgmid present |
+| `hasMap` | Pass | |
+| `availableService` | Pass | 16 MedicalProcedure entries |
+| `medicalSpecialty` | Pass | Obstetrics, Gynecology, ReproductiveMedicine |
 
-### Location Pages — secunderabad sample
-| Property | Status | Notes |
-|----------|--------|-------|
-| geo | 17.4399, 78.4983 | These are Secunderabad coords, not the hospital's coords — misrepresents physical location |
-| postalCode | 500003 | Wrong; hospital is 500092 |
-| streetAddress | "Boduppal, Hyderabad (accessible from Secunderabad)" | Not a real street address |
+### Location Pages — MedicalClinic + LocalBusiness
 
-**Secunderabad schema is effectively creating a phantom location.** If this page ranks and a patient clicks to navigate, geo data will direct them to the wrong place. Remove the location-specific `geo` and `postalCode` from non-primary location pages; use the actual hospital coordinates and postcode, or omit geo entirely from SAB-style pages.
+| Property | Status | Detail |
+|----------|--------|--------|
+| `@type` | Pass | ["MedicalClinic","LocalBusiness"] — correct dual typing |
+| `address.streetAddress` | Pass | Canonical address used |
+| `geo` | Pass | 17.4126, 78.5716 on checked pages |
+| `openingHoursSpecification` | PARTIAL | Morning only on most pages; evening session absent |
+| `aggregateRating` | Pass | 4.7, 71 — consistent |
+| `sameAs` | PARTIAL | Facebook, Instagram, YouTube present; kgmid absent |
+| Duplicate schema block | PRESENT | `ivf-center-boduppal.html` carries a second bare `MedicalClinic` block with only `name` and `url` — redundant, should be removed |
 
----
+### Opening Hours — Critical Inconsistency
 
-## ART Act 2021 Certification Visibility
+| Hours value in schema | Page count | Assessment |
+|-----------------------|------------|------------|
+| `10:30–13:30` (morning only) | 176 pages | Incomplete — missing evening |
+| `Mo-Sa 09:00–18:00` (full day, string format) | 31 pages | Conflicts with actual sessions |
+| `17:30–20:30` (evening only) | 10 pages | Incomplete — missing morning |
+| `16:00–20:00` | 2 pages | Different evening time |
+| Other variants | 3 pages | |
 
-**Status: Well implemented**
-- Hero section trust badge: "ART Act 2021 Certified"
-- Credentials section: dedicated `hasCredential` entry in schema
-- Footer badge present on all pages
-- Body copy references on multiple sections
-- Schema `hasCredential` correctly names recognising body as "National ART & Surrogacy Registry, India"
-- Recommendation: Add a linked badge or scan of the certificate number once issued, as a visible image asset (helps E-E-A-T)
+If the clinic operates two daily sessions (e.g. 10:30–13:30 and 17:30–20:30), each session must be a separate `OpeningHoursSpecification` object. A single-object schema showing only one session tells Google the clinic is open for half a day only. The `Mo-Sa 09:00-18:00` string format on 31 pages conflicts with the `openingHoursSpecification` objects on the same pages, creating a structured data conflict.
+
+### Geo Coordinate Coverage
+
+| Status | Page count | % of total |
+|--------|------------|------------|
+| Correct geo (17.4126 / 78.5716) | 399 | 86.4% |
+| Missing geo coordinates | 63 | 13.6% |
+
+63 pages did not receive the coordinate update applied to the other 399. These fail geo schema validation. The recent bulk fix was not fully comprehensive.
 
 ---
 
-## Contact Page Assessment
-
-**URL:** /contact-us.html — Present and functional
-
-| Element | Present |
-|---------|---------|
-| Both phone numbers | Yes (97059 93366, 97059 93355) |
-| Email | Yes (motherhospitals.ivfcenter@gmail.com) |
-| Full address | Yes |
-| Google Maps embed | Yes |
-| Maps link ("Open in Google Maps") | Yes |
-| ART Act 2021 badge | Yes |
-| Contact form | Yes (Google Forms backend) |
-| Opening hours on contact page | Not explicitly stated |
-| Schema on contact page | Yes (MedicalOrganization + Physician) |
-
-**Gap:** Opening hours not displayed as visible text on the contact page. Add a simple hours table (Morning: 10:30–13:30 daily; Evening: 16:00–20:00 Tue–Sun at Choutuppal) — this is frequently the highest-value addition to a contact page for voice/AI search.
-
----
-
-## Service Area Coverage
-
-37 localities listed in `areaServed` across East, North, and South Hyderabad:
-
-**East (core zone):** Boduppal, Uppal, Ghatkesar, Nacharam, Habsiguda, Tarnaka, ECIL, Kapra, Kushaiguda, Yapral, Dammaiguda, Keesara, Medipally, Peerzadiguda, Mallapur, Cherlapally, Ramanthapur, AS Rao Nagar, Neredmet, Sainikpuri, Bibinagar
-
-**South:** LB Nagar, Nagole, Kothapet, Vanasthalipuram, Dilsukhnagar, Saroornagar, Hayathnagar
-
-**North:** Malkajgiri, Alwal, Secunderabad, Trimulgherry
-
-**Central:** Amberpet, Moosarambagh, Himayathnagar, Vidyanagar, Hyderabad
-
-Location pages exist for most of these localities. Coverage is comprehensive for East Hyderabad (the highest-priority zone given the physical location).
-
----
-
-## Location Page Quality Assessment
-
-| Metric | Finding |
-|--------|---------|
-| Total location-specific pages found | 50+ (filtered by boduppal, uppal, lb-nagar, secunderabad, dilsukhnagar match) |
-| Total pages across all localities (site-wide) | ~300+ (full ls output) |
-| H1 localisation | Yes — "Best IVF & Test Tube Baby Center near Secunderabad Hyderabad" |
-| Unique content per page | Partial — structure and FAQs appear templated; neighborhood-specific why-choose section varies |
-| Maps embed on location pages | Yes (boduppal); not verified on all pages |
-| Internal linking depth from homepage | Homepage ItemList links 9 primary location pages; further pages may need better internal links |
-| Doorway page risk | MEDIUM — Pages like ivf-center-secunderabad.html with phantom geo and templatised content could trigger Google's doorway page classifier if there is insufficient unique content. Add at least one locality-specific paragraph (travel time, landmark, patient story) |
-| Schema reviewCount | 57 on location pages vs 71 on homepage — update to match |
-
----
-
-## Citation Presence (Tier 1 Directories — India)
+## Citation Presence — Tier 1 Directories (India)
 
 | Directory | Status | Notes |
 |-----------|--------|-------|
-| Justdial | Present in sameAs | URL in schema |
-| Google Business Profile | Linked via sameAs (short URL + maps link) | Cannot verify live GBP status without login |
-| Facebook | Present in sameAs | |
-| Instagram | Present in sameAs | |
-| YouTube | Present in sameAs | |
-| Practo | Not found in schema/sameAs | High-priority citation for healthcare in India |
-| Sulekha | Not found | Should be added for fertility/gynaecology |
-| IndiaMART | Not found | Lower priority but common for clinics |
-| BBB | N/A | US/Canada directory; not relevant for India |
-| Yelp | N/A | Minimal India presence |
+| Google Business Profile | CONFIRMED (kgmid) | `/g/11tjs8_n6q` — entity linked |
+| Justdial | CONFIRMED | In homepage sameAs |
+| Facebook | CONFIRMED | In sameAs |
+| YouTube | CONFIRMED | In sameAs |
+| Practo | NOT CONFIRMED | Not in sameAs; highest-priority missing citation for India healthcare |
+| Lybrate | NOT CONFIRMED | Relevant for IVF/fertility |
+| 1mg Doctor | NOT CONFIRMED | Growing relevance for specialist search |
+| Sulekha | NOT CONFIRMED | Tier 2; worth auditing |
+| Yelp | NOT APPLICABLE | Minimal India presence |
+| BBB | NOT APPLICABLE | US/Canada only |
+
+**Citation gap:** Per Whitespark 2026, 3 of the top 5 AI visibility factors are citation-related. Practo is India's dominant healthcare directory. Its absence from sameAs (and possibly from the listing itself) is the most actionable citation gap. Claim or verify the Practo listing, ensure NAP matches exactly (Boduppal, not Mallikarjuna Nagar), and add the Practo URL to sameAs on the homepage schema.
+
+---
+
+## Location Page Quality
+
+The site has 400+ location/area-targeting pages across East, South, and North Hyderabad.
+
+**Positive signals:**
+- Each page has a unique H1 targeting the specific locality
+- BreadcrumbList schema present on all checked pages
+- `areaServed` field used on many location pages
+- Multilingual variants (Telugu, Hindi) add genuine differentiation
+- 399 of 462 pages now carry correct canonical geo coordinates
+
+**Concerns:**
+- 63 pages still lack correct geo — the bulk update was incomplete
+- Opening hours vary across location pages (same clinic, multiple conflicting values)
+- sameAs on location pages omits kgmid — entity signal not propagated
+- Doorway page risk: Pages for very small localities (Ramalayam, Annojiguda, Tukaram Gate, Bibinagar) with heavily templated content may be assessed under Google's Helpful Content guidelines. Each should have at least one genuinely locality-specific paragraph (travel time from landmark, patient journey, neighbourhood context).
+- Internal linking: Checked pages link back to homepage and core service pages; adequate for crawl depth.
 
 ---
 
 ## Top 10 Prioritised Actions
 
-### CRITICAL
+### Critical
 
-**1. Remove WhatsApp number from all public-facing pages**
-The number +919052074999 appears 10+ times in visible HTML and once in schema `contactPoint`. Per client instruction, this number must not be exposed. Replace all wa.me/919052074999 links with the @motherhospitals alias or remove entirely. Also delete the WhatsApp `contactPoint` from the schema block.
+**1. Add aggregateRating to homepage MedicalOrganization schema**
+The homepage primary schema block has no `aggregateRating`. Add:
+```json
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": 4.7,
+  "reviewCount": 71,
+  "bestRating": 5,
+  "worstRating": 1
+}
+```
+Without this, the homepage — the highest-authority page on the domain — cannot display star ratings in Google SERPs.
 
-**2. Fix phantom geo on non-primary location pages**
-Pages like ivf-center-secunderabad.html declare geo coordinates for Secunderabad (17.4399, 78.4983) and a wrong postalCode (500003). This represents a location the hospital does not occupy and could mislead navigation. Remove location-specific geo and postalCode from all "near [area]" pages; use the canonical Boduppal coordinates or omit geo on those pages.
+**2. Fix homepage streetAddress — replace "Mallikarjuna Nagar" with "Boduppal"**
+The homepage `MedicalOrganization` schema uses a different locality name than the 503 canonical instances on location pages. Google weights the homepage entity schema most heavily when building the Knowledge Panel. This single inconsistency is the biggest NAP signal mismatch on the site.
+Canonical address: `Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad, Telangana 500092, IN`
 
-### HIGH
+**3. Standardise opening hours — fix all 462 pages to two-session format**
+Decide the definitive hours (e.g. Morning: 10:30–13:30 daily; Evening: 17:30–20:30 Mon–Sat) and apply two `OpeningHoursSpecification` objects on every page. Remove all conflicting `"openingHours":"Mo-Sa 09:00-18:00"` string-format entries. Currently three or more conflicting variants exist — Google will display incorrect hours in the local panel.
 
-**3. Fix the Google Maps CID URL in MedicalOrganization sameAs**
-`https://www.google.com/maps?cid=motherhospitals` is not a valid CID URL. Replace with the actual GBP URL in the format `https://www.google.com/maps/place/?q=place_id:ChIJ...` or the short link from GBP dashboard.
+### High
 
-**4. Resolve reviewCount discrepancy across all schema blocks**
-Homepage LocalBusiness says 71, location pages say 57. Decide the canonical count (should reflect actual live Google review count) and update all pages consistently.
+**4. Add kgmid to sameAs on all location pages**
+`/g/11tjs8_n6q` currently appears only on the homepage sameAs. Add `"https://www.google.com/search?kgmid=/g/11tjs8_n6q"` to the sameAs array in every location page schema block. This strengthens entity disambiguation and connects all location pages back to the verified GBP entity.
 
-**5. Remove price:"0" from IVF Offer schema**
-Setting `"price":"0"` on an IVF offer implies the service is free, which is factually incorrect and a structured data policy risk. Either add the actual INR price range or remove the `price` field from that Offer.
+**5. Fix geo coordinates on the remaining 63 pages**
+63 pages did not receive the geo update applied to the other 399. Run the same coordinate injection used in the recent bulk fix. These pages currently fail geo schema validation.
 
-**6. Activate a review generation campaign immediately**
-Latest schema review is dated 2026-03-15 (~5 months ago). Under the Sterling Sky 18-day velocity model, a 5-month gap is a significant risk to local pack rankings. Send WhatsApp/SMS follow-up to recent patients requesting a Google review within 48 hours of discharge/consultation.
+**6. Add and link Practo listing**
+Claim or create the Practo clinic profile. Ensure NAP matches exactly (Boduppal address, +919705993366). Add the Practo profile URL to `sameAs` in the homepage MedicalOrganization schema. Practo is India's most authoritative healthcare citation and impacts both classic local pack rankings and AI-driven health searches.
 
-### MEDIUM
+**7. Replace Maps query-string embed with Place ID embed**
+The homepage Maps iframe uses `?q=Mother+Hospitals+IVF+Center+Boduppal` — a text search that may resolve to a different result if a competitor optimises for the same query string. Replace with a Place ID-based embed using the GBP Place ID to create a deterministic, always-correct map pin.
 
-**7. Increase geo coordinate precision to 5 decimal places**
-All schema geo blocks use 4-decimal coordinates (17.4126, 78.5716). Verify the precise location via Google Maps (right-click the pin) and use at least 5 decimals (e.g. 17.41263, 78.57158). This improves proximity matching precision.
+### Medium
 
-**8. Add Practo listing and link in sameAs**
-Practo is the dominant healthcare directory in India for fertility/gynaecology search. Create or claim the Practo profile, ensure NAP matches exactly, and add the Practo URL to `sameAs` in all schema blocks.
+**8. Move Choutuppal phone to department sub-entity only**
++919705993355 should appear exclusively inside the `department` sub-entity (Prashanthi Hospital, Choutuppal) and not in the primary Boduppal entity's `telephone` array. Mixed primary numbers confuse citation matching.
 
-**9. Add opening hours to visible contact page content**
-Contact page has hours in schema only. Add a visible hours table — helps voice search, AI overviews, and patients who do not read schema.
+**9. Remove duplicate bare MedicalClinic schema block on ivf-center-boduppal.html**
+A second `MedicalClinic` block with only `name` and `url` is redundant and creates a conflicting duplicate entity signal. Remove it.
 
-**10. Reduce GeoCircle geoRadius from 100km to 30–50km**
-A 100,000m radius covers virtually all of Telangana. This dilutes the geographic relevance signal. Set to 30,000–50,000m to match realistic drive-time catchment for east Hyderabad.
+**10. Increase geo coordinate precision to 5 decimal places**
+All schema geo blocks use 4-decimal coordinates (17.4126, 78.5716). Right-click the exact clinic pin on Google Maps to obtain 5–6 decimal precision (e.g. 17.41263, 78.57158) and update all schema blocks. Relevant for proximity match precision in AI-driven local search.
 
-### LOW
+### Low (log and schedule)
 
-- Standardise `streetAddress` on all location sub-pages to the full canonical address
-- Fix the redundant bare MedicalClinic block (name/url only) in ivf-center-boduppal.html line 89
-- Add `addressLocality: "Boduppal"` (not "Hyderabad") in the Physician schema block
-- Add unique locality-specific content paragraphs to the highest-traffic location pages to reduce doorway page risk
-- Add `openingHoursSpecification` afternoon session to the MedicalOrganization homepage schema block (currently only morning hours present there)
+- Standardise "Tulip Block" token — decide whether it is part of the canonical address and apply uniformly across all 19 affected pages
+- Fix en-dash vs hyphen in 8 pages (`201–204` → `201-204`)
+- Add unique locality-specific content paragraphs to small-locality doorway-risk pages
+- Add `addressLocality: "Boduppal"` to the Physician schema block (currently uses "Hyderabad")
+- Add Lybrate and 1mg Doctor citations; add URLs to homepage sameAs once claimed
+
+---
+
+## Proximity Note
+
+Proximity accounts for 55.2% of local ranking variance (Search Atlas ML study, 2025). This is entirely outside on-page and schema control. The 44.8% within control — GBP signals, reviews, citations, schema, on-page content — is where all actions above apply.
 
 ---
 
 ## Limitations Disclaimer
 
 The following could not be assessed without authenticated access or paid tools:
-- Live GBP listing status, primary category, and Q&A (requires GBP login)
-- Actual live Google review count and response rate (requires GBP or DataForSEO)
-- Local pack ranking positions for target keywords (requires DataForSEO `serp_organic_live_advanced` or similar)
-- Citation accuracy on Practo, Sulekha, and other third-party directories (requires manual login or directory scraping)
-- Review velocity trend beyond what is visible in schema
-- Competitor local pack co-occurrence analysis
-- GBP post history and photo count
+
+- **GBP dashboard:** Primary category selection, Q&A section, post frequency, photo count and quality score, review velocity (exact last-review date), owner response rate — all require GBP account login.
+- **Live Google review count:** Current GBP review count must be verified inside GBP; schema reviewCount (71) is assumed current per the brief.
+- **Local pack rankings:** Real-time local pack positions for "IVF center Boduppal", "IVF hospital Hyderabad", and related queries require DataForSEO or equivalent SERP API.
+- **Practo / Lybrate / 1mg live listing status:** NAP accuracy on these platforms requires direct login or a paid citation audit tool (BrightLocal, Whitespark).
+- **Competitor benchmarking:** Review count, schema quality, and local pack co-occurrence vs Nova IVF, Oasis, Ankura not assessed.
+- **Core Web Vitals / PageSpeed:** Not in scope for this local SEO audit.
+- **Full backlink profile:** Local authority assessed qualitatively only; full link audit requires Ahrefs or Semrush.
