@@ -26,8 +26,6 @@ User-agent: Applebot
 Allow: /
 User-agent: Bingbot
 Allow: /
-User-agent: Bard
-Allow: /
 User-agent: Google-Extended
 Allow: /
 User-agent: Googlebot
@@ -60,5 +58,6 @@ Disallow: /*?search=
 Disallow: /*?q=
 Disallow: /*?p=
 
-# LLMs.txt
-LLMs: https://motherhospitals.co.in/llms.txt
+# Test/draft files
+Disallow: /mother_hospitals_v10.html
+Disallow: /offer-manager-test.html

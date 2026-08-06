@@ -1,0 +1,431 @@
+{
+  "summary": {
+    "health_score": 74,
+    "business_type": "Local Medical Clinic — IVF & Fertility Center, Boduppal, Hyderabad",
+    "audit_date": "2026-08-06",
+    "top_findings": [
+      "HTTP does not redirect to HTTPS — link equity split across 602 pages (fix: Cloudflare)",
+      "LCP hero image had loading=lazy + fetchpriority=high conflict (FIXED)",
+      "HowTo schema Google-deprecated Sep 2023 — removed from 3 service pages (FIXED)",
+      "hasOfferCatalog with price=0 on IVF in LocalBusiness — removed (FIXED)",
+      "Blog hreflang points to phantom ?lang=te URLs — discarded by Google"
+    ],
+    "quick_wins": [
+      "LCP fix — removed loading=lazy from hero image (DONE)",
+      "134 blog pages — added max-snippet, max-image-preview:large to robots meta (DONE)",
+      "Homepage canonical trailing slash fixed (DONE)",
+      "6,235 bytes of deprecated HowTo schema removed from IVF page (DONE)",
+      "Blog author.url fixed from #doctor to /dr-prashanthi-reddy.html in 55 posts (DONE)"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 72,
+      "what_works": [
+        "robots.txt excellent with 15 AI crawlers",
+        "Static HTML — full content crawlable",
+        "IndexNow present",
+        "URL structure clean",
+        "PWA manifest"
+      ],
+      "findings": [
+        {
+          "title": "HTTP serves full site without HTTPS redirect",
+          "severity": "Critical",
+          "description": "http://motherhospitals.co.in returns 200 OK. GitHub Pages cannot set server-side redirects. Fix requires Cloudflare (free tier) with 'Always Use HTTPS' + HSTS.",
+          "recommendation": "Enable Cloudflare proxy — fixes HTTP→HTTPS, HSTS, security headers, and CSP in one step"
+        },
+        {
+          "title": "All security headers absent (GitHub Pages limitation)",
+          "severity": "High",
+          "description": "No X-Frame-Options, X-Content-Type-Options, CSP, Referrer-Policy. _headers file is Netlify syntax — silently ignored by GitHub Pages.",
+          "recommendation": "Route through Cloudflare, inject headers via Transform Rules"
+        },
+        {
+          "title": "Blog hreflang points to phantom ?lang=te URLs",
+          "severity": "High",
+          "description": "Blog hreflang=te alternates point to ?lang=te query params that return identical English content. Google discards entire hreflang cluster.",
+          "recommendation": "Remove hreflang=te from blog pages with no real Telugu file. Add only when a separate -telugu.html file exists."
+        },
+        {
+          "title": "needleless-ivf-cost-hyderabad.html was noindexed",
+          "severity": "High",
+          "description": "High-converting cost page was accidentally noindexed.",
+          "recommendation": "Fixed — now index,follow with rich-result directives (DONE)"
+        },
+        {
+          "title": "Hreflang te-in vs te inconsistency",
+          "severity": "Medium",
+          "description": "Homepage uses hreflang=te-in, all other pages use hreflang=te. Standardise to te-IN throughout.",
+          "recommendation": "Batch-fix all hreflang values to te-IN"
+        },
+        {
+          "title": "Monolithic sitemap — all lastmod dates static",
+          "severity": "Medium",
+          "description": "602 URLs in single file, all lastmod=2026-06-22. Google treats static dates as unreliable.",
+          "recommendation": "Split into sitemap index (services/locations/blog-en/blog-te) and update lastmod on publish"
+        },
+        {
+          "title": "Meta keywords tag (300+ words) on homepage",
+          "severity": "Medium",
+          "description": "Google ignores it; Bing may flag as spam. Wastes 2 KB.",
+          "recommendation": "Removed (DONE)"
+        },
+        {
+          "title": "Test files accessible in webroot",
+          "severity": "Medium",
+          "description": "mother_hospitals_v10.html and offer-manager-test.html accessible publicly.",
+          "recommendation": "Added Disallow in robots.txt (DONE); move files out of web root"
+        }
+      ]
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
+      "score": 76,
+      "what_works": [
+        "Doctor credentials fully detailed",
+        "ART Act 2021 certification prominent",
+        "Germany qualification differentiator",
+        "Direct-answer blocks on service pages",
+        "Telugu blog content"
+      ],
+      "findings": [
+        {
+          "title": "Location×service pages — thin templated content",
+          "severity": "High",
+          "description": "50+ location pages use similar templates with only locality name swapped. Risk of Google doorway page classification.",
+          "recommendation": "Add 150–200 words of unique locality-specific content per page (landmarks, transport, patient stories)"
+        },
+        {
+          "title": "Blog meta robots missing rich-result directives",
+          "severity": "High",
+          "description": "134 blog pages had only index,follow — Google won't show large featured images without max-image-preview:large.",
+          "recommendation": "Fixed across all 134 blog pages (DONE)"
+        },
+        {
+          "title": "H2 headings not in question format on service pages",
+          "severity": "Medium",
+          "description": "Headlines like 'Our Specialised Services' don't match user query patterns or trigger AI Overviews.",
+          "recommendation": "Convert H2s to question format: 'Can I get pregnant with Low AMH?', 'How much does IVF cost in Hyderabad?'"
+        },
+        {
+          "title": "No NRI patient content",
+          "severity": "Medium",
+          "description": "No remote consultation workflow, no dedicated NRI page.",
+          "recommendation": "Add /ivf-treatment-india-nri.html with remote consultation pathway"
+        },
+        {
+          "title": "No referring gynecologist pathway",
+          "severity": "Low",
+          "description": "No professional referral section or contact form.",
+          "recommendation": "Add brief referral section to contact page"
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 68,
+      "what_works": [
+        "MedicalOrganization comprehensive",
+        "Physician schema with TGMC reg",
+        "BreadcrumbList on service/blog pages",
+        "BlogPosting schema on blogs",
+        "Review × 3 with valid format",
+        "MedicalWebPage.speakable correct"
+      ],
+      "findings": [
+        {
+          "title": "hasOfferCatalog with price=0 on IVF Offer",
+          "severity": "Critical",
+          "description": "IVF Offer price:0 claims free IVF. AI scrapers cite this verbatim. Violates Offer schema rules.",
+          "recommendation": "Removed entirely from LocalBusiness (DONE)"
+        },
+        {
+          "title": "Duplicate conflicting AggregateRating (57 vs 71)",
+          "severity": "Critical",
+          "description": "Standalone MedicalClinic block had reviewCount:57; main block has 71. Google sees contradiction.",
+          "recommendation": "Standalone MedicalClinic block deleted (DONE)"
+        },
+        {
+          "title": "HowTo schema on 3 service pages — Google deprecated Sep 2023",
+          "severity": "Critical",
+          "description": "HowTo rich results permanently removed. Zero SERP benefit. 6,235+ bytes of dead schema.",
+          "recommendation": "Removed from IVF, Needleless IVF, PCOS pages (DONE)"
+        },
+        {
+          "title": "Standalone SpeakableSpecification on IVF page",
+          "severity": "Critical",
+          "description": "Free-floating SpeakableSpecification with no parent WebPage. Schema.org invalid.",
+          "recommendation": "Removed from ivf-treatment-hyderabad.html (DONE)"
+        },
+        {
+          "title": "VideoObject contentUrl/embedUrl point to YouTube channel (not video)",
+          "severity": "Critical",
+          "description": "Channel URL is not a video URL. VideoObject blocks on homepage and service pages will never pass Google rich results validation.",
+          "recommendation": "Removed invalid VideoObject blocks. Re-add when actual video IDs are available (DONE)"
+        },
+        {
+          "title": "Homepage BreadcrumbList used hash-anchor URLs",
+          "severity": "Medium",
+          "description": "/#services, /#doctor, /#awards are not distinct pages. Google expects navigable page URLs.",
+          "recommendation": "Simplified to Home only (position 1) on homepage (DONE)"
+        },
+        {
+          "title": "WebSite SearchAction doesn't work on static site",
+          "severity": "Medium",
+          "description": "/?s= is WordPress search syntax. Returns nothing on static GitHub Pages site.",
+          "recommendation": "Removed WebSite SearchAction block (DONE)"
+        },
+        {
+          "title": "Blog author.url was an anchor (/#doctor)",
+          "severity": "Medium",
+          "description": "Weakens E-E-A-T author signals. Should be the doctor's dedicated profile page.",
+          "recommendation": "Fixed to /dr-prashanthi-reddy.html across 55 blog posts (DONE)"
+        },
+        {
+          "title": "reviewedBy.identifier plain string (should be PropertyValue)",
+          "severity": "Medium",
+          "description": "\"identifier\":\"TGMC-50624\" is invalid. Schema.org requires PropertyValue object.",
+          "recommendation": "Needs batch-fix in blog template"
+        }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 71,
+      "what_works": [
+        "LCP image is WebP 36KB",
+        "preload link for LCP image in head",
+        "Google Fonts non-blocking",
+        "Clarity deferred to after load",
+        "GA4 async",
+        "All key images have explicit width/height"
+      ],
+      "findings": [
+        {
+          "title": "LCP hero image had loading=lazy + fetchpriority=high conflict",
+          "severity": "Critical",
+          "description": "Two contradictory attributes on the same img. Lazy wins on Safari/Firefox, adding 200–600ms to LCP.",
+          "recommendation": "Removed loading=lazy (DONE)"
+        },
+        {
+          "title": "style.min.css (68KB) is render-blocking — no critical CSS inlined",
+          "severity": "High",
+          "description": "Full stylesheet loads synchronously. Delays First Contentful Paint.",
+          "recommendation": "Extract 5–8KB of above-fold CSS (vars, nav, hero, trust bar) inline; load rest with print-media async trick"
+        },
+        {
+          "title": "offer-config.js / offer-manager.js not deferred",
+          "severity": "Medium",
+          "description": "Synchronous scripts at end of body add to INP.",
+          "recommendation": "Add defer attribute to both script tags"
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 81,
+      "what_works": [
+        "robots.txt — all 15 AI crawlers allowed",
+        "llms.txt — present, high quality, machine-readable",
+        "data-speakable on H1, hero, all H2s",
+        "WebPage.speakable nested correctly",
+        "Static HTML — no JS rendering barrier",
+        "Physician entity fully defined"
+      ],
+      "findings": [
+        {
+          "title": "No Wikipedia entity for Dr. Prashanthi Reddy or Mother Hospitals",
+          "severity": "High",
+          "description": "Wikipedia is the strongest AI knowledge graph anchor. Credentials meet notability standards (Germany-trained, national awards, ART Act compliance).",
+          "recommendation": "Create Wikipedia article — highest impact GEO action"
+        },
+        {
+          "title": "Standalone SpeakableSpecification on service pages",
+          "severity": "Medium",
+          "description": "Invalid schema, Google ignores it.",
+          "recommendation": "Fixed (DONE)"
+        },
+        {
+          "title": "Service page H2s not in question format",
+          "severity": "Medium",
+          "description": "Question-format H2s directly trigger AI Overview extraction.",
+          "recommendation": "Convert H2s to 'Can I...?', 'How much...?', 'What is...?' format"
+        },
+        {
+          "title": "No Practo or LinkedIn in Physician sameAs",
+          "severity": "Medium",
+          "description": "Cross-platform entity links improve knowledge graph disambiguation.",
+          "recommendation": "Add Practo profile URL and LinkedIn to Physician.sameAs"
+        }
+      ]
+    },
+    {
+      "name": "Local SEO",
+      "score": 68,
+      "what_works": [
+        "NAP consistent on homepage",
+        "ART Act 2021 highly visible",
+        "50+ location pages",
+        "GeoCoordinates present",
+        "Opening hours in schema",
+        "Dual MedicalOrganization + LocalBusiness correctly implemented"
+      ],
+      "findings": [
+        {
+          "title": "Phantom geo coordinates on served-area location pages",
+          "severity": "Critical",
+          "description": "ivf-center-secunderabad.html declares geo lat/long for Secunderabad — patients get wrong navigation. Hospital doesn't exist there.",
+          "recommendation": "Remove location-specific geo from all served-area pages; use Boduppal coords or omit geo"
+        },
+        {
+          "title": "Google Maps CID URL malformed in sameAs",
+          "severity": "High",
+          "description": "maps?cid=motherhospitals is not a valid CID URL. Google cannot resolve it.",
+          "recommendation": "Replace with actual GBP profile URL from GBP dashboard"
+        },
+        {
+          "title": "reviewCount mismatch (71 vs 57) across pages",
+          "severity": "High",
+          "description": "Location pages still show 57, homepage shows 71.",
+          "recommendation": "Update all location pages to match current Google review count"
+        },
+        {
+          "title": "geoRadius too broad at 100,000m",
+          "severity": "Medium",
+          "description": "Covers almost all Telangana. Weakens geographic relevance signal.",
+          "recommendation": "Fixed to 30,000m (DONE)"
+        },
+        {
+          "title": "Opening hours missing from visible contact page text",
+          "severity": "Medium",
+          "description": "Hours in schema only. Voice search and AI Overviews require visible text.",
+          "recommendation": "Add visible hours table to contact section"
+        },
+        {
+          "title": "No Practo business listing",
+          "severity": "Medium",
+          "description": "Practo is India's #1 fertility search directory. Absence is a significant local citation gap.",
+          "recommendation": "Create and verify Practo listing with exact NAP"
+        }
+      ]
+    },
+    {
+      "name": "SXO (Search Experience)",
+      "score": 83,
+      "what_works": [
+        "Clear value proposition above fold",
+        "Doctor credentials + Germany qualification in hero",
+        "Three CTAs above fold",
+        "Phone number tappable in 3 locations",
+        "ART Act badge in trust bar",
+        "Needleless IVF well-differentiated"
+      ],
+      "findings": [
+        {
+          "title": "Meta description too long (218 chars) — phone number cut off",
+          "severity": "Medium",
+          "description": "Google truncates at ~155 chars. The phone number at end is never shown in SERP.",
+          "recommendation": "Trim to: 'Top IVF clinic in Boduppal, Hyderabad. 65% success rate, 5,000+ cycles, Germany-trained Dr. Prashanthi Reddy. ART Act 2021 certified. Call 97059 93366.' (152 chars)"
+        },
+        {
+          "title": "Title tag too long (85 chars)",
+          "severity": "Medium",
+          "description": "Dr. Prashanthi Reddy truncated in SERP. Below 62 chars recommended.",
+          "recommendation": "Shorten to: 'Mother Hospitals Boduppal | IVF Center Hyderabad | 65% Success'"
+        },
+        {
+          "title": "No IVF cost signal in hero stats row",
+          "severity": "Medium",
+          "description": "Cost-conscious couples bounce to competitors who show pricing.",
+          "recommendation": "Add one-liner near hero stats: 'All-inclusive IVF — transparent pricing [See Cost →]'"
+        },
+        {
+          "title": "Address not a tappable Maps link on mobile",
+          "severity": "Low",
+          "description": "One-tap navigation is a key mobile micro-conversion.",
+          "recommendation": "Wrap visible address text in <a href='https://maps.app.goo.gl/...'> "
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes (DONE THIS SESSION)",
+        "timeframe": "Completed Aug 6 2026",
+        "items": [
+          "✅ LCP hero loading=lazy removed (−200 to −600ms LCP)",
+          "✅ hasOfferCatalog with price=0 removed from LocalBusiness schema",
+          "✅ Duplicate MedicalClinic block (reviewCount:57) deleted",
+          "✅ HowTo schema removed from IVF, Needleless IVF, PCOS pages",
+          "✅ Standalone SpeakableSpecification removed from IVF page",
+          "✅ Invalid VideoObject blocks (channel URLs) removed from all pages",
+          "✅ Homepage canonical + og:url trailing slash added",
+          "✅ 134 blog pages: max-snippet + max-image-preview:large added to robots meta",
+          "✅ Blog author.url fixed (/#doctor → /dr-prashanthi-reddy.html) × 55 posts",
+          "✅ needleless-ivf-cost page unblocked (noindex removed)",
+          "✅ meta keywords tag (300+ words) deleted from homepage",
+          "✅ geoRadius reduced from 100km → 30km",
+          "✅ robots.txt: Bard removed, test files disallowed",
+          "✅ BreadcrumbList homepage simplified (hash anchors removed)",
+          "✅ WebSite SearchAction block removed (static site, doesn't work)"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact (Week 1–2)",
+        "timeframe": "Aug 7–20 2026",
+        "items": [
+          "🔴 Enable Cloudflare proxy — HTTPS enforcement + security headers (C1+H3)",
+          "🔴 Fix blog hreflang — remove phantom ?lang=te alternates",
+          "🔴 Standardise all hreflang to te-IN across site",
+          "🔴 Fix phantom geo on served-area location pages",
+          "🔴 Fix Google Maps CID URL in sameAs",
+          "🔴 Update reviewCount to 71 across all location pages",
+          "🔴 Add visible opening hours table to contact section",
+          "🟡 Inline critical CSS (~5–8KB) to unblock render",
+          "🟡 Add defer to offer-config.js and offer-manager.js"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority (Month 2)",
+        "timeframe": "Sep 2026",
+        "items": [
+          "📝 Convert H2s to question format on 10 service pages",
+          "📝 Add 150–200 words of unique content to top 20 location pages",
+          "📝 Create /ivf-clinic-hyderabad.html for city-wide competition",
+          "📝 Create Wikipedia article for Dr. Prashanthi Reddy",
+          "📍 Create and verify Practo business listing",
+          "📍 Add Practo + LinkedIn to Physician.sameAs in schema",
+          "🎥 Add real YouTube video IDs to VideoObject schema",
+          "🔧 Fix reviewedBy.identifier on all blog pages (PropertyValue format)"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring",
+        "timeframe": "Ongoing",
+        "items": [
+          "Update lastmod dates in sitemap when pages are modified",
+          "Launch post-consultation review request campaign (SMS/WhatsApp at 48h)",
+          "Split monolithic sitemap into sitemap index (>800 pages)",
+          "Setup Google Search Console for indexation monitoring",
+          "Capture SEO drift baseline after Phase 1 changes go live"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "motherhospitals.co.in-audit/findings/",
+    "fixes_applied": 15,
+    "files_modified": [
+      "index.html",
+      "ivf-treatment-hyderabad.html",
+      "needleless-ivf-hyderabad.html",
+      "pcos-treatment-hyderabad.html",
+      "needleless-ivf-cost-hyderabad.html",
+      "robots.txt",
+      "blog/*.html (134 files)"
+    ]
+  }
+}

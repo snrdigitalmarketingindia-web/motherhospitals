@@ -87,7 +87,7 @@ def main():
     if not files:
         # try from repo root
         import os
-        os.chdir("/Users/apple/Documents/motherhospitalswebsite")
+        os.chdir("/Users/apple/Documents/MotherHospitals/motherhospitalswebsite")
         files = sorted(glob.glob("*.html"))
 
     total = len(files)
