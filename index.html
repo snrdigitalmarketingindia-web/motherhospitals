@@ -324,7 +324,7 @@ a{
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999?text=Hi%2C+I+want+to+book+a+consultation+at+Mother+Hospitals" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
- <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <button class="hamburger" onclick="var m=document.querySelector('.mob-menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))" aria-expanded="false" aria-controls="mob-menu" aria-label="Toggle menu">
  <span></span><span></span><span></span>
  </button>
  </div>
@@ -348,13 +348,13 @@ a{
 <div class="trust-bar">
  <div class="trust-inner">
  <div class="trust-item"><span>🏛️</span> ART Act 2021 Certified</div>
- <div class="trust-item"><span>📋</span> TGMC Reg: 50624</div>
+ <div class="trust-item"><span aria-hidden="true">📋</span> TGMC Reg: 50624</div>
  <div class="trust-item"><span>⭐</span> 4.7★ Google Rated</div>
- <div class="trust-item"><span>🏆</span> 20+ Years Experience</div>
+ <div class="trust-item"><span aria-hidden="true">🏆</span> 20+ Years Experience</div>
  <div class="trust-item"><span>👨‍👩‍👧</span> 10,000+ Families</div>
- <div class="trust-item"><span>🌍</span> NRI Patients Welcome</div>
- <div class="trust-item"><span>💉</span> Needleless IVF Pioneer</div>
- <div class="trust-item"><span>🤰</span> Safe Delivery Center</div>
+ <div class="trust-item"><span aria-hidden="true">🌍</span> NRI Patients Welcome</div>
+ <div class="trust-item"><span aria-hidden="true">💉</span> Needleless IVF Pioneer</div>
+ <div class="trust-item"><span aria-hidden="true">🤰</span> Safe Delivery Center</div>
  </div>
 <!-- TRUST_END -->
 </div>
@@ -443,77 +443,77 @@ a{
  <div class="svc-icon">💉</div>
  <h3 class="svc-title">Needleless IVF</h3>
  <p class="svc-desc">Our exclusive needleless IVF treatment offers a pain-free fertility journey — no injections, minimal discomfort, same high success rates. A unique offering in Hyderabad.</p>
- <a href="/needleless-ivf-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/needleless-ivf-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Needleless Ivf Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag new">Needleless IVF</span><span class="stag new">Pain Free IVF</span><span class="stag">Natural Cycle IVF</span><span class="stag">Oral Stimulation</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">🧬</div>
  <h3 class="svc-title">IVF & Advanced Fertility</h3>
  <p class="svc-desc">Advanced assisted reproduction using the latest IVF laboratory technology with personalised protocols to maximise your success.</p>
- <a href="/ivf-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/ivf-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Ivf Treatment Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">IVF</span><span class="stag">ICSI</span><span class="stag">IUI</span><span class="stag">FET</span><span class="stag">PGT</span><span class="stag">TESA/PESA</span><span class="stag">Blastocyst</span><span class="stag new">ERA Test</span><span class="stag new">Laser Hatching</span></div>
  </div>
  <div class="svc-card featured">
  <div class="svc-icon">🔄</div>
  <h3 class="svc-title">Recurrent IVF Failure & Low AMH</h3>
  <p class="svc-desc">Specialised treatment for couples who have experienced repeated IVF failures or have low AMH / poor ovarian reserve — with personalised advanced protocols.</p>
- <a href="/low-amh-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/low-amh-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Low Amh Treatment Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag new">Recurrent IVF Failure</span><span class="stag new">Low AMH Treatment</span><span class="stag">Poor Ovarian Reserve</span><span class="stag">ERA Testing</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">👨</div>
  <h3 class="svc-title">Male Infertility & TESA/ICSI</h3>
  <p class="svc-desc">Complete male fertility care — low sperm count, azoospermia, DNA fragmentation, TESA surgical retrieval, and ICSI. Male factor is involved in 50% of infertility cases.</p>
- <a href="/male-infertility-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/male-infertility-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Male Infertility Treatment Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag new">Male Infertility</span><span class="stag">TESA/PESA</span><span class="stag">Azoospermia</span><span class="stag">DNA Fragmentation</span><span class="stag">ICSI</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">❄️</div>
  <h3 class="svc-title">Egg & Embryo Freezing</h3>
  <p class="svc-desc">State-of-the-art cryopreservation of eggs, embryos and semen — preserve fertility and plan parenthood at your own pace.</p>
- <a href="/egg-freezing-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/egg-freezing-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Egg Freezing Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">Egg Freezing</span><span class="stag">Embryo Freezing</span><span class="stag">Semen Freezing</span><span class="stag">Semen Analysis</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">👶</div>
  <h3 class="svc-title">Maternity & Safe Delivery</h3>
  <p class="svc-desc">Complete antenatal, delivery and postnatal care with expert management of high-risk pregnancies — normal delivery and C-section.</p>
- <a href="/maternity-care-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/maternity-care-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Maternity Care Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">Normal Delivery</span><span class="stag">C-Section</span><span class="stag">High-Risk Pregnancy</span><span class="stag">Antenatal Care</span><span class="stag new">Preconception Counselling</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">♀️</div>
  <h3 class="svc-title">Gynaecology & Women's Health</h3>
  <p class="svc-desc">Comprehensive women's health covering PCOS/PCOD, hormonal disorders, menstrual issues and preventive screenings.</p>
- <a href="/pcos-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/pcos-treatment-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Pcos Treatment Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">PCOS/PCOD</span><span class="stag">Hormonal Disorders</span><span class="stag">Women's Wellness</span><span class="stag">Preventive Care</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">🩺</div>
  <h3 class="svc-title">Laparoscopy & Hysteroscopy</h3>
  <p class="svc-desc">Minimally invasive procedures for uterine, ovarian and fallopian tube conditions with faster recovery.</p>
- <a href="/gynaecology-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/gynaecology-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Gynaecology Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">Laparoscopy</span><span class="stag">Hysteroscopy</span><span class="stag">Fibroid Removal</span><span class="stag">Recanalization</span><span class="stag">Endometriosis</span></div>
  </div>
  <div class="svc-card featured">
  <div class="svc-icon">🧪</div>
  <h3 class="svc-title">Test Tube Baby Centre</h3>
  <p class="svc-desc">Hyderabad's trusted test tube baby centre — IVF treatment with highest success rates, all-inclusive package. ART Act 2021 certified.</p>
- <a href="/test-tube-baby-center-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/test-tube-baby-center-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Test Tube Baby Center Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag new">Test Tube Baby</span><span class="stag">IVF</span><span class="stag">ART Certified</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">🥚</div>
  <h3 class="svc-title">Egg Donation IVF</h3>
  <p class="svc-desc">ART Act 2021 compliant donor egg programme for women with poor ovarian reserve, premature menopause, or repeated IVF failure with own eggs.</p>
- <a href="/egg-donation-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/egg-donation-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Egg Donation Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">Egg Donation</span><span class="stag">Donor IVF</span><span class="stag">ART Act 2021</span><span class="stag">Poor Reserve</span></div>
  </div>
  <div class="svc-card">
  <div class="svc-icon">💔</div>
  <h3 class="svc-title">Recurrent Miscarriage (RPL)</h3>
  <p class="svc-desc">Comprehensive evaluation and treatment for repeated pregnancy loss — thrombophilia, PGT-A, ERA, immunological and hormonal investigations.</p>
- <a href="/recurrent-miscarriage-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none">Learn More →</a>
+ <a href="/recurrent-miscarriage-hyderabad.html" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--magenta);font-weight:600;text-decoration:none" aria-label="Learn more about Recurrent Miscarriage Hyderabad">Learn More →</a>
  <div class="svc-tags"><span class="stag">Recurrent Miscarriage</span><span class="stag">RPL</span><span class="stag">PGT-A</span><span class="stag">ERA Test</span></div>
  </div>
  <div class="svc-card featured">
@@ -539,7 +539,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">🧬</div>
- <div class="dept-name">Fertility & IVF</div>
+ <h3 class="dept-name">Fertility & IVF</h3>
  <div class="dept-desc">Advanced reproductive medicine with personalised protocols, cutting-edge lab technology and one of Hyderabad's highest IVF success rates.</div>
  <ul class="dept-list">
  <li>IVF · ICSI · IUI · FET</li>
@@ -554,7 +554,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1457342813143-a1ae27448a82?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">🤰</div>
- <div class="dept-name">Maternity & Obstetrics</div>
+ <h3 class="dept-name">Maternity & Obstetrics</h3>
  <div class="dept-desc">Expert antenatal care, safe delivery management and postnatal support — with specialist expertise in high-risk pregnancies.</div>
  <ul class="dept-list">
  <li>Normal Delivery & C-Section</li>
@@ -567,7 +567,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1691934338603-af553029aaa3?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">♀️</div>
- <div class="dept-name">Gynaecology</div>
+ <h3 class="dept-name">Gynaecology</h3>
  <div class="dept-desc">Comprehensive gynaecological care for women at every life stage — from adolescence through menopause.</div>
  <ul class="dept-list">
  <li>PCOS / PCOD Treatment</li>
@@ -580,7 +580,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1640876777002-badf6aee5bcc?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">🩺</div>
- <div class="dept-name">Laparoscopy & Hysteroscopy</div>
+ <h3 class="dept-name">Laparoscopy & Hysteroscopy</h3>
  <div class="dept-desc">Minimally invasive surgical procedures for accurate diagnosis and treatment of gynaecological conditions.</div>
  <ul class="dept-list">
  <li>Diagnostic & Operative Laparoscopy</li>
@@ -592,7 +592,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1614308459036-779d0dfe51ff?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">❄️</div>
- <div class="dept-name">Fertility Preservation</div>
+ <h3 class="dept-name">Fertility Preservation</h3>
  <div class="dept-desc">Advanced cryopreservation for eggs, embryos and semen — empowering women to plan parenthood on their timeline.</div>
  <ul class="dept-list">
  <li>Egg Freezing (Oocyte Cryopreservation)</li>
@@ -605,7 +605,7 @@ a{
 
  <div class="dept-card" style="background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1693004927824-f2623bbedc8b?w=600&auto=format&fit=crop&q=60')">
  <div class="dept-icon">✨</div>
- <div class="dept-name">Cosmetic Gynaecology</div>
+ <h3 class="dept-name">Cosmetic Gynaecology</h3>
  <div class="dept-desc">Certified intimate wellness and cosmetic gynaecology procedures — unique to Mother Hospitals in East Hyderabad.</div>
  <ul class="dept-list">
  <li>Vaginal Tightening</li>

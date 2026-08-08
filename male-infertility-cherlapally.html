@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta name="format-detection" content="telephone=no"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
@@ -62,7 +63,7 @@ window.addEventListener("load", function(){
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
- <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <button class="hamburger" onclick="var m=document.querySelector('.mob-menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))" aria-expanded="false" aria-controls="mob-menu" aria-label="Toggle menu">
  <span></span><span></span><span></span>
  </button>
  </div>

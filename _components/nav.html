@@ -23,7 +23,7 @@
  <li><a href="/blog/">Blog</a></li>
  <li><a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" class="btn-nav">💬 WhatsApp Us</a></li>
  </ul>
- <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="Menu">
+ <button class="hamburger" onclick="var m=document.querySelector('.mob-menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))" aria-expanded="false" aria-controls="mob-menu" aria-label="Toggle menu">
  <span></span><span></span><span></span>
  </button>
  </div>
