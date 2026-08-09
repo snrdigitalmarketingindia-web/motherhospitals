@@ -151,149 +151,84 @@
  gtag('js', new Date);
  gtag('config', 'G-RBR9NWNXGN');
 </script>
-<!-- FIX: Clarity moved to bottom of body via defer — eliminates head blocking -->
-<style>*{margin:0;padding:0;box-sizing:border-box}
+<!-- Page-critical CSS -->
+<style>
+/* ── Reset ── */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ── Design Tokens ── */
 :root{
-  --purple:#58037c;--purple-mid:#6e0f99;--purple-light:#e8d5f5;--purple-pale:#fff2ff;
+  --purple:#58037c;--purple-mid:#6e0f99;
+  --purple-light:#e8d5f5;--purple-pale:#f9f0ff;
   --magenta:#aa045a;--magenta-light:#f7d0e8;
-  --bg-brand:#fff2ff;--cream:#fff2ff;--white:#fff;
-  --text:#1e0a2e;--text-mid:#4a2d5e;--text-soft:#8a6a9a;--gold:#c9a030;
-  --font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',sans-serif;
-}
-:root{
-  --text-2xs:0.65rem;  /* 10.4px */
-  --text-xs:0.72rem;   /* 11.5px */
-  --text-sm:0.82rem;   /* 13.1px */
-  --text-base:0.92rem; /* 14.7px */
-  --text-md:1rem;      /* 16px   */
-  --text-lg:1.1rem;    /* 17.6px */
-  --text-xl:1.25rem;   /* 20px   */
-  --text-2xl:1.5rem;   /* 24px   */
-  --text-3xl:1.9rem;   /* 30.4px */
-  --text-4xl:2.4rem;   /* 38.4px */
-  --lh-tight:1.25;
-  --lh-snug:1.5;
-  --lh-normal:1.7;
-  --lh-relaxed:1.85;
-}
-:root{
-  --container:1360px;
-  --container-wide:1560px;
-  --container-narrow:860px;
-  --sp-xs:0.5rem;
-  --sp-sm:1rem;
-  --sp-md:1.5rem;
-  --sp-lg:2.5rem;
-  --sp-xl:4rem;
-  --sp-2xl:6rem;
-  --radius-sm:8px;
-  --radius-md:14px;
-  --radius-lg:20px;
-  --radius-xl:28px;
-  --shadow-sm:0 2px 8px rgba(90,31,122,0.07);
-  --shadow-md:0 8px 28px rgba(90,31,122,0.10);
-  --shadow-lg:0 20px 60px rgba(90,31,122,0.15);
-  --shadow-xl:0 30px 80px rgba(90,31,122,0.18);
-  --nav-h:94px;
+  --cream:#faf5ff;--white:#fff;
+  --text:#1a0829;--text-mid:#4a2d5e;--text-soft:#6b4d7f;
+  --gold:#7f651e;
+  --font-d:'Cormorant Garamond',Georgia,serif;
+  --font-b:'DM Sans',sans-serif;
+  --container:1400px;--nav-h:80px;
+  --radius-sm:8px;--radius-md:14px;--radius-lg:22px;--radius-xl:32px;
+  --shadow-sm:0 2px 10px rgba(90,31,122,0.06);
+  --shadow-md:0 8px 32px rgba(90,31,122,0.10);
+  --shadow-lg:0 20px 60px rgba(90,31,122,0.14);
   --transition:all 0.22s cubic-bezier(0.4,0,0.2,1);
 }
-:root{--nav-h:104px}
-:root{--container:1600px;--nav-h:80px}
-:root{--container:1800px}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-b);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.7}
-body{padding-bottom:62px}
-body{font-size:0.78rem;color:var(--text-mid);line-height:1.6}
-body{font-size:0.8rem;color:var(--text-mid);line-height:1.65;position:relative;z-index:1}
-body{line-height:1.75;color:var(--text)}
-body{font-size:0.82rem;line-height:1.7}
-body{font-size:0.95rem;line-height:1.85}
-body{overflow-x:hidden}
-h1{font-family:var(--font-d);font-size:clamp(2.3rem,4.2vw,3.8rem);font-weight:700;line-height:1.1;margin-bottom:0.5rem}
-h1{font-family:var(--font-d);font-size:clamp(var(--text-3xl),4vw,var(--text-4xl));font-weight:700;line-height:var(--lh-tight);margin-bottom:1rem;color:var(--text)}
-h1{
-  font-size:clamp(2.4rem,3.8vw,4rem);
-  line-height:1.08;
-  letter-spacing:-0.02em;
-  margin-bottom:0.8rem;
-}
-h1{
-  font-size:clamp(2rem,3.5vw,3rem);
-  color:#fff;
-  letter-spacing:-0.02em;
-  line-height:1.1;
-  margin-bottom:0.8rem;
-}
-h1{font-size:4.4rem}
-h1{font-size:5rem}
-h1{font-size:clamp(1.6rem,5vw,2.4rem)}
-img{height:64px;width:64px;object-fit:contain}
-img{width:100%;height:100%;object-fit:cover;object-position:center top}
-img{width:100%;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(90,31,122,0.15)}
-img{width:100%;height:100%;object-fit:cover;display:block}
-img{width:100%;aspect-ratio:3/4;border-radius:24px;overflow:hidden;box-shadow:0 28px 60px rgba(90,31,122,0.18)}
-img{width:100%;height:200px;object-fit:cover}
-img{width:100%;display:block;border-radius:16px}
-img{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(90,31,122,0.15)}
-img{width:100%;object-fit:cover;border-radius:24px;display:block}
-img{height:42px;width:42px;object-fit:contain}
-img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--purple-light)}
-a{color:rgba(255,255,255,0.9);text-decoration:none}
-a{font-size:0.82rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
-a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
-a{color:var(--magenta);text-decoration:none}
-a{font-size:0.79rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s}
-a{font-size:0.79rem;color:rgba(255,255,255,0.5);text-decoration:none;line-height:1.7}
-a{color:var(--purple);text-decoration:none}
-a{color:var(--purple);text-decoration:none;font-weight:500}
-a{color:var(--purple)}
-a{padding:1rem 1.2rem;font-size:0.88rem;color:var(--text-mid);line-height:1.75;background:#fff}
-a{min-height:44px;display:inline-flex;align-items:center}
-a{min-height:44px;display:flex;align-items:center}
-a{
-  font-size:0.93rem;
-  font-weight:500;
-  letter-spacing:0.01em;
-  padding:0.35rem 0.7rem;
-  border-radius:6px;
-  transition:var(--transition);
-  color:var(--text-mid);
-}
-a{
-  display:block;
-  padding:0.6rem 1rem;
-  font-size:0.83rem;
-  color:var(--text-mid);
-  text-decoration:none;
-  border-radius:8px;
-  transition:var(--transition);
-  white-space:nowrap;
-}
-a{
-  font-size:0.82rem;
-  color:rgba(255,255,255,0.6);
-  transition:var(--transition);
-  display:inline-flex;
-  align-items:center;
-  gap:0.3rem;
-}
-a{
-  display:block;
+
+/* ── Base ── */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-b);
+  background:var(--cream);
+  color:var(--text);
   font-size:1rem;
+  line-height:1.75;
+  overflow-x:hidden;
+  padding-bottom:64px;
+}
+
+/* ── Typography ── */
+h1{
+  font-family:var(--font-d);
+  font-size:clamp(2.2rem,4.5vw,3.8rem);
   font-weight:700;
-  color:#fff;
-  text-decoration:none;
-  margin-bottom:0.3rem;
+  line-height:1.08;
+  letter-spacing:-0.025em;
+  color:var(--text);
 }
-a{
-  padding:1.2rem 1.4rem;
-  font-size:0.9rem;
-  line-height:1.8;
-  border-radius:0 0 var(--radius-md) var(--radius-md);
-  background:#fff;
-  border-top:1px solid rgba(90,31,122,0.08);
+h2{
+  font-family:var(--font-d);
+  font-size:clamp(1.6rem,3vw,2.6rem);
+  font-weight:700;
+  line-height:1.15;
+  color:var(--text);
 }
-@media(max-width:768px){.content-grid,.stats-row,.dr-strip,.footer-inner,.page-ctas{grid-template-columns:1fr;flex-direction:column}.page-hero,.section-wrap{padding-left:5%;padding-right:5%}h1,h2{font-size:clamp(1.4rem,5vw,2.2rem)}.hero-inner{grid-template-columns:1fr}}</style>
+h3{
+  font-family:var(--font-d);
+  font-size:clamp(1.15rem,2vw,1.5rem);
+  font-weight:700;
+  color:var(--text);
+}
+
+/* ── Links (base only — no background, no extra padding) ── */
+a{color:var(--purple);text-decoration:none;transition:var(--transition)}
+
+/* ── Images ── */
+img{max-width:100%;display:block}
+
+/* ── Mobile responsive ── */
+@media(max-width:768px){
+  body{padding-bottom:72px}
+  h1{font-size:clamp(1.9rem,6vw,2.4rem)}
+  h2{font-size:clamp(1.4rem,5vw,2rem)}
+  .hero-inner{grid-template-columns:1fr!important}
+  .content-grid,.stats-row,.dr-strip,.footer-inner,.page-ctas{grid-template-columns:1fr}
+  .page-hero,.section-wrap{padding-left:5%;padding-right:5%}
+  .btn-desktop-only{display:none!important}
+}
+@media(min-width:769px){
+  .btn-mobile-only{display:none!important}
+}
+</style>
 </head>
 <body itemscope itemtype="https://schema.org/MedicalOrganization">
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--purple);color:#fff;font-weight:600;border-radius:0 0 4px 4px;text-decoration:none" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
@@ -360,7 +295,7 @@ a{
 </div>
 
 <!-- HERO -->
-<section id="home" style="padding:40px 5% 50px">
+<section id="home" style="padding:60px 5% 64px;background:linear-gradient(160deg,#fff 55%,#faf0ff 100%)">
   <div class="orb orb1"></div><div class="orb orb2"></div>
   <div class="hero-inner">
     <div>
@@ -369,9 +304,9 @@ a{
       <p class="hero-tag" data-speakable="true">Dr. E. Prashanthi Reddy · MBBS · DGO · Diploma in ART, Kiel University Germany · TGMC Reg: 50624</p>
       <p class="hero-p" data-speakable="true">Germany-trained IVF specialist with 20+ years and 5,000+ cycles. Personal care — your embryos, your journey, our complete focus. IVF, Needleless IVF, PCOS, male infertility, high-risk pregnancy and safe delivery. ART Act 2021 certified · Boduppal, Hyderabad.</p>
       <div class="hero-cta-row">
-        <a href="https://wa.me/919052074999?text=Hi%2C+I+want+to+book+a+consultation+at+Mother+Hospitals" class="btn-call btn-mobile-only" style="background:linear-gradient(135deg,#58037c,#a0006e)" target="_blank" rel="noopener noreferrer">💬 Book on WhatsApp</a><a href="#contact" class="btn-call btn-desktop-only" style="background:linear-gradient(135deg,#58037c,#a0006e)">📅 Book Consultation</a>
+        <a href="https://wa.me/919052074999?text=Hi%2C+I+want+to+book+a+consultation+at+Mother+Hospitals" class="btn-call btn-mobile-only" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+        <a href="#contact" class="btn-call btn-desktop-only">Book a Consultation</a>
         <a href="tel:+919705993366" class="btn-outline">📞 97059 93366</a>
-        <a href="https://wa.me/919052074999?text=Hi%2C+I+want+to+book+a+consultation+at+Mother+Hospitals" class="btn-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp @motherhospitals</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">65%</span><span class="stat-label">IVF Success Rate</span></div>
@@ -381,7 +316,7 @@ a{
       </div>
     </div>
     <div style="position:relative">
-      <div class="hero-years" style="z-index:2;position:relative"><strong>20+</strong><span>Years Expert Care</span></div>
+      <div class="hero-years" style="z-index:2"><strong>20+</strong><span>Years Expert Care</span></div>
       <div class="hero-photo">
         <!-- FIX: WebP hero image with explicit dimensions (LCP + CLS fix) -->
         <picture>

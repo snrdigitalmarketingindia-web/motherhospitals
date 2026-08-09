@@ -400,8 +400,8 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 
 /* ── HERO CTA UPDATE ── */
 .hero-cta-row{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
-.btn-call{background:linear-gradient(135deg,var(--purple),var(--purple-mid));color:#fff;padding:0.82rem 1.9rem;border-radius:50px;text-decoration:none;font-size:0.88rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 4px 18px rgba(90,31,122,0.3);transition:all 0.2s}
-.btn-call:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(90,31,122,0.4)}
+.btn-call{background:var(--purple);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;text-decoration:none;font-size:0.9rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 2px 12px rgba(88,3,124,0.25);transition:all 0.25s cubic-bezier(0.4,0,0.2,1);letter-spacing:0.01em}
+.btn-call:hover{background:var(--purple-mid);transform:translateY(-1px);box-shadow:0 6px 20px rgba(88,3,124,0.35)}
 
 @media(max-width:960px){
   .cred-grid{grid-template-columns:1fr 1fr}
@@ -777,10 +777,11 @@ nav.main-nav{
   box-shadow:var(--shadow-sm);
 }
 .hero-h1{
-  font-size:clamp(2.4rem,3.8vw,4rem);
-  line-height:1.08;
-  letter-spacing:-0.02em;
+  font-size:clamp(2.4rem,4vw,4.4rem);
+  line-height:1.06;
+  letter-spacing:-0.03em;
   margin-bottom:0.8rem;
+  color:var(--text);
 }
 .hero-tag{
   font-size:0.82rem;
