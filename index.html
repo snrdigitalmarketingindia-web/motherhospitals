@@ -232,23 +232,50 @@ img{max-width:100%;display:block}
 </head>
 <body itemscope itemtype="https://schema.org/MedicalOrganization">
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--purple);color:#fff;font-weight:600;border-radius:0 0 4px 4px;text-decoration:none" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
-<div id="independence-strip" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#FF9933 0%,#FF9933 33%,#fff 33%,#fff 66%,#138808 66%,#138808 100%);padding:0;box-shadow:0 2px 12px rgba(0,0,0,0.15);animation:stripSlide 0.5s ease">
-  <div style="background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 48px 10px 16px;text-align:center">
-    <span style="font-size:1.3rem">🇮🇳</span>
-    <span style="color:#fff;font-weight:600;font-size:0.95rem;letter-spacing:0.01em">Happy Independence Day! Every new life born free is India's greatest gift. Wishing you strength, hope &amp; a growing family. <span style="opacity:0.85;font-weight:400">— Mother Hospitals</span></span>
-    <span style="font-size:1.3rem">🇮🇳</span>
-  </div>
-  <button onclick="document.getElementById('independence-strip').style.display='none';document.body.style.paddingTop=''" aria-label="Close" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.2);border:none;color:#fff;font-size:1.2rem;width:28px;height:28px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
-</div>
 <style>
-@keyframes stripSlide{from{transform:translateY(-100%)}to{transform:translateY(0)}}
-#independence-strip~*{margin-top:0}
+#id-banner{position:fixed;top:0;left:0;right:0;z-index:99999;animation:idSlideIn .6s cubic-bezier(.22,1,.36,1) both;box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+#id-banner .id-bar{display:flex;height:5px}
+#id-banner .id-bar span:nth-child(1){flex:1;background:#FF9933}
+#id-banner .id-bar span:nth-child(2){flex:1;background:#ffffff}
+#id-banner .id-bar span:nth-child(3){flex:1;background:#138808}
+#id-banner .id-body{background:linear-gradient(135deg,#0d0d2b 0%,#1a0040 50%,#0d1a00 100%);position:relative;overflow:hidden;padding:13px 52px 13px 16px;display:flex;align-items:center;justify-content:center;gap:12px}
+#id-banner .id-shimmer{position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);animation:idShimmer 3s ease-in-out infinite;pointer-events:none}
+#id-banner .id-flag{font-size:1.5rem;animation:idPulse 2s ease-in-out infinite;line-height:1}
+#id-banner .id-chakra{font-size:1.1rem;animation:idSpin 5s linear infinite;display:inline-block;line-height:1}
+#id-banner .id-text{color:#fff;font-weight:700;font-size:.97rem;letter-spacing:.02em;text-shadow:0 1px 6px rgba(0,0,0,.5);text-align:center}
+#id-banner .id-text em{font-style:normal;background:linear-gradient(90deg,#FF9933 0%,#fff 50%,#4caf50 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+#id-banner .id-sub{color:rgba(255,255,255,.6);font-size:.78rem;font-weight:400;margin-left:6px}
+#id-banner .id-close{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:1rem;width:26px;height:26px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;line-height:1;padding:0}
+#id-banner .id-close:hover{background:rgba(255,255,255,.28)}
+#id-banner .id-bar2{display:flex;height:3px}
+#id-banner .id-bar2 span:nth-child(1){flex:1;background:#FF9933;opacity:.6}
+#id-banner .id-bar2 span:nth-child(2){flex:1;background:#fff;opacity:.6}
+#id-banner .id-bar2 span:nth-child(3){flex:1;background:#138808;opacity:.6}
+@keyframes idSlideIn{from{transform:translateY(-110%);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes idShimmer{0%{left:-100%}60%,100%{left:150%}}
+@keyframes idPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes idSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(max-width:580px){#id-banner .id-text{font-size:.82rem}#id-banner .id-flag{font-size:1.2rem}#id-banner .id-sub{display:none}#id-banner .id-chakra{display:none}}
 </style>
+<div id="id-banner" role="banner" aria-label="Independence Day Wishes">
+  <div class="id-bar"><span></span><span></span><span></span></div>
+  <div class="id-body">
+    <div class="id-shimmer"></div>
+    <span class="id-flag">🇮🇳</span>
+    <span class="id-text">
+      <em>Happy Independence Day!</em>&nbsp;Every life born free is India's greatest strength.<span class="id-sub">— Mother Hospitals &amp; IVF Centre</span>
+    </span>
+    <span class="id-chakra">☸️</span>
+    <span class="id-flag">🇮🇳</span>
+    <button class="id-close" onclick="var b=document.getElementById('id-banner');b.style.display='none';document.body.style.paddingTop=''" aria-label="Close">×</button>
+  </div>
+  <div class="id-bar2"><span></span><span></span><span></span></div>
+</div>
 <script>
 (function(){
-  var s=document.getElementById('independence-strip');
-  if(s){document.body.style.paddingTop=s.offsetHeight+'px';
-  window.addEventListener('resize',function(){document.body.style.paddingTop=s.offsetHeight+'px'});}
+  var b=document.getElementById('id-banner');
+  function setPad(){if(b&&b.style.display!=='none')document.body.style.paddingTop=b.offsetHeight+'px';}
+  setPad();window.addEventListener('resize',setPad);
 })();
 </script>
 
