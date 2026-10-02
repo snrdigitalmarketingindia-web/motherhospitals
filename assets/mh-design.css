@@ -279,17 +279,37 @@ iframe[style*="border-radius:12px"]{border-radius:var(--mh-r)!important;box-shad
   .article-body table,.blog-body table,table.comparison-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
 
-/* 21 · Yearly greeting ribbon (assets/js/seasonal-banner.js) ------------- */
-.mh-season{position:relative;overflow:hidden;color:#fff;background:linear-gradient(115deg,#14012b 0%,#2c0a4c 52%,#0d2a1a 100%);animation:mhSeasonIn .6s var(--mh-ease) both}
-.mh-season--tricolor::before,.mh-season--tricolor::after{content:'';position:absolute;left:0;right:0;background:linear-gradient(90deg,#ff9933 0 33.33%,#fff 33.33% 66.66%,#138808 66.66% 100%)}
-.mh-season--tricolor::before{top:0;height:3px}
-.mh-season--tricolor::after{bottom:0;height:2px;opacity:.55}
+/* 21 · Festival & national-day ribbon (assets/js/seasonal-banner.js) ------ */
+.mh-season{--sa:#ffb76b;--sb:#ffffff;--sc:#7ee29a;position:relative;overflow:hidden;color:#fff;background:linear-gradient(115deg,#14012b 0%,#2c0a4c 55%,#1d0638 100%);animation:mhSeasonIn .6s var(--mh-ease) both}
+.mh-season::before,.mh-season::after{content:'';position:absolute;left:0;right:0;background:linear-gradient(90deg,var(--sa),var(--sb),var(--sc))}
+.mh-season::before{top:0;height:3px}
+.mh-season::after{bottom:0;height:2px;opacity:.55}
+.mh-season--tricolor{background:linear-gradient(115deg,#14012b 0%,#2c0a4c 52%,#0d2a1a 100%)}
+.mh-season--tricolor::before,.mh-season--tricolor::after{background:linear-gradient(90deg,#ff9933 0 33.33%,#fff 33.33% 66.66%,#138808 66.66% 100%)}
+.mh-season--diya{--sa:#ff9f43;--sb:#ffe08a;--sc:#ffb347}
+.mh-season--dasara{--sa:#ffcf6b;--sb:#ff9f68;--sc:#ff7b8a}
+.mh-season--bathukamma{--sa:#ff8cc6;--sb:#ffe066;--sc:#8ce99a}
+.mh-season--sankranti{--sa:#ffc078;--sb:#ffe066;--sc:#8fd3ff}
+.mh-season--ugadi{--sa:#a9e34b;--sb:#ffe066;--sc:#ffa94d}
+.mh-season--ganesha{--sa:#ffa94d;--sb:#ffe08a;--sc:#ff8787}
+.mh-season--rama{--sa:#ff9933;--sb:#ffd8a8;--sc:#ffb347}
+.mh-season--lakshmi{--sa:#ffd43b;--sb:#ffc9de;--sc:#ffb347}
+.mh-season--rakhi{--sa:#ff9cbd;--sb:#ffe08a;--sc:#d0a8ff}
+.mh-season--krishna{--sa:#74c0fc;--sb:#96f2d7;--sc:#ffe066}
+.mh-season--shiva{--sa:#a5b4ff;--sb:#e5dbff;--sc:#8fd3ff}
+.mh-season--holi{--sa:#ff8cc6;--sb:#ffe066;--sc:#74c0fc}
+.mh-season--eid{--sa:#63e6be;--sb:#fff3bf;--sc:#ffd43b}
+.mh-season--christmas{--sa:#ff8787;--sb:#fff3bf;--sc:#8ce99a}
+.mh-season--newyear{--sa:#ffd43b;--sb:#ffffff;--sc:#e599f7}
+.mh-season--tangedu{--sa:#ffd43b;--sb:#ffe8a3;--sc:#ff9cbd}
 .mh-season-inner{position:relative;max-width:1160px;margin:0 auto;padding:13px 60px 13px 20px;display:flex;align-items:center;justify-content:center;gap:14px;text-align:center}
-.mh-season-text{margin:0;font-size:.95rem;line-height:1.45;color:#fff}
-.mh-season-title{font-weight:700;letter-spacing:.01em;background:linear-gradient(90deg,#ffb76b 0%,#fff 50%,#7ee29a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.mh-season-msg{color:rgba(255,255,255,.9)}
-.mh-season-sig{color:rgba(255,255,255,.62);font-size:.82rem;white-space:nowrap}
-.mh-season-flag{font-size:1.35rem;line-height:1;animation:mhSeasonWave 2.6s ease-in-out infinite}
+.mh-season-text{margin:0;font-size:.95rem;line-height:1.5;color:#fff}
+.mh-season-title{font-weight:700;letter-spacing:.01em;background:linear-gradient(90deg,var(--sa) 0%,var(--sb) 50%,var(--sc) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mh-season-native{font-weight:600;color:#fff;unicode-bidi:isolate}
+.mh-season-sep{margin:0 .45rem;opacity:.5}
+.mh-season-msg{color:rgba(255,255,255,.88)}
+.mh-season-sig{color:rgba(255,255,255,.6);font-size:.82rem;white-space:nowrap}
+.mh-season-icon{flex:none;font-size:1.35rem;line-height:1;animation:mhSeasonWave 2.6s ease-in-out infinite}
 .mh-season-chakra{display:inline-flex;flex:none;background:#fff;border-radius:50%;padding:3px;color:#06038d;box-shadow:0 0 0 3px rgba(255,255,255,.12)}
 .mh-season-chakra svg{display:block;animation:mhSeasonSpin 12s linear infinite}
 .mh-season-shine{position:absolute;inset:0;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.09) 50%,transparent 65%);transform:translateX(-100%);animation:mhSeasonShine 5s ease-in-out infinite;pointer-events:none}
@@ -303,6 +323,9 @@ iframe[style*="border-radius:12px"]{border-radius:var(--mh-r)!important;box-shad
   .mh-season-inner{padding:11px 50px 11px 14px;gap:10px}
   .mh-season-text{font-size:.85rem}
   .mh-season-sig,.mh-season-chakra{display:none}
+  .mh-season.has-native .mh-season-msg{display:none}
+  .mh-season-native{display:block}
+  .mh-season-sep{display:none}
 }
 
 /* 404 */
