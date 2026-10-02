@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
 <link rel="stylesheet" href="/assets/style.min.css"/>
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -69,6 +69,7 @@
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Mother Hospitals IVF &amp; Fertility — Patient Education Videos","description":"Dr. E. Prashanthi Reddy explains IVF, ICSI, PCOS treatment, needleless IVF, male infertility, low AMH management, and fertility care at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad.","thumbnailUrl":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg","uploadDate":"2026-01-01","duration":"PT5M","publisher":{"@type":"Organization","name":"Mother Hospitals &amp; IVF Center","logo":{"@type":"ImageObject","url":"https://motherhospitals.co.in/assets/logo.webp"}},"contentUrl":"https://www.youtube.com/@motherhospitalsivfcenter","embedUrl":"https://www.youtube.com/@motherhospitalsivfcenter"}</script>
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 <style>a{color:var(--sage);text-decoration:none}
@@ -87,10 +88,10 @@ a:hover{text-decoration:underline}
 .h-stat span{font-size:0.73rem;opacity:0.85}
 .hero-ctas{display:flex;gap:0.8rem;flex-wrap:wrap}
 .empathy-bar{background:#f0fff8;border:2px solid var(--sage-mid);border-radius:var(--radius);padding:1.3rem 1.8rem;margin:2rem 0;display:flex;gap:1rem;align-items:flex-start;max-width:900px}
-.empathy-bar.ei{font-size:1.8rem;flex-shrink:0}
+.empathy-bar .ei{font-size:1.8rem;flex-shrink:0}
 .empathy-bar p{color:#1b3d2f;font-size:0.96rem;margin:0;line-height:1.75}
 .quick-answer{background:var(--sage-light);border-left:5px solid var(--sage);border-radius:0 var(--radius) var(--radius) 0;padding:1.4rem 1.8rem;margin:2rem 0;max-width:820px}
-.quick-answer.qa-label{font-size:0.75rem;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem}
+.quick-answer .qa-label{font-size:0.75rem;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem}
 .quick-answer p{color:var(--text);font-size:0.97rem;line-height:1.8}
 .wrapper{max-width:1100px;margin:0 auto;padding:2.5rem 5%}
 .two-col{display:grid;grid-template-columns:1fr 310px;gap:2.5rem}
@@ -98,12 +99,12 @@ a:hover{text-decoration:underline}
 h2{font-size:1.45rem;color:var(--navy);margin-bottom:0.4rem;font-weight:800}
 h3{font-size:1rem;color:var(--sage);margin:1.2rem 0 0.4rem;font-weight:700}
 p{color:var(--text-mid);margin-bottom:0.8rem}
-.missed-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+.missed-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(270px,100%),1fr));gap:1rem}
 .missed-card{background:#fff;border:1px solid #c8e6d8;border-radius:var(--radius);padding:1.3rem;border-top:4px solid var(--sage-mid)}
-.missed-card.m-icon{font-size:1.5rem;margin-bottom:0.5rem}
+.missed-card .m-icon{font-size:1.5rem;margin-bottom:0.5rem}
 .missed-card h3{margin:0 0 0.4rem;font-size:0.93rem;color:var(--navy)}
 .missed-card p{font-size:0.84rem;margin:0 0 0.6rem}
-.missed-card.test-tag{display:inline-flex;align-items:center;gap:0.3rem;background:var(--sage-light);color:var(--sage);font-size:0.78rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:50px}
+.missed-card .test-tag{display:inline-flex;align-items:center;gap:0.3rem;background:var(--sage-light);color:var(--sage);font-size:0.78rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:50px}
 .ladder{display:grid;gap:0;counter-reset:ladder}
 .rung{display:grid;grid-template-columns:56px 1fr;gap:0;position:relative;counter-increment:ladder}
 .rung::before{content:'';position:absolute;left:27px;top:56px;bottom:0;width:2px;background:#c8e6d8;z-index:0}
@@ -127,10 +128,10 @@ p{color:var(--text-mid);margin-bottom:0.8rem}
 .info-box p{font-size:0.88rem;margin:0;color:var(--text-mid)}
 .warn-box{background:#fff8e8;border:1px solid #f0c040;border-radius:var(--radius);padding:1.2rem 1.4rem;margin:1.2rem 0}
 .warn-box p{font-size:0.88rem;margin:0;color:#6b4a00}
-.age-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem}
+.age-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(190px,100%),1fr));gap:1rem}
 .age-card{background:#fff;border:1px solid #c8e6d8;border-radius:var(--radius);padding:1.1rem;text-align:center}
-.age-card.age-label{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:0.3rem}
-.age-card.age-action{font-size:0.78rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:50px;display:inline-block;margin-bottom:0.5rem}
+.age-card .age-label{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:0.3rem}
+.age-card .age-action{font-size:0.78rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:50px;display:inline-block;margin-bottom:0.5rem}
 .action-green{background:#d4edda;color:#155724}
 .action-amber{background:#fff3cd;color:#856404}
 .action-red{background:#f8d7da;color:#721c24}
@@ -143,7 +144,7 @@ p{color:var(--text-mid);margin-bottom:0.8rem}
 .info-list{list-style:none}
 .info-list li{padding:0.4rem 0;font-size:0.85rem;color:var(--text-mid);border-bottom:1px solid #c8e6d8;display:flex;gap:0.5rem;align-items:flex-start}
 .info-list li:last-child{border-bottom:none}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.2rem}
 .review-card{background:#fff;border:1px solid #c8e6d8;border-radius:var(--radius);padding:1.4rem;border-left:4px solid var(--sage-mid)}
 .stars{color:#f59e0b;font-size:0.95rem;margin-bottom:0.5rem}
 .review-card p{font-size:0.88rem;color:var(--text-mid);font-style:italic;margin-bottom:0.7rem}
@@ -159,7 +160,7 @@ details[open] summary::after{content:'−'}
 details p{padding:0 1.2rem 1rem;font-size:0.89rem;color:var(--text-mid);line-height:1.75}
 .cta-section{background:linear-gradient(135deg,var(--navy),#1b3d2f);color:#fff;border-radius:20px;padding:2.5rem;text-align:center;margin:2rem 0}
 .cta-section h2{color:#fff;margin-bottom:0.4rem}
-.cta-section.cta-sub{color:rgba(255,255,255,0.8);margin-bottom:1.5rem}
+.cta-section .cta-sub{color:rgba(255,255,255,0.8);margin-bottom:1.5rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .cta-btns a{padding:0.85rem 2rem;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none}
 .cta-btns .ca{background:#95d5b2;color:var(--navy);display:inline-block}
@@ -169,8 +170,8 @@ details p{padding:0 1.2rem 1rem;font-size:0.89rem;color:var(--text-mid);line-hei
 .related-link span{display:block;font-size:0.78rem;color:var(--text-mid);font-weight:400;margin-top:0.2rem}
 @media(max-width:768px){.sticky-mob{display:grid;grid-template-columns:1fr 1fr}}
 .sticky-mob a{padding:0.9rem;text-align:center;font-weight:700;font-size:0.9rem;text-decoration:none}
-.sticky-mob.wa{background:#25d366;color:#fff}
-.sticky-mob.call{background:var(--navy);color:#fff}
+.sticky-mob .wa{background:#25d366;color:#fff}
+.sticky-mob .call{background:var(--navy);color:#fff}
 footer a{color:rgba(255,255,255,0.8)}
 .mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}
 /* Hero dark-bg overrides: make stats + buttons visible on dark gradient */
@@ -209,7 +210,7 @@ footer a{color:rgba(255,255,255,0.8)}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -514,7 +515,7 @@ footer a{color:rgba(255,255,255,0.8)}
  </aside>
  </div>
 
- <div class="cta-section">
+ <div class="cta-section is-dark">
  <h2>Stop Waiting for an Answer That Won't Come from Standard Tests</h2>
  <p class="cta-sub">Book an extended fertility evaluation — Dr. E. Prashanthi Reddy looks beyond the standard workup to find what's actually holding you back.</p>
  <div class="cta-btns">
@@ -600,7 +601,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>
@@ -690,6 +691,16 @@ function submitLeadCapture(){
  </div>
 </footer>
 <!-- FOOTER_END -->
+<!-- MOB_START -->
+<div class="mob-cta-bar"><div class="mob-cta-bar-inner">
+  <a href="tel:+919705993366" class="mob-cta-btn mob-cta-call"><span class="mob-icon">📞</span>Call</a>
+  <a href="https://wa.me/919052074999" class="mob-cta-btn mob-cta-wa" target="_blank" rel="noopener noreferrer"><span class="mob-icon">💬</span>WhatsApp</a>
+  <a href="/contact-us.html" class="mob-cta-btn mob-cta-book"><span class="mob-icon">📅</span>Book Visit</a>
+</div></div>
+<!-- MOB_END -->
+<!-- WA_START -->
+<a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
+<!-- WA_END -->
 <div class="sticky-mob">
  <a href="https://wa.me/919052074999?text=Hello%20Doctor%2C%20all%20our%20tests%20are%20normal%20but%20we%20are%20not%20conceiving." target="_blank" rel="noopener noreferrer" class="wa">💬 WhatsApp</a>
  <a href="tel:+919705993366" class="call">📞 97059 93366</a>

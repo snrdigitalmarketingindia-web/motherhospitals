@@ -87,7 +87,7 @@
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXTvZI.woff2" type="font/woff2" crossorigin/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <!-- FIX: Non-blocking Google Fonts load (print trick eliminates render-blocking) -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
 <noscript></noscript>
 <link rel="preload" as="style" href="/assets/style.min.css"/>
 <link rel="stylesheet" href="/assets/style.min.css" media="print" onload="this.media='all'"/>
@@ -229,56 +229,10 @@ img{max-width:100%;display:block}
   .btn-mobile-only{display:none!important}
 }
 </style>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body itemscope itemtype="https://schema.org/MedicalOrganization">
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--purple);color:#fff;font-weight:600;border-radius:0 0 4px 4px;text-decoration:none" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
-<style>
-#id-banner{position:fixed;top:0;left:0;right:0;z-index:99999;animation:idSlideIn .6s cubic-bezier(.22,1,.36,1) both;box-shadow:0 4px 24px rgba(0,0,0,0.3)}
-#id-banner .id-bar{display:flex;height:5px}
-#id-banner .id-bar span:nth-child(1){flex:1;background:#FF9933}
-#id-banner .id-bar span:nth-child(2){flex:1;background:#ffffff}
-#id-banner .id-bar span:nth-child(3){flex:1;background:#138808}
-#id-banner .id-body{background:linear-gradient(135deg,#0d0d2b 0%,#1a0040 50%,#0d1a00 100%);position:relative;overflow:hidden;padding:13px 52px 13px 16px;display:flex;align-items:center;justify-content:center;gap:12px}
-#id-banner .id-shimmer{position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);animation:idShimmer 3s ease-in-out infinite;pointer-events:none}
-#id-banner .id-flag{font-size:1.5rem;animation:idPulse 2s ease-in-out infinite;line-height:1}
-#id-banner .id-chakra{font-size:1.1rem;animation:idSpin 5s linear infinite;display:inline-block;line-height:1}
-#id-banner .id-text{color:#fff;font-weight:700;font-size:.97rem;letter-spacing:.02em;text-shadow:0 1px 6px rgba(0,0,0,.5);text-align:center}
-#id-banner .id-text em{font-style:normal;background:linear-gradient(90deg,#FF9933 0%,#fff 50%,#4caf50 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-#id-banner .id-sub{color:rgba(255,255,255,.6);font-size:.78rem;font-weight:400;margin-left:6px}
-#id-banner .id-close{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:1rem;width:26px;height:26px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;line-height:1;padding:0}
-#id-banner .id-close:hover{background:rgba(255,255,255,.28)}
-#id-banner .id-bar2{display:flex;height:3px}
-#id-banner .id-bar2 span:nth-child(1){flex:1;background:#FF9933;opacity:.6}
-#id-banner .id-bar2 span:nth-child(2){flex:1;background:#fff;opacity:.6}
-#id-banner .id-bar2 span:nth-child(3){flex:1;background:#138808;opacity:.6}
-@keyframes idSlideIn{from{transform:translateY(-110%);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes idShimmer{0%{left:-100%}60%,100%{left:150%}}
-@keyframes idPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
-@keyframes idSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@media(max-width:580px){#id-banner .id-text{font-size:.82rem}#id-banner .id-flag{font-size:1.2rem}#id-banner .id-sub{display:none}#id-banner .id-chakra{display:none}}
-</style>
-<div id="id-banner" role="banner" aria-label="Independence Day Wishes">
-  <div class="id-bar"><span></span><span></span><span></span></div>
-  <div class="id-body">
-    <div class="id-shimmer"></div>
-    <span class="id-flag">🇮🇳</span>
-    <span class="id-text">
-      <em>Happy Independence Day!</em>&nbsp;Every life born free is India's greatest strength.<span class="id-sub">— Mother Hospitals &amp; IVF Centre</span>
-    </span>
-    <span class="id-chakra">☸️</span>
-    <span class="id-flag">🇮🇳</span>
-    <button class="id-close" onclick="var b=document.getElementById('id-banner');b.style.display='none';document.body.style.paddingTop=''" aria-label="Close">×</button>
-  </div>
-  <div class="id-bar2"><span></span><span></span><span></span></div>
-</div>
-<script>
-(function(){
-  var b=document.getElementById('id-banner');
-  function setPad(){if(b&&b.style.display!=='none')document.body.style.paddingTop=b.offsetHeight+'px';}
-  setPad();window.addEventListener('resize',setPad);
-})();
-</script>
-
 <!-- NAV_START -->
 <div class="top-bar">
  <span>📍 Unit Nos. 201–204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092</span>
@@ -309,7 +263,7 @@ img{max-width:100%;display:block}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -387,7 +341,7 @@ img{max-width:100%;display:block}
 
 <!-- SAFETY DIFFERENTIATOR — Hegde-style trust block -->
 <div style="background:#fff;padding:28px 5%;border-bottom:1px solid #f0e6f6">
-  <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center">
+  <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px;text-align:center">
     <div style="padding:16px;border-radius:12px;background:var(--purple-pale)">
       <div style="font-size:1.6rem">🔬</div>
       <div style="font-weight:700;color:var(--purple);margin:6px 0 4px">Your Embryos, Your Journey</div>
@@ -894,7 +848,7 @@ img{max-width:100%;display:block}
  <p class="section-label">Our Specialities</p>
  <h2 class="section-title" data-speakable="true">Expert Care Across <em>Every Department</em></h2>
  </div>
- <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem">
  <a href="/ivf-treatment-hyderabad.html" style="background:var(--white);border-radius:16px;padding:1.4rem;border:1px solid var(--purple-light);text-decoration:none;text-align:center;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
  <div style="font-size:2rem;margin-bottom:0.5rem">🔬</div>
  <div style="font-weight:700;color:var(--purple);font-size:0.95rem">IVF & Fertility</div>
@@ -937,7 +891,7 @@ img{max-width:100%;display:block}
  <h2 class="section-title" data-speakable="true">Free Fertility <em>Tools & Calculators</em></h2>
  <p class="section-sub">15 evidence-based fertility tools built for Indian women — instant results, completely private</p>
  </div>
- <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;margin-top:2rem">
+ <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));gap:1.2rem;margin-top:2rem">
  <a href="/period-tracker.html" style="background:#fff0f7;border:2px solid #f0b8d8;border-radius:18px;padding:1.3rem 1.4rem;text-decoration:none;display:flex;align-items:flex-start;gap:0.9rem;transition:all 0.2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(192,22,109,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
  <span style="font-size:1.7rem;flex-shrink:0">📅</span>
  <div><div style="font-size:0.9rem;font-weight:800;color:#1a2b3c;margin-bottom:0.2rem">Period Tracker</div><div style="font-size:0.78rem;color:#4a4a6a">Predict next period & fertile days</div></div>
@@ -985,7 +939,7 @@ img{max-width:100%;display:block}
  <h2 class="section-title" data-speakable="true">Latest from Our <em>Fertility Blog</em></h2>
  <p class="section-sub">Evidence-based fertility insights — authored by Dr. E. Prashanthi Reddy</p>
  </div>
- <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;margin-bottom:2.5rem">
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:1.4rem;margin-bottom:2.5rem">
 
  <a href="/blog/pcos-renamed-pmos-what-it-means.html" style="background:var(--white);border-radius:20px;padding:1.6rem;border:1px solid var(--purple-light);text-decoration:none;display:flex;flex-direction:column;gap:0.6rem;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(90,31,122,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
  <span style="font-size:0.69rem;background:var(--magenta-light);color:var(--magenta);padding:0.18rem 0.7rem;border-radius:50px;width:fit-content;font-weight:600">PCOS / PMOS</span>
@@ -1149,7 +1103,7 @@ img{max-width:100%;display:block}
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

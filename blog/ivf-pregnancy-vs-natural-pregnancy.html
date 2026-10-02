@@ -4,7 +4,7 @@
  <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>IVF vs Natural Pregnancy: Key Differences | Mother Hospitals</title>
  <meta name="description" content="Is an IVF pregnancy different from a natural pregnancy? Understand the medical differences — monitoring, risks, milestones, and what stays exactly the same.">
@@ -127,14 +127,14 @@ header{background:#fff;padding:1rem 2rem;display:flex;align-items:center;justify
 .badge-diff{background:#fce4ec;color:var(--magenta);padding:0.1rem 0.5rem;border-radius:10px;font-size:0.75rem;font-weight:600}
 .highlight-box h4{color:#3949ab;margin:0 0 0.6rem;font-size:1rem}
 .myth-card{background:#fff;border-radius:10px;border:1px solid #f0e6f0;padding:1.2rem;margin:1rem 0;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
-.myth-card.myth{color:var(--magenta);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.3rem}
-.myth-card.fact{color:#333;line-height:1.6}
-.myth-card.fact strong{color:#2e7d32}
-.timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.myth-card .myth{color:var(--magenta);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.3rem}
+.myth-card .fact{color:#333;line-height:1.6}
+.myth-card .fact strong{color:#2e7d32}
+.timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem;margin:1.5rem 0}
 .timeline-card{background:#fff5f9;border-radius:10px;padding:1.1rem;border-left:3px solid var(--magenta);text-align:left}
-.timeline-card.tc-week{font-size:0.8rem;color:var(--magenta);font-weight:700;margin-bottom:0.3rem}
-.timeline-card.tc-title{font-size:0.95rem;font-weight:700;color:#1a1a2e;margin-bottom:0.3rem}
-.timeline-card.tc-note{font-size:0.82rem;color:#555;line-height:1.5}
+.timeline-card .tc-week{font-size:0.8rem;color:var(--magenta);font-weight:700;margin-bottom:0.3rem}
+.timeline-card .tc-title{font-size:0.95rem;font-weight:700;color:#1a1a2e;margin-bottom:0.3rem}
+.timeline-card .tc-note{font-size:0.82rem;color:#555;line-height:1.5}
 .risk-box{background:#fffde7;border:1px solid #f9a825;border-radius:10px;padding:1.2rem 1.5rem;margin:1.5rem 0}
 .risk-box h4{color:#e65100;margin:0 0 0.6rem}
 .cta-strip{background:linear-gradient(135deg,var(--magenta),var(--magenta));color:#fff;border-radius:12px;padding:2rem;margin:2rem 0;text-align:center}
@@ -146,7 +146,7 @@ header{background:#fff;padding:1rem 2rem;display:flex;align-items:center;justify
 .faq-a{padding:1rem 1.2rem;color:#444;line-height:1.7;font-size:0.9rem;background:#fff}
 .related-section{max-width:900px;margin:2rem auto;padding:0 2rem}
 .related-section h2{font-size:1.3rem;font-weight:700;color:#1a1a2e;margin-bottom:1rem}
-.related-card.rc-label{font-size:0.72rem;color:var(--magenta);font-weight:600;text-transform:uppercase;margin-bottom:0.3rem}
+.related-card .rc-label{font-size:0.72rem;color:var(--magenta);font-weight:600;text-transform:uppercase;margin-bottom:0.3rem}
 .related-card h4{font-size:0.9rem;font-weight:700;color:#1a1a2e;margin:0 0 0.3rem}
 .related-card p{font-size:0.8rem;color:#666;margin:0;line-height:1.4}
 .dr-strip{background:#fdf5f9;border-top:1px solid #f0e6f0;padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem;max-width:900px;margin:1.5rem auto;border-radius:10px}
@@ -171,6 +171,7 @@ window.addEventListener("load", function(){
  })(window, document, "clarity", "script", "wqa31zckot");
 });
 </script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -204,7 +205,7 @@ window.addEventListener("load", function(){
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -574,7 +575,7 @@ function submitBLC_ivf_pregnancy_vs_natur(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

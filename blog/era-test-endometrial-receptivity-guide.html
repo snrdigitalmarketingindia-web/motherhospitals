@@ -34,13 +34,13 @@
 <script>window.dataLayer=window.dataLayer|[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-RBR9NWNXGN');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" media="print" onload="this.media='all'"/><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'"/><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/></noscript>
 <style>.article-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 60%,#fde8f3 100%);padding:50px 5% 40px}
 .article-hero-inner{max-width:800px;margin:0 auto}
 .breadcrumb{font-size:0.8rem;color:var(--text-soft);margin-bottom:1rem}
 .breadcrumb a{color:var(--purple);text-decoration:none}
 .article-meta{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:0.82rem;color:var(--text-soft);margin-bottom:1rem}
-.article-body ul.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid);font-size:0.96rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid);font-size:0.96rem}
 .cta-box-btns{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
 .faq-item{margin-bottom:1.2rem;border-bottom:1px solid var(--purple-light);padding-bottom:1rem}
 .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
@@ -61,7 +61,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 .mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}</style>
 <script type="text/javascript">
  (function(c,l,a,r,i,t,y){
- c[a]=c[a]|function{(c[a].q=c[a].q|[]).push(arguments)};
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
  })(window, document, "clarity", "script", "wqa31zckot");
@@ -75,6 +75,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Mother Hospitals IVF & Fertility — Patient Education Videos","description":"Dr. E. Prashanthi Reddy explains IVF, ICSI, PCOS/PMOS treatment, needleless IVF, male infertility, low AMH management, and fertility care at Mother Hospitals & IVF Center, Boduppal, Hyderabad.","thumbnailUrl":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg","uploadDate":"2026-01-01","duration":"PT5M","publisher":{"@type":"Organization","name":"Mother Hospitals & IVF Center","logo":{"@type":"ImageObject","url":"https://motherhospitals.co.in/assets/logo.webp"}},"contentUrl":"https://www.youtube.com/@motherhospitalsivfcenter","embedUrl":"https://www.youtube.com/@motherhospitalsivfcenter"}</script>
 <style>.blog-layout{padding:2rem 2rem !important}.blog-hero-inner{max-width:900px;margin:0 auto;padding:0 2rem}@media(min-width:768px){.blog-layout{padding:2rem 3rem !important}}</style>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head><body><!-- NAV_START -->
 <div class="top-bar">
  <span>📍 Unit Nos. 201–204, Block A, Aakruthi Township, Boduppal, Hyderabad – 500092</span>
@@ -105,7 +106,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -258,7 +259,7 @@ function submitBLC_era_test_endometrial_r(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

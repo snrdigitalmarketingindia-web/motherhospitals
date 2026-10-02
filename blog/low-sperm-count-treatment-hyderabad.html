@@ -4,7 +4,7 @@
  <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Low Sperm Count Treatment Hyderabad | Mother Hospitals</title>
  <meta name="description" content="Low sperm count (oligospermia) explained: WHO thresholds, causes, semen analysis, and when IUI, ICSI or TESA is the right treatment. Expert guide for Hyderabad patients.">
@@ -146,13 +146,13 @@ header{background:#fff;padding:1rem 2rem;display:flex;align-items:center;justify
 .who-table th{background:var(--magenta);color:#fff;padding:0.6rem 0.9rem;text-align:left}
 .who-table td{padding:0.6rem 0.9rem;border-bottom:1px solid #f0e6f0}
 .who-table tr:nth-child(even){background:#fdf5f9}
-.who-table.warn{color:var(--magenta);font-weight:600}
-.pathway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1.5rem 0}
+.who-table .warn{color:var(--magenta);font-weight:600}
+.pathway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:1rem;margin:1.5rem 0}
 .pathway-card{background:#fff5f9;border-radius:10px;padding:1.1rem;border-top:3px solid var(--magenta);text-align:center}
-.pathway-card.pc-num{font-size:1.4rem;font-weight:800;color:var(--magenta)}
-.pathway-card.pc-title{font-size:0.9rem;font-weight:700;color:#1a1a2e;margin:0.3rem 0}
-.pathway-card.pc-crit{font-size:0.78rem;color:#666;line-height:1.4}
-.cause-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.5rem 0}
+.pathway-card .pc-num{font-size:1.4rem;font-weight:800;color:var(--magenta)}
+.pathway-card .pc-title{font-size:0.9rem;font-weight:700;color:#1a1a2e;margin:0.3rem 0}
+.pathway-card .pc-crit{font-size:0.78rem;color:#666;line-height:1.4}
+.cause-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:1rem;margin:1.5rem 0}
 .cause-card{background:#fff;border:1px solid #f0e6f0;border-radius:10px;padding:1.1rem}
 .cause-card h4{font-size:0.95rem;font-weight:700;color:var(--magenta);margin:0 0 0.4rem}
 .cause-card p{font-size:0.82rem;color:#555;margin:0;line-height:1.5}
@@ -171,7 +171,7 @@ header{background:#fff;padding:1rem 2rem;display:flex;align-items:center;justify
 .faq-a{padding:1rem 1.2rem;color:#444;line-height:1.7;font-size:0.9rem}
 .related-section{max-width:900px;margin:2rem auto;padding:0 2rem}
 .related-section h2{font-size:1.3rem;font-weight:700;color:#1a1a2e;margin-bottom:1rem}
-.related-card.rc-label{font-size:0.72rem;color:var(--magenta);font-weight:600;text-transform:uppercase;margin-bottom:0.3rem}
+.related-card .rc-label{font-size:0.72rem;color:var(--magenta);font-weight:600;text-transform:uppercase;margin-bottom:0.3rem}
 .related-card h4{font-size:0.9rem;font-weight:700;color:#1a1a2e;margin:0 0 0.3rem}
 .related-card p{font-size:0.8rem;color:#666;margin:0;line-height:1.4}
 .dr-strip{background:#fdf5f9;border-top:1px solid #f0e6f0;padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem;max-width:900px;margin:1.5rem auto;border-radius:10px}
@@ -195,6 +195,7 @@ window.addEventListener("load", function(){
  })(window, document, "clarity", "script", "wqa31zckot");
 });
 </script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -228,7 +229,7 @@ window.addEventListener("load", function(){
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -564,7 +565,7 @@ function submitBLC_low_sperm_count_treatm(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

@@ -31,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <style>.mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
 .page-hero{background:linear-gradient(150deg,#f5edfb 0%,var(--cream) 55%,#fde8f3 100%);padding:60px 5% 50px}
 .page-hero-inner{max-width:1240px;margin:0 auto}
@@ -58,19 +58,19 @@ details[open].faq-item summary::after{content:"−"}
 .check-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;color:var(--text-mid)}
 .check-item::before{content:'✓';color:var(--magenta);font-weight:700;flex-shrink:0;margin-top:2px}
 .price-card.amount{font-family:var(--font-d);font-size:3rem;font-weight:700;display:block;line-height:1}
-.price-card.label{font-size:0.82rem;opacity:0.8;margin-bottom:1rem;display:block}
-.price-card.includes{font-size:0.85rem;opacity:0.9;line-height:1.8}
+.price-card .label{font-size:0.82rem;opacity:0.8;margin-bottom:1rem;display:block}
+.price-card .includes{font-size:0.85rem;opacity:0.9;line-height:1.8}
 .dr-strip{background:var(--white);border-radius:16px;padding:1.5rem;border:1px solid var(--purple-light);display:flex;align-items:center;gap:1.5rem;margin:2rem 0}
 .dr-strip img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--purple-light)}
 .dr-strip h3{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
 .dr-strip p{font-size:0.82rem;color:var(--text-soft)}
-.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.5rem}
+.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem;margin-top:1.5rem}
 .rel-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem 1.2rem;text-decoration:none;color:var(--text-mid);font-size:0.85rem;display:block;transition:border-color 0.2s}
 .rel-card:hover{border-color:var(--magenta);color:var(--magenta)}
 .rel-card strong{display:block;font-family:var(--font-d);font-size:1rem;color:var(--text);margin-bottom:0.2rem}
 .footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
 .footer-inner h4{font-family:var(--font-d);font-size:1rem;color:#fff;margin-bottom:1rem}
-.footer-inner p.footer-inner li{font-size:0.82rem;line-height:1.9}
+.footer-inner p,.footer-inner li{font-size:0.82rem;line-height:1.9}
 .footer-inner ul{list-style:none}
 .footer-inner a{color:rgba(255,255,255,0.75);text-decoration:none}
 @media(max-width:768px){.content-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.page-hero{padding:40px 5% 36px}}
@@ -95,7 +95,7 @@ details[open].faq-item summary::after{content:"−"}
     {
       "@type": "HowToStep",
       "position": 1,
-      "name": "Book a Free Cost Consultation",
+      "name": "Book a Cost Consultation",
       "text": "Call or WhatsApp Mother Hospitals to schedule a no-obligation cost counselling session with our fertility coordinator."
     },
     {
@@ -131,6 +131,7 @@ details[open].faq-item summary::after{content:"−"}
   ]
 }
 </script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 <!-- NAV_START -->
@@ -163,7 +164,7 @@ details[open].faq-item summary::after{content:"−"}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -347,7 +348,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

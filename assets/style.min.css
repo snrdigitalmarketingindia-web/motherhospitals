@@ -202,7 +202,7 @@ section{padding:52px 5%}
 
 /* TEAM */
 .team-title{font-family:var(--font-d);font-size:1.75rem;font-weight:600;color:var(--text);margin-bottom:1.8rem;padding-top:2rem;border-top:1px solid var(--purple-light)}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:1.4rem}
 .team-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid var(--purple-light);transition:transform 0.3s,box-shadow 0.3s}
 .team-card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(90,31,122,0.12)}
 .team-photo{width:100%;height:280px;background:linear-gradient(135deg,var(--purple-light),var(--magenta-light));overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -216,7 +216,7 @@ section{padding:52px 5%}
 
 /* AWARDS */
 #awards{background:var(--white)}
-.awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1.5rem}
 .award-card{background:var(--purple-pale);border-radius:20px;overflow:hidden;border:1px solid var(--purple-light);transition:transform 0.3s}
 .award-card:hover{transform:translateY(-3px)}
 .award-img{width:100%;height:200px;object-fit:cover}
@@ -245,7 +245,7 @@ section{padding:52px 5%}
 .rating-big .num{font-family:var(--font-d);font-size:3.4rem;font-weight:700;color:var(--purple);line-height:1}
 .rating-big .stars{color:var(--gold);font-size:1.1rem;letter-spacing:2px}
 .rating-big .ct{font-size:0.76rem;color:var(--text-soft);margin-top:2px}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.4rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(275px,100%),1fr));gap:1.4rem}
 .rv-card{background:var(--purple-pale);border-radius:20px;padding:1.7rem;border:1px solid var(--purple-light);position:relative}
 .rv-card::before{content:'\201C';font-family:var(--font-d);font-size:4.5rem;color:var(--purple-light);position:absolute;top:-6px;left:1.1rem;line-height:1}
 .rv-text{font-size:0.86rem;color:var(--text-mid);line-height:1.75;margin-bottom:1.1rem;padding-top:1.4rem;position:relative;z-index:1}
@@ -477,7 +477,7 @@ footer{background:var(--purple);color:rgba(255,255,255,0.7);padding:2.8rem 5% 1.
 .faq-a a{color:var(--purple)}
 
 /* Related articles grid */
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.9rem;margin:1.5rem 0}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:0.9rem;margin:1.5rem 0}
 .related-card{background:#fff;border:1px solid var(--purple-light);border-radius:12px;padding:1rem 1.1rem;text-decoration:none;color:var(--text);display:block;transition:all 0.2s;font-size:0.85rem;line-height:1.5}
 .related-card strong{display:block;color:var(--purple);font-size:0.88rem;margin-bottom:0.25rem}
 .related-card:hover{border-color:var(--purple);box-shadow:0 4px 16px rgba(90,31,122,0.1);transform:translateY(-2px)}

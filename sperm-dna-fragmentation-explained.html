@@ -31,7 +31,7 @@
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalTest","name":"Sperm DNA Fragmentation Index (DFI) Test","alternateName":["DFI Test","SCSA","Comet Assay","TUNEL Assay"],"description":"The Sperm DNA Fragmentation Index (DFI) test measures the percentage of sperm with damaged DNA. It is recommended for men with unexplained infertility, recurrent IVF failure, or recurrent miscarriage. Normal DFI is below 15%. Results guide ICSI protocol selection, antioxidant therapy, and TESA decisions.","usedToDiagnose":{"@type":"MedicalCondition","name":"High Sperm DNA Fragmentation"},"relevantSpecialty":{"@type":"MedicalSpecialty","name":"ReproductiveMedicine"},"medicineSystem":"WesternConventional"}
@@ -68,15 +68,15 @@ h3{font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:var(--purpl
 .dfi-zone-label{font-family:var(--font-d);font-size:1.3rem;font-weight:700}
 .dfi-zone-num{font-size:0.78rem;color:var(--text-mid);margin-top:0.2rem}
 .dfi-zone-desc{font-size:0.76rem;color:var(--text-soft);margin-top:0.3rem}
-.dfi-good.dfi-zone-label{color:#2e7d32}
-.dfi-mod.dfi-zone-label{color:#e65100}
-.dfi-high.dfi-zone-label{color:#c62828}
-.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin:1.5rem 0}
+.dfi-good .dfi-zone-label{color:#2e7d32}
+.dfi-mod .dfi-zone-label{color:#e65100}
+.dfi-high .dfi-zone-label{color:#c62828}
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:1.2rem;margin:1.5rem 0}
 .impact-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:14px;padding:1.3rem}
 .impact-icon{font-size:1.6rem;margin-bottom:0.4rem}
 .impact-title{font-weight:700;color:var(--purple);font-size:0.92rem;margin-bottom:0.3rem}
 .impact-body{font-size:0.82rem;color:var(--text-mid);line-height:1.65}
-.treatment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;margin:1.5rem 0}
+.treatment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:1.5rem;margin:1.5rem 0}
 .treatment-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:16px;padding:1.6rem;transition:border-color 0.2s}
 .treatment-card:hover{border-color:var(--purple)}
 .treatment-tag{display:inline-block;background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:50px;padding:0.15rem 0.65rem;font-size:0.72rem;font-weight:600;color:var(--purple);margin-bottom:0.6rem}
@@ -144,6 +144,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 .page-hero .btn-secondary:hover{background:rgba(255,255,255,0.22)}
 .page-hero .stag{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2)}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Mother Hospitals IVF & Fertility — Patient Education Videos","description":"Dr. E. Prashanthi Reddy explains IVF, ICSI, PCOS treatment, needleless IVF, male infertility, low AMH management, and fertility care at Mother Hospitals & IVF Center, Boduppal, Hyderabad.","thumbnailUrl":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg","uploadDate":"2026-01-01","duration":"PT5M","publisher":{"@type":"Organization","name":"Mother Hospitals & IVF Center","logo":{"@type":"ImageObject","url":"https://motherhospitals.co.in/assets/logo.webp"}},"contentUrl":"https://www.youtube.com/@motherhospitalsivfcenter","embedUrl":"https://www.youtube.com/@motherhospitalsivfcenter"}</script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -182,7 +183,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -489,7 +490,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

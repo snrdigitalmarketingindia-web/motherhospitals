@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://motherhospitals.co.in"},{"@type":"ListItem","position":2,"name":"Maternity Care","item":"https://motherhospitals.co.in/maternity-care-hyderabad.html"},{"@type":"ListItem","position":3,"name":"Preconception Counselling Hyderabad","item":"https://motherhospitals.co.in/preconception-counselling-hyderabad.html"}]},{"@context":"https://schema.org","@type":"MedicalOrganization","name":"Mother Hospitals &amp; IVF Center","url":"https://motherhospitals.co.in","telephone":"+919705993366","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"},"aggregateRating":{"@type":"AggregateRating","ratingValue":4.7,"reviewCount":71,"bestRating":5,"worstRating":1},"sameAs":["https://www.facebook.com/motherhospitals/","https://www.instagram.com/motherhospitalsivf/","https://www.youtube.com/@motherhospitalsivfcenter","https://www.google.com/search?kgmid=/g/11tjs8_n6q"],"email":"motherhospitals.ivfcenter@gmail.com","geo":{"@type":"GeoCoordinates","latitude":"17.4126","longitude":"78.5716"}},{"@context":"https://schema.org","@type":"WebPage","name":"Preconception Counselling Hyderabad | Pre-Pregnancy | Mother Hospitals","url":"https://motherhospitals.co.in/preconception-counselling-hyderabad.html","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-sub",".direct-answer",".section-title"]},"isPartOf":{"@type":"WebSite","name":"Mother Hospitals &amp; IVF Center","url":"https://motherhospitals.co.in"}}]</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Physician","name":"Dr. E. Prashanthi Reddy","honorificSuffix":"MBBS, DGO, PG Diploma in ART","identifier":{"@type":"PropertyValue","name":"TGMC Registration","value":"50624"},"jobTitle":"Obstetrician, Gynaecologist &amp; IVF Specialist","medicalSpecialty":["Obstetrics","Gynecology","ReproductiveMedicine"],"worksFor":{"@type":"MedicalOrganization","name":"Mother Hospitals &amp; IVF Center","url":"https://motherhospitals.co.in"},"url":"https://motherhospitals.co.in/dr-prashanthi-reddy.html"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Preconception Counselling","alternateName":["Pre-Pregnancy Counselling","Preconception Care","Pre-Conception Consultation"],"description":"Preconception counselling is a specialist consultation for couples planning a pregnancy. It covers health optimisation, essential blood tests (AMH, thyroid, rubella, Vitamin D, blood group), folic acid supplementation, weight and lifestyle review, vaccination assessment, and identification of any conditions that may affect conception or pregnancy outcome.","procedureType":"Preventive","relevantSpecialty":{"@type":"MedicalSpecialty","name":"Obstetrics"},"performer":{"@type":"Physician","name":"Dr. E. Prashanthi Reddy","honorificSuffix":"MBBS, DGO, PG Diploma in ART"},"location":{"@type":"MedicalOrganization","name":"Mother Hospitals &amp; IVF Center","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"}}}</script>
@@ -75,7 +75,7 @@
 .dr-strip img{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--purple-light)}
 .dr-strip h3{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
 .dr-strip p{font-size:0.82rem;color:var(--text-soft)}
-.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.5rem}
+.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem;margin-top:1.5rem}
 .rel-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1rem 1.2rem;text-decoration:none;color:var(--text-mid);font-size:0.85rem;transition:all 0.2s;display:block}
 .rel-card:hover{border-color:var(--magenta);color:var(--magenta);transform:translateY(-2px)}
 .rel-card strong{display:block;font-family:var(--font-d);font-size:1rem;color:var(--text);margin-bottom:0.2rem}
@@ -88,6 +88,7 @@
 .page-hero .dr-strip h3{color:#fff}
 .page-hero .dr-strip p{color:rgba(255,255,255,0.75)}
 @media(max-width:768px){.content-grid{grid-template-columns:1fr}.page-hero{padding:40px 5% 36px}}</style>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 <!-- NAV_START -->
@@ -120,7 +121,7 @@
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -149,11 +150,7 @@
 <!-- TRUST_END -->
 </div>
 
-<!-- AI DIRECT ANSWER BLOCK -->
-<div class="direct-answer" style="background:#f0e8f8;border-left:5px solid #58037c;padding:1.2rem 1.5rem;margin:0;font-size:0.92rem;line-height:1.8;color:#2d2d2d">
- <strong style="color:#58037c;display:block;margin-bottom:0.4rem">📋 Quick Answer: Preconception Counselling in Hyderabad</strong>
- <p><strong>Preconception counselling</strong> at Mother Hospitals, Boduppal, is a consultation before you try for a baby. It covers health optimisation, essential tests (AMH, thyroid, rubella, Vitamin D), folic acid supplementation, weight management, vaccination catch-up, and identifying any conditions that may affect conception or pregnancy. <strong>Recommended for all couples planning pregnancy.</strong> Call <a href="tel:+919705993366" style="color:#58037c;font-weight:600">97059 93366</a>.</p>
-</div>
+
 
 <div class="page-hero">
  <div class="page-hero-inner">
@@ -173,6 +170,13 @@
  </div>
  </div>
 </div>
+
+<!-- AI DIRECT ANSWER BLOCK -->
+<div class="direct-answer" style="background:#f0e8f8;border-left:5px solid #58037c;padding:1.2rem 1.5rem;margin:0;font-size:0.92rem;line-height:1.8;color:#2d2d2d">
+ <strong style="color:#58037c;display:block;margin-bottom:0.4rem">📋 Quick Answer: Preconception Counselling in Hyderabad</strong>
+ <p><strong>Preconception counselling</strong> at Mother Hospitals, Boduppal, is a consultation before you try for a baby. It covers health optimisation, essential tests (AMH, thyroid, rubella, Vitamin D), folic acid supplementation, weight management, vaccination catch-up, and identifying any conditions that may affect conception or pregnancy. <strong>Recommended for all couples planning pregnancy.</strong> Call <a href="tel:+919705993366" style="color:#58037c;font-weight:600">97059 93366</a>.</p>
+</div>
+
 
 <!-- SECTION 1: What is Preconception Counselling -->
 <section style="background:var(--white)">
@@ -307,7 +311,7 @@
 
 <h3 style="font-family:var(--font-d);font-size:1.3rem;color:var(--text);margin:1.5rem 0 0.8rem">Weight and BMI for Optimal Fertility</h3>
 <p style="color:var(--text-mid);font-size:0.92rem;line-height:1.8;margin-bottom:0.8rem">BMI (Body Mass Index) significantly affects fertility and pregnancy outcomes. The optimal range for conception and pregnancy is <strong>BMI 18.5–24.9</strong>.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem;margin-bottom:1.5rem">
  <div class="content-card" style="border-top:4px solid #3b82f6"><h3>Underweight (BMI &lt;18.5)</h3><p>May cause irregular or absent periods, poor egg quality, and increased miscarriage risk. Weight gain and nutritional optimisation recommended before trying.</p></div>
  <div class="content-card" style="border-top:4px solid #22c55e"><h3>Healthy BMI (18.5–24.9)</h3><p>Optimal for fertility and pregnancy. Best conception rates and lowest risk of complications including gestational diabetes and hypertension.</p></div>
  <div class="content-card" style="border-top:4px solid #f59e0b"><h3>Overweight (BMI 25–29.9)</h3><p>Associated with PCOS, insulin resistance, irregular ovulation, and increased miscarriage risk. A 5–10% weight loss before conception can significantly improve fertility.</p></div>
@@ -321,7 +325,7 @@
 <p style="color:var(--text-mid);font-size:0.92rem;line-height:1.8;margin-bottom:1rem">Moderate regular exercise (30 minutes, 5 days per week) improves fertility, insulin sensitivity, and mental health. Extreme exercise (marathon running, intense gym training) can suppress ovulation. If you are very active, discuss your exercise level at your preconception consultation.</p>
 
 <h3 style="font-family:var(--font-d);font-size:1.3rem;color:var(--text);margin:1.5rem 0 0.8rem">What to Avoid</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1rem">
  <div class="content-card" style="border-left:4px solid #ef4444"><h3>🚭 Smoking</h3><p>Smoking reduces egg quality, accelerates ovarian aging, reduces sperm count and motility, and increases miscarriage risk. Both partners should stop at least 3 months before trying.</p></div>
  <div class="content-card" style="border-left:4px solid #ef4444"><h3>🍷 Alcohol</h3><p>No safe level of alcohol in early pregnancy has been established. As conception timing cannot be exactly predicted, complete abstinence is the safest approach when trying to conceive.</p></div>
  <div class="content-card" style="border-left:4px solid #f59e0b"><h3>☕ Excess Caffeine</h3><p>Limit caffeine to under 200 mg per day (approximately 2 cups of tea or 1 cup of coffee). Higher intakes are associated with increased miscarriage risk.</p></div>
@@ -379,7 +383,7 @@
 
 <h3 style="font-family:var(--font-d);font-size:1.3rem;color:var(--text);margin:1.5rem 0 0.8rem">Medications to Review</h3>
 <p style="color:var(--text-mid);font-size:0.92rem;line-height:1.8;margin-bottom:0.8rem">The following categories of medication should always be reviewed before conception — some need to be stopped, others switched to safer alternatives:</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1rem">
  <div class="content-card"><h3>⚠️ Isotretinoin (Roaccutane)</h3><p>Must be stopped at least 1 month before conception. Causes severe fetal abnormalities. Requires pregnancy testing before each prescription under NHS/NICE guidance.</p></div>
  <div class="content-card"><h3>⚠️ ACE Inhibitors / ARBs</h3><p>Blood pressure medications such as ramipril and losartan are teratogenic. Must be switched to a pregnancy-safe alternative (methyldopa, labetalol, nifedipine) before conception.</p></div>
  <div class="content-card"><h3>⚠️ Anti-epileptic Drugs</h3><p>Sodium valproate causes fetal valproate syndrome and must not be used in pregnancy. Women with epilepsy need specialist neurology review for medication change before conception.</p></div>
@@ -422,7 +426,7 @@
 <div class="section-label">Recurrent Miscarriage</div>
 <h2 class="section-title">Preconception Counselling for Couples with <em>Previous Pregnancy Loss</em></h2>
 <p class="section-sub">If you have experienced one or more miscarriages, a preconception consultation is even more important. Dr. E. Prashanthi Reddy provides a thorough recurrent miscarriage assessment as part of preconception care.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:1.5rem">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:1.2rem;margin-top:1.5rem">
  <div class="content-card" style="border-left:4px solid var(--purple)">
  <h3>After 1 Miscarriage</h3>
  <p>A single miscarriage affects approximately 1 in 5 confirmed pregnancies — most are caused by a chromosomal abnormality in that specific embryo and do not indicate an underlying problem. Preconception review after one loss is reassuring and allows for optimisation of thyroid, vitamin D, and folic acid.</p>
@@ -448,7 +452,7 @@
 <div class="section-label">Why Choose Us</div>
 <h2 class="section-title">Why Mother Hospitals for <em>Preconception Counselling?</em></h2>
 <p class="section-sub">At Mother Hospitals, preconception counselling is not a one-size-fits-all checklist. Dr. E. Prashanthi Reddy tailors every preconception plan to the couple — their age, health history, fertility concerns, and life goals.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.2rem;margin-top:1.5rem">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:1.2rem;margin-top:1.5rem">
  <div class="content-card" style="border-left:4px solid var(--purple)">
  <h3>🏥 Preconception to Delivery Under One Roof</h3>
  <p>Start your journey with us at preconception counselling, move into antenatal care with the Mother 9 Card (₹500), and deliver at Mother Hospitals — all with the same doctor who knows your complete history. Continuity of care significantly improves outcomes.</p>
@@ -564,7 +568,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>
@@ -664,7 +668,6 @@ function submitLeadCapture(){
 <!-- WA_START -->
 <a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
 <!-- WA_END -->
-<script>document.querySelectorAll('.hamburger').forEach(b=>b.addEventListener('click',()=>document.querySelector('.mob-menu').classList.toggle('open')))</script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
 <link rel="stylesheet" href="/assets/style.min.css"/>
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -102,6 +102,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Mother Hospitals IVF &amp; Fertility — Patient Education Videos","description":"Dr. E. Prashanthi Reddy explains IVF, ICSI, PCOS treatment, needleless IVF, male infertility, low AMH management, and fertility care at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad.","thumbnailUrl":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg","uploadDate":"2026-01-01","duration":"PT5M","publisher":{"@type":"Organization","name":"Mother Hospitals &amp; IVF Center","logo":{"@type":"ImageObject","url":"https://motherhospitals.co.in/assets/logo.webp"}},"contentUrl":"https://www.youtube.com/@motherhospitalsivfcenter","embedUrl":"https://www.youtube.com/@motherhospitalsivfcenter"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in","telephone":"+919705993366","email":"motherhospitals.ivfcenter@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":17.4399,"longitude":78.5685},"openingHours":"Mo-Sa 09:00-18:00","priceRange":"₹₹","medicalSpecialty":"Fertility","sameAs":["https://www.facebook.com/motherhospitals","https://www.instagram.com/motherhospitalsivf","https://www.google.com/search?kgmid=/g/11tjs8_n6q"]}</script>
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -120,7 +121,7 @@ a:hover{text-decoration:underline}
 .hero-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);padding:0.3rem 0.9rem;border-radius:50px;font-size:0.8rem;font-weight:600}
 .hero-ctas{display:flex;gap:0.8rem;flex-wrap:wrap}
 /* QUICK ANSWER */.quick-answer{background:var(--teal-light);border-left:5px solid var(--teal);border-radius:0 var(--radius) var(--radius) 0;padding:1.4rem 1.8rem;margin:2rem 0;max-width:820px}
-.quick-answer.qa-label{font-size:0.75rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem}
+.quick-answer .qa-label{font-size:0.75rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem}
 .quick-answer p{color:var(--text);font-size:0.97rem;line-height:1.8}
 /* WRAPPER */.wrapper{max-width:1100px;margin:0 auto;padding:2.5rem 5%}
 .two-col{display:grid;grid-template-columns:1fr 320px;gap:2.5rem}
@@ -128,9 +129,9 @@ a:hover{text-decoration:underline}
 h2{font-size:1.45rem;color:var(--navy);margin-bottom:0.4rem;font-weight:800}
 h3{font-size:1rem;color:var(--teal);margin:1.2rem 0 0.5rem;font-weight:700}
 p{color:var(--text-mid);margin-bottom:0.8rem}
-/* WHO NEEDS IT */.need-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.9rem}
+/* WHO NEEDS IT */.need-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:0.9rem}
 .need-card{background:var(--teal-light);border:1px solid #b2ddd8;border-radius:var(--radius);padding:1.1rem 1.2rem}
-.need-card.n-icon{font-size:1.5rem;margin-bottom:0.4rem}
+.need-card .n-icon{font-size:1.5rem;margin-bottom:0.4rem}
 .need-card h3{margin:0 0 0.3rem;font-size:0.9rem;color:var(--navy)}
 .need-card p{font-size:0.83rem;margin:0;color:var(--text-mid)}
 /* AMH RANGE TABLE */.range-table{width:100%;border-collapse:collapse;font-size:0.88rem;border-radius:var(--radius);overflow:hidden}
@@ -156,7 +157,7 @@ p{color:var(--text-mid);margin-bottom:0.8rem}
 .result-card.normal h3{color:var(--teal)}
 .result-card.high h3{color:#6c3483}
 .result-card p{font-size:0.84rem;margin:0}
-/* TREATMENT OPTIONS (low AMH) */.treat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+/* TREATMENT OPTIONS (low AMH) */.treat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:1rem}
 .treat-card{background:#fff;border:1px solid #e0f5f3;border-radius:var(--radius);padding:1.2rem;border-left:4px solid var(--teal-mid)}
 .treat-card h3{font-size:0.9rem;color:var(--navy);margin:0 0 0.4rem}
 .treat-card p{font-size:0.83rem;margin:0}
@@ -187,15 +188,15 @@ details p{padding:0 1.2rem 1rem;font-size:0.89rem;color:var(--text-mid);line-hei
 .cta-btns a{padding:0.85rem 2rem;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none}
 .cta-btns .ca{background:#fff;color:var(--navy);display:inline-block}
 .cta-btns .wa{background:#25d366;color:#fff;display:inline-block}
-/* RELATED */.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.8rem}
+/* RELATED */.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:0.8rem}
 .related-link{display:block;background:#f8fffe;border:1px solid #d0ece8;border-radius:var(--radius);padding:0.9rem 1rem;font-size:0.87rem;color:var(--navy);font-weight:600;text-decoration:none}
 .related-link:hover{background:var(--teal-light);border-color:var(--teal);text-decoration:none}
 .related-link span{display:block;font-size:0.78rem;color:var(--text-mid);font-weight:400;margin-top:0.2rem}
 /* STICKY MOB */.sticky-mob{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300}
 @media(max-width:768px){.sticky-mob{display:grid;grid-template-columns:1fr 1fr}}
 .sticky-mob a{padding:0.9rem;text-align:center;font-weight:700;font-size:0.9rem;text-decoration:none}
-.sticky-mob.wa{background:#25d366;color:#fff}
-.sticky-mob.call{background:var(--navy);color:#fff}
+.sticky-mob .wa{background:#25d366;color:#fff}
+.sticky-mob .call{background:var(--navy);color:#fff}
 footer a{color:rgba(255,255,255,0.8)}
 .mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid,#555);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light,#e8d5f5)}
 /* Hero dark-bg overrides: make stats + buttons visible on dark gradient */
@@ -234,7 +235,7 @@ footer a{color:rgba(255,255,255,0.8)}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -560,7 +561,7 @@ footer a{color:rgba(255,255,255,0.8)}
  </div><!-- /two-col -->
 
  <!-- CTA -->
- <div class="cta-section">
+ <div class="cta-section is-dark">
  <h2>Book Your AMH Test at Mother Hospitals, Boduppal</h2>
  <p>Single blood draw · Any day of cycle · No fasting · Same-day results · Interpreted by fertility specialist · ₹800–1,500</p>
  <div class="cta-btns">
@@ -648,7 +649,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>
@@ -738,6 +739,16 @@ function submitLeadCapture(){
  </div>
 </footer>
 <!-- FOOTER_END -->
+<!-- MOB_START -->
+<div class="mob-cta-bar"><div class="mob-cta-bar-inner">
+  <a href="tel:+919705993366" class="mob-cta-btn mob-cta-call"><span class="mob-icon">📞</span>Call</a>
+  <a href="https://wa.me/919052074999" class="mob-cta-btn mob-cta-wa" target="_blank" rel="noopener noreferrer"><span class="mob-icon">💬</span>WhatsApp</a>
+  <a href="/contact-us.html" class="mob-cta-btn mob-cta-book"><span class="mob-icon">📅</span>Book Visit</a>
+</div></div>
+<!-- MOB_END -->
+<!-- WA_START -->
+<a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
+<!-- WA_END -->
 
 <!-- MOBILE STICKY -->
 <div class="sticky-mob">

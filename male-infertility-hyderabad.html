@@ -30,7 +30,7 @@
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBR9NWNXGN"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date);gtag('config','G-RBR9NWNXGN');</script>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wqa31zckot");</script>
@@ -74,9 +74,9 @@
 <link rel="stylesheet" href="/assets/style.min.css"/>
 <style>.direct-answer{background:#f0e8f8;border-left:5px solid #58037c;padding:1.2rem 1.5rem;margin:0;font-size:0.92rem;line-height:1.8;color:#2d2d2d}
 .direct-answer strong{color:#58037c}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.2rem;margin:2rem 0}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:1.2rem;margin:2rem 0}
 .stat-card{background:linear-gradient(135deg,#f5eefb,#fce4ec);border-radius:16px;padding:1.4rem 1.2rem;text-align:center;border:1px solid #e0c8f0}
-.cause-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:1.5rem 0}
+.cause-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1.2rem;margin:1.5rem 0}
 .cause-card{background:#fff;border:1px solid #e0c8f0;border-radius:14px;padding:1.3rem}
 .cause-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#58037c;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
 .cause-card p{font-size:0.85rem;color:#3d3d5c;line-height:1.7}
@@ -101,7 +101,7 @@
 .rel-card{background:#fff;border:1px solid #e0c8f0;border-radius:12px;padding:0.9rem 1rem;text-decoration:none;color:#3d3d5c;font-size:0.82rem;transition:all 0.2s;display:block}
 .rel-card:hover{border-color:#aa045a;color:#aa045a;transform:translateY(-2px)}
 .rel-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:0.98rem;color:#1a1a2e;margin-bottom:0.12rem}
-.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1rem;margin-top:1.2rem}
+.related-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(185px,100%),1fr));gap:1rem;margin-top:1.2rem}
 @media(max-width:768px){.content-grid,.stats-row,.dr-strip,.footer-inner,.page-ctas{grid-template-columns:1fr;flex-direction:column}.page-hero,.section-wrap{padding-left:5%;padding-right:5%}h1,h2{font-size:clamp(1.4rem,5vw,2.2rem)}.hero-inner{grid-template-columns:1fr}}</style>
 <script type="application/ld+json">
 {
@@ -127,6 +127,7 @@
 .page-hero .btn-secondary:hover{background:rgba(255,255,255,0.22)}
 .page-hero .stag{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2)}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Mother Hospitals & IVF Center","url":"https://motherhospitals.co.in","telephone":"+919705993366","email":"motherhospitals.ivfcenter@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500092","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":17.4399,"longitude":78.5685},"openingHours":"Mo-Sa 09:00-18:00","priceRange":"₹₹","medicalSpecialty":"Fertility","sameAs":["https://www.facebook.com/motherhospitals","https://www.instagram.com/motherhospitalsivf","https://www.google.com/search?kgmid=/g/11tjs8_n6q"]}</script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -160,7 +161,7 @@
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -191,10 +192,7 @@
 </div>
 
 <!-- Direct Answer Block -->
-<div class="direct-answer" role="note" aria-label="Quick Answer">
- <strong style="display:block;margin-bottom:0.4rem">📋 Quick Answer: Male Infertility Treatment in Hyderabad</strong>
- <p>Male factor infertility accounts for 40–50% of all infertility cases. At <strong>Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad</strong>, Dr. E. Prashanthi Reddy (MBBS, DGO, TGMC-50624) treats all forms of male infertility — low sperm count, azoospermia, poor motility, abnormal morphology, and high DNA fragmentation — using ICSI, TESA/PESA, and personalised IVF protocols. All-inclusive IVF+ICSI package:. OPD: 10:30 AM–1:30 PM, all days. Call <a href="tel:+919705993366" style="color:#58037c;font-weight:600">97059 93366</a> | <a href="https://wa.me/919052074999" style="color:#58037c;font-weight:600">WhatsApp</a>.</p>
-</div>
+
 
 <div class="page-hero">
  <div class="breadcrumb"><a href="https://motherhospitals.co.in">Home</a> › Male Infertility Treatment Hyderabad</div>
@@ -205,6 +203,12 @@
  <a href="https://wa.me/919052074999" target="_blank" rel="noopener noreferrer" style="background:#25D366;color:#fff;padding:0.6rem 1.3rem;border-radius:24px;font-weight:700;font-size:0.84rem;text-decoration:none">💬 WhatsApp</a>
  </div>
 </div>
+
+<div class="direct-answer" role="note" aria-label="Quick Answer">
+ <strong style="display:block;margin-bottom:0.4rem">📋 Quick Answer: Male Infertility Treatment in Hyderabad</strong>
+ <p>Male factor infertility accounts for 40–50% of all infertility cases. At <strong>Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad</strong>, Dr. E. Prashanthi Reddy (MBBS, DGO, TGMC-50624) treats all forms of male infertility — low sperm count, azoospermia, poor motility, abnormal morphology, and high DNA fragmentation — using ICSI, TESA/PESA, and personalised IVF protocols. All-inclusive IVF+ICSI package:. OPD: 10:30 AM–1:30 PM, all days. Call <a href="tel:+919705993366" style="color:#58037c;font-weight:600">97059 93366</a> | <a href="https://wa.me/919052074999" style="color:#58037c;font-weight:600">WhatsApp</a>.</p>
+</div>
+
 
 <!-- Stats -->
 <section style="background:#f5eefb">
@@ -492,7 +496,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>
@@ -593,13 +597,8 @@ function submitLeadCapture(){
 <!-- WA_START -->
 <a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
 <!-- WA_END -->
-<div class="mob-cta-bar">
- <a href="https://wa.me/919052074999" class="mob-cta-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
- <a href="tel:+919705993366" class="mob-cta-call">📞 Call Now</a>
-</div>
 
 <script>
-document.querySelector('.hamburger').addEventListener('click',function(){document.querySelector('.mob-menu').classList.toggle('open')});
 document.querySelectorAll('.faq-item').forEach(function(el){
  el.addEventListener('toggle',function(){
  var s=el.querySelector('summary span');

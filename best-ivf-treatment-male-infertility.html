@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MedicalProcedure","name":"ICSI — Intracytoplasmic Sperm Injection","alternateName":["IVF-ICSI","ICSI IVF","Male Factor IVF"],"description":"ICSI is the gold-standard IVF treatment for male infertility. A single sperm is injected into each mature egg by an embryologist under high magnification. Works with even 1 sperm — effective for low count, poor motility, abnormal morphology, and surgical sperm (TESA). Available at Mother Hospitals &amp; IVF Center, Boduppal, Hyderabad.","procedureType":"Therapeutic","indication":[{"@type":"MedicalIndication","name":"Oligospermia (low sperm count)"},{"@type":"MedicalIndication","name":"Azoospermia (surgical sperm — TESA/PESA)"},{"@type":"MedicalIndication","name":"Asthenospermia (poor motility)"},{"@type":"MedicalIndication","name":"Teratospermia (abnormal morphology)"},{"@type":"MedicalIndication","name":"High sperm DNA fragmentation"},{"@type":"MedicalIndication","name":"Failed conventional IVF"}],"performer":{"@type":"Physician","name":"Dr. E. Prashanthi Reddy","identifier":"TGMC-50624"},"location":{"@type":"MedicalOrganization","name":"Mother Hospitals &amp; IVF Center","url":"https://motherhospitals.co.in"}}
@@ -72,13 +72,13 @@ h2 em{font-style:italic;color:var(--magenta)}
 .check-list li{padding:0.3rem 0;font-size:0.85rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.5rem}
 .check-list li.good::before{content:"✓";color:var(--magenta);font-weight:700;flex-shrink:0}
 .check-list li.bad::before{content:"✗";color:#c62828;font-weight:700;flex-shrink:0}
-.indication-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin:1.5rem 0}
+.indication-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:1.2rem;margin:1.5rem 0}
 .ind-card{background:var(--white);border:1.5px solid var(--purple-light);border-radius:14px;padding:1.3rem;transition:border-color 0.2s}
 .ind-card:hover{border-color:var(--purple)}
 .ind-icon{font-size:1.5rem;margin-bottom:0.4rem}
 .ind-title{font-weight:700;color:var(--purple);font-size:0.9rem;margin-bottom:0.3rem}
 .ind-body{font-size:0.82rem;color:var(--text-mid);line-height:1.6}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin:1.5rem 0}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1.2rem;margin:1.5rem 0}
 .why-card{background:var(--white);border:1px solid var(--purple-light);border-radius:12px;padding:1.2rem}
 .why-icon{font-size:1.4rem;margin-bottom:0.3rem}
 .why-title{font-weight:700;color:var(--purple);font-size:0.88rem;margin-bottom:0.2rem}
@@ -132,6 +132,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
 .page-hero .btn-secondary:hover{background:rgba(255,255,255,0.22)}
 .page-hero .stag{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2)}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Mother Hospitals IVF & Fertility — Patient Education Videos","description":"Dr. E. Prashanthi Reddy explains IVF, ICSI, PCOS treatment, needleless IVF, male infertility, low AMH management, and fertility care at Mother Hospitals & IVF Center, Boduppal, Hyderabad.","thumbnailUrl":"https://motherhospitals.co.in/assets/Prashanthi/Prashanthi2.jpeg","uploadDate":"2026-01-01","duration":"PT5M","publisher":{"@type":"Organization","name":"Mother Hospitals & IVF Center","logo":{"@type":"ImageObject","url":"https://motherhospitals.co.in/assets/logo.webp"}},"contentUrl":"https://www.youtube.com/@motherhospitalsivfcenter","embedUrl":"https://www.youtube.com/@motherhospitalsivfcenter"}</script>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -170,7 +171,7 @@ footer a{color:rgba(255,255,255,0.75);text-decoration:none}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -496,7 +497,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

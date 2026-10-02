@@ -31,7 +31,7 @@
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" media="print" onload="this.media='all'"/><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'"/><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/></noscript>
 <script type="application/ld+json">[
   {
     "@context": "https://schema.org",
@@ -118,7 +118,7 @@
 .breadcrumb a{color:var(--purple);text-decoration:none}
 .article-meta{font-size:0.82rem;color:var(--text-soft);margin-bottom:1.2rem;display:flex;gap:1.5rem;flex-wrap:wrap}
 .article-body ul,.article-body ol{margin:0.5rem 0 1.1rem 1.5rem;color:var(--text-mid)}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:1rem;margin:1.5rem 0}
 .stat-card{background:var(--white);border:1px solid var(--purple-light);border-radius:14px;padding:1.2rem 1rem;text-align:center}
 .stat-number{font-family:var(--font-d);font-size:2rem;font-weight:700;color:var(--purple);line-height:1}
 .stat-label{font-size:0.8rem;color:var(--text-soft);margin-top:0.3rem}
@@ -151,6 +151,7 @@ details[open] .faq-q::after{content:"▲"}
  })(window, document, "clarity", "script", "wqa31zckot");
 </script>
 <style>.blog-layout{padding:2rem 2rem !important}.blog-hero-inner{max-width:900px;margin:0 auto;padding:0 2rem}@media(min-width:768px){.blog-layout{padding:2rem 3rem !important}}</style>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -189,7 +190,7 @@ details[open] .faq-q::after{content:"▲"}
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -218,9 +219,7 @@ details[open] .faq-q::after{content:"▲"}
 <!-- TRUST_END -->
 </div>
 
-<div class="direct-answer" role="note" aria-label="Quick Answer">
- <strong>Quick Answer:</strong> A third-trimester growth scan (typically at 28, 32, and 36 weeks) measures your baby's head, abdomen, and femur to estimate weight and track growth over time. Doppler studies — especially the umbilical artery and middle cerebral artery (MCA) — assess whether blood flow through the placenta is healthy. Together these scans identify small-for-gestational-age (SGA) babies and guide decisions on timing of delivery. <strong>At Mother Hospitals &amp; IVF Center, Hyderabad, every high-risk pregnancy gets regular growth scans and Dopplers as part of our dedicated monitoring programme.</strong> Call 97059 93366 or WhatsApp @motherhospitals to book your scan.
-</div>
+
 
 <section class="article-hero">
  <div class="article-hero-inner">
@@ -243,6 +242,11 @@ details[open] .faq-q::after{content:"▲"}
  </div>
  </div>
 </section>
+
+<div class="direct-answer" role="note" aria-label="Quick Answer">
+ <strong>Quick Answer:</strong> A third-trimester growth scan (typically at 28, 32, and 36 weeks) measures your baby's head, abdomen, and femur to estimate weight and track growth over time. Doppler studies — especially the umbilical artery and middle cerebral artery (MCA) — assess whether blood flow through the placenta is healthy. Together these scans identify small-for-gestational-age (SGA) babies and guide decisions on timing of delivery. <strong>At Mother Hospitals &amp; IVF Center, Hyderabad, every high-risk pregnancy gets regular growth scans and Dopplers as part of our dedicated monitoring programme.</strong> Call 97059 93366 or WhatsApp @motherhospitals to book your scan.
+</div>
+
 
 <article class="article-body">
 
@@ -527,7 +531,7 @@ function submitBLC_growth_scan_(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>

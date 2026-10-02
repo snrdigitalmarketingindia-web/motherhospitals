@@ -5,7 +5,7 @@
 <meta name="format-detection" content="telephone=no"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
 <link rel="stylesheet" href="/assets/style.min.css"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Ladies Doctor Boduppal | మహిళా డాక్టర్ హైదరాబాద్ | Mother Hospitals</title>
@@ -103,7 +103,7 @@ img{max-width:100%;height:auto}
 .section{padding:3rem 5%}
 .section-inner{max-width:1100px;margin:0 auto}
 @media(max-width:600px){.section-title{font-size:1.45rem}}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-top:1.2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:1.2rem;margin-top:1.2rem}
 .card{background:#fff;border:1px solid #ece0f5;border-radius:var(--radius);padding:1.4rem}
 .card-icon{font-size:1.8rem;margin-bottom:0.6rem}
 .card h3{font-family:var(--font-d);font-size:1.05rem;color:var(--purple);margin-bottom:0.5rem;line-height:1.4}
@@ -125,7 +125,7 @@ img{max-width:100%;height:auto}
 .faq-item summary .plus{font-size:1.2rem;color:var(--magenta);flex-shrink:0;margin-left:0.5rem;transition:transform 0.2s}
 .faq-item[open] summary .plus{transform:rotate(45deg)}
 .faq-a{padding:0 1.2rem 1.1rem;color:var(--text-mid);font-size:0.88rem;line-height:1.85;border-top:1px solid #f0e8f8}
-.testimonials{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-top:1.4rem}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:1.2rem;margin-top:1.4rem}
 .testi{background:#fff;border:1px solid #ece0f5;border-radius:var(--radius);padding:1.3rem}
 .testi-stars{color:#f5a623;font-size:0.85rem;margin-bottom:0.5rem}
 .testi-text{font-size:0.87rem;color:var(--text-mid);line-height:1.8;font-style:italic;margin-bottom:0.7rem}
@@ -135,13 +135,14 @@ img{max-width:100%;height:auto}
 .cta-section p{opacity:0.88;max-width:600px;margin:0 auto 1.8rem;line-height:1.85;font-size:0.95rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 footer{background:#1a0a2e;color:rgba(255,255,255,0.72);padding:3rem 5%}
-.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:2rem}
 footer h4{color:#fff;font-family:var(--font-d);margin-bottom:0.8rem;font-size:0.93rem}
 footer ul{list-style:none}
 footer ul li{margin-bottom:0.4rem}
 footer a{color:rgba(255,255,255,0.68);font-size:0.82rem}
 footer a:hover{color:#fff}
 footer p{font-size:0.82rem;line-height:1.7}</style>
+<link rel="stylesheet" href="/assets/mh-design.css?v=1"/>
 </head>
 <body>
 
@@ -175,7 +176,7 @@ footer p{font-size:0.82rem;line-height:1.7}</style>
  <span></span><span></span><span></span>
  </button>
  </div>
- <div class="mob-menu">
+ <div class="mob-menu" id="mob-menu">
  <a href="https://motherhospitals.co.in">Home</a>
  <a href="/ivf-treatment-hyderabad.html">IVF</a>
  <a href="/maternity-care-hyderabad.html">Maternity</a>
@@ -205,10 +206,7 @@ footer p{font-size:0.82rem;line-height:1.7}</style>
 <!-- TRUST_END -->
 </div>
 
-<div class="direct-answer">
-  <strong style="color:var(--purple);display:block;margin-bottom:0.4rem">📋 Quick Answer:</strong>
-  Boduppal లో ladies doctor కోసం వెతుకుతున్నారా? <strong>Dr. E. Prashanthi Reddy</strong> — MBBS, DGO, Germany ART Diploma — Mother Hospitals & IVF Center లో 20+ సంవత్సరాలుగా practice చేస్తున్నారు. PCOS, pregnancy, IVF, delivery అన్నీ ఒకే చోట. Appointment కోసం: <a href="tel:+919705993366" style="color:var(--purple);font-weight:600">97059 93366</a>
-</div>
+
 
 <div class="hero">
   <div class="hero-inner">
@@ -233,6 +231,12 @@ footer p{font-size:0.82rem;line-height:1.7}</style>
     </div>
   </div>
 </div>
+
+<div class="direct-answer">
+  <strong style="color:var(--purple);display:block;margin-bottom:0.4rem">📋 Quick Answer:</strong>
+  Boduppal లో ladies doctor కోసం వెతుకుతున్నారా? <strong>Dr. E. Prashanthi Reddy</strong> — MBBS, DGO, Germany ART Diploma — Mother Hospitals & IVF Center లో 20+ సంవత్సరాలుగా practice చేస్తున్నారు. PCOS, pregnancy, IVF, delivery అన్నీ ఒకే చోట. Appointment కోసం: <a href="tel:+919705993366" style="color:var(--purple);font-weight:600">97059 93366</a>
+</div>
+
 
 <div class="stats-bar">
   <div class="stats-inner">
@@ -490,7 +494,7 @@ footer p{font-size:0.82rem;line-height:1.7}</style>
   </div>
 </section>
 
-<section class="cta-section">
+<section class="cta-section is-dark">
   <h2>Ladies Doctor Appointment కోసం — <br/>ఇప్పుడే Call చేయండి</h2>
   <p>తెలుగులో మాట్లాడవచ్చు, WhatsApp చేయవచ్చు — మీకు comfortable అయినట్లు. Dr. Prashanthi మీ problem వినడానికి ready గా ఉన్నారు.</p>
   <div class="cta-btns">
@@ -561,7 +565,7 @@ function submitLeadCapture(){
    <!-- Col 1: Brand -->
    <div>
     <div class="fl-row">
-     <picture><source srcset="assets/logo.webp" type="image/webp"/><img class="fl-img" src="assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
+     <picture><source srcset="/assets/logo.webp" type="image/webp"/><img class="fl-img" src="/assets/logo.png" alt="Mother Hospitals &amp; IVF Center Logo" width="42" height="42" loading="lazy"/></picture>
      <div><div class="fl-name">Mother Hospitals</div><div class="fl-sub">&amp; IVF Center · Boduppal, Hyderabad</div></div>
     </div>
     <p class="fp">Hyderabad's trusted fertility and women's health hospital led by Dr. E. Prashanthi Reddy — Germany-trained IVF specialist with 20+ years and 5,000+ IVF cycles. ART Act 2021 certified. NRI patients welcome.<br/><em style="opacity:0.6;font-size:0.78rem">Delivering a lifetime of joy.</em></p>
@@ -663,13 +667,6 @@ function submitLeadCapture(){
 <a href="https://wa.me/919052074999" class="wa-float" target="_blank" rel="noopener noreferrer" title="WhatsApp Mother Hospitals">💬</a>
 <!-- WA_END -->
 
-<script>
-document.querySelectorAll('.hamburger').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.closest('nav').querySelector('.mob-menu').classList.toggle('open');
-  });
-});
-</script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>
