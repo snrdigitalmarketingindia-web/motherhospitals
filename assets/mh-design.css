@@ -303,6 +303,14 @@ iframe[style*="border-radius:12px"]{border-radius:var(--mh-r)!important;box-shad
 .mh-season--newyear{--sa:#ffd43b;--sb:#ffffff;--sc:#e599f7}
 .mh-season--tangedu{--sa:#ffd43b;--sb:#ffe8a3;--sc:#ff9cbd}
 .mh-season--bonalu{--sa:#ffd43b;--sb:#ff8787;--sc:#8ce99a}
+.mh-season--womens{--sa:#e599f7;--sb:#ffffff;--sc:#8ce99a}
+.mh-season--mothers{--sa:#ffa8c5;--sb:#ffe3e3;--sc:#ffc078}
+.mh-season--doctors{--sa:#74c0fc;--sb:#ffffff;--sc:#63e6be}
+.mh-season--ivf{--sa:#f783ac;--sb:#ffffff;--sc:#b197fc}
+.mh-season--girlchild{--sa:#ffa8c5;--sb:#ffffff;--sc:#d0bfff}
+.mh-season--health{--sa:#63e6be;--sb:#ffffff;--sc:#74c0fc}
+.mh-season--fathers{--sa:#74c0fc;--sb:#e7f5ff;--sc:#ffd43b}
+.mh-season--kids{--sa:#ffd43b;--sb:#ff8787;--sc:#74c0fc}
 .mh-season-inner{position:relative;max-width:1160px;margin:0 auto;padding:13px 60px 13px 20px;display:flex;align-items:center;justify-content:center;gap:14px;text-align:center}
 .mh-season-text{margin:0;font-size:.95rem;line-height:1.5;color:#fff}
 .mh-season-title{font-weight:700;letter-spacing:.01em;background:linear-gradient(90deg,var(--sa) 0%,var(--sb) 50%,var(--sc) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}

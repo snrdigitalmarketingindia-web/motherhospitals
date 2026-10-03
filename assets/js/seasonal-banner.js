@@ -5,6 +5,8 @@
  * - `on: {year: 'MM-DD' | ['MM-DD', days]}`  lunar festivals move every year, so their
  *   start dates are listed per year (source: Drik Panchang, computed for Hyderabad).
  *   Add the next years before the table runs out — it currently ends in 2030.
+ * - `nth: {month, weekday, n}`  rule-based days, e.g. Mother's Day = 2nd Sunday of May
+ *   (weekday 0 = Sunday); computed every year.
  * - `days`  window length; earlier entries win when two windows overlap.
  *
  * Preview a greeting:  ?season=<id>          Simulate a date:  ?season-date=YYYY-MM-DD
@@ -24,6 +26,20 @@
     { id: 'telangana-day', theme: 'tangedu', icon: '🌼', every: '06-02', days: 1,
       title: 'Happy Telangana Formation Day!', native: 'తెలంగాణ రాష్ట్ర ఆవిర్భావ దినోత్సవ శుభాకాంక్షలు',
       message: 'Proud to care for the families of Telangana.' },
+
+
+    { id: 'womens-day', theme: 'womens', icon: '💜', every: '03-08', days: 1,
+      title: 'Happy Women’s Day!', native: 'మహిళా దినోత్సవ శుభాకాంక్షలు',
+      message: 'Celebrating every woman — her strength, her health and her dreams.' },
+    { id: 'mothers-day', theme: 'mothers', icon: '💐', nth: { month: 5, weekday: 0, n: 2 }, days: 1,
+      title: 'Happy Mother’s Day!', native: 'మాతృ దినోత్సవ శుభాకాంక్షలు',
+      message: 'Celebrating every mother — and every woman on her journey to motherhood.' },
+    { id: 'doctors-day', theme: 'doctors', icon: '🩺', every: '07-01', days: 1,
+      title: 'Happy Doctors’ Day!', native: 'వైద్యుల దినోత్సవ శుభాకాంక్షలు',
+      message: 'Thank you to every doctor who puts patients first.' },
+    { id: 'world-ivf-day', theme: 'ivf', icon: '👶', every: '07-25', days: 1,
+      title: 'Happy World IVF Day!', native: 'ప్రపంచ IVF దినోత్సవ శుభాకాంక్షలు',
+      message: 'Since 1978, IVF has given millions of families their miracle — here’s to hope.' },
 
     { id: 'sankranti', theme: 'sankranti', icon: '🪁', days: 3,          /* Bhogi → Kanuma */
       on: { 2026: '01-13', 2027: '01-14', 2028: '01-14', 2029: '01-13', 2030: '01-13' },
@@ -89,6 +105,39 @@
       on: { 2027: '05-16', 2028: '05-04', 2029: '04-23', 2030: '04-13' },
       title: 'Eid al-Adha Mubarak!', native: 'عید الاضحیٰ مبارک',
       message: 'May this Eid bring peace, togetherness and good health to your family.' },
+    { id: 'girl-child-day', theme: 'girlchild', icon: '👧', every: '01-24', days: 1,
+      title: 'National Girl Child Day', native: 'జాతీయ బాలికా దినోత్సవం',
+      message: 'Every girl deserves health, education and equal opportunity.' },
+    { id: 'world-health-day', theme: 'health', icon: '🌍', every: '04-07', days: 1,
+      title: 'World Health Day', native: 'ప్రపంచ ఆరోగ్య దినోత్సవం',
+      message: 'Good health is the foundation of every happy family.' },
+    { id: 'safe-motherhood-day', theme: 'mothers', icon: '🤰', every: '04-11', days: 1,
+      title: 'National Safe Motherhood Day', native: 'జాతీయ సురక్షిత మాతృత్వ దినోత్సవం',
+      message: 'Every mother deserves safe, respectful care — before, during and after birth.' },
+    { id: 'nurses-day', theme: 'doctors', icon: '💙', every: '05-12', days: 1,
+      title: 'International Nurses Day', native: 'అంతర్జాతీయ నర్సుల దినోత్సవం',
+      message: 'Thank you to every nurse whose care makes healing possible.' },
+    { id: 'menstrual-hygiene-day', theme: 'womens', icon: '🌷', every: '05-28', days: 1,
+      title: 'Menstrual Hygiene Day', native: 'Periods గురించి మాట్లాడటం సిగ్గు కాదు',
+      message: 'Period health is women’s health — let’s talk about it openly.' },
+    { id: 'fathers-day', theme: 'fathers', icon: '👔', nth: { month: 6, weekday: 0, n: 3 }, days: 1,
+      title: 'Happy Father’s Day!', native: 'పితృ దినోత్సవ శుభాకాంక్షలు',
+      message: 'Celebrating every father — and every man on his journey to fatherhood.' },
+    { id: 'breastfeeding-week', theme: 'mothers', icon: '🤱', every: '08-01', days: 7,
+      title: 'World Breastfeeding Week', native: 'ప్రపంచ తల్లిపాల వారోత్సవాలు',
+      message: 'Mother’s milk is a baby’s first protection — every mother deserves support.' },
+    { id: 'menopause-day', theme: 'womens', icon: '🌺', every: '10-18', days: 1,
+      title: 'World Menopause Day', native: 'Menopause గురించి awareness పెంచుదాం',
+      message: 'Menopause is a new chapter — every woman deserves care and understanding.' },
+    { id: 'childrens-day', theme: 'kids', icon: '🧸', every: '11-14', days: 1,
+      title: 'Happy Children’s Day!', native: 'బాలల దినోత్సవ శుభాకాంక్షలు',
+      message: 'Every child is a miracle — here’s to healthy, happy childhoods.' },
+    { id: 'prematurity-day', theme: 'ivf', icon: '🍼', every: '11-17', days: 1,
+      title: 'World Prematurity Day', native: 'Premature babies చిన్నవాళ్ళు, కానీ పెద్ద fighters',
+      message: 'Honouring every little fighter born too soon — and the families who stand by them.' },
+    { id: 'mens-day', theme: 'fathers', icon: '💙', every: '11-19', days: 1,
+      title: 'International Men’s Day', native: 'అంతర్జాతీయ పురుషుల దినోత్సవం',
+      message: 'Men’s health matters too — including fertility. Here’s to every man’s wellbeing.' },
     { id: 'christmas', theme: 'christmas', icon: '🎄', every: '12-24', days: 2,
       title: 'Merry Christmas!', native: 'క్రిస్మస్ శుభాకాంక్షలు',
       message: 'Wishing you joy, peace and good health this season.' },
@@ -111,11 +160,17 @@
   var year = new Date(today).getUTCFullYear();
 
   function windowFor(e, y) {
-    var spec = e.every || (e.on && e.on[y]);
-    if (!spec) return null;
-    var md = Array.isArray(spec) ? spec[0] : spec;
-    var days = Array.isArray(spec) ? spec[1] : e.days;
-    var start = Date.UTC(y, +md.slice(0, 2) - 1, +md.slice(3, 5));
+    var start, days = e.days;
+    if (e.nth) {
+      var first = new Date(Date.UTC(y, e.nth.month - 1, 1)).getUTCDay();
+      start = Date.UTC(y, e.nth.month - 1, 1 + (e.nth.weekday - first + 7) % 7 + (e.nth.n - 1) * 7);
+    } else {
+      var spec = e.every || (e.on && e.on[y]);
+      if (!spec) return null;
+      var md = Array.isArray(spec) ? spec[0] : spec;
+      if (Array.isArray(spec)) days = spec[1];
+      start = Date.UTC(y, +md.slice(0, 2) - 1, +md.slice(3, 5));
+    }
     return { start: start, end: start + (days - 1) * DAY, year: y };
   }
 
