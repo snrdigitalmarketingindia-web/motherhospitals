@@ -37,6 +37,10 @@
       on: { 2026: ['10-10', 10], 2027: ['09-29', 9], 2028: ['09-18', 9], 2029: ['10-07', 8], 2030: ['09-27', 8] },
       title: 'Happy Bathukamma!', native: 'బతుకమ్మ పండుగ శుభాకాంక్షలు',
       message: 'Celebrating the women of Telangana — life, colour and togetherness.' },
+    { id: 'bonalu', theme: 'bonalu', icon: '🪔',                     /* Lashkar Bonalu → Monday after the last Ashada Sunday */
+      on: { 2027: ['07-25', 9] },                                      /* dates are announced each June — add the next year then */
+      title: 'Happy Bonalu!', native: 'బోనాల పండుగ శుభాకాంక్షలు',
+      message: 'May Goddess Mahankali bless every family with health and happiness.' },
     { id: 'dasara', theme: 'dasara', icon: '🏹', days: 2,               /* Navami → Vijayadashami */
       on: { 2026: '10-19', 2027: '10-08', 2028: '09-26', 2029: '10-15', 2030: '10-05' },
       title: 'Happy Dasara!', native: 'దసరా శుభాకాంక్షలు',
