@@ -1,4 +1,4 @@
-name: URL Indexing — Bing + Google Sitemap Ping
+name: URL Indexing — Bing + IndexNow
 
 on:
   push:
@@ -37,28 +37,3 @@ jobs:
         env:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: python gsc-indexing/submit_sitemap_urls.py
-
-      - name: Ping Google with sitemap
-        run: |
-          curl -s "https://www.google.com/ping?sitemap=https://motherhospitals.co.in/sitemap.xml" -o /dev/null -w "Google ping HTTP status: %{http_code}\n"
-
-      - name: Send deploy event to GA4
-        env:
-          GA4_API_SECRET: ${{ secrets.GA4_API_SECRET }}
-        run: |
-          curl -s -X POST \
-            "https://www.google-analytics.com/mp/collect?measurement_id=G-6FBNEQQBJL&api_secret=${GA4_API_SECRET}" \
-            -H "Content-Type: application/json" \
-            -d "{
-              \"client_id\": \"github-actions-deploy\",
-              \"events\": [{
-                \"name\": \"site_deploy\",
-                \"params\": {
-                  \"commit_sha\": \"${{ github.sha }}\",
-                  \"branch\": \"${{ github.ref_name }}\",
-                  \"actor\": \"${{ github.actor }}\",
-                  \"engagement_time_msec\": \"1\"
-                }
-              }]
-            }" \
-            -o /dev/null -w "GA4 event HTTP status: %{http_code}\n"
