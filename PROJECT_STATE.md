@@ -8,7 +8,7 @@
 - Address: Unit Nos. 201-204, Block A, Aakruthi Township, Boduppal, Hyderabad 500092
 - Rating: 4.7★ | Reviews: 57 (schema) | Experience: 20+ years | Families: 10,000+
 - Email: motherhospitals.ivfcenter@gmail.com
-- GA4: G-RBR9NWNXGN | Clarity: wqa31zckot
+- GA4: G-6FBNEQQBJL | Clarity: wqa31zckot
 - Mother 9 Card: ₹500 (maternity package — NEVER change this price)
 - NEVER include surrogacy content
 - FAQPage schema: DO NOT USE (Google deprecating July 2026)

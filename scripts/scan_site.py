@@ -9,14 +9,14 @@ import glob, sys, re
 
 CHECKS = [
     # (description, pattern_to_find, is_bad=True means finding it is a failure)
-    ("Wrong GA4 ID (not G-RBR9NWNXGN)",    r"G-[A-Z0-9]{8,10}(?!>|')",     "wrong_ga4"),
+    ("Wrong GA4 ID (not G-6FBNEQQBJL)",    r"G-[A-Z0-9]{8,10}(?!>|')",     "wrong_ga4"),
     ("Bitwise OR instead of ||",             r"\w\|\[\]",                      "bad_pattern"),
     ("Missing () on function declaration",   r"function\w*\{",                 "bad_pattern"),
     ("Arrow fn missing () before =>",        r"'click',=>",                    "bad_pattern"),
     ("Wrong form entry field names",         r"entry\.(name|phone|service|message|email)=", "bad_pattern"),
 ]
 
-CORRECT_GA4   = "G-RBR9NWNXGN"
+CORRECT_GA4   = "G-6FBNEQQBJL"
 CORRECT_FORM  = "1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A"
 CLARITY_TAG   = "wqa31zckot"
 GTAG_SCRIPT   = "googletagmanager.com/gtag/js"
