@@ -231,6 +231,7 @@ img{max-width:100%;display:block}
 </style>
 <link rel="stylesheet" href="/assets/mh-design.css?v=5"/>
 <script src="/assets/js/seasonal-banner.js?v=4" defer></script>
+<script src="/assets/js/mh-analytics.js?v=1" defer></script>
 </head>
 <body itemscope itemtype="https://schema.org/MedicalOrganization">
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--purple);color:#fff;font-weight:600;border-radius:0 0 4px 4px;text-decoration:none" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
@@ -1242,26 +1243,6 @@ function submitForm(){
 </script>
 
 <!-- GA4 Conversion Tracking: WhatsApp & Phone clicks -->
-<script>
-document.addEventListener('click', function(e) {
- var link = e.target.closest('a[href]');
- if (!link) return;
- var href = link.getAttribute('href') || '';
- if (href.includes('wa.me')) {
- gtag('event', 'whatsapp_click', {
- event_category: 'CTA',
- event_label: link.textContent.trim.substring(0, 60) | 'WhatsApp',
- page_location: window.location.href
- });
- } else if (href.startsWith('tel:')) {
- gtag('event', 'phone_call_click', {
- event_category: 'CTA',
- event_label: href.replace('tel:', ''),
- page_location: window.location.href
- });
- }
-});
-</script>
 
 <!-- FIX: Microsoft Clarity deferred — loads after page is interactive (INP improvement) -->
 <script>
