@@ -12,6 +12,10 @@
  * Display locations: "top_banner" | "navbar" | "popup"
  */
 
+/* NON_NMC_GUIDLINES: true (the default) keeps every offer, discount and limited-period banner OFF the site, whatever is enabled below.
+   Only change this to false after the client and counsel confirm an offer is allowed (NMC notice 06/10/2026, 8.1(x)). */
+window.MH_NON_NMC_GUIDLINES = true;
+
 window.MH_OFFERS = [
 
   /* ── PAST OFFER — re-enable by setting enabled: true and updating dates ──

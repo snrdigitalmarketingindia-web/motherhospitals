@@ -19,6 +19,9 @@
 
   /* ── 1. Find active offer ─────────────────────────────────────────────── */
   function getActiveOffer() {
+    /* NON_NMC_GUIDLINES = true: discounts, limited-period offers and offer popups are NOT shown (NMC notice 06/10/2026, 8.1(x)).
+       Set window.MH_NON_NMC_GUIDLINES = false in offer-config.js to allow offers again. */
+    if (window.MH_NON_NMC_GUIDLINES !== false) return null;
     var offers = window.MH_OFFERS;
     if (!offers || !offers.length) return null;
 
