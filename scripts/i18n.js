@@ -36,8 +36,26 @@
       this.apply();
       if(window._reapplyResults) window._reapplyResults();
     },
+    /* EN | తెలుగు switch lives in the menu bar (laptops) and the phone-number bar (phones); styles in mh-design.css §22.
+       Buttons use data-set-lang, not data-lang — apply() hides every [data-lang] element of the other language. */
+    _pill: function(tag, cls){
+      var w = document.createElement(tag);
+      w.className = 'nav-lang ' + cls;
+      w.innerHTML = '<span class="lang-toggle" role="group" aria-label="Language"><button type="button" class="lang-btn" data-set-lang="en" onclick="I18n.setLang(\'en\')">EN</button><button type="button" class="lang-btn" data-set-lang="te" lang="te" onclick="I18n.setLang(\'te\')">&#3108;&#3142;&#3122;&#3137;&#3095;&#3137;</button></span>';
+      return w;
+    },
     _injectToggle: function(){
-      if(document.getElementById('mh-lang-toggle')) return;
+      if(document.querySelector('.nav-lang') || document.getElementById('mh-lang-toggle')) return;
+      var ul = document.querySelector('nav .nav-links');
+      if(ul){
+        var wa = ul.querySelector('.btn-nav'), li = this._pill('li', 'nav-lang-d');
+        if(wa && wa.closest('li')) ul.insertBefore(li, wa.closest('li')); else ul.appendChild(li);
+        var tb = document.querySelector('.top-bar');
+        if(tb) tb.appendChild(this._pill('span', 'nav-lang-m'));
+        var hero = document.querySelector('.hero');
+        if(hero) hero.appendChild(this._pill('span', 'nav-lang-h'));
+        return;
+      }
       var s = document.createElement('style');
       s.textContent = '.lang-toggle-bar{background:#f8f4ff;border-bottom:1px solid #e0d0f0;padding:0.35rem 5%;display:flex;align-items:center;justify-content:flex-end;gap:0.5rem}.lang-toggle{display:inline-flex;align-items:center;background:#fff;border:2px solid #c8a8e0;border-radius:50px;overflow:hidden}.lang-btn{background:none;border:none;padding:0.3rem 1rem;font-size:0.8rem;font-weight:700;cursor:pointer;color:#6a3a8a;font-family:inherit;transition:all 0.18s}.lang-btn.active{background:#7b2fa0;color:#fff}.lang-label{font-size:0.75rem;color:#6a3a8a;font-weight:600;margin-right:0.3rem}';
       document.head.appendChild(s);
@@ -50,6 +68,12 @@
       else document.body.insertAdjacentElement('afterbegin', bar);
     },
     _updateToggle: function(){
+      var self = this;
+      document.querySelectorAll('[data-set-lang]').forEach(function(b){
+        var on = b.getAttribute('data-set-lang') === self.lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
       var en = document.getElementById('btn-lang-en');
       var te = document.getElementById('btn-lang-te');
       if(en) en.classList.toggle('active', this.lang==='en');
