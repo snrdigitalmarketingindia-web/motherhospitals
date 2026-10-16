@@ -72,6 +72,7 @@ body.mh-offer-active .price-card{display:block!important}
 /* Inline offer price text — hidden by default, shown only when offer is active */
 .mh-offer-price{display:none!important}
 body.mh-offer-active .mh-offer-price{display:inline!important}
+body.mh-offer-active div.mh-offer-price{display:block!important}
 
 /* TRUST BADGES */
 .trust-bar{background:var(--white);border-bottom:1px solid var(--purple-light);overflow:hidden}
