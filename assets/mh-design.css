@@ -409,3 +409,55 @@ li.nav-lang-d{margin:0 4px}
   body.mh-tool .hero{position:relative}
   .nav-lang-h{display:inline-flex;position:absolute;right:var(--mh-side,5%);top:50%;transform:translateY(-50%)}
 }
+
+/* 23. Phone polish (≤600px) — Oct 2026: readable small text, real tap targets, tighter cards, shorter pages */
+@media(max-width:600px){
+  /* type scale */
+  body h1{font-size:clamp(25px,7.4vw,29px);line-height:1.18}
+  body h2{font-size:clamp(21px,6vw,25px);line-height:1.22}
+  body h3{font-size:17px;line-height:1.3}
+  /* section rhythm: less dead space between blocks */
+  body section{padding-top:38px;padding-bottom:38px}
+  .page-hero,.hero,.article-hero,.blog-hero{padding-top:28px!important;padding-bottom:26px!important}
+  .page-hero p,.hero p,.article-hero p,.blog-hero p{font-size:15px;line-height:1.6}
+  /* cards: tighter padding so text gets the width */
+  .content-card,.card,.benefit-card,.dept-card,.step-card,.cred-card,.reason,.scan-card,.info-box,.highlight-box,.warn-box,.emotion-box,.reassurance-box,.author-box,.dr-strip,.doc-strip,.svc-card,.why-card,.service-card,.feature-card,.price-card,.criteria-card,.reason-card{padding:18px 18px!important}
+  .rel-card,.related-card{padding:14px 16px!important}
+  section div[style*="border-radius"][style*="padding:2rem"],section div[style*="border-radius"][style*="padding:1.6rem"],section div[style*="border-radius"][style*="padding:1.5rem"]{padding:18px!important}
+  .content-grid,.card-grid,.cards,.grid-3,.grid-2{gap:12px!important}
+  /* FAQs: compact questions and answers */
+  details summary,.faq-q{padding:14px 16px!important;font-size:15px;line-height:1.45}
+  details>p,details>div,.faq-a,.faq-answer{padding:0 16px 14px!important;font-size:14.5px;line-height:1.65}
+  details.faq-item,.faq-item{margin-bottom:10px!important}
+  /* tables: smaller, denser cells */
+  table{font-size:13px}
+  th,td{padding:8px 9px!important;line-height:1.45}
+  /* header: comfortable tap targets */
+  .top-bar a{display:inline-flex;align-items:center;min-height:32px}
+  .top-bar{padding-top:0!important;padding-bottom:0!important}
+  nav .hamburger{width:44px;height:44px;align-items:center;justify-content:center;padding:0}
+  .trust-bar .trust-item{font-size:12px}
+  /* footer: two-column link lists, readable sizes, bigger taps */
+  footer .fc ul{display:grid!important;grid-template-columns:1fr 1fr;column-gap:14px;row-gap:0!important}
+  footer .fc a{display:block;font-size:13.5px;padding:7px 0;line-height:1.35}
+  footer .fc h4{margin-bottom:6px}
+  footer .fg-grid{gap:26px!important}
+  footer .fl-sub,footer .footer-badge{font-size:12px}
+  footer .fb a{display:inline-block;padding:8px 6px}
+}
+@media(max-width:600px){
+  body .section-title,body section h2,body .cta-section h2,body .section h2{font-size:clamp(21px,6vw,25px)!important;line-height:1.22!important}
+  footer .fb a{font-size:13px!important}
+  footer .fc a{padding:8px 0}
+  /* hero buttons sit side by side instead of stacking */
+  .page-hero .hero-ctas,.page-hero .page-ctas,.page-hero .cta-btns,.hero .hero-ctas,.hero .cta-btns,.page-hero .btn-row,.hero .btn-row{display:flex!important;flex-wrap:wrap;gap:10px!important}
+  .page-hero .hero-ctas>a,.page-hero .page-ctas>a,.page-hero .cta-btns>a,.hero .hero-ctas>a,.hero .cta-btns>a,.page-hero .btn-row>a,.hero .btn-row>a{flex:1 1 100%;justify-content:center;text-align:center;margin:0!important;white-space:nowrap;padding-top:13px!important;padding-bottom:13px!important}
+  .page-hero .hero-badge,.hero .hero-badge,.page-hero .badge{margin-bottom:12px!important}
+}
+@media(max-width:600px){
+  .hero .hero-btns,.page-hero .hero-btns{display:flex!important;flex-direction:column;gap:10px!important;align-items:stretch}
+  .hero .hero-btns>a,.page-hero .hero-btns>a{justify-content:center;text-align:center;margin:0!important;padding-top:13px!important;padding-bottom:13px!important}
+  .hero:has(.hero-price) .stat-row,.page-hero:has(.hero-price) .stat-row{display:none!important}
+  .page-hero .hero-price{margin:14px auto!important}
+}
+body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero .hero-chips,body.mh-tool .hero .hero-sub{display:none!important}
