@@ -495,3 +495,17 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
   .cta-section .cta-btns,.cta-inner .cta-btns,.cta-box .cta-btns,.page-hero .hero-btns,.page-hero .hero-pill,.page-hero .hero-price{margin-left:0!important;margin-right:0!important;justify-content:flex-start}
 }
 @media(max-width:600px){.cta-section .cta-btns>a,.cta-inner .cta-btns>a,.cta-box .cta-btns>a{min-height:46px;align-items:center;text-decoration:none!important;padding-top:12px;padding-bottom:12px}}
+/* 25. Free tools: optional "email me this result" box (appears after a result) */
+.mh-email-result{margin:18px 0 8px;padding:20px;border:1px solid var(--mh-hair,#e8d5f0);border-radius:16px;background:#faf6fd}
+.mh-email-result h3{margin:0 0 6px;font-size:18px;color:var(--purple,#58037c)}
+.mh-email-result .mh-er-intro{margin:0 0 14px;font-size:14.5px;line-height:1.6;color:var(--text-mid,#4a2d5e)}
+.mh-email-result form{display:grid;gap:12px}
+.mh-er-l{display:grid;gap:5px;font-size:13.5px;font-weight:600;color:var(--text,#1e0a2e)}
+.mh-er-l input{height:46px;padding:0 14px;border:1.5px solid #dcc9ea;border-radius:10px;font-size:16px;background:#fff}
+.mh-er-l input:focus{outline:none;border-color:var(--purple,#58037c);box-shadow:0 0 0 3px rgba(88,3,124,.12)}
+.mh-er-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.55;color:var(--text-mid,#4a2d5e)}
+.mh-er-consent input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--purple,#58037c)}
+.mh-er-consent a{color:var(--purple,#58037c);text-decoration:underline}
+.mh-er-err{margin:0;font-size:13px;color:#b00020}
+.mh-er-btn{height:48px;border:0;border-radius:999px;background:var(--purple,#58037c);color:#fff;font-size:15.5px;font-weight:700;cursor:pointer}
+.mh-er-thanks{margin:0;padding:12px 14px;border-radius:10px;background:#e9f7ef;color:#1b5e3a;font-size:14.5px;line-height:1.55}

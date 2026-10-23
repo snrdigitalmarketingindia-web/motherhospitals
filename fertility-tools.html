@@ -6,8 +6,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"/>
 <link rel="stylesheet" href="/assets/style.min.css"/>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Fertility Tools & Calculators — Period, Ovulation, IVF, Pregnancy | Mother Hospitals Hyderabad</title>
 <meta name="description" content="15 free fertility calculators for Indian women — period tracker, ovulation calculator, IVF success estimator, due date calculator, AMH interpreter, PCOS assessment & more. Mother Hospitals, Boduppal Hyderabad.">
@@ -70,14 +68,14 @@
 }
 .hero{background:linear-gradient(135deg,#1a0a2e 0%,#58037c 60%,#aa045a 100%) !important}</style>
 <meta name="google-site-verification" content="TO8ojQ_7Pwo9Dhjgga-e1uFqADJt_D-OooBDOZLJLGM"/>
-<link rel="stylesheet" href="/assets/mh-design.css?v=11"/>
+<link rel="stylesheet" href="/assets/mh-design.css?v=12"/>
 <script src="/assets/js/seasonal-banner.js?v=4" defer></script>
 <script src="/assets/js/mh-analytics.js?v=1" defer></script>
 </head>
 <script>
 window.pageT = {
  en: {
- hero_badge: "100% Free · Sign in with Google · Mother Hospitals Hyderabad",
+ hero_badge: "100% Free · No Sign-Up · Mother Hospitals Hyderabad",
  hero_h1: "Free Fertility Tools<br><em>& Calculators</em>",
  hero_sub: "15 evidence-based fertility calculators designed for Indian women — period tracking, ovulation prediction, IVF planning, pregnancy milestones, and more. All free, instant, no registration required.",
  stat_tools: "Free Tools",
@@ -138,7 +136,7 @@ window.pageT = {
  why6_desc: "Switch language anytime using the toggle above"
  },
  te: {
- hero_badge: "100% ఉచితం · Google తో Sign in చేయండి · మదర్ హాస్పిటల్స్ హైదరాబాద్",
+ hero_badge: "100% ఉచితం · Sign-up అవసరం లేదు · మదర్ హాస్పిటల్స్ హైదరాబాద్",
  hero_h1: "ఉచిత ఫెర్టిలిటీ టూల్స్<br><em>& కాల్కులేటర్లు</em>",
  hero_sub: "Indian women కోసం 15 ఫ్రీ ఫెర్టిలిటీ కాల్కులేటర్లు — పీరియడ్ ట్రాకింగ్, ఓవులేషన్ ప్రెడిక్షన్, IVF ప్లానింగ్, ప్రెగ్నెన్సీ మైల్‌స్టోన్స్. అన్నీ ఉచితమే, వెంటనే results, రిజిస్ట్రేషన్ అక్కర్లేదు.",
  stat_tools: "ఉచిత టూల్స్",
@@ -201,26 +199,6 @@ window.pageT = {
 };
 </script>
 <body class="mh-tool">
-<!-- GOOGLE SIGN-IN OVERLAY -->
-<div id="gsi-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(135deg,#1a0a2e 0%,#58037c 60%,#aa045a 100%);display:flex;align-items:center;justify-content:center;padding:1rem;">
-<div style="background:#fff;border-radius:20px;padding:2.5rem 2rem;max-width:420px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,0.35);">
-  <picture><source srcset="/assets/logo.webp" type="image/webp"/><img src="/assets/logo.png" alt="Mother Hospitals Logo" style="height:56px;width:56px;object-fit:contain;margin-bottom:0.8rem"/></picture>
-  <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:700;color:#58037c;line-height:1.2;margin-bottom:0.3rem">Mother Hospitals &amp; IVF Center</div>
-  <div style="font-size:0.78rem;color:#8a6a9a;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.6rem">Free Fertility Tools · Boduppal, Hyderabad</div>
-  <div style="background:#f5edfb;border-radius:12px;padding:1.2rem;margin-bottom:1.8rem;text-align:left">
-    <div style="font-size:0.95rem;font-weight:600;color:#1e0a2e;margin-bottom:0.5rem">🔓 Access 15 Free Fertility Tools</div>
-    <div style="font-size:0.84rem;color:#4a2d5e;line-height:1.6">Sign in with your Google account to unlock all calculators — Period Tracker, Ovulation Calculator, IVF Success Estimator and 12 more.</div>
-  </div>
-  <div id="gsi-btn-container" style="display:flex;justify-content:center;min-height:44px;"></div>
-  <div style="font-size:0.75rem;color:#8a6a9a;margin-top:1.2rem">🔒 Your data stays private. Nothing is stored on our servers.</div>
-</div>
-</div>
-<!-- USER BADGE (shown after sign-in) -->
-<div id="user-badge" style="display:none;position:fixed;top:12px;right:16px;z-index:300;background:#fff;border:1px solid #e8d5f5;border-radius:50px;padding:5px 14px 5px 6px;align-items:center;gap:8px;box-shadow:0 2px 12px rgba(88,3,124,0.12)">
-  <img id="user-avatar" src="" alt="" style="width:28px;height:28px;border-radius:50%;object-fit:cover"/>
-  <span id="user-name" style="font-size:0.8rem;font-weight:500;color:#1e0a2e"></span>
-  <button onclick="signOut()" style="background:none;border:none;cursor:pointer;font-size:0.75rem;color:#8a6a9a;padding:0;margin-left:4px" title="Sign out">✕</button>
-</div>
 <style>a{color:var(--teal);text-decoration:none}
 
 .nav-links a.active{color:var(--teal);font-weight:700}
@@ -655,91 +633,5 @@ function filterTools(cat, btn){
 }
 </script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
-<script>
-(function(){
-  var CLIENT_ID = '741518418347-r0e28h8v6la6g00q4ouoshglro50dao7.apps.googleusercontent.com';
-  var SK = 'mh_ft_user';
-
-  function parseJwt(token){
-    try{ return JSON.parse(atob(token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))); }
-    catch(e){ return null; }
-  }
-
-  function showUser(user){
-    var overlay = document.getElementById('gsi-overlay');
-    var badge = document.getElementById('user-badge');
-    if(overlay) overlay.style.display = 'none';
-    if(badge){
-      badge.style.display = 'flex';
-      document.getElementById('user-avatar').src = user.picture || '';
-      document.getElementById('user-name').textContent = user.given_name || user.name || user.email;
-    }
-  }
-
-  function submitLead(user){
-    var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse';
-    var url = FORM
-      + '?entry.1033771490=' + encodeURIComponent(user.name)
-      + '&entry.826156409='  + encodeURIComponent(user.email)
-      + '&entry.1895050244=' + encodeURIComponent('Free Tools Sign-In')
-      + '&entry.957846797='  + encodeURIComponent('Google Sign-In — Free Fertility Tools');
-    fetch(url, {method:'POST', mode:'no-cors'}).catch(function(){});
-  }
-
-  function onSignIn(response){
-    var payload = parseJwt(response.credential);
-    if(!payload) return;
-    var user = {name:payload.name, given_name:payload.given_name, email:payload.email, picture:payload.picture, exp:payload.exp};
-    localStorage.setItem(SK, JSON.stringify(user));
-    showUser(user);
-    submitLead(user);
-    /* dismiss Google's post-sign-in toast immediately */
-    if(window.google && google.accounts && google.accounts.id){
-      google.accounts.id.cancel();
-      google.accounts.id.disableAutoSelect();
-    }
-    if(typeof gtag !== 'undefined') gtag('event','generate_lead',{method:'Google',form_type:'free_tools_signin',page:'fertility-tools'});
-  }
-
-  window.signOut = function(){
-    localStorage.removeItem(SK);
-    document.getElementById('user-badge').style.display = 'none';
-    document.getElementById('gsi-overlay').style.display = 'flex';
-    if(window.google && google.accounts) google.accounts.id.disableAutoSelect();
-  };
-
-  /* check returning user first — skip overlay if valid session */
-  var saved = localStorage.getItem(SK);
-  if(saved){
-    try{
-      var u = JSON.parse(saved);
-      if(u.exp && Date.now()/1000 < u.exp){ showUser(u); saved = null; }
-      else localStorage.removeItem(SK);
-    } catch(e){ localStorage.removeItem(SK); saved = null; }
-  }
-
-  /* initialise GIS only after script loads — render button explicitly, NO auto-prompt */
-  function initGSI(){
-    google.accounts.id.initialize({
-      client_id: CLIENT_ID,
-      callback: onSignIn,
-      auto_select: false,
-      cancel_on_tap_outside: true,
-      use_fedcm_for_prompt: false
-    });
-    /* cancel any One Tap that might fire */
-    google.accounts.id.cancel();
-    /* render the standard "Sign in with Google" button */
-    google.accounts.id.renderButton(
-      document.getElementById('gsi-btn-container'),
-      {theme:'outline', size:'large', shape:'pill', text:'signin_with', logo_alignment:'left', width:280}
-    );
-  }
-
-  /* wait for GIS script to be ready */
-  if(window.google && google.accounts){ initGSI(); }
-  else { window.addEventListener('load', function(){ if(window.google && google.accounts) initGSI(); }); }
-})();
-</script>
 </body>
 </html>
