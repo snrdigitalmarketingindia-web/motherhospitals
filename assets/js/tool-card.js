@@ -17,7 +17,10 @@
       score:'Your score', outOf:'out of {n}', ivf:'IVF estimate', perTransfer:'per transfer', cum:'Over 3 cycles',
       ivfNote:'General estimate from published data — not Mother Hospitals results', semen:'Semen analysis', normal:'Normal',
       border:'Borderline', below:'Below ref.', params:'parameters normal', plan:'Your IVF plan', transfer:'Embryo transfer', test:'Pregnancy test', start:'Cycle start',
-      shareMsg:'My result from the free {tool} at Mother Hospitals:'},
+      shareMsg:'My result from the free {tool} at Mother Hospitals:',
+      thisCycle:'This cycle', cycle2:'Next cycle', cycle3:'Cycle after',
+      copied:'Result picture copied ✓', pasteHint:'Open WhatsApp, pick the chat and press {k} to attach the picture.',
+      saved:'Result picture saved to your Downloads ✓', attachHint:'Open WhatsApp and attach the saved picture to your message.', openWa:'Open WhatsApp'},
     te: {brand:'Mother Hospitals & IVF Center', foot:'అంచనా మాత్రమే · diagnosis కాదు', save:'Image save', share:'WhatsApp',
       ov:'మీ నెక్స్ట్ ఓవ్యులేషన్', fertile:'ఫెర్టైల్ విండో', next:'నెక్స్ట్ పీరియడ్', ovDay:'ఓవ్యులేషన్', best:'Try చేయడానికి best days',
       cycleDay:'ఈ రోజు మీ సైకిల్‌లో', window:'మీ నెక్స్ట్ ఫెర్టైల్ విండో', now:'ఇప్పుడే నడుస్తోంది', inDays:'{n} రోజుల్లో', today:'ఈ రోజే',
@@ -26,7 +29,10 @@
       score:'మీ స్కోర్', outOf:'{n} లో', ivf:'IVF అంచనా', perTransfer:'ఒక transfer కి', cum:'3 cycles లో',
       ivfNote:'Published data ఆధారంగా సాధారణ అంచనా — Mother Hospitals results కాదు', semen:'Semen analysis', normal:'Normal',
       border:'Borderline', below:'తక్కువ', params:'parameters normal', plan:'మీ IVF ప్లాన్', transfer:'Embryo transfer', test:'ప్రెగ్నెన్సీ టెస్ట్', start:'సైకిల్ మొదలు',
-      shareMsg:'Mother Hospitals ఉచిత {tool} లో నా result:'}
+      shareMsg:'Mother Hospitals ఉచిత {tool} లో నా result:',
+      thisCycle:'ఈ సైకిల్', cycle2:'నెక్స్ట్ సైకిల్', cycle3:'ఆ తర్వాత సైకిల్',
+      copied:'Result picture copy అయింది ✓', pasteHint:'WhatsApp open చేసి, chat select చేసి {k} నొక్కండి — picture attach అవుతుంది.',
+      saved:'Result picture మీ Downloads లో save అయింది ✓', attachHint:'WhatsApp open చేసి, save అయిన picture ని message కి attach చేయండి.', openWa:'WhatsApp open చేయండి'}
   };
   function lang(){ return (window.I18n && I18n.lang === 'te') ? 'te' : 'en'; }
   function l(k, n){ return (L[lang()][k] || L.en[k]).replace('{n}', n); }
@@ -44,7 +50,7 @@
   function dm(d){ return d.getDate() + ' ' + MON[d.getMonth()]; }
   function dmy(d){ return dm(d) + ' ' + d.getFullYear(); }
   function rng(a, b){ return a.getMonth() === b.getMonth() ? a.getDate() + '–' + dm(b) : dm(a) + ' – ' + dm(b); }
-  function away(d){ var n = diff(today(), d); return n === 0 ? l('today') : n > 0 ? l('inDays', n) : ''; }
+  function away(d){ var n = diff(today(), d); return n === 0 ? l('today') : n === 1 && lang() === 'en' ? 'in 1 day' : n > 0 ? l('inDays', n) : ''; }
   function num(s){ var m = /-?\d+(\.\d+)?/.exec(s || ''); return m ? parseFloat(m[0]) : NaN; }
 
   /* next ovulation on or after today, from LMP + cycle length (same rule the calculators use) */
@@ -55,12 +61,19 @@
   }
   function cycleVis(start, ov, len, plen){ var ti = diff(start, today()); return {type:'cycle', len:len, plen:plen || 5, ov:diff(start, ov), today: ti >= 0 && ti < len ? ti : -1}; }
 
+  /* the two cycles after the one shown, for the 3-ring view; fn(start, ov) gives [big, sub] */
+  function more(start, ov, len, plen, fn){
+    return [1, 2].map(function(k){ var st = add(start, k * len), o = add(ov, k * len), t = fn(st, o);
+      return {label:l(k === 1 ? 'cycle2' : 'cycle3'), vis:cycleVis(st, o, len, plen), big:t[0], sub:t[1]}; });
+  }
+
   /* ---------- one spec per tool ---------- */
   var SPEC = {
     'ovulation-calculator': function(){
       var ov = pd(tx('ovDateMain')), np = pd(tx('nextPeriod')), len = +iv('cycle') || 28; if(!ov || !np) return null;
       var start = add(np, -len);
       return {kicker:'🥚 ' + l('ov'), vis:cycleVis(start, ov, len), big:dm(ov), sub:away(ov),
+        more:more(start, ov, len, 5, function(st, o){ return [dm(o), l('fertile') + ' ' + rng(add(o, -5), add(o, 1))]; }),
         chips:[['🌸', l('fertile'), rng(pd(tx('fertStart')), pd(tx('fertEnd')))], ['🩸', l('next'), dm(np)]],
         share:l('ov') + ': ' + dmy(ov) + ' · ' + l('fertile') + ': ' + rng(pd(tx('fertStart')), pd(tx('fertEnd')))};
     },
@@ -69,6 +82,7 @@
       if(!day || !np || !ov) return null;
       var start = add(today(), -(day - 1)), fs = pd(tx('fertStart')), fe = pd(tx('fertEnd').replace(/^\D+/, ''));
       return {kicker:'🌙 ' + l('cycleDay'), vis:cycleVis(start, ov, len, plen), big:tx('cycleDay'), sub:tx('phaseLabel'),
+        more:more(start, ov, len, plen, function(st, o){ return ['🩸 ' + dm(st), l('ovDay') + ' ' + dm(o)]; }),
         chips:[['🩸', l('next'), dm(np) + ' · ' + tx('nextPeriodSub')], ['🥚', l('ovDay'), dm(ov)], fs && fe ? ['🌸', l('fertile'), rng(fs, fe)] : null],
         share:l('next') + ': ' + dmy(np) + ' · ' + l('ovDay') + ': ' + dmy(ov)};
     },
@@ -76,6 +90,7 @@
       var lmp = iso(iv('lmp')), len = +iv('cycle') || 28; if(!lmp) return null;
       var c = nextCycle(lmp, len), fs = add(c.ov, -5), fe = add(c.ov, 1), t = today();
       return {kicker:'🌸 ' + l('window'), vis:cycleVis(c.start, c.ov, len), big:rng(fs, fe), sub: t >= fs && t <= fe ? l('now') : away(fs),
+        more:more(c.start, c.ov, len, 5, function(st, o){ return [rng(add(o, -5), add(o, 1)), l('ovDay') + ' ' + dm(o)]; }),
         chips:[['🥚', l('ovDay'), dm(c.ov)], ['🩸', l('next'), dm(add(c.start, len))]],
         share:l('window') + ': ' + rng(fs, fe) + ' · ' + l('ovDay') + ': ' + dmy(c.ov)};
     },
@@ -83,6 +98,7 @@
       var lmp = iso(iv('lmp')), len = +iv('cycle') || 28; if(!lmp) return null;
       var c = nextCycle(lmp, len);
       return {kicker:'💞 ' + l('best'), vis:cycleVis(c.start, c.ov, len), big:rng(add(c.ov, -1), c.ov), sub:away(add(c.ov, -1)),
+        more:more(c.start, c.ov, len, 5, function(st, o){ return [rng(add(o, -1), o), l('ovDay') + ' ' + dm(o)]; }),
         chips:[['🥚', l('ovDay'), dm(c.ov)], ['🌸', l('fertile'), rng(add(c.ov, -5), add(c.ov, 1))]],
         share:l('best') + ': ' + rng(add(c.ov, -1), c.ov) + ' · ' + l('ovDay') + ': ' + dmy(c.ov)};
     },
@@ -214,6 +230,10 @@
     '.mhc-vis{position:relative;width:220px;max-width:100%;margin:6px auto 0}.mhc-vis svg{display:block;width:100%;height:auto}' +
     '.mhc-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 40px}' +
     '.mhc-gauge .mhc-center{position:static;padding:0;margin-top:-6px}.mhc-steps .mhc-center{position:static;padding:0;margin-top:8px}' +
+    '.mhc{container-type:inline-size}.mhc-rings{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;align-items:end}.mhc-rmain{grid-column:1/-1}' +
+    '.mhc-rl{text-align:center;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:6px}' +
+    '.mhc-rsm .mhc-vis{width:100%;max-width:190px}.mhc-rsm .mhc-center{padding:0 13%}.mhc-rsm .mhc-big{font-size:1.05rem;letter-spacing:0;white-space:nowrap}.mhc-rsm .mhc-sub{font-size:.75rem;font-weight:600;line-height:1.25;color:rgba(255,255,255,.85)}' +
+    '@container (min-width:640px){.mhc-rings{grid-template-columns:1.35fr 1fr 1fr;gap:12px 28px;align-items:center}.mhc-rmain{grid-column:auto}.mhc-rmain .mhc-vis{width:260px}.mhc-rsm .mhc-vis{max-width:210px}.mhc-rsm .mhc-big{font-size:1.35rem}}' +
     '.mhc-big{font-size:2.3rem;font-weight:900;line-height:1.05;letter-spacing:-.02em;color:#fff}' +
     '.mhc-sub{font-size:.88rem;font-weight:700;color:#ffd166;margin-top:4px}' +
     '.mhc-head{text-align:center;font-size:1.02rem;font-weight:800;margin:12px auto 2px;max-width:30ch;color:#fff}' +
@@ -227,6 +247,8 @@
     '.mhc-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 8px;font-size:.75rem;color:rgba(255,255,255,.7);margin-top:14px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)}' +
     '.mhc-act{display:flex;gap:8px;margin-top:10px}.mhc-act button,.mhc-act a{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:50px;font-size:.86rem;font-weight:700;cursor:pointer;text-decoration:none!important;text-align:center;padding:4px 10px;line-height:1.2}' +
     '.mhc-save{background:#fff;color:#58037c;border:2px solid #58037c}.mhc-wa{background:#25d366;color:#fff!important;border:2px solid #25d366}' +
+    '.mhc-desk{margin-top:10px;padding:12px 14px;border-radius:14px;background:#effcf3;border:1px solid #25d366;color:#0b3d22;font-size:.86rem;line-height:1.45;text-align:center}' +
+    '.mhc-desk a{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:8px 18px;border-radius:50px;background:#25d366;color:#fff!important;font-weight:700;text-decoration:none!important}' +
     '@media(min-width:700px){.mhc-card{padding:24px 26px 18px}.mhc-vis{width:240px}}';
 
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
@@ -236,12 +258,16 @@
       return '<div class="mhc-chip"><span class="e">' + c[0] + '</span><div>' + (c[1] ? '<small>' + esc(c[1]) + '</small>' : '') + '<b>' + esc(c[2]) + '</b></div></div>'; }).join('');
     return '<div class="mhc-card" id="mhc-card">' +
       '<div class="mhc-top"><span class="mhc-kicker">' + esc(s.kicker) + '</span><span class="mhc-brand"><img src="/assets/logo.webp" alt="" width="24" height="24">Mother Hospitals</span></div>' +
+      (s.more ? '<div class="mhc-rings"><div class="mhc-rmain"><div class="mhc-rl">' + esc(l('thisCycle')) + '</div>' : '') +
       '<div class="mhc-vis mhc-' + s.vis.type + '">' + svg(s.vis) + '<div class="mhc-center"><div class="mhc-big">' + esc(s.big) + '</div>' + (s.sub ? '<div class="mhc-sub">' + esc(s.sub) + '</div>' : '') + '</div></div>' +
+      (s.more ? '</div>' + s.more.map(function(m){ return '<div class="mhc-rsm"><div class="mhc-rl">' + esc(m.label) + '</div><div class="mhc-vis mhc-cycle">' + svg(m.vis) +
+        '<div class="mhc-center"><div class="mhc-big">' + esc(m.big) + '</div><div class="mhc-sub">' + esc(m.sub) + '</div></div></div></div>'; }).join('') + '</div>' : '') +
       legend(s.vis) + (s.head ? '<div class="mhc-head">' + esc(s.head) + '</div>' : '') +
       (chips ? '<div class="mhc-chips">' + chips + '</div>' : '') + (s.note ? '<p class="mhc-note">' + esc(s.note) + '</p>' : '') +
       '<div class="mhc-foot"><span>motherhospitals.co.in</span><span>' + esc(l('foot')) + '</span></div></div>' +
       '<div class="mhc-act"><button type="button" class="mhc-save">📥 ' + esc(l('save')) + '</button>' +
-      (s.noShare || !s.share ? '' : '<a class="mhc-wa" target="_blank" rel="noopener noreferrer">💬 ' + esc(l('share')) + '</a>') + '</div>';
+      (s.noShare || !s.share ? '' : '<a class="mhc-wa" target="_blank" rel="noopener noreferrer">💬 ' + esc(l('share')) + '</a>') + '</div>' +
+      '<div class="mhc-desk" hidden></div>';
   }
 
   /* ---------- saved image: the same card drawn on a canvas ---------- */
@@ -263,22 +289,35 @@
     ctx.fillStyle = '#fff'; ctx.textBaseline = 'alphabetic';
     ctx.font = '800 38px ' + F; ctx.fillText(wrapLines(ctx, s.kicker.toUpperCase(), 760)[0], 72, 120);
     ctx.font = '700 30px ' + F; ctx.fillStyle = 'rgba(255,255,255,.8)'; ctx.fillText(l('brand'), 72, 170);
-    var img = new Image();
-    img.onload = function(){
+    var list = [s.vis].concat((s.more || []).map(function(m){ return m.vis; })), imgs = [], left = list.length;
+    function fit(t, weight, size, maxW){ ctx.font = weight + ' ' + size + 'px ' + F; while(size > 40 && ctx.measureText(t).width > maxW){ size -= 4; ctx.font = weight + ' ' + size + 'px ' + F; } }
+    list.forEach(function(v, i){ var im = new Image(); im.onload = function(){ imgs[i] = im; if(--left === 0) go(); }; im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(v)); });
+    function go(){
+      var img = imgs[0];
       var inside = s.vis.type === 'cycle' || s.vis.type === 'ring' || s.vis.type === 'donut';
-      var vw = s.vis.type === 'steps' ? 760 : 640, vh = vw * img.height / img.width;
+      var vw = s.more ? 430 : s.vis.type === 'steps' ? 760 : 640, vh = vw * img.height / img.width, SW = 300, extra = s.more ? 60 + SW + 20 : 0;
       var head = [], chips = (s.chips || []).filter(function(c){ return c && c[2]; }), cols = Math.min(chips.length, 2), rows = Math.ceil(chips.length / 2);
       if(s.head){ ctx.font = '800 50px ' + F; head = wrapLines(ctx, s.head, 900).slice(0, 2); }
-      var hText = inside ? 0 : 140 + (s.sub ? 64 : 0), rest = hText + (head.length ? 50 + head.length * 64 : 0) + (rows ? 60 + rows * 170 - 20 : 0), avail = H - 160 - 230;
+      var hText = inside ? 0 : 140 + (s.sub ? 64 : 0), rest = extra + hText + (head.length ? 50 + head.length * 64 : 0) + (rows ? 60 + rows * 170 - 20 : 0), avail = H - 160 - 230;
       if(vh + rest > avail){ vh = Math.max(380, avail - rest); vw = vh * img.width / img.height; }
       var total = vh + rest;
       var y = 210 + Math.max(0, (H - 160 - 210 - total) / 2);
       ctx.drawImage(img, (W - vw) / 2, y, vw, vh);
       ctx.textAlign = 'center';
       var bigY = inside ? y + vh / 2 + (s.sub ? 20 : 40) : y + vh + 120;
-      ctx.fillStyle = '#fff'; ctx.font = '900 ' + (String(s.big).length > 9 ? 96 : 128) + 'px ' + F; ctx.fillText(s.big, W / 2, bigY);
+      ctx.fillStyle = '#fff'; fit(s.big, '900', 128, inside ? vw * 0.6 : 900); ctx.fillText(s.big, W / 2, bigY);
       if(s.sub){ ctx.fillStyle = '#ffd166'; ctx.font = '700 44px ' + F; ctx.fillText(s.sub, W / 2, bigY + 66); }
       y += vh + hText;
+      if(s.more){
+        y += 60;
+        s.more.forEach(function(m, i){ var cx = W / 2 + (i ? 1 : -1) * (SW / 2 + 40);
+          ctx.textAlign = 'center'; ctx.fillStyle = 'rgba(255,255,255,.75)'; ctx.font = '800 26px ' + F; ctx.fillText(m.label.toUpperCase(), cx, y - 14);
+          ctx.drawImage(imgs[i + 1], cx - SW / 2, y, SW, SW);
+          ctx.fillStyle = '#fff'; fit(m.big, '900', 52, SW * 0.6); ctx.fillText(m.big, cx, y + SW / 2 + 8);
+          ctx.fillStyle = 'rgba(255,255,255,.85)'; fit(m.sub, '600', 24, SW * 0.62); ctx.fillText(m.sub, cx, y + SW / 2 + 46);
+        });
+        y += SW + 20;
+      }
       if(head.length){ y += 50; ctx.fillStyle = '#fff'; ctx.font = '800 50px ' + F; head.forEach(function(t){ ctx.fillText(t, W / 2, y + 40); y += 64; }); }
       if(rows){
         y += 60; var gap = 24, cw = (W - 144 - gap * (cols - 1)) / cols;
@@ -294,8 +333,7 @@
       ctx.fillStyle = 'rgba(255,255,255,.8)'; ctx.font = '700 30px ' + F; ctx.fillText('motherhospitals.co.in', 72, H - 72);
       ctx.textAlign = 'right'; ctx.font = '600 26px ' + F; ctx.fillText(l('foot'), W - 72, H - 72);
       done(cv);
-    };
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(s.vis));
+    }
   }
 
   /* The image is made as soon as the card appears, so a tap can save or share it straight away
@@ -306,7 +344,10 @@
     draw(s, function(cv){ cv.toBlob(function(blob){
       var name = 'mother-hospitals-' + slug + '.jpg', file = null;
       try { file = new File([blob], name, {type:'image/jpeg'}); } catch(e) {}
-      png = {blob:blob, name:name, file:file, spec:s}; if(cb) cb(png);
+      png = {blob:blob, name:name, file:file, spec:s};
+      /* computers paste pictures from the clipboard, and the clipboard only takes PNG */
+      if(!touch) cv.toBlob(function(pb){ if(png && png.spec === s) png.pngBlob = pb; }, 'image/png');
+      if(cb) cb(png);
     }, 'image/jpeg', 0.92); });
   }
   function canShareFile(p){ try { return !!(p.file && navigator.canShare && navigator.canShare({files:[p.file]})); } catch(e) { return false; } }
@@ -326,10 +367,32 @@
       else download(p);
     });
   }
+  /* Computers: a wa.me link can only carry text, so copy the result picture to the clipboard
+     (or save it if copying isn't supported) and offer an "Open WhatsApp" button to paste it into. */
+  function shareDesktop(s, slug, text){
+    var panel = box && box.querySelector('.mhc-desk'); if(!panel) return false;
+    var key = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? '⌘V' : 'Ctrl+V';
+    var waUrl = 'https://wa.me/?text=' + encodeURIComponent(text);
+    function show(msg, hint){
+      panel.innerHTML = '<b>' + esc(l(msg)) + '</b><br>' + esc(l(hint).replace('{k}', key)) +
+        '<br><a href="' + waUrl + '" target="_blank" rel="noopener noreferrer">💬 ' + esc(l('openWa')) + '</a>';
+      panel.hidden = false;
+    }
+    function saveInstead(){ withPng(s, slug, function(p){ download(p); show('saved', 'attachHint'); track('whatsapp_saved', slug); }); }
+    var pngBlob = png && png.spec === s && png.pngBlob ? png.pngBlob : new Promise(function(res){ draw(s, function(cv){ cv.toBlob(res, 'image/png'); }); });
+    try {
+      if(!navigator.clipboard || !navigator.clipboard.write || !window.ClipboardItem) throw new Error('no clipboard');
+      navigator.clipboard.write([new ClipboardItem({'image/png': pngBlob})])
+        .then(function(){ show('copied', 'pasteHint'); track('whatsapp_copied', slug); }, saveInstead);
+    } catch(err) { saveInstead(); }
+    return true;
+  }
+
   /* WhatsApp: phones that can share files → share sheet with the image attached (pick WhatsApp);
-     otherwise the plain wa.me text link */
+     computers → picture copied to the clipboard + "Open WhatsApp"; otherwise the plain wa.me text link */
   function shareWa(s, slug, text, e){
     track('whatsapp', slug);
+    if(!touch){ if(shareDesktop(s, slug, text)) e.preventDefault(); return; }
     if(touch && png && png.spec === s && canShareFile(png)){
       e.preventDefault();
       /* iPhone WhatsApp drops the picture when text comes with it, so send the picture alone there */

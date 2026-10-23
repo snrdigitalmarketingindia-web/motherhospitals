@@ -667,15 +667,15 @@ function _renderOv(lmp,today,cycleLen,periodLen){
  const isFertile=today>=fertStart&&today<=fertEnd;
 
  document.getElementById('ovDateMain').textContent=fmt(nextOv);
- document.getElementById('ovDaysAway').textContent=daysToOv===0?t('today'):t('in_days').replace('{n}',daysToOv);
+ document.getElementById('ovDaysAway').textContent=daysToOv===0?t('today'):t('in_days').replace('{n}',daysToOv).replace(/^in 1 days$/,'in 1 day');
  document.getElementById('fertileAlertBox').style.display=isFertile?'block':'none';
  if(isFertile) document.getElementById('fertileAlertBox').innerHTML=t('fertile_alert');
  document.getElementById('fertStart').textContent=fmt(fertStart);
  document.getElementById('ovDate').textContent=fmt(nextOv);
- document.getElementById('ovSub').textContent=daysToOv===0?t('today'):daysToOv>0?t('in_days').replace('{n}',daysToOv):t('this_cycle');
+ document.getElementById('ovSub').textContent=daysToOv===0?t('today'):daysToOv>0?t('in_days').replace('{n}',daysToOv).replace(/^in 1 days$/,'in 1 day'):t('this_cycle');
  document.getElementById('fertEnd').textContent=fmt(fertEnd);
  document.getElementById('nextPeriod').textContent=fmt(nextPeriod);
- document.getElementById('nextPeriodSub').textContent=t('in_days').replace('{n}',daysBetween(today,nextPeriod));
+ document.getElementById('nextPeriodSub').textContent=t('in_days').replace('{n}',daysBetween(today,nextPeriod)).replace(/^in 1 days$/,'in 1 day');
 
  // Build 3-month calendars from LMP perspective
  const calContainer=document.getElementById('calContainer');
@@ -725,7 +725,7 @@ function resetCalc(){
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
-<script src="/assets/js/tool-card.js?v=2" defer></script>
+<script src="/assets/js/tool-card.js?v=3" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>
