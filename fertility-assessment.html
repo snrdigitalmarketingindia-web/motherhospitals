@@ -706,18 +706,19 @@ function calcAssessment(){
 function resetQuiz(){
  sels.fill(null);
  _lastTotal=null;
- buildQuiz;
+ buildQuiz();
  document.getElementById('result').style.display='none';
 }
 
 window._reapplyResults=function(){
- buildQuiz;
+ buildQuiz();
  if(_lastTotal!==null) _renderAssessment(_lastTotal);
 };
 
-buildQuiz;
+buildQuiz();
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
+<script src="/assets/js/tool-card.js?v=1" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

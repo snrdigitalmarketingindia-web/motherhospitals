@@ -589,7 +589,7 @@ function _renderPCOS(total){
  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
  const key=total<30?'low':total<60?'mod':'high';
  const rd=RESULT_DATA[key];
- const d=rd[lang]|rd.en;
+ const d=rd[lang]||rd.en;
  document.getElementById('scoreNum').textContent=total;
  document.getElementById('scoreLabel').textContent=d.label;
  document.getElementById('scoreDesc').textContent=d.desc;
@@ -608,20 +608,21 @@ function calcPCOS(){
 }
 
 window._reapplyResults=function(){
- buildQuiz;
+ buildQuiz();
  if(_lastPcosTotal!==null) _renderPCOS(_lastPcosTotal);
 };
 
 function resetCalc(){
  selections.fill(null);
  _lastPcosTotal=null;
- buildQuiz;
+ buildQuiz();
  document.getElementById('result').style.display='none';
 }
 
-buildQuiz;
+buildQuiz();
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
+<script src="/assets/js/tool-card.js?v=1" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

@@ -694,7 +694,7 @@ function _getStatus(val,limit){
 
 function _renderSemen(vals,dfiVal){
  const lang=typeof I18n!=='undefined'?I18n.lang:'en';
- const T=window.pageT[lang]|window.pageT.en;
+ const T=window.pageT[lang]||window.pageT.en;
  const rows=[];
  let normalCount=0,borderlineCount=0,lowCount=0;
  for(const k in WHO){
@@ -746,6 +746,7 @@ function resetCalc(){
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
+<script src="/assets/js/tool-card.js?v=1" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

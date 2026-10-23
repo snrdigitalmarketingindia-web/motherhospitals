@@ -771,8 +771,8 @@ function _renderTimeline(protocol,dateVal,blasto,pgta){
  events.forEach(ev=>{
  const item=document.createElement('div');
  item.className=`tl-item ph-${ev.phase}`;
- const evText=lang==='te'?(ev.event_te|ev.event):ev.event;
- const descText=lang==='te'?(ev.desc_te|ev.desc):ev.desc;
+ const evText=lang==='te'?(ev.event_te||ev.event):ev.event;
+ const descText=lang==='te'?(ev.desc_te||ev.desc):ev.desc;
  const dayStr=ev.day>=0?`${dayLbl} ${ev.day}`:`${preLbl}${Math.abs(ev.day)}`;
  item.innerHTML=`<div><span class="phase-badge pb-${ev.phase}">${phaseLabels[ev.phase]}</span><span class="tl-date">${fmt(ev.date)}</span></div><div class="tl-day">${dayStr}</div><div class="tl-event">${evText}</div><div class="tl-desc">${descText}</div>`;
  container.appendChild(item);
@@ -799,6 +799,7 @@ window._reapplyResults=function(){
 };
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
+<script src="/assets/js/tool-card.js?v=1" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

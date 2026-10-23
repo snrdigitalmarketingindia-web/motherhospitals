@@ -716,7 +716,7 @@ function showWeek(lmp,gestDaysTotal){
  let dataWeek=wks[0];
  for(const w of wks){if(currentWeekDisplay>=w) dataWeek=w;}
  const data=BABY_DATA[dataWeek];
- const d=I18n.lang==='te'?(BABY_DATA_TE[dataWeek]|data):data;
+ const d=I18n.lang==='te'?(BABY_DATA_TE[dataWeek]||data):data;
 
  document.getElementById('babyEmoji').textContent=data.emoji;
  document.getElementById('babyWeekTitle').textContent=currentWeekDisplay;
@@ -750,11 +750,12 @@ function resetTracker(){
  document.getElementById('trackDate').value='';
  document.getElementById('trackMode').value='lmp';
  _lastLmpTrack=null;_lastGestDaysTrack=null;lmpForNav=null;
- updateTrackMode;
+ updateTrackMode();
  document.getElementById('result').style.display='none';
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
+<script src="/assets/js/tool-card.js?v=1" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>
