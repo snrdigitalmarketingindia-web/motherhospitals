@@ -582,7 +582,7 @@ function _renderConception(r){
  document.getElementById('lmpDisplay').textContent=fmt(r.lmp);
  document.getElementById('eddDisplay').textContent=fmt(r.edd);
  document.getElementById('gestDisplay').textContent=r.gestDays>0?`${r.gestWeeks}w ${r.gestDaysR}d`:t('not_yet_lmp');
- document.getElementById('gestDaysSub').textContent=r.gestDays>0?t('days_from_lmp').replace('{n}',r.gestDays):'';
+ document.getElementById('gestDaysSub').textContent=r.gestDays>0?t('days_from_lmp').replace('{n}',r.gestDays).replace(/\b1 days\b/,'1 day'):'';
  document.getElementById('embryoDisplay').textContent=r.embryoDays>0?`${r.embryoWeeks}w ${r.embryoDaysR}d`:t('not_yet_conceived');
 }
 
@@ -625,7 +625,7 @@ function resetCalc(){
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
-<script src="/assets/js/tool-card.js?v=3" defer></script>
+<script src="/assets/js/tool-card.js?v=4" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

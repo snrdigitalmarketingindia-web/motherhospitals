@@ -708,9 +708,9 @@ function showWeek(lmp,gestDaysTotal){
  document.getElementById('progressFill').style.width=pct+'%';
  document.getElementById('progressLabel').textContent=`${pct}${t('pct_complete')}`;
  document.getElementById('eddStat').textContent=fmt(edd);
- document.getElementById('daysRemain').textContent=daysLeft>0?t('days_remaining').replace('{n}',daysLeft):t('due_today');
+ document.getElementById('daysRemain').textContent=daysLeft>0?t('days_remaining').replace('{n}',daysLeft).replace(/\b1 days\b/,'1 day'):t('due_today');
  document.getElementById('concStat').textContent=fmt(addDays(lmp,14));
- document.getElementById('gestDays').textContent=t('gest_days_label').replace('{n}',gestDaysTotal);
+ document.getElementById('gestDays').textContent=t('gest_days_label').replace('{n}',gestDaysTotal).replace(/\b1 days\b/,'1 day');
 
  const wks=Object.keys(BABY_DATA).map(Number).sort((a,b)=>a-b);
  let dataWeek=wks[0];
@@ -755,7 +755,7 @@ function resetTracker(){
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
-<script src="/assets/js/tool-card.js?v=3" defer></script>
+<script src="/assets/js/tool-card.js?v=4" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>

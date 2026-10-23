@@ -51,6 +51,8 @@
   function dmy(d){ return dm(d) + ' ' + d.getFullYear(); }
   function rng(a, b){ return a.getMonth() === b.getMonth() ? a.getDate() + '–' + dm(b) : dm(a) + ' – ' + dm(b); }
   function away(d){ var n = diff(today(), d); return n === 0 ? l('today') : n === 1 && lang() === 'en' ? 'in 1 day' : n > 0 ? l('inDays', n) : ''; }
+  /* when the result was made, e.g. "23 Oct 2026, 5:08 pm" — printed on the card and the saved image */
+  function stamp(d){ return dmy(d) + ', ' + d.toLocaleTimeString('en-IN', {hour:'numeric', minute:'2-digit'}); }
   function num(s){ var m = /-?\d+(\.\d+)?/.exec(s || ''); return m ? parseFloat(m[0]) : NaN; }
 
   /* next ovulation on or after today, from LMP + cycle length (same rule the calculators use) */
@@ -264,7 +266,7 @@
         '<div class="mhc-center"><div class="mhc-big">' + esc(m.big) + '</div><div class="mhc-sub">' + esc(m.sub) + '</div></div></div></div>'; }).join('') + '</div>' : '') +
       legend(s.vis) + (s.head ? '<div class="mhc-head">' + esc(s.head) + '</div>' : '') +
       (chips ? '<div class="mhc-chips">' + chips + '</div>' : '') + (s.note ? '<p class="mhc-note">' + esc(s.note) + '</p>' : '') +
-      '<div class="mhc-foot"><span>motherhospitals.co.in</span><span>' + esc(l('foot')) + '</span></div></div>' +
+      '<div class="mhc-foot"><span>motherhospitals.co.in · 🕒 ' + esc(stamp(s.at)) + '</span><span>' + esc(l('foot')) + '</span></div></div>' +
       '<div class="mhc-act"><button type="button" class="mhc-save">📥 ' + esc(l('save')) + '</button>' +
       (s.noShare || !s.share ? '' : '<a class="mhc-wa" target="_blank" rel="noopener noreferrer">💬 ' + esc(l('share')) + '</a>') + '</div>' +
       '<div class="mhc-desk" hidden></div>';
@@ -290,23 +292,23 @@
     ctx.font = '800 38px ' + F; ctx.fillText(wrapLines(ctx, s.kicker.toUpperCase(), 760)[0], 72, 120);
     ctx.font = '700 30px ' + F; ctx.fillStyle = 'rgba(255,255,255,.8)'; ctx.fillText(l('brand'), 72, 170);
     var list = [s.vis].concat((s.more || []).map(function(m){ return m.vis; })), imgs = [], left = list.length;
-    function fit(t, weight, size, maxW){ ctx.font = weight + ' ' + size + 'px ' + F; while(size > 40 && ctx.measureText(t).width > maxW){ size -= 4; ctx.font = weight + ' ' + size + 'px ' + F; } }
+    function fit(t, weight, size, maxW){ ctx.font = weight + ' ' + size + 'px ' + F; while(size > 22 && ctx.measureText(t).width > maxW){ size -= 4; ctx.font = weight + ' ' + size + 'px ' + F; } }
     list.forEach(function(v, i){ var im = new Image(); im.onload = function(){ imgs[i] = im; if(--left === 0) go(); }; im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(v)); });
     function go(){
       var img = imgs[0];
       var inside = s.vis.type === 'cycle' || s.vis.type === 'ring' || s.vis.type === 'donut';
       var vw = s.more ? 430 : s.vis.type === 'steps' ? 760 : 640, vh = vw * img.height / img.width, SW = 300, extra = s.more ? 60 + SW + 20 : 0;
-      var head = [], chips = (s.chips || []).filter(function(c){ return c && c[2]; }), cols = Math.min(chips.length, 2), rows = Math.ceil(chips.length / 2);
+      var head = [], chips = (s.chips || []).filter(function(c){ return c && c[2]; }).slice(0, s.more ? 2 : 6), cols = Math.min(chips.length, 2), rows = Math.ceil(chips.length / 2);
       if(s.head){ ctx.font = '800 50px ' + F; head = wrapLines(ctx, s.head, 900).slice(0, 2); }
-      var hText = inside ? 0 : 140 + (s.sub ? 64 : 0), rest = extra + hText + (head.length ? 50 + head.length * 64 : 0) + (rows ? 60 + rows * 170 - 20 : 0), avail = H - 160 - 230;
+      var hText = inside ? 0 : 140 + (s.sub ? 64 : 0), rest = extra + hText + (head.length ? 50 + head.length * 64 : 0) + (rows ? 60 + rows * 170 - 20 : 0), avail = H - 200 - 230;
       if(vh + rest > avail){ vh = Math.max(380, avail - rest); vw = vh * img.width / img.height; }
       var total = vh + rest;
-      var y = 210 + Math.max(0, (H - 160 - 210 - total) / 2);
+      var y = 210 + Math.max(0, (H - 200 - 210 - total) / 2);
       ctx.drawImage(img, (W - vw) / 2, y, vw, vh);
       ctx.textAlign = 'center';
       var bigY = inside ? y + vh / 2 + (s.sub ? 20 : 40) : y + vh + 120;
       ctx.fillStyle = '#fff'; fit(s.big, '900', 128, inside ? vw * 0.6 : 900); ctx.fillText(s.big, W / 2, bigY);
-      if(s.sub){ ctx.fillStyle = '#ffd166'; ctx.font = '700 44px ' + F; ctx.fillText(s.sub, W / 2, bigY + 66); }
+      if(s.sub){ ctx.fillStyle = '#ffd166'; fit(s.sub, '700', 44, inside ? vw * 0.58 : 900); ctx.fillText(s.sub, W / 2, bigY + 66); }
       y += vh + hText;
       if(s.more){
         y += 60;
@@ -325,13 +327,14 @@
           ctx.fillStyle = 'rgba(255,255,255,.13)'; rr(ctx, x, yy, cw, 150, 30); ctx.fill();
           ctx.textAlign = 'left'; ctx.font = '56px ' + F; ctx.fillStyle = '#fff'; ctx.fillText(c[0], x + 28, yy + 96);
           if(c[1]){ ctx.font = '700 26px ' + F; ctx.fillStyle = 'rgba(255,255,255,.75)'; ctx.fillText(wrapLines(ctx, String(c[1]).toUpperCase(), cw - 140)[0], x + 112, yy + 62); }
-          ctx.font = '800 40px ' + F; ctx.fillStyle = '#fff'; ctx.fillText(wrapLines(ctx, c[2], cw - 140)[0], x + 112, c[1] ? yy + 112 : yy + 90);
+          ctx.fillStyle = '#fff'; fit(c[2], '800', 40, cw - 140); ctx.fillText(c[2], x + 112, c[1] ? yy + 112 : yy + 90);
         });
       }
       ctx.textAlign = 'left';
-      ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(72, H - 130, W - 144, 2);
-      ctx.fillStyle = 'rgba(255,255,255,.8)'; ctx.font = '700 30px ' + F; ctx.fillText('motherhospitals.co.in', 72, H - 72);
-      ctx.textAlign = 'right'; ctx.font = '600 26px ' + F; ctx.fillText(l('foot'), W - 72, H - 72);
+      ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(72, H - 170, W - 144, 2);
+      ctx.fillStyle = 'rgba(255,255,255,.85)'; ctx.font = '700 30px ' + F; ctx.fillText('motherhospitals.co.in', 72, H - 112);
+      ctx.fillStyle = 'rgba(255,255,255,.7)'; ctx.font = '600 28px ' + F; ctx.fillText('🕒 ' + stamp(s.at), 72, H - 64);
+      ctx.textAlign = 'right'; ctx.font = '600 26px ' + F; ctx.fillText(l('foot'), W - 72, H - 112);
       done(cv);
     }
   }
@@ -410,7 +413,7 @@
     if(shown){ try { s = make(); } catch(e) { s = null; } }
     if(!s){ if(box) box.hidden = true; return; }
     var key = JSON.stringify(s) + lang(); if(box && key === last){ box.hidden = false; return; }
-    last = key;
+    last = key; s.at = new Date();
     if(!box){
       var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
       box = document.createElement('div'); box.className = 'mhc'; box.setAttribute('aria-live', 'polite');

@@ -688,9 +688,9 @@ function _renderTrack(lmp, today, cycleLen, periodLen){
  if(isFertile) document.getElementById('fertileAlert').innerHTML = t('fertile_alert');
 
  document.getElementById('nextPeriod').textContent = fmt(nextPeriod);
- document.getElementById('nextPeriodSub').textContent = daysToNext===0 ? t('today') : t('in_days_pl').replace('{n}',daysToNext);
+ document.getElementById('nextPeriodSub').textContent = daysToNext===0 ? t('today') : t('in_days_pl').replace('{n}',daysToNext).replace(/\b1 days\b/,'1 day');
  document.getElementById('ovDate').textContent = fmt(ovDate);
- document.getElementById('ovSub').textContent = daysToOv>0 ? t('in_days_pl').replace('{n}',daysToOv) : daysToOv===0 ? t('today') : t('passed');
+ document.getElementById('ovSub').textContent = daysToOv>0 ? t('in_days_pl').replace('{n}',daysToOv).replace(/\b1 days\b/,'1 day') : daysToOv===0 ? t('today') : t('passed');
  document.getElementById('fertStart').textContent = fmt(fertStart);
  document.getElementById('fertEnd').textContent = t('to_prefix') + fmt(fertEnd);
  document.getElementById('cycleProgress').textContent = currentCycleDay + ' / ' + cycleLen;
@@ -729,7 +729,7 @@ function resetTracker(){
 }
 </script>
 <script src="/assets/js/tool-tracker.js?v=2"></script>
-<script src="/assets/js/tool-card.js?v=3" defer></script>
+<script src="/assets/js/tool-card.js?v=4" defer></script>
 <script src="/assets/js/offer-config.js"></script><script src="/assets/js/offer-manager.js"></script>
 </body>
 </html>
