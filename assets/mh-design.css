@@ -463,3 +463,17 @@ li.nav-lang-d{margin:0 4px}
 body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero .hero-chips,body.mh-tool .hero .hero-sub{display:none!important}
 /* Mother 9 delivery package prices are shown (owner decision 2026-10-23); other .price-card offers stay hidden */
 .delivery-prices .price-card{display:block!important}
+/* 24. Phones: no squeezed columns (Oct 2026) — text grids go to one column, small stat grids to two, rows wrap */
+@media(max-width:600px){
+  .services-grid,.condition-grid,.cause-grid,.grade-grid,.steps-list,.svc-grid,.service-grid,.feature-grid,.benefit-grid,.why-grid,.reason-grid,.cards-grid{grid-template-columns:1fr!important}
+  .stats-row,.stat-row,.stat-grid,.awards-grid,.hero-stats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}
+  .author-box,.hb-row,.timeline-row,.risk-row,.checklist,.hub-link{flex-wrap:wrap!important}
+  .author-box>*,.hb-row>*,.timeline-row>*,.risk-row>*{min-width:0;flex:1 1 100%!important}
+  section [style*="grid-template-columns:repeat(3"],section [style*="grid-template-columns:repeat(4"],section [style*="grid-template-columns: repeat(3"],section [style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}
+}
+@media(max-width:600px){
+  .stat-grid,.stats-row,.stat-row,.awards-grid{grid-template-columns:1fr!important}
+  .photo-caption{font-size:13px}
+}
+/* NMC: no "Unique" claim badge on featured service cards */
+.svc-card.featured::before{content:none!important;display:none!important}
