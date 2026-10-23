@@ -461,3 +461,5 @@ li.nav-lang-d{margin:0 4px}
   .page-hero .hero-price{margin:14px auto!important}
 }
 body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero .hero-chips,body.mh-tool .hero .hero-sub{display:none!important}
+/* Mother 9 delivery package prices are shown (owner decision 2026-10-23); other .price-card offers stay hidden */
+.delivery-prices .price-card{display:block!important}
