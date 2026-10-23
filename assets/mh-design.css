@@ -525,3 +525,20 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
   body h2[style],body section h2[style],body div h2[style]{font-size:clamp(21px,6vw,25px)!important;line-height:1.22!important;margin-bottom:1rem!important}
 }
 @media(max-width:960px){.nav-lang-m .lang-btn{height:28px!important;line-height:28px!important;padding:0 11px!important;font-size:12px!important}}
+/* 27. Blog: "Talk to Dr. E. Prashanthi Reddy" box halfway through each article */
+.mh-mid-cta{display:flex;gap:16px;align-items:flex-start;margin:28px 0;padding:18px 20px;border:1px solid #e8d5f0;border-left:4px solid var(--purple,#58037c);border-radius:0 14px 14px 0;background:#faf6fd;text-align:left}
+.mh-mid-cta picture{flex:none}
+.mh-mid-cta-img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid #fff;box-shadow:0 2px 8px rgba(88,3,124,.15)}
+.mh-mid-cta-body{min-width:0;flex:1}
+.mh-mid-cta .mh-mid-cta-t{margin:0 0 4px;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:700;color:var(--purple,#58037c);line-height:1.25}
+.mh-mid-cta .mh-mid-cta-p{margin:0 0 4px;font-size:15px;line-height:1.6;color:var(--text,#1e0a2e)}
+.mh-mid-cta .mh-mid-cta-cred{margin:0 0 12px;font-size:12.5px;color:var(--text-mid,#4a2d5e)}
+.mh-mid-cta-btns{display:flex;flex-wrap:wrap;gap:10px}
+.mh-mid-cta-btns a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none!important;white-space:nowrap}
+.mh-mid-cta-call{background:var(--purple,#58037c);color:#fff!important}
+.mh-mid-cta-wa{background:#1a8f4a;color:#fff!important}
+@media(max-width:600px){
+  .mh-mid-cta{padding:16px;gap:12px}
+  .mh-mid-cta-img{width:52px;height:52px}
+  .mh-mid-cta-btns a{flex:1 1 140px}
+}

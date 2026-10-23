@@ -5,6 +5,7 @@
  */
 (function () {
   var AREAS = [
+    ['.mh-mid-cta', 'blog_mid_cta'],
     ['.mob-cta-bar', 'mobile_bar'],
     ['.wa-float', 'whatsapp_float'],
     ['.top-bar', 'top_bar'],
