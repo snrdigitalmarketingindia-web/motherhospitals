@@ -210,21 +210,21 @@
     '.mhc-card::after{content:"";position:absolute;right:-70px;bottom:-60px;width:300px;height:300px;background:url(/assets/logo-variants/logo-mark-white.png) center/contain no-repeat;opacity:.09;pointer-events:none}.mhc-card>*{position:relative;z-index:1}' +
     '.mhc-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}' +
     '.mhc-kicker{font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.92)}' +
-    '.mhc-brand{display:flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:2px 9px 2px 2px;white-space:nowrap}.mhc-brand img{width:24px;height:24px;border-radius:50%;background:#fff}' +
+    '.mhc-brand{display:flex;align-items:center;gap:5px;font-size:.75rem;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:2px 9px 2px 2px;white-space:nowrap}.mhc-brand img{width:24px;height:24px;border-radius:50%;background:#fff}' +
     '.mhc-vis{position:relative;width:220px;max-width:100%;margin:6px auto 0}.mhc-vis svg{display:block;width:100%;height:auto}' +
     '.mhc-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 40px}' +
     '.mhc-gauge .mhc-center{position:static;padding:0;margin-top:-6px}.mhc-steps .mhc-center{position:static;padding:0;margin-top:8px}' +
     '.mhc-big{font-size:2.3rem;font-weight:900;line-height:1.05;letter-spacing:-.02em;color:#fff}' +
     '.mhc-sub{font-size:.88rem;font-weight:700;color:#ffd166;margin-top:4px}' +
     '.mhc-head{text-align:center;font-size:1.02rem;font-weight:800;margin:12px auto 2px;max-width:30ch;color:#fff}' +
-    '.mhc-leg{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.85);margin:8px 0 2px}' +
+    '.mhc-leg{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);margin:8px 0 2px}' +
     '.mhc-leg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:-6px;vertical-align:-1px}.mhc-leg i.mhc-leg-t{background:#fff;box-shadow:0 0 0 2px #58037c inset}' +
     '.mhc-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:14px}' +
     '.mhc-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:9px 11px;display:flex;gap:8px;align-items:center;min-width:0}' +
-    '.mhc-chip b{display:block;font-size:.95rem;font-weight:800;color:#fff;line-height:1.2}.mhc-chip small{display:block;font-size:.7rem;font-weight:600;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.04em}' +
+    '.mhc-chip b{display:block;font-size:.95rem;font-weight:800;color:#fff;line-height:1.2}.mhc-chip small{display:block;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.04em}' +
     '.mhc-chip span.e{font-size:1.25rem;line-height:1}' +
-    '.mhc-note{font-size:.72rem;color:rgba(255,255,255,.8);text-align:center;margin:10px 0 0}' +
-    '.mhc-foot{display:flex;justify-content:space-between;gap:8px;font-size:.68rem;color:rgba(255,255,255,.7);margin-top:14px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)}' +
+    '.mhc-note{font-size:.78rem;color:rgba(255,255,255,.8);text-align:center;margin:10px 0 0}' +
+    '.mhc-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 8px;font-size:.75rem;color:rgba(255,255,255,.7);margin-top:14px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)}' +
     '.mhc-act{display:flex;gap:8px;margin-top:10px}.mhc-act button,.mhc-act a{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:50px;font-size:.86rem;font-weight:700;cursor:pointer;text-decoration:none!important;text-align:center;padding:4px 10px;line-height:1.2}' +
     '.mhc-save{background:#fff;color:#58037c;border:2px solid #58037c}.mhc-wa{background:#25d366;color:#fff!important;border:2px solid #25d366}' +
     '@media(min-width:700px){.mhc-card{padding:24px 26px 18px}.mhc-vis{width:240px}}';
