@@ -542,3 +542,9 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
   .mh-mid-cta-img{width:52px;height:52px}
   .mh-mid-cta-btns a{flex:1 1 140px}
 }
+
+/* §28 Related reading line (internal links to weakly linked pages) */
+.mh-see-also a{color:var(--purple,#58037c);text-decoration:underline;text-underline-offset:2px}
+.mh-see-also a:hover{color:#aa045a}
+/* hero breadcrumb links (inline-styled on older pages): bigger tap area on phones */
+@media(max-width:768px){div>a[style*="color:rgba(255,255,255,0.6)"]{display:inline-block;padding:10px 0}}
