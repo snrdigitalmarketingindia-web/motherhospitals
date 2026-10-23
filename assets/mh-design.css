@@ -487,3 +487,11 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
   .filter-btn{font-size:13px;padding-left:12px!important;padding-right:12px!important}
   .btn-calc{font-size:15px}
 }
+/* Phones: long paragraphs read left-aligned (owner request 2026-10-23); short subtitles stay centred */
+@media(max-width:600px){
+  .cond-card,.heart-box,.cta-inner,.cta-box,.cta-section,.author-box,.content-card,.dr-strip,.highlight-box,.ladder-step,.truth-banner,.hope-bar,.pkg-note,body:not(.mh-tool) .page-hero,body:not(.mh-tool) .hero{text-align:left!important}
+  .cond-card *,.heart-box *,.cta-inner *,.cta-box *,.cta-section *,.author-box *,.content-card *,.dr-strip *,.highlight-box *,.ladder-step *,.truth-banner *,.hope-bar *,body:not(.mh-tool) .page-hero p,body:not(.mh-tool) .page-hero h1,body:not(.mh-tool) .page-hero h2,body:not(.mh-tool) .hero p,body:not(.mh-tool) .hero h1{text-align:left!important}
+  .section-inner>p:not(.section-sub):not(.section-label),section>p:not(.section-sub):not(.section-label),.section-wrap>div>div>p,.container>p{text-align:left!important}
+  .cta-section .cta-btns,.cta-inner .cta-btns,.cta-box .cta-btns,.page-hero .hero-btns,.page-hero .hero-pill,.page-hero .hero-price{margin-left:0!important;margin-right:0!important;justify-content:flex-start}
+}
+@media(max-width:600px){.cta-section .cta-btns>a,.cta-inner .cta-btns>a,.cta-box .cta-btns>a{min-height:46px;align-items:center;text-decoration:none!important;padding-top:12px;padding-bottom:12px}}
