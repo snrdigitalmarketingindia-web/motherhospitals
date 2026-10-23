@@ -298,19 +298,45 @@
     img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(s.vis));
   }
 
+  /* The image is made as soon as the card appears, so a tap can save or share it straight away
+     (browsers only allow sharing a file directly inside the tap, not after waiting for a drawing). */
+  var png = null;
+  function prepare(s, slug, cb){
+    png = null;
+    draw(s, function(cv){ cv.toBlob(function(blob){
+      var name = 'mother-hospitals-' + slug + '.jpg', file = null;
+      try { file = new File([blob], name, {type:'image/jpeg'}); } catch(e) {}
+      png = {blob:blob, name:name, file:file, spec:s}; if(cb) cb(png);
+    }, 'image/jpeg', 0.92); });
+  }
+  function canShareFile(p){ try { return !!(p.file && navigator.canShare && navigator.canShare({files:[p.file]})); } catch(e) { return false; } }
+  var touch = window.matchMedia && matchMedia('(pointer:coarse)').matches, ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  function download(p){
+    var a = document.createElement('a'); a.href = URL.createObjectURL(p.blob); a.download = p.name; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+  }
+  function track(method, slug){ if(typeof gtag !== 'undefined') gtag('event', 'share', {method:method, content_type:'tool_result', item_id:slug}); }
+  function withPng(s, slug, fn){ if(png && png.spec === s) fn(png); else prepare(s, slug, fn); }
+
+  /* Save: iPhone/iPad → share sheet ("Save Image" puts it in Photos); everything else → downloads the image */
   function save(s, slug){
-    draw(s, function(cv){
-      cv.toBlob(function(blob){
-        var name = 'mother-hospitals-' + slug + '.png';
-        if(typeof gtag !== 'undefined') gtag('event', 'share', {method:'image', content_type:'tool_result', item_id:slug});
-        try {
-          var file = new File([blob], name, {type:'image/png'});
-          if(navigator.canShare && navigator.canShare({files:[file]})) { navigator.share({files:[file]}).catch(function(){}); return; }
-        } catch(e) {}
-        var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
-        setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-      }, 'image/png');
+    track('image', slug);
+    withPng(s, slug, function(p){
+      if(ios && canShareFile(p)) navigator.share({files:[p.file]}).catch(function(err){ if(err && err.name !== 'AbortError') download(p); });
+      else download(p);
     });
+  }
+  /* WhatsApp: phones that can share files → share sheet with the image attached (pick WhatsApp);
+     otherwise the plain wa.me text link */
+  function shareWa(s, slug, text, e){
+    track('whatsapp', slug);
+    if(touch && png && png.spec === s && canShareFile(png)){
+      e.preventDefault();
+      /* iPhone WhatsApp drops the picture when text comes with it, so send the picture alone there */
+      navigator.share(ios ? {files:[png.file]} : {files:[png.file], text:text}).catch(function(err){
+        if(err && err.name === 'NotAllowedError') location.href = 'https://wa.me/?text=' + encodeURIComponent(text);
+      });
+    }
   }
 
   /* ---------- wiring ---------- */
@@ -328,12 +354,14 @@
       res.parentNode.insertBefore(box, res);
     }
     box.hidden = false; box.innerHTML = html(s);
+    prepare(s, slug);
     box.querySelector('.mhc-save').onclick = function(){ save(s, slug); };
     var wa = box.querySelector('.mhc-wa');
     if(wa){
       var title = (document.querySelector('h1') || {}).innerText || '';
-      wa.href = 'https://wa.me/?text=' + encodeURIComponent(l('shareMsg').replace('{tool}', title.split('\n')[0].trim()) + '\n' + s.share + '\n' + location.origin + location.pathname);
-      wa.onclick = function(){ if(typeof gtag !== 'undefined') gtag('event', 'share', {method:'whatsapp', content_type:'tool_result', item_id:slug}); };
+      var text = l('shareMsg').replace('{tool}', title.split('\n')[0].trim()) + '\n' + s.share + '\n' + location.origin + location.pathname;
+      wa.href = 'https://wa.me/?text=' + encodeURIComponent(text);
+      wa.onclick = function(e){ shareWa(s, slug, text, e); };
     }
   }
   var timer; function soon(){ clearTimeout(timer); timer = setTimeout(render, 150); }
