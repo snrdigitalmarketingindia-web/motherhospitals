@@ -2,6 +2,7 @@
  * phone_call_click  any tel: link        whatsapp_click  any WhatsApp link
  * `link_location` says where on the page the click happened, e.g. mobile_bar, hero, footer.
  * (Lead-form submissions already send `generate_lead` from the form script.)
+ * WhatsApp links inside a free-tool result card are shares, not enquiries, and are skipped.
  */
 (function () {
   var AREAS = [
@@ -26,6 +27,8 @@
   document.addEventListener('click', function (e) {
     var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!link || typeof window.gtag !== 'function') return;
+    /* sharing a free-tool result with friends is not an enquiry (tool-card.js sends a 'share' event) */
+    if (link.closest('.mhc')) return;
     var href = link.getAttribute('href') || '';
     var event = href.indexOf('tel:') === 0 ? 'phone_call_click'
       : /(^|\/\/)(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com)\b/.test(href) ? 'whatsapp_click' : null;
