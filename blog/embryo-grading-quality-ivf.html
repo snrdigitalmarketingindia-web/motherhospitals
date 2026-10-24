@@ -410,7 +410,7 @@ function submitBLC_embryo_grading_quality(){
   var n=document.getElementById('blc_name_embryo_grading_quality').value.trim();
   var p=document.getElementById('blc_phone_embryo_grading_quality').value.trim();
   if(!n||!p){alert('Please enter your name and phone number.');return;}
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: embryo_grading_quality');
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244=Blog+Reader&entry.957846797='+encodeURIComponent('Blog: embryo_grading_quality');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_embryo_grading_quality').style.display='block';
   if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'embryo_grading_quality','page':window.location.pathname});

@@ -394,7 +394,7 @@ function submitBLC_gynae_ghatkesar_nagaram(){
   var n=document.getElementById('blc_name_gynae_ghatkesar_nagaram').value.trim();
   var p=document.getElementById('blc_phone_gynae_ghatkesar_nagaram').value.trim();
   if(!n||!p){alert('Please enter your name and phone number.');return;}
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: gynae_ghatkesar_nagaram');
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244=Blog+Reader&entry.957846797='+encodeURIComponent('Blog: gynae_ghatkesar_nagaram');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_gynae_ghatkesar_nagaram').style.display='block';
   if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'gynae_ghatkesar_nagaram','page':window.location.pathname});

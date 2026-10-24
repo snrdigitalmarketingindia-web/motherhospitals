@@ -399,7 +399,7 @@ function submitBLC_icsi_(){
  var n=document.getElementById('blc_name_icsi_').value.trim();
  var p=document.getElementById('blc_phone_icsi_').value.trim();
  if(!n||!p){alert('Please enter your name and phone number.');return;}
- var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: icsi_vs_ivf');
+ var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244=Blog+Reader&entry.957846797='+encodeURIComponent('Blog: icsi_vs_ivf');
  fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
  document.getElementById('blc_ok_icsi_').style.display='block';
  if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page':'icsi_vs_ivf'});

@@ -352,7 +352,7 @@ function submitBLC_signs_of_infertility_w(){
   var n=document.getElementById('blc_name_signs_of_infertility_w').value.trim();
   var p=document.getElementById('blc_phone_signs_of_infertility_w').value.trim();
   if(!n||!p){alert('Please enter your name and phone number.');return;}
-  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.name='+encodeURIComponent(n)+'&entry.phone='+encodeURIComponent(p)+'&entry.service=Blog+Reader&entry.message='+encodeURIComponent('Blog: signs_of_infertility_w');
+  var url='https://docs.google.com/forms/d/e/1FAIpQLSeApfdnBsBjsoqIU3teeS062EEfuprY-CY8riVIWM8aY0LL9A/formResponse?entry.1033771490='+encodeURIComponent(n)+'&entry.826156409='+encodeURIComponent(p)+'&entry.1895050244=Blog+Reader&entry.957846797='+encodeURIComponent('Blog: signs_of_infertility_w');
   fetch(url,{method:'POST',mode:'no-cors'}).catch(function(){});
   document.getElementById('blc_ok_signs_of_infertility_w').style.display='block';
   if(typeof gtag!=='undefined')gtag('event','generate_lead',{'form_type':'blog','page_id':'signs_of_infertility_w','page':window.location.pathname});
