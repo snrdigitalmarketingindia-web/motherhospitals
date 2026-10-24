@@ -548,3 +548,11 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
 .mh-see-also a:hover{color:#aa045a}
 /* hero breadcrumb links (inline-styled on older pages): bigger tap area on phones */
 @media(max-width:768px){div>a[style*="color:rgba(255,255,255,0.6)"]{display:inline-block;padding:10px 0}}
+/* §29 Quick-answer sections (Search Console quick wins) */
+.mh-qa{max-width:1100px;margin:0 auto;padding:40px 5% 16px}
+.mh-qa.mh-qa-in{max-width:none;padding:0;margin:32px 0}
+.mh-qa h2{margin:0 0 14px}
+.mh-qa-item{padding:14px 0;border-top:1px solid var(--mh-hair,#e8d5f0)}
+.mh-qa-item:first-of-type{border-top:0}
+.mh-qa-item h3{font-size:1.05rem;margin:0 0 6px;color:var(--purple,#58037c)}
+.mh-qa-item p{margin:0;line-height:1.7;text-align:left}
