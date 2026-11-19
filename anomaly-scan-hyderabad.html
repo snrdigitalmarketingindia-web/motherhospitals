@@ -94,6 +94,8 @@ h1 em{font-style:italic;color:#f9a8d4}
 .mob-menu.mob-menu a{padding:0.6rem 0;color:var(--text-mid);text-decoration:none;font-size:0.93rem;border-bottom:1px solid var(--purple-light)}
 @media(max-width:768px){.content-grid{grid-template-columns:1fr}.page-hero{padding:40px 5% 36px}}</style>
 <link rel="stylesheet" href="/assets/mh-design.css?v=16"/>
+<link rel="stylesheet" href="/assets/mh-visual.css?v=5"/>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script src="/assets/js/seasonal-banner.js?v=4" defer></script>
 <script src="/assets/js/mh-analytics.js?v=2" defer></script>
 </head>
@@ -173,6 +175,143 @@ h1 em{font-style:italic;color:#f9a8d4}
  </div>
  </div>
 </div>
+
+<!-- MH3D_START -->
+<section class="mh3d-section" id="explore-3d">
+ <div class="section-wrap">
+ <div class="section-header center">
+ <div class="section-label">Week by week</div>
+ <h2 class="section-title">See your baby grow <em>in 3D</em></h2>
+ <p class="section-sub">Move through weeks 12 to 40 to see the baby, placenta and cord, and the check-up due that week.</p>
+ </div>
+ <div class="mh3d" id="stage" data-mode="pregnancy" role="region" aria-label="Interactive 3D model: Week by week">
+      <div class="fallback" aria-hidden="true"><svg viewBox="0 0 520 520"><defs>
+<radialGradient id="g-uterus" cx=".38" cy=".3" r=".85"><stop offset="0" stop-color="#ffe6f2"/><stop offset=".35" stop-color="#f39cc6"/><stop offset=".75" stop-color="#cc4a8c"/><stop offset="1" stop-color="#8d1a5c"/></radialGradient>
+<linearGradient id="g-cavity" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a3235f"/><stop offset="1" stop-color="#6e0f4a"/></linearGradient>
+<linearGradient id="g-tube" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9c0da"/><stop offset="1" stop-color="#d4589a"/></linearGradient>
+<radialGradient id="g-ovary" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#faf0ff"/><stop offset=".5" stop-color="#d6b0f2"/><stop offset="1" stop-color="#8a4bbd"/></radialGradient>
+<radialGradient id="g-follicle" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#fde3ef"/><stop offset="1" stop-color="#f2a9cc"/></radialGradient>
+<radialGradient id="g-embryo" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff8fc"/><stop offset=".6" stop-color="#f9dcea"/><stop offset="1" stop-color="#e79bc2"/></radialGradient>
+<radialGradient id="g-cell" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f4c1da"/></radialGradient>
+<radialGradient id="g-disc" cx=".5" cy=".45" r=".55"><stop offset="0" stop-color="#fff"/><stop offset=".7" stop-color="#f5eafb"/><stop offset="1" stop-color="#ead8f7"/></radialGradient>
+<radialGradient id="g-skin" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#ffefe8"/><stop offset=".6" stop-color="#f8cdbd"/><stop offset="1" stop-color="#e6a191"/></radialGradient>
+<radialGradient id="g-womb" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#fff4f9"/><stop offset=".75" stop-color="#fbd6e7"/><stop offset="1" stop-color="#ee9fc5"/></radialGradient>
+<radialGradient id="g-fluid" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#fffbfd"/><stop offset="1" stop-color="#fde6f1"/></radialGradient>
+<filter id="f-soft" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#58037c" flood-opacity=".18"/></filter>
+<filter id="f-blur"><feGaussianBlur stdDeviation="8"/></filter>
+<g id="u-body">
+ <path d="M238 404 L232 362 C200 332 168 282 168 226 C168 172 210 150 260 150 C310 150 352 172 352 226 C352 282 320 332 288 362 L282 404 Q260 414 238 404 Z" fill="url(#g-uterus)"/>
+ <path d="M206 202 Q260 188 314 202 Q292 256 268 318 L252 318 Q228 256 206 202 Z" fill="url(#g-cavity)" opacity=".9"/>
+ <path d="M206 202 Q260 188 314 202" stroke="#ffd0e6" stroke-width="3" fill="none" opacity=".7"/>
+ <path d="M260 318 V398" stroke="#7a1450" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+ <ellipse cx="214" cy="194" rx="30" ry="15" fill="#fff" opacity=".45" transform="rotate(-30 214 194)"/>
+ <ellipse cx="196" cy="236" rx="7" ry="22" fill="#fff" opacity=".2" transform="rotate(12 196 236)"/>
+</g>
+</defs>
+              
+       <circle cx="260" cy="268" r="240" fill="none" stroke="#e8d5f5" stroke-width="1.5" stroke-dasharray="2 8"/>
+       <ellipse cx="260" cy="452" rx="130" ry="12" fill="#58037c" opacity=".12" filter="url(#f-blur)"/>
+       <g class="breathe" filter="url(#f-soft)">
+        <g stroke="url(#g-tube)" stroke-linecap="round" fill="none">
+         <path d="M182 252 C162 264 150 274 142 284" stroke-width="7"/>
+         <path d="M338 252 C358 264 370 274 378 284" stroke-width="7"/>
+         <path d="M184 196 C150 160 104 158 80 190 C64 212 66 240 84 254" stroke-width="15"/>
+         <path d="M336 196 C370 160 416 158 440 190 C456 212 454 240 436 254" stroke-width="15"/>
+         <path d="M84 254 q-12 4 -18 14 M86 256 q-6 10 -6 20 M90 256 q2 10 8 18 M80 252 q-14 -2 -22 6" stroke-width="5"/>
+         <path d="M436 254 q12 4 18 14 M434 256 q6 10 6 20 M430 256 q-2 10 -8 18 M440 252 q14 -2 22 6" stroke-width="5"/>
+        </g>
+        <g stroke="#fff" stroke-linecap="round" fill="none" opacity=".5" stroke-width="3.5">
+         <path d="M180 190 C148 156 106 154 82 184"/>
+         <path d="M340 190 C372 156 414 154 438 184"/>
+        </g>
+        <g transform="rotate(-18 118 300)">
+         <ellipse cx="118" cy="300" rx="44" ry="30" fill="url(#g-ovary)"/>
+         <g fill="url(#g-follicle)" stroke="#fff" stroke-width="1.2"><circle cx="104" cy="294" r="9"/><circle cx="127" cy="290" r="7"/><circle cx="131" cy="309" r="6"/><circle cx="110" cy="313" r="5"/></g>
+         <ellipse cx="102" cy="284" rx="15" ry="5" fill="#fff" opacity=".45"/>
+        </g>
+        <g transform="rotate(18 402 300)">
+         <ellipse cx="402" cy="300" rx="44" ry="30" fill="url(#g-ovary)"/>
+         <g fill="url(#g-follicle)" stroke="#fff" stroke-width="1.2"><circle cx="416" cy="294" r="9"/><circle cx="393" cy="290" r="7"/><circle cx="389" cy="309" r="6"/><circle cx="410" cy="313" r="5"/></g>
+         <ellipse cx="392" cy="284" rx="15" ry="5" fill="#fff" opacity=".45"/>
+        </g>
+        <use href="#u-body"/>
+        <circle cx="276" cy="224" r="7" fill="url(#g-embryo)" stroke="#fff" stroke-width="1.5"/>
+       </g>
+       <g class="float-b">
+        <circle cx="92" cy="96" r="31" fill="#fde9f3" opacity=".75"/>
+        <circle cx="92" cy="96" r="21" fill="url(#g-follicle)" stroke="#fff" stroke-width="2"/>
+        <circle cx="96" cy="92" r="6" fill="#e58ab6" opacity=".55"/>
+        <g fill="#b77fe0"><ellipse cx="150" cy="70" rx="5" ry="3.4" transform="rotate(-150 150 70)"/><ellipse cx="152" cy="122" rx="5" ry="3.4" transform="rotate(160 152 122)"/></g>
+        <g stroke="#b77fe0" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M154 72 q9 6 17 2 t17 4"/><path d="M157 121 q9 -4 17 2 t17 0"/></g>
+        <text class="ill-label" x="92" y="146" text-anchor="middle">Egg</text>
+       </g>
+       <g class="float-a">
+        <circle cx="430" cy="96" r="36" fill="url(#g-embryo)" stroke="#fff" stroke-width="3"/>
+        <circle cx="430" cy="96" r="27" fill="#fff6fa" stroke="#f3bcd6" stroke-width="4" stroke-dasharray="6 3"/>
+        <g fill="url(#g-cell)" stroke="#eeb0cd" stroke-width="1"><circle cx="415" cy="88" r="7"/><circle cx="424" cy="80" r="6"/><circle cx="412" cy="100" r="6"/><circle cx="423" cy="92" r="5"/></g>
+        <text class="ill-label" x="430" y="152" text-anchor="middle">Embryo</text>
+       </g>
+       <g class="float-c" fill="url(#g-follicle)" stroke="#fff" stroke-width="1"><circle cx="478" cy="300" r="9"/><circle cx="44" cy="372" r="7"/><circle cx="466" cy="392" r="5"/></g>
+       <g aria-hidden="true">
+        <circle class="ill-dot" cx="150" cy="172" r="3.5"/><path class="ill-lead" d="M150 172 L190 118"/><text class="ill-label" x="194" y="114">Fallopian tube</text>
+        <circle class="ill-dot" cx="428" cy="318" r="3.5"/><path class="ill-lead" d="M428 318 L470 372"/><text class="ill-label" x="496" y="390" text-anchor="end">Ovary</text>
+        <circle class="ill-dot" cx="214" cy="322" r="3.5"/><path class="ill-lead" d="M214 322 L128 406"/><text class="ill-label" x="70" y="422">Uterus</text>
+       </g>
+      </svg></div>
+      <div class="loader" id="loader" role="progressbar" aria-label="Loading the 3D model" aria-valuemin="0" aria-valuemax="100" aria-valuenow="5">
+        <span>Loading 3D model</span><b id="loaderP">5%</b><i><em id="loaderB"></em></i>
+      </div>
+      <div class="labels" id="labels"></div>
+      <div class="stage-ui">
+        <div class="modes" role="group" aria-label="Model view">
+          <button type="button" data-mode="anatomy" aria-pressed="false">Anatomy</button>
+          <button type="button" data-mode="cycle" aria-pressed="false">Cycle</button>
+          <button type="button" data-mode="conception" aria-pressed="false">Conception</button>
+          <button type="button" data-mode="pregnancy" aria-pressed="true">Pregnancy</button>
+        </div>
+        <div class="stage-hint"><i></i><span>Drag to rotate · tap a label</span></div>
+        <button type="button" class="fsbtn" id="fsBtn" aria-pressed="false" aria-label="View the 3D model full screen" title="Full screen">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          <span>Close</span>
+        </button>
+        <div class="lens" id="lens" aria-hidden="true"><span>Magnified view</span></div>
+        <button type="button" class="cutbtn" id="cutBtn" aria-pressed="true">Opened view</button>
+        <div class="scrub" id="scrub" hidden>
+          <div class="scrub-top">
+            <div><strong id="scrubTitle">Day 1</strong> <span id="scrubSub">Menstrual phase</span></div>
+            <button type="button" class="play" id="play">Pause</button>
+          </div>
+          <input type="range" id="range" min="1" max="28" step="0.1" value="1" aria-label="Day of cycle">
+          <div class="hwrap" id="hwrap"><svg class="horm" id="horm" viewBox="0 0 280 46" preserveAspectRatio="none" aria-hidden="true"></svg><div class="hlbl" id="hlbl" aria-hidden="true"></div></div>
+          <div class="hlegend" id="hlegend" aria-hidden="true"></div>
+        </div>
+        <div class="info" id="info" aria-live="polite">
+          <p class="label">Tap any label</p>
+          <h3>Inside the pelvis</h3>
+          <p>Uterus, tubes, ovaries and their blood supply, the organs behind almost every visit to a gynaecologist.</p>
+          <a href="/#services">See what we treat →</a>
+        </div>
+      </div>
+    </div>
+ </div>
+</section>
+<script>
+/* The illustration is shown first. The 3D model loads on the visitor's first touch, scroll, mouse move or key press,
+   so it never slows the first paint or the page's speed score. */
+(function(){var s=document.getElementById('stage');if(!s)return;
+ var ok='IntersectionObserver' in window&&HTMLScriptElement.supports&&HTMLScriptElement.supports('importmap');
+ if(!ok){s.classList.add('no3d');return;}
+ var started=false,ev=['pointerdown','pointermove','touchstart','scroll','keydown','wheel'];
+ var go=function(){if(started)return;started=true;ev.forEach(function(e){removeEventListener(e,go,true);});s.classList.add('loading');
+  import('/assets/js/mh-3d.js?v=2').catch(function(e){console.error(e);s.classList.add('no3d');});};
+ var arm=function(){ev.forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true});});};
+ s.addEventListener('click',function(e){var b=e.target.closest('.modes button');if(b&&!s.classList.contains('ready')){s.dataset.mode=b.dataset.mode;s.querySelectorAll('.modes button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});}},true);
+ if(document.readyState==='complete')arm();else addEventListener('load',arm);
+})();
+</script>
+<!-- MH3D_END -->
+
 
 <!-- AI DIRECT ANSWER BLOCK -->
 <div class="direct-answer" style="background:#f0e8f8;border-left:5px solid #58037c;padding:1.2rem 1.5rem;margin:0;font-size:0.92rem;line-height:1.8;color:#2d2d2d">
