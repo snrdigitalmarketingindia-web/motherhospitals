@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Mother Hospitals — Visual layer
+   3D-style medical illustrations, icon tiles and pictorial explainers.
+   Loaded after mh-design.css. Homepage first; other pages after review.
+   ========================================================================== */
+
+:root{
+  --ill-rose:#d4518f;--ill-rose-deep:#8d1a5c;--ill-lilac:#b77fe0;
+  --ill-bg:#f6eefb;--ill-ink:#3d0256;
+  --ill-float:7s;
+}
+
+/* Shared gradient defs live in one hidden SVG (must not be display:none) */
+.mh-defs{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ── Icons ─────────────────────────────────────────────────────────────── */
+.mh-ico{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+/* only icon holders that contain an SVG are restyled, so emoji icons on other pages stay as they are */
+.ico-tile,.svc-icon:has(>svg),.cred-icon:has(>svg),.dept-icon:has(>svg){
+  width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:var(--purple);font-size:0;
+  background:linear-gradient(145deg,#fff 0%,#f4e8fb 55%,#e6cff5 100%);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -3px 6px rgba(88,3,124,.08),0 8px 18px rgba(88,3,124,.12);
+}
+.svc-card.featured .svc-icon:has(>svg){color:var(--magenta);background:linear-gradient(145deg,#fff 0%,#fde9f3 55%,#f6cfe3 100%)}
+.cred-card .cred-icon:has(>svg){margin:0 auto .8rem}
+.svc-card{transition:transform .25s var(--mh-ease,ease),box-shadow .25s var(--mh-ease,ease)}
+.svc-card:hover{transform:translateY(-4px)}
+.svc-card:hover .svc-icon{transform:rotate(-4deg) scale(1.05)}
+.svc-card .svc-icon{transition:transform .3s var(--mh-ease,ease)}
+
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+#home.mh-hero{position:relative;overflow:hidden;padding:clamp(40px,6vw,80px) 5% clamp(48px,6vw,88px)!important;
+  background:radial-gradient(1200px 600px at 85% 30%,#f7e8fb 0%,rgba(247,232,251,0) 60%),
+             radial-gradient(800px 500px at 0% 100%,#fdf1f7 0%,rgba(253,241,247,0) 60%),#fff!important}
+.mh-hero .hero-h1 em{background:linear-gradient(90deg,var(--purple),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-facts{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid var(--mh-hair,#eee);list-style:none}
+.hero-facts li{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--text-mid);font-weight:500}
+.hero-facts .mh-ico{width:20px;height:20px;color:var(--magenta)}
+
+.hero-art{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:1/1}
+.hero-art svg{width:100%;height:100%;display:block;overflow:visible}
+.hero-art .float-a{animation:mhFloat var(--ill-float) ease-in-out infinite}
+.hero-art .float-b{animation:mhFloat calc(var(--ill-float) * 1.3) ease-in-out -2s infinite}
+.hero-art .float-c{animation:mhFloat calc(var(--ill-float) * .9) ease-in-out -4s infinite}
+.hero-art .breathe{transform-origin:260px 280px;animation:mhBreathe 9s ease-in-out infinite}
+.hero-art .ill-label{font:600 13px var(--font-b,'DM Sans',sans-serif);fill:var(--ill-ink);letter-spacing:.02em}
+.hero-art .ill-lead{stroke:var(--ill-ink);stroke-width:1;opacity:.35;fill:none;stroke-dasharray:3 3}
+.hero-art .ill-dot{fill:var(--magenta)}
+.hero-card{position:absolute;display:flex;align-items:center;gap:.6rem;padding:.6rem .9rem;border-radius:14px;
+  background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.9);box-shadow:0 12px 30px rgba(61,2,86,.14);font-size:.78rem;line-height:1.3;color:var(--text)}
+.hero-card strong{display:block;font-size:.86rem;color:var(--purple)}
+.hero-card .mh-ico{width:22px;height:22px;color:var(--magenta)}
+.hero-card.c1{left:0;bottom:1%}
+.hero-card.c2{right:0;bottom:1%}
+
+@keyframes mhFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes mhBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+
+@media(max-width:768px){
+  .hero-art{max-width:400px;aspect-ratio:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
+  .hero-art svg{height:auto;aspect-ratio:1/1;margin-bottom:.4rem}
+  .hero-card,.hero-card.c1,.hero-card.c2{position:static;font-size:.72rem;padding:.5rem .7rem}
+  .hero-card{gap:.4rem}
+  .hero-card strong{font-size:.78rem}
+  .hero-art .ill-label{font-size:15px}
+}
+
+/* ── Pictorial explainers (IVF journey, trimesters) ───────────────────── */
+.mh-explainer{padding:clamp(48px,6vw,80px) 5%;background:#fff}
+.mh-explainer.alt{background:linear-gradient(180deg,#faf5fd 0%,#fff 100%)}
+.journey{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;margin-top:2.4rem;position:relative;counter-reset:step}
+.journey::before{content:"";position:absolute;top:70px;left:10%;right:10%;height:2px;
+  background:repeating-linear-gradient(90deg,var(--purple-light) 0 8px,transparent 8px 14px);z-index:0}
+.journey li{position:relative;z-index:1;text-align:center;counter-increment:step}
+.journey .j-art{width:140px;height:140px;margin:0 auto 1rem;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff 0%,#f6ecfc 60%,#ecdcf7 100%);
+  box-shadow:inset 0 2px 0 #fff,0 14px 30px rgba(88,3,124,.12);display:grid;place-items:center}
+.journey .j-art svg{width:110px;height:110px}
+.journey .j-step{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);margin-bottom:.3rem}
+.journey .j-step::before{content:"Step " counter(step)}
+.journey h3{font-size:1.15rem;margin-bottom:.4rem;color:var(--text)}
+.journey p{font-size:.86rem;line-height:1.6;color:var(--text-mid);margin:0 auto;max-width:24ch}
+.journey a{display:inline-block;margin-top:.5rem;font-size:.8rem;font-weight:600;color:var(--magenta)}
+
+.trimesters{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
+.tri-card{background:#fff;border:1px solid var(--purple-border,#eadcf2);border-radius:24px;padding:1.6rem 1.4rem 1.5rem;text-align:center;
+  box-shadow:0 1px 2px rgba(30,10,46,.04),0 12px 32px rgba(30,10,46,.06)}
+.tri-card .t-art{width:170px;height:170px;margin:0 auto 1rem}
+.tri-card .t-weeks{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta)}
+.tri-card h3{font-size:1.3rem;margin:.25rem 0 .5rem}
+.tri-card p{font-size:.88rem;line-height:1.6;color:var(--text-mid);margin:0}
+.tri-card a{display:inline-block;margin-top:.7rem;font-size:.82rem;font-weight:600;color:var(--magenta)}
+.tri-bar{height:6px;border-radius:6px;background:var(--purple-pale);margin:1rem 0 0;overflow:hidden}
+.tri-bar span{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--magenta))}
+.mh-note{font-size:.78rem;color:var(--text-soft);text-align:center;margin-top:1.4rem}
+
+@media(max-width:1000px){
+  .journey{grid-template-columns:repeat(3,1fr);row-gap:2rem}
+  .journey::before{display:none}
+}
+@media(max-width:768px){
+  .journey{grid-template-columns:1fr 1fr}
+  .journey li:last-child{grid-column:1/-1}
+  .journey .j-art{width:112px;height:112px}
+  .journey .j-art svg{width:88px;height:88px}
+  .trimesters{grid-template-columns:1fr}
+}
+
+/* ── Safety strip (was emoji cards) ───────────────────────────────────── */
+.mh-safety-card{display:flex;flex-direction:column;align-items:center}
+.mh-safety-card .ico-tile{margin-bottom:.6rem}
+
+/* ── Department quick links ───────────────────────────────────────────── */
+.dept-link .ico-tile{margin:0 auto .7rem}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-art .float-a,.hero-art .float-b,.hero-art .float-c,.hero-art .breathe{animation:none}
+  .svc-card,.svc-card .svc-icon{transition:none}
+}
+
+/* ── Interactive 3D model (Anatomy · Cycle · Conception · Pregnancy) ─────
+   Ported from the SNR concept build; every rule is scoped to .mh3d.      */
+.mh3d{--stage-ink:#F3EAF1;--stage-muted:#C3B2CC;--artery:#FF4D6D;--vein:#7C83FF;
+  --body:var(--font-b,'DM Sans',sans-serif);--display:var(--font-d,Georgia,serif);--ease:cubic-bezier(.22,1,.36,1)}
+.mh3d .label{font:600 11.5px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;margin:0}
+.mh3d h3{font-family:var(--display)}
+
+.mh3d{position:relative;border-radius:28px;overflow:hidden;min-height:min(80vh,720px);background:
+  radial-gradient(120% 90% at 70% 35%,#3a1152 0%,#1f0830 45%,#0d0414 100%);color:var(--stage-ink);isolation:isolate}
+.mh3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab;outline:none}
+.mh3d canvas:active{cursor:grabbing}
+.mh3d .fallback{position:absolute;inset:0;display:grid;place-items:center;transition:opacity .6s var(--ease);pointer-events:none}
+.mh3d .fallback svg{width:min(78%,520px);height:auto}
+.mh3d.is-live .fallback{opacity:0}
+/* loading progress: shown from the first paint, filled by the build steps, faded once the model is live */
+.mh3d .loader{position:absolute;left:0;right:0;top:50%;margin:-34px auto 0;width:min(260px,72%);z-index:4;padding:12px 16px 14px;border-radius:16px;background:rgba(20,10,24,.78);border:1px solid rgba(255,255,255,.16);color:#F3EAF1;display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline;transition:opacity .5s var(--ease),visibility .5s;pointer-events:none}
+.mh3d .loader span{font:600 13px/1.2 var(--body);letter-spacing:.02em}
+.mh3d .loader b{font:600 13px/1 var(--body);color:#FF8FB5;font-variant-numeric:tabular-nums}
+.mh3d .loader i{grid-column:1/-1;display:block;height:4px;margin-top:9px;border-radius:4px;background:rgba(255,255,255,.14);overflow:hidden}
+.mh3d .loader em{display:block;height:100%;background:linear-gradient(90deg,#FF8FB5,#ffd0de);transform-origin:left;transform:scaleX(.05);transition:transform .35s var(--ease)}
+.mh3d.ready .loader{opacity:0;visibility:hidden}
+.mh3d:not(.ready) .modes button{opacity:.45;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.mh3d .loader,.mh3d .loader em{transition:none}}
+.mh3d .stage-ui{position:absolute;inset:0;pointer-events:none;z-index:3}
+.mh3d .stage-ui>*{pointer-events:auto}
+.mh3d .modes{position:absolute;top:18px;left:18px;display:flex;gap:4px;padding:4px;background:rgba(20,10,24,.55);border:1px solid rgba(255,255,255,.12);border-radius:999px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.mh3d .modes button{appearance:none;border:0;background:transparent;color:var(--stage-muted);font:600 13.5px/1 var(--body);padding:10px 15px;border-radius:999px;cursor:pointer;transition:background .35s,color .35s}
+.mh3d .modes button[aria-pressed="true"]{background:#F3EAF1;color:#1A0F1F}
+.mh3d .modes button:hover:not([aria-pressed="true"]){color:#fff}
+.mh3d .stage-hint{position:absolute;top:24px;right:68px;font:500 12.5px/1.2 var(--body);color:var(--stage-muted);letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+.mh3d .stage-hint i{width:7px;height:7px;border-radius:50%;background:var(--artery);box-shadow:0 0 0 0 rgba(255,77,109,.6);animation:mh3dPing 1.8s infinite}
+@keyframes mh3dPing{70%{box-shadow:0 0 0 9px rgba(255,77,109,0)}100%{box-shadow:0 0 0 0 rgba(255,77,109,0)}}
+@media (prefers-reduced-motion:reduce){.mh3d .stage-hint i{animation:none}}
+.mh3d .labels{position:absolute;inset:0;pointer-events:none;z-index:2}
+.mh3d .lens{position:absolute;left:18px;bottom:220px;width:clamp(140px,25%,190px);aspect-ratio:1;border:1.5px solid rgba(255,255,255,.4);border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.4);pointer-events:none;opacity:0;transition:opacity .4s;z-index:2}
+.mh3d .lens.on{opacity:1}
+.mh3d .cutbtn{position:absolute;right:18px;top:66px;appearance:none;border:1px solid rgba(255,255,255,.22);background:rgba(20,10,24,.6);color:#F3EAF1;font:600 12.5px/1 var(--body);padding:9px 13px 9px 30px;border-radius:999px;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.mh3d .cutbtn::before{content:"";position:absolute;left:11px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;border:1.5px solid #FF8FB5;background:linear-gradient(90deg,#FF8FB5 50%,transparent 50%)}
+.mh3d .cutbtn[aria-pressed="false"]::before{background:#FF8FB5}
+.mh3d .cutbtn[hidden]{display:none}
+.mh3d .fsbtn{position:absolute;top:16px;right:16px;display:inline-flex;align-items:center;justify-content:center;gap:7px;height:40px;min-width:40px;padding:0 11px;appearance:none;border:1px solid rgba(255,255,255,.24);background:rgba(20,10,24,.62);color:#F3EAF1;font:600 13px/1 var(--body);border-radius:999px;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .25s,border-color .25s}
+.mh3d .fsbtn:hover{background:rgba(70,34,76,.85);border-color:rgba(255,255,255,.45)}
+.mh3d .fsbtn:focus-visible{outline:2px solid #FF8FB5;outline-offset:2px}
+.mh3d .fsbtn svg{width:17px;height:17px;flex:none}
+.mh3d .fsbtn .i-close,.mh3d .fsbtn span{display:none}
+.mh3d.is-full .fsbtn{padding:0 15px 0 12px;background:rgba(243,234,241,.95);color:#1A0F1F;border-color:#F3EAF1}
+.mh3d.is-full .fsbtn .i-open{display:none}
+.mh3d.is-full .fsbtn .i-close{display:block}
+.mh3d.is-full .fsbtn span{display:inline}
+/* full screen: native Fullscreen API, or a fixed overlay where that is not available (iPhone) */
+.mh3d.is-full{position:fixed;inset:0;z-index:2000;width:auto;height:100vh;height:100dvh;min-height:0;border-radius:0;margin:0}
+.mh3d.is-full .stage-hint{display:none}
+html.fs-lock,html.fs-lock body{overflow:hidden}
+.mh3d .lens span{position:absolute;left:10px;bottom:8px;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:#F3EAF1;text-shadow:0 1px 4px #000}
+.mh3d .tag{position:absolute;left:0;top:0;pointer-events:auto;appearance:none;border:1px solid rgba(255,255,255,.22);background:rgba(26,15,31,.62);color:#F3EAF1;font:600 12.5px/1 var(--body);padding:8px 11px 8px 22px;border-radius:999px;cursor:pointer;white-space:nowrap;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .3s,background .3s,border-color .3s}
+.mh3d .tag::before{content:"";position:absolute;left:9px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#FF8FB5;box-shadow:0 0 10px #FF8FB5}
+.mh3d .tag:hover,.mh3d .tag.on{background:#F3EAF1;color:#1A0F1F;border-color:#F3EAF1}
+.mh3d .tag.off{display:none}
+.mh3d .info{position:absolute;left:18px;bottom:18px;width:min(360px,calc(100% - 36px));padding:18px 20px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(20,10,24,.30));border:1px solid rgba(255,255,255,.22);border-radius:18px;backdrop-filter:blur(5px) saturate(140%);-webkit-backdrop-filter:blur(5px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);text-shadow:0 1px 3px rgba(10,4,12,.85)}
+.mh3d .info .label{color:#FF8FB5}
+.mh3d .info h3{font-size:22px;margin:6px 0 6px;color:#fff}
+.mh3d .info p{font-size:14.5px;line-height:1.5;color:#EDE3EF;margin:0 0 10px}
+.mh3d .info a{color:#fff;font-weight:600;font-size:14px;text-underline-offset:3px}
+.mh3d .scrub{position:absolute;right:18px;bottom:18px;left:calc(min(360px,100% - 36px) + 36px);padding:14px 18px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(20,10,24,.30));border:1px solid rgba(255,255,255,.22);border-radius:18px;backdrop-filter:blur(5px) saturate(140%);-webkit-backdrop-filter:blur(5px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);text-shadow:0 1px 3px rgba(10,4,12,.85)}
+.mh3d .scrub[hidden]{display:none}
+.mh3d .scrub-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+.mh3d .scrub-top strong{font:400 22px/1 var(--display);color:#fff}
+.mh3d .scrub-top span{font-size:13px;color:var(--stage-muted)}
+.mh3d .scrub input[type=range]{width:100%;accent-color:#FF8FB5;margin:0}
+.mh3d .scrub .play{appearance:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:999px;padding:6px 12px;font:600 12px var(--body);cursor:pointer}
+.mh3d .hwrap{position:relative;margin-top:8px}
+.mh3d .horm{display:block;width:100%;height:46px}
+/* chart words are HTML, not SVG text, so a wide panel cannot stretch them */
+.mh3d .hlbl{position:absolute;inset:0;pointer-events:none}
+.mh3d .hlbl span{position:absolute;transform:translateX(-50%);font:500 11.5px/1 var(--body);color:#CDBFD2;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.mh3d .hlbl span.first{transform:none}
+.mh3d .hlbl span.up{top:0}
+.mh3d .hlbl span.dn{bottom:0}
+.mh3d .hlegend{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font:500 11.5px/1.2 var(--body);color:#CDBFD2}
+.mh3d .hlegend:empty{display:none}
+.mh3d .hlegend span{display:inline-flex;align-items:center;gap:6px}
+.mh3d .hlegend span::before{content:"";width:14px;height:2.5px;border-radius:2px;background:currentColor}
+.mh3d .hlegend .e{color:#FF8FB5}.mh3d .hlegend .p{color:#9EA4FF}
+.mh3d .hlegend .l{color:#FFE3A0}.mh3d .hlegend .l::before{height:0;border-top:2px dashed currentColor;background:none}
+.mh3d .hlegend .f{color:#E7B3C8}.mh3d .hlegend .f::before{height:9px;width:12px;background:rgba(255,143,181,.25)}
+@media (max-width:1000px){
+  .mh3d{min-height:0;height:clamp(660px,180vw,800px);border-radius:22px}
+  .mh3d canvas{height:calc(100% - 196px)}
+  .mh3d .fallback{bottom:196px}
+  .mh3d .lens{left:auto;bottom:254px;right:12px;width:clamp(120px,32%,190px)}
+  .mh3d .cutbtn{top:auto;bottom:208px;right:56px}
+  .mh3d.is-full .cutbtn{right:108px}
+  .mh3d .info{left:12px;right:12px;bottom:12px;width:auto;height:172px;padding:12px 16px;overflow:hidden}
+  .mh3d .info h3{font-size:19px;margin:4px 0}
+  .mh3d .info p{font-size:13.5px;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .mh3d .scrub{left:12px;right:12px;bottom:auto;top:66px;padding:10px 14px}
+  .mh3d .scrub-top strong{font-size:18px}
+  .mh3d .horm{height:34px}
+  .mh3d .hlbl span{font-size:10.5px}
+  .mh3d .hlegend{font-size:10.5px;gap:3px 10px;margin-top:4px}
+  .mh3d .stage-hint{top:auto;bottom:auto;right:60px;top:27px}
+  .mh3d .fsbtn{top:auto;bottom:208px;right:12px;height:36px;min-width:36px}   /* the mode tabs fill the top row on phones */
+  .mh3d .modes{top:14px;left:12px}
+  .mh3d .modes button{padding:8px 9px;font-size:12px}
+}
+/* the hint shares the top row with the mode tabs and the full-screen button; drop it when the 3D panel is too narrow for all three */
+.mh3d{container-type:inline-size}
+@container (max-width:620px){.mh3d .stage-hint{display:none}}
+
+
+/* 3D model in the homepage hero and in page sections */
+.mh-hero-3d .hero-inner{grid-template-columns:minmax(0,5fr) minmax(0,7fr);max-width:1320px;gap:clamp(24px,4vw,56px)}
+@media(max-width:1180px){.mh-hero-3d .hero-inner{grid-template-columns:1fr!important}}
+.mh3d .fallback .ill-label{fill:#F3EAF1}
+.mh3d .fallback .ill-lead{stroke:#F3EAF1}
+.mh3d .fallback svg{overflow:visible}
+.mh3d .info a{color:#fff}
+.mh3d .info a:hover{color:#ffd0e6}
+.mh3d .modes button:focus-visible,.mh3d .cutbtn:focus-visible,.mh3d .tag:focus-visible{outline:2px solid #FF8FB5;outline-offset:2px}
+.mh3d-section{padding:clamp(40px,5vw,72px) 5%;background:#fff}
+.mh3d-section .section-wrap{max-width:1240px}
+.mh3d-section .mh3d{margin-top:1.6rem}
+.mh3d .info .t{font:400 22px/1.2 var(--display);margin:6px 0;color:#fff}
+@media(max-width:1000px){.mh3d .info .t{font-size:19px;margin:4px 0}}
+/* loader only while the 3D library is actually loading; tabs stay usable and start the 3D on tap */
+.mh3d:not(.loading) .loader{display:none}
+.mh3d:not(.ready) .modes button{opacity:1;pointer-events:auto}
+.mh3d.no3d .loader,.mh3d.no3d .stage-hint,.mh3d.no3d .fsbtn,.mh3d.no3d .cutbtn,.mh3d.no3d .modes{display:none}
