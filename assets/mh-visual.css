@@ -1,16 +1,10 @@
 /* ==========================================================================
    Mother Hospitals — Visual layer
-   3D-style medical illustrations, icon tiles and pictorial explainers.
-   Loaded after mh-design.css. Homepage first; other pages after review.
+   Icon tiles, photo cards, pictorial explainers and the interactive 3D model.
+   Loaded after mh-design.css.
    ========================================================================== */
 
-:root{
-  --ill-rose:#d4518f;--ill-rose-deep:#8d1a5c;--ill-lilac:#b77fe0;
-  --ill-bg:#f6eefb;--ill-ink:#3d0256;
-  --ill-float:7s;
-}
-
-/* Shared gradient defs live in one hidden SVG (must not be display:none) */
+/* Icon sprite holder (must not be display:none) */
 .mh-defs{position:absolute;width:0;height:0;overflow:hidden}
 
 /* ── Icons ─────────────────────────────────────────────────────────────── */
@@ -37,46 +31,14 @@
 .hero-facts li{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--text-mid);font-weight:500}
 .hero-facts .mh-ico{width:20px;height:20px;color:var(--magenta)}
 
-.hero-art{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:1/1}
-.hero-art svg{width:100%;height:100%;display:block;overflow:visible}
-.hero-art .float-a{animation:mhFloat var(--ill-float) ease-in-out infinite}
-.hero-art .float-b{animation:mhFloat calc(var(--ill-float) * 1.3) ease-in-out -2s infinite}
-.hero-art .float-c{animation:mhFloat calc(var(--ill-float) * .9) ease-in-out -4s infinite}
-.hero-art .breathe{transform-origin:260px 280px;animation:mhBreathe 9s ease-in-out infinite}
-.hero-art .ill-label{font:600 13px var(--font-b,'DM Sans',sans-serif);fill:var(--ill-ink);letter-spacing:.02em}
-.hero-art .ill-lead{stroke:var(--ill-ink);stroke-width:1;opacity:.35;fill:none;stroke-dasharray:3 3}
-.hero-art .ill-dot{fill:var(--magenta)}
-.hero-card{position:absolute;display:flex;align-items:center;gap:.6rem;padding:.6rem .9rem;border-radius:14px;
-  background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.9);box-shadow:0 12px 30px rgba(61,2,86,.14);font-size:.78rem;line-height:1.3;color:var(--text)}
-.hero-card strong{display:block;font-size:.86rem;color:var(--purple)}
-.hero-card .mh-ico{width:22px;height:22px;color:var(--magenta)}
-.hero-card.c1{left:0;bottom:1%}
-.hero-card.c2{right:0;bottom:1%}
-
-@keyframes mhFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes mhBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
-
-@media(max-width:768px){
-  .hero-art{max-width:400px;aspect-ratio:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
-  .hero-art svg{height:auto;aspect-ratio:1/1;margin-bottom:.4rem}
-  .hero-card,.hero-card.c1,.hero-card.c2{position:static;font-size:.72rem;padding:.5rem .7rem}
-  .hero-card{gap:.4rem}
-  .hero-card strong{font-size:.78rem}
-  .hero-art .ill-label{font-size:15px}
-}
-
 /* ── Pictorial explainers (IVF journey, trimesters) ───────────────────── */
 .mh-explainer{padding:clamp(48px,6vw,80px) 5%;background:#fff}
 .mh-explainer.alt{background:linear-gradient(180deg,#faf5fd 0%,#fff 100%)}
-.journey{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;margin-top:2.4rem;position:relative;counter-reset:step}
-.journey::before{content:"";position:absolute;top:70px;left:10%;right:10%;height:2px;
-  background:repeating-linear-gradient(90deg,var(--purple-light) 0 8px,transparent 8px 14px);z-index:0}
-.journey li{position:relative;z-index:1;text-align:center;counter-increment:step}
-.journey .j-art{width:140px;height:140px;margin:0 auto 1rem;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#fff 0%,#f6ecfc 60%,#ecdcf7 100%);
-  box-shadow:inset 0 2px 0 #fff,0 14px 30px rgba(88,3,124,.12);display:grid;place-items:center}
-.journey .j-art svg{width:110px;height:110px}
+.journey{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;margin-top:2.4rem;counter-reset:step}
+.journey li{text-align:center;counter-increment:step}
+.journey .j-art{width:100%;max-width:220px;aspect-ratio:4/5;margin:0 auto 1rem;border-radius:20px;overflow:hidden;background:#f3e9f8;
+  box-shadow:0 1px 2px rgba(30,10,46,.06),0 16px 34px rgba(88,3,124,.14)}
+.journey .j-art picture,.journey .j-art img{display:block;width:100%;height:100%;object-fit:cover}
 .journey .j-step{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);margin-bottom:.3rem}
 .journey .j-step::before{content:"Step " counter(step)}
 .journey h3{font-size:1.15rem;margin-bottom:.4rem;color:var(--text)}
@@ -84,39 +46,39 @@
 .journey a{display:inline-block;margin-top:.5rem;font-size:.8rem;font-weight:600;color:var(--magenta)}
 
 .trimesters{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
-.tri-card{background:#fff;border:1px solid var(--purple-border,#eadcf2);border-radius:24px;padding:1.6rem 1.4rem 1.5rem;text-align:center;
+.tri-card{background:#fff;border:1px solid var(--purple-border,#eadcf2);border-radius:24px;padding:0 0 1.5rem;text-align:center;overflow:hidden;
   box-shadow:0 1px 2px rgba(30,10,46,.04),0 12px 32px rgba(30,10,46,.06)}
-.tri-card .t-art{width:170px;height:170px;margin:0 auto 1rem}
+.tri-card .t-photo{display:block;margin:0 0 1.1rem}
+.tri-card .t-photo img{display:block;width:100%;height:auto;aspect-ratio:6/5;object-fit:cover}
+.tri-card>:not(.t-photo){margin-left:1.4rem;margin-right:1.4rem}
 .tri-card .t-weeks{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta)}
-.tri-card h3{font-size:1.3rem;margin:.25rem 0 .5rem}
-.tri-card p{font-size:.88rem;line-height:1.6;color:var(--text-mid);margin:0}
+.tri-card h3{font-size:1.3rem;margin:.25rem 1.4rem .5rem}
+.tri-card p{font-size:.88rem;line-height:1.6;color:var(--text-mid);margin:0 1.4rem}
 .tri-card a{display:inline-block;margin-top:.7rem;font-size:.82rem;font-weight:600;color:var(--magenta)}
-.tri-bar{height:6px;border-radius:6px;background:var(--purple-pale);margin:1rem 0 0;overflow:hidden}
+.tri-bar{height:6px;border-radius:6px;background:var(--purple-pale);margin:1rem 1.4rem 0;overflow:hidden}
 .tri-bar span{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--magenta))}
 .mh-note{font-size:.78rem;color:var(--text-soft);text-align:center;margin-top:1.4rem}
 
-@media(max-width:1000px){
-  .journey{grid-template-columns:repeat(3,1fr);row-gap:2rem}
-  .journey::before{display:none}
-}
+@media(max-width:1000px){.journey{grid-template-columns:repeat(3,1fr);row-gap:2rem}}
 @media(max-width:768px){
   .journey{grid-template-columns:1fr 1fr}
   .journey li:last-child{grid-column:1/-1}
-  .journey .j-art{width:112px;height:112px}
-  .journey .j-art svg{width:88px;height:88px}
+  .journey .j-art{max-width:none}
+  .journey li:last-child .j-art{max-width:50%}
   .trimesters{grid-template-columns:1fr}
 }
 
-/* ── Safety strip (was emoji cards) ───────────────────────────────────── */
-.mh-safety-card{display:flex;flex-direction:column;align-items:center}
-.mh-safety-card .ico-tile{margin-bottom:.6rem}
-
-/* ── Department quick links ───────────────────────────────────────────── */
-.dept-link .ico-tile{margin:0 auto .7rem}
+/* ── Department cards: photo banner, icon tile floating on its edge ───── */
+.dept-card.has-photo{overflow:hidden;background:#fff;border-top:0}
+.dept-card .dept-photo{display:block;margin:-1.8rem -1.8rem 0;position:relative}
+@media(max-width:600px){.dept-card .dept-photo{margin:-18px -18px 0}}
+.dept-card .dept-photo::after{content:"";position:absolute;inset:auto 0 0;height:4px;background:linear-gradient(90deg,var(--purple),var(--magenta))}
+.dept-card .dept-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .6s var(--mh-ease,ease)}
+.dept-card.has-photo:hover .dept-photo img{transform:scale(1.04)}
+.dept-card.has-photo .dept-icon{position:relative;margin-top:-30px;margin-bottom:.8rem;z-index:1}
 
 @media(prefers-reduced-motion:reduce){
-  .hero-art .float-a,.hero-art .float-b,.hero-art .float-c,.hero-art .breathe{animation:none}
-  .svc-card,.svc-card .svc-icon{transition:none}
+  .svc-card,.svc-card .svc-icon,.dept-card .dept-photo img{transition:none}
 }
 
 /* ── Interactive 3D model (Anatomy · Cycle · Conception · Pregnancy) ─────
@@ -131,7 +93,8 @@
 .mh3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab;outline:none}
 .mh3d canvas:active{cursor:grabbing}
 .mh3d .fallback{position:absolute;inset:0;display:grid;place-items:center;transition:opacity .6s var(--ease);pointer-events:none}
-.mh3d .fallback svg{width:min(78%,520px);height:auto}
+.mh3d .fallback{background:#1a0020}
+.mh3d .fallback picture,.mh3d .fallback img{display:block;width:100%;height:100%;object-fit:contain}
 .mh3d.is-live .fallback{opacity:0}
 /* loading progress: shown from the first paint, filled by the build steps, faded once the model is live */
 .mh3d .loader{position:absolute;left:0;right:0;top:50%;margin:-34px auto 0;width:min(260px,72%);z-index:4;padding:12px 16px 14px;border-radius:16px;background:rgba(20,10,24,.78);border:1px solid rgba(255,255,255,.16);color:#F3EAF1;display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline;transition:opacity .5s var(--ease),visibility .5s;pointer-events:none}
@@ -232,9 +195,6 @@ html.fs-lock,html.fs-lock body{overflow:hidden}
 /* 3D model in the homepage hero and in page sections */
 .mh-hero-3d .hero-inner{grid-template-columns:minmax(0,5fr) minmax(0,7fr);max-width:1320px;gap:clamp(24px,4vw,56px)}
 @media(max-width:1180px){.mh-hero-3d .hero-inner{grid-template-columns:1fr!important}}
-.mh3d .fallback .ill-label{fill:#F3EAF1}
-.mh3d .fallback .ill-lead{stroke:#F3EAF1}
-.mh3d .fallback svg{overflow:visible}
 .mh3d .info a{color:#fff}
 .mh3d .info a:hover{color:#ffd0e6}
 .mh3d .modes button:focus-visible,.mh3d .cutbtn:focus-visible,.mh3d .tag:focus-visible{outline:2px solid #FF8FB5;outline-offset:2px}
