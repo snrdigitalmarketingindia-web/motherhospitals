@@ -28,7 +28,7 @@ window.MH_OFFERS = [
     end_datetime:   "2026-06-30T23:59:59",
 
     badge:       "🌟 Limited Time",
-    title:       "IVF Package ₹99,000/- Only",
+    title:       "IVF Package",
     description: "Stimulation Injections · OPU · ICSI · Consultations · Scans · Valid till 30th June 2026",
     cta_text:    "Enquire Now →",
     cta_url:     "https://wa.me/919052074999",
@@ -51,7 +51,7 @@ window.MH_OFFERS = [
     end_datetime:   "2026-MM-DDT23:59:59",
 
     badge:       "🌟 Limited Time",
-    title:       "IVF Package ₹XX,000/- Only",
+    title:       "IVF Package",
     description: "Stimulation Injections · OPU · ICSI · Consultations · Scans · Valid till DDth Month YYYY",
     cta_text:    "Enquire Now →",
     cta_url:     "https://wa.me/919052074999",
