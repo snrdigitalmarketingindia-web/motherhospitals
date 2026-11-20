@@ -556,3 +556,55 @@ body.mh-tool .hero .hero-ctas,body.mh-tool .hero .hero-badge,body.mh-tool .hero 
 .mh-qa-item:first-of-type{border-top:0}
 .mh-qa-item h3{font-size:1.05rem;margin:0 0 6px;color:var(--purple,#58037c)}
 .mh-qa-item p{margin:0;line-height:1.7;text-align:left}
+
+/* §30 One content column on every page (20 Nov 2026)
+   Every band pads its content to the same 1160px column, so hero, quick answer,
+   sections and footer all start at the same left edge. Narrow CTA/form cards
+   (<=720px) stay centred; wider legacy wrappers stretch to the column. */
+:root{--mh-col:1160px;--mh-gut:max(5%,calc((100% - var(--mh-col)) / 2))}
+:is(body:not(.mh-tool):not([itemtype]),body:not(.mh-tool):not([itemtype]) main)>section:not(.article-hero):not(.blog-hero),
+body:not(.mh-tool):not([itemtype]) :is(.page-hero,.hero:not(.mh-hero)){padding-left:var(--mh-gut)!important;padding-right:var(--mh-gut)!important}
+body:not(.mh-tool):not([itemtype]) :is(.page-hero-inner,.hero-inner,.section-wrap,.section-wrap-wide,.section-inner,.container:not(main)){max-width:none!important;width:auto!important;margin-left:0!important;margin-right:0!important}
+:is(body:not(.mh-tool):not([itemtype]),body:not(.mh-tool):not([itemtype]) main,body:not(.mh-tool):not([itemtype]) .wrapper)>section>:is(div,main)[style*="max-width:7"]:not([style*="max-width:70"]):not([style*="max-width:72"]),
+:is(body:not(.mh-tool):not([itemtype]),body:not(.mh-tool):not([itemtype]) main,body:not(.mh-tool):not([itemtype]) .wrapper)>section>:is(div,main)[style*="max-width:8"],
+:is(body:not(.mh-tool):not([itemtype]),body:not(.mh-tool):not([itemtype]) main,body:not(.mh-tool):not([itemtype]) .wrapper)>section>:is(div,main)[style*="max-width:9"],
+:is(body:not(.mh-tool):not([itemtype]),body:not(.mh-tool):not([itemtype]) main,body:not(.mh-tool):not([itemtype]) .wrapper)>section>:is(div,main)[style*="max-width:1"]{max-width:none!important;margin-left:0!important;margin-right:0!important}
+body:not(.mh-tool):not([itemtype]) .direct-answer:not(.article-hero+.direct-answer):not(.blog-hero+.direct-answer){width:min(var(--mh-col),90%)!important}
+body:not(.mh-tool):not([itemtype]) .mh-qa:not(.mh-qa-in){max-width:none;padding-left:var(--mh-gut);padding-right:var(--mh-gut)}
+body:not([itemtype]) .footer-inner,body:not([itemtype]) .mh-footnote{max-width:var(--mh-col)}
+body:not(.mh-tool):not([itemtype]) .wrapper{max-width:none!important;padding-left:var(--mh-gut)!important;padding-right:var(--mh-gut)!important}
+body:not(.mh-tool):not([itemtype]) .wrapper>section{padding-left:0!important;padding-right:0!important}
+/* left-aligned sections: lists and FAQ stacks use the full column, not a narrow strip */
+body:not(.mh-tool):not([itemtype]) section:not([style*="text-align:center"]) :is(.steps-list,.faq-list,.faq-wrap)[style*="max-width"]{max-width:none!important}
+/* Blog articles: hero text sits on the same column as the article body */
+body .article-hero-inner,body .blog-hero-inner{max-width:760px!important;margin-left:auto!important;margin-right:auto!important;padding-left:clamp(20px,4vw,24px);padding-right:clamp(20px,4vw,24px);box-sizing:border-box}
+/* Phones: one 20px gutter everywhere */
+@media(max-width:600px){
+  :root{--mh-gut:20px}
+  body:not(.mh-tool):not([itemtype]) .direct-answer:not(.article-hero+.direct-answer):not(.blog-hero+.direct-answer){width:calc(100% - 40px)!important}
+}
+
+/* §31 Topic photo in every page hero (20 Nov 2026). <body data-hero="x"> picks the photo. */
+body[data-hero=lab]{--hero-img:url(/assets/visual/hero-lab.webp)}
+body[data-hero=andrology]{--hero-img:url(/assets/visual/hero-andrology.webp)}
+body[data-hero=scan]{--hero-img:url(/assets/visual/hero-scan.webp)}
+body[data-hero=consult]{--hero-img:url(/assets/visual/hero-consult.webp)}
+body[data-hero=pcos]{--hero-img:url(/assets/visual/hero-pcos.webp)}
+body[data-hero=freeze]{--hero-img:url(/assets/visual/hero-freeze.webp)}
+body[data-hero=surgery]{--hero-img:url(/assets/visual/hero-surgery.webp)}
+body[data-hero=newborn]{--hero-img:url(/assets/visual/hero-newborn.webp)}
+body[data-hero=blood]{--hero-img:url(/assets/visual/hero-blood.webp)}
+body[data-hero=couple]{--hero-img:url(/assets/visual/hero-couple.webp)}
+body[data-hero=lounge]{--hero-img:url(/assets/visual/hero-lounge.webp)}
+body[data-hero=iui]{--hero-img:url(/assets/visual/hero-iui.webp)}
+/* left-aligned heroes (dark service heroes, light blog heroes): photo on the right, soft fade into the band */
+body[data-hero] :is(.page-hero,.hero:not(.hero-light):not(.mh-hero),.article-hero,.blog-hero):not(:has(.hero-img,.hero-photo,.dr-photo-lg,.dr-photo)){position:relative;isolation:isolate;overflow:hidden}
+body[data-hero] :is(.page-hero,.hero:not(.hero-light):not(.mh-hero),.article-hero,.blog-hero):not(:has(.hero-img,.hero-photo,.dr-photo-lg,.dr-photo))::after{content:'';position:absolute;top:0;right:0;bottom:0;left:auto;width:50%;height:auto;margin:0;border:0;border-radius:0;transform:none;animation:none;background:var(--hero-img) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 30%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 30%,#000 60%);z-index:-1;pointer-events:none}
+body[data-hero] :is(.page-hero,.hero:not(.hero-light):not(.mh-hero)):not(:has(.hero-img,.hero-photo,.dr-photo-lg,.dr-photo))::after{opacity:.8}
+body[data-hero] :is(.page-hero,.hero):not(:has(.hero-img,.hero-photo,.dr-photo-lg,.dr-photo)) :is(.page-hero-inner,.hero-inner)>*{max-width:min(620px,100%)}
+body[data-hero] :is(.article-hero-inner,.blog-hero-inner){max-width:760px}
+/* dark centred heroes (area pages): photo behind a plum veil */
+body[data-hero]>section[style*="#2d1b3d"]:first-of-type{background:linear-gradient(rgba(26,10,46,.84),rgba(45,10,40,.88)),var(--hero-img) center/cover no-repeat,#1a0a2e!important}
+@media(max-width:1100px){
+  body[data-hero] :is(.page-hero,.hero:not(.hero-light):not(.mh-hero),.article-hero,.blog-hero):not(:has(.hero-img,.hero-photo,.dr-photo-lg,.dr-photo))::after{width:100%;-webkit-mask-image:none;mask-image:none;opacity:.16}
+}
